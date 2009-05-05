@@ -488,6 +488,60 @@
             </action>
         </action-set>
     </cross-action>
+    <cross-action id="num" a="jimregan">
+        <description>num default</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="num"/></l>
+                    <r>$lemmaB<s n="num"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="num"/></l>
+                    <r>$lemmaC<s n="num"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="num"/></l>
+                        <r>$lemmaC<s n="num"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="prn" a="jimregan">
+        <description>prn default</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="prn"/></l>
+                    <r>$lemmaB<s n="prn"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="prn"/></l>
+                    <r>$lemmaC<s n="prn"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="prn"/></l>
+                        <r>$lemmaC<s n="prn"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
     <cross-action id="pr" a="jimregan">
         <description>pr</description>
         <pattern>
