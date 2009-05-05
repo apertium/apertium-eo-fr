@@ -3,11 +3,11 @@
 	Dictionary:
 	Bilingual dictionary: eo-fr
 	Sections: 1
-	Entries: 8914
+	Entries: 8911
 	Sdefs: 93
       
       Patterns applied:
-      	default (2602 times)
+      	default (1972 times)
       	nom-f (1729 times)
       	nom-m (1411 times)
       	nom-mtof (292 times)
@@ -15,9 +15,13 @@
       	n.acr-f (4 times)
       	n.acr-m (7 times)
       	np.loc-f (4 times)
-      	np.loc-m (5 times)
+      	np.loc-m (4 times)
+      	np.loc-addf (182 times)
+      	np.loc-addm (101 times)
+      	nom-nogender (275 times)
       	vblex (1601 times)
       	adj (471 times)
+      	pr (70 times)
       	adv (395 times)
       	cnjadv (69 times)
       	cnjsub (1 times)
@@ -186,45 +190,45 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Abisenio<s n="np"/><s n="loc"/></l> 
-        <r>Abyssinie<s n="np"/></r> 
+        <r>Abyssinie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Acoroj<s n="np"/><s n="loc"/></l> 
-        <r>Les<b/>Açores<s n="np"/></r> 
+        <r>Les<b/>Açores<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Afganio<s n="np"/><s n="loc"/></l> 
-        <r>Afghanistan<s n="np"/></r> 
+        <r>Afghanistan<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Afriko<s n="np"/><s n="loc"/></l> 
-        <r>Afrique<s n="np"/></r> 
+        <r>Afrique<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -252,12 +256,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Albanio<s n="np"/><s n="loc"/></l> 
-        <r>Albanie<s n="np"/></r> 
+        <r>Albanie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -274,133 +278,122 @@
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>Alĝerio<s n="np"/><s n="loc"/></l> 
-        <r>Algérie<s n="np"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Amazono<s n="np"/><s n="loc"/></l> 
-        <r>Amazone<s n="np"/></r> 
+        <r>Amazone<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Ameriko<s n="np"/><s n="loc"/></l> 
-        <r>Amérique<s n="np"/></r> 
+        <r>Amérique<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Amsterdamo<s n="np"/><s n="loc"/></l> 
-        <r>Amsterdam<s n="np"/></r> 
+        <r>Amsterdam<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Andaluzio<s n="np"/><s n="loc"/></l> 
-        <r>Andalousie<s n="np"/></r> 
+        <r>Andalousie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Andoj<s n="np"/><s n="loc"/></l> 
-        <r>Andes<s n="np"/></r> 
+        <r>Andes<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Andoro<s n="np"/><s n="loc"/></l> 
-        <r>Andorre<s n="np"/></r> 
+        <r>Andorre<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Anglio<s n="np"/><s n="loc"/></l> 
-        <r>Angleterre<s n="np"/></r> 
+        <r>Angleterre<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Angolo<s n="np"/><s n="loc"/></l> 
-        <r>Angola<s n="np"/></r> 
+        <r>Angola<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Antarkto<s n="np"/><s n="loc"/></l> 
-        <r>Antarctique<s n="np"/></r> 
+        <r>Antarctique<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Antigvo-Barbudo<s n="np"/><s n="loc"/></l> 
-        <r>Antigua-et-Barbuda<s n="np"/></r> 
+        <r>Antigua-et-Barbuda<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Antiloj<s n="np"/><s n="loc"/></l> 
-        <r>Antilles<s n="np"/></r> 
+        <r>Antilles<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -417,133 +410,133 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Arabio<s n="np"/><s n="loc"/></l> 
-        <r>Arabie<s n="np"/></r> 
+        <r>Arabie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Aragono<s n="np"/><s n="loc"/></l> 
-        <r>Aragon<s n="np"/></r> 
+        <r>Aragon<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Argentino<s n="np"/><s n="loc"/></l> 
-        <r>Argentine<s n="np"/></r> 
+        <r>Argentine<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Armenio<s n="np"/><s n="loc"/></l> 
-        <r>Armenia<s n="np"/></r> 
+        <r>Armenia<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Asturio<s n="np"/><s n="loc"/></l> 
-        <r>Asturies<s n="np"/></r> 
+        <r>Asturies<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Asunciono<s n="np"/><s n="loc"/></l> 
-        <r>Asunción<s n="np"/></r> 
+        <r>Asunción<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Ateno<s n="np"/><s n="loc"/></l> 
-        <r>Athènes<s n="np"/></r> 
+        <r>Athènes<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Atlantiko<s n="np"/><s n="loc"/></l> 
-        <r>Atlantique<s n="np"/></r> 
+        <r>Atlantique<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Azerbajĝano<s n="np"/><s n="loc"/></l> 
-        <r>Azerbaïdjan<s n="np"/></r> 
+        <r>Azerbaïdjan<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Azio<s n="np"/><s n="loc"/></l> 
-        <r>Asie<s n="np"/></r> 
+        <r>Asie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Aŭstralio<s n="np"/><s n="loc"/></l> 
-        <r>Australie<s n="np"/></r> 
+        <r>Australie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Aŭstrio<s n="np"/><s n="loc"/></l> 
-        <r>Autriche<s n="np"/></r> 
+        <r>Autriche<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -560,78 +553,78 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Bahamoj<s n="np"/><s n="loc"/></l> 
-        <r>Bahamas<s n="np"/></r> 
+        <r>Bahamas<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Balearoj<s n="np"/><s n="loc"/></l> 
-        <r>Baléares<s n="np"/></r> 
+        <r>Baléares<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Bangladeŝo<s n="np"/><s n="loc"/></l> 
-        <r>Bangladesh<s n="np"/></r> 
+        <r>Bangladesh<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Barato<s n="np"/><s n="loc"/></l> 
-        <r>Inde<s n="np"/></r> 
+        <r>Inde<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Barbado<s n="np"/><s n="loc"/></l> 
-        <r>La<b/>Barbade<s n="np"/></r> 
+        <r>La<b/>Barbade<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Barcelona<s n="np"/><s n="loc"/></l> 
-        <r>Barcelone<s n="np"/></r> 
+        <r>Barcelone<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Barcelono<s n="np"/><s n="loc"/></l> 
-        <r>Barcelone<s n="np"/></r> 
+        <r>Barcelone<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -648,188 +641,188 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Belfasto<s n="np"/><s n="loc"/></l> 
-        <r>Belfast<s n="np"/></r> 
+        <r>Belfast<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Belgio<s n="np"/><s n="loc"/></l> 
-        <r>Belgique<s n="np"/></r> 
+        <r>Belgique<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Belorusio<s n="np"/><s n="loc"/></l> 
-        <r>Biélorussie<s n="np"/></r> 
+        <r>Biélorussie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Beogrado<s n="np"/><s n="loc"/></l> 
-        <r>Belgrade<s n="np"/></r> 
+        <r>Belgrade<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Berlino<s n="np"/><s n="loc"/></l> 
-        <r>Berlin<s n="np"/></r> 
+        <r>Berlin<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Berno<s n="np"/><s n="loc"/></l> 
-        <r>Berne<s n="np"/></r> 
+        <r>Berne<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Birmo<s n="np"/><s n="loc"/></l> 
-        <r>Birmanie<s n="np"/></r> 
+        <r>Birmanie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Bocvano<s n="np"/><s n="loc"/></l> 
-        <r>Botswana<s n="np"/></r> 
+        <r>Botswana<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Bogoto<s n="np"/><s n="loc"/></l> 
-        <r>Bogota<s n="np"/></r> 
+        <r>Bogota<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Bolivio<s n="np"/><s n="loc"/></l> 
-        <r>Bolivie<s n="np"/></r> 
+        <r>Bolivie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Bonaero<s n="np"/><s n="loc"/></l> 
-        <r>Buenos<b/>Aires<s n="np"/></r> 
+        <r>Buenos<b/>Aires<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Bosnio<s n="np"/><s n="loc"/></l> 
-        <r>Bosnie<s n="np"/></r> 
+        <r>Bosnie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Bratislavo<s n="np"/><s n="loc"/></l> 
-        <r>Bratislava<s n="np"/></r> 
+        <r>Bratislava<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Brazilo<s n="np"/><s n="loc"/></l> 
-        <r>Brésil<s n="np"/></r> 
+        <r>Brésil<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Britio<s n="np"/><s n="loc"/></l> 
-        <r>Royaume-Uni<s n="np"/></r> 
+        <r>Royaume-Uni<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Britio<s n="np"/><s n="loc"/></l> 
-        <r>Grande-Bretagne<s n="np"/></r> 
+        <r>Grande-Bretagne<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Brunejo<s n="np"/><s n="loc"/></l> 
-        <r>Brunéi<s n="np"/></r> 
+        <r>Brunéi<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -846,23 +839,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>Bruselo<s n="np"/><s n="loc"/></l> 
-        <r>Bruxelles<s n="np"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Budapeŝto<s n="np"/><s n="loc"/></l> 
-        <r>Budapest<s n="np"/></r> 
+        <r>Budapest<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -879,56 +861,56 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Bukareŝto<s n="np"/><s n="loc"/></l> 
-        <r>Bucarest<s n="np"/></r> 
+        <r>Bucarest<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Bulgario<s n="np"/><s n="loc"/></l> 
-        <r>Bulgarie<s n="np"/></r> 
+        <r>Bulgarie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Burkino<s n="np"/><s n="loc"/></l> 
-        <r>Burkina<b/>Faso<s n="np"/></r> 
+        <r>Burkina<b/>Faso<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Burundo<s n="np"/><s n="loc"/></l> 
-        <r>Burundi<s n="np"/></r> 
+        <r>Burundi<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Butano<s n="np"/><s n="loc"/></l> 
-        <r>Bhoutan<s n="np"/></r> 
+        <r>Bhoutan<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -956,12 +938,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Danlando<s n="np"/><s n="loc"/></l> 
-        <r>Danemark<s n="np"/></r> 
+        <r>Danemark<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -1000,12 +982,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Domingo<s n="np"/><s n="loc"/></l> 
-        <r>République<b/>Dominicaine<s n="np"/></r> 
+        <r>République<b/>Dominicaine<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -1022,12 +1004,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Dublino<s n="np"/><s n="loc"/></l> 
-        <r>Dublin<s n="np"/></r> 
+        <r>Dublin<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -1055,67 +1037,67 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Eburbordo<s n="np"/><s n="loc"/></l> 
-        <r>Côte<b/>d'Ivoire<s n="np"/></r> 
+        <r>Côte<b/>d'Ivoire<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Egiptio<s n="np"/><s n="loc"/></l> 
-        <r>Égypte<s n="np"/></r> 
+        <r>Égypte<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Ekstremaduro<s n="np"/><s n="loc"/></l> 
-        <r>Estrémadure<s n="np"/></r> 
+        <r>Estrémadure<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Ekvadoro<s n="np"/><s n="loc"/></l> 
-        <r>Équateur<s n="np"/></r> 
+        <r>Équateur<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Ekvadoro<s n="np"/><s n="loc"/></l> 
-        <r>Equateur<s n="np"/></r> 
+        <r>Equateur<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Ekvatora<b/>Gvineo<s n="np"/><s n="loc"/></l> 
-        <r>Guinée-Équatorale<s n="np"/></r> 
+        <r>Guinée-Équatorale<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -1154,45 +1136,45 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Eritreo<s n="np"/><s n="loc"/></l> 
-        <r>Erythrée<s n="np"/></r> 
+        <r>Erythrée<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Eritreo<s n="np"/><s n="loc"/></l> 
-        <r>Érythrée<s n="np"/></r> 
+        <r>Érythrée<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Estonio<s n="np"/><s n="loc"/></l> 
-        <r>Estonie<s n="np"/></r> 
+        <r>Estonie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Etiopio<s n="np"/><s n="loc"/></l> 
-        <r>Éthiopie<s n="np"/></r> 
+        <r>Éthiopie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -1209,155 +1191,155 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Eŭropa<b/>Unio<s n="np"/><s n="loc"/></l> 
-        <r>Union<b/>européenne<s n="np"/></r> 
+        <r>Union<b/>européenne<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Eŭropo<s n="np"/><s n="loc"/></l> 
-        <r>Europe<s n="np"/></r> 
+        <r>Europe<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Eŭskio<s n="np"/><s n="loc"/></l> 
-        <r>Euskadi<s n="np"/></r> 
+        <r>Euskadi<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Eŭskio<s n="np"/><s n="loc"/></l> 
-        <r>Pays<b/>Basque<s n="np"/></r> 
+        <r>Pays<b/>Basque<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Ferooj<s n="np"/><s n="loc"/></l> 
-        <r>Îles<b/>Féroé<s n="np"/></r> 
+        <r>Îles<b/>Féroé<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Filipinoj<s n="np"/><s n="loc"/></l> 
-        <r>Philippines<s n="np"/></r> 
+        <r>Philippines<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Finnio<s n="np"/><s n="loc"/></l> 
-        <r>Finlande<s n="np"/></r> 
+        <r>Finlande<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Fiĝioj<s n="np"/><s n="loc"/></l> 
-        <r>Fidji<s n="np"/></r> 
+        <r>Fidji<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Flandrio<s n="np"/><s n="loc"/></l> 
-        <r>Flandre<s n="np"/></r> 
+        <r>Flandre<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Francio<s n="np"/><s n="loc"/></l> 
-        <r>France<s n="np"/></r> 
+        <r>France<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Gabono<s n="np"/><s n="loc"/></l> 
-        <r>Gabon<s n="np"/></r> 
+        <r>Gabon<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Galegio<s n="np"/><s n="loc"/></l> 
-        <r>Galice<s n="np"/></r> 
+        <r>Galice<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Gambio<s n="np"/><s n="loc"/></l> 
-        <r>Gambie<s n="np"/></r> 
+        <r>Gambie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Ganao<s n="np"/><s n="loc"/></l> 
-        <r>Ghana<s n="np"/></r> 
+        <r>Ghana<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -1385,100 +1367,100 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Germanio<s n="np"/><s n="loc"/></l> 
-        <r>Allemagne<s n="np"/></r> 
+        <r>Allemagne<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Granado<s n="np"/><s n="loc"/></l> 
-        <r>Grenade<s n="np"/></r> 
+        <r>Grenade<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Grekio<s n="np"/><s n="loc"/></l> 
-        <r>Grèce<s n="np"/></r> 
+        <r>Grèce<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Gronlando<s n="np"/><s n="loc"/></l> 
-        <r>Groenland<s n="np"/></r> 
+        <r>Groenland<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Gujano<s n="np"/><s n="loc"/></l> 
-        <r>Guyana<s n="np"/></r> 
+        <r>Guyana<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Gvatemalo<s n="np"/><s n="loc"/></l> 
-        <r>Guatemala<s n="np"/></r> 
+        <r>Guatemala<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Gvineo<s n="np"/><s n="loc"/></l> 
-        <r>Guinée<s n="np"/></r> 
+        <r>Guinée<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Haitio<s n="np"/><s n="loc"/></l> 
-        <r>Haïti<s n="np"/></r> 
+        <r>Haïti<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Havano<s n="np"/><s n="loc"/></l> 
-        <r>La<b/>Havane<s n="np"/></r> 
+        <r>La<b/>Havane<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -1495,12 +1477,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Helsinko<s n="np"/><s n="loc"/></l> 
-        <r>Helsinki<s n="np"/></r> 
+        <r>Helsinki<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -1517,34 +1499,34 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Hispanio<s n="np"/><s n="loc"/></l> 
-        <r>Espagne<s n="np"/></r> 
+        <r>Espagne<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Honduro<s n="np"/><s n="loc"/></l> 
-        <r>Honduras<s n="np"/></r> 
+        <r>Honduras<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Hungario<s n="np"/><s n="loc"/></l> 
-        <r>Hongrie<s n="np"/></r> 
+        <r>Hongrie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -1649,100 +1631,100 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Indonezio<s n="np"/><s n="loc"/></l> 
-        <r>Indonésie<s n="np"/></r> 
+        <r>Indonésie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Irak<s n="np"/><s n="loc"/></l> 
-        <r>Iraq<s n="np"/></r> 
+        <r>Iraq<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Irako<s n="np"/><s n="loc"/></l> 
-        <r>Irak<s n="np"/></r> 
+        <r>Irak<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Irako<s n="np"/><s n="loc"/></l> 
-        <r>Iraq<s n="np"/></r> 
+        <r>Iraq<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Irano<s n="np"/><s n="loc"/></l> 
-        <r>Iran<s n="np"/></r> 
+        <r>Iran<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Irlando<s n="np"/><s n="loc"/></l> 
-        <r>Irlande<s n="np"/></r> 
+        <r>Irlande<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Islando<s n="np"/><s n="loc"/></l> 
-        <r>Islande<s n="np"/></r> 
+        <r>Islande<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Israelo<s n="np"/><s n="loc"/></l> 
-        <r>Israël<s n="np"/></r> 
+        <r>Israël<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Italio<s n="np"/><s n="loc"/></l> 
-        <r>Italie<s n="np"/></r> 
+        <r>Italie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -1770,34 +1752,34 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Jamajko<s n="np"/><s n="loc"/></l> 
-        <r>Jamaïque<s n="np"/></r> 
+        <r>Jamaïque<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Japanio<s n="np"/><s n="loc"/></l> 
-        <r>Japon<s n="np"/></r> 
+        <r>Japon<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Jemeno<s n="np"/><s n="loc"/></l> 
-        <r>Yémen<s n="np"/></r> 
+        <r>Yémen<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -1836,12 +1818,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Jordanio<s n="np"/><s n="loc"/></l> 
-        <r>Jordanie<s n="np"/></r> 
+        <r>Jordanie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -1858,12 +1840,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Jugoslavio<s n="np"/><s n="loc"/></l> 
-        <r>Yougoslavie<s n="np"/></r> 
+        <r>Yougoslavie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -1913,232 +1895,232 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Kaboverdo<s n="np"/><s n="loc"/></l> 
-        <r>Cap<b/>Vert<s n="np"/></r> 
+        <r>Cap<b/>Vert<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Kamboĝo<s n="np"/><s n="loc"/></l> 
-        <r>Cambogde<s n="np"/></r> 
+        <r>Cambogde<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Kamerunio<s n="np"/><s n="loc"/></l> 
-        <r>Cameroun<s n="np"/></r> 
+        <r>Cameroun<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Kanado<s n="np"/><s n="loc"/></l> 
-        <r>Canada<s n="np"/></r> 
+        <r>Canada<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Kanarioj<s n="np"/><s n="loc"/></l> 
-        <r>Canaries<s n="np"/></r> 
+        <r>Canaries<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Kantabrio<s n="np"/><s n="loc"/></l> 
-        <r>Cantabrie<s n="np"/></r> 
+        <r>Cantabrie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Karakaso<s n="np"/><s n="loc"/></l> 
-        <r>Caracas<s n="np"/></r> 
+        <r>Caracas<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Karibio<s n="np"/><s n="loc"/></l> 
-        <r>Caraïbe<s n="np"/></r> 
+        <r>Caraïbe<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Kartvelio<s n="np"/><s n="loc"/></l> 
-        <r>Géorgie<s n="np"/></r> 
+        <r>Géorgie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Kastilio<s n="np"/><s n="loc"/></l> 
-        <r>Castille<s n="np"/></r> 
+        <r>Castille<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Kastilio-Leono<s n="np"/><s n="loc"/></l> 
-        <r>Castille-et-Léon<s n="np"/></r> 
+        <r>Castille-et-Léon<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Katalunio<s n="np"/><s n="loc"/></l> 
-        <r>Catalogne<s n="np"/></r> 
+        <r>Catalogne<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Kataro<s n="np"/><s n="loc"/></l> 
-        <r>Qatar<s n="np"/></r> 
+        <r>Qatar<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Kazaĥio<s n="np"/><s n="loc"/></l> 
-        <r>Kazakhstan<s n="np"/></r> 
+        <r>Kazakhstan<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Kenjo<s n="np"/><s n="loc"/></l> 
-        <r>Kenya<s n="np"/></r> 
+        <r>Kenya<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Kimrio<s n="np"/><s n="loc"/></l> 
-        <r>Pays<b/>de<b/>Galles<s n="np"/></r> 
+        <r>Pays<b/>de<b/>Galles<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Kimrio<s n="np"/><s n="loc"/></l> 
-        <r>Galles<s n="np"/></r> 
+        <r>Galles<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Kipro<s n="np"/><s n="loc"/></l> 
-        <r>Chypre<s n="np"/></r> 
+        <r>Chypre<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Kirgizio<s n="np"/><s n="loc"/></l> 
-        <r>Kirghizistan<s n="np"/></r> 
+        <r>Kirghizistan<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Kiribato<s n="np"/><s n="loc"/></l> 
-        <r>Kiribati<s n="np"/></r> 
+        <r>Kiribati<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Kito<s n="np"/><s n="loc"/></l> 
-        <r>Quito<s n="np"/></r> 
+        <r>Quito<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -2155,67 +2137,67 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Kolombio<s n="np"/><s n="loc"/></l> 
-        <r>Colombie<s n="np"/></r> 
+        <r>Colombie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Komoroj<s n="np"/><s n="loc"/></l> 
-        <r>Comores<s n="np"/></r> 
+        <r>Comores<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Kongo<s n="np"/><s n="loc"/></l> 
-        <r>Congo<s n="np"/></r> 
+        <r>Congo<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Kopenhago<s n="np"/><s n="loc"/></l> 
-        <r>Copenhague<s n="np"/></r> 
+        <r>Copenhague<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Koreio<s n="np"/><s n="loc"/></l> 
-        <r>Corée<s n="np"/></r> 
+        <r>Corée<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Kostariko<s n="np"/><s n="loc"/></l> 
-        <r>Costa<b/>Rica<s n="np"/></r> 
+        <r>Costa<b/>Rica<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -2232,12 +2214,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Kroatio<s n="np"/><s n="loc"/></l> 
-        <r>Croatie<s n="np"/></r> 
+        <r>Croatie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -2254,23 +2236,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Kubo<s n="np"/><s n="loc"/></l> 
-        <r>Cuba<s n="np"/></r> 
+        <r>Cuba<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Kuvajto<s n="np"/><s n="loc"/></l> 
-        <r>Koweït<s n="np"/></r> 
+        <r>Koweït<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -2287,67 +2269,67 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>La-Pazo<s n="np"/><s n="loc"/></l> 
-        <r>La<b/>Paz<s n="np"/></r> 
+        <r>La<b/>Paz<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>La-Valeto<s n="np"/><s n="loc"/></l> 
-        <r>La<b/>Valette<s n="np"/></r> 
+        <r>La<b/>Valette<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Laoso<s n="np"/><s n="loc"/></l> 
-        <r>Laos<s n="np"/></r> 
+        <r>Laos<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Laponio<s n="np"/><s n="loc"/></l> 
-        <r>Laponie<s n="np"/></r> 
+        <r>Laponie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Latin-Ameriko<s n="np"/><s n="loc"/></l> 
-        <r>Amérique<b/>latine<s n="np"/></r> 
+        <r>Amérique<b/>latine<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Latvio<s n="np"/><s n="loc"/></l> 
-        <r>Lettonie<s n="np"/></r> 
+        <r>Lettonie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -2364,133 +2346,133 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Leono<s n="np"/><s n="loc"/></l> 
-        <r>Lion<s n="np"/></r> 
+        <r>Lion<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Lesoto<s n="np"/><s n="loc"/></l> 
-        <r>Lesotho<s n="np"/></r> 
+        <r>Lesotho<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Libano<s n="np"/><s n="loc"/></l> 
-        <r>Liban<s n="np"/></r> 
+        <r>Liban<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Liberio<s n="np"/><s n="loc"/></l> 
-        <r>Libéria<s n="np"/></r> 
+        <r>Libéria<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Libio<s n="np"/><s n="loc"/></l> 
-        <r>Libye<s n="np"/></r> 
+        <r>Libye<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Limo<s n="np"/><s n="loc"/></l> 
-        <r>Lima<s n="np"/></r> 
+        <r>Lima<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Lisbono<s n="np"/><s n="loc"/></l> 
-        <r>Lisboa<s n="np"/></r> 
+        <r>Lisboa<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Lisbono<s n="np"/><s n="loc"/></l> 
-        <r>Lisbonne<s n="np"/></r> 
+        <r>Lisbonne<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Litovio<s n="np"/><s n="loc"/></l> 
-        <r>Lituanie<s n="np"/></r> 
+        <r>Lituanie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Liĥtenŝtejno<s n="np"/><s n="loc"/></l> 
-        <r>Liechtenstein<s n="np"/></r> 
+        <r>Liechtenstein<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Ljubljano<s n="np"/><s n="loc"/></l> 
-        <r>Ljubljana<s n="np"/></r> 
+        <r>Ljubljana<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Londono<s n="np"/><s n="loc"/></l> 
-        <r>Londres<s n="np"/></r> 
+        <r>Londres<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -2507,12 +2489,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Luksemburgio<s n="np"/><s n="loc"/></l> 
-        <r>Luxembourg<s n="np"/></r> 
+        <r>Luxembourg<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -2529,23 +2511,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Madagaskaro<s n="np"/><s n="loc"/></l> 
-        <r>Madagascar<s n="np"/></r> 
+        <r>Madagascar<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Madrido<s n="np"/><s n="loc"/></l> 
-        <r>Madrid<s n="np"/></r> 
+        <r>Madrid<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -2562,78 +2544,78 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Makedonio<s n="np"/><s n="loc"/></l> 
-        <r>Macédoine<s n="np"/></r> 
+        <r>Macédoine<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Malajzio<s n="np"/><s n="loc"/></l> 
-        <r>Malaisie<s n="np"/></r> 
+        <r>Malaisie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Malavio<s n="np"/><s n="loc"/></l> 
-        <r>Malawi<s n="np"/></r> 
+        <r>Malawi<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Maldivoj<s n="np"/><s n="loc"/></l> 
-        <r>Maldives<s n="np"/></r> 
+        <r>Maldives<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Malio<s n="np"/><s n="loc"/></l> 
-        <r>Mali<s n="np"/></r> 
+        <r>Mali<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Malto<s n="np"/><s n="loc"/></l> 
-        <r>Malte<s n="np"/></r> 
+        <r>Malte<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Managvo<s n="np"/><s n="loc"/></l> 
-        <r>Managua<s n="np"/></r> 
+        <r>Managua<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -2661,12 +2643,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Maroko<s n="np"/><s n="loc"/></l> 
-        <r>Maroc<s n="np"/></r> 
+        <r>Maroc<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -2694,29 +2676,18 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Maŭritanio<s n="np"/><s n="loc"/></l> 
-        <r>Mauritanie<s n="np"/></r> 
+        <r>Mauritanie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>Mediteraneo<s n="np"/><s n="loc"/></l> 
-        <r>Méditerranée<s n="np"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      np.loc-m
+      np.loc-addm
     -->
     <e>
       <p>
@@ -2727,23 +2698,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Meksiko<s n="np"/><s n="loc"/></l> 
-        <r>Mexique<s n="np"/></r> 
+        <r>Mexique<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Melilo<s n="np"/><s n="loc"/></l> 
-        <r>Melilla<s n="np"/></r> 
+        <r>Melilla<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -2771,89 +2742,89 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Mikronezio<s n="np"/><s n="loc"/></l> 
-        <r>Micronésie<s n="np"/></r> 
+        <r>Micronésie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Moldavio<s n="np"/><s n="loc"/></l> 
-        <r>Moldavie<s n="np"/></r> 
+        <r>Moldavie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Monako<s n="np"/><s n="loc"/></l> 
-        <r>Monaco<s n="np"/></r> 
+        <r>Monaco<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Mongolio<s n="np"/><s n="loc"/></l> 
-        <r>Mongolie<s n="np"/></r> 
+        <r>Mongolie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Montevideo<s n="np"/><s n="loc"/></l> 
-        <r>Montevideo<s n="np"/></r> 
+        <r>Montevideo<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Montserato<s n="np"/><s n="loc"/></l> 
-        <r>Montserrat<s n="np"/></r> 
+        <r>Montserrat<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Moskvo<s n="np"/><s n="loc"/></l> 
-        <r>Moscou<s n="np"/></r> 
+        <r>Moscou<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Mozambiko<s n="np"/><s n="loc"/></l> 
-        <r>Mozambique<s n="np"/></r> 
+        <r>Mozambique<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -2870,67 +2841,67 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Namibio<s n="np"/><s n="loc"/></l> 
-        <r>Namibie<s n="np"/></r> 
+        <r>Namibie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Navaro<s n="np"/><s n="loc"/></l> 
-        <r>Navarre<s n="np"/></r> 
+        <r>Navarre<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Nederlando<s n="np"/><s n="loc"/></l> 
-        <r>Pays-Bas<s n="np"/></r> 
+        <r>Pays-Bas<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Nederlando<s n="np"/><s n="loc"/></l> 
-        <r>Hollande<s n="np"/></r> 
+        <r>Hollande<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Nepalo<s n="np"/><s n="loc"/></l> 
-        <r>Népal<s n="np"/></r> 
+        <r>Népal<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Nikaragvo<s n="np"/><s n="loc"/></l> 
-        <r>Nicaragua<s n="np"/></r> 
+        <r>Nicaragua<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -2947,100 +2918,100 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Nikozio<s n="np"/><s n="loc"/></l> 
-        <r>Nicosie<s n="np"/></r> 
+        <r>Nicosie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Niĝerio<s n="np"/><s n="loc"/></l> 
-        <r>Nigeria<s n="np"/></r> 
+        <r>Nigeria<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Niĝero<s n="np"/><s n="loc"/></l> 
-        <r>Niger<s n="np"/></r> 
+        <r>Niger<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Nord-Ameriko<s n="np"/><s n="loc"/></l> 
-        <r>Amérique<b/>du<b/>Nord<s n="np"/></r> 
+        <r>Amérique<b/>du<b/>Nord<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Nord-Koreio<s n="np"/><s n="loc"/></l> 
-        <r>Corée<b/>du<b/>Nord<s n="np"/></r> 
+        <r>Corée<b/>du<b/>Nord<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Norvegio<s n="np"/><s n="loc"/></l> 
-        <r>Norvège<s n="np"/></r> 
+        <r>Norvège<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Nov-Jorko<s n="np"/><s n="loc"/></l> 
-        <r>New<b/>York<s n="np"/></r> 
+        <r>New<b/>York<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Nov-Zelando<s n="np"/><s n="loc"/></l> 
-        <r>Nouvelle-Zélande<s n="np"/></r> 
+        <r>Nouvelle-Zélande<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Oceanio<s n="np"/><s n="loc"/></l> 
-        <r>Océanie<s n="np"/></r> 
+        <r>Océanie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -3090,100 +3061,100 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Pakistano<s n="np"/><s n="loc"/></l> 
-        <r>Pakistan<s n="np"/></r> 
+        <r>Pakistan<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Palestino<s n="np"/><s n="loc"/></l> 
-        <r>Palestine<s n="np"/></r> 
+        <r>Palestine<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Panamo<s n="np"/><s n="loc"/></l> 
-        <r>Panamá<s n="np"/></r> 
+        <r>Panamá<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Panamo<s n="np"/><s n="loc"/></l> 
-        <r>Panama<s n="np"/></r> 
+        <r>Panama<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Paragvajo<s n="np"/><s n="loc"/></l> 
-        <r>Paraguay<s n="np"/></r> 
+        <r>Paraguay<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Parizo<s n="np"/><s n="loc"/></l> 
-        <r>Paris<s n="np"/></r> 
+        <r>Paris<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Pekino<s n="np"/><s n="loc"/></l> 
-        <r>Pékin<s n="np"/></r> 
+        <r>Pékin<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Persio<s n="np"/><s n="loc"/></l> 
-        <r>Perse<s n="np"/></r> 
+        <r>Perse<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Peruo<s n="np"/><s n="loc"/></l> 
-        <r>Pérou<s n="np"/></r> 
+        <r>Pérou<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -3200,56 +3171,56 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Pireneoj<s n="np"/><s n="loc"/></l> 
-        <r>Pyrénées<s n="np"/></r> 
+        <r>Pyrénées<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Pollando<s n="np"/><s n="loc"/></l> 
-        <r>Pologne<s n="np"/></r> 
+        <r>Pologne<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Porto-Riko<s n="np"/><s n="loc"/></l> 
-        <r>Porto<b/>Rico<s n="np"/></r> 
+        <r>Porto<b/>Rico<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Portugalio<s n="np"/><s n="loc"/></l> 
-        <r>Portugal<s n="np"/></r> 
+        <r>Portugal<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Prago<s n="np"/><s n="loc"/></l> 
-        <r>Prague<s n="np"/></r> 
+        <r>Prague<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -3266,78 +3237,78 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Rigo<s n="np"/><s n="loc"/></l> 
-        <r>Riga<s n="np"/></r> 
+        <r>Riga<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Riojo<s n="np"/><s n="loc"/></l> 
-        <r>La<b/>Rioja<s n="np"/></r> 
+        <r>La<b/>Rioja<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Romo<s n="np"/><s n="loc"/></l> 
-        <r>Rome<s n="np"/></r> 
+        <r>Rome<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Ruando<s n="np"/><s n="loc"/></l> 
-        <r>Rwanda<s n="np"/></r> 
+        <r>Rwanda<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Rumanio<s n="np"/><s n="loc"/></l> 
-        <r>Roumanie<s n="np"/></r> 
+        <r>Roumanie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Rusio<s n="np"/><s n="loc"/></l> 
-        <r>Russie<s n="np"/></r> 
+        <r>Russie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Sabto<s n="np"/><s n="loc"/></l> 
-        <r>Ceuta<s n="np"/></r> 
+        <r>Ceuta<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -3354,12 +3325,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Salomonoj<s n="np"/><s n="loc"/></l> 
-        <r>Îles<b/>Salomon<s n="np"/></r> 
+        <r>Îles<b/>Salomon<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -3376,276 +3347,276 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Samoo<s n="np"/><s n="loc"/></l> 
-        <r>Samoa<s n="np"/></r> 
+        <r>Samoa<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Sandomingo<s n="np"/><s n="loc"/></l> 
-        <r>Saint-Domingue<s n="np"/></r> 
+        <r>Saint-Domingue<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Sanmarino<s n="np"/><s n="loc"/></l> 
-        <r>Saint-Marin<s n="np"/></r> 
+        <r>Saint-Marin<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Sansalvadoro<s n="np"/><s n="loc"/></l> 
-        <r>San<b/>Salvador<s n="np"/></r> 
+        <r>San<b/>Salvador<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Saud-Arabio<s n="np"/><s n="loc"/></l> 
-        <r>Arabie<b/>Saoudite<s n="np"/></r> 
+        <r>Arabie<b/>Saoudite<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Sejŝeloj<s n="np"/><s n="loc"/></l> 
-        <r>Seychelles<s n="np"/></r> 
+        <r>Seychelles<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Senegalo<s n="np"/><s n="loc"/></l> 
-        <r>Sénégal<s n="np"/></r> 
+        <r>Sénégal<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Serbio<s n="np"/><s n="loc"/></l> 
-        <r>Serbie<s n="np"/></r> 
+        <r>Serbie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Sevilo<s n="np"/><s n="loc"/></l> 
-        <r>Séville<s n="np"/></r> 
+        <r>Séville<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Siberio<s n="np"/><s n="loc"/></l> 
-        <r>Sibérie<s n="np"/></r> 
+        <r>Sibérie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Sieraleono<s n="np"/><s n="loc"/></l> 
-        <r>Sierra<b/>Leone<s n="np"/></r> 
+        <r>Sierra<b/>Leone<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Singapuro<s n="np"/><s n="loc"/></l> 
-        <r>Singapour<s n="np"/></r> 
+        <r>Singapour<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Sirio<s n="np"/><s n="loc"/></l> 
-        <r>Syrie<s n="np"/></r> 
+        <r>Syrie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Skandinavio<s n="np"/><s n="loc"/></l> 
-        <r>Scandinavie<s n="np"/></r> 
+        <r>Scandinavie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Skotlando<s n="np"/><s n="loc"/></l> 
-        <r>Écosse<s n="np"/></r> 
+        <r>Écosse<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Slovakio<s n="np"/><s n="loc"/></l> 
-        <r>Slovaquie<s n="np"/></r> 
+        <r>Slovaquie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Slovenio<s n="np"/><s n="loc"/></l> 
-        <r>Slovénie<s n="np"/></r> 
+        <r>Slovénie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Somalio<s n="np"/><s n="loc"/></l> 
-        <r>Somalie<s n="np"/></r> 
+        <r>Somalie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Srilanko<s n="np"/><s n="loc"/></l> 
-        <r>Sri<b/>Lanka<s n="np"/></r> 
+        <r>Sri<b/>Lanka<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Stokholmo<s n="np"/><s n="loc"/></l> 
-        <r>Stockholm<s n="np"/></r> 
+        <r>Stockholm<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Sud-Afriko<s n="np"/><s n="loc"/></l> 
-        <r>Afrique<b/>du<b/>Sud<s n="np"/></r> 
+        <r>Afrique<b/>du<b/>Sud<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Sud-Ameriko<s n="np"/><s n="loc"/></l> 
-        <r>Amérique<b/>du<b/>Sud<s n="np"/></r> 
+        <r>Amérique<b/>du<b/>Sud<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Sud-Koreio<s n="np"/><s n="loc"/></l> 
-        <r>Corée<b/>du<b/>Sud<s n="np"/></r> 
+        <r>Corée<b/>du<b/>Sud<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Sudano<s n="np"/><s n="loc"/></l> 
-        <r>Soudan<s n="np"/></r> 
+        <r>Soudan<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Surinamo<s n="np"/><s n="loc"/></l> 
-        <r>Surinam<s n="np"/></r> 
+        <r>Surinam<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -3662,34 +3633,34 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Svazilando<s n="np"/><s n="loc"/></l> 
-        <r>Swaziland<s n="np"/></r> 
+        <r>Swaziland<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Svedio<s n="np"/><s n="loc"/></l> 
-        <r>Suède<s n="np"/></r> 
+        <r>Suède<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Svisio<s n="np"/><s n="loc"/></l> 
-        <r>Suisse<s n="np"/></r> 
+        <r>Suisse<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -3706,78 +3677,78 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Tajlando<s n="np"/><s n="loc"/></l> 
-        <r>Thaïlande<s n="np"/></r> 
+        <r>Thaïlande<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Tajvano<s n="np"/><s n="loc"/></l> 
-        <r>Taïwan<s n="np"/></r> 
+        <r>Taïwan<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Talino<s n="np"/><s n="loc"/></l> 
-        <r>Tallinn<s n="np"/></r> 
+        <r>Tallinn<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Tanzanio<s n="np"/><s n="loc"/></l> 
-        <r>Tanzanie<s n="np"/></r> 
+        <r>Tanzanie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Taĝikio<s n="np"/><s n="loc"/></l> 
-        <r>Tadjikistan<s n="np"/></r> 
+        <r>Tadjikistan<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Tegucigalpo<s n="np"/><s n="loc"/></l> 
-        <r>Tegucigalpa<s n="np"/></r> 
+        <r>Tegucigalpa<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Togolo<s n="np"/><s n="loc"/></l> 
-        <r>Togo<s n="np"/></r> 
+        <r>Togo<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -3794,133 +3765,133 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Tongo<s n="np"/><s n="loc"/></l> 
-        <r>Tonga<s n="np"/></r> 
+        <r>Tonga<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Tunizio<s n="np"/><s n="loc"/></l> 
-        <r>Tunisie<s n="np"/></r> 
+        <r>Tunisie<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Tunizio<s n="np"/><s n="loc"/></l> 
-        <r>Tunis<s n="np"/></r> 
+        <r>Tunis<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Turkio<s n="np"/><s n="loc"/></l> 
-        <r>Turquie<s n="np"/></r> 
+        <r>Turquie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Turkmenio<s n="np"/><s n="loc"/></l> 
-        <r>Turkménistan<s n="np"/></r> 
+        <r>Turkménistan<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>UNESKO<s n="np"/><s n="loc"/></l> 
-        <r>UNESCO<s n="np"/></r> 
+        <r>UNESCO<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Ugando<s n="np"/><s n="loc"/></l> 
-        <r>Ouganda<s n="np"/></r> 
+        <r>Ouganda<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Ukrainio<s n="np"/><s n="loc"/></l> 
-        <r>Ukraine<s n="np"/></r> 
+        <r>Ukraine<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Urugvajo<s n="np"/><s n="loc"/></l> 
-        <r>Uruguay<s n="np"/></r> 
+        <r>Uruguay<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Usono<s n="np"/><s n="loc"/></l> 
-        <r>les<b/>États-Unis<s n="np"/></r> 
+        <r>les<b/>États-Unis<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Usono<s n="np"/><s n="loc"/></l> 
-        <r>États-Unis<s n="np"/></r> 
+        <r>États-Unis<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Uzbekio<s n="np"/><s n="loc"/></l> 
-        <r>Ouzbékistan<s n="np"/></r> 
+        <r>Ouzbékistan<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -3981,67 +3952,67 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Valencio<s n="np"/><s n="loc"/></l> 
-        <r>Valence<s n="np"/></r> 
+        <r>Valence<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Varsovio<s n="np"/><s n="loc"/></l> 
-        <r>Varsovie<s n="np"/></r> 
+        <r>Varsovie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Vatikano<s n="np"/><s n="loc"/></l> 
-        <r>Vatican<s n="np"/></r> 
+        <r>Vatican<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Vaŝingtono<s n="np"/><s n="loc"/></l> 
-        <r>Washington<s n="np"/></r> 
+        <r>Washington<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Venezuelo<s n="np"/><s n="loc"/></l> 
-        <r>Venezuela<s n="np"/></r> 
+        <r>Venezuela<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Vieno<s n="np"/><s n="loc"/></l> 
-        <r>Vienne<s n="np"/></r> 
+        <r>Vienne<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -4058,12 +4029,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Vjetnamio<s n="np"/><s n="loc"/></l> 
-        <r>Viêtnam<s n="np"/></r> 
+        <r>Viêtnam<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -4201,23 +4172,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Zambio<s n="np"/><s n="loc"/></l> 
-        <r>Zambie<s n="np"/></r> 
+        <r>Zambie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Zimbabvo<s n="np"/><s n="loc"/></l> 
-        <r>Zimbabwe<s n="np"/></r> 
+        <r>Zimbabwe<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -4784,7 +4755,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -4806,7 +4777,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -5059,7 +5030,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -5323,7 +5294,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -5378,7 +5349,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -5873,7 +5844,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -5939,7 +5910,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -6533,7 +6504,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -6654,7 +6625,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -6665,7 +6636,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -6676,7 +6647,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -7952,7 +7923,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -8095,7 +8066,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -8183,7 +8154,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -8502,7 +8473,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -8887,7 +8858,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -8898,7 +8869,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -8909,7 +8880,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -8986,7 +8957,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -9063,7 +9034,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -9360,7 +9331,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -10152,7 +10123,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -10295,7 +10266,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -10383,7 +10354,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -10394,7 +10365,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -10570,7 +10541,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e c="new-category">
       <p>
@@ -10713,7 +10684,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -10911,7 +10882,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -10977,7 +10948,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -11043,7 +11014,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -11230,7 +11201,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -11252,7 +11223,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -11263,7 +11234,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -11461,7 +11432,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -11637,7 +11608,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e c="new-category">
       <p>
@@ -11912,7 +11883,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -11945,7 +11916,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -12099,7 +12070,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -12704,7 +12675,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -12715,7 +12686,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -12957,7 +12928,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -13067,7 +13038,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -13749,7 +13720,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -15476,7 +15447,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -15960,7 +15931,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -16246,7 +16217,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -16389,7 +16360,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -16642,7 +16613,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -16653,7 +16624,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -16664,7 +16635,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -16840,7 +16811,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -17038,7 +17009,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -17621,7 +17592,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -17742,7 +17713,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -17940,7 +17911,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -18094,7 +18065,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -18105,7 +18076,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -18490,7 +18461,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -18611,7 +18582,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -18974,7 +18945,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -19062,7 +19033,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -19216,7 +19187,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -19843,7 +19814,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -20316,7 +20287,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -20591,7 +20562,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -20646,7 +20617,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -20657,7 +20628,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -20668,7 +20639,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -20679,7 +20650,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -21449,7 +21420,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -22197,7 +22168,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -22527,7 +22498,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -22549,7 +22520,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -23583,7 +23554,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -23594,7 +23565,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -23605,7 +23576,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -23627,7 +23598,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -23649,7 +23620,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -24672,7 +24643,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -24826,7 +24797,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -24859,7 +24830,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -25574,7 +25545,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -25926,7 +25897,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -26509,7 +26480,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -27389,7 +27360,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -27983,7 +27954,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -28192,7 +28163,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -29160,7 +29131,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -29809,7 +29780,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -29853,7 +29824,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -29864,7 +29835,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -30073,7 +30044,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -30579,7 +30550,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -30733,7 +30704,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -30766,7 +30737,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -30931,7 +30902,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -31074,7 +31045,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -31305,7 +31276,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -31690,7 +31661,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -32361,7 +32332,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -32383,7 +32354,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -32449,7 +32420,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -32867,7 +32838,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -32988,7 +32959,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -33395,7 +33366,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -33890,7 +33861,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -33923,7 +33894,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -34352,7 +34323,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -34539,7 +34510,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -34616,7 +34587,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -34627,7 +34598,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -35012,7 +34983,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -35078,7 +35049,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -35254,7 +35225,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -35562,7 +35533,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -35859,7 +35830,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -36365,7 +36336,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -36376,7 +36347,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -36706,7 +36677,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -36750,7 +36721,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -37102,7 +37073,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -37509,7 +37480,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e c="new-category">
       <p>
@@ -37520,7 +37491,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -37531,7 +37502,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -37652,7 +37623,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -37883,7 +37854,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -38059,7 +38030,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -38136,7 +38107,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -38312,7 +38283,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -38389,7 +38360,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -38400,7 +38371,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -38818,7 +38789,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -38928,7 +38899,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -38994,7 +38965,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -39005,7 +38976,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -39038,7 +39009,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -39753,7 +39724,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e alt="std">
       <p>
@@ -39786,7 +39757,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -39918,7 +39889,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -40479,7 +40450,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -40710,7 +40681,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -40963,7 +40934,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -41117,7 +41088,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -41458,7 +41429,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -42129,7 +42100,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -42162,7 +42133,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -42349,7 +42320,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -42415,7 +42386,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -42602,7 +42573,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -42723,7 +42694,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -42734,7 +42705,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -42745,7 +42716,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -42756,7 +42727,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -42767,7 +42738,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -43119,7 +43090,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -43614,7 +43585,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -43713,7 +43684,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -43944,7 +43915,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -43966,7 +43937,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -44043,7 +44014,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -44109,7 +44080,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -44307,7 +44278,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -44318,7 +44289,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -44329,7 +44300,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -45132,7 +45103,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -45418,7 +45389,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -45748,7 +45719,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -45847,7 +45818,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -45858,7 +45829,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -45869,7 +45840,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -46287,7 +46258,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -46430,7 +46401,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -46441,7 +46412,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -46452,7 +46423,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -46551,7 +46522,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -46595,7 +46566,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -46969,7 +46940,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -47772,7 +47743,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -47783,7 +47754,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -48256,7 +48227,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -48267,7 +48238,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -48421,7 +48392,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -48432,7 +48403,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -48619,7 +48590,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -48729,7 +48700,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -48762,7 +48733,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -49543,7 +49514,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -50577,7 +50548,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -50588,7 +50559,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -51017,7 +50988,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -51028,7 +50999,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -51138,7 +51109,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -51325,7 +51296,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -51369,7 +51340,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -52040,7 +52011,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -52051,7 +52022,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -52557,7 +52528,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -54273,7 +54244,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -54724,7 +54695,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -54988,7 +54959,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -55010,7 +54981,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -55021,7 +54992,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -55285,7 +55256,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -55615,7 +55586,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -55670,7 +55641,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -55989,7 +55960,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -56110,7 +56081,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -56121,7 +56092,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -56737,7 +56708,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -56869,7 +56840,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e c="new-category">
       <p>
@@ -56902,7 +56873,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -57518,7 +57489,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -57584,7 +57555,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -57815,7 +57786,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -58541,7 +58512,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -58717,7 +58688,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -58827,7 +58798,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -58926,7 +58897,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -60675,7 +60646,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -60807,7 +60778,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -61984,7 +61955,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -62204,7 +62175,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -62336,7 +62307,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -62864,7 +62835,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -63150,7 +63121,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -63755,7 +63726,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -63909,7 +63880,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -64096,7 +64067,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -64250,7 +64221,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -64910,7 +64881,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -65185,7 +65156,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -65251,7 +65222,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -65394,7 +65365,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -65504,7 +65475,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -65581,7 +65552,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -65856,7 +65827,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -65966,7 +65937,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -65977,7 +65948,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -65988,7 +65959,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -66054,7 +66025,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -66131,7 +66102,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -66659,7 +66630,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -66736,7 +66707,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -66934,7 +66905,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -66978,7 +66949,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -67143,7 +67114,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -67187,7 +67158,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -67308,7 +67279,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e c="new-category">
       <p>
@@ -67374,7 +67345,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -67440,7 +67411,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -68716,7 +68687,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -69002,7 +68973,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -69244,7 +69215,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -69255,7 +69226,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -69354,7 +69325,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -69365,7 +69336,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -69420,7 +69391,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -69574,7 +69545,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -69585,7 +69556,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -69629,7 +69600,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -69640,7 +69611,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -69651,7 +69622,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -69816,7 +69787,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -70146,7 +70117,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -70894,7 +70865,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -70905,7 +70876,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -71037,7 +71008,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -71268,7 +71239,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -71279,7 +71250,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -71290,7 +71261,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -71301,7 +71272,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -71510,7 +71481,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e c="new-category">
       <p>
@@ -71554,7 +71525,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e c="new-category">
       <p>
@@ -73094,7 +73065,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -73908,7 +73879,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -74502,7 +74473,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -74722,7 +74693,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -74876,7 +74847,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -74887,7 +74858,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -76757,7 +76728,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -76845,7 +76816,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -77131,7 +77102,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -77142,7 +77113,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -78550,7 +78521,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -78770,7 +78741,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -79694,7 +79665,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -79727,7 +79698,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -80255,7 +80226,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -80882,7 +80853,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -80915,7 +80886,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -81113,7 +81084,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -81773,7 +81744,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -82026,7 +81997,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -82521,7 +82492,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -82642,7 +82613,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -82796,7 +82767,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -82884,7 +82855,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -83027,7 +82998,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -83423,7 +83394,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -83533,7 +83504,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -83698,7 +83669,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -84864,7 +84835,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -85282,7 +85253,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -86063,7 +86034,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -86294,7 +86265,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -87086,7 +87057,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -87174,7 +87145,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -87735,7 +87706,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -88120,7 +88091,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -88626,7 +88597,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -88923,7 +88894,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -89011,7 +88982,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -89880,7 +89851,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -89891,7 +89862,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -90639,7 +90610,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -90848,7 +90819,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -90870,7 +90841,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -91519,7 +91490,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -91772,7 +91743,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -91926,7 +91897,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -92454,7 +92425,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -92465,7 +92436,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -92553,7 +92524,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -92597,7 +92568,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -92817,7 +92788,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -93213,7 +93184,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -93411,7 +93382,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -93499,7 +93470,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -93609,7 +93580,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -94181,7 +94152,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -94753,7 +94724,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -94830,67 +94801,67 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Ĉadio<s n="np"/><s n="loc"/></l> 
-        <r>Tchad<s n="np"/></r> 
+        <r>Tchad<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Ĉeĉenio<s n="np"/><s n="loc"/></l> 
-        <r>Tchétchénie<s n="np"/></r> 
+        <r>Tchétchénie<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Ĉeĥio<s n="np"/><s n="loc"/></l> 
-        <r>République<b/>tchèque<s n="np"/></r> 
+        <r>République<b/>tchèque<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Ĉeĥio<s n="np"/><s n="loc"/></l> 
-        <r>Chequia<s n="np"/></r> 
+        <r>Chequia<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Ĉilio<s n="np"/><s n="loc"/></l> 
-        <r>Chili<s n="np"/></r> 
+        <r>Chili<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addf
     -->
     <e>
       <p>
         <l>Ĉinio<s n="np"/><s n="loc"/></l> 
-        <r>Chine<s n="np"/></r> 
+        <r>Chine<s n="np"/><s n="loc"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -94951,7 +94922,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -95314,7 +95285,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -95347,7 +95318,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -95710,7 +95681,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -95754,7 +95725,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -96007,12 +95978,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      np.loc-addm
     -->
     <e>
       <p>
         <l>Ĝibraltaro<s n="np"/><s n="loc"/></l> 
-        <r>Gibraltar<s n="np"/></r> 
+        <r>Gibraltar<s n="np"/><s n="loc"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -96040,7 +96011,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -96348,7 +96319,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -96359,7 +96330,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      pr
     -->
     <e>
       <p>
@@ -96854,7 +96825,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -97228,7 +97199,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -97415,7 +97386,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -97547,7 +97518,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -97822,7 +97793,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>
@@ -98075,7 +98046,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-nogender
     -->
     <e>
       <p>

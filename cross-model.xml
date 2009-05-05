@@ -347,7 +347,88 @@
                 <e>
                     <p>
                         <l>$lemmaA<s n="np"/><s n="loc"/></l>
-                        <r>$lemmaC<s n="np"/><s n="loc"/><s n="acr"/><s n="m"/></r>
+                        <r>$lemmaC<s n="np"/><s n="loc"/><s n="m"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="np.loc-addf" a="jimregan">
+        <description>add f</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="np"/><s n="loc"/></l>
+                    <r>$lemmaB<s n="np"/><s n="loc"/><s n="f"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="np"/></l>
+                    <r>$lemmaC<s n="np"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="np"/><s n="loc"/></l>
+                        <r>$lemmaC<s n="np"/><s n="loc"/><s n="f"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="np.loc-addm" a="jimregan">
+        <description>add m</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="np"/><s n="loc"/></l>
+                    <r>$lemmaB<s n="np"/><s n="loc"/><s n="m"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="np"/></l>
+                    <r>$lemmaC<s n="np"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="np"/><s n="loc"/></l>
+                        <r>$lemmaC<s n="np"/><s n="loc"/><s n="m"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="nom-nogender" a="jimregan">
+        <description>noun without gender</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="n"/></l>
+                    <r>$lemmaB<s n="n"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="n"/></l>
+                    <r>$lemmaC<s n="n"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e c="FIXME: no gender">
+                    <p>
+                        <l>$lemmaA<s n="n"/></l>
+                        <r>$lemmaC<s n="n"/></r>
                     </p>
                 </e>
             </action>
@@ -402,6 +483,33 @@
                     <p>
                         <l>$lemmaA<s n="adj"/></l>
                         <r>$lemmaC<s n="adj"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="pr" a="jimregan">
+        <description>pr</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="pr"/></l>
+                    <r>$lemmaB<s n="pr"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="pr"/></l>
+                    <r>$lemmaC<s n="pr"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="pr"/></l>
+                        <r>$lemmaC<s n="pr"/></r>
                     </p>
                 </e>
             </action>
