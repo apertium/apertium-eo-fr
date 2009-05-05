@@ -30,7 +30,7 @@
     </def-cat>
     
     <def-cat n="article">
-      <cat-item lemma="el" tags="det.*"/>
+      <cat-item lemma="le" tags="det.*"/>
     </def-cat>
 
     
@@ -290,19 +290,17 @@
     
     <def-cat n="mes">
       <cat-item lemma="més" tags="adv"/>
-      <cat-item lemma="més" tags="preadv"/>
-      <cat-item lemma="més" tags="det.*"/><!-- pel tagger-->
     </def-cat>
 
 
     <def-cat n="no">
-      <cat-item lemma="no" tags="adv"/>
+      <cat-item lemma="ne" tags="adv"/>
     </def-cat>
 
     <def-cat n="cnjcoo">
-      <cat-item lemma="i" tags="cnjcoo"/>
-      <cat-item lemma="o" tags="cnjcoo"/>
-      <cat-item lemma="però" tags="cnjcoo"/>
+      <cat-item lemma="et" tags="cnjcoo"/>
+      <cat-item lemma="ou" tags="cnjcoo"/>
+      <cat-item lemma="mais" tags="cnjcoo"/>
     </def-cat>
 
      <def-cat n="cnjcoopercorregir"> <!-- EO afegit per a corregir errors del tagger, veure regles-->
