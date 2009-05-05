@@ -407,6 +407,330 @@
             </action>
         </action-set>
     </cross-action>
+    <cross-action id="nom-do_sp-LRm-sg" a="jimregan">
+        <description>sp in es</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="n"/></l>
+                    <r>$lemmaB<s n="n"/><s n="m"/></r>
+                </p>
+            </e>
+            <e r="LR">
+                <p>
+                    <l>$lemmaB<s n="n"/><s n="m"/><s n="sg"/></l>
+                    <r>$lemmaC<s n="n"/><s n="m"/><s n="sp"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e r="LR">
+                    <p>
+                        <l>$lemmaA<s n="n"/><s n="sg"/></l>
+                        <r>$lemmaC<s n="n"/><s n="m"/><s n="sp"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="nom-do_sp-LRf-sg" a="jimregan">
+        <description>sp in es</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="n"/></l>
+                    <r>$lemmaB<s n="n"/><s n="f"/></r>
+                </p>
+            </e>
+            <e r="LR">
+                <p>
+                    <l>$lemmaB<s n="n"/><s n="f"/><s n="sg"/></l>
+                    <r>$lemmaC<s n="n"/><s n="f"/><s n="sp"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e r="LR">
+                    <p>
+                        <l>$lemmaA<s n="n"/><s n="sg"/></l>
+                        <r>$lemmaC<s n="n"/><s n="f"/><s n="sp"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="nom-do_sp-LR-swapm_f-sg" a="jimregan">
+        <description>sp in es</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="n"/></l>
+                    <r>$lemmaB<s n="n"/><s n="m"/></r>
+                </p>
+            </e>
+            <e r="LR">
+                <p>
+                    <l>$lemmaB<s n="n"/><s n="m"/><s n="sg"/></l>
+                    <r>$lemmaC<s n="n"/><s n="f"/><s n="sp"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e r="LR">
+                    <p>
+                        <l>$lemmaA<s n="n"/><s n="sg"/></l>
+                        <r>$lemmaC<s n="n"/><s n="f"/><s n="sp"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="nom-do_sp-LR-swapm_f-sg" a="jimregan">
+        <description>sp in es</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="n"/></l>
+                    <r>$lemmaB<s n="n"/><s n="f"/></r>
+                </p>
+            </e>
+            <e r="LR">
+                <p>
+                    <l>$lemmaB<s n="n"/><s n="f"/><s n="sg"/></l>
+                    <r>$lemmaC<s n="n"/><s n="m"/><s n="sp"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e r="LR">
+                    <p>
+                        <l>$lemmaA<s n="n"/><s n="sg"/></l>
+                        <r>$lemmaC<s n="n"/><s n="m"/><s n="sp"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="nom-do_sp-LRm-pl" a="jimregan">
+        <description>sp in es</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="n"/></l>
+                    <r>$lemmaB<s n="n"/><s n="m"/></r>
+                </p>
+            </e>
+            <e r="LR">
+                <p>
+                    <l>$lemmaB<s n="n"/><s n="m"/><s n="pl"/></l>
+                    <r>$lemmaC<s n="n"/><s n="m"/><s n="sp"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e r="LR">
+                    <p>
+                        <l>$lemmaA<s n="n"/><s n="pl"/></l>
+                        <r>$lemmaC<s n="n"/><s n="m"/><s n="sp"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="nom-do_sp-LRf-pl" a="jimregan">
+        <description>sp in es</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="n"/></l>
+                    <r>$lemmaB<s n="n"/><s n="f"/></r>
+                </p>
+            </e>
+            <e r="LR">
+                <p>
+                    <l>$lemmaB<s n="n"/><s n="f"/><s n="pl"/></l>
+                    <r>$lemmaC<s n="n"/><s n="f"/><s n="sp"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e r="LR">
+                    <p>
+                        <l>$lemmaA<s n="n"/><s n="pl"/></l>
+                        <r>$lemmaC<s n="n"/><s n="f"/><s n="sp"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="nom-do_sp-LR-swapm_f-pl" a="jimregan">
+        <description>sp in es</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="n"/></l>
+                    <r>$lemmaB<s n="n"/><s n="m"/></r>
+                </p>
+            </e>
+            <e r="LR">
+                <p>
+                    <l>$lemmaB<s n="n"/><s n="m"/><s n="pl"/></l>
+                    <r>$lemmaC<s n="n"/><s n="f"/><s n="sp"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e r="LR">
+                    <p>
+                        <l>$lemmaA<s n="n"/><s n="pl"/></l>
+                        <r>$lemmaC<s n="n"/><s n="f"/><s n="sp"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="nom-do_sp-LR-swapm_f-pl" a="jimregan">
+        <description>sp in es</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="n"/></l>
+                    <r>$lemmaB<s n="n"/><s n="f"/></r>
+                </p>
+            </e>
+            <e r="LR">
+                <p>
+                    <l>$lemmaB<s n="n"/><s n="f"/><s n="pl"/></l>
+                    <r>$lemmaC<s n="n"/><s n="m"/><s n="sp"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e r="LR">
+                    <p>
+                        <l>$lemmaA<s n="n"/><s n="pl"/></l>
+                        <r>$lemmaC<s n="n"/><s n="m"/><s n="sp"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="nom-do_sp-RLm-ND" a="jimregan">
+        <description>sp in es</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="n"/></l>
+                    <r>$lemmaB<s n="n"/><s n="m"/></r>
+                </p>
+            </e>
+            <e r="RL">
+                <p>
+                    <l>$lemmaB<s n="n"/><s n="m"/><s n="ND"/></l>
+                    <r>$lemmaC<s n="n"/><s n="m"/><s n="sp"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e r="RL">
+                    <p>
+                        <l>$lemmaA<s n="n"/><s n="ND"/></l>
+                        <r>$lemmaC<s n="n"/><s n="m"/><s n="sp"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="nom-do_sp-RLf-ND" a="jimregan">
+        <description>sp in es</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="n"/></l>
+                    <r>$lemmaB<s n="n"/><s n="f"/></r>
+                </p>
+            </e>
+            <e r="RL">
+                <p>
+                    <l>$lemmaB<s n="n"/><s n="f"/><s n="ND"/></l>
+                    <r>$lemmaC<s n="n"/><s n="f"/><s n="sp"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e r="RL">
+                    <p>
+                        <l>$lemmaA<s n="n"/><s n="ND"/></l>
+                        <r>$lemmaC<s n="n"/><s n="f"/><s n="sp"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="nom-do_sp-RL-swapm_f-ND" a="jimregan">
+        <description>sp in es</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="n"/></l>
+                    <r>$lemmaB<s n="n"/><s n="m"/></r>
+                </p>
+            </e>
+            <e r="RL">
+                <p>
+                    <l>$lemmaB<s n="n"/><s n="m"/><s n="ND"/></l>
+                    <r>$lemmaC<s n="n"/><s n="f"/><s n="sp"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e r="RL">
+                    <p>
+                        <l>$lemmaA<s n="n"/><s n="ND"/></l>
+                        <r>$lemmaC<s n="n"/><s n="f"/><s n="sp"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="nom-do_sp-RL-swapm_f-ND" a="jimregan">
+        <description>sp in es</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="n"/></l>
+                    <r>$lemmaB<s n="n"/><s n="f"/></r>
+                </p>
+            </e>
+            <e r="RL">
+                <p>
+                    <l>$lemmaB<s n="n"/><s n="f"/><s n="ND"/></l>
+                    <r>$lemmaC<s n="n"/><s n="m"/><s n="sp"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e r="RL">
+                    <p>
+                        <l>$lemmaA<s n="n"/><s n="ND"/></l>
+                        <r>$lemmaC<s n="n"/><s n="m"/><s n="sp"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
     <cross-action id="n.acr-f" a="jimregan">
         <description>Feminine in both es and fr</description>
         <pattern>

@@ -3,11 +3,11 @@
 	Dictionary:
 	Bilingual dictionary: eo-fr
 	Sections: 1
-	Entries: 8317
+	Entries: 8504
 	Sdefs: 93
       
       Patterns applied:
-      	default (586 times)
+      	default (473 times)
       	nom-f (1729 times)
       	nom-m (1411 times)
       	nom-mtof (292 times)
@@ -22,6 +22,18 @@
       	nom-skipspfRLpl (4 times)
       	nom-mf-m (3 times)
       	nom-mf-f (1 times)
+      	nom-do_sp-LRm-sg (74 times)
+      	nom-do_sp-LRf-sg (7 times)
+      	nom-do_sp-LR-swapm_f-sg (20 times)
+      	nom-do_sp-LR-swapm_f-sg (20 times)
+      	nom-do_sp-LRm-pl (74 times)
+      	nom-do_sp-LRf-pl (7 times)
+      	nom-do_sp-LR-swapm_f-pl (20 times)
+      	nom-do_sp-LR-swapm_f-pl (20 times)
+      	nom-do_sp-RLm-ND (77 times)
+      	nom-do_sp-RLf-ND (7 times)
+      	nom-do_sp-RL-swapm_f-ND (14 times)
+      	nom-do_sp-RL-swapm_f-ND (14 times)
       	n.acr-f (4 times)
       	n.acr-m (7 times)
       	np.loc-f (4 times)
@@ -5801,12 +5813,23 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>akcidento<s n="n"/></l> 
+        <l>akcidento<s n="n"/><s n="pl"/></l> 
+        <r>contretemps<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>akcidento<s n="n"/><s n="sg"/></l> 
         <r>contretemps<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -6571,12 +6594,23 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>aleo<s n="n"/></l> 
+        <l>aleo<s n="n"/><s n="sg"/></l> 
+        <r>cours<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>aleo<s n="n"/><s n="pl"/></l> 
         <r>cours<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -6824,12 +6858,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>aliro<s n="n"/></l> 
+        <l>aliro<s n="n"/><s n="ND"/></l> 
+        <r>accès<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>aliro<s n="n"/><s n="pl"/></l> 
+        <r>accès<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>aliro<s n="n"/><s n="sg"/></l> 
         <r>accès<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -7605,12 +7661,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>amaso<s n="n"/></l> 
+        <l>amaso<s n="n"/><s n="ND"/></l> 
         <r>amas<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -7627,12 +7683,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>amaso<s n="n"/></l> 
+        <l>amaso<s n="n"/><s n="ND"/></l> 
+        <r>tas<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>amaso<s n="n"/><s n="pl"/></l> 
+        <r>tas<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>amaso<s n="n"/><s n="sg"/></l> 
         <r>tas<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -8661,12 +8739,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>ansero<s n="n"/></l> 
+        <l>ansero<s n="n"/><s n="ND"/></l> 
+        <r>jars<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>ansero<s n="n"/><s n="sg"/></l> 
+        <r>jars<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>ansero<s n="n"/><s n="pl"/></l> 
         <r>jars<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -8727,12 +8827,23 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>anstataŭo<s n="n"/></l> 
+        <l>anstataŭo<s n="n"/><s n="pl"/></l> 
+        <r>relais<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>anstataŭo<s n="n"/><s n="sg"/></l> 
         <r>relais<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -8804,12 +8915,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>antaŭbrako<s n="n"/></l> 
+        <l>antaŭbrako<s n="n"/><s n="ND"/></l> 
+        <r>avant-bras<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>antaŭbrako<s n="n"/><s n="sg"/></l> 
+        <r>avant-bras<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>antaŭbrako<s n="n"/><s n="pl"/></l> 
         <r>avant-bras<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -9233,12 +9366,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>anĉovo<s n="n"/></l> 
+        <l>anĉovo<s n="n"/><s n="sg"/></l> 
+        <r>anchois<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>anĉovo<s n="n"/><s n="pl"/></l> 
+        <r>anchois<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'RL' restriction
+      nom-do_sp-RL-swapm_f-ND
+    -->
+    <e r="RL">
+      <p>
+        <l>anĉovo<s n="n"/><s n="ND"/></l> 
         <r>anchois<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -9266,12 +9421,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>aparato<s n="n"/></l> 
+        <l>aparato<s n="n"/><s n="ND"/></l> 
         <r>agrès<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -9904,12 +10059,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>arbaro<s n="n"/></l> 
+        <l>arbaro<s n="n"/><s n="ND"/></l> 
         <r>bois<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -9922,6 +10077,28 @@
       <p>
         <l>arbaro<s n="n"/></l> 
         <r>forêt<s n="n"/><s n="f"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>arbaro<s n="n"/><s n="pl"/></l> 
+        <r>bois<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>arbaro<s n="n"/><s n="sg"/></l> 
+        <r>bois<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
 
@@ -11279,12 +11456,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>averso<s n="n"/></l> 
+        <l>averso<s n="n"/><s n="ND"/></l> 
+        <r>avers<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>averso<s n="n"/><s n="sg"/></l> 
+        <r>avers<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>averso<s n="n"/><s n="pl"/></l> 
         <r>avers<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -11345,12 +11544,23 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>avizo<s n="n"/></l> 
+        <l>avizo<s n="n"/><s n="sg"/></l> 
+        <r>avis<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>avizo<s n="n"/><s n="pl"/></l> 
         <r>avis<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -13952,12 +14162,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>brako<s n="n"/></l> 
+        <l>brako<s n="n"/><s n="ND"/></l> 
+        <r>bras<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>brako<s n="n"/><s n="pl"/></l> 
+        <r>bras<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>brako<s n="n"/><s n="sg"/></l> 
         <r>bras<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -14436,12 +14668,23 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>brulligno<s n="n"/></l> 
+        <l>brulligno<s n="n"/><s n="pl"/></l> 
+        <r>bois<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>brulligno<s n="n"/><s n="sg"/></l> 
         <r>bois<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -14700,12 +14943,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>buso<s n="n"/></l> 
+        <l>buso<s n="n"/><s n="ND"/></l> 
+        <r>bus<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>buso<s n="n"/><s n="sg"/></l> 
+        <r>bus<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>buso<s n="n"/><s n="pl"/></l> 
         <r>bus<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -15195,12 +15460,23 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>cigaredpaketo<s n="n"/></l> 
+        <l>cigaredpaketo<s n="n"/><s n="pl"/></l> 
+        <r>colis<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>cigaredpaketo<s n="n"/><s n="sg"/></l> 
         <r>colis<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -15272,12 +15548,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>cipreso<s n="n"/></l> 
+        <l>cipreso<s n="n"/><s n="ND"/></l> 
+        <r>cyprès<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>cipreso<s n="n"/><s n="sg"/></l> 
+        <r>cyprès<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>cipreso<s n="n"/><s n="pl"/></l> 
         <r>cyprès<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -17560,12 +17858,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>devontigo<s n="n"/></l> 
+        <l>devontigo<s n="n"/><s n="ND"/></l> 
         <r>compromis<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -19276,23 +19574,67 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>dorso<s n="n"/></l> 
+        <l>dorso<s n="n"/><s n="ND"/></l> 
         <r>revers<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>dorso<s n="n"/></l> 
+        <l>dorso<s n="n"/><s n="sg"/></l> 
+        <r>revers<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>dorso<s n="n"/><s n="pl"/></l> 
+        <r>revers<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'RL' restriction
+      nom-do_sp-RL-swapm_f-ND
+    -->
+    <e r="RL">
+      <p>
+        <l>dorso<s n="n"/><s n="ND"/></l> 
+        <r>dos<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>dorso<s n="n"/><s n="pl"/></l> 
+        <r>dos<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>dorso<s n="n"/><s n="sg"/></l> 
         <r>dos<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -22708,12 +23050,23 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>engraŭlo<s n="n"/></l> 
+        <l>engraŭlo<s n="n"/><s n="sg"/></l> 
+        <r>anchois<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>engraŭlo<s n="n"/><s n="pl"/></l> 
         <r>anchois<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -25865,12 +26218,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>feto<s n="n"/></l> 
+        <l>feto<s n="n"/><s n="ND"/></l> 
+        <r>foetus<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>feto<s n="n"/><s n="sg"/></l> 
+        <r>foetus<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>feto<s n="n"/><s n="pl"/></l> 
         <r>foetus<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -25898,12 +26273,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>fiasko<s n="n"/></l> 
+        <l>fiasko<s n="n"/><s n="ND"/></l> 
+        <r>insuccès<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>fiasko<s n="n"/><s n="pl"/></l> 
+        <r>insuccès<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>fiasko<s n="n"/><s n="sg"/></l> 
         <r>insuccès<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -26811,12 +27208,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>fluo<s n="n"/></l> 
+        <l>fluo<s n="n"/><s n="ND"/></l> 
+        <r>flux<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>fluo<s n="n"/><s n="sg"/></l> 
+        <r>flux<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>fluo<s n="n"/><s n="pl"/></l> 
         <r>flux<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -26866,12 +27285,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLf-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>fojo<s n="n"/></l> 
+        <l>fojo<s n="n"/><s n="ND"/></l> 
+        <r>fois<s n="n"/><s n="f"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRf-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>fojo<s n="n"/><s n="pl"/></l> 
+        <r>fois<s n="n"/><s n="f"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRf-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>fojo<s n="n"/><s n="sg"/></l> 
         <r>fois<s n="n"/><s n="f"/><s n="sp"/></r> 
       </p>
     </e>
@@ -27229,12 +27670,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>formetejo<s n="n"/></l> 
+        <l>formetejo<s n="n"/><s n="sg"/></l> 
+        <r>débarras<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>formetejo<s n="n"/><s n="pl"/></l> 
+        <r>débarras<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
+    -->
+    <e r="RL">
+      <p>
+        <l>formetejo<s n="n"/><s n="ND"/></l> 
         <r>débarras<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -29121,12 +29584,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>gaso<s n="n"/></l> 
+        <l>gaso<s n="n"/><s n="ND"/></l> 
+        <r>gaz<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>gaso<s n="n"/><s n="pl"/></l> 
+        <r>gaz<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>gaso<s n="n"/><s n="sg"/></l> 
         <r>gaz<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -29550,12 +30035,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>gildo<s n="n"/></l> 
+        <l>gildo<s n="n"/><s n="ND"/></l> 
+        <r>corps<g><b/>de<b/>métier</g><s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>gildo<s n="n"/><s n="pl"/></l> 
+        <r>corps<g><b/>de<b/>métier</g><s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>gildo<s n="n"/><s n="sg"/></l> 
         <r>corps<g><b/>de<b/>métier</g><s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -30111,12 +30618,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-swapm_f-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>graso<s n="n"/></l> 
+        <l>graso<s n="n"/><s n="ND"/></l> 
+        <r>gras<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>graso<s n="n"/><s n="sg"/></l> 
+        <r>gras<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>graso<s n="n"/><s n="pl"/></l> 
         <r>gras<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -31046,12 +31575,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>helpo<s n="n"/></l> 
+        <l>helpo<s n="n"/><s n="ND"/></l> 
+        <r>secours<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>helpo<s n="n"/><s n="sg"/></l> 
+        <r>secours<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>helpo<s n="n"/><s n="pl"/></l> 
         <r>secours<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -32795,12 +33346,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>indico<s n="n"/></l> 
+        <l>indico<s n="n"/><s n="ND"/></l> 
         <r>index<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -33092,12 +33643,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>infarkto<s n="n"/></l> 
+        <l>infarkto<s n="n"/><s n="ND"/></l> 
+        <r>infarctus<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>infarkto<s n="n"/><s n="sg"/></l> 
+        <r>infarctus<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>infarkto<s n="n"/><s n="pl"/></l> 
         <r>infarctus<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -34005,12 +34578,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>intenco<s n="n"/></l> 
+        <l>intenco<s n="n"/><s n="ND"/></l> 
+        <r>propos<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>intenco<s n="n"/><s n="pl"/></l> 
+        <r>propos<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>intenco<s n="n"/><s n="sg"/></l> 
         <r>propos<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -35039,12 +35634,23 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>irido<s n="n"/></l> 
+        <l>irido<s n="n"/><s n="sg"/></l> 
+        <r>iris<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>irido<s n="n"/><s n="pl"/></l> 
         <r>iris<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -36348,12 +36954,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRf-pl
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>kalko<s n="n"/></l> 
+        <l>kalko<s n="n"/><s n="pl"/></l> 
+        <r>chaux<s n="n"/><s n="f"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRf-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>kalko<s n="n"/><s n="sg"/></l> 
+        <r>chaux<s n="n"/><s n="f"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'RL' restriction
+      nom-do_sp-RLf-ND
+    -->
+    <e r="RL">
+      <p>
+        <l>kalko<s n="n"/><s n="ND"/></l> 
         <r>chaux<s n="n"/><s n="f"/><s n="sp"/></r> 
       </p>
     </e>
@@ -37723,12 +38351,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>kazo<s n="n"/></l> 
+        <l>kazo<s n="n"/><s n="ND"/></l> 
+        <r>cas<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>kazo<s n="n"/><s n="pl"/></l> 
+        <r>cas<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>kazo<s n="n"/><s n="sg"/></l> 
         <r>cas<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -38240,12 +38890,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>kirlo<s n="n"/></l> 
+        <l>kirlo<s n="n"/><s n="ND"/></l> 
+        <r>remous<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>kirlo<s n="n"/><s n="pl"/></l> 
+        <r>remous<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>kirlo<s n="n"/><s n="sg"/></l> 
         <r>remous<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -38548,12 +39220,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-swapm_f-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>klimato<s n="n"/></l> 
+        <l>klimato<s n="n"/><s n="ND"/></l> 
         <r>météo<s n="n"/><s n="f"/><s n="sp"/></r> 
       </p>
     </e>
@@ -40627,12 +41299,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>kongreso<s n="n"/></l> 
+        <l>kongreso<s n="n"/><s n="ND"/></l> 
+        <r>congrès<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>kongreso<s n="n"/><s n="pl"/></l> 
+        <r>congrès<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>kongreso<s n="n"/><s n="sg"/></l> 
         <r>congrès<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -40858,12 +41552,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>konkurso<s n="n"/></l> 
+        <l>konkurso<s n="n"/><s n="ND"/></l> 
+        <r>concours<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>konkurso<s n="n"/><s n="sg"/></l> 
+        <r>concours<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>konkurso<s n="n"/><s n="pl"/></l> 
         <r>concours<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -40979,12 +41695,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>konsento<s n="n"/></l> 
+        <l>konsento<s n="n"/><s n="ND"/></l> 
+        <r>consensus<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>konsento<s n="n"/><s n="sg"/></l> 
+        <r>consensus<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>konsento<s n="n"/><s n="pl"/></l> 
         <r>consensus<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -41738,12 +42476,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>kontraŭaĵo<s n="n"/></l> 
+        <l>kontraŭaĵo<s n="n"/><s n="ND"/></l> 
+        <r>contretemps<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>kontraŭaĵo<s n="n"/><s n="pl"/></l> 
+        <r>contretemps<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>kontraŭaĵo<s n="n"/><s n="sg"/></l> 
         <r>contretemps<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -42332,12 +43092,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>korpo<s n="n"/></l> 
+        <l>korpo<s n="n"/><s n="ND"/></l> 
+        <r>corps<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>korpo<s n="n"/><s n="pl"/></l> 
+        <r>corps<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>korpo<s n="n"/><s n="sg"/></l> 
         <r>corps<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -42992,12 +43774,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-swapm_f-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>kristnasko<s n="n"/></l> 
+        <l>kristnasko<s n="n"/><s n="ND"/></l> 
+        <r>noël<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>kristnasko<s n="n"/><s n="sg"/></l> 
+        <r>noël<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>kristnasko<s n="n"/><s n="pl"/></l> 
         <r>noël<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -43278,12 +44082,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLf-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>kruco<s n="n"/></l> 
+        <l>kruco<s n="n"/><s n="ND"/></l> 
+        <r>croix<s n="n"/><s n="f"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRf-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>kruco<s n="n"/><s n="pl"/></l> 
+        <r>croix<s n="n"/><s n="f"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRf-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>kruco<s n="n"/><s n="sg"/></l> 
         <r>croix<s n="n"/><s n="f"/><s n="sp"/></r> 
       </p>
     </e>
@@ -43498,12 +44324,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>kuliso<s n="n"/></l> 
+        <l>kuliso<s n="n"/><s n="sg"/></l> 
+        <r>châssis<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>kuliso<s n="n"/><s n="pl"/></l> 
+        <r>châssis<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
+    -->
+    <e r="RL">
+      <p>
+        <l>kuliso<s n="n"/><s n="ND"/></l> 
         <r>châssis<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -44180,12 +45028,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>kurso<s n="n"/></l> 
+        <l>kurso<s n="n"/><s n="ND"/></l> 
+        <r>cours<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>kurso<s n="n"/><s n="pl"/></l> 
+        <r>cours<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>kurso<s n="n"/><s n="sg"/></l> 
         <r>cours<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -44235,12 +45105,23 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>kurzo<s n="n"/></l> 
+        <l>kurzo<s n="n"/><s n="pl"/></l> 
+        <r>cours<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>kurzo<s n="n"/><s n="sg"/></l> 
         <r>cours<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -45159,12 +46040,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>lando<s n="n"/></l> 
+        <l>lando<s n="n"/><s n="ND"/></l> 
+        <r>pays<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>lando<s n="n"/><s n="pl"/></l> 
+        <r>pays<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>lando<s n="n"/><s n="sg"/></l> 
         <r>pays<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -45676,12 +46579,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>legaco<s n="n"/></l> 
+        <l>legaco<s n="n"/><s n="ND"/></l> 
+        <r>legs<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>legaco<s n="n"/><s n="sg"/></l> 
+        <r>legs<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>legaco<s n="n"/><s n="pl"/></l> 
         <r>legs<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -46633,12 +47558,23 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>ligno<s n="n"/></l> 
+        <l>ligno<s n="n"/><s n="pl"/></l> 
+        <r>bois<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>ligno<s n="n"/><s n="sg"/></l> 
         <r>bois<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -47392,12 +48328,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-swapm_f-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>loĝejo<s n="n"/></l> 
+        <l>loĝejo<s n="n"/><s n="ND"/></l> 
         <r>logis<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -48162,12 +49098,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>malakcepto<s n="n"/></l> 
+        <l>malakcepto<s n="n"/><s n="ND"/></l> 
+        <r>refus<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>malakcepto<s n="n"/><s n="pl"/></l> 
+        <r>refus<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>malakcepto<s n="n"/><s n="sg"/></l> 
         <r>refus<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -48635,12 +49593,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>malestimo<s n="n"/></l> 
+        <l>malestimo<s n="n"/><s n="ND"/></l> 
+        <r>mépris<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>malestimo<s n="n"/><s n="pl"/></l> 
+        <r>mépris<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>malestimo<s n="n"/><s n="sg"/></l> 
         <r>mépris<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -50142,12 +51122,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>malsukceso<s n="n"/></l> 
+        <l>malsukceso<s n="n"/><s n="ND"/></l> 
+        <r>insuccès<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>malsukceso<s n="n"/><s n="pl"/></l> 
+        <r>insuccès<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>malsukceso<s n="n"/><s n="sg"/></l> 
         <r>insuccès<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -50912,12 +51914,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-swapm_f-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>mantuko<s n="n"/></l> 
+        <l>mantuko<s n="n"/><s n="ND"/></l> 
+        <r>essuie-mains<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>mantuko<s n="n"/><s n="pl"/></l> 
+        <r>essuie-mains<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>mantuko<s n="n"/><s n="sg"/></l> 
         <r>essuie-mains<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -51231,12 +52255,23 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>marmarĉo<s n="n"/></l> 
+        <l>marmarĉo<s n="n"/><s n="sg"/></l> 
+        <r>marais<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>marmarĉo<s n="n"/><s n="pl"/></l> 
         <r>marais<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -51341,12 +52376,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>marto<s n="n"/></l> 
+        <l>marto<s n="n"/><s n="ND"/></l> 
+        <r>mars<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>marto<s n="n"/><s n="pl"/></l> 
+        <r>mars<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>marto<s n="n"/><s n="sg"/></l> 
         <r>mars<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -51363,12 +52420,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>marĉo<s n="n"/></l> 
+        <l>marĉo<s n="n"/><s n="sg"/></l> 
+        <r>marais<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>marĉo<s n="n"/><s n="pl"/></l> 
+        <r>marais<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
+    -->
+    <e r="RL">
+      <p>
+        <l>marĉo<s n="n"/><s n="ND"/></l> 
         <r>marais<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -51693,12 +52772,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>matraco<s n="n"/></l> 
+        <l>matraco<s n="n"/><s n="sg"/></l> 
+        <r>matelas<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>matraco<s n="n"/><s n="pl"/></l> 
+        <r>matelas<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
+    -->
+    <e r="RL">
+      <p>
+        <l>matraco<s n="n"/><s n="ND"/></l> 
         <r>matelas<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -53574,12 +54675,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>misuzo<s n="n"/></l> 
+        <l>misuzo<s n="n"/><s n="ND"/></l> 
+        <r>abus<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>misuzo<s n="n"/><s n="pl"/></l> 
+        <r>abus<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>misuzo<s n="n"/><s n="sg"/></l> 
         <r>abus<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -53926,12 +55049,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>monato<s n="n"/></l> 
+        <l>monato<s n="n"/><s n="sg"/></l> 
+        <r>mois<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>monato<s n="n"/><s n="pl"/></l> 
+        <r>mois<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
+    -->
+    <e r="RL">
+      <p>
+        <l>monato<s n="n"/><s n="ND"/></l> 
         <r>mois<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -54234,12 +55379,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>monujo<s n="n"/></l> 
+        <l>monujo<s n="n"/><s n="sg"/></l> 
+        <r>porte-monnaie<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>monujo<s n="n"/><s n="pl"/></l> 
+        <r>porte-monnaie<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
+    -->
+    <e r="RL">
+      <p>
+        <l>monujo<s n="n"/><s n="ND"/></l> 
         <r>porte-monnaie<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -54883,12 +56050,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-swapm_f-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>muso<s n="n"/></l> 
+        <l>muso<s n="n"/><s n="ND"/></l> 
+        <r>souris<s n="n"/><s n="f"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>muso<s n="n"/><s n="pl"/></l> 
+        <r>souris<s n="n"/><s n="f"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>muso<s n="n"/><s n="sg"/></l> 
         <r>souris<s n="n"/><s n="f"/><s n="sp"/></r> 
       </p>
     </e>
@@ -55345,12 +56534,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-swapm_f-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>nazo<s n="n"/></l> 
+        <l>nazo<s n="n"/><s n="ND"/></l> 
+        <r>nez<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>nazo<s n="n"/><s n="pl"/></l> 
+        <r>nez<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>nazo<s n="n"/><s n="sg"/></l> 
         <r>nez<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -57369,12 +58580,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLf-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>nukso<s n="n"/></l> 
+        <l>nukso<s n="n"/><s n="ND"/></l> 
+        <r>noix<s n="n"/><s n="f"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRf-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>nukso<s n="n"/><s n="pl"/></l> 
+        <r>noix<s n="n"/><s n="f"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRf-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>nukso<s n="n"/><s n="sg"/></l> 
         <r>noix<s n="n"/><s n="f"/><s n="sp"/></r> 
       </p>
     </e>
@@ -58579,12 +59812,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>opinio<s n="n"/></l> 
+        <l>opinio<s n="n"/><s n="ND"/></l> 
+        <r>avis<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>opinio<s n="n"/><s n="sg"/></l> 
+        <r>avis<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>opinio<s n="n"/><s n="pl"/></l> 
         <r>avis<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -59272,12 +60527,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>osto<s n="n"/></l> 
+        <l>osto<s n="n"/><s n="ND"/></l> 
+        <r>os<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>osto<s n="n"/><s n="pl"/></l> 
+        <r>os<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>osto<s n="n"/><s n="sg"/></l> 
         <r>os<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -59470,12 +60747,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLf-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>paco<s n="n"/></l> 
+        <l>paco<s n="n"/><s n="ND"/></l> 
+        <r>paix<s n="n"/><s n="f"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRf-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>paco<s n="n"/><s n="pl"/></l> 
+        <r>paix<s n="n"/><s n="f"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRf-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>paco<s n="n"/><s n="sg"/></l> 
         <r>paix<s n="n"/><s n="f"/><s n="sp"/></r> 
       </p>
     </e>
@@ -59712,12 +61011,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>pako<s n="n"/></l> 
+        <l>pako<s n="n"/><s n="ND"/></l> 
+        <r>colis<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>pako<s n="n"/><s n="pl"/></l> 
+        <r>colis<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>pako<s n="n"/><s n="sg"/></l> 
         <r>colis<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -59767,12 +61088,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>palaco<s n="n"/></l> 
+        <l>palaco<s n="n"/><s n="ND"/></l> 
+        <r>palais<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>palaco<s n="n"/><s n="pl"/></l> 
+        <r>palais<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>palaco<s n="n"/><s n="sg"/></l> 
         <r>palais<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -60108,12 +61451,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>paradizo<s n="n"/></l> 
+        <l>paradizo<s n="n"/><s n="ND"/></l> 
+        <r>paradis<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>paradizo<s n="n"/><s n="pl"/></l> 
+        <r>paradis<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>paradizo<s n="n"/><s n="sg"/></l> 
         <r>paradis<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -60427,12 +61792,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>parolado<s n="n"/></l> 
+        <l>parolado<s n="n"/><s n="ND"/></l> 
+        <r>discours<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>parolado<s n="n"/><s n="pl"/></l> 
+        <r>discours<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>parolado<s n="n"/><s n="sg"/></l> 
         <r>discours<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -60944,12 +62331,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>paŝo<s n="n"/></l> 
+        <l>paŝo<s n="n"/><s n="ND"/></l> 
+        <r>pas<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>paŝo<s n="n"/><s n="pl"/></l> 
+        <r>pas<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>paŝo<s n="n"/><s n="sg"/></l> 
         <r>pas<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -61142,12 +62551,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>pelmelo<s n="n"/></l> 
+        <l>pelmelo<s n="n"/><s n="sg"/></l> 
+        <r>amas<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>pelmelo<s n="n"/><s n="pl"/></l> 
+        <r>amas<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
+    -->
+    <e r="RL">
+      <p>
+        <l>pelmelo<s n="n"/><s n="ND"/></l> 
         <r>amas<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -61285,12 +62716,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>peniso<s n="n"/></l> 
+        <l>peniso<s n="n"/><s n="sg"/></l> 
+        <r>pénis<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>peniso<s n="n"/><s n="pl"/></l> 
+        <r>pénis<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
+    -->
+    <e r="RL">
+      <p>
+        <l>peniso<s n="n"/><s n="ND"/></l> 
         <r>pénis<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -61835,12 +63288,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>permeso<s n="n"/></l> 
+        <l>permeso<s n="n"/><s n="ND"/></l> 
         <r>permis<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -62319,12 +63772,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>pezo<s n="n"/></l> 
+        <l>pezo<s n="n"/><s n="ND"/></l> 
+        <r>poids<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>pezo<s n="n"/><s n="pl"/></l> 
+        <r>poids<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>pezo<s n="n"/><s n="sg"/></l> 
         <r>poids<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -63243,12 +64718,23 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>plendo<s n="n"/></l> 
+        <l>plendo<s n="n"/><s n="sg"/></l> 
+        <r>procès<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>plendo<s n="n"/><s n="pl"/></l> 
         <r>procès<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -65652,23 +67138,56 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>premio<s n="n"/></l> 
+        <l>premio<s n="n"/><s n="sg"/></l> 
         <r>prix<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>premio<s n="n"/></l> 
+        <l>premio<s n="n"/><s n="pl"/></l> 
+        <r>prix<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
+    -->
+    <e r="RL">
+      <p>
+        <l>premio<s n="n"/><s n="ND"/></l> 
+        <r>prix<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>premio<s n="n"/><s n="pl"/></l> 
+        <r>prix<s n="n"/><s n="f"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>premio<s n="n"/><s n="sg"/></l> 
         <r>prix<s n="n"/><s n="f"/><s n="sp"/></r> 
       </p>
     </e>
@@ -66092,12 +67611,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>prezo<s n="n"/></l> 
+        <l>prezo<s n="n"/><s n="ND"/></l> 
+        <r>prix<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>prezo<s n="n"/><s n="pl"/></l> 
+        <r>prix<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>prezo<s n="n"/><s n="sg"/></l> 
         <r>prix<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -66213,12 +67754,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-swapm_f-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>printempo<s n="n"/></l> 
+        <l>printempo<s n="n"/><s n="ND"/></l> 
+        <r>printemps<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>printempo<s n="n"/><s n="pl"/></l> 
+        <r>printemps<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>printempo<s n="n"/><s n="sg"/></l> 
         <r>printemps<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -66609,34 +68172,45 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>proceso<s n="n"/></l> 
+        <l>proceso<s n="n"/><s n="pl"/></l> 
         <r>procès<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>procezo<s n="n"/></l> 
+        <l>proceso<s n="n"/><s n="sg"/></l> 
+        <r>procès<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
+    -->
+    <e r="RL">
+      <p>
+        <l>procezo<s n="n"/><s n="ND"/></l> 
         <r>processus<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>procezo<s n="n"/></l> 
+        <l>procezo<s n="n"/><s n="ND"/></l> 
         <r>procès<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -66972,12 +68546,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>progreso<s n="n"/></l> 
+        <l>progreso<s n="n"/><s n="ND"/></l> 
+        <r>progrès<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>progreso<s n="n"/><s n="pl"/></l> 
+        <r>progrès<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>progreso<s n="n"/><s n="sg"/></l> 
         <r>progrès<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -68512,12 +70108,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>puto<s n="n"/></l> 
+        <l>puto<s n="n"/><s n="ND"/></l> 
+        <r>puits<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>puto<s n="n"/><s n="pl"/></l> 
+        <r>puits<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>puto<s n="n"/><s n="sg"/></l> 
         <r>puits<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -68567,12 +70185,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>rabato<s n="n"/></l> 
+        <l>rabato<s n="n"/><s n="ND"/></l> 
+        <r>rabais<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>rabato<s n="n"/><s n="sg"/></l> 
+        <r>rabais<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>rabato<s n="n"/><s n="pl"/></l> 
         <r>rabais<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -69876,12 +71516,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>registaro<s n="n"/></l> 
+        <l>registaro<s n="n"/><s n="ND"/></l> 
         <r>gouv<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -70349,12 +71989,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>reliefo<s n="n"/></l> 
+        <l>reliefo<s n="n"/><s n="ND"/></l> 
+        <r>relais<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>reliefo<s n="n"/><s n="pl"/></l> 
+        <r>relais<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>reliefo<s n="n"/><s n="sg"/></l> 
         <r>relais<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -72032,12 +73694,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>rimedo<s n="n"/></l> 
+        <l>rimedo<s n="n"/><s n="ND"/></l> 
         <r>recours<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -72186,12 +73848,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>ripozo<s n="n"/></l> 
+        <l>ripozo<s n="n"/><s n="sg"/></l> 
+        <r>repos<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>ripozo<s n="n"/><s n="pl"/></l> 
+        <r>repos<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
+    -->
+    <e r="RL">
+      <p>
+        <l>ripozo<s n="n"/><s n="ND"/></l> 
         <r>repos<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -72296,12 +73980,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>rizo<s n="n"/></l> 
+        <l>rizo<s n="n"/><s n="ND"/></l> 
+        <r>riz<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>rizo<s n="n"/><s n="pl"/></l> 
+        <r>riz<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>rizo<s n="n"/><s n="sg"/></l> 
         <r>riz<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -72945,12 +74651,23 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>sabloŝtono<s n="n"/></l> 
+        <l>sabloŝtono<s n="n"/><s n="sg"/></l> 
+        <r>grès<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>sabloŝtono<s n="n"/><s n="pl"/></l> 
         <r>grès<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -73759,12 +75476,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-swapm_f-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>sciigo<s n="n"/></l> 
+        <l>sciigo<s n="n"/><s n="ND"/></l> 
+        <r>faire-part<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>sciigo<s n="n"/><s n="sg"/></l> 
+        <r>faire-part<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>sciigo<s n="n"/><s n="pl"/></l> 
         <r>faire-part<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -75552,12 +77291,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-swapm_f-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>seriozeco<s n="n"/></l> 
+        <l>seriozeco<s n="n"/><s n="ND"/></l> 
+        <r>sérieux<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>seriozeco<s n="n"/><s n="pl"/></l> 
+        <r>sérieux<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>seriozeco<s n="n"/><s n="sg"/></l> 
         <r>sérieux<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -77884,12 +79645,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-swapm_f-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>sperto<s n="n"/></l> 
+        <l>sperto<s n="n"/><s n="ND"/></l> 
         <r>acquis<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -78786,12 +80547,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>streso<s n="n"/></l> 
+        <l>streso<s n="n"/><s n="sg"/></l> 
+        <r>stress<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>streso<s n="n"/><s n="pl"/></l> 
+        <r>stress<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
+    -->
+    <e r="RL">
+      <p>
+        <l>streso<s n="n"/><s n="ND"/></l> 
         <r>stress<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -79710,12 +81493,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>sukceso<s n="n"/></l> 
+        <l>sukceso<s n="n"/><s n="ND"/></l> 
+        <r>succès<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>sukceso<s n="n"/><s n="pl"/></l> 
+        <r>succès<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>sukceso<s n="n"/><s n="sg"/></l> 
         <r>succès<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -80876,12 +82681,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-swapm_f-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>tapiŝo<s n="n"/></l> 
+        <l>tapiŝo<s n="n"/><s n="ND"/></l> 
+        <r>tapis<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>tapiŝo<s n="n"/><s n="pl"/></l> 
+        <r>tapis<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LR-swapm_f-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>tapiŝo<s n="n"/><s n="sg"/></l> 
         <r>tapis<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -81426,12 +83253,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>tempo<s n="n"/></l> 
+        <l>tempo<s n="n"/><s n="ND"/></l> 
+        <r>temps<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>tempo<s n="n"/><s n="pl"/></l> 
+        <r>temps<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>tempo<s n="n"/><s n="sg"/></l> 
         <r>temps<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -81690,12 +83539,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>termobotelo<s n="n"/></l> 
+        <l>termobotelo<s n="n"/><s n="ND"/></l> 
+        <r>thermos<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>termobotelo<s n="n"/><s n="sg"/></l> 
+        <r>thermos<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>termobotelo<s n="n"/><s n="pl"/></l> 
         <r>thermos<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -84143,12 +86014,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>triono<s n="n"/></l> 
+        <l>triono<s n="n"/><s n="ND"/></l> 
+        <r>tiers<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>triono<s n="n"/><s n="pl"/></l> 
+        <r>tiers<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>triono<s n="n"/><s n="sg"/></l> 
         <r>tiers<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -84297,12 +86190,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>trompoŝtelo<s n="n"/></l> 
+        <l>trompoŝtelo<s n="n"/><s n="ND"/></l> 
+        <r>thymus<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>trompoŝtelo<s n="n"/><s n="sg"/></l> 
+        <r>thymus<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>trompoŝtelo<s n="n"/><s n="pl"/></l> 
         <r>thymus<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -84330,12 +86245,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>troo<s n="n"/></l> 
+        <l>troo<s n="n"/><s n="ND"/></l> 
         <r>excès<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -84348,6 +86263,28 @@
       <p>
         <l>troo<s n="n"/></l> 
         <r>outrance<s n="n"/><s n="f"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>troo<s n="n"/><s n="pl"/></l> 
+        <r>excès<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>troo<s n="n"/><s n="sg"/></l> 
+        <r>excès<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
 
@@ -84814,12 +86751,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLf-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>tuso<s n="n"/></l> 
+        <l>tuso<s n="n"/><s n="ND"/></l> 
+        <r>toux<s n="n"/><s n="f"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRf-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>tuso<s n="n"/><s n="sg"/></l> 
+        <r>toux<s n="n"/><s n="f"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRf-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>tuso<s n="n"/><s n="pl"/></l> 
         <r>toux<s n="n"/><s n="f"/><s n="sp"/></r> 
       </p>
     </e>
@@ -85034,12 +86993,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>universo<s n="n"/></l> 
+        <l>universo<s n="n"/><s n="ND"/></l> 
+        <r>univers<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>universo<s n="n"/><s n="sg"/></l> 
+        <r>univers<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>universo<s n="n"/><s n="pl"/></l> 
         <r>univers<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -85386,12 +87367,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>utero<s n="n"/></l> 
+        <l>utero<s n="n"/><s n="sg"/></l> 
+        <r>utérus<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>utero<s n="n"/><s n="pl"/></l> 
+        <r>utérus<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
+    -->
+    <e r="RL">
+      <p>
+        <l>utero<s n="n"/><s n="ND"/></l> 
         <r>utérus<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -86079,12 +88082,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>veluro<s n="n"/></l> 
+        <l>veluro<s n="n"/><s n="sg"/></l> 
+        <r>velours<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>veluro<s n="n"/><s n="pl"/></l> 
+        <r>velours<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
+    -->
+    <e r="RL">
+      <p>
+        <l>veluro<s n="n"/><s n="ND"/></l> 
         <r>velours<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -86530,12 +88555,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>verso<s n="n"/></l> 
+        <l>verso<s n="n"/><s n="ND"/></l> 
+        <r>vers<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>verso<s n="n"/><s n="pl"/></l> 
+        <r>vers<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRm-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>verso<s n="n"/><s n="sg"/></l> 
         <r>vers<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -88092,12 +90139,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RLf-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>voĉo<s n="n"/></l> 
+        <l>voĉo<s n="n"/><s n="ND"/></l> 
+        <r>voix<s n="n"/><s n="f"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRf-pl
+    -->
+    <e r="LR">
+      <p>
+        <l>voĉo<s n="n"/><s n="pl"/></l> 
+        <r>voix<s n="n"/><s n="f"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRf-sg
+    -->
+    <e r="LR">
+      <p>
+        <l>voĉo<s n="n"/><s n="sg"/></l> 
         <r>voix<s n="n"/><s n="f"/><s n="sp"/></r> 
       </p>
     </e>
