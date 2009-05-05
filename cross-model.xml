@@ -1974,4 +1974,221 @@
             </action>
         </action-set>
     </cross-action>
+    <!-- These are eo specific, because of how the rules are set up -->
+    <cross-action id="det-drop-pos.mf.pl" a="jimregan">
+        <description>drop det tags for eo</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="det"/></l>
+                    <r>$lemmaB<s n="det"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="det"/><s n="pos"/><s n="mf"/><s n="pl"/></l>
+                    <r>$lemmaC<s n="det"/><s n="pos"/><s n="mf"/><s n="pl"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="det"/></l>
+                        <r>$lemmaC<s n="det"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="det-drop-pos.mf-f.sg" a="jimregan">
+        <description>drop det tags for eo</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="det"/></l>
+                    <r>$lemmaB<s n="det"/></r>
+                </p>
+            </e>
+            <e r="RL">
+                <p>
+                    <l>$lemmaB<s n="det"/><s n="pos"/><s n="mf"/><s n="sg"/></l>
+                    <r>$lemmaC<s n="det"/><s n="pos"/><s n="f"/><s n="sg"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="det"/></l>
+                        <r>$lemmaC<s n="det"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="det-drop-pos.mf-m.sg" a="jimregan">
+        <description>drop det tags for eo</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="det"/></l>
+                    <r>$lemmaB<s n="det"/></r>
+                </p>
+            </e>
+            <e r="RL">
+                <p>
+                    <l>$lemmaB<s n="det"/><s n="pos"/><s n="mf"/><s n="sg"/></l>
+                    <r>$lemmaC<s n="det"/><s n="pos"/><s n="m"/><s n="sg"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="det"/></l>
+                        <r>$lemmaC<s n="det"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="det-drop-pos.mf-GD.sg" a="jimregan">
+        <description>drop det tags for eo</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="det"/></l>
+                    <r>$lemmaB<s n="det"/></r>
+                </p>
+            </e>
+            <e r="LR">
+                <p>
+                    <l>$lemmaB<s n="det"/><s n="pos"/><s n="mf"/><s n="sg"/></l>
+                    <r>$lemmaC<s n="det"/><s n="pos"/><s n="GD"/><s n="sg"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="det"/></l>
+                        <r>$lemmaC<s n="det"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="det-drop-pos.mf" a="jimregan">
+        <description>drop det tags for eo</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="det"/></l>
+                    <r>$lemmaB<s n="det"/></r>
+                </p>
+            </e>
+            <e r="RL">
+                <p>
+                    <l>$lemmaB<s n="det"/><s n="pos"/><s n="mf"/></l>
+                    <r>$lemmaC<s n="det"/><s n="pos"/><s n="mf"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="det"/></l>
+                        <r>$lemmaC<s n="det"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="det-drop-dem.f-mf.pl" a="jimregan">
+        <description>drop det tags for eo</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="det"/></l>
+                    <r>$lemmaB<s n="det"/></r>
+                </p>
+            </e>
+            <e r="LR">
+                <p>
+                    <l>$lemmaB<s n="det"/><s n="dem"/><s n="f"/><s n="pl"/></l>
+                    <r>$lemmaC<s n="det"/><s n="dem"/><s n="mf"/><s n="pl"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="det"/></l>
+                        <r>$lemmaC<s n="det"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="det-drop-dem.m-mf.pl" a="jimregan">
+        <description>drop det tags for eo</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="det"/></l>
+                    <r>$lemmaB<s n="det"/></r>
+                </p>
+            </e>
+            <e r="LR">
+                <p>
+                    <l>$lemmaB<s n="det"/><s n="dem"/><s n="m"/><s n="pl"/></l>
+                    <r>$lemmaC<s n="det"/><s n="dem"/><s n="mf"/><s n="pl"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="det"/></l>
+                        <r>$lemmaC<s n="det"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="det" a="jimregan">
+        <description>drop det tags for eo</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="det"/></l>
+                    <r>$lemmaB<s n="det"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="det"/></l>
+                    <r>$lemmaC<s n="det"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="det"/></l>
+                        <r>$lemmaC<s n="det"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
 </cross-model>
