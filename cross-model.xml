@@ -137,6 +137,222 @@
             </action>
         </action-set>
     </cross-action>
+    <cross-action id="n.acr-f" a="jimregan">
+        <description>Feminine in both es and fr</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="n"/><s n="acr"/></l>
+                    <r>$lemmaB<s n="n"/><s n="acr"/><s n="f"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="n"/><s n="acr"/></l>
+                    <r>$lemmaC<s n="n"/><s n="acr"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="n"/><s n="acr"/></l>
+                        <r>$lemmaC<s n="n"/><s n="acr"/><s n="f"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="n.acr-m" a="jimregan">
+        <description>Masculine in both es and fr</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="n"/><s n="acr"/></l>
+                    <r>$lemmaB<s n="n"/><s n="acr"/><s n="m"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="n"/><s n="acr"/></l>
+                    <r>$lemmaC<s n="n"/><s n="acr"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="n"/><s n="acr"/></l>
+                        <r>$lemmaC<s n="n"/><s n="acr"/><s n="m"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="n.acr-mtof" a="jimregan">
+        <description>m in es, f in fr</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="n"/><s n="acr"/></l>
+                    <r>$lemmaB<s n="n"/><s n="acr"/><s n="m"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="n"/><s n="acr"/><s n="m"/></l>
+                    <r>$lemmaC<s n="n"/><s n="acr"/><s n="f"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="n"/><s n="acr"/></l>
+                        <r>$lemmaC<s n="n"/><s n="acr"/><s n="f"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="n.acr-ftom" a="jimregan">
+        <description>f in es, m in fr</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="n"/><s n="acr"/></l>
+                    <r>$lemmaB<s n="n"/><s n="acr"/><s n="f"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="n"/><s n="acr"/><s n="f"/></l>
+                    <r>$lemmaC<s n="n"/><s n="acr"/><s n="m"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="n"/><s n="acr"/></l>
+                        <r>$lemmaC<s n="n"/><s n="acr"/><s n="acr"/><s n="m"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="np.loc-f" a="jimregan">
+        <description>Feminine in both es and fr</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="np"/><s n="loc"/></l>
+                    <r>$lemmaB<s n="np"/><s n="loc"/><s n="f"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="np"/><s n="loc"/></l>
+                    <r>$lemmaC<s n="np"/><s n="loc"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="np"/><s n="loc"/></l>
+                        <r>$lemmaC<s n="np"/><s n="loc"/><s n="f"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="np.loc-m" a="jimregan">
+        <description>Masculine in both es and fr</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="np"/><s n="loc"/></l>
+                    <r>$lemmaB<s n="np"/><s n="loc"/><s n="m"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="np"/><s n="loc"/></l>
+                    <r>$lemmaC<s n="np"/><s n="loc"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="np"/><s n="loc"/></l>
+                        <r>$lemmaC<s n="np"/><s n="loc"/><s n="m"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="np.loc-mtof" a="jimregan">
+        <description>m in es, f in fr</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="np"/><s n="loc"/></l>
+                    <r>$lemmaB<s n="np"/><s n="loc"/><s n="m"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="np"/><s n="loc"/><s n="m"/></l>
+                    <r>$lemmaC<s n="np"/><s n="loc"/><s n="f"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="np"/><s n="loc"/></l>
+                        <r>$lemmaC<s n="np"/><s n="loc"/><s n="f"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="np.loc-ftom" a="jimregan">
+        <description>f in es, m in fr</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="np"/><s n="loc"/></l>
+                    <r>$lemmaB<s n="np"/><s n="loc"/><s n="f"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="np"/><s n="loc"/><s n="f"/></l>
+                    <r>$lemmaC<s n="np"/><s n="loc"/><s n="m"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="np"/><s n="loc"/></l>
+                        <r>$lemmaC<s n="np"/><s n="loc"/><s n="acr"/><s n="m"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
     <cross-action id="vblex" a="jimregan">
         <description>vblex</description>
         <pattern>
@@ -213,6 +429,87 @@
                     <p>
                         <l>$lemmaA<s n="adv"/></l>
                         <r>$lemmaC<s n="adv"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="cnjadv" a="jimregan">
+        <description>cnjadv default</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="cnjadv"/></l>
+                    <r>$lemmaB<s n="cnjadv"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="cnjadv"/></l>
+                    <r>$lemmaC<s n="cnjadv"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="cnjadv"/></l>
+                        <r>$lemmaC<s n="cnjadv"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="cnjsub" a="jimregan">
+        <description>cnjsub default</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="cnjsub"/></l>
+                    <r>$lemmaB<s n="cnjsub"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="cnjsub"/></l>
+                    <r>$lemmaC<s n="cnjsub"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="cnjsub"/></l>
+                        <r>$lemmaC<s n="cnjsub"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="cnjcoo" a="jimregan">
+        <description>cnjcoo default</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="cnjcoo"/></l>
+                    <r>$lemmaB<s n="cnjcoo"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="cnjcoo"/></l>
+                    <r>$lemmaC<s n="cnjcoo"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="cnjcoo"/></l>
+                        <r>$lemmaC<s n="cnjcoo"/></r>
                     </p>
                 </e>
             </action>
