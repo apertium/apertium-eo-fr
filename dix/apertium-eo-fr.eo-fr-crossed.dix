@@ -3,14 +3,16 @@
 	Dictionary:
 	Bilingual dictionary: eo-fr
 	Sections: 1
-	Entries: 8464
+	Entries: 8357
 	Sdefs: 93
       
       Patterns applied:
-      	default (965 times)
+      	default (650 times)
       	nom-f (1729 times)
       	nom-m (1411 times)
       	nom-mtof (292 times)
+      	nom-keepf (53 times)
+      	nom-keepm (33 times)
       	nom-ftom (314 times)
       	n.acr-f (4 times)
       	n.acr-m (7 times)
@@ -19,6 +21,12 @@
       	np.loc-addf (182 times)
       	np.loc-addm (101 times)
       	nom-nogender (275 times)
+      	nmf-RL (51 times)
+      	nmf-LRf (3 times)
+      	nmf-LRm (6 times)
+      	nmf-RLf (27 times)
+      	nmf-RLm (4 times)
+      	nmf-LR (31 times)
       	vblex (1601 times)
       	adj (466 times)
       	adjmf-RL (254 times)
@@ -4829,40 +4837,18 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>adoleskanto<s n="n"/></l> 
-        <r>adolescent<s n="n"/><s n="GD"/></r> 
+        <r>adolescent<s n="n"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>adoleskanto<s n="n"/></l> 
-        <r>adolescent<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>adoleskanto<s n="n"/></l> 
-        <r>adolescent<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -6116,34 +6102,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>aktivulo<s n="n"/></l> 
-        <r>militant<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>aktivulo<s n="n"/></l> 
-        <r>militant<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>aktivulo<s n="n"/></l> 
-        <r>militant<s n="n"/><s n="GD"/></r> 
+        <r>militant<s n="n"/></r> 
       </p>
     </e>
 
@@ -6292,34 +6256,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>akuzanto<s n="n"/></l> 
-        <r>plaignant<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>akuzanto<s n="n"/></l> 
-        <r>plaignant<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>akuzanto<s n="n"/></l> 
-        <r>plaignant<s n="n"/><s n="GD"/></r> 
+        <r>plaignant<s n="n"/></r> 
       </p>
     </e>
 
@@ -6358,7 +6300,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -7568,34 +7510,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLm
     -->
     <e>
       <p>
         <l>amanto<s n="n"/></l> 
-        <r>amant<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>amanto<s n="n"/></l> 
-        <r>amant<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>amanto<s n="n"/></l> 
-        <r>amant<s n="n"/><s n="GD"/></r> 
+        <r>amant<s n="n"/></r> 
       </p>
     </e>
 
@@ -9163,7 +9083,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -9823,34 +9743,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>apostato<s n="n"/></l> 
-        <r>apostat<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>apostato<s n="n"/></l> 
-        <r>apostat<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>apostato<s n="n"/></l> 
-        <r>apostat<s n="n"/><s n="f"/></r> 
+        <r>apostat<s n="n"/></r> 
       </p>
     </e>
 
@@ -10186,7 +10084,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -10296,7 +10194,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -10318,7 +10216,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -10417,7 +10315,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -10593,7 +10491,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LRm
     -->
     <e>
       <p>
@@ -10725,34 +10623,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLm
     -->
     <e>
       <p>
         <l>asistanto<s n="n"/></l> 
-        <r>assistant<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>asistanto<s n="n"/></l> 
-        <r>assistant<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>asistanto<s n="n"/></l> 
-        <r>assistant<s n="n"/><s n="GD"/></r> 
+        <r>assistant<s n="n"/></r> 
       </p>
     </e>
 
@@ -10868,7 +10744,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -11539,7 +11415,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -11660,12 +11536,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>aŭdanto<s n="n"/></l> 
-        <r>auditeur<s n="n"/><s n="GD"/></r> 
+        <r>auditeur<s n="n"/></r> 
       </p>
     </e>
 
@@ -11913,7 +11789,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -11968,7 +11844,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -11979,7 +11855,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -12474,7 +12350,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -13156,7 +13032,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -13200,7 +13076,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -13508,7 +13384,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -14729,7 +14605,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -14916,7 +14792,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -17336,34 +17212,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>detalisto<s n="n"/></l> 
-        <r>détaillant<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>detalisto<s n="n"/></l> 
-        <r>détaillant<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>detalisto<s n="n"/></l> 
-        <r>détaillant<s n="n"/><s n="f"/></r> 
+        <r>détaillant<s n="n"/></r> 
       </p>
     </e>
 
@@ -18414,34 +18268,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>direktisto<s n="n"/></l> 
-        <r>gérent<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>direktisto<s n="n"/></l> 
-        <r>gérent<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>direktisto<s n="n"/></l> 
-        <r>gérent<s n="n"/><s n="f"/></r> 
+        <r>gérent<s n="n"/></r> 
       </p>
     </e>
 
@@ -20614,7 +20446,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -21747,7 +21579,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -21802,34 +21634,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>elektristo<s n="n"/></l> 
-        <r>électricien<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>elektristo<s n="n"/></l> 
-        <r>électricien<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>elektristo<s n="n"/></l> 
-        <r>électricien<s n="n"/><s n="f"/></r> 
+        <r>électricien<s n="n"/></r> 
       </p>
     </e>
 
@@ -22044,34 +21854,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>elmigrinto<s n="n"/></l> 
-        <r>émigrant<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>elmigrinto<s n="n"/></l> 
-        <r>émigrant<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>elmigrinto<s n="n"/></l> 
-        <r>émigrant<s n="n"/><s n="GD"/></r> 
+        <r>émigrant<s n="n"/></r> 
       </p>
     </e>
 
@@ -23188,34 +22976,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>enmigrinto<s n="n"/></l> 
-        <r>immigrant<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>enmigrinto<s n="n"/></l> 
-        <r>immigrant<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>enmigrinto<s n="n"/></l> 
-        <r>immigrant<s n="n"/><s n="f"/></r> 
+        <r>immigrant<s n="n"/></r> 
       </p>
     </e>
 
@@ -23463,34 +23229,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>entreprenisto<s n="n"/></l> 
-        <r>entrepreneur<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>entreprenisto<s n="n"/></l> 
-        <r>entrepreneur<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>entreprenisto<s n="n"/></l> 
-        <r>entrepreneur<s n="n"/><s n="f"/></r> 
+        <r>entrepreneur<s n="n"/></r> 
       </p>
     </e>
 
@@ -24123,23 +23867,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>estro<s n="n"/></l> 
-        <r>dirigeant<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>estro<s n="n"/></l> 
-        <r>dirigeant<s n="n"/><s n="m"/></r> 
+        <r>dirigeant<s n="n"/></r> 
       </p>
     </e>
 
@@ -24156,18 +23889,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>estro<s n="n"/></l> 
-        <r>dirigeant<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -24607,7 +24329,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e c="new-category">
       <p>
@@ -24662,34 +24384,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>fabrikanto<s n="n"/></l> 
-        <r>fabricant<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>fabrikanto<s n="n"/></l> 
-        <r>fabricant<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>fabrikanto<s n="n"/></l> 
-        <r>fabricant<s n="n"/><s n="f"/></r> 
+        <r>fabricant<s n="n"/></r> 
       </p>
     </e>
 
@@ -24860,7 +24560,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -24937,7 +24637,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -26862,7 +26562,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -27291,7 +26991,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -27632,7 +27332,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -27885,7 +27585,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -27984,7 +27684,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -28006,7 +27706,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -29062,34 +28762,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>futbalisto<s n="n"/></l> 
-        <r>footballeur<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>futbalisto<s n="n"/></l> 
-        <r>footballeur<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>futbalisto<s n="n"/></l> 
-        <r>footballeur<s n="n"/><s n="GD"/></r> 
+        <r>footballeur<s n="n"/></r> 
       </p>
     </e>
 
@@ -29216,7 +28894,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -29458,45 +29136,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>gardisto<s n="n"/></l> 
-        <r>surveillant<s n="n"/><s n="GD"/></r> 
+        <r>surveillant<s n="n"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLm
     -->
     <e>
       <p>
         <l>gardisto<s n="n"/></l> 
-        <r>surveillant<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>gardisto<s n="n"/></l> 
-        <r>surveillant<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>gardisto<s n="n"/></l> 
-        <r>vigile<s n="n"/><s n="m"/></r> 
+        <r>vigile<s n="n"/></r> 
       </p>
     </e>
 
@@ -29700,34 +29356,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>gejo<s n="n"/></l> 
-        <r>homosexuel<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>gejo<s n="n"/></l> 
-        <r>homosexuel<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>gejo<s n="n"/></l> 
-        <r>homosexuel<s n="n"/><s n="f"/></r> 
+        <r>homosexuel<s n="n"/></r> 
       </p>
     </e>
 
@@ -29766,34 +29400,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>generalo<s n="n"/></l> 
-        <r>général<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>generalo<s n="n"/></l> 
-        <r>général<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>generalo<s n="n"/></l> 
-        <r>général<s n="n"/><s n="GD"/></r> 
+        <r>général<s n="n"/></r> 
       </p>
     </e>
 
@@ -30041,7 +29653,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -30261,12 +29873,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>golejulo<s n="n"/></l> 
-        <r>gardien<g><b/>de<b/>but</g><s n="n"/><s n="GD"/></r> 
+        <r>gardien<g><b/>de<b/>but</g><s n="n"/></r> 
       </p>
     </e>
 
@@ -31306,7 +30918,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -31482,7 +31094,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -31669,34 +31281,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>heteroseksulo<s n="n"/></l> 
-        <r>hétérosexuel<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>heteroseksulo<s n="n"/></l> 
-        <r>hétérosexuel<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>heteroseksulo<s n="n"/></l> 
-        <r>hétérosexuel<s n="n"/><s n="f"/></r> 
+        <r>hétérosexuel<s n="n"/></r> 
       </p>
     </e>
 
@@ -32659,34 +32249,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>idioto<s n="n"/></l> 
-        <r>idiot<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>idioto<s n="n"/></l> 
-        <r>idiot<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>idioto<s n="n"/></l> 
-        <r>idiot<s n="n"/><s n="GD"/></r> 
+        <r>idiot<s n="n"/></r> 
       </p>
     </e>
 
@@ -33836,7 +33404,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -34485,34 +34053,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>intelektulo<s n="n"/></l> 
-        <r>intellectuel<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>intelektulo<s n="n"/></l> 
-        <r>intellectuel<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>intelektulo<s n="n"/></l> 
-        <r>intellectuel<s n="n"/><s n="f"/></r> 
+        <r>intellectuel<s n="n"/></r> 
       </p>
     </e>
 
@@ -35475,7 +35021,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -35563,67 +35109,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>irakano<s n="n"/></l> 
-        <r>irakien<s n="n"/><s n="f"/></r> 
+        <r>irakien<s n="n"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>irakano<s n="n"/></l> 
-        <r>irakien<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>irakano<s n="n"/></l> 
-        <r>irakien<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>iranano<s n="n"/></l> 
-        <r>iranien<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>iranano<s n="n"/></l> 
-        <r>iranien<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>iranano<s n="n"/></l> 
-        <r>iranien<s n="n"/><s n="GD"/></r> 
+        <r>iranien<s n="n"/></r> 
       </p>
     </e>
 
@@ -35805,34 +35307,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e c="new-category">
       <p>
         <l>israelano<s n="n"/></l> 
-        <r>israélien<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e c="new-category">
-      <p>
-        <l>israelano<s n="n"/></l> 
-        <r>israélien<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e c="new-category">
-      <p>
-        <l>israelano<s n="n"/></l> 
-        <r>israélien<s n="n"/><s n="GD"/></r> 
+        <r>israélien<s n="n"/></r> 
       </p>
     </e>
 
@@ -36355,23 +35835,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLm
     -->
     <e>
       <p>
         <l>junulo<s n="n"/></l> 
-        <r>jeune<b/>homme<s n="n"/><s n="m"/></r> 
+        <r>jeune<b/>homme<s n="n"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>junulo<s n="n"/></l> 
-        <r>jeune<b/>fille<s n="n"/><s n="f"/></r> 
+        <r>jeune<b/>fille<s n="n"/></r> 
       </p>
     </e>
 
@@ -36872,7 +36352,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -37312,34 +36792,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e c="new-category">
       <p>
         <l>kantisto<s n="n"/></l> 
-        <r>chanteur<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e c="new-category">
-      <p>
-        <l>kantisto<s n="n"/></l> 
-        <r>chanteur<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e c="new-category">
-      <p>
-        <l>kantisto<s n="n"/></l> 
-        <r>chanteur<s n="n"/><s n="f"/></r> 
+        <r>chanteur<s n="n"/></r> 
       </p>
     </e>
 
@@ -37488,7 +36946,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -38181,7 +37639,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -38280,7 +37738,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e c="new-category">
       <p>
@@ -38544,7 +38002,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -38588,7 +38046,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -39149,7 +38607,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -39358,7 +38816,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -39710,7 +39168,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -39853,34 +39311,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>kolonelo<s n="n"/></l> 
-        <r>colonel<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kolonelo<s n="n"/></l> 
-        <r>colonel<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kolonelo<s n="n"/></l> 
-        <r>colonel<s n="n"/><s n="GD"/></r> 
+        <r>colonel<s n="n"/></r> 
       </p>
     </e>
 
@@ -40161,7 +39597,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -40260,7 +39696,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -40293,7 +39729,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LRf
     -->
     <e>
       <p>
@@ -41052,7 +40488,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -42394,7 +41830,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -42493,7 +41929,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -43692,7 +43128,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e c="new-category">
       <p>
@@ -44275,7 +43711,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -44726,7 +44162,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LRf
     -->
     <e>
       <p>
@@ -45001,7 +44437,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -45023,7 +44459,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -45694,7 +45130,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -45804,7 +45240,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -45881,7 +45317,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -46519,7 +45955,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -46541,12 +45977,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>lernejano<s n="n"/></l> 
-        <r>écolier<s n="n"/><s n="GD"/></r> 
+        <r>écolier<s n="n"/></r> 
       </p>
     </e>
 
@@ -46959,34 +46395,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>leŭtenanto<s n="n"/></l> 
-        <r>lieutenant<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>leŭtenanto<s n="n"/></l> 
-        <r>lieutenant<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>leŭtenanto<s n="n"/></l> 
-        <r>lieutenant<s n="n"/><s n="GD"/></r> 
+        <r>lieutenant<s n="n"/></r> 
       </p>
     </e>
 
@@ -47179,7 +46593,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -47212,7 +46626,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -47256,7 +46670,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -47960,34 +47374,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>londonano<s n="n"/></l> 
-        <r>londonien<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>londonano<s n="n"/></l> 
-        <r>londonien<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>londonano<s n="n"/></l> 
-        <r>londonien<s n="n"/><s n="f"/></r> 
+        <r>londonien<s n="n"/></r> 
       </p>
     </e>
 
@@ -48103,67 +47495,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>loĝanto<s n="n"/></l> 
-        <r>habitant<s n="n"/><s n="f"/></r> 
+        <r>habitant<s n="n"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>loĝanto<s n="n"/></l> 
-        <r>habitant<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>loĝanto<s n="n"/></l> 
-        <r>habitant<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>loĝanto<s n="n"/></l> 
-        <r>résident<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>loĝanto<s n="n"/></l> 
-        <r>résident<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>loĝanto<s n="n"/></l> 
-        <r>résident<s n="n"/><s n="f"/></r> 
+        <r>résident<s n="n"/></r> 
       </p>
     </e>
 
@@ -48235,7 +47583,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -48323,7 +47671,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -48488,7 +47836,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -48609,7 +47957,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LRm
     -->
     <e>
       <p>
@@ -48642,7 +47990,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -50974,7 +50322,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -51194,7 +50542,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -51513,7 +50861,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -52118,34 +51466,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>marokano<s n="n"/></l> 
-        <r>marocain<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>marokano<s n="n"/></l> 
-        <r>marocain<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>marokano<s n="n"/></l> 
-        <r>marocain<s n="n"/><s n="f"/></r> 
+        <r>marocain<s n="n"/></r> 
       </p>
     </e>
 
@@ -52173,34 +51499,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>martiro<s n="n"/></l> 
-        <r>martyr<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>martiro<s n="n"/></l> 
-        <r>martyr<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>martiro<s n="n"/></l> 
-        <r>martyr<s n="n"/><s n="GD"/></r> 
+        <r>martyr<s n="n"/></r> 
       </p>
     </e>
 
@@ -52371,34 +51675,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>masonisto<s n="n"/></l> 
-        <r>maçon<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>masonisto<s n="n"/></l> 
-        <r>maçon<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>masonisto<s n="n"/></l> 
-        <r>maçon<s n="n"/><s n="f"/></r> 
+        <r>maçon<s n="n"/></r> 
       </p>
     </e>
 
@@ -52426,7 +51708,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LRf
     -->
     <e>
       <p>
@@ -52712,7 +51994,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -53163,7 +52445,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -53999,7 +53281,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -54186,7 +53468,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -54340,7 +53622,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -54681,7 +53963,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -54692,7 +53974,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -54989,34 +54271,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>monpruntisto<s n="n"/></l> 
-        <r>prêteur<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>monpruntisto<s n="n"/></l> 
-        <r>prêteur<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>monpruntisto<s n="n"/></l> 
-        <r>prêteur<s n="n"/><s n="f"/></r> 
+        <r>prêteur<s n="n"/></r> 
       </p>
     </e>
 
@@ -55330,7 +54590,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -56012,7 +55272,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -56287,34 +55547,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>nazio<s n="n"/></l> 
-        <r>nazi<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>nazio<s n="n"/></l> 
-        <r>nazi<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>nazio<s n="n"/></l> 
-        <r>nazi<s n="n"/><s n="f"/></r> 
+        <r>nazi<s n="n"/></r> 
       </p>
     </e>
 
@@ -58113,7 +57351,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -58993,7 +58231,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -59048,7 +58286,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -59059,7 +58297,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -59279,7 +58517,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -59598,7 +58836,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LRm
     -->
     <e>
       <p>
@@ -59840,7 +59078,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -60676,12 +59914,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>pakistanano<s n="n"/></l> 
-        <r>pakistanais<s n="n"/><s n="GD"/></r> 
+        <r>pakistanais<s n="n"/></r> 
       </p>
     </e>
 
@@ -60693,17 +59931,6 @@
       <p>
         <l>pakistanano<s n="n"/></l> 
         <r>pakistanais<s n="n"/><s n="m"/><s n="sp"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>pakistanano<s n="n"/></l> 
-        <r>pakistanais<s n="n"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -61303,34 +60530,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>parenco<s n="n"/></l> 
-        <r>parent<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>parenco<s n="n"/></l> 
-        <r>parent<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>parenco<s n="n"/></l> 
-        <r>parent<s n="n"/><s n="GD"/></r> 
+        <r>parent<s n="n"/></r> 
       </p>
     </e>
 
@@ -61358,34 +60563,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e c="new-category">
       <p>
         <l>parizano<s n="n"/></l> 
-        <r>parisien<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e c="new-category">
-      <p>
-        <l>parizano<s n="n"/></l> 
-        <r>parisien<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e c="new-category">
-      <p>
-        <l>parizano<s n="n"/></l> 
-        <r>parisien<s n="n"/><s n="GD"/></r> 
+        <r>parisien<s n="n"/></r> 
       </p>
     </e>
 
@@ -61446,7 +60629,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e c="new-category">
       <p>
@@ -61633,7 +60816,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -61644,7 +60827,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -61655,34 +60838,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>partoprenanto<s n="n"/></l> 
-        <r>participant<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>partoprenanto<s n="n"/></l> 
-        <r>participant<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>partoprenanto<s n="n"/></l> 
-        <r>participant<s n="n"/><s n="f"/></r> 
+        <r>participant<s n="n"/></r> 
       </p>
     </e>
 
@@ -61699,34 +60860,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>pasanto<s n="n"/></l> 
-        <r>passant<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>pasanto<s n="n"/></l> 
-        <r>passant<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>pasanto<s n="n"/></l> 
-        <r>passant<s n="n"/><s n="GD"/></r> 
+        <r>passant<s n="n"/></r> 
       </p>
     </e>
 
@@ -62568,7 +61707,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -62623,7 +61762,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -62733,7 +61872,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -63107,34 +62246,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>perso<s n="n"/></l> 
-        <r>persan<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>perso<s n="n"/></l> 
-        <r>persan<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>perso<s n="n"/></l> 
-        <r>persan<s n="n"/><s n="GD"/></r> 
+        <r>persan<s n="n"/></r> 
       </p>
     </e>
 
@@ -63800,7 +62917,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -63811,7 +62928,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -65109,34 +64226,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>poeto<s n="n"/></l> 
-        <r>poète<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>poeto<s n="n"/></l> 
-        <r>poète<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>poeto<s n="n"/></l> 
-        <r>poète<s n="n"/><s n="GD"/></r> 
+        <r>poète<s n="n"/></r> 
       </p>
     </e>
 
@@ -65340,7 +64435,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -65428,7 +64523,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -65824,7 +64919,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -65835,7 +64930,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -66231,7 +65326,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -66517,34 +65612,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>praktikisto<s n="n"/></l> 
-        <r>préparateur<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>praktikisto<s n="n"/></l> 
-        <r>préparateur<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>praktikisto<s n="n"/></l> 
-        <r>préparateur<s n="n"/><s n="f"/></r> 
+        <r>préparateur<s n="n"/></r> 
       </p>
     </e>
 
@@ -66572,7 +65645,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -66583,7 +65656,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -67177,34 +66250,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>pretendanto<s n="n"/></l> 
-        <r>prétendant<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>pretendanto<s n="n"/></l> 
-        <r>prétendant<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>pretendanto<s n="n"/></l> 
-        <r>prétendant<s n="n"/><s n="f"/></r> 
+        <r>prétendant<s n="n"/></r> 
       </p>
     </e>
 
@@ -67991,7 +67042,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -68013,34 +67064,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>profeto<s n="n"/></l> 
-        <r>prophète<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>profeto<s n="n"/></l> 
-        <r>prophète<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>profeto<s n="n"/></l> 
-        <r>prophète<s n="n"/><s n="GD"/></r> 
+        <r>prophète<s n="n"/></r> 
       </p>
     </e>
 
@@ -68761,7 +67790,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -69465,7 +68494,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -69861,7 +68890,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -70114,34 +69143,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>rajdanto<s n="n"/></l> 
-        <r>écuyer<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>rajdanto<s n="n"/></l> 
-        <r>écuyer<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>rajdanto<s n="n"/></l> 
-        <r>écuyer<s n="n"/><s n="GD"/></r> 
+        <r>écuyer<s n="n"/></r> 
       </p>
     </e>
 
@@ -70642,7 +69649,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e c="new-category">
       <p>
@@ -71126,7 +70133,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -72017,34 +71024,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>reprezentanto<s n="n"/></l> 
-        <r>représentant<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>reprezentanto<s n="n"/></l> 
-        <r>représentant<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>reprezentanto<s n="n"/></l> 
-        <r>représentant<s n="n"/><s n="GD"/></r> 
+        <r>représentant<s n="n"/></r> 
       </p>
     </e>
 
@@ -72402,7 +71387,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -73623,34 +72608,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>rivalo<s n="n"/></l> 
-        <r>rival<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>rivalo<s n="n"/></l> 
-        <r>rival<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>rivalo<s n="n"/></l> 
-        <r>rival<s n="n"/><s n="GD"/></r> 
+        <r>rival<s n="n"/></r> 
       </p>
     </e>
 
@@ -74624,7 +73587,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -74734,12 +73697,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>samseksemulo<s n="n"/></l> 
-        <r>homosexuel<s n="n"/><s n="GD"/></r> 
+        <r>homosexuel<s n="n"/></r> 
       </p>
     </e>
 
@@ -75240,7 +74203,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -75394,7 +74357,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -75977,34 +74940,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>sendinto<s n="n"/></l> 
-        <r>expéditeur<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>sendinto<s n="n"/></l> 
-        <r>expéditeur<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>sendinto<s n="n"/></l> 
-        <r>expéditeur<s n="n"/><s n="f"/></r> 
+        <r>expéditeur<s n="n"/></r> 
       </p>
     </e>
 
@@ -77022,7 +75963,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -77198,7 +76139,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -77495,7 +76436,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -77506,34 +76447,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>simpatianto<s n="n"/></l> 
-        <r>sympathisant<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>simpatianto<s n="n"/></l> 
-        <r>sympathisant<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>simpatianto<s n="n"/></l> 
-        <r>sympathisant<s n="n"/><s n="GD"/></r> 
+        <r>sympathisant<s n="n"/></r> 
       </p>
     </e>
 
@@ -78254,7 +77173,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -79343,7 +78262,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -79398,34 +78317,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>spiono<s n="n"/></l> 
-        <r>espion<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>spiono<s n="n"/></l> 
-        <r>espion<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>spiono<s n="n"/></l> 
-        <r>espion<s n="n"/><s n="GD"/></r> 
+        <r>espion<s n="n"/></r> 
       </p>
     </e>
 
@@ -80179,7 +79076,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -80212,7 +79109,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -80421,45 +79318,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>studanto<s n="n"/></l> 
-        <r>étudiant<s n="n"/><s n="GD"/></r> 
+        <r>étudiant<s n="n"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>studento<s n="n"/></l> 
-        <r>étudiant<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>studento<s n="n"/></l> 
-        <r>étudiant<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>studento<s n="n"/></l> 
-        <r>étudiant<s n="n"/><s n="f"/></r> 
+        <r>étudiant<s n="n"/></r> 
       </p>
     </e>
 
@@ -81158,34 +80033,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LR
     -->
     <e>
       <p>
         <l>suicidinto<s n="n"/></l> 
-        <r>suicidé<s n="n"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>suicidinto<s n="n"/></l> 
-        <r>suicidé<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>suicidinto<s n="n"/></l> 
-        <r>suicidé<s n="n"/><s n="f"/></r> 
+        <r>suicidé<s n="n"/></r> 
       </p>
     </e>
 
@@ -81642,7 +80495,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -82126,7 +80979,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -82610,7 +81463,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -83028,7 +81881,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -84139,7 +82992,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -86339,7 +85192,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -86801,7 +85654,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -87483,7 +86336,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LRm
     -->
     <e c="new-category">
       <p>
@@ -87923,7 +86776,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -88418,7 +87271,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LRm
     -->
     <e>
       <p>
@@ -88506,7 +87359,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -88869,7 +87722,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -89243,34 +88096,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RLf
     -->
     <e>
       <p>
         <l>vizitanto<s n="n"/></l> 
-        <r>visiteur<s n="n"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>vizitanto<s n="n"/></l> 
-        <r>visiteur<s n="n"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>vizitanto<s n="n"/></l> 
-        <r>visiteur<s n="n"/><s n="GD"/></r> 
+        <r>visiteur<s n="n"/></r> 
       </p>
     </e>
 
@@ -89595,7 +88426,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -89991,7 +88822,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -90486,7 +89317,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -90651,7 +89482,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-LRm
     -->
     <e>
       <p>
@@ -90673,7 +89504,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -91124,7 +89955,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -91564,7 +90395,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -92004,7 +90835,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
@@ -92301,7 +91132,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -92323,7 +91154,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nmf-RL
     -->
     <e>
       <p>
@@ -93104,7 +91935,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -93148,7 +91979,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepf
     -->
     <e>
       <p>
@@ -93170,7 +92001,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-keepm
     -->
     <e>
       <p>
