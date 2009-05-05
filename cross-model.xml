@@ -353,6 +353,60 @@
             </action>
         </action-set>
     </cross-action>
+    <cross-action id="nom-mf-m" a="jimregan">
+        <description>sp in es</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="n"/></l>
+                    <r>$lemmaB<s n="n"/><s n="m"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="n"/><s n="m"/></l>
+                    <r>$lemmaC<s n="n"/><s n="mf"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="n"/></l>
+                        <r>$lemmaC<s n="n"/><s n="mf"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="nom-mf-f" a="jimregan">
+        <description>sp in es</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="n"/></l>
+                    <r>$lemmaB<s n="n"/><s n="f"/></r>
+                </p>
+            </e>
+            <e>
+                <p>
+                    <l>$lemmaB<s n="n"/><s n="f"/></l>
+                    <r>$lemmaC<s n="n"/><s n="mf"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="n"/></l>
+                        <r>$lemmaC<s n="n"/><s n="mf"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
     <cross-action id="n.acr-f" a="jimregan">
         <description>Feminine in both es and fr</description>
         <pattern>
