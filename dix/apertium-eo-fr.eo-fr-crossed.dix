@@ -3,17 +3,23 @@
 	Dictionary:
 	Bilingual dictionary: eo-fr
 	Sections: 1
-	Entries: 8357
+	Entries: 8317
 	Sdefs: 93
       
       Patterns applied:
-      	default (650 times)
+      	default (590 times)
       	nom-f (1729 times)
       	nom-m (1411 times)
       	nom-mtof (292 times)
       	nom-keepf (53 times)
       	nom-keepm (33 times)
       	nom-ftom (314 times)
+      	nom-skipspmLR (3 times)
+      	nom-skipspfLR (1 times)
+      	nom-skipspmRLsg (2 times)
+      	nom-skipspfRLsg (5 times)
+      	nom-skipspmRLpl (5 times)
+      	nom-skipspfRLpl (4 times)
       	n.acr-f (4 times)
       	n.acr-m (7 times)
       	np.loc-f (4 times)
@@ -9424,34 +9430,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspfLR
     -->
     <e>
       <p>
         <l>apendicito<s n="n"/></l> 
-        <r>appendicite<s n="n"/><s n="f"/><s n="ND"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>apendicito<s n="n"/></l> 
-        <r>appendicite<s n="n"/><s n="f"/><s n="sg"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>apendicito<s n="n"/></l> 
-        <r>appendicite<s n="n"/><s n="f"/><s n="pl"/></r> 
+        <r>appendicite<s n="n"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -19423,34 +19407,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspfRLpl
     -->
     <e>
       <p>
         <l>dozo<s n="n"/></l> 
-        <r>dose<s n="n"/><s n="f"/><s n="pl"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>dozo<s n="n"/></l> 
-        <r>dose<s n="n"/><s n="f"/><s n="sg"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>dozo<s n="n"/></l> 
-        <r>dose<s n="n"/><s n="f"/><s n="ND"/></r> 
+        <r>dose<s n="n"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -22371,34 +22333,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspmLR
     -->
     <e>
       <p>
         <l>emfazo<s n="n"/></l> 
-        <r>accent<s n="n"/><s n="m"/><s n="ND"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>emfazo<s n="n"/></l> 
-        <r>accent<s n="n"/><s n="m"/><s n="sg"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>emfazo<s n="n"/></l> 
-        <r>accent<s n="n"/><s n="m"/><s n="pl"/></r> 
+        <r>accent<s n="n"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -31501,34 +31441,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspfRLpl
     -->
     <e>
       <p>
         <l>hipotezo<s n="n"/></l> 
-        <r>hypothèse<s n="n"/><s n="f"/><s n="pl"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>hipotezo<s n="n"/></l> 
-        <r>hypothèse<s n="n"/><s n="f"/><s n="sg"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>hipotezo<s n="n"/></l> 
-        <r>hypothèse<s n="n"/><s n="f"/><s n="ND"/></r> 
+        <r>hypothèse<s n="n"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -32304,34 +32222,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspfRLsg
     -->
     <e>
       <p>
         <l>iktero<s n="n"/></l> 
-        <r>hépatite<s n="n"/><s n="f"/><s n="sg"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>iktero<s n="n"/></l> 
-        <r>hépatite<s n="n"/><s n="f"/><s n="pl"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>iktero<s n="n"/></l> 
-        <r>hépatite<s n="n"/><s n="f"/><s n="ND"/></r> 
+        <r>hépatite<s n="n"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -43150,34 +43046,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspfRLpl
     -->
     <e>
       <p>
         <l>krizo<s n="n"/></l> 
-        <r>crise<s n="n"/><s n="f"/><s n="pl"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>krizo<s n="n"/></l> 
-        <r>crise<s n="n"/><s n="f"/><s n="sg"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>krizo<s n="n"/></l> 
-        <r>crise<s n="n"/><s n="f"/><s n="ND"/></r> 
+        <r>crise<s n="n"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -47858,34 +47732,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspmRLpl
     -->
     <e>
       <p>
         <l>lundo<s n="n"/></l> 
-        <r>lundi<s n="n"/><s n="m"/><s n="pl"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>lundo<s n="n"/></l> 
-        <r>lundi<s n="n"/><s n="m"/><s n="sg"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>lundo<s n="n"/></l> 
-        <r>lundi<s n="n"/><s n="m"/><s n="ND"/></r> 
+        <r>lundi<s n="n"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -51202,34 +51054,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspmRLpl
     -->
     <e>
       <p>
         <l>mardo<s n="n"/></l> 
-        <r>mardi<s n="n"/><s n="m"/><s n="pl"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>mardo<s n="n"/></l> 
-        <r>mardi<s n="n"/><s n="m"/><s n="sg"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>mardo<s n="n"/></l> 
-        <r>mardi<s n="n"/><s n="m"/><s n="ND"/></r> 
+        <r>mardi<s n="n"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -52599,34 +52429,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspmRLpl
     -->
     <e>
       <p>
         <l>merkredo<s n="n"/></l> 
-        <r>mercredi<s n="n"/><s n="m"/><s n="pl"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>merkredo<s n="n"/></l> 
-        <r>mercredi<s n="n"/><s n="m"/><s n="sg"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>merkredo<s n="n"/></l> 
-        <r>mercredi<s n="n"/><s n="m"/><s n="ND"/></r> 
+        <r>mercredi<s n="n"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -55415,34 +55223,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspmLR
     -->
     <e>
       <p>
         <l>naskiĝtago<s n="n"/></l> 
-        <r>anniversaire<s n="n"/><s n="m"/><s n="ND"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>naskiĝtago<s n="n"/></l> 
-        <r>anniversaire<s n="n"/><s n="m"/><s n="pl"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>naskiĝtago<s n="n"/></l> 
-        <r>anniversaire<s n="n"/><s n="m"/><s n="sg"/></r> 
+        <r>anniversaire<s n="n"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -57593,34 +57379,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspmLR
     -->
     <e>
       <p>
         <l>nuksrompilo<s n="n"/></l> 
-        <r>casse-noisette<s n="n"/><s n="m"/><s n="ND"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>nuksrompilo<s n="n"/></l> 
-        <r>casse-noisette<s n="n"/><s n="m"/><s n="sg"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>nuksrompilo<s n="n"/></l> 
-        <r>casse-noisette<s n="n"/><s n="m"/><s n="pl"/></r> 
+        <r>casse-noisette<s n="n"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -60398,34 +60162,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspfRLsg
     -->
     <e>
       <p>
         <l>paralizo<s n="n"/></l> 
-        <r>paralysie<s n="n"/><s n="f"/><s n="sg"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>paralizo<s n="n"/></l> 
-        <r>paralysie<s n="n"/><s n="f"/><s n="pl"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>paralizo<s n="n"/></l> 
-        <r>paralysie<s n="n"/><s n="f"/><s n="ND"/></r> 
+        <r>paralysie<s n="n"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -60442,34 +60184,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspmRLsg
     -->
     <e>
       <p>
         <l>paraŝuto<s n="n"/></l> 
-        <r>parachute<s n="n"/><s n="m"/><s n="sg"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>paraŝuto<s n="n"/></l> 
-        <r>parachute<s n="n"/><s n="m"/><s n="pl"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>paraŝuto<s n="n"/></l> 
-        <r>parachute<s n="n"/><s n="m"/><s n="ND"/></r> 
+        <r>parachute<s n="n"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -64116,34 +63836,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspmRLsg
     -->
     <e>
       <p>
         <l>pluvombrelo<s n="n"/></l> 
-        <r>parapluie<s n="n"/><s n="m"/><s n="sg"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>pluvombrelo<s n="n"/></l> 
-        <r>parapluie<s n="n"/><s n="m"/><s n="pl"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>pluvombrelo<s n="n"/></l> 
-        <r>parapluie<s n="n"/><s n="m"/><s n="ND"/></r> 
+        <r>parapluie<s n="n"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -67955,34 +67653,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspfRLsg
     -->
     <e>
       <p>
         <l>protezo<s n="n"/></l> 
-        <r>prothèse<s n="n"/><s n="f"/><s n="sg"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>protezo<s n="n"/></l> 
-        <r>prothèse<s n="n"/><s n="f"/><s n="pl"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>protezo<s n="n"/></l> 
-        <r>prothèse<s n="n"/><s n="f"/><s n="ND"/></r> 
+        <r>prothèse<s n="n"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -68505,34 +68181,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspfRLsg
     -->
     <e>
       <p>
         <l>psikozo<s n="n"/></l> 
-        <r>psychose<s n="n"/><s n="f"/><s n="sg"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>psikozo<s n="n"/></l> 
-        <r>psychose<s n="n"/><s n="f"/><s n="pl"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>psikozo<s n="n"/></l> 
-        <r>psychose<s n="n"/><s n="f"/><s n="ND"/></r> 
+        <r>psychose<s n="n"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -76909,34 +76563,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspfRLsg
     -->
     <e>
       <p>
         <l>sintezo<s n="n"/></l> 
-        <r>synthèse<s n="n"/><s n="f"/><s n="sg"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>sintezo<s n="n"/></l> 
-        <r>synthèse<s n="n"/><s n="f"/><s n="pl"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>sintezo<s n="n"/></l> 
-        <r>synthèse<s n="n"/><s n="f"/><s n="ND"/></r> 
+        <r>synthèse<s n="n"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -82266,34 +81898,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspfRLpl
     -->
     <e>
       <p>
         <l>tezo<s n="n"/></l> 
-        <r>thèse<s n="n"/><s n="f"/><s n="pl"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>tezo<s n="n"/></l> 
-        <r>thèse<s n="n"/><s n="f"/><s n="sg"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>tezo<s n="n"/></l> 
-        <r>thèse<s n="n"/><s n="f"/><s n="ND"/></r> 
+        <r>thèse<s n="n"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -86567,34 +86177,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspmRLpl
     -->
     <e>
       <p>
         <l>vendredo<s n="n"/></l> 
-        <r>vendredi<s n="n"/><s n="m"/><s n="pl"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>vendredo<s n="n"/></l> 
-        <r>vendredi<s n="n"/><s n="m"/><s n="sg"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>vendredo<s n="n"/></l> 
-        <r>vendredi<s n="n"/><s n="m"/><s n="ND"/></r> 
+        <r>vendredi<s n="n"/><s n="m"/></r> 
       </p>
     </e>
 
@@ -90626,34 +90214,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      nom-skipspmRLpl
     -->
     <e>
       <p>
         <l>ĵaŭdo<s n="n"/></l> 
-        <r>jeudi<s n="n"/><s n="m"/><s n="pl"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ĵaŭdo<s n="n"/></l> 
-        <r>jeudi<s n="n"/><s n="m"/><s n="sg"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ĵaŭdo<s n="n"/></l> 
-        <r>jeudi<s n="n"/><s n="m"/><s n="ND"/></r> 
+        <r>jeudi<s n="n"/><s n="m"/></r> 
       </p>
     </e>
 
