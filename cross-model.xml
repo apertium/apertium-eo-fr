@@ -488,6 +488,169 @@
             </action>
         </action-set>
     </cross-action>
+    <!-- these will lead to duplicates: sort-1line, then use uniq -->
+    <cross-action id="adjmf-RL" a="jimregan">
+        <description>adjmf default</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="adj"/></l>
+                    <r>$lemmaB<s n="adj"/></r>
+                </p>
+            </e>
+            <e r="RL">
+                <p>
+                    <l>$lemmaB<s n="adj"/><s n="GD"/></l>
+                    <r>$lemmaC<s n="adj"/><s n="mf"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="adj"/></l>
+                        <r>$lemmaC<s n="adj"/><s n="mf"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="adjmf-LRf" a="jimregan">
+        <description>adjmf default</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="adj"/></l>
+                    <r>$lemmaB<s n="adj"/></r>
+                </p>
+            </e>
+            <e r="LR">
+                <p>
+                    <l>$lemmaB<s n="adj"/><s n="f"/></l>
+                    <r>$lemmaC<s n="adj"/><s n="mf"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="adj"/></l>
+                        <r>$lemmaC<s n="adj"/><s n="mf"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="adjmf-LRm" a="jimregan">
+        <description>adjmf default</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="adj"/></l>
+                    <r>$lemmaB<s n="adj"/></r>
+                </p>
+            </e>
+            <e r="LR">
+                <p>
+                    <l>$lemmaB<s n="adj"/><s n="m"/></l>
+                    <r>$lemmaC<s n="adj"/><s n="mf"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="adj"/></l>
+                        <r>$lemmaC<s n="adj"/><s n="mf"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="adjmf-RLf" a="jimregan">
+        <description>adjmf default</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="adj"/></l>
+                    <r>$lemmaB<s n="adj"/></r>
+                </p>
+            </e>
+            <e r="RL">
+                <p>
+                    <l>$lemmaB<s n="adj"/><s n="mf"/></l>
+                    <r>$lemmaC<s n="adj"/><s n="f"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="adj"/></l>
+                        <r>$lemmaC<s n="adj"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="adjmf-RLm" a="jimregan">
+        <description>adjmf default</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="adj"/></l>
+                    <r>$lemmaB<s n="adj"/></r>
+                </p>
+            </e>
+            <e r="RL">
+                <p>
+                    <l>$lemmaB<s n="adj"/><s n="mf"/></l>
+                    <r>$lemmaC<s n="adj"/><s n="m"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="adj"/></l>
+                        <r>$lemmaC<s n="adj"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
+    <cross-action id="adjmf-LR" a="jimregan">
+        <description>adjmf default</description>
+        <pattern>
+            <e>
+                <p>
+                    <l>$lemmaA<s n="adj"/></l>
+                    <r>$lemmaB<s n="adj"/></r>
+                </p>
+            </e>
+            <e r="LR">
+                <p>
+                    <l>$lemmaB<s n="adj"/><s n="mf"/></l>
+                    <r>$lemmaC<s n="adj"/><s n="GD"/></r>
+                </p>
+            </e>
+        </pattern>
+        <action-set>
+            <action>
+                <e>
+                    <p>
+                        <l>$lemmaA<s n="adj"/></l>
+                        <r>$lemmaC<s n="adj"/></r>
+                    </p>
+                </e>
+            </action>
+        </action-set>
+    </cross-action>
     <cross-action id="num" a="jimregan">
         <description>num default</description>
         <pattern>

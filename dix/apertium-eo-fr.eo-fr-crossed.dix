@@ -3,11 +3,11 @@
 	Dictionary:
 	Bilingual dictionary: eo-fr
 	Sections: 1
-	Entries: 8911
+	Entries: 8464
 	Sdefs: 93
       
       Patterns applied:
-      	default (1925 times)
+      	default (965 times)
       	nom-f (1729 times)
       	nom-m (1411 times)
       	nom-mtof (292 times)
@@ -20,7 +20,13 @@
       	np.loc-addm (101 times)
       	nom-nogender (275 times)
       	vblex (1601 times)
-      	adj (471 times)
+      	adj (466 times)
+      	adjmf-RL (254 times)
+      	adjmf-LRf (14 times)
+      	adjmf-LRm (10 times)
+      	adjmf-RLf (104 times)
+      	adjmf-RLm (6 times)
+      	adjmf-LR (130 times)
       	num (30 times)
       	prn (17 times)
       	pr (70 times)
@@ -170,7 +176,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -4504,7 +4510,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -4515,34 +4521,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>abunda<s n="adj"/></l> 
-        <r>abondant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>abunda<s n="adj"/></l> 
-        <r>abondant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>abunda<s n="adj"/></l> 
-        <r>abondant<s n="adj"/><s n="f"/></r> 
+        <r>abondant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -4570,7 +4554,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -4581,7 +4565,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRf
     -->
     <e>
       <p>
@@ -4614,7 +4598,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -4625,34 +4609,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>adekvata<s n="adj"/></l> 
-        <r>pertinent<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>adekvata<s n="adj"/></l> 
-        <r>pertinent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>adekvata<s n="adj"/></l> 
-        <r>pertinent<s n="adj"/><s n="f"/></r> 
+        <r>pertinent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -5021,7 +4983,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRm
     -->
     <e>
       <p>
@@ -5098,34 +5060,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>afabla<s n="adj"/></l> 
-        <r>gentil<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>afabla<s n="adj"/></l> 
-        <r>gentil<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>afabla<s n="adj"/></l> 
-        <r>gentil<s n="adj"/><s n="GD"/></r> 
+        <r>gentil<s n="adj"/></r> 
       </p>
     </e>
 
@@ -5505,34 +5445,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>agrabla<s n="adj"/></l> 
-        <r>plaisant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>agrabla<s n="adj"/></l> 
-        <r>plaisant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>agrabla<s n="adj"/></l> 
-        <r>plaisant<s n="adj"/><s n="GD"/></r> 
+        <r>plaisant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -5549,17 +5467,6 @@
 
     <!-- 
 	forced 'null' restriction
-      adj
-    -->
-    <e>
-      <p>
-        <l>agrabla<s n="adj"/></l> 
-        <r>plaisant<s n="adj"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
       adv
     -->
     <e>
@@ -5571,7 +5478,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRf
     -->
     <e>
       <p>
@@ -5868,7 +5775,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRf
     -->
     <e>
       <p>
@@ -6088,12 +5995,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>akra<s n="adj"/></l> 
-        <r>piquant<s n="adj"/><s n="GD"/></r> 
+        <r>piquant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -6275,40 +6182,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>aktuala<s n="adj"/></l> 
-        <r>actuel<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>aktuala<s n="adj"/></l> 
-        <r>actuel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>aktuala<s n="adj"/></l> 
-        <r>actuel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      adj
+      adjmf-RLf
     -->
     <e>
       <p>
@@ -6341,34 +6215,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>akurata<s n="adj"/></l> 
-        <r>ponctuel<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>akurata<s n="adj"/></l> 
-        <r>ponctuel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>akurata<s n="adj"/></l> 
-        <r>ponctuel<s n="adj"/><s n="GD"/></r> 
+        <r>ponctuel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -6429,34 +6281,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>akuta<s n="adj"/></l> 
-        <r>foudroyant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>akuta<s n="adj"/></l> 
-        <r>foudroyant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>akuta<s n="adj"/></l> 
-        <r>foudroyant<s n="adj"/><s n="f"/></r> 
+        <r>foudroyant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -6550,7 +6380,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRf
     -->
     <e>
       <p>
@@ -6946,7 +6776,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRm
     -->
     <e>
       <p>
@@ -7166,34 +6996,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>alloga<s n="adj"/></l> 
-        <r>attrayant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>alloga<s n="adj"/></l> 
-        <r>attrayant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>alloga<s n="adj"/></l> 
-        <r>attrayant<s n="adj"/><s n="f"/></r> 
+        <r>attrayant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -7507,7 +7315,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -8112,34 +7920,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>amika<s n="adj"/></l> 
-        <r>amical<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>amika<s n="adj"/></l> 
-        <r>amical<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>amika<s n="adj"/></l> 
-        <r>amical<s n="adj"/><s n="f"/></r> 
+        <r>amical<s n="adj"/></r> 
       </p>
     </e>
 
@@ -8233,7 +8019,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -8420,7 +8206,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -8431,7 +8217,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -8486,7 +8272,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -8904,7 +8690,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -9025,7 +8811,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -9058,34 +8844,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>antaŭa<s n="adj"/></l> 
-        <r>antérieur<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>antaŭa<s n="adj"/></l> 
-        <r>antérieur<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>antaŭa<s n="adj"/></l> 
-        <r>antérieur<s n="adj"/><s n="GD"/></r> 
+        <r>antérieur<s n="adj"/></r> 
       </p>
     </e>
 
@@ -9102,7 +8866,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -9608,34 +9372,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>aparta<s n="adj"/></l> 
-        <r>particulier<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>aparta<s n="adj"/></l> 
-        <r>particulier<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>aparta<s n="adj"/></l> 
-        <r>particulier<s n="adj"/><s n="GD"/></r> 
+        <r>particulier<s n="adj"/></r> 
       </p>
     </e>
 
@@ -10026,7 +9768,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -10169,34 +9911,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>apuda<s n="adj"/></l> 
-        <r>adjacent<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>apuda<s n="adj"/></l> 
-        <r>adjacent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>apuda<s n="adj"/></l> 
-        <r>adjacent<s n="adj"/><s n="f"/></r> 
+        <r>adjacent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -10290,34 +10010,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>arbara<s n="adj"/></l> 
-        <r>forestier<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>arbara<s n="adj"/></l> 
-        <r>forestier<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>arbara<s n="adj"/></l> 
-        <r>forestier<s n="adj"/><s n="f"/></r> 
+        <r>forestier<s n="adj"/></r> 
       </p>
     </e>
 
@@ -10345,7 +10043,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -10411,34 +10109,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>arda<s n="adj"/></l> 
-        <r>ardent<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>arda<s n="adj"/></l> 
-        <r>ardent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>arda<s n="adj"/></l> 
-        <r>ardent<s n="adj"/><s n="GD"/></r> 
+        <r>ardent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -10774,34 +10450,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>artefarita<s n="adj"/></l> 
-        <r>artificiel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>artefarita<s n="adj"/></l> 
-        <r>artificiel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>artefarita<s n="adj"/></l> 
-        <r>artificiel<s n="adj"/><s n="f"/></r> 
+        <r>artificiel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -10873,7 +10527,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -11170,7 +10824,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -11401,34 +11055,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>atesta<s n="adj"/></l> 
-        <r>testimonial<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>atesta<s n="adj"/></l> 
-        <r>testimonial<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>atesta<s n="adj"/></l> 
-        <r>testimonial<s n="adj"/><s n="f"/></r> 
+        <r>testimonial<s n="adj"/></r> 
       </p>
     </e>
 
@@ -11588,7 +11220,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -11643,7 +11275,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -11742,7 +11374,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRf
     -->
     <e>
       <p>
@@ -11929,7 +11561,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -11995,12 +11627,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>aŭdaca<s n="adj"/></l> 
-        <r>audacieux<s n="adj"/><s n="f"/></r> 
+        <r>audacieux<s n="adj"/></r> 
       </p>
     </e>
 
@@ -12012,17 +11644,6 @@
       <p>
         <l>aŭdaca<s n="adj"/></l> 
         <r>audacieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>aŭdaca<s n="adj"/></l> 
-        <r>audacieux<s n="adj"/><s n="GD"/></r> 
       </p>
     </e>
 
@@ -12094,34 +11715,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>aŭdovida<s n="adj"/></l> 
-        <r>audiovisuel<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>aŭdovida<s n="adj"/></l> 
-        <r>audiovisuel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>aŭdovida<s n="adj"/></l> 
-        <r>audiovisuel<s n="adj"/><s n="GD"/></r> 
+        <r>audiovisuel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -12193,7 +11792,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -12259,7 +11858,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -12281,7 +11880,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -12424,23 +12023,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>bagatela<s n="adj"/></l> 
-        <r>insignifiant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>bagatela<s n="adj"/></l> 
-        <r>insignifiant<s n="adj"/><s n="m"/></r> 
+        <r>insignifiant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -12622,34 +12210,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>banala<s n="adj"/></l> 
-        <r>trivial<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>banala<s n="adj"/></l> 
-        <r>trivial<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>banala<s n="adj"/></l> 
-        <r>trivial<s n="adj"/><s n="f"/></r> 
+        <r>trivial<s n="adj"/></r> 
       </p>
     </e>
 
@@ -12897,7 +12463,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -13249,7 +12815,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -14063,7 +13629,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -14074,34 +13640,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>blindiga<s n="adj"/></l> 
-        <r>éblouissant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>blindiga<s n="adj"/></l> 
-        <r>éblouissant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>blindiga<s n="adj"/></l> 
-        <r>éblouissant<s n="adj"/><s n="GD"/></r> 
+        <r>éblouissant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -14162,34 +13706,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e c="new-category">
       <p>
         <l>blua<s n="adj"/></l> 
-        <r>bleu<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e c="new-category">
-      <p>
-        <l>blua<s n="adj"/></l> 
-        <r>bleu<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e c="new-category">
-      <p>
-        <l>blua<s n="adj"/></l> 
-        <r>bleu<s n="adj"/><s n="GD"/></r> 
+        <r>bleu<s n="adj"/></r> 
       </p>
     </e>
 
@@ -14382,34 +13904,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>bonega<s n="adj"/></l> 
-        <r>excellent<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>bonega<s n="adj"/></l> 
-        <r>excellent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>bonega<s n="adj"/></l> 
-        <r>excellent<s n="adj"/><s n="GD"/></r> 
+        <r>excellent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -14844,78 +14344,34 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>brila<s n="adj"/></l> 
-        <r>brillant<s n="adj"/><s n="f"/></r> 
+        <r>brillant<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>brila<s n="adj"/></l> 
-        <r>brillant<s n="adj"/><s n="m"/></r> 
+        <r>luisant<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>brila<s n="adj"/></l> 
-        <r>luisant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>brila<s n="adj"/></l> 
-        <r>luisant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>brila<s n="adj"/></l> 
-        <r>éclatant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>brila<s n="adj"/></l> 
-        <r>éclatant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>brila<s n="adj"/></l> 
-        <r>brillant<s n="adj"/><s n="GD"/></r> 
+        <r>éclatant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -14965,7 +14421,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -15196,34 +14652,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>brutala<s n="adj"/></l> 
-        <r>brutal<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>brutala<s n="adj"/></l> 
-        <r>brutal<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>brutala<s n="adj"/></l> 
-        <r>brutal<s n="adj"/><s n="GD"/></r> 
+        <r>brutal<s n="adj"/></r> 
       </p>
     </e>
 
@@ -15306,7 +14740,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -15603,7 +15037,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -15636,34 +15070,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>centra<s n="adj"/></l> 
-        <r>central<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>centra<s n="adj"/></l> 
-        <r>central<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>centra<s n="adj"/></l> 
-        <r>central<s n="adj"/><s n="GD"/></r> 
+        <r>central<s n="adj"/></r> 
       </p>
     </e>
 
@@ -15834,34 +15246,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>cetera<s n="adj"/></l> 
-        <r>restant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>cetera<s n="adj"/></l> 
-        <r>restant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>cetera<s n="adj"/></l> 
-        <r>restant<s n="adj"/><s n="f"/></r> 
+        <r>restant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -15889,34 +15279,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>cifereca<s n="adj"/></l> 
-        <r>digital<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>cifereca<s n="adj"/></l> 
-        <r>digital<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>cifereca<s n="adj"/></l> 
-        <r>digital<s n="adj"/><s n="f"/></r> 
+        <r>digital<s n="adj"/></r> 
       </p>
     </e>
 
@@ -16142,34 +15510,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>civila<s n="adj"/></l> 
-        <r>civil<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>civila<s n="adj"/></l> 
-        <r>civil<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>civila<s n="adj"/></l> 
-        <r>civil<s n="adj"/><s n="GD"/></r> 
+        <r>civil<s n="adj"/></r> 
       </p>
     </e>
 
@@ -16989,7 +16335,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -17022,7 +16368,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -17044,7 +16390,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -17055,7 +16401,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -17154,7 +16500,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -17242,7 +16588,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -17253,7 +16599,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -17275,7 +16621,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRf
     -->
     <e>
       <p>
@@ -17550,7 +16896,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRf
     -->
     <e>
       <p>
@@ -17561,7 +16907,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -17660,7 +17006,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -17759,34 +17105,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>dependa<s n="adj"/></l> 
-        <r>dépendant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>dependa<s n="adj"/></l> 
-        <r>dépendant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>dependa<s n="adj"/></l> 
-        <r>dépendant<s n="adj"/><s n="f"/></r> 
+        <r>dépendant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -18254,40 +17578,18 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>devena<s n="adj"/></l> 
-        <r>naturel<s n="adj"/><s n="f"/></r> 
+        <r>naturel<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>devena<s n="adj"/></l> 
-        <r>naturel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>devena<s n="adj"/></l> 
-        <r>naturel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -18331,7 +17633,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -18749,12 +18051,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>diferenca<s n="adj"/></l> 
-        <r>différent<s n="adj"/><s n="GD"/></r> 
+        <r>différent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -18837,7 +18139,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRf
     -->
     <e>
       <p>
@@ -19002,7 +18304,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -19926,12 +19228,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>dolĉa<s n="adj"/></l> 
-        <r>doux<s n="adj"/><s n="f"/></r> 
+        <r>doux<s n="adj"/></r> 
       </p>
     </e>
 
@@ -19948,23 +19250,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>dolĉa<s n="adj"/></l> 
-        <r>doux<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>dolĉamara<s n="adj"/></l> 
-        <r>aigre-doux<s n="adj"/><s n="GD"/></r> 
+        <r>aigre-doux<s n="adj"/></r> 
       </p>
     </e>
 
@@ -19976,17 +19267,6 @@
       <p>
         <l>dolĉamara<s n="adj"/></l> 
         <r>aigre-doux<s n="adj"/><s n="m"/><s n="sp"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>dolĉamara<s n="adj"/></l> 
-        <r>aigre-doux<s n="adj"/><s n="f"/></r> 
       </p>
     </e>
 
@@ -20355,7 +19635,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -20465,7 +19745,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -20520,7 +19800,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -20762,34 +20042,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>duonmonata<s n="adj"/></l> 
-        <r>bimensuel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>duonmonata<s n="adj"/></l> 
-        <r>bimensuel<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>duonmonata<s n="adj"/></l> 
-        <r>bimensuel<s n="adj"/><s n="m"/></r> 
+        <r>bimensuel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -20949,7 +20207,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -21114,7 +20372,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -21191,34 +20449,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>egala<s n="adj"/></l> 
-        <r>égal<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>egala<s n="adj"/></l> 
-        <r>égal<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>egala<s n="adj"/></l> 
-        <r>égal<s n="adj"/><s n="GD"/></r> 
+        <r>égal<s n="adj"/></r> 
       </p>
     </e>
 
@@ -21400,7 +20636,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -21554,7 +20790,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -21774,34 +21010,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>eksperimenta<s n="adj"/></l> 
-        <r>expérimental<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>eksperimenta<s n="adj"/></l> 
-        <r>expérimental<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>eksperimenta<s n="adj"/></l> 
-        <r>expérimental<s n="adj"/><s n="f"/></r> 
+        <r>expérimental<s n="adj"/></r> 
       </p>
     </e>
 
@@ -21818,7 +21032,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -21939,40 +21153,18 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>ekstera<s n="adj"/></l> 
-        <r>extérieur<s n="adj"/><s n="f"/></r> 
+        <r>extérieur<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ekstera<s n="adj"/></l> 
-        <r>extérieur<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ekstera<s n="adj"/></l> 
-        <r>extérieur<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -21983,7 +21175,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -22060,40 +21252,18 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>eksternorma<s n="adj"/></l> 
-        <r>anormal<s n="adj"/><s n="GD"/></r> 
+        <r>anormal<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>eksternorma<s n="adj"/></l> 
-        <r>anormal<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>eksternorma<s n="adj"/></l> 
-        <r>anormal<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -22137,7 +21307,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -22390,34 +21560,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>ekzistanta<s n="adj"/></l> 
-        <r>existant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ekzistanta<s n="adj"/></l> 
-        <r>existant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ekzistanta<s n="adj"/></l> 
-        <r>existant<s n="adj"/><s n="f"/></r> 
+        <r>existant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -22533,34 +21681,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>eleganta<s n="adj"/></l> 
-        <r>élégant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>eleganta<s n="adj"/></l> 
-        <r>élégant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>eleganta<s n="adj"/></l> 
-        <r>élégant<s n="adj"/><s n="GD"/></r> 
+        <r>élégant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -22654,7 +21780,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -22720,7 +21846,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -22731,7 +21857,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -23006,34 +22132,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>elokventa<s n="adj"/></l> 
-        <r>éloquent<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>elokventa<s n="adj"/></l> 
-        <r>éloquent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>elokventa<s n="adj"/></l> 
-        <r>éloquent<s n="adj"/><s n="f"/></r> 
+        <r>éloquent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -23798,7 +22902,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -23809,7 +22913,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -23908,7 +23012,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -24513,7 +23617,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -24667,67 +23771,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>esenca<s n="adj"/></l> 
-        <r>essentiel<s n="adj"/><s n="f"/></r> 
+        <r>essentiel<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>esenca<s n="adj"/></l> 
-        <r>essentiel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>esenca<s n="adj"/></l> 
-        <r>essentiel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>esenca<s n="adj"/></l> 
-        <r>primordial<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>esenca<s n="adj"/></l> 
-        <r>primordial<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>esenca<s n="adj"/></l> 
-        <r>primordial<s n="adj"/><s n="f"/></r> 
+        <r>primordial<s n="adj"/></r> 
       </p>
     </e>
 
@@ -24898,7 +23958,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -25250,7 +24310,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -25338,34 +24398,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>eventuala<s n="adj"/></l> 
-        <r>éventuel<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>eventuala<s n="adj"/></l> 
-        <r>éventuel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>eventuala<s n="adj"/></l> 
-        <r>éventuel<s n="adj"/><s n="GD"/></r> 
+        <r>éventuel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -25382,34 +24420,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>evidenta<s n="adj"/></l> 
-        <r>évident<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>evidenta<s n="adj"/></l> 
-        <r>évident<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>evidenta<s n="adj"/></l> 
-        <r>évident<s n="adj"/><s n="f"/></r> 
+        <r>évident<s n="adj"/></r> 
       </p>
     </e>
 
@@ -25558,7 +24574,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e c="new-category">
       <p>
@@ -25723,23 +24739,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>facila<s n="adj"/></l> 
-        <r>aisé<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>facila<s n="adj"/></l> 
-        <r>aisé<s n="adj"/><s n="m"/></r> 
+        <r>aisé<s n="adj"/></r> 
       </p>
     </e>
 
@@ -26064,34 +25069,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>faldebla<s n="adj"/></l> 
-        <r>pliant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>faldebla<s n="adj"/></l> 
-        <r>pliant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>faldebla<s n="adj"/></l> 
-        <r>pliant<s n="adj"/><s n="f"/></r> 
+        <r>pliant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -26262,56 +25245,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>familiara<s n="adj"/></l> 
-        <r>familier<s n="adj"/><s n="GD"/></r> 
+        <r>familier<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLm
     -->
     <e>
       <p>
         <l>familiara<s n="adj"/></l> 
-        <r>familier<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>familiara<s n="adj"/></l> 
-        <r>familier<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>familiara<s n="adj"/></l> 
-        <r>familial<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>familiara<s n="adj"/></l> 
-        <r>familial<s n="adj"/><s n="f"/></r> 
+        <r>familial<s n="adj"/></r> 
       </p>
     </e>
 
@@ -26372,7 +25322,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -26603,34 +25553,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>fatala<s n="adj"/></l> 
-        <r>fatal<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>fatala<s n="adj"/></l> 
-        <r>fatal<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>fatala<s n="adj"/></l> 
-        <r>fatal<s n="adj"/><s n="GD"/></r> 
+        <r>fatal<s n="adj"/></r> 
       </p>
     </e>
 
@@ -26658,7 +25586,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -26790,34 +25718,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>federala<s n="adj"/></l> 
-        <r>fédéral<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>federala<s n="adj"/></l> 
-        <r>fédéral<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>federala<s n="adj"/></l> 
-        <r>fédéral<s n="adj"/><s n="GD"/></r> 
+        <r>fédéral<s n="adj"/></r> 
       </p>
     </e>
 
@@ -26878,7 +25784,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -26944,12 +25850,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>feliĉa<s n="adj"/></l> 
-        <r>joyeux<s n="adj"/><s n="f"/></r> 
+        <r>joyeux<s n="adj"/></r> 
       </p>
     </e>
 
@@ -27087,34 +25993,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>fenomena<s n="adj"/></l> 
-        <r>phénoménal<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>fenomena<s n="adj"/></l> 
-        <r>phénoménal<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>fenomena<s n="adj"/></l> 
-        <r>phénoménal<s n="adj"/><s n="f"/></r> 
+        <r>phénoménal<s n="adj"/></r> 
       </p>
     </e>
 
@@ -27516,7 +26400,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -27890,7 +26774,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -28055,34 +26939,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>flanka<s n="adj"/></l> 
-        <r>latéral<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>flanka<s n="adj"/></l> 
-        <r>latéral<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>flanka<s n="adj"/></l> 
-        <r>latéral<s n="adj"/><s n="f"/></r> 
+        <r>latéral<s n="adj"/></r> 
       </p>
     </e>
 
@@ -28121,7 +26983,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -28198,34 +27060,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>fluanta<s n="adj"/></l> 
-        <r>courant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>fluanta<s n="adj"/></l> 
-        <r>courant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>fluanta<s n="adj"/></l> 
-        <r>courant<s n="adj"/><s n="GD"/></r> 
+        <r>courant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -28319,7 +27159,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -28341,34 +27181,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>fluoreska<s n="adj"/></l> 
-        <r>fluorescent<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>fluoreska<s n="adj"/></l> 
-        <r>fluorescent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>fluoreska<s n="adj"/></l> 
-        <r>fluorescent<s n="adj"/><s n="f"/></r> 
+        <r>fluorescent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -28726,34 +27544,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>formala<s n="adj"/></l> 
-        <r>formel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>formala<s n="adj"/></l> 
-        <r>formel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>formala<s n="adj"/></l> 
-        <r>formel<s n="adj"/><s n="f"/></r> 
+        <r>formel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -28979,34 +27775,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>forta<s n="adj"/></l> 
-        <r>fort<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>forta<s n="adj"/></l> 
-        <r>fort<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>forta<s n="adj"/></l> 
-        <r>fort<s n="adj"/><s n="GD"/></r> 
+        <r>fort<s n="adj"/></r> 
       </p>
     </e>
 
@@ -29254,7 +28028,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -29529,7 +28303,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -29551,7 +28325,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -29650,34 +28424,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>freŝa<s n="adj"/></l> 
-        <r>récent<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>freŝa<s n="adj"/></l> 
-        <r>récent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>freŝa<s n="adj"/></l> 
-        <r>récent<s n="adj"/><s n="GD"/></r> 
+        <r>récent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -30090,34 +28842,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>fundamenta<s n="adj"/></l> 
-        <r>fondamental<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>fundamenta<s n="adj"/></l> 
-        <r>fondamental<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>fundamenta<s n="adj"/></l> 
-        <r>fondamental<s n="adj"/><s n="f"/></r> 
+        <r>fondamental<s n="adj"/></r> 
       </p>
     </e>
 
@@ -30255,7 +28985,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -30442,34 +29172,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>gaja<s n="adj"/></l> 
-        <r>gai<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>gaja<s n="adj"/></l> 
-        <r>gai<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>gaja<s n="adj"/></l> 
-        <r>gai<s n="adj"/><s n="f"/></r> 
+        <r>gai<s n="adj"/></r> 
       </p>
     </e>
 
@@ -30948,34 +29656,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>geedza<s n="adj"/></l> 
-        <r>conjugal<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>geedza<s n="adj"/></l> 
-        <r>conjugal<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>geedza<s n="adj"/></l> 
-        <r>conjugal<s n="adj"/><s n="f"/></r> 
+        <r>conjugal<s n="adj"/></r> 
       </p>
     </e>
 
@@ -31135,7 +29821,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -31146,34 +29832,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>genia<s n="adj"/></l> 
-        <r>génial<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>genia<s n="adj"/></l> 
-        <r>génial<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>genia<s n="adj"/></l> 
-        <r>génial<s n="adj"/><s n="f"/></r> 
+        <r>génial<s n="adj"/></r> 
       </p>
     </e>
 
@@ -31256,7 +29920,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -31685,7 +30349,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -31696,7 +30360,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -31817,34 +30481,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>granda<s n="adj"/></l> 
-        <r>grand<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>granda<s n="adj"/></l> 
-        <r>grand<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>granda<s n="adj"/></l> 
-        <r>grand<s n="adj"/><s n="GD"/></r> 
+        <r>grand<s n="adj"/></r> 
       </p>
     </e>
 
@@ -31872,7 +30514,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -31993,34 +30635,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>grava<s n="adj"/></l> 
-        <r>important<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>grava<s n="adj"/></l> 
-        <r>important<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>grava<s n="adj"/></l> 
-        <r>important<s n="adj"/><s n="GD"/></r> 
+        <r>important<s n="adj"/></r> 
       </p>
     </e>
 
@@ -32202,12 +30822,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>griza<s n="adj"/></l> 
-        <r>gris<s n="adj"/><s n="f"/></r> 
+        <r>gris<s n="adj"/></r> 
       </p>
     </e>
 
@@ -32224,18 +30844,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>griza<s n="adj"/></l> 
-        <r>gris<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -32730,7 +31339,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -33005,7 +31614,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -33049,7 +31658,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -33126,23 +31735,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>hida<s n="adj"/></l> 
-        <r>hideux<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>hida<s n="adj"/></l> 
-        <r>hideux<s n="adj"/><s n="m"/></r> 
+        <r>hideux<s n="adj"/></r> 
       </p>
     </e>
 
@@ -33203,7 +31801,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -33379,7 +31977,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -33511,7 +32109,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -33775,7 +32373,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -33786,7 +32384,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -33940,7 +32538,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRm
     -->
     <e>
       <p>
@@ -33951,7 +32549,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -33973,40 +32571,18 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>ideala<s n="adj"/></l> 
-        <r>idéal<s n="adj"/><s n="f"/></r> 
+        <r>idéal<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ideala<s n="adj"/></l> 
-        <r>idéal<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ideala<s n="adj"/></l> 
-        <r>idéal<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -34424,34 +33000,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>impona<s n="adj"/></l> 
-        <r>imposant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>impona<s n="adj"/></l> 
-        <r>imposant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>impona<s n="adj"/></l> 
-        <r>imposant<s n="adj"/><s n="f"/></r> 
+        <r>imposant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -34523,67 +33077,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>impotenta<s n="adj"/></l> 
-        <r>impuissant<s n="adj"/><s n="GD"/></r> 
+        <r>impuissant<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>impotenta<s n="adj"/></l> 
-        <r>impuissant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>impotenta<s n="adj"/></l> 
-        <r>impuissant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>impresa<s n="adj"/></l> 
-        <r>impressionant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>impresa<s n="adj"/></l> 
-        <r>impressionant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>impresa<s n="adj"/></l> 
-        <r>impressionant<s n="adj"/><s n="f"/></r> 
+        <r>impressionant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -34710,67 +33220,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>imuna<s n="adj"/></l> 
-        <r>immun<s n="adj"/><s n="GD"/></r> 
+        <r>immun<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>imuna<s n="adj"/></l> 
-        <r>immun<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>imuna<s n="adj"/></l> 
-        <r>immun<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>imuna<s n="adj"/></l> 
-        <r>résistant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>imuna<s n="adj"/></l> 
-        <r>résistant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>imuna<s n="adj"/></l> 
-        <r>résistant<s n="adj"/><s n="f"/></r> 
+        <r>résistant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -34875,34 +33341,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>indiferenta<s n="adj"/></l> 
-        <r>indifférent<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>indiferenta<s n="adj"/></l> 
-        <r>indifférent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>indiferenta<s n="adj"/></l> 
-        <r>indifférent<s n="adj"/><s n="f"/></r> 
+        <r>indifférent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -34996,34 +33440,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>individua<s n="adj"/></l> 
-        <r>individuel<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>individua<s n="adj"/></l> 
-        <r>individuel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>individua<s n="adj"/></l> 
-        <r>individuel<s n="adj"/><s n="GD"/></r> 
+        <r>individuel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -35084,34 +33506,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>industria<s n="adj"/></l> 
-        <r>industriel<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>industria<s n="adj"/></l> 
-        <r>industriel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>industria<s n="adj"/></l> 
-        <r>industriel<s n="adj"/><s n="GD"/></r> 
+        <r>industriel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -35161,34 +33561,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>infana<s n="adj"/></l> 
-        <r>enfantin<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>infana<s n="adj"/></l> 
-        <r>enfantin<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>infana<s n="adj"/></l> 
-        <r>enfantin<s n="adj"/><s n="f"/></r> 
+        <r>enfantin<s n="adj"/></r> 
       </p>
     </e>
 
@@ -35293,34 +33671,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>infera<s n="adj"/></l> 
-        <r>infernal<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>infera<s n="adj"/></l> 
-        <r>infernal<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>infera<s n="adj"/></l> 
-        <r>infernal<s n="adj"/><s n="GD"/></r> 
+        <r>infernal<s n="adj"/></r> 
       </p>
     </e>
 
@@ -36074,7 +34430,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -36118,34 +34474,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>intelekta<s n="adj"/></l> 
-        <r>intellectuel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>intelekta<s n="adj"/></l> 
-        <r>intellectuel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>intelekta<s n="adj"/></l> 
-        <r>intellectuel<s n="adj"/><s n="f"/></r> 
+        <r>intellectuel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -36184,34 +34518,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>inteligenta<s n="adj"/></l> 
-        <r>intelligent<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>inteligenta<s n="adj"/></l> 
-        <r>intelligent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>inteligenta<s n="adj"/></l> 
-        <r>intelligent<s n="adj"/><s n="GD"/></r> 
+        <r>intelligent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -36272,7 +34584,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -36404,34 +34716,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>interesa<s n="adj"/></l> 
-        <r>intéressant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>interesa<s n="adj"/></l> 
-        <r>intéressant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>interesa<s n="adj"/></l> 
-        <r>intéressant<s n="adj"/><s n="f"/></r> 
+        <r>intéressant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -36602,7 +34892,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -36613,34 +34903,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>internacia<s n="adj"/></l> 
-        <r>international<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>internacia<s n="adj"/></l> 
-        <r>international<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>internacia<s n="adj"/></l> 
-        <r>international<s n="adj"/><s n="GD"/></r> 
+        <r>international<s n="adj"/></r> 
       </p>
     </e>
 
@@ -36932,7 +35200,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -37097,7 +35365,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -37262,7 +35530,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -37438,7 +35706,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -37460,7 +35728,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -37471,7 +35739,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -37526,42 +35794,9 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e c="new-category">
-      <p>
-        <l>israela<s n="adj"/></l> 
-        <r>israélien<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e c="new-category">
-      <p>
-        <l>israela<s n="adj"/></l> 
-        <r>israélien<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e c="new-category">
-      <p>
-        <l>israela<s n="adj"/></l> 
-        <r>israélien<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      adj
-    -->
-    <e>
       <p>
         <l>israela<s n="adj"/></l> 
         <r>israélien<s n="adj"/></r> 
@@ -38153,7 +36388,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -38208,7 +36443,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -38241,7 +36476,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -38780,7 +37015,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -39055,7 +37290,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRf
     -->
     <e>
       <p>
@@ -39143,7 +37378,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -39330,7 +37565,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -40034,7 +38269,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e c="new-category">
       <p>
@@ -40199,7 +38434,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -40342,7 +38577,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -40837,7 +39072,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -41244,34 +39479,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>kohera<s n="adj"/></l> 
-        <r>cohérent<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kohera<s n="adj"/></l> 
-        <r>cohérent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kohera<s n="adj"/></l> 
-        <r>cohérent<s n="adj"/><s n="f"/></r> 
+        <r>cohérent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -41772,34 +39985,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>komenca<s n="adj"/></l> 
-        <r>initial<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>komenca<s n="adj"/></l> 
-        <r>initial<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>komenca<s n="adj"/></l> 
-        <r>initial<s n="adj"/><s n="f"/></r> 
+        <r>initial<s n="adj"/></r> 
       </p>
     </e>
 
@@ -41882,34 +40073,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>komerca<s n="adj"/></l> 
-        <r>commercial<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>komerca<s n="adj"/></l> 
-        <r>commercial<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>komerca<s n="adj"/></l> 
-        <r>commercial<s n="adj"/><s n="GD"/></r> 
+        <r>commercial<s n="adj"/></r> 
       </p>
     </e>
 
@@ -41926,7 +40095,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -42223,34 +40392,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>kompetenta<s n="adj"/></l> 
-        <r>compétent<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kompetenta<s n="adj"/></l> 
-        <r>compétent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kompetenta<s n="adj"/></l> 
-        <r>compétent<s n="adj"/><s n="f"/></r> 
+        <r>compétent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -42267,7 +40414,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -42465,7 +40612,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -42487,34 +40634,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>komuna<s n="adj"/></l> 
-        <r>commun<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>komuna<s n="adj"/></l> 
-        <r>commun<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>komuna<s n="adj"/></l> 
-        <r>commun<s n="adj"/><s n="GD"/></r> 
+        <r>commun<s n="adj"/></r> 
       </p>
     </e>
 
@@ -42608,7 +40733,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -43477,34 +41602,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>konsekvenca<s n="adj"/></l> 
-        <r>conséquent<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>konsekvenca<s n="adj"/></l> 
-        <r>conséquent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>konsekvenca<s n="adj"/></l> 
-        <r>conséquent<s n="adj"/><s n="GD"/></r> 
+        <r>conséquent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -43774,34 +41877,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>konstanta<s n="adj"/></l> 
-        <r>soutenu<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>konstanta<s n="adj"/></l> 
-        <r>soutenu<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>konstanta<s n="adj"/></l> 
-        <r>soutenu<s n="adj"/><s n="GD"/></r> 
+        <r>soutenu<s n="adj"/></r> 
       </p>
     </e>
 
@@ -44137,34 +42218,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>kontinenta<s n="adj"/></l> 
-        <r>continental<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kontinenta<s n="adj"/></l> 
-        <r>continental<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kontinenta<s n="adj"/></l> 
-        <r>continental<s n="adj"/><s n="GD"/></r> 
+        <r>continental<s n="adj"/></r> 
       </p>
     </e>
 
@@ -44313,7 +42372,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -44401,34 +42460,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>kontraŭleĝa<s n="adj"/></l> 
-        <r>illégal<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kontraŭleĝa<s n="adj"/></l> 
-        <r>illégal<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kontraŭleĝa<s n="adj"/></l> 
-        <r>illégal<s n="adj"/><s n="f"/></r> 
+        <r>illégal<s n="adj"/></r> 
       </p>
     </e>
 
@@ -44654,56 +42691,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>konvinka<s n="adj"/></l> 
-        <r>convaincant<s n="adj"/><s n="GD"/></r> 
+        <r>convaincant<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLm
     -->
     <e>
       <p>
         <l>konvinka<s n="adj"/></l> 
-        <r>convaincant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>konvinka<s n="adj"/></l> 
-        <r>convaincant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>konvinka<s n="adj"/></l> 
-        <r>probant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>konvinka<s n="adj"/></l> 
-        <r>probant<s n="adj"/><s n="f"/></r> 
+        <r>probant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -44786,34 +42790,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>kora<s n="adj"/></l> 
-        <r>cordial<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kora<s n="adj"/></l> 
-        <r>cordial<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kora<s n="adj"/></l> 
-        <r>cordial<s n="adj"/><s n="f"/></r> 
+        <r>cordial<s n="adj"/></r> 
       </p>
     </e>
 
@@ -45457,56 +43439,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>kreskanta<s n="adj"/></l> 
-        <r>croissant<s n="adj"/><s n="GD"/></r> 
+        <r>croissant<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLm
     -->
     <e>
       <p>
         <l>kreskanta<s n="adj"/></l> 
-        <r>croissant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kreskanta<s n="adj"/></l> 
-        <r>croissant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kreskanta<s n="adj"/></l> 
-        <r>grandissant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kreskanta<s n="adj"/></l> 
-        <r>grandissant<s n="adj"/><s n="f"/></r> 
+        <r>grandissant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -45611,34 +43560,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>kriminala<s n="adj"/></l> 
-        <r>criminel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kriminala<s n="adj"/></l> 
-        <r>criminel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kriminala<s n="adj"/></l> 
-        <r>criminel<s n="adj"/><s n="f"/></r> 
+        <r>criminel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -45952,7 +43879,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -46084,34 +44011,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>kruela<s n="adj"/></l> 
-        <r>cruel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kruela<s n="adj"/></l> 
-        <r>cruel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kruela<s n="adj"/></l> 
-        <r>cruel<s n="adj"/><s n="f"/></r> 
+        <r>cruel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -46359,34 +44264,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>kultura<s n="adj"/></l> 
-        <r>culturel<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kultura<s n="adj"/></l> 
-        <r>culturel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>kultura<s n="adj"/></l> 
-        <r>culturel<s n="adj"/><s n="GD"/></r> 
+        <r>culturel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -46865,12 +44748,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>kuraĝa<s n="adj"/></l> 
-        <r>courageux<s n="adj"/><s n="f"/></r> 
+        <r>courageux<s n="adj"/></r> 
       </p>
     </e>
 
@@ -47349,7 +45232,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -47371,7 +45254,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -47514,7 +45397,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -47525,7 +45408,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -48053,7 +45936,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -48097,7 +45980,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -48317,34 +46200,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>laŭgrada<s n="adj"/></l> 
-        <r>graduel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>laŭgrada<s n="adj"/></l> 
-        <r>graduel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>laŭgrada<s n="adj"/></l> 
-        <r>graduel<s n="adj"/><s n="f"/></r> 
+        <r>graduel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -48427,34 +46288,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>laŭteksta<s n="adj"/></l> 
-        <r>textuel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>laŭteksta<s n="adj"/></l> 
-        <r>textuel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>laŭteksta<s n="adj"/></l> 
-        <r>textuel<s n="adj"/><s n="f"/></r> 
+        <r>textuel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -48471,67 +46310,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>laŭvola<s n="adj"/></l> 
-        <r>optionnel<s n="adj"/><s n="GD"/></r> 
+        <r>optionnel<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>laŭvola<s n="adj"/></l> 
-        <r>optionnel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>laŭvola<s n="adj"/></l> 
-        <r>optionnel<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>laŭvorta<s n="adj"/></l> 
-        <r>littéral<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>laŭvorta<s n="adj"/></l> 
-        <r>littéral<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>laŭvorta<s n="adj"/></l> 
-        <r>littéral<s n="adj"/><s n="f"/></r> 
+        <r>littéral<s n="adj"/></r> 
       </p>
     </e>
 
@@ -49076,34 +46871,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>leĝa<s n="adj"/></l> 
-        <r>légal<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>leĝa<s n="adj"/></l> 
-        <r>légal<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>leĝa<s n="adj"/></l> 
-        <r>légal<s n="adj"/><s n="f"/></r> 
+        <r>légal<s n="adj"/></r> 
       </p>
     </e>
 
@@ -49340,67 +47113,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>libera<s n="adj"/></l> 
-        <r>vacant<s n="adj"/><s n="GD"/></r> 
+        <r>vacant<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>libera<s n="adj"/></l> 
-        <r>vacant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>libera<s n="adj"/></l> 
-        <r>vacant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>liberala<s n="adj"/></l> 
-        <r>libéral<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>liberala<s n="adj"/></l> 
-        <r>libéral<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>liberala<s n="adj"/></l> 
-        <r>libéral<s n="adj"/><s n="GD"/></r> 
+        <r>libéral<s n="adj"/></r> 
       </p>
     </e>
 
@@ -49648,7 +47377,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -49791,7 +47520,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -49901,7 +47630,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -50055,7 +47784,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -50539,7 +48268,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -50902,7 +48631,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -50957,7 +48686,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -51012,7 +48741,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -51067,7 +48796,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -51177,7 +48906,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -51254,7 +48983,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -51595,7 +49324,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRf
     -->
     <e>
       <p>
@@ -51606,7 +49335,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -51617,7 +49346,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -52002,12 +49731,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>malgrava<s n="adj"/></l> 
-        <r>léger<s n="adj"/><s n="GD"/></r> 
+        <r>léger<s n="adj"/></r> 
       </p>
     </e>
 
@@ -52156,7 +49885,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -52189,7 +49918,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -52244,34 +49973,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>malklera<s n="adj"/></l> 
-        <r>ignorant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>malklera<s n="adj"/></l> 
-        <r>ignorant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>malklera<s n="adj"/></l> 
-        <r>ignorant<s n="adj"/><s n="f"/></r> 
+        <r>ignorant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -52365,45 +50072,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLm
     -->
     <e>
       <p>
         <l>malkonvena<s n="adj"/></l> 
-        <r>non<b/>fondé<s n="adj"/><s n="m"/></r> 
+        <r>non<b/>fondé<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>malkonvena<s n="adj"/></l> 
-        <r>non<b/>fondé<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e alt="eco">
-      <p>
-        <l>malkonvena<s n="adj"/></l> 
-        <r>non<b/>fondé<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e alt="std">
       <p>
         <l>malkonvena<s n="adj"/></l> 
-        <r>inconvenant<s n="adj"/><s n="GD"/></r> 
+        <r>inconvenant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -52464,34 +50149,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>mallerta<s n="adj"/></l> 
-        <r>maladroit<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>mallerta<s n="adj"/></l> 
-        <r>maladroit<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>mallerta<s n="adj"/></l> 
-        <r>maladroit<s n="adj"/><s n="f"/></r> 
+        <r>maladroit<s n="adj"/></r> 
       </p>
     </e>
 
@@ -52541,67 +50204,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>mallojala<s n="adj"/></l> 
-        <r>déloyal<s n="adj"/><s n="GD"/></r> 
+        <r>déloyal<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>mallojala<s n="adj"/></l> 
-        <r>déloyal<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>mallojala<s n="adj"/></l> 
-        <r>déloyal<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>mallonga<s n="adj"/></l> 
-        <r>bref<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>mallonga<s n="adj"/></l> 
-        <r>bref<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>mallonga<s n="adj"/></l> 
-        <r>bref<s n="adj"/><s n="GD"/></r> 
+        <r>bref<s n="adj"/></r> 
       </p>
     </e>
 
@@ -52728,7 +50347,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -52805,7 +50424,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRm
     -->
     <e>
       <p>
@@ -52904,7 +50523,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -53014,67 +50633,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>malprofunda<s n="adj"/></l> 
-        <r>superficiel<s n="adj"/><s n="GD"/></r> 
+        <r>superficiel<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>malprofunda<s n="adj"/></l> 
-        <r>superficiel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>malprofunda<s n="adj"/></l> 
-        <r>superficiel<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>malproksima<s n="adj"/></l> 
-        <r>distant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>malproksima<s n="adj"/></l> 
-        <r>distant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>malproksima<s n="adj"/></l> 
-        <r>distant<s n="adj"/><s n="f"/></r> 
+        <r>distant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -53157,7 +50732,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRf
     -->
     <e>
       <p>
@@ -53212,34 +50787,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>malregula<s n="adj"/></l> 
-        <r>irrégulier<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>malregula<s n="adj"/></l> 
-        <r>irrégulier<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>malregula<s n="adj"/></l> 
-        <r>irrégulier<s n="adj"/><s n="f"/></r> 
+        <r>irrégulier<s n="adj"/></r> 
       </p>
     </e>
 
@@ -53300,51 +50853,18 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>malsama<s n="adj"/></l> 
-        <r>différent<s n="adj"/><s n="f"/></r> 
+        <r>distinct<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>malsama<s n="adj"/></l> 
-        <r>différent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>malsama<s n="adj"/></l> 
-        <r>distinct<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>malsama<s n="adj"/></l> 
-        <r>distinct<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -53443,34 +50963,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>malsupera<s n="adj"/></l> 
-        <r>inférieur<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>malsupera<s n="adj"/></l> 
-        <r>inférieur<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>malsupera<s n="adj"/></l> 
-        <r>inférieur<s n="adj"/><s n="f"/></r> 
+        <r>inférieur<s n="adj"/></r> 
       </p>
     </e>
 
@@ -53520,7 +51018,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e c="new-category">
       <p>
@@ -53806,40 +51304,18 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>malĉasta<s n="adj"/></l> 
-        <r>sensuel<s n="adj"/><s n="GD"/></r> 
+        <r>sensuel<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>malĉasta<s n="adj"/></l> 
-        <r>sensuel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>malĉasta<s n="adj"/></l> 
-        <r>sensuel<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -54323,7 +51799,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -54631,34 +52107,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>maroka<s n="adj"/></l> 
-        <r>marocain<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>maroka<s n="adj"/></l> 
-        <r>marocain<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>maroka<s n="adj"/></l> 
-        <r>marocain<s n="adj"/><s n="f"/></r> 
+        <r>marocain<s n="adj"/></r> 
       </p>
     </e>
 
@@ -55005,7 +52459,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRf
     -->
     <e>
       <p>
@@ -55038,34 +52492,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>matena<s n="adj"/></l> 
-        <r>matinal<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>matena<s n="adj"/></l> 
-        <r>matinal<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>matena<s n="adj"/></l> 
-        <r>matinal<s n="adj"/><s n="GD"/></r> 
+        <r>matinal<s n="adj"/></r> 
       </p>
     </e>
 
@@ -55357,34 +52789,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>media<s n="adj"/></l> 
-        <r>environnemental<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>media<s n="adj"/></l> 
-        <r>environnemental<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>media<s n="adj"/></l> 
-        <r>environnemental<s n="adj"/><s n="f"/></r> 
+        <r>environnemental<s n="adj"/></r> 
       </p>
     </e>
 
@@ -55764,34 +53174,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>mensa<s n="adj"/></l> 
-        <r>mental<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>mensa<s n="adj"/></l> 
-        <r>mental<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>mensa<s n="adj"/></l> 
-        <r>mental<s n="adj"/><s n="GD"/></r> 
+        <r>mental<s n="adj"/></r> 
       </p>
     </e>
 
@@ -56182,34 +53570,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>mezepoka<s n="adj"/></l> 
-        <r>médiéval<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>mezepoka<s n="adj"/></l> 
-        <r>médiéval<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>mezepoka<s n="adj"/></l> 
-        <r>médiéval<s n="adj"/><s n="f"/></r> 
+        <r>médiéval<s n="adj"/></r> 
       </p>
     </e>
 
@@ -56391,34 +53757,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>migra<s n="adj"/></l> 
-        <r>errant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>migra<s n="adj"/></l> 
-        <r>errant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>migra<s n="adj"/></l> 
-        <r>errant<s n="adj"/><s n="GD"/></r> 
+        <r>errant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -56523,7 +53867,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -56567,7 +53911,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -56578,34 +53922,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>milda<s n="adj"/></l> 
-        <r>doux<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>milda<s n="adj"/></l> 
-        <r>doux<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>milda<s n="adj"/></l> 
-        <r>doux<s n="adj"/><s n="GD"/></r> 
+        <r>doux<s n="adj"/></r> 
       </p>
     </e>
 
@@ -56798,7 +54120,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -57007,12 +54329,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>mirinda<s n="adj"/></l> 
-        <r>étonnant<s n="adj"/><s n="GD"/></r> 
+        <r>étonnant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -57315,7 +54637,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -57326,7 +54648,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -57403,7 +54725,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e c="new-category">
       <p>
@@ -57414,7 +54736,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -57502,34 +54824,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>monata<s n="adj"/></l> 
-        <r>mensuel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>monata<s n="adj"/></l> 
-        <r>mensuel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>monata<s n="adj"/></l> 
-        <r>mensuel<s n="adj"/><s n="f"/></r> 
+        <r>mensuel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -57579,34 +54879,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>monda<s n="adj"/></l> 
-        <r>mondial<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>monda<s n="adj"/></l> 
-        <r>mondial<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>monda<s n="adj"/></l> 
-        <r>mondial<s n="adj"/><s n="GD"/></r> 
+        <r>mondial<s n="adj"/></r> 
       </p>
     </e>
 
@@ -57700,7 +54978,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -57898,34 +55176,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>monumenta<s n="adj"/></l> 
-        <r>monumental<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>monumenta<s n="adj"/></l> 
-        <r>monumental<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>monumenta<s n="adj"/></l> 
-        <r>monumental<s n="adj"/><s n="f"/></r> 
+        <r>monumental<s n="adj"/></r> 
       </p>
     </e>
 
@@ -57953,34 +55209,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>morala<s n="adj"/></l> 
-        <r>moral<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>morala<s n="adj"/></l> 
-        <r>moral<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>morala<s n="adj"/></l> 
-        <r>moral<s n="adj"/><s n="GD"/></r> 
+        <r>moral<s n="adj"/></r> 
       </p>
     </e>
 
@@ -58041,34 +55275,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>mortiga<s n="adj"/></l> 
-        <r>létal<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>mortiga<s n="adj"/></l> 
-        <r>létal<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>mortiga<s n="adj"/></l> 
-        <r>létal<s n="adj"/><s n="f"/></r> 
+        <r>létal<s n="adj"/></r> 
       </p>
     </e>
 
@@ -58646,34 +55858,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>muzika<s n="adj"/></l> 
-        <r>musical<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>muzika<s n="adj"/></l> 
-        <r>musical<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>muzika<s n="adj"/></l> 
-        <r>musical<s n="adj"/><s n="f"/></r> 
+        <r>musical<s n="adj"/></r> 
       </p>
     </e>
 
@@ -58734,34 +55924,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>nacia<s n="adj"/></l> 
-        <r>national<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>nacia<s n="adj"/></l> 
-        <r>national<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>nacia<s n="adj"/></l> 
-        <r>national<s n="adj"/><s n="GD"/></r> 
+        <r>national<s n="adj"/></r> 
       </p>
     </e>
 
@@ -58866,7 +56034,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -59229,7 +56397,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -59240,7 +56408,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -59361,34 +56529,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>necedema<s n="adj"/></l> 
-        <r>intransigeant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>necedema<s n="adj"/></l> 
-        <r>intransigeant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>necedema<s n="adj"/></l> 
-        <r>intransigeant<s n="adj"/><s n="f"/></r> 
+        <r>intransigeant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -59405,7 +56551,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -59548,34 +56694,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>nediskutebla<s n="adj"/></l> 
-        <r>incontesté<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>nediskutebla<s n="adj"/></l> 
-        <r>incontesté<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>nediskutebla<s n="adj"/></l> 
-        <r>incontesté<s n="adj"/><s n="f"/></r> 
+        <r>incontesté<s n="adj"/></r> 
       </p>
     </e>
 
@@ -59625,34 +56749,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>neegala<s n="adj"/></l> 
-        <r>inégal<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>neegala<s n="adj"/></l> 
-        <r>inégal<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>neegala<s n="adj"/></l> 
-        <r>inégal<s n="adj"/><s n="GD"/></r> 
+        <r>inégal<s n="adj"/></r> 
       </p>
     </e>
 
@@ -59724,7 +56826,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -59889,34 +56991,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>nekompetenta<s n="adj"/></l> 
-        <r>incompétent<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>nekompetenta<s n="adj"/></l> 
-        <r>incompétent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>nekompetenta<s n="adj"/></l> 
-        <r>incompétent<s n="adj"/><s n="f"/></r> 
+        <r>incompétent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -59988,34 +57068,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>nekredebla<s n="adj"/></l> 
-        <r>stupéfiant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>nekredebla<s n="adj"/></l> 
-        <r>stupéfiant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>nekredebla<s n="adj"/></l> 
-        <r>stupéfiant<s n="adj"/><s n="f"/></r> 
+        <r>stupéfiant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -60054,7 +57112,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -60065,7 +57123,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -60318,34 +57376,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>nereala<s n="adj"/></l> 
-        <r>irréel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>nereala<s n="adj"/></l> 
-        <r>irréel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>nereala<s n="adj"/></l> 
-        <r>irréel<s n="adj"/><s n="f"/></r> 
+        <r>irréel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -60483,7 +57519,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -60527,34 +57563,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>nesufiĉa<s n="adj"/></l> 
-        <r>insuffisant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>nesufiĉa<s n="adj"/></l> 
-        <r>insuffisant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>nesufiĉa<s n="adj"/></l> 
-        <r>insuffisant<s n="adj"/><s n="GD"/></r> 
+        <r>insuffisant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -60593,34 +57607,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>netolerema<s n="adj"/></l> 
-        <r>intolérant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>netolerema<s n="adj"/></l> 
-        <r>intolérant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>netolerema<s n="adj"/></l> 
-        <r>intolérant<s n="adj"/><s n="f"/></r> 
+        <r>intolérant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -60736,7 +57728,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -60912,7 +57904,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -60923,34 +57915,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>nominala<s n="adj"/></l> 
-        <r>nominal<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>nominala<s n="adj"/></l> 
-        <r>nominal<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>nominala<s n="adj"/></l> 
-        <r>nominal<s n="adj"/><s n="m"/></r> 
+        <r>nominal<s n="adj"/></r> 
       </p>
     </e>
 
@@ -61033,34 +58003,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>normala<s n="adj"/></l> 
-        <r>normal<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>normala<s n="adj"/></l> 
-        <r>normal<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>normala<s n="adj"/></l> 
-        <r>normal<s n="adj"/><s n="GD"/></r> 
+        <r>normal<s n="adj"/></r> 
       </p>
     </e>
 
@@ -61154,34 +58102,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>notaria<s n="adj"/></l> 
-        <r>notarial<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>notaria<s n="adj"/></l> 
-        <r>notarial<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>notaria<s n="adj"/></l> 
-        <r>notarial<s n="adj"/><s n="f"/></r> 
+        <r>notarial<s n="adj"/></r> 
       </p>
     </e>
 
@@ -61671,7 +58597,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -61792,34 +58718,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>obeema<s n="adj"/></l> 
-        <r>obéissant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>obeema<s n="adj"/></l> 
-        <r>obéissant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>obeema<s n="adj"/></l> 
-        <r>obéissant<s n="adj"/><s n="GD"/></r> 
+        <r>obéissant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -61847,34 +58751,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>objektiva<s n="adj"/></l> 
-        <r>impartial<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>objektiva<s n="adj"/></l> 
-        <r>impartial<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>objektiva<s n="adj"/></l> 
-        <r>impartial<s n="adj"/><s n="f"/></r> 
+        <r>impartial<s n="adj"/></r> 
       </p>
     </e>
 
@@ -62133,34 +59015,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>oficiala<s n="adj"/></l> 
-        <r>officiel<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>oficiala<s n="adj"/></l> 
-        <r>officiel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>oficiala<s n="adj"/></l> 
-        <r>officiel<s n="adj"/><s n="GD"/></r> 
+        <r>officiel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -62221,34 +59081,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>ofta<s n="adj"/></l> 
-        <r>fréquent<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ofta<s n="adj"/></l> 
-        <r>fréquent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ofta<s n="adj"/></l> 
-        <r>fréquent<s n="adj"/><s n="f"/></r> 
+        <r>fréquent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -62298,7 +59136,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -62375,34 +59213,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>okcidenta<s n="adj"/></l> 
-        <r>occidental<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>okcidenta<s n="adj"/></l> 
-        <r>occidental<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>okcidenta<s n="adj"/></l> 
-        <r>occidental<s n="adj"/><s n="GD"/></r> 
+        <r>occidental<s n="adj"/></r> 
       </p>
     </e>
 
@@ -62551,7 +59367,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -62804,7 +59620,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -62859,7 +59675,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -62991,40 +59807,18 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>ordinara<s n="adj"/></l> 
-        <r>habituel<s n="adj"/><s n="f"/></r> 
+        <r>habituel<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ordinara<s n="adj"/></l> 
-        <r>habituel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ordinara<s n="adj"/></l> 
-        <r>habituel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -63233,34 +60027,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>orienta<s n="adj"/></l> 
-        <r>oriental<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>orienta<s n="adj"/></l> 
-        <r>oriental<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>orienta<s n="adj"/></l> 
-        <r>oriental<s n="adj"/><s n="GD"/></r> 
+        <r>oriental<s n="adj"/></r> 
       </p>
     </e>
 
@@ -63332,34 +60104,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>originala<s n="adj"/></l> 
-        <r>original<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>originala<s n="adj"/></l> 
-        <r>original<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>originala<s n="adj"/></l> 
-        <r>original<s n="adj"/><s n="GD"/></r> 
+        <r>original<s n="adj"/></r> 
       </p>
     </e>
 
@@ -63585,7 +60335,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -63596,34 +60346,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>pacienca<s n="adj"/></l> 
-        <r>patient<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>pacienca<s n="adj"/></l> 
-        <r>patient<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>pacienca<s n="adj"/></l> 
-        <r>patient<s n="adj"/><s n="f"/></r> 
+        <r>patient<s n="adj"/></r> 
       </p>
     </e>
 
@@ -63816,7 +60544,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -64014,7 +60742,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -64025,7 +60753,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -64421,7 +61149,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -64696,7 +61424,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e c="new-category">
       <p>
@@ -64773,67 +61501,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>parola<s n="adj"/></l> 
-        <r>oral<s n="adj"/><s n="GD"/></r> 
+        <r>oral<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>parola<s n="adj"/></l> 
-        <r>oral<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>parola<s n="adj"/></l> 
-        <r>oral<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>parola<s n="adj"/></l> 
-        <r>verbal<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>parola<s n="adj"/></l> 
-        <r>verbal<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>parola<s n="adj"/></l> 
-        <r>verbal<s n="adj"/><s n="GD"/></r> 
+        <r>verbal<s n="adj"/></r> 
       </p>
     </e>
 
@@ -65202,7 +61886,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -65235,40 +61919,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>patrina<s n="adj"/></l> 
-        <r>maternel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>patrina<s n="adj"/></l> 
-        <r>maternel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>patrina<s n="adj"/></l> 
-        <r>maternel<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      adj
+      adjmf-LR
     -->
     <e>
       <p>
@@ -65906,7 +62557,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -66291,34 +62942,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>permanenta<s n="adj"/></l> 
-        <r>permanent<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>permanenta<s n="adj"/></l> 
-        <r>permanent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>permanenta<s n="adj"/></l> 
-        <r>permanent<s n="adj"/><s n="GD"/></r> 
+        <r>permanent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -66379,7 +63008,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -66390,34 +63019,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>persa<s n="adj"/></l> 
-        <r>persan<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>persa<s n="adj"/></l> 
-        <r>persan<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>persa<s n="adj"/></l> 
-        <r>persan<s n="adj"/><s n="GD"/></r> 
+        <r>persan<s n="adj"/></r> 
       </p>
     </e>
 
@@ -66533,34 +63140,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>persona<s n="adj"/></l> 
-        <r>personnel<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>persona<s n="adj"/></l> 
-        <r>personnel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>persona<s n="adj"/></l> 
-        <r>personnel<s n="adj"/><s n="GD"/></r> 
+        <r>personnel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -67006,45 +63591,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>pika<s n="adj"/></l> 
-        <r>piquant<s n="adj"/><s n="GD"/></r> 
+        <r>piquant<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>pika<s n="adj"/></l> 
-        <r>piquant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>pika<s n="adj"/></l> 
-        <r>piquant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>pikanta<s n="adj"/></l> 
-        <r>piquant<s n="adj"/><s n="GD"/></r> 
+        <r>piquant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -67402,7 +63965,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -67435,7 +63998,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -67688,7 +64251,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -67699,7 +64262,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -67754,89 +64317,34 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>plej<b/>bona><s n="adj"/></l> 
-        <r>meilleur<s n="adj"/><s n="f"/></r> 
+        <r>meilleur<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>plej<b/>bona><s n="adj"/></l> 
-        <r>meilleur<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>plej<b/>bona><s n="adj"/></l> 
-        <r>meilleur<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>plej<b/>granda<s n="adj"/></l> 
-        <r>majeur<s n="adj"/><s n="f"/></r> 
+        <r>majeur<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>plej<b/>granda<s n="adj"/></l> 
-        <r>majeur<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>plej<b/>granda<s n="adj"/></l> 
-        <r>âgé<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>plej<b/>granda<s n="adj"/></l> 
-        <r>âgé<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>plej<b/>granda<s n="adj"/></l> 
-        <r>majeur<s n="adj"/><s n="GD"/></r> 
+        <r>âgé<s n="adj"/></r> 
       </p>
     </e>
 
@@ -67886,7 +64394,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -68062,34 +64570,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>pli bona<s n="adj"/></l> 
-        <r>meilleur<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>pli bona<s n="adj"/></l> 
-        <r>meilleur<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>pli bona<s n="adj"/></l> 
-        <r>meilleur<s n="adj"/><s n="GD"/></r> 
+        <r>meilleur<s n="adj"/></r> 
       </p>
     </e>
 
@@ -68106,34 +64592,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>plia<s n="adj"/></l> 
-        <r>additionnel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>plia<s n="adj"/></l> 
-        <r>additionnel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>plia<s n="adj"/></l> 
-        <r>additionnel<s n="adj"/><s n="f"/></r> 
+        <r>additionnel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -68777,7 +65241,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -68942,7 +65406,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -69800,7 +66264,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -69822,34 +66286,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>postulema<s n="adj"/></l> 
-        <r>exigeant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>postulema<s n="adj"/></l> 
-        <r>exigeant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>postulema<s n="adj"/></l> 
-        <r>exigeant<s n="adj"/><s n="f"/></r> 
+        <r>exigeant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -70152,7 +66594,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -71153,34 +67595,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>pritraktata<s n="adj"/></l> 
-        <r>pendant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>pritraktata<s n="adj"/></l> 
-        <r>pendant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>pritraktata<s n="adj"/></l> 
-        <r>pendant<s n="adj"/><s n="GD"/></r> 
+        <r>pendant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -71538,34 +67958,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>profesia<s n="adj"/></l> 
-        <r>professionnel<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>profesia<s n="adj"/></l> 
-        <r>professionnel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>profesia<s n="adj"/></l> 
-        <r>professionnel<s n="adj"/><s n="GD"/></r> 
+        <r>professionnel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -71604,7 +68002,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -71956,7 +68354,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -72297,40 +68695,18 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>propra<s n="adj"/></l> 
-        <r>inhérent<s n="adj"/><s n="GD"/></r> 
+        <r>inhérent<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>propra<s n="adj"/></l> 
-        <r>inhérent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>propra<s n="adj"/></l> 
-        <r>inhérent<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -72407,7 +68783,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -72517,34 +68893,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>protestanta<s n="adj"/></l> 
-        <r>protestant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>protestanta<s n="adj"/></l> 
-        <r>protestant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>protestanta<s n="adj"/></l> 
-        <r>protestant<s n="adj"/><s n="f"/></r> 
+        <r>protestant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -73045,7 +69399,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -73078,7 +69432,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -73573,34 +69927,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>racia<s n="adj"/></l> 
-        <r>rationnel<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>racia<s n="adj"/></l> 
-        <r>rationnel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>racia<s n="adj"/></l> 
-        <r>rationnel<s n="adj"/><s n="GD"/></r> 
+        <r>rationnel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -73650,34 +69982,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>radikala<s n="adj"/></l> 
-        <r>radical<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>radikala<s n="adj"/></l> 
-        <r>radical<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>radikala<s n="adj"/></l> 
-        <r>radical<s n="adj"/><s n="f"/></r> 
+        <r>radical<s n="adj"/></r> 
       </p>
     </e>
 
@@ -74035,7 +70345,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -74167,34 +70477,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>rasa<s n="adj"/></l> 
-        <r>racial<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>rasa<s n="adj"/></l> 
-        <r>racial<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>rasa<s n="adj"/></l> 
-        <r>racial<s n="adj"/><s n="f"/></r> 
+        <r>racial<s n="adj"/></r> 
       </p>
     </e>
 
@@ -74409,56 +70697,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>reala<s n="adj"/></l> 
-        <r>réel<s n="adj"/><s n="f"/></r> 
+        <r>réel<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>reala<s n="adj"/></l> 
-        <r>réel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>reala<s n="adj"/></l> 
-        <r>réel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>reala<s n="adj"/></l> 
-        <r>royal<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>reala<s n="adj"/></l> 
-        <r>royal<s n="adj"/><s n="m"/></r> 
+        <r>royal<s n="adj"/></r> 
       </p>
     </e>
 
@@ -74596,7 +70851,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -74937,34 +71192,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>registara<s n="adj"/></l> 
-        <r>gouvernemental<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>registara<s n="adj"/></l> 
-        <r>gouvernemental<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>registara<s n="adj"/></l> 
-        <r>gouvernemental<s n="adj"/><s n="GD"/></r> 
+        <r>gouvernemental<s n="adj"/></r> 
       </p>
     </e>
 
@@ -75949,34 +72182,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>responda<s n="adj"/></l> 
-        <r>correspondant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>responda<s n="adj"/></l> 
-        <r>correspondant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>responda<s n="adj"/></l> 
-        <r>correspondant<s n="adj"/><s n="f"/></r> 
+        <r>correspondant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -76895,34 +73106,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>ridetanta<s n="adj"/></l> 
-        <r>souriant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ridetanta<s n="adj"/></l> 
-        <r>souriant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ridetanta<s n="adj"/></l> 
-        <r>souriant<s n="adj"/><s n="f"/></r> 
+        <r>souriant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -76972,7 +73161,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -77049,7 +73238,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -77500,7 +73689,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -77654,7 +73843,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -77929,7 +74118,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -78039,7 +74228,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e c="new-category">
       <p>
@@ -78050,7 +74239,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -78083,7 +74272,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -78468,7 +74657,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -78666,7 +74855,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -78897,7 +75086,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -79238,34 +75427,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>seksa<s n="adj"/></l> 
-        <r>sexuel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>seksa<s n="adj"/></l> 
-        <r>sexuel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>seksa<s n="adj"/></l> 
-        <r>sexuel<s n="adj"/><s n="f"/></r> 
+        <r>sexuel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -79359,34 +75526,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>sekva<s n="adj"/></l> 
-        <r>suivant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>sekva<s n="adj"/></l> 
-        <r>suivant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>sekva<s n="adj"/></l> 
-        <r>suivant<s n="adj"/><s n="GD"/></r> 
+        <r>suivant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -79403,12 +75548,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>sekvanta<s n="adj"/></l> 
-        <r>suivant<s n="adj"/><s n="GD"/></r> 
+        <r>suivant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -79601,34 +75746,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>semestra<s n="adj"/></l> 
-        <r>semestriel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>semestra<s n="adj"/></l> 
-        <r>semestriel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>semestra<s n="adj"/></l> 
-        <r>semestriel<s n="adj"/><s n="f"/></r> 
+        <r>semestriel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -79744,34 +75867,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>sendependa<s n="adj"/></l> 
-        <r>indépendant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>sendependa<s n="adj"/></l> 
-        <r>indépendant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>sendependa<s n="adj"/></l> 
-        <r>indépendant<s n="adj"/><s n="GD"/></r> 
+        <r>indépendant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -79931,7 +76032,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -79953,34 +76054,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>senefika<s n="adj"/></l> 
-        <r>inopérant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>senefika<s n="adj"/></l> 
-        <r>inopérant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>senefika<s n="adj"/></l> 
-        <r>inopérant<s n="adj"/><s n="f"/></r> 
+        <r>inopérant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -80118,34 +76197,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>senkonsidera<s n="adj"/></l> 
-        <r>informel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>senkonsidera<s n="adj"/></l> 
-        <r>informel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>senkonsidera<s n="adj"/></l> 
-        <r>informel<s n="adj"/><s n="f"/></r> 
+        <r>informel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -80162,34 +76219,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>senkulpa<s n="adj"/></l> 
-        <r>innocent<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>senkulpa<s n="adj"/></l> 
-        <r>innocent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>senkulpa<s n="adj"/></l> 
-        <r>innocent<s n="adj"/><s n="GD"/></r> 
+        <r>innocent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -80294,34 +76329,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>senmorta<s n="adj"/></l> 
-        <r>immortel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>senmorta<s n="adj"/></l> 
-        <r>immortel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>senmorta<s n="adj"/></l> 
-        <r>immortel<s n="adj"/><s n="f"/></r> 
+        <r>immortel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -80459,34 +76472,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>senpuna<s n="adj"/></l> 
-        <r>impuni<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>senpuna<s n="adj"/></l> 
-        <r>impuni<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>senpuna<s n="adj"/></l> 
-        <r>impuni<s n="adj"/><s n="f"/></r> 
+        <r>impuni<s n="adj"/></r> 
       </p>
     </e>
 
@@ -80525,34 +76516,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>senrezerva<s n="adj"/></l> 
-        <r>inconditionnel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>senrezerva<s n="adj"/></l> 
-        <r>inconditionnel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>senrezerva<s n="adj"/></l> 
-        <r>inconditionnel<s n="adj"/><s n="f"/></r> 
+        <r>inconditionnel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -80591,34 +76560,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>sensprita<s n="adj"/></l> 
-        <r>banal<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>sensprita<s n="adj"/></l> 
-        <r>banal<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>sensprita<s n="adj"/></l> 
-        <r>banal<s n="adj"/><s n="f"/></r> 
+        <r>banal<s n="adj"/></r> 
       </p>
     </e>
 
@@ -80668,34 +76615,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>sentimentala<s n="adj"/></l> 
-        <r>sentimental<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>sentimentala<s n="adj"/></l> 
-        <r>sentimental<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>sentimentala<s n="adj"/></l> 
-        <r>sentimental<s n="adj"/><s n="f"/></r> 
+        <r>sentimental<s n="adj"/></r> 
       </p>
     </e>
 
@@ -80767,7 +76692,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRm
     -->
     <e>
       <p>
@@ -80778,34 +76703,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>senĉesa<s n="adj"/></l> 
-        <r>incessant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>senĉesa<s n="adj"/></l> 
-        <r>incessant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>senĉesa<s n="adj"/></l> 
-        <r>incessant<s n="adj"/><s n="GD"/></r> 
+        <r>incessant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -80822,7 +76725,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -81229,7 +77132,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -81240,7 +77143,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -81251,7 +77154,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -81482,7 +77385,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -81515,7 +77418,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -81526,7 +77429,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -81647,7 +77550,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRf
     -->
     <e>
       <p>
@@ -81757,7 +77660,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -81834,34 +77737,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>sindikata<s n="adj"/></l> 
-        <r>syndical<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>sindikata<s n="adj"/></l> 
-        <r>syndical<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>sindikata<s n="adj"/></l> 
-        <r>syndical<s n="adj"/><s n="f"/></r> 
+        <r>syndical<s n="adj"/></r> 
       </p>
     </e>
 
@@ -81911,23 +77792,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>singarda<s n="adj"/></l> 
-        <r>prudent<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>singarda<s n="adj"/></l> 
-        <r>prudent<s n="adj"/><s n="m"/></r> 
+        <r>prudent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -81939,17 +77809,6 @@
       <p>
         <l>singarda<s n="adj"/></l> 
         <r>sage<s n="adj"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>singarda<s n="adj"/></l> 
-        <r>prudent<s n="adj"/><s n="GD"/></r> 
       </p>
     </e>
 
@@ -81977,7 +77836,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -82109,7 +77968,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -82186,7 +78045,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -82329,7 +78188,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -82681,7 +78540,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -82692,45 +78551,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>socia<s n="adj"/></l> 
-        <r>social<s n="adj"/><s n="f"/></r> 
+        <r>social<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>socia<s n="adj"/></l> 
-        <r>social<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>socia<s n="adj"/></l> 
-        <r>social<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>sociala<s n="adj"/></l> 
-        <r>social<s n="adj"/><s n="GD"/></r> 
+        <r>social<s n="adj"/></r> 
       </p>
     </e>
 
@@ -82846,7 +78683,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -82879,34 +78716,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>solena<s n="adj"/></l> 
-        <r>solennel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>solena<s n="adj"/></l> 
-        <r>solennel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>solena<s n="adj"/></l> 
-        <r>solennel<s n="adj"/><s n="f"/></r> 
+        <r>solennel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -82934,7 +78749,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -82956,7 +78771,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -83044,7 +78859,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -83055,40 +78870,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>somera<s n="adj"/></l> 
-        <r>estival<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>somera<s n="adj"/></l> 
-        <r>estival<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>somera<s n="adj"/></l> 
-        <r>estival<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      adj
+      adjmf-LR
     -->
     <e>
       <p>
@@ -83308,7 +79090,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -83341,34 +79123,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>speciala<s n="adj"/></l> 
-        <r>spécial<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>speciala<s n="adj"/></l> 
-        <r>spécial<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>speciala<s n="adj"/></l> 
-        <r>spécial<s n="adj"/><s n="GD"/></r> 
+        <r>spécial<s n="adj"/></r> 
       </p>
     </e>
 
@@ -83594,23 +79354,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>spicega<s n="adj"/></l> 
-        <r>piquant<s n="adj"/><s n="GD"/></r> 
+        <r>piquant<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>spicita<s n="adj"/></l> 
-        <r>piquant<s n="adj"/><s n="GD"/></r> 
+        <r>piquant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -83682,7 +79442,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -83715,34 +79475,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>spirita<s n="adj"/></l> 
-        <r>spirituel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>spirita<s n="adj"/></l> 
-        <r>spirituel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>spirita<s n="adj"/></l> 
-        <r>spirituel<s n="adj"/><s n="f"/></r> 
+        <r>spirituel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -83770,7 +79508,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -83781,7 +79519,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -83847,34 +79585,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>sportema<s n="adj"/></l> 
-        <r>sportif<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>sportema<s n="adj"/></l> 
-        <r>sportif<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>sportema<s n="adj"/></l> 
-        <r>sportif<s n="adj"/><s n="f"/></r> 
+        <r>sportif<s n="adj"/></r> 
       </p>
     </e>
 
@@ -84430,7 +80146,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -84441,7 +80157,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -84771,7 +80487,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -84782,7 +80498,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -85211,34 +80927,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>subtila<s n="adj"/></l> 
-        <r>subtil<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>subtila<s n="adj"/></l> 
-        <r>subtil<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>subtila<s n="adj"/></l> 
-        <r>subtil<s n="adj"/><s n="f"/></r> 
+        <r>subtil<s n="adj"/></r> 
       </p>
     </e>
 
@@ -85310,7 +81004,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRm
     -->
     <e>
       <p>
@@ -85365,34 +81059,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>sufiĉa<s n="adj"/></l> 
-        <r>suffisant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>sufiĉa<s n="adj"/></l> 
-        <r>suffisant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>sufiĉa<s n="adj"/></l> 
-        <r>suffisant<s n="adj"/><s n="GD"/></r> 
+        <r>suffisant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -85651,40 +81323,18 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>supera<s n="adj"/></l> 
-        <r>supérieur<s n="adj"/><s n="f"/></r> 
+        <r>supérieur<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>supera<s n="adj"/></l> 
-        <r>supérieur<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>supera<s n="adj"/></l> 
-        <r>supérieur<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -85794,34 +81444,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>supermezura<s n="adj"/></l> 
-        <r>exorbitant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>supermezura<s n="adj"/></l> 
-        <r>exorbitant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>supermezura<s n="adj"/></l> 
-        <r>exorbitant<s n="adj"/><s n="f"/></r> 
+        <r>exorbitant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -85838,7 +81466,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -85871,7 +81499,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRm
     -->
     <e>
       <p>
@@ -86135,34 +81763,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>suspektema<s n="adj"/></l> 
-        <r>réticent<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>suspektema<s n="adj"/></l> 
-        <r>réticent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>suspektema<s n="adj"/></l> 
-        <r>réticent<s n="adj"/><s n="f"/></r> 
+        <r>réticent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -86366,7 +81972,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -86443,7 +82049,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -86916,34 +82522,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>teatra<s n="adj"/></l> 
-        <r>théâtral<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>teatra<s n="adj"/></l> 
-        <r>théâtral<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>teatra<s n="adj"/></l> 
-        <r>théâtral<s n="adj"/><s n="f"/></r> 
+        <r>théâtral<s n="adj"/></r> 
       </p>
     </e>
 
@@ -87048,7 +82632,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -87070,7 +82654,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -87136,7 +82720,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -87279,7 +82863,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -87521,7 +83105,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -87598,7 +83182,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -87752,7 +83336,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -87774,7 +83358,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRm
     -->
     <e>
       <p>
@@ -87862,34 +83446,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>tia<s n="adj"/></l> 
-        <r>local<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>tia<s n="adj"/></l> 
-        <r>local<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>tia<s n="adj"/></l> 
-        <r>local<s n="adj"/><s n="GD"/></r> 
+        <r>local<s n="adj"/></r> 
       </p>
     </e>
 
@@ -88115,7 +83677,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -88335,7 +83897,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -88918,34 +84480,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>tradicia<s n="adj"/></l> 
-        <r>traditionnel<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>tradicia<s n="adj"/></l> 
-        <r>traditionnel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>tradicia<s n="adj"/></l> 
-        <r>traditionnel<s n="adj"/><s n="GD"/></r> 
+        <r>traditionnel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -89094,7 +84634,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -89259,7 +84799,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -89270,7 +84810,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -89545,34 +85085,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>tranĉa<s n="adj"/></l> 
-        <r>coupant<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>tranĉa<s n="adj"/></l> 
-        <r>coupant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>tranĉa<s n="adj"/></l> 
-        <r>coupant<s n="adj"/><s n="GD"/></r> 
+        <r>coupant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -89721,34 +85239,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>travidebla<s n="adj"/></l> 
-        <r>transparent<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>travidebla<s n="adj"/></l> 
-        <r>transparent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>travidebla<s n="adj"/></l> 
-        <r>transparent<s n="adj"/><s n="f"/></r> 
+        <r>transparent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -89974,7 +85470,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -90051,7 +85547,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -90084,34 +85580,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>trimonata<s n="adj"/></l> 
-        <r>trimestriel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>trimonata<s n="adj"/></l> 
-        <r>trimestriel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>trimonata<s n="adj"/></l> 
-        <r>trimestriel<s n="adj"/><s n="f"/></r> 
+        <r>trimestriel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -90425,34 +85899,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>tropika<s n="adj"/></l> 
-        <r>tropical<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>tropika<s n="adj"/></l> 
-        <r>tropical<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>tropika<s n="adj"/></l> 
-        <r>tropical<s n="adj"/><s n="GD"/></r> 
+        <r>tropical<s n="adj"/></r> 
       </p>
     </e>
 
@@ -90689,34 +86141,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>tuja<s n="adj"/></l> 
-        <r>imminent<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>tuja<s n="adj"/></l> 
-        <r>imminent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>tuja<s n="adj"/></l> 
-        <r>imminent<s n="adj"/><s n="f"/></r> 
+        <r>imminent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -90942,34 +86372,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>tuta<s n="adj"/></l> 
-        <r>total<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>tuta<s n="adj"/></l> 
-        <r>total<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>tuta<s n="adj"/></l> 
-        <r>total<s n="adj"/><s n="GD"/></r> 
+        <r>total<s n="adj"/></r> 
       </p>
     </e>
 
@@ -91085,34 +86493,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>umbilika<s n="adj"/></l> 
-        <r>ombilical<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>umbilika<s n="adj"/></l> 
-        <r>ombilical<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>umbilika<s n="adj"/></l> 
-        <r>ombilical<s n="adj"/><s n="f"/></r> 
+        <r>ombilical<s n="adj"/></r> 
       </p>
     </e>
 
@@ -91162,34 +86548,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>universala<s n="adj"/></l> 
-        <r>universel<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>universala<s n="adj"/></l> 
-        <r>universel<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>universala<s n="adj"/></l> 
-        <r>universel<s n="adj"/><s n="f"/></r> 
+        <r>universel<s n="adj"/></r> 
       </p>
     </e>
 
@@ -91294,34 +86658,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>unuflanka<s n="adj"/></l> 
-        <r>unilatéral<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>unuflanka<s n="adj"/></l> 
-        <r>unilatéral<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>unuflanka<s n="adj"/></l> 
-        <r>unilatéral<s n="adj"/><s n="f"/></r> 
+        <r>unilatéral<s n="adj"/></r> 
       </p>
     </e>
 
@@ -91338,34 +86680,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLm
     -->
     <e>
       <p>
         <l>unuforma<s n="adj"/></l> 
-        <r>régulier<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>unuforma<s n="adj"/></l> 
-        <r>régulier<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>unuforma<s n="adj"/></l> 
-        <r>régulier<s n="adj"/><s n="GD"/></r> 
+        <r>régulier<s n="adj"/></r> 
       </p>
     </e>
 
@@ -91382,34 +86702,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>unuopa<s n="adj"/></l> 
-        <r>singulier<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>unuopa<s n="adj"/></l> 
-        <r>singulier<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>unuopa<s n="adj"/></l> 
-        <r>singulier<s n="adj"/><s n="GD"/></r> 
+        <r>singulier<s n="adj"/></r> 
       </p>
     </e>
 
@@ -91437,34 +86735,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>urba<s n="adj"/></l> 
-        <r>municipal<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>urba<s n="adj"/></l> 
-        <r>municipal<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>urba<s n="adj"/></l> 
-        <r>municipal<s n="adj"/><s n="GD"/></r> 
+        <r>municipal<s n="adj"/></r> 
       </p>
     </e>
 
@@ -91591,56 +86867,23 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>urĝa<s n="adj"/></l> 
-        <r>pressant<s n="adj"/><s n="f"/></r> 
+        <r>pressant<s n="adj"/></r> 
       </p>
     </e>
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLm
     -->
     <e>
       <p>
         <l>urĝa<s n="adj"/></l> 
-        <r>pressant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>urĝa<s n="adj"/></l> 
-        <r>urgent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>urĝa<s n="adj"/></l> 
-        <r>urgent<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>urĝa<s n="adj"/></l> 
-        <r>urgent<s n="adj"/><s n="GD"/></r> 
+        <r>urgent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -91690,7 +86933,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -91910,7 +87153,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -92229,7 +87472,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRm
     -->
     <e c="new-category">
       <p>
@@ -92251,7 +87494,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -92504,7 +87747,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -92702,7 +87945,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -92867,34 +88110,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>vertikala<s n="adj"/></l> 
-        <r>vertical<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>vertikala<s n="adj"/></l> 
-        <r>vertical<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>vertikala<s n="adj"/></l> 
-        <r>vertical<s n="adj"/><s n="f"/></r> 
+        <r>vertical<s n="adj"/></r> 
       </p>
     </e>
 
@@ -93395,34 +88616,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>vibra<s n="adj"/></l> 
-        <r>vibrant<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>vibra<s n="adj"/></l> 
-        <r>vibrant<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>vibra<s n="adj"/></l> 
-        <r>vibrant<s n="adj"/><s n="f"/></r> 
+        <r>vibrant<s n="adj"/></r> 
       </p>
     </e>
 
@@ -94418,7 +89617,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -95111,34 +90310,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>ĉeestanta<s n="adj"/></l> 
-        <r>présent<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ĉeestanta<s n="adj"/></l> 
-        <r>présent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ĉeestanta<s n="adj"/></l> 
-        <r>présent<s n="adj"/><s n="GD"/></r> 
+        <r>présent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -95166,34 +90343,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>ĉefa<s n="adj"/></l> 
-        <r>principal<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ĉefa<s n="adj"/></l> 
-        <r>principal<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ĉefa<s n="adj"/></l> 
-        <r>principal<s n="adj"/><s n="GD"/></r> 
+        <r>principal<s n="adj"/></r> 
       </p>
     </e>
 
@@ -95507,7 +90662,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -96068,34 +91223,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RLf
     -->
     <e>
       <p>
         <l>ĝenerala<s n="adj"/></l> 
-        <r>général<s n="adj"/><s n="f"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ĝenerala<s n="adj"/></l> 
-        <r>général<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ĝenerala<s n="adj"/></l> 
-        <r>général<s n="adj"/><s n="GD"/></r> 
+        <r>général<s n="adj"/></r> 
       </p>
     </e>
 
@@ -96112,34 +91245,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>ĝeneralvalida<s n="adj"/></l> 
-        <r>polyvalent<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ĝeneralvalida<s n="adj"/></l> 
-        <r>polyvalent<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ĝeneralvalida<s n="adj"/></l> 
-        <r>polyvalent<s n="adj"/><s n="f"/></r> 
+        <r>polyvalent<s n="adj"/></r> 
       </p>
     </e>
 
@@ -96585,7 +91696,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-RL
     -->
     <e>
       <p>
@@ -96596,7 +91707,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRm
     -->
     <e>
       <p>
@@ -97344,34 +92455,12 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LR
     -->
     <e>
       <p>
         <l>ŝipa<s n="adj"/></l> 
-        <r>naval<s n="adj"/><s n="GD"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ŝipa<s n="adj"/></l> 
-        <r>naval<s n="adj"/><s n="m"/></r> 
-      </p>
-    </e>
-
-    <!-- 
-	forced 'null' restriction
-      default
-    -->
-    <e>
-      <p>
-        <l>ŝipa<s n="adj"/></l> 
-        <r>naval<s n="adj"/><s n="f"/></r> 
+        <r>naval<s n="adj"/></r> 
       </p>
     </e>
 
@@ -97652,7 +92741,7 @@
 
     <!-- 
 	forced 'null' restriction
-      default
+      adjmf-LRf
     -->
     <e>
       <p>
