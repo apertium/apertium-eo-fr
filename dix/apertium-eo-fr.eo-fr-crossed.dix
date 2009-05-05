@@ -3,11 +3,11 @@
 	Dictionary:
 	Bilingual dictionary: eo-fr
 	Sections: 1
-	Entries: 8504
+	Entries: 8653
 	Sdefs: 93
       
       Patterns applied:
-      	default (473 times)
+      	default (392 times)
       	nom-f (1729 times)
       	nom-m (1411 times)
       	nom-mtof (292 times)
@@ -34,6 +34,9 @@
       	nom-do_sp-RLf-ND (7 times)
       	nom-do_sp-RL-swapm_f-ND (14 times)
       	nom-do_sp-RL-swapm_f-ND (14 times)
+      	nom-do_sp-RL-addm-ND (11 times)
+      	nom-do_sp-LRsg-addm-ND (14 times)
+      	nom-do_sp-LRpl-addm-ND (14 times)
       	n.acr-f (4 times)
       	n.acr-m (7 times)
       	np.loc-f (4 times)
@@ -58,6 +61,9 @@
       	num (30 times)
       	prn (17 times)
       	pr (70 times)
+      	adj-do_sp-RL-addm-ND (67 times)
+      	adj-do_sp-LRsg-addm-ND (62 times)
+      	adj-do_sp-LRpl-addm-ND (62 times)
       	adv (395 times)
       	cnjadv (69 times)
       	cnjsub (1 times)
@@ -7771,12 +7777,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>ambicia<s n="adj"/></l> 
+        <l>ambicia<s n="adj"/><s n="ND"/></l> 
+        <r>ambitieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>ambicia<s n="adj"/><s n="sg"/></l> 
+        <r>ambitieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>ambicia<s n="adj"/><s n="pl"/></l> 
         <r>ambitieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -8393,6 +8421,28 @@
     <e>
       <p>
         <l>angla<s n="adj"/></l> 
+        <r>anglais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>angla<s n="adj"/><s n="pl"/></l> 
+        <r>anglais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>angla<s n="adj"/><s n="sg"/></l> 
         <r>anglais<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -15823,12 +15873,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>dana<s n="adj"/></l> 
+        <l>dana<s n="adj"/><s n="ND"/></l> 
+        <r>danois<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>dana<s n="adj"/><s n="sg"/></l> 
+        <r>danois<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>dana<s n="adj"/><s n="pl"/></l> 
         <r>danois<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -15889,12 +15961,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>danĝera<s n="adj"/></l> 
+        <l>danĝera<s n="adj"/><s n="ND"/></l> 
         <r>dangereux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -15911,13 +15983,35 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>danĝera<s n="adj"/></l> 
+        <l>danĝera<s n="adj"/><s n="ND"/></l> 
         <r>périlleux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>danĝera<s n="adj"/><s n="pl"/></l> 
+        <r>dangereux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>danĝera<s n="adj"/><s n="sg"/></l> 
+        <r>dangereux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
 
@@ -16857,12 +16951,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>delikata<s n="adj"/></l> 
+        <l>delikata<s n="adj"/><s n="ND"/></l> 
+        <r>exquis<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>delikata<s n="adj"/><s n="sg"/></l> 
+        <r>exquis<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>delikata<s n="adj"/><s n="pl"/></l> 
         <r>exquis<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -17187,12 +17303,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>densa<s n="adj"/></l> 
+        <l>densa<s n="adj"/><s n="ND"/></l> 
+        <r>épais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>densa<s n="adj"/><s n="sg"/></l> 
+        <r>épais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>densa<s n="adj"/><s n="pl"/></l> 
         <r>épais<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -18309,12 +18447,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>dika<s n="adj"/></l> 
+        <l>dika<s n="adj"/><s n="ND"/></l> 
         <r>gras<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -18331,12 +18469,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>dika<s n="adj"/></l> 
+        <l>dika<s n="adj"/><s n="ND"/></l> 
+        <r>gros<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>dika<s n="adj"/><s n="pl"/></l> 
+        <r>gros<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>dika<s n="adj"/><s n="sg"/></l> 
         <r>gros<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -19090,12 +19250,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>diversa<s n="adj"/></l> 
+        <l>diversa<s n="adj"/><s n="ND"/></l> 
+        <r>divers<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>diversa<s n="adj"/><s n="sg"/></l> 
+        <r>divers<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>diversa<s n="adj"/><s n="pl"/></l> 
         <r>divers<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -19321,12 +19503,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>dolora<s n="adj"/></l> 
+        <l>dolora<s n="adj"/><s n="ND"/></l> 
+        <r>douloureux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>dolora<s n="adj"/><s n="sg"/></l> 
+        <r>douloureux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>dolora<s n="adj"/><s n="pl"/></l> 
         <r>douloureux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -20421,12 +20625,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>edzo<s n="n"/></l> 
+        <l>edzo<s n="n"/><s n="ND"/></l> 
+        <r>époux<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>edzo<s n="n"/><s n="pl"/></l> 
+        <r>époux<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>edzo<s n="n"/><s n="sg"/></l> 
         <r>époux<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -23545,12 +23771,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>entrudulo<s n="n"/></l> 
+        <l>entrudulo<s n="n"/><s n="ND"/></l> 
+        <r>intrus<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>entrudulo<s n="n"/><s n="sg"/></l> 
+        <r>intrus<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>entrudulo<s n="n"/><s n="pl"/></l> 
         <r>intrus<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -24634,12 +24882,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>fabela<s n="adj"/></l> 
+        <l>fabela<s n="adj"/><s n="ND"/></l> 
+        <r>fabuleux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>fabela<s n="adj"/><s n="pl"/></l> 
+        <r>fabuleux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>fabela<s n="adj"/><s n="sg"/></l> 
         <r>fabuleux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -25151,12 +25421,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>falsa<s n="adj"/></l> 
+        <l>falsa<s n="adj"/><s n="ND"/></l> 
+        <r>faux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>falsa<s n="adj"/><s n="sg"/></l> 
+        <r>faux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>falsa<s n="adj"/><s n="pl"/></l> 
         <r>faux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -25195,12 +25487,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>fama<s n="adj"/></l> 
+        <l>fama<s n="adj"/><s n="ND"/></l> 
+        <r>fameux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>fama<s n="adj"/><s n="pl"/></l> 
+        <r>fameux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>fama<s n="adj"/><s n="sg"/></l> 
         <r>fameux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -26394,12 +26708,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>fiera<s n="adj"/></l> 
+        <l>fiera<s n="adj"/><s n="ND"/></l> 
         <r>orgueilleux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -26504,12 +26818,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>filo<s n="n"/></l> 
+        <l>filo<s n="n"/><s n="ND"/></l> 
+        <r>fils<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>filo<s n="n"/><s n="pl"/></l> 
+        <r>fils<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>filo<s n="n"/><s n="sg"/></l> 
         <r>fils<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -26735,12 +27071,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>finna<s n="adj"/></l> 
+        <l>finna<s n="adj"/><s n="ND"/></l> 
+        <r>finlandais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>finna<s n="adj"/><s n="sg"/></l> 
+        <r>finlandais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>finna<s n="adj"/><s n="pl"/></l> 
         <r>finlandais<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -28297,12 +28655,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>franca<s n="adj"/></l> 
+        <l>franca<s n="adj"/><s n="sg"/></l> 
+        <r>français<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>franca<s n="adj"/><s n="pl"/></l> 
+        <r>français<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
+    -->
+    <e r="RL">
+      <p>
+        <l>franca<s n="adj"/><s n="ND"/></l> 
         <r>français<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -28385,12 +28765,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>fraŭda<s n="adj"/></l> 
+        <l>fraŭda<s n="adj"/><s n="ND"/></l> 
+        <r>frauduleux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>fraŭda<s n="adj"/><s n="sg"/></l> 
+        <r>frauduleux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>fraŭda<s n="adj"/><s n="pl"/></l> 
         <r>frauduleux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -28506,12 +28908,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>freŝa<s n="adj"/></l> 
+        <l>freŝa<s n="adj"/><s n="ND"/></l> 
+        <r>frais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>freŝa<s n="adj"/><s n="pl"/></l> 
+        <r>frais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>freŝa<s n="adj"/><s n="sg"/></l> 
         <r>frais<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -29100,12 +29524,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>furioza<s n="adj"/></l> 
+        <l>furioza<s n="adj"/><s n="ND"/></l> 
+        <r>furieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>furioza<s n="adj"/><s n="pl"/></l> 
+        <r>furieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>furioza<s n="adj"/><s n="sg"/></l> 
         <r>furieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -30244,12 +30690,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>glora<s n="adj"/></l> 
+        <l>glora<s n="adj"/><s n="ND"/></l> 
+        <r>glorieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>glora<s n="adj"/><s n="pl"/></l> 
+        <r>glorieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>glora<s n="adj"/><s n="sg"/></l> 
         <r>glorieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -30442,12 +30910,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>gracia<s n="adj"/></l> 
+        <l>gracia<s n="adj"/><s n="ND"/></l> 
         <r>gracieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -31476,12 +31944,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>hela<s n="adj"/></l> 
+        <l>hela<s n="adj"/><s n="ND"/></l> 
+        <r>lumineux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>hela<s n="adj"/><s n="sg"/></l> 
+        <r>lumineux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>hela<s n="adj"/><s n="pl"/></l> 
         <r>lumineux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -31729,12 +32219,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>heroo<s n="n"/></l> 
+        <l>heroo<s n="n"/><s n="ND"/></l> 
+        <r>héros<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>heroo<s n="n"/><s n="pl"/></l> 
+        <r>héros<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>heroo<s n="n"/><s n="sg"/></l> 
         <r>héros<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -31850,12 +32362,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>hida<s n="adj"/></l> 
+        <l>hida<s n="adj"/><s n="ND"/></l> 
+        <r>affreux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>hida<s n="adj"/><s n="pl"/></l> 
+        <r>affreux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>hida<s n="adj"/><s n="sg"/></l> 
         <r>affreux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -32224,12 +32758,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>hontinda<s n="adj"/></l> 
+        <l>hontinda<s n="adj"/><s n="ND"/></l> 
+        <r>honteux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>hontinda<s n="adj"/><s n="pl"/></l> 
+        <r>honteux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>hontinda<s n="adj"/><s n="sg"/></l> 
         <r>honteux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -32576,12 +33132,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>hungara<s n="adj"/></l> 
+        <l>hungara<s n="adj"/><s n="ND"/></l> 
+        <r>hongrois<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>hungara<s n="adj"/><s n="sg"/></l> 
+        <r>hongrois<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>hungara<s n="adj"/><s n="pl"/></l> 
         <r>hongrois<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -33676,12 +34254,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>infekta<s n="adj"/></l> 
+        <l>infekta<s n="adj"/><s n="ND"/></l> 
+        <r>infectieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>infekta<s n="adj"/><s n="sg"/></l> 
+        <r>infectieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>infekta<s n="adj"/><s n="pl"/></l> 
         <r>infectieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -35700,12 +36300,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>irlanda<s n="adj"/></l> 
+        <l>irlanda<s n="adj"/><s n="ND"/></l> 
+        <r>irlandais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>irlanda<s n="adj"/><s n="sg"/></l> 
+        <r>irlandais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>irlanda<s n="adj"/><s n="pl"/></l> 
         <r>irlandais<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -36096,12 +36718,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>japana<s n="adj"/></l> 
+        <l>japana<s n="adj"/><s n="ND"/></l> 
+        <r>japonais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>japana<s n="adj"/><s n="pl"/></l> 
+        <r>japonais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>japana<s n="adj"/><s n="sg"/></l> 
         <r>japonais<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -36448,12 +37092,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>justa<s n="adj"/></l> 
+        <l>justa<s n="adj"/><s n="ND"/></l> 
         <r>vertueux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -37537,12 +38181,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>kaprica<s n="adj"/></l> 
+        <l>kaprica<s n="adj"/><s n="ND"/></l> 
         <r>capricieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -37555,6 +38199,28 @@
       <p>
         <l>kaprica<s n="adj"/></l> 
         <r>fantasque<s n="adj"/><s n="mf"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>kaprica<s n="adj"/><s n="pl"/></l> 
+        <r>capricieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>kaprica<s n="adj"/><s n="sg"/></l> 
+        <r>capricieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
 
@@ -45754,12 +46420,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>laborema<s n="adj"/></l> 
+        <l>laborema<s n="adj"/><s n="ND"/></l> 
+        <r>laborieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>laborema<s n="adj"/><s n="pl"/></l> 
+        <r>laborieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>laborema<s n="adj"/><s n="sg"/></l> 
         <r>laborieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -47822,12 +48510,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRsg-addm-ND
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>linko<s n="n"/></l> 
+        <l>linko<s n="n"/><s n="sg"/></l> 
+        <r>lynx<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>linko<s n="n"/><s n="pl"/></l> 
+        <r>lynx<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'RL' restriction
+      nom-do_sp-RL-addm-ND
+    -->
+    <e r="RL">
+      <p>
+        <l>linko<s n="n"/><s n="ND"/></l> 
         <r>lynx<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -48900,12 +49610,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>majesta<s n="adj"/></l> 
+        <l>majesta<s n="adj"/><s n="ND"/></l> 
+        <r>majestueux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>majesta<s n="adj"/><s n="pl"/></l> 
+        <r>majestueux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>majesta<s n="adj"/><s n="sg"/></l> 
         <r>majestueux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -49197,12 +49929,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>malaminda<s n="adj"/></l> 
+        <l>malaminda<s n="adj"/><s n="ND"/></l> 
+        <r>odieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>malaminda<s n="adj"/><s n="sg"/></l> 
+        <r>odieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>malaminda<s n="adj"/><s n="pl"/></l> 
         <r>odieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -49351,12 +50105,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>malbona<s n="adj"/></l> 
+        <l>malbona<s n="adj"/><s n="ND"/></l> 
+        <r>mauvais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>malbona<s n="adj"/><s n="pl"/></l> 
+        <r>mauvais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>malbona<s n="adj"/><s n="sg"/></l> 
         <r>mauvais<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -49428,12 +50204,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>malbrua<s n="adj"/></l> 
+        <l>malbrua<s n="adj"/><s n="ND"/></l> 
+        <r>silencieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>malbrua<s n="adj"/><s n="pl"/></l> 
+        <r>silencieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>malbrua<s n="adj"/><s n="sg"/></l> 
         <r>silencieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -49450,12 +50248,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>malcerta<s n="adj"/></l> 
+        <l>malcerta<s n="adj"/><s n="ND"/></l> 
+        <r>douteux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>malcerta<s n="adj"/><s n="pl"/></l> 
+        <r>douteux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>malcerta<s n="adj"/><s n="sg"/></l> 
         <r>douteux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -50000,12 +50820,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>malica<s n="adj"/></l> 
+        <l>malica<s n="adj"/><s n="ND"/></l> 
+        <r>malicieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>malica<s n="adj"/><s n="pl"/></l> 
+        <r>malicieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>malica<s n="adj"/><s n="sg"/></l> 
         <r>malicieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -50033,12 +50875,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>malica<s n="adj"/></l> 
+        <l>malica<s n="adj"/><s n="ND"/></l> 
+        <r>pervers<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>malica<s n="adj"/><s n="sg"/></l> 
+        <r>pervers<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>malica<s n="adj"/><s n="pl"/></l> 
         <r>pervers<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -50132,12 +50996,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>malklara<s n="adj"/></l> 
+        <l>malklara<s n="adj"/><s n="ND"/></l> 
+        <r>confus<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>malklara<s n="adj"/><s n="sg"/></l> 
+        <r>confus<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>malklara<s n="adj"/><s n="pl"/></l> 
         <r>confus<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -50561,12 +51447,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>malnova<s n="adj"/></l> 
+        <l>malnova<s n="adj"/><s n="ND"/></l> 
+        <r>vieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>malnova<s n="adj"/><s n="pl"/></l> 
+        <r>vieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>malnova<s n="adj"/><s n="sg"/></l> 
         <r>vieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -50880,12 +51788,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>malprospera<s n="adj"/></l> 
+        <l>malprospera<s n="adj"/><s n="ND"/></l> 
+        <r>infructueux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>malprospera<s n="adj"/><s n="sg"/></l> 
+        <r>infructueux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>malprospera<s n="adj"/><s n="pl"/></l> 
         <r>infructueux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -51452,12 +52382,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>malvasta<s n="adj"/></l> 
+        <l>malvasta<s n="adj"/><s n="ND"/></l> 
         <r>clos<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -52178,12 +53108,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>markizo<s n="n"/></l> 
+        <l>markizo<s n="n"/><s n="ND"/></l> 
+        <r>marquis<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>markizo<s n="n"/><s n="sg"/></l> 
+        <r>marquis<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>markizo<s n="n"/><s n="pl"/></l> 
         <r>marquis<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -54444,12 +55396,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>mirakla<s n="adj"/></l> 
+        <l>mirakla<s n="adj"/><s n="ND"/></l> 
+        <r>miraculeux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>mirakla<s n="adj"/><s n="pl"/></l> 
+        <r>miraculeux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>mirakla<s n="adj"/><s n="sg"/></l> 
         <r>miraculeux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -54499,12 +55473,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>mirinda<s n="adj"/></l> 
+        <l>mirinda<s n="adj"/><s n="ND"/></l> 
+        <r>merveilleux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>mirinda<s n="adj"/><s n="pl"/></l> 
+        <r>merveilleux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>mirinda<s n="adj"/><s n="sg"/></l> 
         <r>merveilleux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -54554,12 +55550,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>misfortuna<s n="adj"/></l> 
+        <l>misfortuna<s n="adj"/><s n="ND"/></l> 
+        <r>malheureux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>misfortuna<s n="adj"/><s n="sg"/></l> 
+        <r>malheureux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>misfortuna<s n="adj"/><s n="pl"/></l> 
         <r>malheureux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -54572,6 +55590,17 @@
       <p>
         <l>misfortuna<s n="adj"/></l> 
         <r>malheureux<s n="adj"/><s n="f"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'null' restriction
+      default
+    -->
+    <e>
+      <p>
+        <l>misfortuna<s n="adj"/></l> 
+        <r>malheureux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
 
@@ -54620,12 +55649,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>mistera<s n="adj"/></l> 
+        <l>mistera<s n="adj"/><s n="ND"/></l> 
+        <r>mystérieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>mistera<s n="adj"/><s n="pl"/></l> 
+        <r>mystérieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>mistera<s n="adj"/><s n="sg"/></l> 
         <r>mystérieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -55874,12 +56925,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>multnombra<s n="adj"/></l> 
+        <l>multnombra<s n="adj"/><s n="ND"/></l> 
+        <r>nombreux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>multnombra<s n="adj"/><s n="pl"/></l> 
+        <r>nombreux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>multnombra<s n="adj"/><s n="sg"/></l> 
         <r>nombreux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -56490,12 +57563,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>navarano<s n="n"/></l> 
+        <l>navarano<s n="n"/><s n="ND"/></l> 
+        <r>navarrais<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>navarano<s n="n"/><s n="sg"/></l> 
+        <r>navarrais<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>navarano<s n="n"/><s n="pl"/></l> 
         <r>navarrais<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -56831,12 +57926,23 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRpl-addm-ND
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>nederlanda<s n="n"/></l> 
+        <l>nederlanda<s n="n"/><s n="pl"/></l> 
+        <r>néerlandais<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>nederlanda<s n="n"/><s n="sg"/></l> 
         <r>néerlandais<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -56853,12 +57959,23 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRpl-addm-ND
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>nederlanda<b/>lingvo<s n="n"/></l> 
+        <l>nederlanda<b/>lingvo<s n="n"/><s n="pl"/></l> 
+        <r>néerlandais<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>nederlanda<b/>lingvo<s n="n"/><s n="sg"/></l> 
         <r>néerlandais<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -56875,12 +57992,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>nederlandano<s n="n"/></l> 
+        <l>nederlandano<s n="n"/><s n="ND"/></l> 
+        <r>néerlandais<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>nederlandano<s n="n"/><s n="pl"/></l> 
+        <r>néerlandais<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>nederlandano<s n="n"/><s n="sg"/></l> 
         <r>néerlandais<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -57535,12 +58674,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>nepo<s n="n"/></l> 
+        <l>nepo<s n="n"/><s n="ND"/></l> 
+        <r>petit-fils<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>nepo<s n="n"/><s n="sg"/></l> 
+        <r>petit-fils<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>nepo<s n="n"/><s n="pl"/></l> 
         <r>petit-fils<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -57722,12 +58883,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>nervoza<s n="adj"/></l> 
+        <l>nervoza<s n="adj"/><s n="ND"/></l> 
         <r>nerveux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -57740,6 +58901,28 @@
       <p>
         <l>nervoza<s n="adj"/></l> 
         <r>énervé<s n="adj"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>nervoza<s n="adj"/><s n="pl"/></l> 
+        <r>nerveux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>nervoza<s n="adj"/><s n="sg"/></l> 
+        <r>nerveux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
 
@@ -62694,12 +63877,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>peniga<s n="adj"/></l> 
+        <l>peniga<s n="adj"/><s n="ND"/></l> 
+        <r>coûteux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>peniga<s n="adj"/><s n="sg"/></l> 
+        <r>coûteux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>peniga<s n="adj"/><s n="pl"/></l> 
         <r>coûteux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -63871,12 +65076,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>pigra<s n="adj"/></l> 
+        <l>pigra<s n="adj"/><s n="ND"/></l> 
+        <r>paresseux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>pigra<s n="adj"/><s n="pl"/></l> 
+        <r>paresseux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>pigra<s n="adj"/><s n="sg"/></l> 
         <r>paresseux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -65488,12 +66715,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>pola<s n="adj"/></l> 
+        <l>pola<s n="adj"/><s n="ND"/></l> 
+        <r>polonais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>pola<s n="adj"/><s n="sg"/></l> 
+        <r>polonais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>pola<s n="adj"/><s n="pl"/></l> 
         <r>polonais<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -66214,12 +67463,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>portugala<s n="adj"/></l> 
+        <l>portugala<s n="adj"/><s n="ND"/></l> 
+        <r>portugais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>portugala<s n="adj"/><s n="pl"/></l> 
+        <r>portugais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>portugala<s n="adj"/><s n="sg"/></l> 
         <r>portugais<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -66236,12 +67507,23 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      nom-do_sp-LRpl-addm-ND
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>portugala<b/>lingvo<s n="n"/></l> 
+        <l>portugala<b/>lingvo<s n="n"/><s n="pl"/></l> 
+        <r>portugais<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>portugala<b/>lingvo<s n="n"/><s n="sg"/></l> 
         <r>portugais<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -66258,12 +67540,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>portugalo<s n="n"/></l> 
+        <l>portugalo<s n="n"/><s n="ND"/></l> 
+        <r>portugais<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>portugalo<s n="n"/><s n="pl"/></l> 
+        <r>portugais<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>portugalo<s n="n"/><s n="sg"/></l> 
         <r>portugais<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -66929,12 +68233,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>preciza<s n="adj"/></l> 
+        <l>preciza<s n="adj"/><s n="ND"/></l> 
+        <r>précis<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>preciza<s n="adj"/><s n="sg"/></l> 
+        <r>précis<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>preciza<s n="adj"/><s n="pl"/></l> 
         <r>précis<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -67413,12 +68739,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>prestiĝa<s n="adj"/></l> 
+        <l>prestiĝa<s n="adj"/><s n="ND"/></l> 
+        <r>prestigieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>prestiĝa<s n="adj"/><s n="pl"/></l> 
+        <r>prestigieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>prestiĝa<s n="adj"/><s n="sg"/></l> 
         <r>prestigieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -74090,12 +75438,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>roka<s n="adj"/></l> 
+        <l>roka<s n="adj"/><s n="ND"/></l> 
+        <r>rocheux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>roka<s n="adj"/><s n="sg"/></l> 
+        <r>rocheux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>roka<s n="adj"/><s n="pl"/></l> 
         <r>rocheux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -75520,12 +76890,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>scivola<s n="adj"/></l> 
+        <l>scivola<s n="adj"/><s n="ND"/></l> 
+        <r>curieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>scivola<s n="adj"/><s n="pl"/></l> 
+        <r>curieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>scivola<s n="adj"/><s n="sg"/></l> 
         <r>curieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -77236,12 +78628,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>serioza<s n="adj"/></l> 
+        <l>serioza<s n="adj"/><s n="ND"/></l> 
+        <r>serieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>serioza<s n="adj"/><s n="pl"/></l> 
+        <r>serieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>serioza<s n="adj"/><s n="sg"/></l> 
         <r>serieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -77258,12 +78672,12 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>serioza<s n="adj"/></l> 
+        <l>serioza<s n="adj"/><s n="ND"/></l> 
         <r>sérieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -78094,12 +79508,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>sindona<s n="adj"/></l> 
+        <l>sindona<s n="adj"/><s n="ND"/></l> 
+        <r>généreux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>sindona<s n="adj"/><s n="pl"/></l> 
+        <r>généreux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>sindona<s n="adj"/><s n="sg"/></l> 
         <r>généreux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -78600,12 +80036,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>skota<s n="adj"/></l> 
+        <l>skota<s n="adj"/><s n="ND"/></l> 
+        <r>écossais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>skota<s n="adj"/><s n="pl"/></l> 
+        <r>écossais<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>skota<s n="adj"/><s n="sg"/></l> 
         <r>écossais<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -78688,12 +80146,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>skrupula<s n="adj"/></l> 
+        <l>skrupula<s n="adj"/><s n="ND"/></l> 
+        <r>scrupuleux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>skrupula<s n="adj"/><s n="sg"/></l> 
+        <r>scrupuleux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>skrupula<s n="adj"/><s n="pl"/></l> 
         <r>scrupuleux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -79898,12 +81378,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>sprita<s n="adj"/></l> 
+        <l>sprita<s n="adj"/><s n="ND"/></l> 
+        <r>ingénieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>sprita<s n="adj"/><s n="pl"/></l> 
+        <r>ingénieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>sprita<s n="adj"/><s n="sg"/></l> 
         <r>ingénieux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -80624,12 +82126,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>strikta<s n="adj"/></l> 
+        <l>strikta<s n="adj"/><s n="ND"/></l> 
+        <r>rigoureux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>strikta<s n="adj"/><s n="pl"/></l> 
+        <r>rigoureux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>strikta<s n="adj"/><s n="sg"/></l> 
         <r>rigoureux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -82197,12 +83721,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>sveda<s n="adj"/></l> 
+        <l>sveda<s n="adj"/><s n="ND"/></l> 
+        <r>suédois<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>sveda<s n="adj"/><s n="pl"/></l> 
+        <r>suédois<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>sveda<s n="adj"/><s n="sg"/></l> 
         <r>suédois<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -87290,12 +88836,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      nom-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>urso<s n="n"/></l> 
+        <l>urso<s n="n"/><s n="ND"/></l> 
+        <r>ours<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>urso<s n="n"/><s n="pl"/></l> 
+        <r>ours<s n="n"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      nom-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>urso<s n="n"/><s n="sg"/></l> 
         <r>ours<s n="n"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -87884,12 +89452,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>varma<s n="adj"/></l> 
+        <l>varma<s n="adj"/><s n="ND"/></l> 
+        <r>chaleureux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>varma<s n="adj"/><s n="sg"/></l> 
+        <r>chaleureux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>varma<s n="adj"/><s n="pl"/></l> 
         <r>chaleureux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -88632,12 +90222,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>vertiĝodona<s n="adj"/></l> 
+        <l>vertiĝodona<s n="adj"/><s n="ND"/></l> 
+        <r>vertigineux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>vertiĝodona<s n="adj"/><s n="sg"/></l> 
+        <r>vertigineux<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>vertiĝodona<s n="adj"/><s n="pl"/></l> 
         <r>vertigineux<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -91338,12 +92950,34 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'RL' restriction
+      adj-do_sp-RL-addm-ND
     -->
-    <e>
+    <e r="RL">
       <p>
-        <l>ĉina<s n="adj"/></l> 
+        <l>ĉina<s n="adj"/><s n="ND"/></l> 
+        <r>chinois<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>ĉina<s n="adj"/><s n="pl"/></l> 
+        <r>chinois<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>ĉina<s n="adj"/><s n="sg"/></l> 
         <r>chinois<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
@@ -92229,12 +93863,23 @@
     </e>
 
     <!-- 
-	forced 'null' restriction
-      default
+	forced 'LR' restriction
+      adj-do_sp-LRpl-addm-ND
     -->
-    <e>
+    <e r="LR">
       <p>
-        <l>ĥina<s n="adj"/></l> 
+        <l>ĥina<s n="adj"/><s n="pl"/></l> 
+        <r>chinois<s n="adj"/><s n="m"/><s n="sp"/></r> 
+      </p>
+    </e>
+
+    <!-- 
+	forced 'LR' restriction
+      adj-do_sp-LRsg-addm-ND
+    -->
+    <e r="LR">
+      <p>
+        <l>ĥina<s n="adj"/><s n="sg"/></l> 
         <r>chinois<s n="adj"/><s n="m"/><s n="sp"/></r> 
       </p>
     </e>
