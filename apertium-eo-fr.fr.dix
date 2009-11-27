@@ -243,6 +243,10 @@
   <e>       <p><l>ont</l>       <r>avoir<s n="vbhaver"/><s n="pri"/><s n="p3"/><s n="pl"/></r></p></e>
 
 </pardef>
+<pardef n="je__prn">
+  <e>       <p><l></l>          <r><s n="prn"/><s n="tn"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
+
+</pardef>
 <pardef n="/il__prn">
   <e>       <p><l>elle</l>      <r>il<s n="prn"/><s n="tn"/><s n="p3"/><s n="f"/><s n="sg"/></r></p></e>
 
@@ -290,13 +294,13 @@
 
 </pardef>
 <pardef n="Abraham__np">
-  <e>       <p><l></l>          <r><s n="np"/><s n="ant"/></r></p></e>
+  <e>       <p><l></l>          <r><s n="np"/><s n="ant"/><s n="m"/><s n="sg"/></r></p></e>
 </pardef>
 <pardef n="Baxter__np">		<!-- synonyme de Abraham__np -->
-<e><p><l></l><r><s n="np"/><s n="ant"/></r></p></e>
+<e><p><l></l><r><s n="np"/><s n="ant"/><s n="m"/><s n="sg"/></r></p></e>
 </pardef>
 <pardef n="Andorre__np">
-  <e>       <p><l></l>          <r><s n="np"/><s n="loc"/></r></p></e>
+  <e>       <p><l></l>          <r><s n="np"/><s n="loc"/><s n="mf"/><s n="sp"/></r></p></e>
 </pardef>
 <pardef n="ATS__n">
   <e>       <p><l></l>          <r><s n="n"/><s n="acr"/><s n="mf"/><s n="sp"/></r></p></e>
@@ -7345,10 +7349,6 @@
   <e>       <p><l>îtes</l>      <r>re<s n="vblex"/><s n="ifi"/><s n="p2"/><s n="pl"/></r></p></e>
 
 </pardef>
-<pardef n="je__prn">
-  <e>       <p><l></l>          <r><s n="prn"/><s n="tn"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
-
-</pardef>
 <pardef n="jui/f__n">
   <e>       <p><l>f</l>         <r>f<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
 
@@ -8731,6 +8731,10 @@
 </pardef>
 <pardef n="on__prn">
   <e>       <p><l></l>          <r><s n="prn"/><s n="pro"/><s n="ref"/><s n="p3"/><s n="mf"/><s n="sg"/></r></p></e>
+
+</pardef>
+<pardef n="se__prn">
+  <e>       <p><l></l>          <r><s n="prn"/><s n="pro"/><s n="ref"/><s n="p3"/><s n="mf"/><s n="sp"/></r></p></e>
 
 </pardef>
 <pardef n="p/ouvoir__vbmod">
@@ -13615,8 +13619,10 @@
 <e lm="empreinte">       <i>empreinte</i><par n="abeille__n"/></e>
 <e lm="lentille">        <i>lentille</i><par n="abeille__n"/></e>
 <e lm="empêcher">        <i>empêch</i><par n="abaiss/er__vblex"/></e>
+<!--
 <e r="LR" lm="en">       <i>en</i><par n="en__prn"/></e>
 <e r="RL" lm="en">       <p><l><a/>en</l>    <r>en</r></p><par n="en__prn"/></e>
+-->
 <e lm="en">              <p><l>en</l>        <r>en</r></p><par n="attendu__pr"/></e>
 <e lm="enchanter">       <i>enchant</i><par n="abaiss/er__vblex"/></e>
 <e lm="enclume">         <i>enclume</i><par n="abeille__n"/></e>
@@ -19170,7 +19176,7 @@
 <e lm="Amérique du Nord" a="eleka"><i>Amérique<b/>du<b/>Nord</i><par n="Andorre__np"/></e>
 <e lm="Brésil" a="eleka"><i>Brésil</i><par n="Andorre__np"/></e>
 <e lm="Surinam" a="eleka"><i>Surinam</i><par n="Andorre__np"/></e>
-<e lm="Union européenne" a="eleka"><i>Union<b/>européenne</i><par n="Carrefour__np"/></e>
+<e lm="Union européenne" a="eleka"><i>Union<b/>européenne</i><par n="Andorre__np"/></e>
 <e lm="exaction" a="eleka"><i>exaction</i><par n="abeille__n"/></e>
 <e lm="puissance" a="eleka"><i>puissance</i><par n="abeille__n"/></e>
 <e lm="Paris" a="eleka"> <i>Paris</i><par n="Andorre__np"/></e>
@@ -21034,6 +21040,10 @@
 <e r="LR" lm="surtout que"><p><l>surtout<b/><a/>qu'</l><r>surtout<b/>que</r></p><par n="afin_que__cnjadv"/></e>
 <e r="LR" lm="tant que"> <p><l>tant<b/><a/>qu'</l><r>tant<b/>que</r></p><par n="afin_que__cnjadv"/></e>
 <e r="LR" lm="tel que">  <p><l>tel<b/><a/>qu'</l><r>tel<b/>que</r></p><par n="afin_que__cnjadv"/></e>
+
+<e lm="me"><i>me</i><par n="me__prn"/></e>
+<e lm="te"><i>te</i><par n="te__prn"/></e>
+<e lm="se"><i>se</i><par n="se__prn"/></e>
 
 <!-- REVO -->
 
@@ -24981,7 +24991,7 @@
 <e lm="chorïambe" a="paradigme_auto"><i>chorïambe</i><par n="abeille__n"/></e>
 <e lm="choriste" a="paradigme_auto"><i>choriste</i><par n="artiste__n"/></e>
 <e lm="chose accessoire"><i>chose<b/>accessoire</i><par n="paradigme_inconnu__n"/></e>
-<e lm="chose commun e"><i>chose<b/>commun<b/>e</i><par n="paradigme_inconnu__n"/></e>
+<e lm="chose commune"><i>chose<b/>commune</i><par n="paradigme_inconnu__n"/></e>
 <e lm="chose"><i>chose</i><par n="abeille__n"/></e>
 <e lm="chose rare"><i>chose<b/>rare</i><par n="paradigme_inconnu__n"/></e>
 <e lm="chose secondaire"><i>chose<b/>secondaire</i><par n="paradigme_inconnu__n"/></e>
@@ -26209,7 +26219,6 @@
 <e lm="courtepointe" a="paradigme_auto"><i>courtepointe</i><par n="abeille__n"/></e>
 <e lm="court"><i>court</i><par n="abaissant__adj"/></e>
 <e lm="courtier"><i>courti</i><par n="bouch/er__n"/></e>
-<e lm="courtisan e"><i>courtisan<b/>e</i><par n="paradigme_inconnu__n"/></e>
 <e lm="courtisan"><i>courtisan</i><par n="paradigme_inconnu__n"/></e>
 <e lm="courtois"><i>courtois</i><par n="paradigme_inconnu__adj"/></e>
 <e lm="courtoisie" a="paradigme_auto"><i>courtoisie</i><par n="abeille__n"/></e>
@@ -27107,7 +27116,7 @@
 <e lm="de quelque manière que"><i>de<b/>quelque<b/>manière<b/>que</i><par n="paradigme_inconnu"/></e>
 <e lm="de quelqu'un"><i>de<b/>quelqu'un</i><par n="paradigme_inconnu"/></e>
 <e lm="de qui"><i>de<b/>qui</i><par n="paradigme_inconnu"/></e>
-<e lm="de race mêlé e" a="paradigme_auto"><i>de<b/>race<b/>mêlé<b/>e</i><par n="arri&#xE8;re__adj"/></e>
+<e lm="de race mêlée" a="paradigme_auto"><i>de<b/>race<b/>mêlée</i><par n="arri&#xE8;re__adj"/></e>
 <e lm="de race pure" a="paradigme_auto"><i>de<b/>race<b/>pure</i><par n="arri&#xE8;re__adj"/></e>
 <e lm="de racine" a="paradigme_auto"><i>de<b/>racine</i><par n="arri&#xE8;re__adj"/></e>
 <e lm="dérailler" a="paradigme_auto"><i>déraill</i><par n="abaiss/er__vblex"/></e>
@@ -27230,7 +27239,7 @@
 <e lm="désorganiser"><i>désorganis</i><par n="abaiss/er__vblex"/></e>
 <e lm="désorienté" a="paradigme_auto"><i>désorienté</i><par n="abaissant__adj"/></e>
 <e lm="désosser" a="paradigme_auto"><i>désoss</i><par n="abaiss/er__vblex"/></e>
-<e lm="d'espèce mélangé e" a="paradigme_auto"><i>d'espèce<b/>mélangé<b/>e</i><par n="arri&#xE8;re__adj"/></e>
+<e lm="d'espèce mélangée" a="paradigme_auto"><i>d'espèce<b/>mélangée</i><par n="arri&#xE8;re__adj"/></e>
 <e lm="despote" a="paradigme_auto"><i>despote</i><par n="abeille__n"/></e>
 <e lm="despotisme" a="paradigme_auto"><i>despotisme</i><par n="livre__n"/></e>
 <e lm="dès que" a="paradigme_auto"><i>dès<b/>que</i><par n="hier__adv"/></e>
@@ -28575,7 +28584,7 @@
 <e lm="en harmonie" a="paradigme_auto"><i>en<b/>harmonie</i><par n="arri&#xE8;re__adj"/></e>
 <e lm="en haut"><i>en<b/>haut</i><par n="hier__adv"/></e>
 <e lm="en"><i>en</i><par n="attendu__pr"/></e>
-<e lm="en"><i>en</i><par n="en__prn"/></e>
+<!-- <e lm="en"><i>en</i><par n="en__prn"/></e> -->
 <e lm="énigmatique"><i>énigmatique</i><par n="académique__adj"/></e>
 <e lm="énigme"><i>énigme</i><par n="abeille__n"/></e>
 <e lm="en imposer" a="groupe_cree_auto"><i>en</i><par n="attendu__pr"/><p><l><b/>imposer</l><r><g><b/>imposer</g></r></p></e>
@@ -36225,10 +36234,10 @@
 <e lm="personnage"><i>personnage</i><par n="livre__n"/></e>
 <e lm="personnage principal"><i>personnage<b/>principal</i><par n="paradigme_inconnu__n"/></e>
 <e lm="personnalité"><i>personnalité</i><par n="abeille__n"/></e>
-<e lm="personne affecté e"><i>personne<b/>affecté<b/>e</i><par n="paradigme_inconnu__n"/></e>
+<e lm="personne affectée"><i>personne<b/>affectée</i><par n="paradigme_inconnu__n"/></e>
 <e lm="personne âgée"><i>personne<b/>âgée</i><par n="paradigme_inconnu__n"/></e>
 <e lm="personne civile"><i>personne<b/>civile</i><par n="paradigme_inconnu__n"/></e>
-<e lm="personne commis e"><i>personne<b/>commis<b/>e</i><par n="paradigme_inconnu__n"/></e>
+<e lm="personne commise"><i>personne<b/>commise</i><par n="paradigme_inconnu__n"/></e>
 <e lm="personne de confiance" a="groupe_cree_auto"><i>personne</i><par n="abeille__n"/><p><l><b/>de<b/>confiance</l><r><g><b/>de<b/>confiance</g></r></p></e>
 <e lm="personne de même âge" a="groupe_cree_auto"><i>personne</i><par n="abeille__n"/><p><l><b/>de<b/>même<b/>âge</l><r><g><b/>de<b/>même<b/>âge</g></r></p></e>
 <e lm="personne"><i>personne</i><par n="abeille__n"/></e>
@@ -36240,7 +36249,7 @@
 <e lm="personnellement"><i>personnellement</i><par n="hier__adv"/></e>
 <e lm="personne morale"><p><l>personne morale</l><r>personne morale<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
 <e lm="personne morale"><p><l>personnes morales</l><r>personne morale<s n="n"/><s n="f"/><s n="pl"/></r></p></e>
-<e lm="personne qualifié e"><i>personne<b/>qualifié<b/>e</i><par n="paradigme_inconnu__n"/></e>
+<e lm="personne qualifiée"><i>personne<b/>qualifiée</i><par n="paradigme_inconnu__n"/></e>
 <e lm="personne qui s'y connaît"><i>personne<b/>qui<b/>s'y<b/>connaît</i><par n="paradigme_inconnu__n"/></e>
 <e lm="personnification" a="paradigme_auto"><i>personnification</i><par n="abeille__n"/></e>
 <e lm="perspective"><i>perspective</i><par n="abeille__n"/></e>
@@ -37390,7 +37399,6 @@
 <e lm="prospérité"><i>prospérité</i><par n="abeille__n"/></e>
 <e lm="prostate" a="paradigme_auto"><i>prostate</i><par n="abeille__n"/></e>
 <e lm="prosterner" a="paradigme_auto"><i>prostern</i><par n="abaiss/er__vblex"/></e>
-<e lm="prostitué e"><i>prostitué<b/>e</i><par n="paradigme_inconnu__n"/></e>
 <e lm="prostitué"><i>prostitué</i><par n="paradigme_inconnu__n"/></e>
 <e lm="prostituer" a="paradigme_auto"><i>prostitu</i><par n="abaiss/er__vblex"/></e>
 <e lm="protactinium" a="paradigme_auto"><i>protactinium</i><par n="livre__n"/></e>
