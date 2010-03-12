@@ -584,8 +584,8 @@
     </def-attr>
 
     <def-attr n="cas"> <!--EO-->
-      <attr-item tags="nomi"/>
-      <attr-item tags="nomi2"/>
+      <attr-item tags="nom"/>
+      <attr-item tags="nom2"/>
       <attr-item tags="acc"/>
       <attr-item tags="sense"/>
     </def-attr>
@@ -882,19 +882,19 @@
     	</test>
       	<let>
 		<var n="changecase"/>
-		<lit-tag v="nomi2"/>
+		<lit-tag v="nom2"/>
       	</let>
   	</when>
   	<otherwise>
       	<let>
 		<var n="changecase"/>
-		<lit-tag v="nomi"/>
+		<lit-tag v="nom"/>
       	</let>
   	</otherwise>
 	</choose>
       	<let>
 		<var n="case"/>
-		<lit-tag v="nomi"/>
+		<lit-tag v="nom"/>
       	</let>
     </def-macro>
 
@@ -1182,7 +1182,7 @@
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="2" side="sl" part="gen"/></tag>
 	      <tag><var n="nombre"/></tag>
-	      <tag><lit-tag v="nomi"/></tag>
+	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
 	    <lu>   
 	      <clip pos="2" side="tl" part="lem"/> 
@@ -1233,7 +1233,7 @@
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><lit-tag v="m"/></tag>
 	      <tag><var n="nombre"/></tag>
-	      <tag><lit-tag v="nomi"/></tag>
+	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
 	    <lu>   
 	      <clip pos="2" side="tl" part="lem"/> 
@@ -1282,7 +1282,7 @@
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="3" side="sl" part="gen"/></tag>
 	      <tag><var n="nombre"/></tag>
-	      <tag><lit-tag v="nomi"/></tag>
+	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
 	    <lu>   
 	      <clip pos="3" side="tl" part="lem"/> 
@@ -1320,7 +1320,7 @@
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="2" side="sl" part="gen"/></tag>
 	      <tag><var n="nombre"/></tag>
-	      <tag><lit-tag v="nomi"/></tag>
+	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
 	    <lu>
 	      <lit v="la tuta"/>
@@ -1377,7 +1377,7 @@
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="3" side="sl" part="gen"/></tag>
 	      <tag><var n="nombre"/></tag>
-	      <tag><lit-tag v="nomi"/></tag>
+	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
 	    <lu>
 	      <lit v="la tuta"/>
@@ -1424,13 +1424,13 @@
                   <lit-tag v="det"/>
                   <lit-tag v="qnt"/>
                   <lit-tag v="sg"/>
-                  <lit-tag v="nomi"/>
+                  <lit-tag v="nom"/>
                 </lu>
             <b pos="2"/>
                 <b pos="1"/>
                 <lu>
                   <clip pos="2" side="tl" part="whole"/>
-                  <lit-tag v="nomi"/>
+                  <lit-tag v="nom"/>
                 </lu>
               </chunk>
             </out>
@@ -5025,7 +5025,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<pattern-item n="cnjcoopercorregir"/>
       </pattern>
       <action>
-        <let><var n="case"/><lit-tag v="nomi"/></let>
+        <let><var n="case"/><lit-tag v="nom"/></let>
 
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
@@ -6759,7 +6759,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <tag><lit-tag v="SN"/></tag>
               <tag><lit-tag v="m"/></tag>
               <tag><lit-tag v="sg"/></tag>
-              <tag><lit-tag v="nomi"/></tag>
+              <tag><lit-tag v="nom"/></tag>
             </tags>
             <lu>
                 <lit v="fakto"/>
@@ -6772,7 +6772,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	 <chunk name="relatiu">
             <tags>
             <tag><lit-tag v="SNrelatiu"/></tag>
-            <tag><lit-tag v="nomi"/></tag>
+            <tag><lit-tag v="nom"/></tag>
             </tags>
             <lu>
                 <lit v="kiu"/>
@@ -12624,7 +12624,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         </call-macro>
           <let>
             <var n="case"/>
-            <lit-tag v="nomi"/>
+            <lit-tag v="nom"/>
           </let>
 
 	<out>
@@ -12641,7 +12641,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <lit-tag v="vblex.pp"/>
 	      <clip pos="1" side="sl" part="nbr"/>
 	      <clip pos="1" side="tl" part="cas" link-to="4"/>
-	      <lit-tag v="nomi"/>
+	      <lit-tag v="nom"/>
 	      <clip pos="1" side="tl" part="lemq"/>    
 	    </lu>
 	  </chunk>
