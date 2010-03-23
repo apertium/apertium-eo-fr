@@ -2,10 +2,10 @@
 <!--
 	Dictionary:
 	Sections: 2
-	Entries: 23109
+	Entries: 23116
 	Sdefs: 90
 	Paradigms: 55
-	Last processed by: apertium-dixtools fix apertium-eo-fr.eo.dix.srt apertium-eo-fr.eo.dix.srt2
+	Last processed by: apertium-dixtools autoconcord -prepare apertium-eo-fr.eo-fr.dix
 
 -->
 <dictionary>
@@ -109,14 +109,14 @@
 -->
 
 
-<pardef n="o__n">
+<pardef n="o__n" c="autoconcord:sgpl">
   <e>       <p><l>o</l>         <r>o<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
   <e>       <p><l>oj</l>        <r>o<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l>on</l>        <r>o<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
   <e>       <p><l>ojn</l>       <r>o<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
 </pardef>
 
-<pardef n="oj__n">
+<pardef n="oj__n" c="autoconcord:sgpl">
   <e>       <p><l>oj</l>        <r>o<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l>ojn</l>       <r>o<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
 </pardef>
@@ -262,14 +262,14 @@
 
 <!-- Paradigna NOM-->
 
-<pardef n="nom__n">
+<pardef n="nom__n" c="autoconcord:sgpl">
   <e>       <p><l></l>          <r><s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
   <e>       <p><l>j</l>         <r><s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l>n</l>         <r><s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
   <e>       <p><l>jn</l>        <r><s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
 </pardef>
 
-<pardef n="nomf__n">
+<pardef n="nomf__n" c="autoconcord:sgpl">
   <e>       <p><l></l>          <r><s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
   <e>       <p><l>j</l>         <r><s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l>n</l>         <r><s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
@@ -277,7 +277,7 @@
 </pardef>
 
 
-<pardef n="ino__n">
+<pardef n="ino__n" c="autoconcord:mf,sgpl">
   <e>       <p><l>o</l>         <r>o<s n="n"/><s n="m"/><s n="sg"/><s n="nom"/></r></p></e>
   <e>       <p><l>oj</l>        <r>o<s n="n"/><s n="m"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l>ino</l>       <r>o<s n="n"/><s n="f"/><s n="sg"/><s n="nom"/></r></p></e>
@@ -643,7 +643,7 @@
 <e lm="kiu">             <p><l>kiun</l>      <r>kiu<s n="prn"/><s n="itg"/><s n="sg"/><s n="acc"/></r></p></e>
 
 <e lm="de kiu">          <p><l>de<b/>kiu</l> <r>de<b/>kiu<s n="prn"/><s n="rel"/><s n="sg"/><s n="nom"/></r></p></e>
-<e lm="de kiu">          <p><l>de<b/>kiuj</l> <r>de<b/>kiu<s n="prn"/><s n="rel"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="de kiu">          <p><l>de<b/>kiuj</l><r>de<b/>kiu<s n="prn"/><s n="rel"/><s n="pl"/><s n="nom"/></r></p></e>
 <e r="RL" lm="de kiu">   <p><l>de<b/>kiu</l> <r>de<b/>kiu<s n="prn"/><s n="rel"/><s n="sp"/><s n="nom"/></r></p></e>
 
 <e lm="kun mi">          <p><l>kun<b/>mi</l> <r>kun<b/>mi<s n="prn"/><s n="tn"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>

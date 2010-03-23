@@ -2,9 +2,10 @@
 <!--
 	Dictionary:
 	Sections: 1
-	Entries: 34384
+	Entries: 33988
 	Sdefs: 93
-	Last processed by: apertium-dixtools fix apertium-eo-fr.eo-fr.dix.srt apertium-eo-fr.eo-fr.dix.srt2
+	Paradigms: 5
+	Last processed by: apertium-dixtools autoconcord -prepare apertium-eo-fr.eo-fr.dix
 
 -->
 <dictionary>
@@ -104,6 +105,33 @@
     <sdef n="acr" /> 
     <sdef n="pr" /> 
   </sdefs>
+  <pardefs>
+
+<pardef n="_mf_m" c="autoconcord:mf-m">
+   <e>       <p><l><s n="mf"/></l><r><s n="f"/></r></p></e>
+</pardef>
+
+<pardef n="_mf_f" c="autoconcord:mf-f">
+   <e>       <p><l><s n="mf"/></l><r><s n="f"/></r></p></e>
+</pardef>
+
+<pardef n="_mf_mf" c="autoconcord:mf-mf/OMIT">
+  <e>       <i></i></e>
+</pardef>
+
+
+<pardef n="_sgpl_sp" c="autoconcord:sgpl-sp">
+  <e r="LR"><p><l><s n="sp"/></l><r><s n="ND"/></r></p></e>
+  <e r="RL"><p><l><s n="sp"/></l><r><s n="sg"/></r></p></e>
+  <e r="RL"><p><l><s n="sp"/></l><r><s n="pl"/></r></p></e>
+</pardef>
+
+<pardef n="_sgpl_sgpl" c="autoconcord:sgpl-sgpl/OMIT">
+  <e>       <i></i></e>
+</pardef>
+
+  </pardefs>
+
   <section id="main" type="standard">
 
     <!-- ******************************
@@ -11896,7 +11924,7 @@
 <e r="LR"><p><l>troabundeco<s n="n"/></l>              <r>excès<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>troaĵo<s n="n"/></l>                   <r>excès<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>troo<s n="n"/></l>                     <r>excès<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>ekzemplero<s n="n"/></l>     <r>exemplaire<s n="n"/><s n="m"/></r></p></e>
+<e>       <p><l>ekzemplero<s n="n"/></l>               <r>exemplaire<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>ekzemplo<s n="n"/></l>                 <r>exemple<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>sendevigo<s n="n"/></l>                <r>exemption<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>ekzerco<s n="n"/></l>                  <r>exercice<s n="n"/><s n="m"/></r></p></e>
