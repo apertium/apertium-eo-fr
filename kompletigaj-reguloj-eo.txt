@@ -8,7 +8,7 @@
 
 # Verboj
 (\p{L}+)i<vblex><inf>
-<e lm="$1a">      <i>$1</i><par n="i__vblex"/></e>
+<e lm="$1i">      <i>$1</i><par n="i__vblex"/></e>
 
 # Ignoru restantajn verbformojn
 .*<vblex>.*
@@ -21,7 +21,7 @@
 
 # Adverboj
 (\p{L}+)e<adv>
-<e lm="$1a">      <i>$1</i><par n="e__adj"/></e>
+<e lm="$1e">      <i>$1</i><par n="e__adj"/></e>
 
 
 # Nomoj (sen genro)
@@ -33,9 +33,8 @@
 (\p{L}+)o<n><f><sg><nom>
 <e lm="$1o">      <i>$1</i><par n="ino__n"/></e>
 
-# Genraj nomoj
+# Genraj nomoj (ignoras viran formon) 
 (\p{L}+)o<n><m><sg><nom>
-<!-- (ignoras viran formon) -->
 
 # Viraj personaj nomoj, finante kun o
 (\p{L}+)o<np><ant><m><sg>
@@ -51,8 +50,5 @@
 <e lm="$1">      <i>$1</i><par n="Maria__np"/></e>
 
 
-# Virinaj propraj nomoj
-(\p{L}+)<np><ant><f><sg>
-<e lm="$1o">      <i>$1</i><par n="ino__n"/></e>
 
 
