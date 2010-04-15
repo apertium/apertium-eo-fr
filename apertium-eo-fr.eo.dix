@@ -22,6 +22,7 @@
     <sdef n="qnt" /> 
     <sdef n="ord" /> 
     <sdef n="obj" /> 
+    <sdef n="dat" /> 
     <sdef n="subj" /> 
     <sdef n="pro" /> 
     <sdef n="tn" /> 
@@ -577,6 +578,24 @@
   <e r="RL"><p><l>ilin</l>      <r>prpers<s n="prn"/><s n="obj"/><s n="p3"/><s n="f"/><s n="pl"/></r></p></e>
   <e>       <p><l>onin</l>      <r>prpers<s n="prn"/><s n="obj"/><s n="p3"/><s n="mf"/><s n="sg"/></r></p></e>
 </pardef>
+
+<pardef n="prdat__prn">
+  <e>       <p><l>al<b/>mi</l>        <r>prpers<s n="prn"/><s n="dat"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
+  <e>       <p><l>al<b/>vi</l>        <r>prpers<s n="prn"/><s n="dat"/><s n="p2"/><s n="mf"/><s n="sp"/></r></p></e>
+  <e r="LR"><p><l>al<b/>ci</l>        <r>prpers<s n="prn"/><s n="dat"/><s n="p2"/><s n="mf"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l>al<b/>vi</l>        <r>prpers<s n="prn"/><s n="dat"/><s n="p2"/><s n="mf"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l>al<b/>vi</l>        <r>prpers<s n="prn"/><s n="dat"/><s n="p2"/><s n="mf"/><s n="pl"/></r></p></e>
+  <e>       <p><l>al<b/>li</l>        <r>prpers<s n="prn"/><s n="dat"/><s n="p3"/><s n="m"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l>al<b/>li</l>        <r>prpers<s n="prn"/><s n="dat"/><s n="p3"/><s n="mf"/><s n="sg"/></r></p></e>
+  <e>       <p><l>al<b/>ŝi</l>        <r>prpers<s n="prn"/><s n="dat"/><s n="p3"/><s n="f"/><s n="sg"/></r></p></e>
+  <e>       <p><l>al<b/>ĝi</l>        <r>prpers<s n="prn"/><s n="dat"/><s n="p3"/><s n="nt"/><s n="sg"/></r></p></e>
+  <e>       <p><l>al<b/>ni</l>        <r>prpers<s n="prn"/><s n="dat"/><s n="p1"/><s n="mf"/><s n="pl"/></r></p></e>
+  <e>       <p><l>al<b/>ili</l>       <r>prpers<s n="prn"/><s n="dat"/><s n="p3"/><s n="mf"/><s n="pl"/></r></p></e>
+  <e r="RL"><p><l>al<b/>ili</l>       <r>prpers<s n="prn"/><s n="dat"/><s n="p3"/><s n="m"/><s n="pl"/></r></p></e>
+  <e r="RL"><p><l>al<b/>ili</l>       <r>prpers<s n="prn"/><s n="dat"/><s n="p3"/><s n="f"/><s n="pl"/></r></p></e>
+  <e r="LR"><p><l>al<b/>oni</l>       <r>prpers<s n="prn"/><s n="dat"/><s n="p3"/><s n="mf"/><s n="sg"/></r></p></e>
+</pardef>
+
   </pardefs>
 
   <section id="main" type="standard">
@@ -586,8 +605,9 @@
     <!-- ******************************
           group prn
       ****************************** -->
-<e lm="pronoms personals de subjecte"><i></i><par n="prsubj__prn"/></e>
-<e lm="pronoms personals d'objecte"><i></i><par n="probj__prn"/></e>
+<e lm="personaj pronomoj de subjekto"><i></i><par n="prsubj__prn"/></e>
+<e lm="personaj pronomoj de rekta objekto"><i></i><par n="probj__prn"/></e>
+<e lm="personaj pronomoj de nerekta objekto"><i></i><par n="prdat__prn"/></e>
 <e lm="sin">             <i>sin</i><par n="si__prn"/></e>
     <!-- ******************************
           group prn_symbol
@@ -16177,6 +16197,9 @@
 <e lm="leĝera">          <i>leĝer</i><par n="a__adj"/></e>
 <e lm="leĝoforta">       <i>leĝofort</i><par n="a__adj"/></e>
 <e lm="lia">             <i>li</i><par n="a__adj"/></e>
+<e lm="ŝia">             <i>ŝi</i><par n="a__adj"/></e>
+<e lm="sia">             <i>si</i><par n="a__adj"/></e>
+<e lm="ĝia">             <i>ĝi</i><par n="a__adj"/></e>
 <e lm="libera">          <i>liber</i><par n="a__adj"/></e>
 <e lm="liberala">        <i>liberal</i><par n="a__adj"/></e>
 <e lm="liberecana">      <i>liberecan</i><par n="a__adj"/></e>
@@ -23673,9 +23696,6 @@
 <e lm="neniu">           <i>neniu</i><par n="ind__det"/></e>
 <e lm="nia">             <i>nia</i><par n="mia__det"/></e>
 <e lm="tia">             <i>tia</i><par n="ind__det"/></e>
-
-<!-- demostratius-->
-
 <e lm="tiu">             <i>tiu</i><par n="dem__det"/></e>
 <e lm="via">             <i>via</i><par n="mia__det"/></e>
 <e lm="ĉiu">             <i>ĉiu</i><par n="ind__det"/></e>
@@ -23745,19 +23765,21 @@
     <!-- ******************************
           group num
       ****************************** -->
+
+<!-- NUMERALS -->
+
 <e lm="C">               <i>C</i><par n="CX__num"/></e>
 <e lm="cent">            <i>cent</i><par n="du__num"/></e>
+<e lm="ducent">            <i>ducent</i><par n="du__num"/></e>
+<e lm="tricent">            <i>tricent</i><par n="du__num"/></e>
+<e lm="kvarcent">            <i>kvarcent</i><par n="du__num"/></e>
+<e lm="kvincent">            <i>kvincent</i><par n="du__num"/></e>
+<e lm="sescent">            <i>sescent</i><par n="du__num"/></e>
+<e lm="sepcent">            <i>sepcent</i><par n="du__num"/></e>
+<e lm="okcent">            <i>okcent</i><par n="du__num"/></e>
+<e lm="naŭcent">            <i>naŭcent</i><par n="du__num"/></e>
 <e lm="D">               <i>D</i><par n="CX__num"/></e>
-<e lm="dek">             <i>dek</i><par n="du__num"/></e>
-<e lm="dekdu">           <i>dekdu</i><par n="du__num"/></e>
-<e lm="dekkvar">         <i>dekkvar</i><par n="du__num"/></e>
-<e lm="dekkvin">         <i>dekkvin</i><par n="du__num"/></e>
-<e lm="deknaŭ">          <i>deknaŭ</i><par n="du__num"/></e>
-<e lm="dekok">           <i>dekok</i><par n="du__num"/></e>
-<e lm="deksep">          <i>deksep</i><par n="du__num"/></e>
-<e lm="dekses">          <i>dekses</i><par n="du__num"/></e>
-<e lm="dektri">          <i>dektri</i><par n="du__num"/></e>
-<e lm="dekunu">          <i>dekunu</i><par n="du__num"/></e>
+<e lm="dek">             <i>dek</i><par n="dudek__num"/></e>
 <e lm="du">              <i>du</i><par n="du__num"/></e>
 <e lm="dudek">           <i>dudek</i><par n="dudek__num"/></e>
 <e lm="I">               <i>I</i><par n="CX__num"/></e>
@@ -23775,9 +23797,7 @@
 <e lm="miliono">         <i>miliono</i><par n="du__num"/></e>
 <e lm="naŭ">             <i>naŭ</i><par n="du__num"/></e>
 <e lm="naŭdek">          <i>naŭdek</i><par n="dudek__num"/></e>
-
-<!-- NUMERALS -->
-
+<e lm="nul">            <i>nul</i><par n="du__num"/></e>
 <e lm="nulo">            <i>nulo</i><par n="du__num"/></e>
 <e lm="ok">              <i>ok</i><par n="du__num"/></e>
 <e lm="okdek">           <i>okdek</i><par n="dudek__num"/></e>
