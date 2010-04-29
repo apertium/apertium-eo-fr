@@ -767,6 +767,12 @@
 <e>       <p><l>s</l>         <r><s n="n"/><s n="m"/><s n="pl"/></r></p></e>
 <e>       <p><l></l>          <r><s n="n"/><s n="m"/><s n="sg"/></r></p></e>
 </pardef>
+<pardef n="speaker__n" c="autoconcord:m_f,sgpl">
+<e>       <p><l>ines</l>      <r><s n="n"/><s n="f"/><s n="pl"/></r></p></e>
+<e>       <p><l>ine</l>       <r><s n="n"/><s n="f"/><s n="sg"/></r></p></e>
+<e>       <p><l>s</l>         <r><s n="n"/><s n="m"/><s n="pl"/></r></p></e>
+<e>       <p><l></l>          <r><s n="n"/><s n="m"/><s n="sg"/></r></p></e>
+</pardef>
 <pardef n="incognito__n" c="autoconcord:m,sgpl">
 <e>       <p><l>s</l>         <r><s n="n"/><s n="m"/><s n="pl"/></r></p></e>
 <e r="RL"><p><l></l>          <r><s n="n"/><s n="m"/><s n="sg"/></r></p></e>
@@ -12000,7 +12006,6 @@
 <e lm="ambition">                                 <i>ambition</i><par n="abeille__n"/></e>
 <e lm="ambulance">                                <i>ambulance</i><par n="abeille__n"/></e>
 <e lm="amender">                                  <i>amend</i><par n="abaiss/er__vblex"/></e>
-<e lm="amener">                                   <i>am</i><par n="ach/e[T]er__vblex__n"/></e>
 <e lm="ameublement">                              <i>ameublement</i><par n="livre__n"/></e>
 <e lm="ami">                                      <i>ami</i><par n="abaissant__adj"/></e>
 <e lm="ami">                                      <i>ami</i><par n="africain__n"/></e>
@@ -13031,6 +13036,7 @@
 <e lm="direct">                                   <i>direct</i><par n="abaissant__adj"/></e>
 <e lm="directement">                              <i>directement</i><par n="hier__adv"/></e>
 <e lm="directeur">                                <i>direct</i><par n="administrat/eur__n"/></e>
+<e lm="directeur">                                <i>direct</i><par n="conduct/eur__adj"/></e>
 <e lm="direction">                                <i>direction</i><par n="abeille__n"/></e>
 <e lm="dirigeant">                                <i>dirigeant</i><par n="abaissant__adj"/></e>
 <e lm="dirigeant">                                <i>dirigeant</i><par n="africain__n"/></e>
@@ -13272,6 +13278,7 @@
 <e lm="emplacement">                              <i>emplacement</i><par n="livre__n"/></e>
 <e lm="emploi">                                   <i>emploi</i><par n="livre__n"/></e>
 <e lm="employer">                                 <i>emplo</i><par n="côto/yer__vblex"/></e>
+<e lm="mal employer">                             <i>mal<b/>emplo</i><par n="côto/yer__vblex"/></e>
 <e lm="employeur">                                <i>employeu</i><par n="causeu/r__n"/></e>
 <e lm="empreindre">                               <i>emprei</i><par n="cei/ndre__vblex"/></e>
 <e lm="empreinte">                                <i>empreinte</i><par n="abeille__n"/></e>
@@ -13484,6 +13491,7 @@
 <e lm="façon">                                    <i>façon</i><par n="abeille__n"/></e>
 <e lm="feindre">                                  <i>fei</i><par n="cei/ndre__vblex"/></e>
 <e lm="femelle">                                  <i>femelle</i><par n="abeille__n"/></e>
+<e lm="femelle">                                  <i>femelle</i><par n="académique__adj"/></e>
 <e lm="femme">                                    <i>femme</i><par n="abeille__n"/></e>
 <e lm="fenêtre">                                  <i>fenêtre</i><par n="abeille__n"/></e>
 <e lm="fer">                                      <i>fer</i><par n="livre__n"/></e>
@@ -13865,6 +13873,7 @@
 <e lm="incessant">                                <i>incessant</i><par n="abaissant__adj"/></e>
 <e lm="incidence">                                <i>incidence</i><par n="abeille__n"/></e>
 <e lm="incident">                                 <i>incident</i><par n="livre__n"/></e>
+<e lm="incident">                                 <i>incident</i><par n="abaissant__adj"/></e>
 <e lm="inciser">                                  <i>incis</i><par n="abaiss/er__vblex"/></e>
 <e lm="incliner">                                 <i>inclin</i><par n="abaiss/er__vblex"/></e>
 <e lm="inconnue">                                 <i>inconnue</i><par n="abeille__n"/></e>
@@ -14666,6 +14675,8 @@
 <e lm="pardonner">                                <i>pardonn</i><par n="abaiss/er__vblex"/></e>
 <e lm="pareil">                                   <i>pareil</i><par n="hier__adv"/></e>
 <e lm="parent">                                   <i>parent</i><par n="africain__n"/></e>
+<e lm="parent">                                   <i>parent</i><par n="abaissant__adj"/></e>
+<e lm="parental">                                 <i>parental</i><par n="amica/l__adj"/></e>
 <e lm="parer">                                    <i>par</i><par n="abaiss/er__vblex"/></e>
 <e lm="paresseux">                                <i>paresseu</i><par n="affectueu/x__adj"/></e>
 <e lm="parfait">                                  <i>parfait</i><par n="abaissant__adj"/></e>
@@ -14828,6 +14839,7 @@
 <e lm="plaisanterie">                             <i>plaisanterie</i><par n="abeille__n"/></e>
 <e lm="plaisir">                                  <i>plaisir</i><par n="livre__n"/></e>
 <e lm="plan">                                     <i>plan</i><par n="livre__n"/></e>
+<e lm="plan">                                     <i>plan</i><par n="abaissant__adj"/></e>
 <e lm="planification">                            <i>planification</i><par n="abeille__n"/></e>
 <e lm="planter">                                  <i>plant</i><par n="abaiss/er__vblex"/></e>
 <e lm="planète">                                  <i>planète</i><par n="abeille__n"/></e>
@@ -14939,6 +14951,7 @@
 <e lm="prise">                                    <i>prise</i><par n="abeille__n"/></e>
 <e lm="prison">                                   <i>prison</i><par n="abeille__n"/></e>
 <e lm="prisonnier">                               <i>prisonni</i><par n="bouch/er__n"/></e>
+<e lm="prisonnier">                               <i>prisonni</i><par n="ch/er__adj"/></e>
 <e lm="priver">                                   <i>priv</i><par n="abaiss/er__vblex"/></e>
 <e lm="privilège">                                <i>privilège</i><par n="livre__n"/></e>
 <e lm="privé">                                    <i>privé</i><par n="abaissant__adj"/></e>
@@ -15353,7 +15366,7 @@
 <e lm="rock">                                     <i>rock</i><par n="personnel__n"/></e>
 <e lm="rogner">                                   <i>rogn</i><par n="abaiss/er__vblex"/></e>
 <e lm="roi">                                      <i>r</i><par n="r/oi__n"/></e>
-<e r="RL" lm="roman">                             <i>roman</i><par n="abaissant__adj"/></e>
+<e lm="roman">                                    <i>roman</i><par n="abaissant__adj"/></e>
 <e lm="roman">                                    <i>roman</i><par n="livre__n"/></e>
 <e lm="romantisme">                               <i>romantisme</i><par n="livre__n"/></e>
 <e lm="rompre">                                   <i>romp</i><par n="interromp/re__vblex"/></e>
@@ -15635,6 +15648,7 @@
 <e lm="solution">                                 <i>solution</i><par n="abeille__n"/></e>
 <e lm="sombre">                                   <i>sombre</i><par n="académique__adj"/></e>
 <e lm="sommaire">                                 <i>sommaire</i><par n="livre__n"/></e>
+<e lm="sommaire">                                 <i>sommaire</i><par n="académique__adj"/></e>
 <e lm="sommer">                                   <i>somm</i><par n="abaiss/er__vblex"/></e>
 <e lm="sommet">                                   <i>sommet</i><par n="livre__n"/></e>
 <e r="LR" lm="son">                               <i>s</i><par n="m/on__det"/></e>
@@ -15644,7 +15658,6 @@
 <e lm="songer">                                   <i>song</i><par n="allong/er__vblex"/></e>
 <e lm="sonner">                                   <i>sonn</i><par n="abaiss/er__vblex"/></e>
 <e lm="sonore">                                   <i>sonore</i><par n="académique__adj"/></e>
-<e lm="sorcière">                                 <i>sorcière</i><par n="abeille__n"/></e>
 <e lm="sort">                                     <i>sort</i><par n="livre__n"/></e>
 <e lm="sorte">                                    <i>sorte</i><par n="abeille__n"/></e>
 <e lm="sortie">                                   <i>sortie</i><par n="abeille__n"/></e>
@@ -15716,6 +15729,7 @@
 <e lm="structure">                                <i>structure</i><par n="abeille__n"/></e>
 <e lm="stupeur">                                  <i>stupeur</i><par n="abeille__n"/></e>
 <e lm="stupide">                                  <i>stupide</i><par n="académique__adj"/></e>
+<e lm="stupidement">                                  <i>stupidement</i><par n="hier__adv"/></e>
 <e lm="style">                                    <i>style</i><par n="livre__n"/></e>
 <e lm="subir">                                    <i>sub</i><par n="about/[]ir__vblex"/></e>
 <e lm="substantif">                               <i>substanti</i><par n="affirmati/f__adj"/></e>
@@ -16236,6 +16250,8 @@
 <e lm="écrire">                                   <i>écri</i><par n="décri/re__vblex"/></e>
 <e r="LR" lm="écrit">                             <p><l>Ecrit</l>               <r>écrit</r></p><par n="livre__n"/></e>
 <e lm="écrit">                                    <i>écrit</i><par n="livre__n"/></e>
+<e r="LR" lm="écrit">                             <p><l>Ecrit</l>               <r>écrit</r></p><par n="abaissant__adj"/></e>
+<e lm="écrit">                                    <i>écrit</i><par n="abaissant__adj"/></e>
 <e r="LR" lm="écriture">                          <p><l>Ecriture</l>            <r>écriture</r></p><par n="abeille__n"/></e>
 <e lm="écriture">                                 <i>écriture</i><par n="abeille__n"/></e>
 <e r="LR" lm="écrivain">                          <p><l>Ecrivain</l>            <r>écrivain</r></p><par n="africain__n"/></e>
@@ -16661,6 +16677,7 @@
 <e lm="avertissement" a="webform">                <i>avertissement</i><par n="livre__n"/></e>
 <e lm="affection" a="webform">                    <i>affection</i><par n="abeille__n"/></e>
 <e lm="passionné" a="webform">                    <i>passionné</i><par n="africain__n"/></e>
+<e lm="passionné">                    <i>passionné</i><par n="abaissant__adj"/></e>
 <e r="LR" lm="penchant" a="webform">              <i>penchant</i><par n="livre__n"/></e>
 <e lm="affinité" a="webform">                     <i>affinité</i><par n="abeille__n"/></e>
 <e lm="transition" a="webform">                   <i>transition</i><par n="abeille__n"/></e>
@@ -16839,6 +16856,7 @@
 <e lm="masque" a="webform">                       <i>masque</i><par n="livre__n"/></e>
 <e lm="farse" a="webform">                        <i>farse</i><par n="abeille__n"/></e>
 <e lm="enceinte" a="webform">                     <i>enceinte</i><par n="abeille__n"/></e>
+<e lm="enceinte">                     <i>enceinte</i><par n="académique__adj"/></e>
 <e lm="bordure" a="webform">                      <i>bordure</i><par n="abeille__n"/></e>
 <e lm="visuel" a="webform">                       <i>visuel</i><par n="annuel__adj"/></e>
 <e lm="visibilité" a="webform">                   <i>visibilité</i><par n="abeille__n"/></e>
@@ -16887,6 +16905,7 @@
 <e lm="séisme" a="webform">                       <i>séisme</i><par n="abeille__n"/></e>
 <e lm="quatuor" a="webform">                      <i>quatuor</i><par n="livre__n"/></e>
 <e lm="prototype" a="webform">                    <i>prototype</i><par n="livre__n"/></e>
+<e lm="prototype">                    <i>prototype</i><par n="académique__adj"/></e>
 <e lm="patriarche" a="webform">                   <i>patriarche</i><par n="livre__n"/></e>
 <e lm="négative" a="webform">                     <i>négative</i><par n="abeille__n"/></e>
 <e lm="médaille" a="webform">                     <i>médaille</i><par n="abeille__n"/></e>
@@ -16943,6 +16962,7 @@
 <e lm="sueur" a="webform">                        <i>sueur</i><par n="abeille__n"/></e>
 <e lm="soumission" a="webform">                   <i>soumission</i><par n="abeille__n"/></e>
 <e lm="soprano" a="webform">                      <i>soprano</i><par n="abeille__n"/></e>
+<e r="RL" lm="soprano">                      <i>soprano</i><par n="arrière__adj"/></e>
 <e lm="réédition" a="webform">                    <i>réédition</i><par n="abeille__n"/></e>
 <e lm="récréation" a="webform">                   <i>récréation</i><par n="abeille__n"/></e>
 <e lm="psychose" a="webform">                     <i>psychose</i><par n="abeille__n"/></e>
@@ -17020,7 +17040,7 @@
 <e lm="pétard" a="webform">                       <i>pétard</i><par n="livre__n"/></e>
 <e lm="nicotine" a="webform">                     <i>nicotine</i><par n="abeille__n"/></e>
 <e lm="miniature" a="webform">                    <i>miniature</i><par n="abeille__n"/></e>
-<e lm="méandre" a="webform">                      <i>méandre</i><par n="abeille__n"/></e>
+<e lm="méandre">                      <i>méandre</i><par n="livre__n"/></e>
 <e lm="aval" a="webform">                         <i>aval</i><par n="livre__n"/></e>
 <e lm="lame" a="webform">                         <i>lame</i><par n="abeille__n"/></e>
 <e lm="lagune" a="webform">                       <i>lagune</i><par n="abeille__n"/></e>
@@ -17058,6 +17078,7 @@
 <e lm="jury" a="webform">                         <i>jury</i><par n="livre__n"/></e>
 <e lm="bijouterie" a="webform">                   <i>bijouterie</i><par n="abeille__n"/></e>
 <e lm="jardinier" a="webform">                    <i>jardini</i><par n="bouch/er__n"/></e>
+<e lm="jardinier" a="webform">                    <i>jardini</i><par n="ch/er__adj"/></e>
 <e lm="jardinage" a="webform">                    <i>jardinage</i><par n="livre__n"/></e>
 <e lm="Jamaïcain" a="webform">                    <i>Jamaïcain</i><par n="africain__n"/></e>
 <e lm="gisement" a="webform">                     <i>gisement</i><par n="livre__n"/></e>
@@ -17069,6 +17090,7 @@
 <e lm="marocain" a="webform">                     <i>marocain</i><par n="abaissant__adj"/></e>
 <e lm="expulser" a="webform">                     <i>expuls</i><par n="abaiss/er__vblex"/></e>
 <e lm="externe" a="webform">                      <i>externe</i><par n="académique__adj"/></e>
+<e lm="externe">                      <i>externe</i><par n="artiste__n"/></e>
 <e lm="facette" a="webform">                      <i>facette</i><par n="abeille__n"/></e>
 <e lm="individu" a="webform">                     <i>individu</i><par n="livre__n"/></e>
 <e lm="irritation" a="webform">                   <i>irritation</i><par n="abeille__n"/></e>
@@ -17434,6 +17456,7 @@
 <e lm="infarctus" a="webform">                    <i>infarctus</i><par n="mois__n"/></e>
 <e lm="inertie" a="webform">                      <i>inertie</i><par n="abeille__n"/></e>
 <e lm="indigent" a="webform">                     <i>indigent</i><par n="africain__n"/></e>
+<e lm="indigent">                     <i>indigent</i><par n="abaissant__adj"/></e>
 <e r="LR" lm="éclat de rire" a="webform">         <p><l>Eclat</l>               <r>éclat</r></p><par n="livre__n"/><p><l><b/>de<b/>rire</l><r><g><b/>de<b/>rire</g></r></p></e>
 <e lm="éclat de rire" a="webform">                <i>éclat</i><par n="livre__n"/><p><l><b/>de<b/>rire</l><r><g><b/>de<b/>rire</g></r></p></e>
 <e lm="rigidité" a="webform">                     <i>rigidité</i><par n="abeille__n"/></e>
@@ -17574,7 +17597,7 @@
 <e lm="frapper" a="webform">                      <i>frapp</i><par n="abaiss/er__vblex"/></e>
 <e lm="importation" a="webform">                  <i>importation</i><par n="abeille__n"/></e>
 <e lm="impérialisme" a="webform">                 <i>impérialisme</i><par n="livre__n"/></e>
-<e lm="impair" a="webform">                       <i>impair</i><par n="africain__n"/></e>
+<e lm="impair">                       <i>impair</i><par n="abaissant__adj"/></e>
 <e lm="impartialité" a="webform">                 <i>impartialité</i><par n="abeille__n"/></e>
 <e lm="immigrant" a="webform">                    <i>immigrant</i><par n="africain__n"/></e>
 <e lm="immersion" a="webform">                    <i>immersion</i><par n="abeille__n"/></e>
@@ -19490,6 +19513,7 @@
 <e lm="Serbe">                          <i>Serbe</i><par n="artiste__n"/></e>
 <e lm="serbe" a="eleka">                          <i>serbe</i><par n="académique__adj"/></e>
 <e lm="pair" a="eleka">                           <i>pair</i><par n="abaissant__adj"/></e>
+<e lm="pair">                           <i>pair</i><par n="livre__n"/></e>
 <e lm="abominable" a="eleka">                     <i>abominable</i><par n="académique__adj"/></e>
 <e lm="abrupt" a="eleka">                         <i>abrupt</i><par n="abaissant__adj"/></e>
 <e lm="accessoire" a="eleka">                     <i>accessoire</i><par n="académique__adj"/></e>
@@ -20785,6 +20809,7 @@
 <e lm="asseoir">                                  <i>asseo</i><par n="about/[]ir__vblex"/></e>
 <e lm="asseoir">                                  <i>ass</i><par n="ass/eoir__vblex"/></e>
 <e lm="assermenté">                               <i>assermenté</i><par n="africain__n"/></e>
+<e lm="assermenter">                               <i>asserment</i><par n="abaiss/er__vblex"/></e>
 <e lm="assertion">                                <i>assertion</i><par n="abeille__n"/></e>
 <e lm="asservir">                                 <i>asserv</i><par n="about/[]ir__vblex"/></e>
 <e lm="assesseur">                                <i>assesseur</i><par n="livre__n"/></e>
@@ -21160,7 +21185,7 @@
 <e lm="baguenauder" a="paradigme_auto">           <i>baguenaud</i><par n="abaiss/er__vblex"/></e>
 <e lm="Bahâ-Allâh">                               <i>Bahâ-Allâh</i><par n="Abraham__np"/></e>
 <e lm="bahaï">                                    <i>bahaï</i><par n="livre__n"/></e>
-<e lm="bahaïsme" a="paradigme_auto">              <i>bahaïsme</i><par n="abeille__n"/></e>
+<e lm="bahaïsme">              <i>bahaïsme</i><par n="livre__n"/></e>
 <e lm="Bahâ-Ullâh">                               <i>Bahâ-Ullâh</i><par n="Abraham__np"/></e>
 <e lm="bah">                                      <i>bah</i><par n="ah__ij"/></e>
 <e lm="Baïkal">                                   <i>Baïkal</i><par n="Andorre__np"/></e>
@@ -21666,7 +21691,6 @@
 <e lm="bordel">                                   <i>bordel</i><par n="livre__n"/></e>
 <e lm="bordereau" a="paradigme_auto">             <i>bordereau</i><par n="lieu__n"/></e>
 <e lm="bordereau d'expédition">                   <i>bordereau</i><par n="lieu__n"/><p><l><b/>d'expédition</l><r><g><b/>d'expédition</g></r></p></e>
-
 <e lm="border">                                   <i>bord</i><par n="abaiss/er__vblex"/></e>
 <e lm="boréal" a="paradigme_auto">                <i>boréa</i><par n="amica/l__adj"/></e>
 <e lm="bore">                                     <i>bore</i><par n="livre__n"/></e>
@@ -22841,7 +22865,7 @@
 <e lm="coca">                                     <i>coca</i><par n="livre__n"/></e>
 <e lm="coca">                                     <i>coca</i><par n="abeille__n"/></e>
 <e lm="cocaïnisme" a="paradigme_auto">            <i>cocaïnisme</i><par n="livre__n"/></e>
-<e lm="cocaïsme" a="paradigme_auto">              <i>cocaïsme</i><par n="abeille__n"/></e>
+<e lm="cocaïsme" a="paradigme_auto">              <i>cocaïsme</i><par n="livre__n"/></e>
 <e lm="cocarde" a="paradigme_auto">               <i>cocarde</i><par n="abeille__n"/></e>
 <e lm="cocasse" a="paradigme_auto">               <i>cocasse</i><par n="académique__adj"/></e>
 <e lm="cocasserie" a="paradigme_auto">            <i>cocasserie</i><par n="abeille__n"/></e>
@@ -23120,7 +23144,7 @@
 <e lm="condamnable">                              <i>condamnable</i><par n="académique__adj"/></e>
 <e lm="condamnatoire" a="paradigme_auto">         <i>condamnatoire</i><par n="académique__adj"/></e>
 <e lm="condamné">                                 <i>condamné</i><par n="africain__n"/></e>
-<e lm="condamné par ses actes" a="groupe_cree_auto"><i>condamné</i><par n="africain__n"/><p><l><b/>par<b/>ses<b/>actes</l><r><g><b/>par<b/>ses<b/>actes</g></r></p></e>
+<e lm="condamné par ses actes" a="groupe_cree_auto"><i>condamné</i><par n="abaissant__adj"/><p><l><b/>par<b/>ses<b/>actes</l><r><g><b/>par<b/>ses<b/>actes</g></r></p></e>
 <e lm="condamner à la peine capitale" a="groupe_cree_auto"><i>condamn</i><par n="abaiss/er__vblex"/><p><l><b/>à<b/>la<b/>peine<b/>capitale</l><r><g><b/>à<b/>la<b/>peine<b/>capitale</g></r></p></e>
 <e lm="condamner à mort" a="groupe_cree_auto">    <i>condamn</i><par n="abaiss/er__vblex"/><p><l><b/>à<b/>mort</l><r><g><b/>à<b/>mort</g></r></p></e>
 <e lm="condensateur" a="paradigme_auto">          <i>condensat</i><par n="administrat/eur__n"/></e>
@@ -23766,6 +23790,7 @@
 <e lm="débattre">                                 <i>débat</i><par n="abat/tre__vblex"/></e>
 <e lm="débauche" a="paradigme_auto">              <i>débauche</i><par n="abeille__n"/></e>
 <e lm="débauché">                                 <i>débauché</i><par n="ancien__n"/></e>
+<e lm="débauché">                                 <i>débauché</i><par n="abaissant__adj"/></e>
 <e lm="débaucher" a="paradigme_auto">             <i>débauch</i><par n="abaiss/er__vblex"/></e>
 <e lm="de belle prestance" a="paradigme_auto">    <i>de<b/>belle<b/>prestance</i><par n="arrière__adj"/></e>
 <e lm="d'ébène" a="paradigme_auto">               <i>d'ébène</i><par n="arrière__adj"/></e>
@@ -24444,6 +24469,7 @@
 <e lm="digérer" a="paradigme_auto">               <i>digér</i><par n="abaiss/er__vblex"/></e>
 <e lm="digest">                                   <i>digest</i><par n="livre__n"/></e>
 <e lm="digestif">                                 <i>digestif</i><par n="livre__n"/></e>
+<e lm="digestif">                                 <i>digesti</i><par n="affirmati/f__adj"/></e>
 <e lm="digitale" a="paradigme_auto">              <i>digitale</i><par n="abeille__n"/></e>
 <e lm="digitaline" a="paradigme_auto">            <i>digitaline</i><par n="abeille__n"/></e>
 <e lm="digne de confiance" a="groupe_cree_auto">  <i>digne</i><par n="académique__adj"/><p><l><b/>de<b/>confiance</l><r><g><b/>de<b/>confiance</g></r></p></e>
@@ -24500,7 +24526,6 @@
 <e lm="dire adieu" a="groupe_cree_auto">          <i>d</i><par n="d/i[]re__vblex__"/><p><l><b/>adieu</l><r><g><b/>adieu</g></r></p></e>
 <e lm="dire adieu" a="groupe_cree_auto">          <i>d</i><par n="d/i[]re__vblex"/><p><l><b/>adieu</l><r><g><b/>adieu</g></r></p></e>
 <e lm="dire au revoir">                           <i>d</i><par n="d/i[]re__vblex__"/></e>
-<e lm="directe" a="paradigme_auto">               <i>directe</i><par n="académique__adj"/></e>
 <e lm="directeur de banque" a="groupe_cree_auto"> <i>direct</i><par n="administrat/eur__n"/><p><l><b/>de<b/>banque</l><r><g><b/>de<b/>banque</g></r></p></e>
 <e lm="dire des gros mots" a="groupe_cree_auto">  <i>d</i><par n="d/i[]re__vblex__"/><p><l><b/>des<b/>gros<b/>mots</l><r><g><b/>des<b/>gros<b/>mots</g></r></p></e>
 <e lm="dire des gros mots" a="groupe_cree_auto">  <i>d</i><par n="d/i[]re__vblex"/><p><l><b/>des<b/>gros<b/>mots</l><r><g><b/>des<b/>gros<b/>mots</g></r></p></e>
@@ -24783,6 +24808,7 @@
 <e lm="écaille" a="paradigme_auto">               <i>écaille</i><par n="abeille__n"/></e>
 <e lm="écaler" a="paradigme_auto">                <i>écal</i><par n="appel/er__vblex"/></e>
 <e lm="écarlate">                                 <i>écarlate</i><par n="abeille__n"/></e>
+<e lm="écarlate">                                 <i>écarlate</i><par n="académique__adj"/></e>
 <e lm="écartement" a="paradigme_auto">            <i>écartement</i><par n="livre__n"/></e>
 <e lm="écart-type" a="paradigme_auto">            <i>écart-type</i><par n="abeille__n"/></e>
 <e lm="ecchymose" a="paradigme_auto">             <i>ecchymose</i><par n="abeille__n"/></e>
@@ -24900,7 +24926,7 @@
 <e lm="églogue" a="paradigme_auto">               <i>églogue</i><par n="artiste__n"/></e>
 <e lm="égocentrique" a="paradigme_auto">          <i>égocentrique</i><par n="académique__adj"/></e>
 <e lm="égocentrisme" a="paradigme_auto">          <i>égocentrisme</i><par n="livre__n"/></e>
-<e lm="égoïsme" a="paradigme_auto">               <i>égoïsme</i><par n="abeille__n"/></e>
+<e lm="égoïsme" a="paradigme_auto">               <i>égoïsme</i><par n="livre__n"/></e>
 <e lm="égoïste">                                  <i>égoïste</i><par n="académique__adj"/></e>
 <e lm="égoutter" a="paradigme_auto">              <i>égoutt</i><par n="abaiss/er__vblex"/></e>
 <e lm="égrainer" a="paradigme_auto">              <i>égrain</i><par n="abaiss/er__vblex"/></e>
@@ -25054,14 +25080,12 @@
 <e lm="emphysème" a="paradigme_auto">             <i>emphysème</i><par n="abeille__n"/></e>
 <e lm="empilement" a="paradigme_auto">            <i>empilement</i><par n="livre__n"/></e>
 <e lm="Empire byzantin">                          <i>Empire<b/>byzantin</i><par n="Andorre__np"/></e>
-<e lm="emplacements" a="paradigme_auto">          <i>emplacements</i><par n="mois__n"/></e>
 <e lm="emplâtre">                                 <i>emplâtre</i><par n="livre__n"/></e>
 <e lm="emplir">                                   <i>empl</i><par n="about/[]ir__vblex"/></e>
-<e lm="employé à plein temps" a="groupe_cree_auto"><i>employé</i><par n="africain__n"/><p><l><b/>à<b/>plein<b/>temps</l><r><g><b/>à<b/>plein<b/>temps</g></r></p></e>
+<e lm="employé à plein temps" a="groupe_cree_auto"><i>employé</i><par n="abaissant__adj"/><p><l><b/>à<b/>plein<b/>temps</l><r><g><b/>à<b/>plein<b/>temps</g></r></p></e>
 <e lm="employé de banque" a="groupe_cree_auto">   <i>employé</i><par n="africain__n"/><p><l><b/>de<b/>banque</l><r><g><b/>de<b/>banque</g></r></p></e>
 <e lm="employé de bureau" a="groupe_cree_auto">   <i>employé</i><par n="africain__n"/><p><l><b/>de<b/>bureau</l><r><g><b/>de<b/>bureau</g></r></p></e>
 <e lm="employé du chemin de fer" a="groupe_cree_auto"><i>employé</i><par n="africain__n"/><p><l><b/>du<b/>chemin<b/>de<b/>fer</l><r><g><b/>du<b/>chemin<b/>de<b/>fer</g></r></p></e>
-<e lm="employés" a="paradigme_auto">              <i>employés</i><par n="gens__n"/></e>
 <e lm="empocher" a="paradigme_auto">              <i>empoch</i><par n="abaiss/er__vblex"/></e>
 <e lm="empoisonner">                              <i>empoisonn</i><par n="abaiss/er__vblex"/></e>
 <e lm="emporté" a="paradigme_auto">               <i>emporté</i><par n="abaissant__adj"/></e>
@@ -27222,7 +27246,7 @@
 <e lm="grill">                                    <i>grill</i><par n="livre__n"/></e>
 <e lm="grillon">                                  <i>grillon</i><par n="livre__n"/></e>
 <e lm="grimacer" a="paradigme_auto">              <i>grima</i><par n="annon/cer__vblex"/></e>
-<e lm="grimacier">                                <i>grimaci</i><par n="bouch/er__n"/></e>
+<e lm="grimacier">                                <i>grimaci</i><par n="ch/er__adj"/></e>
 <e lm="grimpant" a="paradigme_auto">              <i>grimpant</i><par n="abaissant__adj"/></e>
 <e lm="grimper" a="paradigme_auto">               <i>grimp</i><par n="abaiss/er__vblex"/></e>
 <e lm="grimper un escalier" a="groupe_cree_auto">  <i>grimp</i><par n="abaiss/er__vblex"/><p><l><b/>un<b/>escalier</l><r><g><b/>un<b/>escalier</g></r></p></e>
@@ -27245,7 +27269,6 @@
 <e lm="groschen">                                 <i>groschen</i><par n="livre__n"/></e>
 <e lm="groseille" a="paradigme_auto">             <i>groseille</i><par n="abeille__n"/></e>
 <e lm="groseiller">                               <i>groseiller</i><par n="livre__n"/></e>
-<e lm="grosse">                                   <i>grosse</i><par n="livre__n"/></e>
 <e lm="grosseur">                                 <i>grosseur</i><par n="abeille__n"/></e>
 <e lm="grossièrement">                            <i>grossièrement</i><par n="hier__adv"/></e>
 <e lm="grossir">                                  <i>gross</i><par n="about/[]ir__vblex"/></e>
@@ -27477,7 +27500,7 @@
 <e lm="Hérodote">                                 <i>Hérodote</i><par n="Abraham__np"/></e>
 <e lm="héro">                                     <i>héro</i><par n="paradigme_inconnu__n"/></e>
 <e lm="héroïne" a="paradigme_auto">               <i>héroïne</i><par n="abeille__n"/></e>
-<e lm="héroïsme" a="paradigme_auto">              <i>héroïsme</i><par n="abeille__n"/></e>
+<e lm="héroïsme" a="paradigme_auto">              <i>héroïsme</i><par n="livre__n"/></e>
 <e lm="héron">                                    <i>héron</i><par n="livre__n"/></e>
 <e lm="herse">                                    <i>herse</i><par n="abeille__n"/></e>
 <e lm="herser" a="paradigme_auto">                <i>hers</i><par n="abaiss/er__vblex"/></e>
@@ -27833,7 +27856,6 @@
 <e lm="impératif">                                <i>impérati</i><par n="affirmati/f__adj"/></e>
 <e lm="impériale" a="paradigme_auto">             <i>impériale</i><par n="abeille__n"/></e>
 <e lm="impérial">                                 <i>impéria</i><par n="amica/l__adj"/></e>
-<e lm="imperialisme" a="paradigme_auto">          <i>imperialisme</i><par n="livre__n"/></e>
 <e lm="impérialiste" a="paradigme_auto">          <i>impérialiste</i><par n="artiste__n"/></e>
 <e lm="impérialiste" a="paradigme_auto">          <i>impérialiste</i><par n="académique__adj"/></e>
 <e lm="impérieux">                                <i>impérieu</i><par n="affectueu/x__adj"/></e>
@@ -28346,7 +28368,7 @@
 <e lm="joyau" a="paradigme_auto">                 <i>joyau</i><par n="lieu__n"/></e>
 <e lm="jubilé">                                   <i>jubilé</i><par n="africain__n"/></e>
 <e lm="jubiler" a="paradigme_auto">               <i>jubil</i><par n="appel/er__vblex"/></e>
-<e lm="judaïsme" a="paradigme_auto">              <i>judaïsme</i><par n="abeille__n"/></e>
+<e lm="judaïsme" a="paradigme_auto">              <i>judaïsme</i><par n="livre__n"/></e>
 <e lm="Judée">                                    <i>Judée</i><par n="Andorre__np"/></e>
 <e lm="judo">                                     <i>judo</i><par n="livre__n"/></e>
 <e lm="judoka">                                   <i>judoka</i><par n="livre__n"/></e>
@@ -28983,9 +29005,7 @@
 <e lm="maladie du sommeil" a="groupe_cree_auto">  <i>maladie</i><par n="abeille__n"/><p><l><b/>du<b/>sommeil</l><r><g><b/>du<b/>sommeil</g></r></p></e>
 <e lm="maladif">                                  <i>maladi</i><par n="affirmati/f__adj"/></e>
 <e lm="malaimable" a="paradigme_auto">            <i>malaimable</i><par n="académique__adj"/></e>
-<e lm="mal à l'aise" a="groupe_cree_auto">        <i>ma</i><par n="anima/l__n"/><p><l><b/>à<b/>l'aise</l><r><g><b/>à<b/>l'aise</g></r></p></e>
-<e lm="mal à l'aise" a="groupe_cree_auto">        <i>mal</i><par n="hier__adv"/><p><l><b/>à<b/>l'aise</l><r><g><b/>à<b/>l'aise</g></r></p></e>
-<e lm="mal à l'aise" a="groupe_cree_auto">        <i>mal</i><par n="très__preadv"/><p><l><b/>à<b/>l'aise</l><r><g><b/>à<b/>l'aise</g></r></p></e>
+<e lm="mal à l'aise">                             <i>mal<b/>à<b/>l'aise</i><par n="arrière__adj"/></e>
 <e lm="malappris" a="paradigme_auto">             <i>malappris</i><par n="mois__n"/></e>
 <e lm="malaria">                                  <i>malaria</i><par n="abeille__n"/></e>
 <e lm="malaxer" a="paradigme_auto">               <i>malax</i><par n="abaiss/er__vblex"/></e>
@@ -28995,9 +29015,6 @@
 <e lm="mal de vivre" a="groupe_cree_auto">        <i>ma</i><par n="anima/l__n"/><p><l><b/>de<b/>vivre</l><r><g><b/>de<b/>vivre</g></r></p></e>
 <e lm="mal du pays" a="groupe_cree_auto">         <i>ma</i><par n="anima/l__n"/><p><l><b/>du<b/>pays</l><r><g><b/>du<b/>pays</g></r></p></e>
 <e lm="mal embouché">                             <i>mal<b/>embouché</i><par n="abaissant__adj"/></e>
-<e lm="mal employer" a="groupe_cree_auto">        <i>ma</i><par n="anima/l__n"/><p><l><b/>employer</l><r><g><b/>employer</g></r></p></e>
-<e lm="mal employer" a="groupe_cree_auto">        <i>mal</i><par n="hier__adv"/><p><l><b/>employer</l><r><g><b/>employer</g></r></p></e>
-<e lm="mal employer" a="groupe_cree_auto">        <i>mal</i><par n="très__preadv"/><p><l><b/>employer</l><r><g><b/>employer</g></r></p></e>
 <e lm="malencontreux" a="paradigme_auto">         <i>malencontreu</i><par n="affectueu/x__adj"/></e>
 <e lm="malfaiteur" a="paradigme_auto">            <i>malfait</i><par n="administrat/eur__n"/></e>
 <e lm="malhabile" a="paradigme_auto">             <i>malhabile</i><par n="académique__adj"/></e>
@@ -29012,9 +29029,6 @@
 <e lm="malt">                                     <i>malt</i><par n="livre__n"/></e>
 <e lm="malvacées">                                <i>malvacées</i><par n="vacances__n"/></e>
 <e lm="malveillant" a="paradigme_auto">           <i>malveillant</i><par n="abaissant__adj"/></e>
-<e lm="mal venir" a="groupe_cree_auto">           <i>ma</i><par n="anima/l__n"/><p><l><b/>venir</l><r><g><b/>venir</g></r></p></e>
-<e lm="mal venir" a="groupe_cree_auto">           <i>mal</i><par n="hier__adv"/><p><l><b/>venir</l><r><g><b/>venir</g></r></p></e>
-<e lm="mal venir" a="groupe_cree_auto">           <i>mal</i><par n="très__preadv"/><p><l><b/>venir</l><r><g><b/>venir</g></r></p></e>
 <e lm="malversation">                             <i>malversation</i><par n="abeille__n"/></e>
 <e lm="malvoisie" a="paradigme_auto">             <i>malvoisie</i><par n="abeille__n"/></e>
 <e lm="mamelon">                                  <i>mamelon</i><par n="livre__n"/></e>
@@ -29196,6 +29210,7 @@
 <e lm="mazout">                                   <i>mazout</i><par n="livre__n"/></e>
 <e lm="mazurka">                                  <i>mazurka</i><par n="abeille__n"/></e>
 <e lm="mécanique">                                <i>mécanique</i><par n="abeille__n"/></e>
+<e lm="mécanique">                                <i>mécanique</i><par n="académique__adj"/></e>
 <e lm="mécaniquement" a="paradigme_auto">         <i>mécaniquement</i><par n="hier__adv"/></e>
 <e lm="mécénat">                                  <i>mécénat</i><par n="livre__n"/></e>
 <e lm="mécène">                <i>mécène</i><par n="livre__n"/></e>
@@ -29270,7 +29285,6 @@
 <e lm="mendiant">                                 <i>mendiant</i><par n="africain__n"/></e>
 <e lm="mendier" a="paradigme_auto">               <i>mendi</i><par n="abaiss/er__vblex"/></e>
 <e lm="menées" a="paradigme_auto">                <i>menées</i><par n="vacances__n"/></e>
-<e lm="mener">                                    <i>m</i><par n="ach/e[T]er__vblex__n"/></e>
 <e lm="meneur">                                   <i>meneur</i><par n="livre__n"/></e>
 <e lm="Mengzi">                                   <i>Mengzi</i><par n="Abraham__np"/></e>
 <e lm="menhir">                                   <i>menhir</i><par n="livre__n"/></e>
@@ -29280,6 +29294,7 @@
 <e lm="mensuration" a="paradigme_auto">           <i>mensuration</i><par n="abeille__n"/></e>
 <e lm="mentalité">                                <i>mentalité</i><par n="abeille__n"/></e>
 <e lm="menteur">                                  <i>menteu</i><par n="causeu/r__n"/></e>
+<e lm="menteur">                                  <i>menteu</i><par n="causeu/r__adj"/></e>
 <e lm="menthe" a="paradigme_auto">                <i>menthe</i><par n="abeille__n"/></e>
 <e lm="menthol">                                  <i>menthol</i><par n="livre__n"/></e>
 <e lm="mentir comme un arracheur de dents" a="groupe_cree_auto"><i>men</i><par n="consen/tir__vblex"/><p><l><b/>comme<b/>un<b/>arracheur<b/>de<b/>dents</l><r><g><b/>comme<b/>un<b/>arracheur<b/>de<b/>dents</g></r></p></e>
@@ -29547,6 +29562,7 @@
 <e lm="mode de vie" a="groupe_cree_auto">         <i>mode</i><par n="abeille__n"/><p><l><b/>de<b/>vie</l><r><g><b/>de<b/>vie</g></r></p></e>
 <e lm="mode de vie" a="groupe_cree_auto">         <i>mode</i><par n="livre__n"/><p><l><b/>de<b/>vie</l><r><g><b/>de<b/>vie</g></r></p></e>
 <e lm="modèle">                                   <i>modèle</i><par n="livre__n"/></e>
+<e lm="modèle">                                   <i>modèle</i><par n="académique__adj"/></e>
 <e lm="modeler">                                  <i>mod</i><par n="ach/e[T]er__vblex__l"/></e>
 <e lm="modération">                               <i>modération</i><par n="abeille__n"/></e>
 <e lm="modéré">                                   <i>modéré</i><par n="abaissant__adj"/></e>
@@ -29753,6 +29769,7 @@
 <e lm="naïade" a="paradigme_auto">                <i>naïade</i><par n="abeille__n"/></e>
 <e lm="nain de jardin" a="groupe_cree_auto">      <i>nain</i><par n="africain__n"/><p><l><b/>de<b/>jardin</l><r><g><b/>de<b/>jardin</g></r></p></e>
 <e lm="nain">                                     <i>nain</i><par n="africain__n"/></e>
+<e lm="nain">                                     <i>nain</i><par n="abaissant__adj"/></e>
 <e lm="Namur">                                    <i>Namur</i><par n="Andorre__np"/></e>
 <e lm="nandina">                                  <i>nandina</i><par n="livre__n"/></e>
 <e lm="nankin">                                   <i>nankin</i><par n="livre__n"/></e>
@@ -29848,6 +29865,7 @@
 <e lm="Newton">                                   <i>Newton</i><par n="Abraham__np"/></e>
 <e lm="n-graphe">              <i>n-graphe</i><par n="livre__n"/></e>
 <e lm="niais">                                    <i>niais</i><par n="admis__n"/></e>
+<e lm="niais">                                    <i>niais</i><par n="anglais__adj"/></e>
 <e lm="niche" a="paradigme_auto">                 <i>niche</i><par n="abeille__n"/></e>
 <e lm="nicher">                                   <i>nich</i><par n="abaiss/er__vblex"/></e>
 <e lm="Nichiren">                                 <i>Nichiren</i><par n="Andorre__np"/></e>
@@ -30731,6 +30749,8 @@
 <e lm="phénix" a="paradigme_auto">                <i>phénix</i><par n="mois__n"/></e>
 <e lm="phénol">                                   <i>phénol</i><par n="livre__n"/></e>
 <e lm="philanthrope">                             <i>philanthrope</i><par n="artiste__n"/></e>
+<e lm="philanthrope">                             <i>philanthrope</i><par n="académique__adj"/></e>
+<e lm="philanthropique">                          <i>philanthropique</i><par n="académique__adj"/></e>
 <e lm="philanthropie" a="paradigme_auto">         <i>philanthropie</i><par n="abeille__n"/></e>
 <e lm="philatélie" a="paradigme_auto">            <i>philatélie</i><par n="abeille__n"/></e>
 <e lm="philatéliste" a="paradigme_auto">          <i>philatéliste</i><par n="artiste__n"/></e>
@@ -30949,11 +30969,7 @@
 <e lm="plumage" a="paradigme_auto">               <i>plumage</i><par n="livre__n"/></e>
 <e lm="plumer">                                   <i>plum</i><par n="abaiss/er__vblex"/></e>
 <e lm="plumet">                                   <i>plumet</i><par n="livre__n"/></e>
-<e lm="plus d'un" a="groupe_cree_auto">           <i>plus</i><par n="hier__adv"/><p><l><b/>d'un</l><r><g><b/>d'un</g></r></p></e>
-<e lm="plus d'un" a="groupe_cree_auto">           <i>plus</i><par n="mois__n"/><p><l><b/>d'un</l><r><g><b/>d'un</g></r></p></e>
 <e lm="plus exactement" a="paradigme_auto">       <i>plus<b/>exactement</i><par n="hier__adv"/></e>
-<e lm="plus fin" a="groupe_cree_auto">            <i>plus</i><par n="hier__adv"/><p><l><b/>fin</l><r><g><b/>fin</g></r></p></e>
-<e lm="plus fin" a="groupe_cree_auto">            <i>plus</i><par n="mois__n"/><p><l><b/>fin</l><r><g><b/>fin</g></r></p></e>
 <e lm="plus précisément" a="paradigme_auto">      <i>plus<b/>précisément</i><par n="hier__adv"/></e>
 <e lm="plus tard">                                <i>plus<b/>tard</i><par n="hier__adv"/></e>
 <e lm="Pluton">                                   <i>Pluton</i><par n="Andorre__np"/></e>
@@ -32489,7 +32505,7 @@
 <e lm="sélénium" a="paradigme_auto">              <i>sélénium</i><par n="livre__n"/></e>
 <e lm="selle" a="paradigme_auto">                 <i>selle</i><par n="abeille__n"/></e>
 <e lm="seller" a="paradigme_auto">                <i>sell</i><par n="abaiss/er__vblex"/></e>
-<e lm="semblant">                                 <i>semblant</i><par n="paradigme_inconnu__n"/></e>
+<e lm="semblant">                                 <i>semblant</i><par n="livre__n"/></e>
 <e lm="semelle" a="paradigme_auto">               <i>semelle</i><par n="abeille__n"/></e>
 <e lm="semence" a="paradigme_auto">               <i>semence</i><par n="abeille__n"/></e>
 <e lm="semer">                                    <i>s</i><par n="ach/e[T]er__vblex__m"/></e>
@@ -32501,7 +32517,7 @@
 <e lm="semiconductivité" a="paradigme_auto">      <i>semiconductivité</i><par n="abeille__n"/></e>
 <e lm="semi-groupe" a="paradigme_auto">           <i>semi-groupe</i><par n="abeille__n"/></e>
 <e lm="semi-linéaire" a="paradigme_auto">         <i>semi-linéaire</i><par n="académique__adj"/></e>
-<e lm="semi-marathon">                            <i>semi-marathon</i><par n="paradigme_inconnu__n"/></e>
+<e lm="semi-marathon">                            <i>semi-marathon</i><par n="livre__n"/></e>
 <e lm="semi-norme" a="paradigme_auto">            <i>semi-norme</i><par n="abeille__n"/></e>
 <e lm="sémiologie" a="paradigme_auto">            <i>sémiologie</i><par n="abeille__n"/></e>
 <e lm="sémiotique" a="paradigme_auto">            <i>sémiotique</i><par n="abeille__n"/></e>
@@ -32510,7 +32526,7 @@
 <e lm="sénateur">                                 <i>sénat</i><par n="administrat/eur__n"/></e>
 <e lm="Sénèque">                                  <i>Sénèque</i><par n="Abraham__np"/></e>
 <e lm="senescence" a="paradigme_auto">            <i>senescence</i><par n="abeille__n"/></e>
-<e lm="sénevé">                                   <i>sénevé</i><par n="paradigme_inconnu__n"/></e>
+<e lm="sénevé">                                   <i>sénevé</i><par n="livre__n"/></e>
 <e lm="sénile" a="paradigme_auto">                <i>sénile</i><par n="académique__adj"/></e>
 <e lm="sénilité" a="paradigme_auto">              <i>sénilité</i><par n="abeille__n"/></e>
 <e lm="sens de la répartie" a="groupe_cree_auto"> <i>sens</i><par n="mois__n"/><p><l><b/>de<b/>la<b/>répartie</l><r><g><b/>de<b/>la<b/>répartie</g></r></p></e>
@@ -32531,20 +32547,20 @@
 <e lm="septentrional">                            <i>septentriona</i><par n="amica/l__adj"/></e>
 <e lm="septième">                                 <i>septième</i><par n="artiste__n"/></e>
 <e lm="septièmement" a="paradigme_auto">          <i>septièmement</i><par n="hier__adv"/></e>
-<e lm="septuor">                                  <i>septuor</i><par n="paradigme_inconnu__n"/></e>
+<e lm="septuor">                                  <i>septuor</i><par n="livre__n"/></e>
 <e lm="sépulcral" a="paradigme_auto">             <i>sépulcra</i><par n="amica/l__adj"/></e>
-<e lm="sequin">                                   <i>sequin</i><par n="paradigme_inconnu__n"/></e>
-<e lm="sérail">                                   <i>sérail</i><par n="paradigme_inconnu__n"/></e>
-<e lm="séraphin">                                 <i>séraphin</i><par n="paradigme_inconnu__n"/></e>
+<e lm="sequin">                                   <i>sequin</i><par n="livre__n"/></e>
+<e lm="sérail">                                   <i>sérail</i><par n="livre__n"/></e>
+<e lm="séraphin">                                 <i>séraphin</i><par n="livre__n"/></e>
 <e lm="sérénité">                                 <i>sérénité</i><par n="abeille__n"/></e>
 <e lm="serf">                                     <i>ser</i><par n="jui/f__n"/></e>
 <e lm="serge" a="paradigme_auto">                 <i>serge</i><par n="abeille__n"/></e>
 <e lm="Serge">                                    <i>Serge</i><par n="Abraham__np"/></e>
 <e lm="sergent-chef">                             <i>sergent-chef</i><par n="paradigme_inconnu__n"/></e>
 <e lm="série de fonctions" a="groupe_cree_auto">  <i>série</i><par n="abeille__n"/><p><l><b/>de<b/>fonctions</l><r><g><b/>de<b/>fonctions</g></r></p></e>
-<e lm="seringa">                                  <i>seringa</i><par n="paradigme_inconnu__n"/></e>
+<e lm="seringa">                                  <i>seringa</i><par n="livre__n"/></e>
 <e lm="seringue" a="paradigme_auto">              <i>seringue</i><par n="abeille__n"/></e>
-<e lm="serin">                                    <i>serin</i><par n="paradigme_inconnu__n"/></e>
+<e lm="serin">                                    <i>serin</i><par n="livre__n"/></e>
 <e lm="serment">                                  <i>serment</i><par n="livre__n"/></e>
 <e lm="sermon">                                   <i>sermon</i><par n="livre__n"/></e>
 <e lm="sérothérapie" a="paradigme_auto">          <i>sérothérapie</i><par n="abeille__n"/></e>
@@ -32555,7 +32571,7 @@
 <e lm="serpillère">            <i>serpillère</i><par n="abeille__n"/></e>
 <e lm="serré">                                    <i>serré</i><par n="abaissant__adj"/></e>
 <e lm="sérum" a="paradigme_auto">                 <i>sérum</i><par n="livre__n"/></e>
-<e lm="serveur">                                  <i>serveur</i><par n="paradigme_inconnu__n"/></e>
+<e lm="serveur">                                  <i>serveu</i><par n="causeu/r__n"/></e>
 <e lm="serviable">                                <i>serviable</i><par n="académique__adj"/></e>
 <e lm="service de table" a="groupe_cree_auto">    <i>service</i><par n="livre__n"/><p><l><b/>de<b/>table</l><r><g><b/>de<b/>table</g></r></p></e>
 <e lm="serviette de bain" a="groupe_cree_auto">   <i>serviette</i><par n="abeille__n"/><p><l><b/>de<b/>bain</l><r><g><b/>de<b/>bain</g></r></p></e>
@@ -32567,41 +32583,41 @@
 <e lm="sesquilinéaire" a="paradigme_auto">        <i>sesquilinéaire</i><par n="académique__adj"/></e>
 <e lm="sesterce" a="paradigme_auto">              <i>sesterce</i><par n="abeille__n"/></e>
 <e lm="sétaire">               <i>sétaire</i><par n="abeille__n"/></e>
-<e lm="setâr">                                    <i>setâr</i><par n="paradigme_inconnu__n"/></e>
-<e lm="set">                                      <i>set</i><par n="paradigme_inconnu__n"/></e>
+<e lm="setâr">                                    <i>setâr</i><par n="livre__n"/></e>
+<e lm="set">                                      <i>set</i><par n="livre__n"/></e>
 <e lm="seulement si" a="paradigme_auto">          <i>seulement<b/>si</i><par n="hier__adv"/></e>
 <e lm="sevrer" a="paradigme_auto">                <i>sevr</i><par n="abaiss/er__vblex"/></e>
 <e lm="sexagésimal" a="paradigme_auto">           <i>sexagésima</i><par n="amica/l__adj"/></e>
 <e lm="sexisme">                                  <i>sexisme</i><par n="livre__n"/></e>
-<e lm="sextant">                                  <i>sextant</i><par n="paradigme_inconnu__n"/></e>
-<e lm="sextuplé">                                 <i>sextuplé</i><par n="paradigme_inconnu__n"/></e>
+<e lm="sextant">                                  <i>sextant</i><par n="livre__n"/></e>
+<e lm="sextuplé">                                 <i>sextuplé</i><par n="livre__n"/></e>
 <e lm="sexuellement transmissible">               <i>sexuellement<b/>transmissible</i><par n="académique__adj"/></e>
 <e lm="Shakespeare">                              <i>Shakespeare</i><par n="Abraham__np"/></e>
-<e lm="shako">                                    <i>shako</i><par n="paradigme_inconnu__n"/></e>
-<e lm="shakuhachi">                               <i>shakuhachi</i><par n="paradigme_inconnu__n"/></e>
-<e lm="shaligram">                                <i>shaligram</i><par n="paradigme_inconnu__n"/></e>
-<e lm="shamisen">                                 <i>shamisen</i><par n="paradigme_inconnu__n"/></e>
+<e lm="shako">                                    <i>shako</i><par n="livre__n"/></e>
+<e lm="shakuhachi">                               <i>shakuhachi</i><par n="livre__n"/></e>
+<e lm="shaligram">                                <i>shaligram</i><par n="livre__n"/></e>
+<e lm="shamisen">                                 <i>shamisen</i><par n="livre__n"/></e>
 <e lm="shampoing">                                <i>shampoing</i><par n="livre__n"/></e>
-<e lm="shanaï">                                   <i>shanaï</i><par n="paradigme_inconnu__n"/></e>
+<e lm="shanaï">                                   <i>shanaï</i><par n="livre__n"/></e>
 <e lm="Shanghai">                                 <i>Shanghai</i><par n="Andorre__np"/></e>
-<e lm="shekel">                                   <i>shekel</i><par n="paradigme_inconnu__n"/></e>
-<e lm="shell">                                    <i>shell</i><par n="paradigme_inconnu__n"/></e>
-<e lm="sherpa">                                   <i>sherpa</i><par n="paradigme_inconnu__n"/></e>
+<e lm="shekel">                                   <i>shekel</i><par n="livre__n"/></e>
+<e lm="shell">                                    <i>shell</i><par n="livre__n"/></e>
+<e lm="sherpa">                                   <i>sherpa</i><par n="livre__n"/></e>
 <e lm="shilling">                                 <i>shilling</i><par n="livre__n"/></e>
-<e lm="shintô">                                   <i>shintô</i><par n="paradigme_inconnu__n"/></e>
-<e lm="shintoïsme" a="paradigme_auto">            <i>shintoïsme</i><par n="abeille__n"/></e>
-<e lm="shiruko">                                  <i>shiruko</i><par n="paradigme_inconnu__n"/></e>
-<e lm="Shiva">                                    <i>Shiva</i><par n="paradigme_inconnu__n"/></e>
-<e lm="shivaïsme" a="paradigme_auto">             <i>shivaïsme</i><par n="abeille__n"/></e>
+<e lm="shintô">                                   <i>shintô</i><par n="livre__n"/></e>
+<e lm="shintoïsme">            <i>shintoïsme</i><par n="livre__n"/></e>
+<e lm="shiruko">                                  <i>shiruko</i><par n="livre__n"/></e>
+<e lm="Shiva">                                    <i>Shiva</i><par n="Abraham__np"/></e>
+<e lm="shivaïsme">             <i>shivaïsme</i><par n="livre__n"/></e>
 <e lm="shooter" a="paradigme_auto">               <i>shoot</i><par n="abaiss/er__vblex"/></e>
-<e lm="short">                                    <i>short</i><par n="paradigme_inconnu__n"/></e>
-<e lm="shrapnel">                                 <i>shrapnel</i><par n="paradigme_inconnu__n"/></e>
+<e lm="short">                                    <i>short</i><par n="livre__n"/></e>
+<e lm="shrapnel">                                 <i>shrapnel</i><par n="livre__n"/></e>
 <e lm="Sibérien">                                 <i>Sibérien</i><par n="ancien__n"/></e>
 <e lm="sibérien">                                 <i>sibérien</i><par n="ancien__adj"/></e>
 <e lm="sibyllin">                                 <i>sibyllin</i><par n="abaissant__adj"/></e>
-<e lm="sicle" a="paradigme_auto">                 <i>sicle</i><par n="abeille__n"/></e>
-<e lm="side-car">                                 <i>side-car</i><par n="paradigme_inconnu__n"/></e>
-<e lm="sidéen">                                   <i>sidéen</i><par n="paradigme_inconnu__n"/></e>
+<e lm="sicle">                 <i>sicle</i><par n="livre__n"/></e>
+<e lm="side-car">                                 <i>side-car</i><par n="livre__n"/></e>
+<e lm="sidéen">                                   <i>sidéen</i><par n="livre__n"/></e>
 <e lm="siècles" a="paradigme_auto">               <i>siècles</i><par n="mois__n"/></e>
 <e lm="siéger" a="paradigme_auto">                <i>si</i><par n="abr/é[G]er__vblex__g"/></e>
 <e lm="si et seulement si" a="paradigme_auto">    <i>si<b/>et<b/>seulement<b/>si</i><par n="hier__adv"/></e>
@@ -32613,13 +32629,14 @@
 <e lm="signe d'intégration" a="groupe_cree_auto"> <i>signe</i><par n="livre__n"/><p><l><b/>d'intégration</l><r><g><b/>d'intégration</g></r></p></e>
 <e lm="signe d'orientation" a="groupe_cree_auto"> <i>signe</i><par n="livre__n"/><p><l><b/>d'orientation</l><r><g><b/>d'orientation</g></r></p></e>
 <e lm="significativement">                        <i>significativement</i><par n="hier__adv"/></e>
-<e lm="sikh">                                     <i>sikh</i><par n="paradigme_inconnu__n"/></e>
+<e lm="Sikh">                                     <i>Sikh</i><par n="artiste__n"/></e>
+<e lm="sikh">                                     <i>sikh</i><par n="académique__adj"/></e>
 <e lm="sikhisme" a="paradigme_auto">              <i>sikhisme</i><par n="livre__n"/></e>
 <e lm="silex" a="paradigme_auto">                 <i>silex</i><par n="mois__n"/></e>
 <e lm="silicium">                                 <i>silicium</i><par n="livre__n"/></e>
 <e lm="Silicon Valley">                           <i>Silicon<b/>Valley</i><par n="Andorre__np"/></e>
 <e lm="sillon">                                   <i>sillon</i><par n="livre__n"/></e>
-<e lm="silo">                                     <i>silo</i><par n="paradigme_inconnu__n"/></e>
+<e lm="silo">                                     <i>silo</i><par n="livre__n"/></e>
 <e lm="silurien">                                 <i>silurien</i><par n="ancien__adj"/></e>
 <e lm="silurien">                                 <i>silurien</i><par n="livre__n"/></e>
 <e lm="Silvain">                                  <i>Silvain</i><par n="Abraham__np"/></e>
@@ -32647,25 +32664,26 @@
 <e lm="sioniste" a="paradigme_auto">              <i>sioniste</i><par n="artiste__n"/></e>
 <e lm="sioniste" a="paradigme_auto">              <i>sioniste</i><par n="académique__adj"/></e>
 <e lm="Sioux" a="paradigme_auto">                 <i>Sioux</i><par n="mois__n"/></e>
-<e lm="sioux">                                    <i>sioux</i><par n="anglais__adj"/></e>
-<e lm="sirocco">                                  <i>sirocco</i><par n="paradigme_inconnu__n"/></e>
-<e lm="sisal">                                    <i>sisal</i><par n="paradigme_inconnu__n"/></e>
+<e lm="sioux">                                    <i>sioux</i><par n="arrière__adj"/></e>
+<e lm="sirocco">                                  <i>sirocco</i><par n="livre__n"/></e>
+<e lm="sisal">                                    <i>sisal</i><par n="livre__n"/></e>
 <e lm="sismique" a="paradigme_auto">              <i>sismique</i><par n="académique__adj"/></e>
 <e lm="sistre">                <i>sistre</i><par n="livre__n"/></e>
 <e lm="si tant est que" a="paradigme_auto">       <i>si<b/>tant<b/>est<b/>que</i><par n="hier__adv"/></e>
-<e lm="sîtâr">                                    <i>sîtâr</i><par n="paradigme_inconnu__n"/></e>
+<e lm="sîtâr">                                    <i>sîtâr</i><par n="livre__n"/></e>
+<e lm="sitar">                                    <i>sitar</i><par n="livre__n"/></e>
 <e lm="sitôt" a="paradigme_auto">                 <i>sitôt</i><par n="hier__adv"/></e>
 <e lm="sitôt">                                    <i>sitôt</i><par n="attendu__pr"/></e>
 <e lm="sixièmement" a="paradigme_auto">           <i>sixièmement</i><par n="hier__adv"/></e>
 <e lm="sixte" a="paradigme_auto">                 <i>sixte</i><par n="abeille__n"/></e>
-<e lm="skate-board">                              <i>skate-board</i><par n="paradigme_inconnu__n"/></e>
+<e lm="skate-board">                              <i>skate-board</i><par n="livre__n"/></e>
 <e lm="sketch">                                   <i>sketch</i><par n="livre__n"/></e>
-<e lm="skieur">                                   <i>skieur</i><par n="paradigme_inconnu__n"/></e>
+<e lm="skieur">                                   <i>skieu</i><par n="causeu/r__n"/></e>
 <e lm="Slave" a="paradigme_auto">                 <i>Slave</i><par n="abeille__n"/></e>
 <e lm="slave">                                    <i>slave</i><par n="académique__adj"/></e>
-<e lm="slavisant">                                <i>slavisant</i><par n="paradigme_inconnu__n"/></e>
+<e lm="slavisant">                                <i>slavisant</i><par n="africain__n"/></e>
 <e lm="Slavon">                                   <i>Slavon</i><par n="paradigme_inconnu__np"/></e>
-<e lm="slip">                                     <i>slip</i><par n="paradigme_inconnu__n"/></e>
+<e lm="slip">                                     <i>slip</i><par n="livre__n"/></e>
 <e lm="slogan">                                   <i>slogan</i><par n="livre__n"/></e>
 <e lm="snober" a="paradigme_auto">                <i>snob</i><par n="abaiss/er__vblex"/></e>
 <e lm="snobisme" a="paradigme_auto">              <i>snobisme</i><par n="livre__n"/></e>
@@ -32680,7 +32698,7 @@
 <e lm="soc">                                      <i>soc</i><par n="livre__n"/></e>
 <e lm="socle">                                    <i>socle</i><par n="livre__n"/></e>
 <e lm="Socrate">                                  <i>Socrate</i><par n="Abraham__np"/></e>
-<e lm="soda">                                     <i>soda</i><par n="paradigme_inconnu__n"/></e>
+<e lm="soda">                                     <i>soda</i><par n="livre__n"/></e>
 <e lm="sœur">                                     <i>sœur</i><par n="abeille__n"/></e>
 <e lm="soigneux" a="paradigme_auto">              <i>soigneu</i><par n="affectueu/x__adj"/></e>
 <e lm="soins" a="paradigme_auto">                 <i>soins</i><par n="mois__n"/></e>
@@ -32692,47 +32710,47 @@
 <e lm="soldat de première classe" a="groupe_cree_auto"><i>soldat</i><par n="artiste__n"/><p><l><b/>de<b/>première<b/>classe</l><r><g><b/>de<b/>première<b/>classe</g></r></p></e>
 <e lm="sole" a="paradigme_auto">                  <i>sole</i><par n="abeille__n"/></e>
 <e lm="solennité">                                <i>solennité</i><par n="abeille__n"/></e>
-<e lm="solidago">                                 <i>solidago</i><par n="paradigme_inconnu__n"/></e>
+<e lm="solidago">                                 <i>solidago</i><par n="livre__n"/></e>
 <e lm="solide">                                   <i>solide</i><par n="artiste__n"/></e>
 <e lm="solitaire">                                <i>solitaire</i><par n="académique__adj"/></e>
 <e lm="solitaire">                                <i>solitaire</i><par n="livre__n"/></e>
 <e lm="Solutréen">                                <i>Solutréen</i><par n="paradigme_inconnu__np"/></e>
-<e lm="solvant">                                  <i>solvant</i><par n="paradigme_inconnu__n"/></e>
+<e lm="solvant">                                  <i>solvant</i><par n="livre__n"/></e>
 <e lm="sombrer" a="paradigme_auto">               <i>sombr</i><par n="abaiss/er__vblex"/></e>
 <e lm="sommairement" a="paradigme_auto">          <i>sommairement</i><par n="hier__adv"/></e>
 <e lm="sommation" a="paradigme_auto">             <i>sommation</i><par n="abeille__n"/></e>
 <e lm="sommeil">                                  <i>sommeil</i><par n="livre__n"/></e>
 <e lm="sommeiller">                               <i>sommeill</i><par n="abaiss/er__vblex"/></e>
 <e lm="somme">                                    <i>somme</i><par n="abeille__n"/></e>
-<e lm="sommelier">                                <i>sommelier</i><par n="paradigme_inconnu__n"/></e>
+<e lm="sommelier">                                <i>sommeli</i><par n="bouch/er__n"/></e>
 <e lm="sommet du crâne" a="groupe_cree_auto">     <i>sommet</i><par n="livre__n"/><p><l><b/>du<b/>crâne</l><r><g><b/>du<b/>crâne</g></r></p></e>
 <e lm="sommité" a="paradigme_auto">               <i>sommité</i><par n="abeille__n"/></e>
 <e lm="somnambule" a="paradigme_auto">            <i>somnambule</i><par n="abeille__n"/></e>
 <e lm="somnifère">                                <i>somnifère</i><par n="livre__n"/></e>
 <e lm="somnifère">                                <i>somnifère</i><par n="académique__adj"/></e>
 <e lm="somnoler" a="paradigme_auto">              <i>somnol</i><par n="appel/er__vblex"/></e>
-<e lm="sonar">                                    <i>sonar</i><par n="paradigme_inconnu__n"/></e>
+<e lm="sonar">                                    <i>sonar</i><par n="livre__n"/></e>
 <e lm="sonate" a="paradigme_auto">                <i>sonate</i><par n="abeille__n"/></e>
 <e lm="sonde">                                    <i>sonde</i><par n="abeille__n"/></e>
 <e lm="sonder" a="paradigme_auto">                <i>sond</i><par n="abaiss/er__vblex"/></e>
 <e lm="sonnaille" a="paradigme_auto">             <i>sonnaille</i><par n="abeille__n"/></e>
 <e lm="sonner de la trompette" a="groupe_cree_auto"><i>sonn</i><par n="abaiss/er__vblex"/><p><l><b/>de<b/>la<b/>trompette</l><r><g><b/>de<b/>la<b/>trompette</g></r></p></e>
 <e lm="sonnet">                                   <i>sonnet</i><par n="livre__n"/></e>
-<e lm="sonneur">                                  <i>sonneur</i><par n="paradigme_inconnu__n"/></e>
+<e lm="sonneur">                                  <i>sonneu</i><par n="causeu/r__n"/></e>
 <e lm="sophisme" a="paradigme_auto">              <i>sophisme</i><par n="livre__n"/></e>
 <e lm="sophiste" a="paradigme_auto">              <i>sophiste</i><par n="artiste__n"/></e>
 <e lm="sophiste" a="paradigme_auto">              <i>sophiste</i><par n="académique__adj"/></e>
 <e lm="sophistiqué" a="paradigme_auto">           <i>sophistiqué</i><par n="abaissant__adj"/></e>
 <e lm="sophistique" a="paradigme_auto">           <i>sophistique</i><par n="abeille__n"/></e>
-<e lm="sophora">                                  <i>sophora</i><par n="paradigme_inconnu__n"/></e>
+<e lm="sophora">                                  <i>sophora</i><par n="livre__n"/></e>
 <e lm="sophrologie" a="paradigme_auto">           <i>sophrologie</i><par n="abeille__n"/></e>
 <e lm="sophrologue" a="paradigme_auto">           <i>sophrologue</i><par n="artiste__n"/></e>
 <e lm="sopraniste" a="paradigme_auto">            <i>sopraniste</i><par n="artiste__n"/></e>
 <e lm="sorbe" a="paradigme_auto">                 <i>sorbe</i><par n="abeille__n"/></e>
-<e lm="sorbet">                                   <i>sorbet</i><par n="paradigme_inconnu__n"/></e>
+<e lm="sorbet">                                   <i>sorbet</i><par n="livre__n"/></e>
 <e lm="sorcellerie" a="paradigme_auto">           <i>sorcellerie</i><par n="abeille__n"/></e>
 <e lm="sorcier">                                  <i>sorci</i><par n="bouch/er__n"/></e>
-<e lm="sorgho">                                   <i>sorgho</i><par n="paradigme_inconnu__n"/></e>
+<e lm="sorgho">                                   <i>sorgho</i><par n="livre__n"/></e>
 <e lm="sortir de" a="groupe_cree_auto">           <i>sor</i><par n="consen/tir__vblex"/><p><l><b/>de</l><r><g><b/>de</g></r></p></e>
 <e lm="sortir de chez soi" a="groupe_cree_auto">  <i>sor</i><par n="consen/tir__vblex"/><p><l><b/>de<b/>chez<b/>soi</l><r><g><b/>de<b/>chez<b/>soi</g></r></p></e>
 <e lm="sortir de l'ordinaire" a="groupe_cree_auto"><i>sor</i><par n="consen/tir__vblex"/><p><l><b/>de<b/>l'ordinaire</l><r><g><b/>de<b/>l'ordinaire</g></r></p></e>
@@ -32743,13 +32761,13 @@
 <e lm="sot">                                      <i>sot</i><par n="sujet__adj"/></e>
 <e lm="soubassement" a="paradigme_auto">          <i>soubassement</i><par n="livre__n"/></e>
 <e lm="soucier de" a="groupe_cree_auto">          <i>souci</i><par n="abaiss/er__vblex"/><p><l><b/>de</l><r><g><b/>de</g></r></p></e>
-<e lm="souci">                                    <i>souci</i><par n="paradigme_inconnu__n"/></e>
+<e lm="souci">                                    <i>souci</i><par n="livre__n"/></e>
 <e lm="soude" a="paradigme_auto">                 <i>soude</i><par n="abeille__n"/></e>
 <e lm="souder" a="paradigme_auto">                <i>soud</i><par n="abaiss/er__vblex"/></e>
 <e lm="soudoyer" a="paradigme_auto">              <i>soudo</i><par n="bala/yer__vblex"/></e>
 <e lm="souffle">                                  <i>souffle</i><par n="livre__n"/></e>
 <e lm="soufflet">                                 <i>soufflet</i><par n="livre__n"/></e>
-<e lm="souffleur">                                <i>souffleur</i><par n="paradigme_inconnu__n"/></e>
+<e lm="souffleur">                                <i>souffleu</i><par n="causeu/r__n"/></e>
 <e lm="soufre">                <i>soufre</i><par n="livre__n"/></e>
 <e lm="souiller">                                 <i>souill</i><par n="abaiss/er__vblex"/></e>
 <e lm="sou">                                      <i>sou</i><par n="livre__n"/></e>
@@ -32787,7 +32805,7 @@
 <e lm="sous-groupe">           <i>sous-groupe</i><par n="livre__n"/></e>
 <e lm="sous-espace">           <i>sous-espace</i><par n="livre__n"/></e>
 <e lm="sous-lieutenant">                          <i>sous-lieutenant</i><par n="livre__n"/></e>
-<e lm="souslik">                                  <i>souslik</i><par n="paradigme_inconnu__n"/></e>
+<e lm="souslik">                                  <i>souslik</i><par n="livre__n"/></e>
 <e lm="sous-louer" a="paradigme_auto">            <i>sous-lou</i><par n="abaiss/er__vblex"/></e>
 <e lm="sous-matrice" a="paradigme_auto">          <i>sous-matrice</i><par n="abeille__n"/></e>
 <e lm="sous-module">           <i>sous-module</i><par n="livre__n"/></e>
@@ -32805,17 +32823,17 @@
 <e lm="sous-vêtement" a="paradigme_auto">         <i>sous-vêtement</i><par n="livre__n"/></e>
 <e lm="soutien-gorge" a="paradigme_auto">         <i>soutien-gorge</i><par n="abeille__n"/></e>
 <e lm="soutirer">                                 <i>soutir</i><par n="abaiss/er__vblex"/></e>
-<e lm="soutra">                                   <i>soutra</i><par n="paradigme_inconnu__n"/></e>
+<e lm="soutra">                                   <i>soutra</i><par n="livre__n"/></e>
 <e lm="soviet">                                   <i>soviet</i><par n="livre__n"/></e>
 <e lm="soyeux">                                   <i>soyeu</i><par n="affectueu/x__adj"/></e>
 <e lm="spaghetti">                                <i>spaghetti</i><par n="livre__n"/></e>
 <e lm="spameur">                                  <i>spameur</i><par n="causeu/r__n"/></e>
 <e lm="spam">                                     <i>spam</i><par n="livre__n"/></e>
-<e lm="spart">                                    <i>spart</i><par n="paradigme_inconnu__n"/></e>
-<e lm="spasme" a="paradigme_auto">                <i>spasme</i><par n="abeille__n"/></e>
+<e lm="spart">                                    <i>spart</i><par n="livre__n"/></e>
+<e lm="sparte">                                    <i>sparte</i><par n="livre__n"/></e>
+<e lm="spasme">                <i>spasme</i><par n="livre__n"/></e>
 <e lm="spatule" a="paradigme_auto">               <i>spatule</i><par n="abeille__n"/></e>
-<e lm="speakerine" a="paradigme_auto">            <i>speakerine</i><par n="abeille__n"/></e>
-<e lm="speaker">                                  <i>speaker</i><par n="paradigme_inconnu__n"/></e>
+<e lm="speaker">                                  <i>speaker</i><par n="speaker__n"/></e>
 <e lm="spécifier" a="paradigme_auto">             <i>spécifi</i><par n="abaiss/er__vblex"/></e>
 <e lm="spécifique">                               <i>spécifique</i><par n="académique__adj"/></e>
 <e lm="spécimen">                                 <i>spécimen</i><par n="livre__n"/></e>
@@ -32860,9 +32878,9 @@
 <e lm="stalagmite" a="paradigme_auto">            <i>stalagmite</i><par n="abeille__n"/></e>
 <e lm="stance" a="paradigme_auto">                <i>stance</i><par n="abeille__n"/></e>
 <e lm="stand de tir" a="groupe_cree_auto"><i>stand</i><par n="livre__n"/><p><l><b/>de<b/>tir</l><r><g><b/>de<b/>tir</g></r></p></e>
-<e lm="standing">                                 <i>standing</i><par n="paradigme_inconnu__n"/></e>
+<e lm="standing">                                 <i>standing</i><par n="livre__n"/></e>
 <e lm="stand">                                    <i>stand</i><par n="livre__n"/></e>
-<e lm="stanza">                                   <i>stanza</i><par n="paradigme_inconnu__n"/></e>
+<e lm="stanza">                                   <i>stanza</i><par n="abeille__n"/></e>
 <e lm="star">                                     <i>star</i><par n="abeille__n"/></e>
 <e lm="Star">                                     <i>Star</i><par n="paradigme_inconnu__n"/></e>
 <!-- <e lm="statère">               <i>statère</i><par n="abeille__n"/></e> -->
@@ -33167,7 +33185,8 @@
 <e lm="tantra">                                   <i>tantra</i><par n="livre__n"/></e>
 <e lm="tantrisme" a="paradigme_auto">             <i>tantrisme</i><par n="livre__n"/></e>
 <e lm="taoïsme">                                  <i>taoïsme</i><par n="livre__n"/></e>
-<e lm="taoïste" a="paradigme_auto">               <i>taoïste</i><par n="abeille__n"/></e>
+<e lm="taoïste" a="paradigme_auto">               <i>taoïste</i><par n="artiste__n"/></e>
+<e lm="taoïste" a="paradigme_auto">               <i>taoïste</i><par n="académique__adj"/></e>
 <e lm="tao">                                      <i>tao</i><par n="livre__n"/></e>
 <e lm="taon">                                     <i>taon</i><par n="paradigme_inconnu__n"/></e>
 <e lm="tapage" a="paradigme_auto">                <i>tapage</i><par n="livre__n"/></e>
@@ -33211,7 +33230,6 @@
 <e lm="Tchoukotka">                               <i>Tchoukotka</i><par n="Andorre__np"/></e>
 <e lm="Tchouktche">                               <i>Tchouktche</i><par n="artiste__n"/></e>
 <e lm="tchouktche">                               <i>tchouktche</i><par n="académique__adj"/></e>
-<e lm="té" a="paradigme_auto">                    <i>té</i><par n="abaissant__adj"/></e>
 <e lm="technétium" a="paradigme_auto">            <i>technétium</i><par n="livre__n"/></e>
 <e lm="technique">                                <i>technique</i><par n="abeille__n"/></e>
 <e lm="technocrate">           <i>technocrate</i><par n="artiste__n"/></e>
@@ -33302,7 +33320,6 @@
 <e lm="tête de linotte" a="groupe_cree_auto">     <i>tête</i><par n="abeille__n"/><p><l><b/>de<b/>linotte</l><r><g><b/>de<b/>linotte</g></r></p></e>
 <e lm="tête de mule" a="groupe_cree_auto">        <i>tête</i><par n="abeille__n"/><p><l><b/>de<b/>mule</l><r><g><b/>de<b/>mule</g></r></p></e>
 <e lm="tête de turc" a="groupe_cree_auto">        <i>tête</i><par n="abeille__n"/><p><l><b/>de<b/>turc</l><r><g><b/>de<b/>turc</g></r></p></e>
-<e lm="tête en l'air" a="groupe_cree_auto">       <i>tête</i><par n="abeille__n"/><p><l><b/>en<b/>l'air</l><r><g><b/>en<b/>l'air</g></r></p></e>
 <e lm="téter" a="paradigme_auto">                 <i>tét</i><par n="abaiss/er__vblex"/></e>
 <e lm="tétine" a="paradigme_auto">                <i>tétine</i><par n="abeille__n"/></e>
 <e lm="têton">                                    <i>têton</i><par n="paradigme_inconnu__n"/></e>
@@ -33783,7 +33800,6 @@
 <e lm="vaudeville" a="paradigme_auto">            <i>vaudeville</i><par n="abeille__n"/></e>
 <e lm="Vaudou">                                   <i>Vaudou</i><par n="paradigme_inconnu__np"/></e>
 <e lm="vaurien">                                  <i>vaurien</i><par n="ancien__n"/></e>
-<e lm="vé" a="paradigme_auto">                    <i>vé</i><par n="abaissant__adj"/></e>
 <e lm="veau">                                     <i>veau</i><par n="lieu__n"/></e>
 <e lm="vecteur" a="paradigme_auto">               <i>vect</i><par n="administrat/eur__n"/></e>
 <e lm="vectoriel" a="paradigme_auto">             <i>vectoriel</i><par n="annuel__adj"/></e>
