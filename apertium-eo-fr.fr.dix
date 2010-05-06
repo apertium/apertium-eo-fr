@@ -3768,9 +3768,9 @@
 
 </pardef>
 <pardef n="cent__num">
-<e>       <p><l></l>          <r><s n="num"/><s n="mf"/><s n="sg"/></r></p></e>
+<e>       <p><l></l>          <r><s n="num"/><s n="mf"/><s n="pl"/></r></p></e>
 
-<e>       <p><l>s</l>         <r><s n="num"/><s n="mf"/><s n="pl"/></r></p></e>
+<e r="LR"><p><l>s</l>         <r><s n="num"/><s n="mf"/><s n="pl"/></r></p></e>
 
 </pardef>
 <pardef n="zéro__num">
@@ -4098,7 +4098,7 @@
 
 </pardef>
 <pardef n="cinq__num">
-<e>       <p><l></l>          <r><s n="num"/><s n="mf"/><s n="sp"/></r></p></e>
+<e>       <p><l></l>          <r><s n="num"/><s n="mf"/><s n="pl"/></r></p></e>
 
 </pardef>
 <pardef n="cinquante_et_un__det">
@@ -4112,7 +4112,7 @@
 
 </pardef>
 <pardef n="cinquante_et_un__num">
-<e>       <p><l></l>          <r><s n="num"/><s n="m"/><s n="sp"/></r></p></e>
+<e>       <p><l></l>          <r><s n="num"/><s n="m"/><s n="pl"/></r></p></e>
 
 </pardef>
 <pardef n="baron__n" c="autoconcord:m_f,sgpl">
@@ -8127,9 +8127,9 @@
 
 </pardef>
 <pardef n="mil__num">
-<e>       <p><l></l>          <r><s n="num"/><s n="m"/><s n="sp"/></r></p></e>
+<e>       <p><l></l>          <r><s n="num"/><s n="m"/><s n="pl"/></r></p></e>
 
-<e>       <p><l>le</l>        <r><s n="num"/><s n="f"/><s n="sp"/></r></p></e>
+<e>       <p><l>le</l>        <r><s n="num"/><s n="f"/><s n="pl"/></r></p></e>
 
 </pardef>
 <pardef n="mois__n" c="autoconcord:m,sp">
@@ -16127,7 +16127,8 @@
 <e lm="un">                                       <i>un</i><par n="un__prn"/></e>
 <e lm="un">                                       <par n="/un__det"/></e>
 <e lm="un">                                       <par n="/un__num"/></e>
-<e lm="uni">                                 <i>uni</i><par n="abaissant__adj"/></e>
+<e lm="uni">                                      <i>uni</i><par n="abaissant__adj"/></e>
+<e lm="uniformément">                             <i>uniformément</i><par n="hier__adv"/></e>
 <e lm="uniforme">                                 <i>uniforme</i><par n="académique__adj"/></e>
 <e lm="uniforme">                                 <i>uniforme</i><par n="accessoire__n"/></e>
 <e lm="union">                                    <i>union</i><par n="abeille__n"/></e>
@@ -26160,7 +26161,6 @@
 <e lm="fâcheux">                                  <i>fâcheu</i><par n="affectueu/x__adj"/></e>
 <e lm="façon de parler" a="groupe_cree_auto">     <i>façon</i><par n="abeille__n"/><p><l><b/>de<b/>parler</l><r><g><b/>de<b/>parler</g></r></p></e>
 <e lm="façonner" a="paradigme_auto">              <i>façonn</i><par n="abaiss/er__vblex"/></e>
-<e lm="façons" a="paradigme_auto">                <i>façons</i><par n="mois__n"/></e>
 <e lm="fac-similé">                               <i>fac-similé</i><par n="accessoire__n"/></e>
 <e lm="factice" a="paradigme_auto">               <i>factice</i><par n="académique__adj"/></e>
 <e lm="factoriel" a="paradigme_auto">             <i>factoriel</i><par n="annuel__adj"/></e>
@@ -28135,7 +28135,6 @@
 <e lm="indépendant" a="paradigme_auto">          <i>indépendant</i><par n="abaissant__adj"/></e>
 <e lm="indépendantisme" a="paradigme_auto">       <i>indépendantisme</i><par n="accessoire__n"/></e>
 <e lm="indépendantiste">                          <i>indépendantiste</i><par n="artiste__n"/></e>
-<e lm="indépendantiste">                          <i>indépendantiste</i><par n="académique__adj"/></e>
 <e lm="indéterminée" a="paradigme_auto">          <i>indéterminée</i><par n="abeille__n"/></e>
 <e lm="indéterminisme" a="paradigme_auto">        <i>indéterminisme</i><par n="accessoire__n"/></e>
 <e lm="indicatif">                                <i>indicati</i><par n="affirmati/f__adj"/></e>

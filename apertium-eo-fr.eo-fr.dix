@@ -30,6 +30,7 @@
     <sdef n="ind" /> 
     <sdef n="preadv" /> 
     <sdef n="vaux" /> 
+    <sdef n="alt" /> 
     <sdef n="ant" /> 
     <sdef n="gen" /> 
     <sdef n="sp" /> 
@@ -226,14 +227,14 @@
 <e>       <p><l>kun<b/>mi<s n="prn"/></l>              <r>avec<b/>moi<s n="prn"/><s n="tn"/></r></p></e>
 <e>       <p><l>kun<b/>si<s n="prn"/></l>              <r>avec<b/>soi<s n="prn"/><s n="tn"/></r></p></e>
 <e>       <p><l>kun<b/>vi<s n="prn"/></l>              <r>avec<b/>toi<s n="prn"/><s n="tn"/></r></p></e>
-<e>       <p><l>tiu<s n="prn"/></l>                    <r>ce<s n="prn"/></r></p></e>
-<e r="LR"><p><l>ĉi<b/>tiu<s n="prn"/></l>            <r>ce<s n="prn"/></r></p></e>
+<e r="RL"><p><l>tiu<s n="prn"/></l>                    <r>ce<s n="prn"/></r></p></e>
 <e>       <p><l>tio<b/>ĉi<s n="prn"/></l>              <r>ceci<s n="prn"/></r></p></e>
+<e r="LR"><p><l>ĉi<b/>tio<s n="prn"/></l>              <r>ceci<s n="prn"/></r></p></e>
 <e>       <p><l>tio<s n="prn"/></l>                    <r>cela<s n="prn"/></r></p></e>
 <e r="RL"><p><l>tiu<s n="prn"/></l>                    <r>celui<s n="prn"/></r></p></e>
-<e>       <p><l>ĉi<b/>tiu<s n="vblex"/></l>            <r>celui-ci<s n="prn"/></r></p></e>
+<e>       <p><l>ĉi<b/>tiu<s n="prn"/></l>            <r>celui-ci<s n="prn"/></r></p></e>
 <e r="LR"><p><l>tiu<b/>ĉi<s n="prn"/></l>              <r>celui-ci<s n="prn"/></r></p></e>
-<e r="RL"><p><l>tiu<s n="prn"/></l>                    <r>celui-là<s n="prn"/></r></p></e>
+<e>       <p><l>tiu<s n="prn"/></l>                    <r>celui-là<s n="prn"/></r></p></e>
 <e>       <p><l>iu<s n="prn"/></l>                     <r>certains<s n="prn"/></r></p></e>
 <e>       <p><l>ĉiu<s n="prn"/></l>                    <r>chacun<s n="prn"/></r></p></e>
 <e>       <p><l>kiom<s n="prn"/><s n="itg"/></l>       <r>combien<s n="prn"/><s n="itg"/><s n="mf"/><s n="sp"/></r></p></e>
@@ -1481,7 +1482,6 @@
 <e>       <p><l>dedekinda<s n="adj"/></l>              <r>de<b/>Dedekind<s n="adj"/></r></p></e>
 <e r="RL"><p><l>grada<s n="adj"/></l>                  <r>de<b/>degré<s n="adj"/></r></p></e>
 <e>       <p><l>morgaŭa<s n="adj"/></l>                <r>de<b/>demain<s n="adj"/></r></p></e>
-<e>       <p><l>el<b/>malantaŭ<s n="pr"/></l>          <r>de<b/>derrière<s n="adj"/></r></p></e>
 <e>       <p><l>malantaŭa<s n="adj"/></l>              <r>de<b/>derrière<s n="adj"/></r></p></e>
 <e>       <p><l>kartezia<s n="adj"/></l>               <r>de<b/>Descartes<s n="adj"/></r></p></e>
 <e>       <p><l>funebra<s n="adj"/></l>                <r>de<b/>deuil<s n="adj"/></r></p></e>
@@ -1981,7 +1981,7 @@
 <e r="LR"><p><l>akurata<s n="adj"/></l>                <r>exact<s n="adj"/></r></p></e>
 <e>       <p><l>ekzakta<s n="adj"/></l>                <r>exact<s n="adj"/></r></p></e>
 <e>       <p><l>bonega<s n="adj"/></l>                 <r>excellent<s n="adj"/></r></p></e>
-<e>       <p><l>ekstra<s n="adj"/></l>                 <r>excellent<s n="adj"/></r></p></e>
+<e r="LR"><p><l>ekstra<s n="adj"/></l>                 <r>excellent<s n="adj"/></r></p></e>
 <e>       <p><l>ekscentra<s n="adj"/></l>              <r>excentrique<s n="adj"/></r></p></e>
 <e r="LR"><p><l>discentra<s n="adj"/></l>              <r>excentrique<s n="adj"/></r></p></e>
 <e r="LR"><p><l>ekstravaganca<s n="adj"/></l>          <r>excentrique<s n="adj"/></r></p></e>
@@ -4782,21 +4782,22 @@
 <e>       <p><l>topologia<s n="adj"/></l>              <r>topologique<s n="adj"/></r></p></e>
 <e>       <p><l>malrekta<s n="adj"/></l>               <r>tordu<s n="adj"/></r></p></e>
 <e>       <p><l>arda<s n="adj"/></l>                   <r>torride<s n="adj"/></r></p></e>
-<e>       <p><l>varmega<s n="adj"/></l>                <r>torride<s n="adj"/></r></p></e>
+<e r="LR"><p><l>varmega<s n="adj"/></l>                <r>torride<s n="adj"/></r></p></e>
 <e>       <p><l>kolerega<s n="adj"/></l>               <r>tortu<s n="adj"/></r></p></e>
 <e>       <p><l>serpenta<s n="adj"/></l>               <r>tortueux<s n="adj"/></r></p></e>
-<e>       <p><l>sinua<s n="adj"/></l>                  <r>tortueux<s n="adj"/></r></p></e>
+<e r="LR"><p><l>sinua<s n="adj"/></l>                  <r>tortueux<s n="adj"/></r></p></e>
 <e>       <p><l>toskana<s n="adj"/></l>                <r>toscan<s n="adj"/></r></p></e>
-<e>       <p><l>tuta<s n="adj"/></l>                   <r>total<s n="adj"/></r></p></e>
-<e>       <p><l>absoluta<s n="adj"/></l>               <r>total<s n="adj"/></r></p></e>
-<e>       <p><l>kompleta<s n="adj"/></l>               <r>total<s n="adj"/></r></p></e>
-<e>       <p><l>plena<s n="adj"/></l>                  <r>total<s n="adj"/></r></p></e>
+<e r="LR"><p><l>tuta<s n="adj"/></l>                   <r>total<s n="adj"/></r></p></e>
+<e r="LR"><p><l>absoluta<s n="adj"/></l>               <r>total<s n="adj"/></r></p></e>
+<e r="LR"><p><l>kompleta<s n="adj"/></l>               <r>total<s n="adj"/></r></p></e>
+<e r="LR"><p><l>plena<s n="adj"/></l>                  <r>total<s n="adj"/></r></p></e>
 <e>       <p><l>totala<s n="adj"/></l>                 <r>total<s n="adj"/></r></p></e>
-<e>       <p><l>tuteca<s n="adj"/></l>                 <r>total<s n="adj"/></r></p></e>
+<e r="LR"><p><l>tuteca<s n="adj"/></l>                 <r>total<s n="adj"/></r></p></e>
 <e>       <p><l>koncerna<s n="adj"/></l>               <r>touché<s n="adj"/></r></p></e>
 <e>       <p><l>densa<s n="adj"/></l>                  <r>touffu<s n="adj"/></r></p></e>
 <e>       <p><l>turmenta<s n="adj"/></l>               <r>tourmentant<s n="adj"/></r></p></e>
 <e>       <p><l>tuta<s n="adj"/></l>                   <r>tout<s n="adj"/></r></p></e>
+<e>       <p><l>tuta<s n="adj"/></l>                   <r>tout<s n="predet"/></r></p></e>
 <e>       <p><l>ĉiopova<s n="adj"/></l>                <r>tout-puissant<s n="adj"/></r></p></e>
 <e>       <p><l>apuda<s n="adj"/></l>                  <r>tout<b/>proche<s n="adj"/></r></p></e>
 <e>       <p><l>venena<s n="adj"/></l>                 <r>toxique<s n="adj"/></r></p></e>
@@ -4804,11 +4805,11 @@
 <e>       <p><l>tragika<s n="adj"/></l>                <r>tragique<s n="adj"/></r></p></e>
 <e>       <p><l>tragedia<s n="adj"/></l>               <r>tragique<s n="adj"/></r></p></e>
 <e>       <p><l>insida<s n="adj"/></l>                 <r>traitre<s n="adj"/></r></p></e>
-<e>       <p><l>insidema<s n="adj"/></l>               <r>traitre<s n="adj"/></r></p></e>
+<e r="LR"><p><l>insidema<s n="adj"/></l>               <r>traitre<s n="adj"/></r></p></e>
 <e>       <p><l>perfida<s n="adj"/></l>                <r>traitre<s n="adj"/></r></p></e>
 <e>       <p><l>trankvila<s n="adj"/></l>              <r>tranquille<s n="adj"/></r></p></e>
 <e>       <p><l>transcenda<s n="adj"/></l>             <r>transcendant<s n="adj"/></r></p></e>
-<e>       <p><l>transira<s n="adj"/></l>               <r>transitif<s n="adj"/></r></p></e>
+<e r="LR"><p><l>transira<s n="adj"/></l>               <r>transitif<s n="adj"/></r></p></e>
 <e>       <p><l>transitiva<s n="adj"/></l>             <r>transitif<s n="adj"/></r></p></e>
 <e>       <p><l>transira<s n="adj"/></l>               <r>transitoire<s n="adj"/></r></p></e>
 <e>       <p><l>diafana<s n="adj"/></l>                <r>translucide<s n="adj"/></r></p></e>
@@ -4824,11 +4825,11 @@
 <e r="LR"><p><l>kvaronjara<s n="adj"/></l>             <r>trimestriel<s n="adj"/></r></p></e>
 <e>       <p><l>triobla<s n="adj"/></l>                <r>triple<s n="adj"/></r></p></e>
 <e>       <p><l>malĝoja<s n="adj"/></l>                <r>triste<s n="adj"/></r></p></e>
-<e>       <p><l>malgaja<s n="adj"/></l>                <r>triste<s n="adj"/></r></p></e>
+<e r="LR"><p><l>malgaja<s n="adj"/></l>                <r>triste<s n="adj"/></r></p></e>
 <e>       <p><l>fifama<s n="adj"/></l>                 <r>tristement<b/>célèbre<s n="adj"/></r></p></e>
-<e>       <p><l>banala<s n="adj"/></l>                 <r>trivial<s n="adj"/></r></p></e>
+<e r="LR"><p><l>banala<s n="adj"/></l>                 <r>trivial<s n="adj"/></r></p></e>
 <e>       <p><l>triviala<s n="adj"/></l>               <r>trivial<s n="adj"/></r></p></e>
-<e>       <p><l>vulgara<s n="adj"/></l>                <r>trivial<s n="adj"/></r></p></e>
+<e r="LR"><p><l>vulgara<s n="adj"/></l>                <r>trivial<s n="adj"/></r></p></e>
 <e>       <p><l>tria<s n="adj"/></l>                   <r>troisième<s n="adj"/></r></p></e>
 <e r="LR"><p><l>falsema<s n="adj"/></l>                <r>trompeur<s n="adj"/></r></p></e>
 <e r="LR"><p><l>insida<s n="adj"/></l>                 <r>trompeur<s n="adj"/></r></p></e>
@@ -4839,7 +4840,7 @@
 <e>       <p><l>vidavida<s n="adj"/></l>               <r>trop<b/>curieux<s n="adj"/></r></p></e>
 <e>       <p><l>tropika<s n="adj"/></l>                <r>tropical<s n="adj"/></r></p></e>
 <e>       <p><l>trua<s n="adj"/></l>                   <r>troué<s n="adj"/></r></p></e>
-<e>       <p><l>truhava<s n="adj"/></l>                <r>troué<s n="adj"/></r></p></e>
+<e r="LR"><p><l>truhava<s n="adj"/></l>                <r>troué<s n="adj"/></r></p></e>
 <e>       <p><l>grandaĝa<s n="adj"/></l>               <r>très<b/>agé<s n="adj"/></r></p></e>
 <e r="LR"><p><l>profundaĝa<s n="adj"/></l>             <r>très<b/>agé<s n="adj"/></r></p></e>
 <e>       <p><l>naskema<s n="adj"/></l>                <r>très<b/>fécond<s n="adj"/></r></p></e>
@@ -4870,7 +4871,10 @@
 <e>       <p><l>ia<s n="adj"/></l>                     <r>une<b/>sorte<b/>de<s n="adj"/></r></p></e>
 <e>       <p><l>kvazaŭa<s n="adj"/></l>                <r>une<b/>sorte<b/>de<s n="adj"/></r></p></e>
 <e>       <p><l>uniata<s n="adj"/></l>                 <r>uniate<s n="adj"/></r></p></e>
-<e>       <p><l>unuforma<s n="adj"/></l>               <r>uniforme<s n="adj"/></r></p></e>
+<e r="LR"><p><l>unuforma<s n="adj"/></l>               <r>uniforme<s n="adj"/></r></p></e>
+<e>       <p><l>uniforma<s n="adj"/></l>               <r>uniforme<s n="adj"/></r></p></e>
+<e r="LR"><p><l>unuforme<s n="adv"/></l>               <r>uniformément<s n="adv"/></r></p></e>
+<e>       <p><l>uniforme<s n="adv"/></l>               <r>uniformément<s n="adv"/></r></p></e>
 <e>       <p><l>kontinuega<s n="adj"/></l>             <r>uniformément<b/>continu<s n="adj"/></r></p></e>
 <e>       <p><l>unuforme<b/>konverĝa<s n="adj"/></l>   <r>uniformément<b/>convergent<s n="adj"/></r></p></e>
 <e>       <p><l>unuhava<s n="adj"/></l>                <r>unifère<s n="adj"/></r></p></e>
@@ -10766,7 +10770,7 @@
 <e>       <p><l>dermito<s n="n"/></l>                  <r>dermite<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>galeopiteko<s n="n"/></l>              <r>dermoptère<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>argano<s n="n"/></l>                   <r>derrick<s n="n"/></r></p></e>
-<e>       <p><l>malantaŭaĵo<s n="n"/></l>              <r>derrière<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>malantaŭaĵo<s n="n"/></l>              <r>derrière<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>malantaŭo<s n="n"/></l>                <r>derrière<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>postaĵo<s n="n"/></l>                  <r>derrière<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>derviŝo<s n="n"/></l>                  <r>derviche<s n="n"/><s n="f"/></r></p></e>
@@ -11340,18 +11344,18 @@
 <e>       <p><l>dekokto<s n="n"/></l>                  <r>décoction<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>dekoltaĵo<s n="n"/></l>                <r>décolleté<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>falo<s n="n"/></l>                     <r>déconfiture<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>dekoracio<s n="n"/></l>                <r>décor<s n="n"/><s n="m"/></r></p></e>
+<e r="RL"><p><l>dekoracio<s n="n"/></l>                <r>décor<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>dekoracio<s n="n"/></l>                <r>décor<g><b/>de<b/>théâtre</g><s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>ornamisto<s n="n"/></l>                <r>décorateur<s n="n"/></r></p></e>
 <e>       <p><l>dekoracio<s n="n"/></l>                <r>décoration<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>ordeno<s n="n"/></l>                   <r>décoration<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>ornamado<s n="n"/></l>                 <r>décoration<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>ornamaĵo<s n="n"/></l>                 <r>décoration<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>ordeno<s n="n"/></l>                   <r>décoration<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>ornamado<s n="n"/></l>                 <r>décoration<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>ornamaĵo<s n="n"/></l>                 <r>décoration<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>eltondado<s n="n"/></l>                <r>découpage<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>malkovro<s n="n"/></l>                 <r>découverte<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>trovaĵo<s n="n"/></l>                  <r>découverte<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>trovitaĵo<s n="n"/></l>                <r>découverte<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>trovo<s n="n"/></l>                    <r>découverte<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>trovaĵo<s n="n"/></l>                  <r>découverte<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>trovitaĵo<s n="n"/></l>                <r>découverte<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>trovo<s n="n"/></l>                    <r>découverte<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>dekreto<s n="n"/></l>                  <r>décret<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>dekremento<s n="n"/></l>               <r>décrément<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>logaritma<b/>dekremento<s n="n"/></l>  <r>décrément<b/>logarithmique<s n="n"/><s n="mf"/></r></p></e>
@@ -11361,7 +11365,7 @@
 <e>       <p><l>kompenso<s n="n"/></l>                 <r>dédommagement<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>depreno<s n="n"/></l>                  <r>déduction<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>malvenko<s n="n"/></l>                 <r>défaite<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>kolapso<s n="n"/></l>                  <r>défaite<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>kolapso<s n="n"/></l>                  <r>défaite<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>defetismo<s n="n"/></l>                <r>défaitisme<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>defetisto<s n="n"/></l>                <r>défaitiste<s n="n"/></r></p></e>
 <e>       <p><l>defetisma<s n="adj"/></l>                <r>défaitiste<s n="adj"/></r></p></e>
@@ -11370,25 +11374,25 @@
 <e>       <p><l>mankloko<s n="n"/></l>                 <r>défaut<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>difekto<s n="n"/></l>                  <r>défectuosité<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>defendo<s n="n"/></l>                  <r>défense<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>dentego<s n="n"/></l>                  <r>défense<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>kondamno<s n="n"/></l>                 <r>défense<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>dentego<s n="n"/></l>                  <r>défense<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>kondamno<s n="n"/></l>                 <r>défense<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>defendanto<s n="n"/></l>               <r>défenseur<s n="n"/></r></p></e>
-<e>       <p><l>advokato<s n="n"/></l>                 <r>défenseur<s n="n"/></r></p></e>
-<e>       <p><l>ĉampiono<s n="n"/></l>                 <r>défenseur<s n="n"/></r></p></e>
-<e>       <p><l>porbatalanto<s n="n"/></l>             <r>défenseur<s n="n"/></r></p></e>
-<e>       <p><l>porparolanto<s n="n"/></l>             <r>défenseur<s n="n"/></r></p></e>
-<e>       <p><l>probatalanto<s n="n"/></l>             <r>défenseur<s n="n"/></r></p></e>
-<e>       <p><l>subtenanto<s n="n"/></l>               <r>défenseur<s n="n"/></r></p></e>
+<e r="LR"><p><l>advokato<s n="n"/></l>                 <r>défenseur<s n="n"/></r></p></e>
+<e r="LR"><p><l>ĉampiono<s n="n"/></l>                 <r>défenseur<s n="n"/></r></p></e>
+<e r="LR"><p><l>porbatalanto<s n="n"/></l>             <r>défenseur<s n="n"/></r></p></e>
+<e r="LR"><p><l>porparolanto<s n="n"/></l>             <r>défenseur<s n="n"/></r></p></e>
+<e r="LR"><p><l>probatalanto<s n="n"/></l>             <r>défenseur<s n="n"/></r></p></e>
+<e r="LR"><p><l>subtenanto<s n="n"/></l>               <r>défenseur<s n="n"/></r></p></e>
 <e>       <p><l>defensivo<s n="n"/></l>                <r>défensive<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>surfo<s n="n"/></l>                    <r>déferlante<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>invado<s n="n"/></l>                   <r>déferlement<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>defio<s n="n"/></l>                    <r>défi<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>malkonfido<s n="n"/></l>               <r>défiance<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>deficito<s n="n"/></l>                 <r>déficit<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>minuso<s n="n"/></l>                   <r>déficit<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>minuso<s n="n"/></l>                   <r>déficit<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>defilado<s n="n"/></l>                 <r>défilé<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>interkrutejo<s n="n"/></l>             <r>défilé<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>rubando<s n="n"/></l>                  <r>défilé<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>interkrutejo<s n="n"/></l>             <r>défilé<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>rubando<s n="n"/></l>                  <r>défilé<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>difino<s n="n"/></l>                   <r>définition<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>deflacio<s n="n"/></l>                 <r>déflation<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>pioniro<s n="n"/></l>                  <r>défricheur<s n="n"/><s n="mf"/></r></p></e>
@@ -11396,9 +11400,9 @@
 <e>       <p><l>respektego<s n="n"/></l>               <r>déférence<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>emano<s n="n"/></l>                    <r>dégagement<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>naŭzo<s n="n"/></l>                    <r>dégoût<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>abomeno<s n="n"/></l>                  <r>dégoût<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>abomeno<s n="n"/></l>                  <r>dégoût<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>falo<s n="n"/></l>                     <r>dégringolade<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>kolapso<s n="n"/></l>                  <r>dégringolade<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>kolapso<s n="n"/></l>                  <r>dégringolade<s n="n"/><s n="f"/></r></p></e>
 <e c="disfraces"><p><l>maskovesto<s n="n"/></l>        <r>déguisement<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>vingustumisto<s n="n"/></l>            <r>dégustateur<s n="n"/></r></p></e>
 <e>       <p><l>difekto<s n="n"/></l>                  <r>dégât<s n="n"/><s n="m"/></r></p></e>
@@ -11406,52 +11410,49 @@
 <e>       <p><l>dehisko<s n="n"/></l>                  <r>déhiscence<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>deismo<s n="n"/></l>                   <r>déisme<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>diismo<s n="n"/></l>                   <r>déisme<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>liberkredo<s n="n"/></l>               <r>déisme<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>matenmanĝo<s n="n"/></l>               <r>déjeuner<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>liberkredo<s n="n"/></l>               <r>déisme<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>tagmanĝo<s n="n"/></l>                 <r>déjeuner<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>ruiniĝo<s n="n"/></l>                  <r>délabrement<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>subevoluo<s n="n"/></l>                <r>délai<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>limtempo<s n="n"/></l>                 <r>délai<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>subevoluo<s n="n"/></l>                <r>délai<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>limtempo<s n="n"/></l>                 <r>délai<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>templimo<s n="n"/></l>                 <r>délai<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>delico<s n="n"/></l>                   <r>délice<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>divido<s n="n"/></l>                   <r>délimitation<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>deliro<s n="n"/></l>                   <r>délire<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>deliraĵo<s n="n"/></l>                 <r>délire<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>deliraĵo<s n="n"/></l>                 <r>délire<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>delikto<s n="n"/></l>                  <r>délit<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>krimeto<s n="n"/></l>                  <r>délit<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>krimeto<s n="n"/></l>                  <r>délit<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>diluvo<s n="n"/></l>                   <r>déluge<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>kaskado<s n="n"/></l>                  <r>déluge<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>superakvego<s n="n"/></l>              <r>déluge<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>superakvego<s n="n"/></l>              <r>déluge<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>delegacio<s n="n"/></l>                <r>délégation<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>delegitaro<s n="n"/></l>               <r>délégation<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>delegitaro<s n="n"/></l>               <r>délégation<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>delegito<s n="n"/></l>                 <r>délégué<s n="n"/></r></p></e>
 <e>       <p><l>demagogio<s n="n"/></l>                <r>démagogie<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>demagogo<s n="n"/></l>                 <r>démagogue<s n="n"/></r></p></e>
 <e>       <p><l>juko<s n="n"/></l>                     <r>démangeaison<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>limlinio<s n="n"/></l>                 <r>démarcation<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>paso<s n="n"/></l>                     <r>démarche<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>paŝo<s n="n"/></l>                     <r>démarche<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>paso<s n="n"/></l>                     <r>démarche<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>paŝo<s n="n"/></l>                     <r>démarche<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>demarŝo<s n="n"/></l>                  <r>démarche<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>irado<s n="n"/></l>                    <r>démarche<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>iro<s n="n"/></l>                      <r>démarche<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>klopodo<s n="n"/></l>                  <r>démarche<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>paŝo<s n="n"/></l>                     <r>démarches<s n="n"/><s n="f"/><s n="pl"/></r></p></e>
+<e r="LR"><p><l>irado<s n="n"/></l>                    <r>démarche<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>iro<s n="n"/></l>                      <r>démarche<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>klopodo<s n="n"/></l>                  <r>démarche<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>demenco<s n="n"/></l>                  <r>démence<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>demenculo<s n="n"/></l>                <r>dément<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>demisio<s n="n"/></l>                  <r>démission<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>abdiko<s n="n"/></l>                   <r>démission<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>demisio<s n="n"/></l>                  <r>démission<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>abdiko<s n="n"/></l>                   <r>démission<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>eksiĝo<s n="n"/></l>                   <r>démission<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>demokrato<s n="n"/></l>                <r>démocrate<s n="n"/></r></p></e>
 <e>       <p><l>demokratio<s n="n"/></l>               <r>démocratie<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>demokratiiĝo<s n="n"/></l>             <r>démocratisation<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>demografiisto<s n="n"/></l>            <r>démographe<s n="n"/></r></p></e>
+<e r="LR"><p><l>demografiisto<s n="n"/></l>            <r>démographe<s n="n"/></r></p></e>
 <e>       <p><l>demografo<s n="n"/></l>                <r>démographe<s n="n"/></r></p></e>
 <e>       <p><l>demografio<s n="n"/></l>               <r>démographie<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>demono<s n="n"/></l>                   <r>démon<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>dajmono<s n="n"/></l>                  <r>démon<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>pruvo<s n="n"/></l>                    <r>démonstration<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>demonstracio<s n="n"/></l>             <r>démonstration<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>demonstro<s n="n"/></l>                <r>démonstration<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>demonstracio<s n="n"/></l>             <r>démonstration<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>demonstro<s n="n"/></l>                <r>démonstration<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>ekzistopruvo<s n="n"/></l>             <r>démonstration<g><b/>d'existence</g><s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>pruvo<b/>de<b/>ekzisto<s n="n"/></l>   <r>démonstration<g><b/>d'existence</g><s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>pruvo<b/>per<b/>absurdo<s n="n"/></l>  <r>démonstration<g><b/>par<b/>l'absurde</g><s n="n"/><s n="f"/></r></p></e>
@@ -11463,51 +11464,50 @@
 <e>       <p><l>nomado<s n="n"/></l>                   <r>dénomination<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>denunco<s n="n"/></l>                  <r>dénonciation<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>elnodiĝo<s n="n"/></l>                 <r>dénouement<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>solvo<s n="n"/></l>                    <r>dénouement<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>solvo<s n="n"/></l>                    <r>dénouement<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>senodorigilo<s n="n"/></l>             <r>déodorant<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>profesia<b/>moralo<s n="n"/></l>       <r>déontologie<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>riparisto<s n="n"/></l>                <r>dépanneur<s n="n"/></r></p></e>
 <e>       <p><l>eliro<s n="n"/></l>                    <r>départ<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>partio<s n="n"/></l>                   <r>départ<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>eksiĝo<s n="n"/></l>                   <r>départ<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>komenciĝo<s n="n"/></l>                <r>départ<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>komenco<s n="n"/></l>                  <r>départ<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>partio<s n="n"/></l>                   <r>départ<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>eksiĝo<s n="n"/></l>                   <r>départ<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>komenciĝo<s n="n"/></l>                <r>départ<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>komenco<s n="n"/></l>                  <r>départ<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>fako<s n="n"/></l>                     <r>département<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>departemento<s n="n"/></l>             <r>département<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>dependeco<s n="n"/></l>                <r>dépendance<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>toksomanio<s n="n"/></l>               <r>dépendance<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>toksomanio<s n="n"/></l>               <r>dépendance<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>aneksaĵo<s n="n"/></l>                 <r>dépendance<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>juĝokostoj<s n="n"/></l>               <r>dépens<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>malprofito<s n="n"/></l>               <r>dépens<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>enspezo<s n="n"/></l>                  <r>dépense<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>konsumado<s n="n"/></l>                <r>dépense<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>juĝokostoj<s n="n"/></l>               <r>dépens<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>malprofito<s n="n"/></l>               <r>dépens<s n="n"/><s n="m"/></r></p></e>
+<e>       <p><l>kosto<s n="n"/></l>               <r>dépens<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>konsumado<s n="n"/></l>                <r>dépense<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>elspezo<s n="n"/></l>                  <r>dépense<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>stako<s n="n"/></l>                    <r>dépiler<b/>une<b/>donnée<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>malutilo<s n="n"/></l>                 <r>dépit<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>kopio<s n="n"/></l>                    <r>déplacement<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>delokigo<s n="n"/></l>                 <r>déplacement<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>movado<s n="n"/></l>                   <r>déplacement<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>delokigo<s n="n"/></l>                 <r>déplacement<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>movado<s n="n"/></l>                   <r>déplacement<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>movo<s n="n"/></l>                     <r>déplacement<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>depozicio<s n="n"/></l>                <r>déposition<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>restaĵo<s n="n"/></l>                  <r>dépouille<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>kadavro<s n="n"/></l>                  <r>dépouille<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>malĉastaĵo<s n="n"/></l>               <r>dépravation<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>kadavro<s n="n"/></l>                  <r>dépouille<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>malĉastaĵo<s n="n"/></l>               <r>dépravation<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>malĉasteco<s n="n"/></l>               <r>dépravation<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>depresio<s n="n"/></l>                 <r>dépression<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>deprimo<s n="n"/></l>                  <r>dépression<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>kavo<s n="n"/></l>                     <r>dépression<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>deprimo<s n="n"/></l>                  <r>dépression<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>kavo<s n="n"/></l>                     <r>dépression<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>deprimo<s n="n"/></l>                  <r>déprime<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>deputito<s n="n"/></l>                 <r>député<s n="n"/></r></p></e>
 <e>       <p><l>malprospero<s n="n"/></l>              <r>dépérissement<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>novaĵo<s n="n"/></l>                   <r>dépêche<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>novaĵo<s n="n"/></l>                   <r>dépêche<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>depeŝo<s n="n"/></l>                   <r>dépêche<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>komunikaĵo<s n="n"/></l>               <r>dépêche<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>komuniko<s n="n"/></l>                 <r>dépêche<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>altrudo<s n="n"/></l>                  <r>dépôt<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>komunikaĵo<s n="n"/></l>               <r>dépêche<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>komuniko<s n="n"/></l>                 <r>dépêche<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>altrudo<s n="n"/></l>                  <r>dépôt<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>deponejo<s n="n"/></l>                 <r>dépôt<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>enspezo<s n="n"/></l>                  <r>dépôt<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>depoto<s n="n"/></l>                   <r>dépôt<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>konfiditaĵo<s n="n"/></l>              <r>dépôt<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>enspezo<s n="n"/></l>                  <r>dépôt<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>depoto<s n="n"/></l>                   <r>dépôt<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>konfiditaĵo<s n="n"/></l>              <r>dépôt<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>ekstravaganco<s n="n"/></l>            <r>déraison<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>renversaĵo<s n="n"/></l>               <r>dérangement<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>drivo<s n="n"/></l>                    <r>dérapage<s n="n"/><s n="m"/></r></p></e>
@@ -11520,8 +11520,7 @@
 <e>       <p><l>logaritma<b/>derivaĵo<s n="n"/></l>    <r>dérivée<b/>logarithmique<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>parta<b/>derivaĵo<s n="n"/></l>        <r>dérivée<b/>partielle<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>malakordo<s n="n"/></l>                <r>désaccord<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>konflikto<s n="n"/></l>                <r>désaccord<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>misakordo<s n="n"/></l>                <r>désaccord<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>misakordo<s n="n"/></l>                <r>désaccord<s n="n"/><s n="m"/></r></p></e>
 <e r="RL"><p><l>seniluziiĝo<s n="n"/></l>              <r>désappointement<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>malaprobo<s n="n"/></l>                <r>désapprobation<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>kondamno<s n="n"/></l>                 <r>désapprobation<s n="n"/><s n="f"/></r></p></e>
@@ -12033,20 +12032,16 @@
 <e>       <p><l>kolegemo<s n="n"/></l>                 <r>esprit<g><b/>de<b/>corps</g><s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>profitamo<s n="n"/></l>                <r>esprit<g><b/>de<b/>lucre</g><s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>profitemo<s n="n"/></l>                <r>esprit<g><b/>de<b/>lucre</g><s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>specio<s n="n"/><s n="pl"/></l>        <r>espèce<s n="n"/></r></p></e>
-<e>       <p><l>speco<s n="n"/><s n="sg"/></l>         <r>espèce<s n="n"/></r></p></e>
-<e>       <p><l>speco<s n="n"/><s n="pl"/></l>         <r>espèce<s n="n"/></r></p></e>
-<e>       <p><l>klaso<s n="n"/></l>                    <r>espèce<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>specio<s n="n"/></l>                   <r>espèce<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>specio<s n="n"/></l>                   <r>espèce<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>speco<s n="n"/></l>                    <r>espèce<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>espero<s n="n"/></l>                   <r>espérance<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>konfido<s n="n"/></l>                  <r>espérance<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>konfido<s n="n"/></l>                  <r>espérance<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>ekspekto<s n="n"/></l>                 <r>espérance<b/>mathématique<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>esperantismo<s n="n"/></l>             <r>espérantisme<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>esperantisto<s n="n"/></l>             <r>espérantiste<s n="n"/></r></p></e>
-<e r="LR"><p><l>esperantisma<s n="adj"/></l>             <r>espérantiste<s n="adj"/></r></p></e>
-<e>       <p><l>esperantista<s n="adj"/></l>             <r>espérantiste<s n="adj"/></r></p></e>
-<e>       <p><l>esperanto<s n="n"/></l>                <r>espéranto<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>esperantisma<s n="adj"/></l>           <r>espérantiste<s n="adj"/></r></p></e>
+<e>       <p><l>esperantista<s n="adj"/></l>           <r>espérantiste<s n="adj"/></r></p></e>
+<e>       <p><l>Esperanto<s n="np"/><s n="alt"/></l>   <r>espéranto<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>esperantologio<s n="n"/></l>           <r>espérantologie<s n="n"/><s n="f"/></r></p></e>
 <e r="LR"><p><l>esperantologiisto<s n="n"/></l>        <r>espérantologue<s n="n"/></r></p></e>
 <e>       <p><l>esperantologo<s n="n"/></l>            <r>espérantologue<s n="n"/></r></p></e>
@@ -12056,15 +12051,15 @@
 <e>       <p><l>kanvaso<s n="n"/></l>                  <r>esquisse<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>skizo<s n="n"/></l>                    <r>esquisse<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>provo<s n="n"/></l>                    <r>essai<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>elprovo<s n="n"/></l>                  <r>essai<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>eseo<s n="n"/></l>                     <r>essai<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>provado<s n="n"/></l>                  <r>essai<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>provaĵo<s n="n"/></l>                  <r>essai<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>abelsvarmo<s n="n"/></l>               <r>essaim<s n="n"/><s n="mf"/></r></p></e>
-<e>       <p><l>armeo<s n="n"/></l>                    <r>essaim<s n="n"/><s n="mf"/></r></p></e>
+<e r="LR"><p><l>elprovo<s n="n"/></l>                  <r>essai<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>eseo<s n="n"/></l>                     <r>essai<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>provado<s n="n"/></l>                  <r>essai<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>provaĵo<s n="n"/></l>                  <r>essai<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>abelsvarmo<s n="n"/></l>               <r>essaim<s n="n"/><s n="mf"/></r></p></e>
+<e r="LR"><p><l>esameno<s n="n"/></l>                    <r>essaim<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>svarmo<s n="n"/></l>                   <r>essaim<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>eseisto<s n="n"/></l>                  <r>essayiste<s n="n"/></r></p></e>
-<e>       <p><l>benzino<s n="n"/></l>                  <r>essence<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>benzino<s n="n"/></l>                  <r>essence<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>esenco<s n="n"/></l>                   <r>essence<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>esencismo<s n="n"/></l>                <r>essencialisme<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>akso<s n="n"/></l>                     <r>essieu<s n="n"/><s n="m"/></r></p></e>
@@ -12076,7 +12071,7 @@
 <e>       <p><l>suf-oriento<s n="n"/></l>                  <r>sud-est<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>tranĉvundo<s n="n"/></l>               <r>estafilade<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>estetiko<s n="n"/></l>                 <r>esthétique<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>korinklino<s n="n"/></l>               <r>estimation<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>korinklino<s n="n"/></l>               <r>estimation<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>taksado<s n="n"/></l>                  <r>estimation<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>estimo<s n="n"/></l>                   <r>estime<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>memestimo<s n="n"/></l>                <r>estime<g><b/>de<b/>soi</g><s n="n"/><s n="f"/></r></p></e>
@@ -12084,11 +12079,11 @@
 <e>       <p><l>stompilo<s n="n"/></l>                 <r>estompe<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>estono<s n="n"/></l>                   <r>Estonien<s n="n"/></r></p></e>
 <e>       <p><l>estrado<s n="n"/></l>                  <r>estrade<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>podio<s n="n"/></l>                    <r>estrade<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>podio<s n="n"/></l>                    <r>estrade<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>drakunkolo<s n="n"/></l>               <r>estragon<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>kriplulo<s n="n"/></l>                 <r>estropié<s n="n"/></r></p></e>
 <e>       <p><l>estuaro<s n="n"/></l>                  <r>estuaire<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>acipensero<s n="n"/></l>               <r>esturgeon<s n="n"/><s n="mf"/></r></p></e>
+<e r="LR"><p><l>acipensero<s n="n"/></l>               <r>esturgeon<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>sturgo<s n="n"/></l>                   <r>esturgeon<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>huzo<s n="n"/></l>                     <r>esturgeon<b/>bélouga<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>sterledo<s n="n"/></l>                 <r>esturgeon<b/>sterlet<s n="n"/><s n="mf"/></r></p></e>
@@ -12114,7 +12109,7 @@
 <e>       <p><l>eŭforbiacoj<s n="n"/></l>              <r>euphorbiacées<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>eŭforio<s n="n"/></l>                  <r>euphorie<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>eŭfemismo<s n="n"/></l>                <r>euphémisme<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>evitvorto<s n="n"/></l>                <r>euphémisme<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>evitvorto<s n="n"/></l>                <r>euphémisme<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>maltroigo<s n="n"/></l>                <r>euphémisme<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>eŭro<s n="n"/></l>                     <r>euro<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>eŭropio<s n="n"/></l>                  <r>europium<s n="n"/><s n="m"/></r></p></e>
@@ -12122,12 +12117,10 @@
 <e>       <p><l>ekslibriso<s n="n"/></l>               <r>ex-libris<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>eldevigo<s n="n"/></l>                 <r>exaction<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>ekzakteco<s n="n"/></l>                <r>exactitude<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>certeco<s n="n"/></l>                  <r>exactitude<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>troigo<s n="n"/></l>                   <r>exagération<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>komedio<s n="n"/></l>                  <r>exagération<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>furoro<s n="n"/></l>                   <r>exaltation<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>ekzameno<s n="n"/></l>                 <r>examen<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>esploro<s n="n"/></l>                  <r>examen<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>esploro<s n="n"/></l>                  <r>examen<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>detalado<s n="n"/></l>                 <r>examen<b/>détaillé<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>detaligo<s n="n"/></l>                 <r>examen<b/>détaillé<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>ekzantemo<s n="n"/></l>                <r>exanthème<s n="n"/><s n="f"/></r></p></e>
@@ -12172,52 +12165,50 @@
 <e>       <p><l>postulo<s n="n"/></l>                  <r>exigence<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>ekzilo<s n="n"/></l>                   <r>exil<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>ekzisto<s n="n"/></l>                  <r>existence<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>ekzistado<s n="n"/></l>                <r>existence<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>ekzistado<s n="n"/></l>                <r>existence<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>ekzistadismo<s n="n"/></l>             <r>existentialisme<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>ekzistismo<s n="n"/></l>               <r>existentialisme<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>ekzistismo<s n="n"/></l>               <r>existentialisme<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>amas-elmigrado<s n="n"/></l>           <r>exode<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>ekzorcaĵo<s n="n"/></l>                <r>exorcisme<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>ekzorcizo<s n="n"/></l>                <r>exorcisme<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>ekzorcaĵo<s n="n"/></l>                <r>exorcisme<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>ekzorcizo<s n="n"/></l>                <r>exorcisme<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>ekzorco<s n="n"/></l>                  <r>exorcisme<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>ekzorcisto<s n="n"/></l>               <r>exorciste<s n="n"/></r></p></e>
 <e>       <p><l>ekzotiko<s n="n"/></l>                 <r>exotisme<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>ekzoto<s n="n"/></l>                   <r>exotisme<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>ekzoto<s n="n"/></l>                   <r>exotisme<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>ekspansio<s n="n"/></l>                <r>expansion<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>atendo<s n="n"/></l>                   <r>expectative<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>kraĉaĵo<s n="n"/></l>                  <r>expectoration<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>fakulo<s n="n"/></l>                   <r>expert<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>ekspertizisto<s n="n"/></l>            <r>expert<s n="n"/></r></p></e>
-<e>       <p><l>ekspertizisto<s n="n"/></l>            <r>expert<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>eksperto<s n="n"/></l>                 <r>expert<s n="n"/></r></p></e>
-<e>       <p><l>eksperto<s n="n"/></l>                 <r>expert<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>kompetentulo<s n="n"/></l>             <r>expert<s n="n"/></r></p></e>
-<e>       <p><l>kompetentulo<s n="n"/></l>             <r>expert<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>fakulo<s n="n"/></l>                   <r>expert<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>ekspertizisto<s n="n"/></l>            <r>expert<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>eksperto<s n="n"/></l>                 <r>expert<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>kompetentulo<s n="n"/></l>             <r>expert<s n="n"/><s n="m"/></r></p></e>
+<e>       <p><l>spertulo<s n="n"/></l>             <r>expert<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>taksado<s n="n"/></l>                  <r>expertise<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>finiĝo<s n="n"/></l>                   <r>expiration<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>ekspliko<s n="n"/></l>                 <r>explication<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>ekspluatado<s n="n"/></l>              <r>exploitation<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>forsto<s n="n"/></l>                   <r>exploitation<b/>forestière<s n="n"/><s n="mf"/></r></p></e>
-<e>       <p><l>parazito<s n="n"/></l>                 <r>exploiteur<s n="n"/></r></p></e>
+<e>       <p><l>ekspluatisto<s n="n"/></l>                 <r>exploiteur<s n="n"/></r></p></e>
 <e>       <p><l>esploristo<s n="n"/></l>               <r>explorateur<s n="n"/></r></p></e>
-<e>       <p><l>tuŝo<s n="n"/></l>                     <r>exploration<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>esploro<s n="n"/></l>                  <r>exploration<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>eksplodaĵo<s n="n"/></l>               <r>explosif<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>eksplodo<s n="n"/></l>                 <r>explosion<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>potencigo<s n="n"/></l>                <r>exponentiation<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>eksponencialo<s n="n"/></l>            <r>exponentielle<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>eksportisto<s n="n"/></l>              <r>exportateur<s n="n"/></r></p></e>
-<e>       <p><l>eksportado<s n="n"/></l>               <r>exportation<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>eksportaĵo<s n="n"/></l>               <r>exportation<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>eksponento<s n="n"/></l>               <r>exposant<s n="n"/></r></p></e>
+<e r="LR"><p><l>eksportado<s n="n"/></l>               <r>exportation<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>eksportaĵo<s n="n"/></l>               <r>exportation<s n="n"/><s n="f"/></r></p></e>
+<e>       <p><l>eksporto<s n="n"/></l>               <r>exportation<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>eksponento<s n="n"/></l>               <r>exposant<s n="n"/></r></p></e>
 <e>       <p><l>potenciganto<s n="n"/></l>             <r>exposant<s n="n"/></r></p></e>
 <e>       <p><l>ekspozicio<s n="n"/></l>               <r>exposition<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>ekspozicio<s n="n"/></l>               <r>exposé<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>komunikado<s n="n"/></l>               <r>exposé<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>komunikaĵo<s n="n"/></l>               <r>exposé<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>ekspozicio<s n="n"/></l>               <r>exposé<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>komunikado<s n="n"/></l>               <r>exposé<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>komunikaĵo<s n="n"/></l>               <r>exposé<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>komuniko<s n="n"/></l>                 <r>exposé<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>prelego<s n="n"/></l>                  <r>exposé<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>prelego<s n="n"/></l>                  <r>exposé<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>esprimo<s n="n"/></l>                  <r>expression<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>parolturno<s n="n"/></l>               <r>expression<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>parolturno<s n="n"/></l>               <r>expression<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>idiomaĵo<s n="n"/></l>                 <r>expression<b/>idiomatique<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>idiotismo<s n="n"/></l>                <r>expression<b/>idiomatique<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>regulesprimo<s n="n"/></l>             <r>expression<b/>régulière<s n="n"/><s n="mf"/></r></p></e>
@@ -12268,11 +12259,11 @@
 <e>       <p><l>ekstremisma<s n="adj"/></l>              <r>extrémiste<s n="adj"/></r></p></e>
 <e r="LR"><p><l>ekstremista<s n="adj"/></l>              <r>extrémiste<s n="adj"/></r></p></e>
 <e>       <p><l>ekstremaĵo<s n="n"/></l>               <r>extrémité<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>fino<s n="n"/></l>                     <r>extrémité<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>rando<s n="n"/></l>                    <r>extrémité<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>fino<s n="n"/></l>                     <r>extrémité<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>rando<s n="n"/></l>                    <r>extrémité<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>ekstremumo<s n="n"/></l>               <r>extrémum<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>ekstremo<s n="n"/></l>                 <r>extrêmité<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>eksteraĵo<s n="n"/></l>                <r>extérieur<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>eksteraĵo<s n="n"/></l>                <r>extérieur<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>ekstero<s n="n"/></l>                  <r>extérieur<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>jubilo<s n="n"/></l>                   <r>exultation<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>ekzekutisto<s n="n"/></l>              <r>exécuteur<s n="n"/></r></p></e>
@@ -12283,27 +12274,27 @@
 <e>       <p><l>fabacoj<s n="n"/></l>                  <r>fabacées<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>fablo<s n="n"/></l>                    <r>fable<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>fabrikanto<s n="n"/></l>               <r>fabricant<s n="n"/></r></p></e>
-<e>       <p><l>faristo<s n="n"/></l>                  <r>fabricant<s n="n"/></r></p></e>
+<e r="LR"><p><l>faristo<s n="n"/></l>                  <r>fabricant<s n="n"/></r></p></e>
 <e>       <p><l>fabrikado<s n="n"/></l>                <r>fabrication<s n="n"/><s n="f"/></r></p></e>
 <e r="LR"><p><l>farado<s n="n"/></l>                   <r>fabrication<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>fabrikanto<s n="n"/></l>               <r>fabriquant<s n="n"/></r></p></e>
 <e>       <p><l>fabriko<s n="n"/></l>                  <r>fabrique<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>faksimilo<s n="n"/></l>                <r>fac-similé<s n="n"/><s n="mf"/></r></p></e>
-<e>       <p><l>vizaĝo<s n="n"/></l>                   <r>face<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>edro<s n="n"/></l>                     <r>face<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>vizaĝo<s n="n"/></l>                   <r>face<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>edro<s n="n"/></l>                     <r>face<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>faco<s n="n"/></l>                     <r>face<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>faceto<s n="n"/></l>                   <r>facette<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>facileco<s n="n"/></l>                 <r>facilité<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>oportunaĵo<s n="n"/></l>               <r>facilité<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>oportunaĵo<s n="n"/></l>               <r>facilité<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>faktoro<s n="n"/></l>                  <r>facteur<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>leterportisto<s n="n"/></l>            <r>facteur<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>leterportisto<s n="n"/></l>            <r>facteur<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>faristo<s n="n"/></l>                  <r>facteur<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>poŝtisto<s n="n"/></l>                 <r>facteur<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>leterportisto<s n="n"/></l>            <r>facteur<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>leterportisto<s n="n"/></l>            <r>facteur<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>faristo<s n="n"/></l>                  <r>facteur<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>poŝtisto<s n="n"/></l>                 <r>facteur<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>frakcio<s n="n"/></l>                  <r>faction<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>faktorialo<s n="n"/></l>               <r>factorielle<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>fakturo<s n="n"/></l>                  <r>facture<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>fasono<s n="n"/></l>                   <r>facture<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>fasono<s n="n"/></l>                   <r>facture<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>fakultato<s n="n"/></l>                <r>faculté<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>fado<s n="n"/></l>                     <r>fading<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>faduo<s n="n"/></l>                    <r>fado<s n="n"/><s n="m"/></r></p></e>
@@ -12334,7 +12325,7 @@
 <e>       <p><l>familio<s n="n"/></l>                  <r>famille<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>fano<s n="n"/></l>                     <r>fan<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>lanterno<s n="n"/></l>                 <r>fanal<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>stratlanterno<s n="n"/></l>            <r>fanal<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>stratlanterno<s n="n"/></l>            <r>fanal<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>fanatikeco<s n="n"/></l>               <r>fanatisme<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>fandango<s n="n"/></l>                 <r>fandango<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>fanfaro<s n="n"/></l>                  <r>fanfare<s n="n"/><s n="f"/></r></p></e>
@@ -12342,18 +12333,17 @@
 <e>       <p><l>ŝlimo<s n="n"/></l>                    <r>fange<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>barto<s n="n"/></l>                    <r>fanon<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>fantazio<s n="n"/></l>                 <r>fantaisie<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>bontrovo<s n="n"/></l>                 <r>fantaisie<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>bontrovo<s n="n"/></l>                 <r>fantaisie<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>fantasmagorio<s n="n"/></l>            <r>fantasmagorie<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>infanteriano<s n="n"/></l>             <r>fantassin<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>marioneto<s n="n"/></l>                <r>fantoche<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>fantomo<s n="n"/></l>                  <r>fantôme<s n="n"/></r></p></e>
 <e>       <p><l>fantomo<s n="n"/></l>                  <r>fantôme<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>farado<s n="n"/></l>                   <r>farad<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>farandolo<s n="n"/></l>                <r>farandole<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>kompletigo<s n="n"/></l>               <r>farce<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>farĉo<s n="n"/></l>                    <r>farce<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>kompletigo<s n="n"/></l>               <r>farce<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>farĉo<s n="n"/></l>                    <r>farce<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>farso<s n="n"/></l>                    <r>farce<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>komedio<s n="n"/></l>                  <r>farce<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>komedio<s n="n"/></l>                  <r>farce<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>farbo<s n="n"/></l>                    <r>fard<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>pezo<s n="n"/></l>                     <r>fardeau<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>koboldo<s n="n"/></l>                  <r>farfadet<s n="n"/><s n="mf"/></r></p></e>
@@ -12366,25 +12356,25 @@
 <e>       <p><l>faŝismo<s n="n"/></l>                  <r>fascisme<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>fatalismo<s n="n"/></l>                <r>fatalisme<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>fatalo<s n="n"/></l>                   <r>fatalité<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>fato<s n="n"/></l>                     <r>fatalité<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>fato<s n="n"/></l>                     <r>fatalité<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>fatraso<s n="n"/></l>                  <r>fatras<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>orgojlo<s n="n"/></l>                  <r>fatuité<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>fatalo<s n="n"/></l>                   <r>fatum<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>fatalo<s n="n"/></l>                   <r>fatum<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>fato<s n="n"/></l>                     <r>fatum<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>fago<s n="n"/></l>                     <r>fau<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>antaŭurbo<s n="n"/></l>                <r>faubourg<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>falĉmaŝino<s n="n"/></l>               <r>faucheuse<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>falĉileto<s n="n"/></l>                <r>faucille<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>serpo<s n="n"/></l>                    <r>faucille<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>serpo<s n="n"/></l>                    <r>faucille<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>falko<s n="n"/></l>                    <r>faucon<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>faŭno<s n="n"/></l>                    <r>faune<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>misakordo<s n="n"/></l>                <r>fausse<b/>note<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>falseto<s n="n"/></l>                  <r>fausset<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>falseco<s n="n"/></l>                  <r>fausseté<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>manko<s n="n"/></l>                    <r>faute<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>misfunkciado<s n="n"/></l>             <r>faute<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>manko<s n="n"/></l>                    <r>faute<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>misfunkciado<s n="n"/></l>             <r>faute<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>eraro<s n="n"/></l>                    <r>faute<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>falo<s n="n"/></l>                     <r>faute<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>falo<s n="n"/></l>                     <r>faute<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>skriberaro<s n="n"/></l>               <r>faute<g><b/>d'orthographe</g><s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>skriberaro<s n="n"/></l>               <r>faute<g><b/>d'écriture</g><s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>brakseĝo<s n="n"/></l>                 <r>fauteuil<s n="n"/><s n="m"/></r></p></e>
@@ -12403,26 +12393,25 @@
 <e>       <p><l>vangharoj<s n="n"/></l>                <r>favoris<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>favo<s n="n"/></l>                     <r>favus<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>fakso<s n="n"/></l>                    <r>fax<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>faksaĵo<s n="n"/></l>                  <r>fax<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>faksilo<s n="n"/></l>                  <r>fax<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>telekopiilo<s n="n"/></l>              <r>fax<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>telekopio<s n="n"/></l>                <r>fax<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>faksaĵo<s n="n"/></l>                  <r>fax<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>faksilo<s n="n"/></l>                  <r>fax<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>telekopiilo<s n="n"/></l>              <r>fax<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>telekopio<s n="n"/></l>                <r>fax<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>fasado<s n="n"/></l>                   <r>façade<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>eksteraĵo<s n="n"/></l>                <r>façade<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>ekstero<s n="n"/></l>                  <r>façade<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>eksteraĵo<s n="n"/></l>                <r>façade<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>ekstero<s n="n"/></l>                  <r>façade<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>maniero<s n="n"/></l>                  <r>façon<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>modo<s n="n"/></l>                     <r>façon<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>afektaĵo<s n="n"/></l>                 <r>façon<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>fasono<s n="n"/></l>                   <r>façon<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>modo<s n="n"/></l>                     <r>façon<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>afektaĵo<s n="n"/></l>                 <r>façon<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>fasono<s n="n"/></l>                   <r>façon<s n="n"/><s n="f"/></r></p></e>
 <e r="LR"><p><l>kielo<s n="n"/></l>                    <r>façon<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>dirmaniero<s n="n"/></l>               <r>façon<g><b/>de<b/>parler</g><s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>konduto<s n="n"/></l>                  <r>façons<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>firsto<s n="n"/></l>                   <r>faîtage<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>firsto<s n="n"/></l>                   <r>faîte<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>fajenco<s n="n"/></l>                  <r>faïence<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>potaĵo<s n="n"/></l>                   <r>faïence<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>federacio<s n="n"/></l>                <r>federation<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>federo<s n="n"/></l>                   <r>federation<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>federo<s n="n"/></l>                   <r>federation<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>feldspato<s n="n"/></l>                <r>feldspath<s n="n"/></r></p></e>
 <e>       <p><l>feluko<s n="n"/></l>                   <r>felouque<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>ino<s n="n"/></l>                      <r>femelle<s n="n"/><s n="f"/></r></p></e>
@@ -12439,7 +12428,7 @@
 <e>       <p><l>fendo<s n="n"/></l>                    <r>fente<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>fenestro<s n="n"/></l>                 <r>fenêtre<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>fero<s n="n"/></l>                     <r>fer<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>feraĵo<s n="n"/></l>                   <r>fer<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>feraĵo<s n="n"/></l>                   <r>fer<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>hufofero<s n="n"/></l>                 <r>fer<g><b/>à<b/>cheval</g><s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>hufumo<s n="n"/></l>                   <r>fer<g><b/>à<b/>cheval</g><s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>frizilo<s n="n"/></l>                  <r>fer<g><b/>à<b/>friser</g><s n="n"/><s n="m"/></r></p></e>
@@ -12471,8 +12460,8 @@
 <e r="RL"><p><l>kateno<s n="n"/><s n="sg"/></l>                   <r>fer<s n="n"/><s n="m"/><s n="pl"/></r></p></e>
 <e>       <p><l>fekundeco<s n="n"/></l>                <r>fertilité<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>fervoro<s n="n"/></l>                  <r>ferveur<s n="n"/><s n="mf"/></r></p></e>
-<e>       <p><l>gluteo<s n="n"/></l>                   <r>fesse<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>postvango<s n="n"/></l>                <r>fesse<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>gluteo<s n="n"/></l>                   <r>fesse<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>postvango<s n="n"/></l>                <r>fesse<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>sidvango<s n="n"/></l>                 <r>fesse<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>festeno<s n="n"/></l>                  <r>festin<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>festivalo<s n="n"/></l>                <r>festival<s n="n"/><s n="m"/></r></p></e>
@@ -12485,11 +12474,10 @@
 <e>       <p><l>semaforo<s n="n"/></l>                 <r>feu<g><b/>de<b/>signalisation</g><s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>foliaro<s n="n"/></l>                  <r>feuillage<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>folio<s n="n"/></l>                    <r>feuille<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>filmo<s n="n"/></l>                    <r>feuille<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>informilo<s n="n"/></l>                <r>feuille<g><b/>d'information</g><s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>etato<s n="n"/></l>                    <r>feuille<g><b/>de<b/>paie</g><s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>folio<s n="n"/></l>                    <r>feuillet<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>dramserio<s n="n"/></l>                <r>feuilleton<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>dramserio<s n="n"/></l>                <r>feuilleton<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>felietono<s n="n"/></l>                <r>feuilleton<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>foldo<s n="n"/></l>                    <r>feuillure<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>felto<s n="n"/></l>                    <r>feutre<s n="n"/><s n="f"/></r></p></e>
@@ -12510,19 +12498,19 @@
 <e>       <p><l>fibulo<s n="n"/></l>                   <r>fibule<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>ŝnuro<s n="n"/></l>                    <r>ficelle<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>slipo<s n="n"/></l>                    <r>fiche<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>ŝtopilo<s n="n"/></l>                  <r>fiche<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>ŝtopilo<s n="n"/></l>                  <r>fiche<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>ĵako<s n="n"/></l>                     <r>fiche<b/>jack<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>dosiero<s n="n"/></l>                  <r>fichier<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>sliparo<s n="n"/></l>                  <r>fichier<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>sliparo<s n="n"/></l>                  <r>fichier<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>kunsendaĵo<s n="n"/></l>               <r>fichier<b/>joint<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>protokolo<s n="n"/></l>                <r>fichier<b/>log<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>protokolo<s n="n"/></l>                <r>fichier<g><b/>de<b/>trace</g><s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>kaptuko<s n="n"/></l>                  <r>fichu<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>fikcio<s n="n"/></l>                   <r>fiction<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>adepto<s n="n"/></l>                   <r>fidèle<s n="n"/></r></p></e>
-<e>       <p><l>ekleziano<s n="n"/></l>                <r>fidèle<s n="n"/></r></p></e>
+<e r="LR"><p><l>adepto<s n="n"/></l>                   <r>fidèle<s n="n"/></r></p></e>
+<e r="LR"><p><l>ekleziano<s n="n"/></l>                <r>fidèle<s n="n"/></r></p></e>
 <e>       <p><l>fidelulo<s n="n"/></l>                 <r>fidèle<s n="n"/></r></p></e>
-<e>       <p><l>paroĥano<s n="n"/></l>                 <r>fidèle<s n="n"/></r></p></e>
+<e r="LR"><p><l>paroĥano<s n="n"/></l>                 <r>fidèle<s n="n"/></r></p></e>
 <e>       <p><l>paroĥanaro<s n="n"/></l>               <r>fidèles<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>fideleco<s n="n"/></l>                 <r>fidélité<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>feŭdo<s n="n"/></l>                    <r>fief<s n="n"/><s n="m"/></r></p></e>
@@ -13263,11 +13251,11 @@
 <e>       <p><l>bubaĉo<s n="n"/></l>                   <r>garnement<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>garnizono<s n="n"/></l>                <r>garnison<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>garnaĵo<s n="n"/></l>                  <r>garniture<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>garnilo<s n="n"/></l>                  <r>garniture<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>garnituro<s n="n"/></l>                <r>garniture<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>garnilo<s n="n"/></l>                  <r>garniture<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>garnituro<s n="n"/></l>                <r>garniture<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>dafno<s n="n"/></l>                    <r>garou<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>knabo<s n="n"/></l>                    <r>gars<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>kelnero<s n="n"/></l>                  <r>garçon<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>kelnero<s n="n"/></l>                  <r>garçon<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>knabo<s n="n"/></l>                    <r>garçon<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>stalisto<s n="n"/></l>                 <r>garçon<g><b/>d'écurie</g><s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>kelnero<s n="n"/></l>                  <r>garçon<g><b/>de<b/>café</g><s n="n"/><s n="m"/></r></p></e>
@@ -14204,24 +14192,25 @@
 <e>       <p><l>homotetiaĵo<s n="n"/></l>              <r>homothétique<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>homeomorfio<s n="n"/></l>              <r>homéomorphie<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>homeomorfio<s n="n"/></l>              <r>homéomorphisme<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>homeopatiisto<s n="n"/></l>            <r>homéopathe<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>homeopatiisto<s n="n"/></l>            <r>homéopathe<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>homeopato<s n="n"/></l>                <r>homéopathe<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>homeopatio<s n="n"/></l>               <r>homéopathie<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>hungaro<s n="n"/></l>                  <r>Hongrois<s n="n"/></r></p></e>
 <e>       <p><l>honoro<s n="n"/></l>                   <r>honneur<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>honesteco<s n="n"/></l>                <r>honnêteté<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>honesteco<s n="n"/></l>                <r>honnêteté<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>honesto<s n="n"/></l>                  <r>honnêteté<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>honorario<s n="n"/></l>                <r>honoraires<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>honto<s n="n"/></l>                    <r>honte<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>abomenaĵo<s n="n"/></l>                <r>honte<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>hontindaĵo<s n="n"/></l>               <r>honte<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>malgloro<s n="n"/></l>                 <r>honte<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>abomenaĵo<s n="n"/></l>                <r>honte<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>hontindaĵo<s n="n"/></l>               <r>honte<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>malgloro<s n="n"/></l>                 <r>honte<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>huligano<s n="n"/></l>                 <r>hooligan<s n="n"/></r></p></e>
 <e>       <p><l>hopio<s n="n"/></l>                    <r>Hopi<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>hoplito<s n="n"/></l>                  <r>hoplite<s n="n"/><s n="f"/></r></p></e>
+<e>       <p><l>hora<s n="adj"/></l>                   <r>horaire<s n="adj"/></r></p></e>
 <e>       <p><l>horaro<s n="n"/></l>                   <r>horaire<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>horlibro<s n="n"/></l>                 <r>horaire<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>hortabelo<s n="n"/></l>                <r>horaire<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>horlibro<s n="n"/></l>                 <r>horaire<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>hortabelo<s n="n"/></l>                <r>horaire<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>hordo<s n="n"/></l>                    <r>horde<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>horizonto<s n="n"/></l>                <r>horizon<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>foraĵo<s n="n"/></l>                   <r>horizon<s n="n"/><s n="m"/></r></p></e>
@@ -14237,7 +14226,7 @@
 <e>       <p><l>hormono<s n="n"/></l>                  <r>hormone<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>horoskopo<s n="n"/></l>                <r>horoscope<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>hororo<s n="n"/></l>                   <r>horreur<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>abomenaĵo<s n="n"/></l>                <r>horreur<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>abomenaĵo<s n="n"/></l>                <r>horreur<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>antaŭmanĝaĵo<s n="n"/></l>             <r>hors-d'œuvre<s n="n"/><s n="f"/></r></p></e>
 <e r="LR"><p><l>manĝometo<s n="n"/></l>                <r>hors-d'œuvre<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>hortensio<s n="n"/></l>                <r>hortensia<s n="n"/><s n="mf"/></r></p></e>
@@ -18772,17 +18761,17 @@
 <e>       <p><l>pigo<s n="n"/></l>                     <r>pie<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>piamatro<s n="n"/></l>                 <r>pie-mère<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>piedo<s n="n"/></l>                    <r>pied<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>futo<s n="n"/></l>                     <r>pied<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>kruro<s n="n"/></l>                    <r>pied<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>postamento<s n="n"/></l>               <r>pied<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>futo<s n="n"/></l>                     <r>pied<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>kruro<s n="n"/></l>                    <r>pied<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>postamento<s n="n"/></l>               <r>pied<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>ŝtono<s n="n"/></l>                    <r>pierre<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>menhiro<s n="n"/></l>                  <r>pierre<b/>levée<s n="n"/><s n="mf"/></r></p></e>
-<e>       <p><l>filozofia<b/>ŝtono<s n="n"/></l>       <r>pierre<b/>philosophale<s n="n"/><s n="mf"/></r></p></e>
-<e>       <p><l>ŝtono<b/>de<b/>saĝuloj<s n="n"/></l>   <r>pierre<b/>philosophale<s n="n"/><s n="mf"/></r></p></e>
-<e>       <p><l>gemo<s n="n"/></l>                     <r>pierre<b/>précieuse<s n="n"/><s n="mf"/></r></p></e>
-<e>       <p><l>tombo-ŝtono<s n="n"/></l>              <r>pierre<b/>tombale<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>tomboŝtono<s n="n"/></l>               <r>pierre<b/>tombale<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>tombŝtono<s n="n"/></l>                <r>pierre<b/>tombale<s n="n"/><s n="m"/></r></p></e>
+<e>       <p><l>filozofia<b/>ŝtono<s n="n"/></l>       <r>pierre<b/>philosophale<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>ŝtono<b/>de<b/>saĝuloj<s n="n"/></l>   <r>pierre<b/>philosophale<s n="n"/><s n="f"/></r></p></e>
+<e>       <p><l>gemo<s n="n"/></l>                     <r>pierre<b/>précieuse<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>tombo-ŝtono<s n="n"/></l>              <r>pierre<b/>tombale<s n="n"/><s n="f"/></r></p></e>
+<e>       <p><l>tomboŝtono<s n="n"/></l>               <r>pierre<b/>tombale<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>tombŝtono<s n="n"/></l>                <r>pierre<b/>tombale<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>akrigilo<s n="n"/></l>                 <r>pierre<g><b/>à<b/>aiguiser</g><s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>kalkoŝtono<s n="n"/></l>               <r>pierre<g><b/>à<b/>chaux</g><s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>paliso<s n="n"/></l>                   <r>pieu<s n="n"/><s n="m"/></r></p></e>
@@ -18795,43 +18784,43 @@
 <e>       <p><l>pilastro<s n="n"/></l>                 <r>pilastre<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>pilafo<s n="n"/></l>                   <r>pilau<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>sardino<s n="n"/></l>                  <r>pilchard<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>kolono<s n="n"/></l>                   <r>pile<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>kolono<s n="n"/></l>                   <r>pile<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>pilo<s n="n"/></l>                     <r>pile<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>stako<s n="n"/></l>                    <r>pile<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>staplo<s n="n"/></l>                   <r>pile<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>kolono<s n="n"/></l>                   <r>pilier<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>stako<s n="n"/></l>                    <r>pile<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>staplo<s n="n"/></l>                   <r>pile<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>kolono<s n="n"/></l>                   <r>pilier<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>pilastro<s n="n"/></l>                 <r>pilier<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>piloto<s n="n"/></l>                   <r>pilote<s n="n"/></r></p></e>
-<e>       <p><l>pelilo<s n="n"/></l>                   <r>pilote<s n="n"/></r></p></e>
+<e r="LR"><p><l>pelilo<s n="n"/></l>                   <r>pilote<s n="n"/></r></p></e>
 <e>       <p><l>pilolo<s n="n"/></l>                   <r>pilule<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>kapsiketo<s n="n"/></l>                <r>piment<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>pimento<s n="n"/></l>                  <r>piment<b/>de<b/>la<b/>jamaïque<s n="n"/><s n="mf"/></r></p></e>
-<e>       <p><l>insigno<s n="n"/></l>                  <r>pin<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>insigno<s n="n"/></l>                  <r>pin<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>pino<s n="n"/></l>                     <r>pin<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>cembro<s n="n"/></l>                   <r>pin<b/>cembro<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>pinaklo<s n="n"/></l>                  <r>pinacle<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>spajro<s n="n"/></l>                   <r>pinacle<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>spajro<s n="n"/></l>                   <r>pinacle<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>pinakoteko<s n="n"/></l>               <r>pinacothèque<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>pinĉilo<s n="n"/></l>                  <r>pince<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>pinĉprenilo<s n="n"/></l>              <r>pince<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>pinĉprenilo<s n="n"/></l>              <r>pince<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>nazumo<s n="n"/></l>                   <r>pince-nez<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>fajroprenilo<s n="n"/></l>             <r>pince<g><b/>à<b/>feu</g><s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>peniko<s n="n"/></l>                   <r>pinceau<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>pinĉpreno<s n="n"/></l>                <r>pincée<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>kaco<s n="n"/></l>                     <r>pine<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>pingveno<s n="n"/></l>                 <r>pingouin<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>pingveno<s n="n"/></l>                 <r>pingouin<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>pingvino<s n="n"/></l>                 <r>pingouin<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>tabloteniso<s n="n"/></l>              <r>pingpong<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>fringo<s n="n"/></l>                   <r>pinson<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>pindo<s n="n"/></l>                    <r>pinte<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>pinaro<s n="n"/></l>                   <r>pinède<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>beko<s n="n"/></l>                     <r>pioche<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>beko<s n="n"/></l>                     <r>pioche<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>pioĉo<s n="n"/></l>                    <r>pioche<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>pikfosilo<s n="n"/></l>                <r>pioche<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>pikfosilo<s n="n"/></l>                <r>pioche<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>peono<s n="n"/></l>                    <r>pion<s n="n"/><s n="mf"/></r></p></e>
 <e c="new-category"><p><l>pioniro<s n="n"/></l>        <r>pionnier<s n="n"/></r></p></e>
-<e>       <p><l>iniciatinto<s n="n"/></l>              <r>pionnier<s n="n"/></r></p></e>
-<e>       <p><l>iniciatoro<s n="n"/></l>               <r>pionnier<s n="n"/></r></p></e>
+<e r="LR"><p><l>iniciatinto<s n="n"/></l>              <r>pionnier<s n="n"/></r></p></e>
+<e r="LR"><p><l>iniciatoro<s n="n"/></l>               <r>pionnier<s n="n"/></r></p></e>
 <e>       <p><l>pipo<s n="n"/></l>                     <r>pipe<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>dukto<s n="n"/></l>                    <r>pipe<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>naftodukto<s n="n"/></l>               <r>pipe-line<s n="n"/><s n="f"/></r></p></e>
@@ -18839,10 +18828,10 @@
 <e>       <p><l>akvopipo<s n="n"/></l>                 <r>pipe<g><b/>à<b/>eau</g><s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>babilulo<s n="n"/></l>                 <r>piplette<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>dorno<s n="n"/></l>                    <r>pique<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>pikilo<s n="n"/></l>                   <r>pique<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>pinto<s n="n"/></l>                    <r>pique<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>incito<s n="n"/></l>                   <r>pique<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>piko<s n="n"/></l>                     <r>pique<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>pikilo<s n="n"/></l>                   <r>pique<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>pinto<s n="n"/></l>                    <r>pique<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>incito<s n="n"/></l>                   <r>pique<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>piko<s n="n"/></l>                     <r>pique<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>pikniko<s n="n"/></l>                  <r>pique-nique<s n="n"/><s n="f"/></r></p></e>
 <e r="LR"><p><l>paliso<s n="n"/></l>                   <r>piquet<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>pikedo<s n="n"/></l>                   <r>piquet<s n="n"/><s n="mf"/></r></p></e>
@@ -18875,12 +18864,11 @@
 <e r="LR"><p><l>korfavoro<s n="n"/></l>                <r>pitié<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>pivoto<s n="n"/></l>                   <r>pivot<s n="n"/></r></p></e>
 <e>       <p><l>pico<s n="n"/></l>                     <r>pizza<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>picejo<s n="n"/></l>                   <r>pizzeria<s n="n"/><s n="mf"/></r></p></e>
+<e>       <p><l>picejo<s n="n"/></l>                   <r>pizzeria<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>peco<s n="n"/></l>                     <r>pièce<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>vestaĵo<s n="n"/></l>                  <r>pièce<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>ĉambro<s n="n"/></l>                   <r>pièce<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>flikaĵo<s n="n"/></l>                  <r>pièce<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>kamero<s n="n"/></l>                   <r>pièce<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>vestaĵo<s n="n"/></l>                  <r>pièce<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>flikaĵo<s n="n"/></l>                  <r>pièce<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>kamero<s n="n"/></l>                   <r>pièce<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>aneksaĵo<s n="n"/></l>                 <r>pièce<b/>jointe<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>kunsendaĵo<s n="n"/></l>               <r>pièce<b/>jointe<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>imperialo<s n="n"/></l>                <r>pièce<g><b/>d'or<b/>de<b/>dix<b/>roubles</g><s n="n"/><s n="f"/></r></p></e>
@@ -18903,8 +18891,8 @@
 <e>       <p><l>piediranto<s n="n"/></l>               <r>piéton<s n="n"/></r></p></e>
 <e>       <p><l>pieco<s n="n"/></l>                    <r>piété<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>afiŝo<s n="n"/></l>                    <r>placard<s n="n"/><s n="m"/></r></p></e>
-<e r="LR"><p><l>loko<s n="n"/></l>                     <r>place<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>placo<s n="n"/></l>                    <r>place<s n="n"/><s n="f"/></r></p></e>
+<e>       <p><l>loko<s n="n"/></l>                     <r>place<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>placo<s n="n"/></l>                    <r>place<s n="n"/><s n="f"/></r></p></e>
 <e r="LR"><p><l>rango<s n="n"/></l>                    <r>place<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>placebo<s n="n"/></l>                  <r>placebo<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>investo<s n="n"/></l>                  <r>placement<s n="n"/><s n="m"/></r></p></e>
@@ -20254,20 +20242,21 @@
 <e>       <p><l>realpolitiko<s n="n"/></l>             <r>realpolitik<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>ribeko<s n="n"/></l>                   <r>rebec<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>resalto<s n="n"/></l>                  <r>rebond<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>balaaĵo<s n="n"/></l>                  <r>rebut<s n="n"/><s n="mf"/></r></p></e>
-<e>       <p><l>elĵetaĵo<s n="n"/></l>                 <r>rebut<s n="n"/><s n="mf"/></r></p></e>
+<e r="LR"><p><l>balaaĵo<s n="n"/></l>                  <r>rebut<s n="n"/><s n="mf"/></r></p></e>
+<e r="LR"><p><l>elĵetaĵo<s n="n"/></l>                 <r>rebut<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>feĉo<s n="n"/></l>                     <r>rebut<s n="n"/><s n="mf"/></r></p></e>
-<e>       <p><l>forĵetaĵo<s n="n"/></l>                <r>rebut<s n="n"/><s n="mf"/></r></p></e>
-<e>       <p><l>forĵetindaĵo<s n="n"/></l>             <r>rebut<s n="n"/><s n="mf"/></r></p></e>
-<e>       <p><l>fuŝaĵo<s n="n"/></l>                   <r>rebut<s n="n"/><s n="mf"/></r></p></e>
-<e>       <p><l>surfundaĵo<s n="n"/></l>               <r>rebut<s n="n"/><s n="mf"/></r></p></e>
+<e r="LR"><p><l>forĵetaĵo<s n="n"/></l>                <r>rebut<s n="n"/><s n="mf"/></r></p></e>
+<e r="LR"><p><l>forĵetindaĵo<s n="n"/></l>             <r>rebut<s n="n"/><s n="mf"/></r></p></e>
+<e r="LR"><p><l>fuŝaĵo<s n="n"/></l>                   <r>rebut<s n="n"/><s n="mf"/></r></p></e>
+<e r="LR"><p><l>surfundaĵo<s n="n"/></l>               <r>rebut<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>censo<s n="n"/></l>                    <r>recensement<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>inventaro<s n="n"/></l>                <r>recensement<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>impostkolektado<s n="n"/></l>          <r>recette<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>inventaro<s n="n"/></l>                <r>recensement<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>impostkolektado<s n="n"/></l>          <r>recette<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>recepto<s n="n"/></l>                  <r>recette<s n="n"/><s n="f"/></r></p></e>
+<e>       <p><l>kuircecepto<s n="n"/></l>             <r>recette<g><b/>de<b/>cuinine</g><s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>kolektisto<s n="n"/></l>               <r>receveur<s n="n"/></r></p></e>
-<e>       <p><l>konduktoro<s n="n"/></l>               <r>receveur<s n="n"/><s n="mf"/></r></p></e>
-<e>       <p><l>anstataŭigo<s n="n"/></l>              <r>rechange<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>konduktoro<s n="n"/></l>               <r>receveur<s n="n"/><s n="mf"/></r></p></e>
+<e r="LR"><p><l>anstataŭigo<s n="n"/></l>              <r>rechange<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>anstataŭilo<s n="n"/></l>              <r>rechange<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>anstataŭo<s n="n"/></l>                <r>rechange<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>enketo<s n="n"/></l>                   <r>recherche<s n="n"/><s n="f"/></r></p></e>
@@ -20300,14 +20289,17 @@
 <e>       <p><l>poemaro<s n="n"/></l>                  <r>recueil<g><b/>de<b/>poèmes</g><s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>regreso<s n="n"/></l>                  <r>recul<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>redakcio<s n="n"/></l>                 <r>redaction<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>redakto<s n="n"/></l>                 <r>redaction<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>redaktado<s n="n"/></l>                 <r>redaction<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>redaktejo<s n="n"/></l>                 <r>redaction<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>falo<s n="n"/></l>                     <r>reddition<s n="n"/><s n="f"/></r></p></e>
 <e r="RL"><p><l>jako<s n="n"/></l>                     <r>redingote<s n="n"/><s n="f"/></r></p></e>
 <e r="LR"><p><l>redingoto<s n="n"/></l>                <r>redingote<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>redundo<s n="n"/></l>                  <r>redondance<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>fuorteto<s n="n"/></l>                 <r>redoute<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>rektifilo<s n="n"/></l>                <r>redresseur<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>rektigilo<s n="n"/></l>                <r>redresseur<s n="n"/><s n="mf"/></r></p></e>
-<e>       <p><l>rabato<s n="n"/></l>                   <r>reduction<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>rektigilo<s n="n"/></l>                <r>redresseur<s n="n"/><s n="mf"/></r></p></e>
+<e r="LR"><p><l>rabato<s n="n"/></l>                   <r>reduction<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>redukto<s n="n"/></l>                  <r>reduction<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>rilo<s n="n"/></l>                     <r>reel<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>spegulbildo<s n="n"/></l>              <r>reflet<s n="n"/><s n="m"/></r></p></e>
@@ -20322,7 +20314,7 @@
 <e r="LR"><p><l>rifuĝejo<s n="n"/></l>                 <r>refuge<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>malakcepto<s n="n"/></l>               <r>refus<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>postfalĉaĵo<s n="n"/></l>              <r>regain<s n="n"/><s n="mf"/></r></p></e>
-<e>       <p><l>postfojno<s n="n"/></l>                <r>regain<s n="n"/><s n="mf"/></r></p></e>
+<e r="LR"><p><l>postfojno<s n="n"/></l>                <r>regain<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>rigardo<s n="n"/></l>                  <r>regard<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>regeo<s n="n"/></l>                    <r>reggae<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>kalcitro<s n="n"/></l>                 <r>regimbement<s n="n"/><s n="m"/></r></p></e>
@@ -20572,12 +20564,12 @@
 <e>       <p><l>rokuo<s n="n"/></l>                    <r>rocou<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>bikso<s n="n"/></l>                    <r>rocouyer<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>kolero<s n="n"/></l>                   <r>rogne<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>reĝo<s n="n"/><s n="m"/></l>           <r>roi<s n="n"/><s n="m"/></r></p></e>
+<e>       <p><l>reĝo<s n="n"/></l>           <r>roi<s n="n"/></r></p></e>
 <e>       <p><l>reĝo<g><b/>de<b/>reĝoj</g><s n="n"/></l><r>roi<g><b/>des<b/>rois</g><s n="n"/></r></p></e>
 <e>       <p><l>regolo<s n="n"/></l>                   <r>roitelet<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>radŝuo<s n="n"/></l>                   <r>roller<s n="n"/><s n="mf"/></r></p></e>
 <e r="LR"><p><l>rulŝuo<s n="n"/></l>                   <r>roller<s n="n"/><s n="mf"/></r></p></e>
-<e>       <p><l>romao<s n="n"/></l>                    <r>rom<s n="n"/><s n="mf"/></r></p></e>
+<e>       <p><l>romao<s n="n"/></l>                    <r>rom<s n="n"/></r></p></e>
 <e>       <p><l>romano<s n="n"/></l>                   <r>Romain<s n="n"/></r></p></e>
 <e r="LR"><p><l>romiano<s n="n"/></l>                   <r>Romain<s n="n"/></r></p></e>
 <e r="LR"><p><l>am-afero<s n="n"/></l>                 <r>roman<s n="n"/><s n="m"/></r></p></e>
@@ -24387,38 +24379,38 @@
 <e r="LR"><p><l>eksterlando<s n="n"/></l>              <r>étranger<s n="n"/></r></p></e>
 <e>       <p><l>fremdulo<s n="n"/></l>                 <r>étranger<s n="n"/></r></p></e>
 <e>       <p><l>rado<s n="n"/></l>                     <r>étrave<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>antaŭa<b/>steveno<s n="n"/></l>        <r>étrave<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>antaŭa<b/>steveno<s n="n"/></l>        <r>étrave<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>premiero<s n="n"/></l>                 <r>étrenne<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>piedingo<s n="n"/></l>                 <r>étrier<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>striglilo<s n="n"/></l>                <r>étrille<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>etrusko<s n="n"/></l>                  <r>Étrusque<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>apartamenteto<s n="n"/></l>            <r>étude<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>apartamenteto<s n="n"/></l>            <r>étude<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>studo<s n="n"/></l>                    <r>étude<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>esploro<s n="n"/></l>                  <r>étude<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>etudo<s n="n"/></l>                    <r>étude<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>studanto<s n="n"/></l>                 <r>étudiant<s n="n"/></r></p></e>
+<e r="LR"><p><l>esploro<s n="n"/></l>                  <r>étude<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>etudo<s n="n"/></l>                    <r>étude<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>studanto<s n="n"/></l>                 <r>étudiant<s n="n"/></r></p></e>
 <e>       <p><l>studento<s n="n"/></l>                 <r>étudiant<s n="n"/></r></p></e>
 <e>       <p><l>ingo<s n="n"/></l>                     <r>étui<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>etimologio<s n="n"/></l>               <r>étymologie<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>etimo<s n="n"/></l>                    <r>étymon<s n="n"/><s n="mf"/></r></p></e>
 <e>       <p><l>somero<s n="n"/></l>                   <r>été<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>evakuado<s n="n"/></l>                 <r>évacuation<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>evakuado<s n="n"/></l>                 <r>évacuation<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>evakuo<s n="n"/></l>                   <r>évacuation<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>evangelio<s n="n"/></l>                <r>évangile<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>protestanto<s n="n"/></l>              <r>évangélique<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>fado<s n="n"/></l>                     <r>évanouissement<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>sinkopo<s n="n"/></l>                  <r>évanouissement<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>fado<s n="n"/></l>                     <r>évanouissement<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>sinkopo<s n="n"/></l>                  <r>évanouissement<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>sveno<s n="n"/></l>                    <r>évanouissment<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>ventumilo<s n="n"/></l>                <r>éventail<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>eventualaĵo<s n="n"/></l>              <r>éventualité<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>eventualaĵo<s n="n"/></l>              <r>éventualité<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>eventualo<s n="n"/></l>                <r>éventualité<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>evidenteco<s n="n"/></l>               <r>évidence<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>evoluado<s n="n"/></l>                 <r>évolution<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>evoluado<s n="n"/></l>                 <r>évolution<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>evoluo<s n="n"/></l>                   <r>évolution<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>evolucio<s n="n"/></l>                 <r>évolution<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>evolucio<s n="n"/></l>                 <r>évolution<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>evoluismo<s n="n"/></l>                <r>évolutionnisme<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>teorio<b/>de<b/>evoluo<s n="n"/></l>   <r>évolutionnisme<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>transformismo<s n="n"/></l>            <r>évolutionnisme<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>transformismo<s n="n"/></l>            <r>évolutionnisme<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>evento<s n="n"/></l>                   <r>évènement<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>okazo<s n="n"/></l>                    <r>évènement<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>kazo<s n="n"/></l>                     <r>évènement<s n="n"/><s n="m"/></r></p></e>
@@ -25220,7 +25212,7 @@
 <e>       <p><l>Pado<s n="np"/><s n="loc"/></l>       <r>Po<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e>       <p><l>Fiŝoj<s n="np"/><s n="loc"/></l>       <r>Poissons<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e>       <p><l>Pollando<s n="np"/><s n="loc"/></l>    <r>Pologne<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
-<e>       <p><l>Polio<s n="np"/><s n="loc"/></l>       <r>Pologne<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>Polio<s n="np"/><s n="loc"/></l>       <r>Pologne<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e>       <p><l>Pompejo<s n="np"/><s n="al"/></l>      <r>Pompéi<s n="np"/><s n="al"/></r></p></e>
 <e>       <p><l>Porto-Riko<s n="np"/><s n="loc"/></l>  <r>Porto<b/>Rico<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e>       <p><l>Portugalio<s n="np"/><s n="loc"/></l>  <r>Portugal<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
@@ -26305,7 +26297,7 @@
 <e>       <p><l>ŝprucigi<s n="vblex"/></l>             <r>asperger<s n="vblex"/></r></p></e>
 <e>       <p><l>asfalti<s n="vblex"/></l>              <r>asphalter<s n="vblex"/></r></p></e>
 <e>       <p><l>asfiksii<s n="vblex"/></l>             <r>asphyxier<s n="vblex"/></r></p></e>
-<e>       <p><l>aspiri<s n="vblex"/></l>               <r>aspir<g><b/>à</g><s n="vblex"/></r></p></e>
+<e>       <p><l>aspiri<s n="vblex"/></l>               <r>aspirer<g><b/>à</g><s n="vblex"/></r></p></e>
 <e>       <p><l>aspiri<s n="vblex"/></l>               <r>aspirer<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>ambicii<s n="vblex"/></l>              <r>aspirer<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>deziregi<s n="vblex"/></l>             <r>aspirer<s n="vblex"/></r></p></e>
@@ -26736,87 +26728,87 @@
 <e>       <p><l>kalfatri<s n="vblex"/></l>             <r>calfater<s n="vblex"/></r></p></e>
 <e>       <p><l>kalibrigi<s n="vblex"/></l>            <r>calibrer<s n="vblex"/></r></p></e>
 <e>       <p><l>kalibri<s n="vblex"/></l>              <r>calibrer<s n="vblex"/></r></p></e>
-<e>       <p><l>senkoleriĝi<s n="vblex"/></l>          <r>calm<g><b/>sa<b/>colère</g><s n="vblex"/></r></p></e>
+<e>       <p><l>senkoleriĝi<s n="vblex"/></l>          <r>calmer<g><b/>sa<b/>colère</g><s n="vblex"/></r></p></e>
 <e>       <p><l>trankviligi<s n="vblex"/></l>          <r>calmer<s n="vblex"/></r></p></e>
-<e>       <p><l>kvietigi<s n="vblex"/></l>             <r>calmer<s n="vblex"/></r></p></e>
-<e>       <p><l>senkoleriĝi<s n="vblex"/></l>          <r>calmer<s n="vblex"/></r></p></e>
-<e>       <p><l>trankviliĝi<s n="vblex"/></l>          <r>calmer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>kvietigi<s n="vblex"/></l>             <r>calmer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>senkoleriĝi<s n="vblex"/></l>          <r>calmer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>trankviliĝi<s n="vblex"/></l>          <r>calmer<s n="vblex"/></r></p></e>
 <e>       <p><l>kalumnii<s n="vblex"/></l>             <r>calomnier<s n="vblex"/></r></p></e>
-<e>       <p><l>nigrigi<s n="vblex"/></l>              <r>calomnier<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>nigrigi<s n="vblex"/></l>              <r>calomnier<s n="vblex"/></r></p></e>
 <e>       <p><l>paŭsi<s n="vblex"/></l>                <r>calquer<s n="vblex"/></r></p></e>
-<e>       <p><l>ŝablondesegni<s n="vblex"/></l>        <r>calquer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>ŝablondesegni<s n="vblex"/></l>        <r>calquer<s n="vblex"/></r></p></e>
 <e>       <p><l>kamufli<s n="vblex"/></l>              <r>camoufler<s n="vblex"/></r></p></e>
-<e>       <p><l>kampadi<s n="vblex"/></l>              <r>camper<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>kampadi<s n="vblex"/></l>              <r>camper<s n="vblex"/></r></p></e>
 <e>       <p><l>kampi<s n="vblex"/></l>                <r>camper<s n="vblex"/></r></p></e>
-<e>       <p><l>tendumi<s n="vblex"/></l>              <r>camper<s n="vblex"/></r></p></e>
-<e>       <p><l>enkanaligi<s n="vblex"/></l>           <r>canaliser<s n="vblex"/></r></p></e>
-<e>       <p><l>kanaligi<s n="vblex"/></l>             <r>canaliser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>tendumi<s n="vblex"/></l>              <r>camper<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>enkanaligi<s n="vblex"/></l>           <r>canaliser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>kanaligi<s n="vblex"/></l>             <r>canaliser<s n="vblex"/></r></p></e>
 <e>       <p><l>kanalizi<s n="vblex"/></l>             <r>canaliser<s n="vblex"/></r></p></e>
 <e>       <p><l>babilaĉi<s n="vblex"/></l>             <r>cancaner<s n="vblex"/></r></p></e>
-<e>       <p><l>gaki<s n="vblex"/></l>                 <r>cancaner<s n="vblex"/></r></p></e>
-<e>       <p><l>klaĉi<s n="vblex"/></l>                <r>cancaner<s n="vblex"/></r></p></e>
-<e>       <p><l>kvaki<s n="vblex"/></l>                <r>cancaner<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>gaki<s n="vblex"/></l>                 <r>cancaner<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>klaĉi<s n="vblex"/></l>                <r>cancaner<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>kvaki<s n="vblex"/></l>                <r>cancaner<s n="vblex"/></r></p></e>
 <e>       <p><l>kaneli<s n="vblex"/></l>               <r>canneler<s n="vblex"/></r></p></e>
-<e>       <p><l>enkanonigi<s n="vblex"/></l>           <r>canoniser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>enkanonigi<s n="vblex"/></l>           <r>canoniser<s n="vblex"/></r></p></e>
 <e>       <p><l>kanonizi<s n="vblex"/></l>             <r>canoniser<s n="vblex"/></r></p></e>
-<e>       <p><l>sanktuligi<s n="vblex"/></l>           <r>canoniser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>sanktuligi<s n="vblex"/></l>           <r>canoniser<s n="vblex"/></r></p></e>
 <e>       <p><l>kanoni<s n="vblex"/></l>               <r>canonner<s n="vblex"/></r></p></e>
 <e>       <p><l>kantonmenti<s n="vblex"/></l>          <r>cantonner<s n="vblex"/></r></p></e>
 <e>       <p><l>kapabligi<s n="vblex"/></l>            <r>capaciter<s n="vblex"/></r></p></e>
 <e>       <p><l>kapitulaci<s n="vblex"/></l>           <r>capituler<s n="vblex"/></r></p></e>
-<e>       <p><l>kliniĝi<s n="vblex"/></l>              <r>capituler<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>kliniĝi<s n="vblex"/></l>              <r>capituler<s n="vblex"/></r></p></e>
 <e>       <p><l>aborti<s n="vblex"/></l>               <r>capoter<s n="vblex"/></r></p></e>
 <e>       <p><l>kapti<s n="vblex"/></l>                <r>capter<s n="vblex"/></r></p></e>
 <e>       <p><l>rekapti<s n="vblex"/></l>              <r>capter<b/>de<b/>nouveau<s n="vblex"/></r></p></e>
 <e>       <p><l>interesegi<s n="vblex"/></l>           <r>captiver<s n="vblex"/></r></p></e>
-<e>       <p><l>lazi<s n="vblex"/></l>                 <r>captur<g><b/>au<b/>lasso</g><s n="vblex"/></r></p></e>
+<e>       <p><l>lazi<s n="vblex"/></l>                 <r>capturer<g><b/>au<b/>lasso</g><s n="vblex"/></r></p></e>
 <e>       <p><l>kapti<s n="vblex"/></l>                <r>capturer<s n="vblex"/></r></p></e>
 <e>       <p><l>rekapti<s n="vblex"/></l>              <r>capturer<g><b/>de<b/>nouveau</g><s n="vblex"/></r></p></e>
 <e>       <p><l>kluki<s n="vblex"/></l>                <r>caqueter<s n="vblex"/></r></p></e>
-<e>       <p><l>vortmueli<s n="vblex"/></l>            <r>caqueter<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>vortmueli<s n="vblex"/></l>            <r>caqueter<s n="vblex"/></r></p></e>
 <e>       <p><l>karakoli<s n="vblex"/></l>             <r>caracoler<s n="vblex"/></r></p></e>
 <e>       <p><l>karakterizi<s n="vblex"/></l>          <r>caractériser<s n="vblex"/></r></p></e>
-<e>       <p><l>distingigi<s n="vblex"/></l>           <r>caractériser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>distingigi<s n="vblex"/></l>           <r>caractériser<s n="vblex"/></r></p></e>
 <e>       <p><l>karamboli<s n="vblex"/></l>            <r>caramboler<s n="vblex"/></r></p></e>
-<e>       <p><l>kolizii<s n="vblex"/></l>              <r>caramboler<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>kolizii<s n="vblex"/></l>              <r>caramboler<s n="vblex"/></r></p></e>
 <e>       <p><l>krabli<s n="vblex"/></l>               <r>carapater<s n="vblex"/></r></p></e>
 <e>       <p><l>diskombi<s n="vblex"/></l>             <r>carder<s n="vblex"/></r></p></e>
 <e>       <p><l>karesi<s n="vblex"/></l>               <r>caresser<s n="vblex"/></r></p></e>
-<e>       <p><l>dorloti<s n="vblex"/></l>              <r>caresser<s n="vblex"/></r></p></e>
-<e>       <p><l>kisi<s n="vblex"/></l>                 <r>caresser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>dorloti<s n="vblex"/></l>              <r>caresser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>kisi<s n="vblex"/></l>                 <r>caresser<s n="vblex"/></r></p></e>
 <e>       <p><l>brajli<s n="vblex"/></l>               <r>carguer<s n="vblex"/></r></p></e>
 <e>       <p><l>karikaturi<s n="vblex"/></l>           <r>caricaturer<s n="vblex"/></r></p></e>
 <e>       <p><l>kaheli<s n="vblex"/></l>               <r>carreler<s n="vblex"/></r></p></e>
 <e>       <p><l>meti<s n="vblex"/></l>                 <r>caser<s n="vblex"/></r></p></e>
 <e>       <p><l>rompi<s n="vblex"/></l>                <r>casser<s n="vblex"/></r></p></e>
-<e>       <p><l>kasacii<s n="vblex"/></l>              <r>casser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>kasacii<s n="vblex"/></l>              <r>casser<s n="vblex"/></r></p></e>
 <e>       <p><l>kastri<s n="vblex"/></l>               <r>castrer<s n="vblex"/></r></p></e>
 <e>       <p><l>katalogi<s n="vblex"/></l>             <r>cataloguer<s n="vblex"/></r></p></e>
 <e>       <p><l>katapulti<s n="vblex"/></l>            <r>catapulter<s n="vblex"/></r></p></e>
 <e>       <p><l>frakasi<s n="vblex"/></l>              <r>catastropher<s n="vblex"/></r></p></e>
 <e>       <p><l>katizi<s n="vblex"/></l>               <r>catir<s n="vblex"/></r></p></e>
-<e>       <p><l>kateĥizi<s n="vblex"/></l>             <r>catéchiser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>kateĥizi<s n="vblex"/></l>             <r>catéchiser<s n="vblex"/></r></p></e>
 <e>       <p><l>katekizi<s n="vblex"/></l>             <r>catéchiser<s n="vblex"/></r></p></e>
-<e>       <p><l>enklasigi<s n="vblex"/></l>            <r>catégoriser<s n="vblex"/></r></p></e>
-<e>       <p><l>klasifiki<s n="vblex"/></l>            <r>catégoriser<s n="vblex"/></r></p></e>
-<e>       <p><l>klasigi<s n="vblex"/></l>              <r>catégoriser<s n="vblex"/></r></p></e>
-<e>       <p><l>klasi<s n="vblex"/></l>                <r>catégoriser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>enklasigi<s n="vblex"/></l>            <r>catégoriser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>klasifiki<s n="vblex"/></l>            <r>catégoriser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>klasigi<s n="vblex"/></l>              <r>catégoriser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>klasi<s n="vblex"/></l>                <r>catégoriser<s n="vblex"/></r></p></e>
 <e>       <p><l>specigi<s n="vblex"/></l>              <r>catégoriser<s n="vblex"/></r></p></e>
-<e>       <p><l>dolorigi<s n="vblex"/></l>             <r>caus<g><b/>une<b/>douleur</g><s n="vblex"/></r></p></e>
-<e>       <p><l>estigi<s n="vblex"/></l>               <r>causer<s n="vblex"/></r></p></e>
+<e>       <p><l>dolorigi<s n="vblex"/></l>             <r>causer<g><b/>une<b/>douleur</g><s n="vblex"/></r></p></e>
+<e r="LR"><p><l>estigi<s n="vblex"/></l>               <r>causer<s n="vblex"/></r></p></e>
 <e>       <p><l>kaŭzi<s n="vblex"/></l>                <r>causer<s n="vblex"/></r></p></e>
-<e>       <p><l>elbuŝigi<s n="vblex"/></l>             <r>causer<s n="vblex"/></r></p></e>
-<e>       <p><l>okazigi<s n="vblex"/></l>              <r>causer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>elbuŝigi<s n="vblex"/></l>             <r>causer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>okazigi<s n="vblex"/></l>              <r>causer<s n="vblex"/></r></p></e>
 <e>       <p><l>kaŭcii<s n="vblex"/></l>               <r>cautionner<s n="vblex"/></r></p></e>
 <e>       <p><l>kaŭterizi<s n="vblex"/></l>            <r>cautériser<s n="vblex"/></r></p></e>
 <e>       <p><l>zoni<s n="vblex"/></l>                 <r>ceindre<s n="vblex"/></r></p></e>
-<e>       <p><l>ĉirkaŭbari<s n="vblex"/></l>           <r>ceindre<s n="vblex"/></r></p></e>
-<e>       <p><l>ĉirkaŭfermi<s n="vblex"/></l>          <r>ceindre<s n="vblex"/></r></p></e>
-<e>       <p><l>ĉirkaŭigi<s n="vblex"/></l>            <r>ceindre<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>ĉirkaŭbari<s n="vblex"/></l>           <r>ceindre<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>ĉirkaŭfermi<s n="vblex"/></l>          <r>ceindre<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>ĉirkaŭigi<s n="vblex"/></l>            <r>ceindre<s n="vblex"/></r></p></e>
 <e>       <p><l>zoni<s n="vblex"/></l>                 <r>ceinturer<s n="vblex"/></r></p></e>
 <e>       <p><l>riceli<s n="vblex"/></l>               <r>celer<s n="vblex"/></r></p></e>
-<e>       <p><l>kaŝi<s n="vblex"/></l>                 <r>celer<s n="vblex"/></r></p></e>
-<e>       <p><l>sekretigi<s n="vblex"/></l>            <r>celer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>kaŝi<s n="vblex"/></l>                 <r>celer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>sekretigi<s n="vblex"/></l>            <r>celer<s n="vblex"/></r></p></e>
 <e>       <p><l>cenzuri<s n="vblex"/></l>              <r>censurer<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>kondamni<s n="vblex"/></l>             <r>censurer<s n="vblex"/></r></p></e>
 <e>       <p><l>centralizi<s n="vblex"/></l>           <r>centraliser<s n="vblex"/></r></p></e>
@@ -26835,59 +26827,58 @@
 <e>       <p><l>certigi<s n="vblex"/></l>              <r>certifier<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>konfirmi<s n="vblex"/></l>             <r>certifier<s n="vblex"/></r></p></e>
 <e>       <p><l>ĉesi<s n="vblex"/></l>                 <r>cesser<s n="vblex"/></r></p></e>
-<e>       <p><l>ĉesigi<s n="vblex"/></l>               <r>cesser<s n="vblex"/></r></p></e>
-<e>       <p><l>finiĝi<s n="vblex"/></l>               <r>cesser<s n="vblex"/></r></p></e>
-<e>       <p><l>halti<s n="vblex"/></l>                <r>cesser<s n="vblex"/></r></p></e>
-<e>       <p><l>afliktiĝi<s n="vblex"/></l>            <r>chagriner<s n="vblex"/></r></p></e>
-<e>       <p><l>aflikti<s n="vblex"/></l>              <r>chagriner<s n="vblex"/></r></p></e>
-<e>       <p><l>ĉagreniĝi<s n="vblex"/></l>            <r>chagriner<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>ĉesigi<s n="vblex"/></l>               <r>cesser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>finiĝi<s n="vblex"/></l>               <r>cesser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>halti<s n="vblex"/></l>                <r>cesser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>afliktiĝi<s n="vblex"/></l>            <r>chagriner<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>aflikti<s n="vblex"/></l>              <r>chagriner<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>ĉagreniĝi<s n="vblex"/></l>            <r>chagriner<s n="vblex"/></r></p></e>
 <e>       <p><l>ĉagreni<s n="vblex"/></l>              <r>chagriner<s n="vblex"/></r></p></e>
 <e>       <p><l>lardi<s n="vblex"/></l>                <r>chamarrer<s n="vblex"/></r></p></e>
 <e>       <p><l>kaosigi<s n="vblex"/></l>              <r>chambouler<s n="vblex"/></r></p></e>
 <e>       <p><l>izoli<s n="vblex"/></l>                <r>chambrer<s n="vblex"/></r></p></e>
 <e>       <p><l>ŝanceliĝi<s n="vblex"/></l>            <r>chanceler<s n="vblex"/></r></p></e>
-<e>       <p><l>transiri<s n="vblex"/></l>             <r>chang<g><b/>de<b/>main</g><s n="vblex"/></r></p></e>
-<e>       <p><l>vindi<s n="vblex"/></l>                <r>chang<g><b/>les<b/>couches</g><s n="vblex"/></r></p></e>
-<e>       <p><l>interŝanĝi<s n="vblex"/></l>           <r>changer<s n="vblex"/></r></p></e>
+<e>       <p><l>transiri<s n="vblex"/></l>             <r>changer<g><b/>de<b/>main</g><s n="vblex"/></r></p></e>
+<e>       <p><l>vindi<s n="vblex"/></l>                <r>changer<g><b/>les<b/>couches</g><s n="vblex"/></r></p></e>
+<e r="LR"><p><l>interŝanĝi<s n="vblex"/></l>           <r>changer<s n="vblex"/></r></p></e>
 <e>       <p><l>ŝanĝi<s n="vblex"/></l>                <r>changer<s n="vblex"/></r></p></e>
-<e>       <p><l>aliformiĝi<s n="vblex"/></l>           <r>changer<s n="vblex"/></r></p></e>
-<e>       <p><l>aliformi<s n="vblex"/></l>             <r>changer<s n="vblex"/></r></p></e>
-<e>       <p><l>ŝanĝiĝi<s n="vblex"/></l>              <r>changer<s n="vblex"/></r></p></e>
-<e>       <p><l>transsorĉi<s n="vblex"/></l>           <r>changer<s n="vblex"/></r></p></e>
-<e>       <p><l>varii<s n="vblex"/></l>                <r>changer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>aliformiĝi<s n="vblex"/></l>           <r>changer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>aliformi<s n="vblex"/></l>             <r>changer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>ŝanĝiĝi<s n="vblex"/></l>              <r>changer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>transsorĉi<s n="vblex"/></l>           <r>changer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>varii<s n="vblex"/></l>                <r>changer<s n="vblex"/></r></p></e>
 <e>       <p><l>kanti<s n="vblex"/></l>                <r>chanter<s n="vblex"/></r></p></e>
-<e>       <p><l>antaŭkanti<s n="vblex"/></l>           <r>chanter<s n="vblex"/></r></p></e>
-<e>       <p><l>kokeriki<s n="vblex"/></l>             <r>chanter<s n="vblex"/></r></p></e>
-<e>       <p><l>prikanti<s n="vblex"/></l>             <r>chanter<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>antaŭkanti<s n="vblex"/></l>           <r>chanter<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>kokeriki<s n="vblex"/></l>             <r>chanter<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>prikanti<s n="vblex"/></l>             <r>chanter<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>kikeriki<s n="vblex"/></l>             <r>chanter<s n="vblex"/></r></p></e>
 <e>       <p><l>admoni<s n="vblex"/></l>               <r>chapitrer<s n="vblex"/></r></p></e>
-<e>       <p><l>komisii<s n="vblex"/></l>              <r>charger<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>komisii<s n="vblex"/></l>              <r>charger<s n="vblex"/></r></p></e>
 <e>       <p><l>ŝarĝi<s n="vblex"/></l>                <r>charger<s n="vblex"/></r></p></e>
-<e>       <p><l>ŝargi<s n="vblex"/></l>                <r>charger<s n="vblex"/></r></p></e>
-<e>       <p><l>taski<s n="vblex"/></l>                <r>charger<s n="vblex"/></r></p></e>
-<e>       <p><l>ravi<s n="vblex"/></l>                 <r>charmer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>ŝargi<s n="vblex"/></l>                <r>charger<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>taski<s n="vblex"/></l>                <r>charger<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>ravi<s n="vblex"/></l>                 <r>charmer<s n="vblex"/></r></p></e>
 <e>       <p><l>ĉarmi<s n="vblex"/></l>                <r>charmer<s n="vblex"/></r></p></e>
 <e>       <p><l>ĉarpenti<s n="vblex"/></l>             <r>charpenter<s n="vblex"/></r></p></e>
 <e>       <p><l>ĉasi<s n="vblex"/></l>                 <r>chasser<s n="vblex"/></r></p></e>
-<e>       <p><l>eksigi<s n="vblex"/></l>               <r>chasser<s n="vblex"/></r></p></e>
-<e>       <p><l>elpeli<s n="vblex"/></l>               <r>chasser<s n="vblex"/></r></p></e>
-<e>       <p><l>forpeli<s n="vblex"/></l>              <r>chasser<s n="vblex"/></r></p></e>
-<e>       <p><l>maldungi<s n="vblex"/></l>             <r>chasser<s n="vblex"/></r></p></e>
-<e>       <p><l>peli<s n="vblex"/></l>                 <r>chasser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>eksigi<s n="vblex"/></l>               <r>chasser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>elpeli<s n="vblex"/></l>               <r>chasser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>forpeli<s n="vblex"/></l>              <r>chasser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>maldungi<s n="vblex"/></l>             <r>chasser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>peli<s n="vblex"/></l>                 <r>chasser<s n="vblex"/></r></p></e>
 <e>       <p><l>tikli<s n="vblex"/></l>                <r>chatouiller<s n="vblex"/></r></p></e>
 <e>       <p><l>glimbrili<s n="vblex"/></l>            <r>chatoyer<s n="vblex"/></r></p></e>
-<e>       <p><l>hejti<s n="vblex"/></l>                <r>chauffer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>hejti<s n="vblex"/></l>                <r>chauffer<s n="vblex"/></r></p></e>
 <e>       <p><l>varmigi<s n="vblex"/></l>              <r>chauffer<s n="vblex"/></r></p></e>
 <e>       <p><l>kalki<s n="vblex"/></l>                <r>chauler<s n="vblex"/></r></p></e>
-<e>       <p><l>kalkumi<s n="vblex"/></l>              <r>chauler<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>kalkumi<s n="vblex"/></l>              <r>chauler<s n="vblex"/></r></p></e>
 <e>       <p><l>renversi<s n="vblex"/></l>             <r>chavirer<s n="vblex"/></r></p></e>
 <e>       <p><l>ĉeni<s n="vblex"/></l>                 <r>chaîner<s n="vblex"/></r></p></e>
 <e>       <p><l>ĉeni<s n="vblex"/></l>                 <r>chainer<s n="vblex"/></r></p></e>
 <e>       <p><l>marŝi<s n="vblex"/></l>                <r>cheminer<s n="vblex"/></r></p></e>
-<e>       <p><l>vojiri<s n="vblex"/></l>               <r>cheminer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>vojiri<s n="vblex"/></l>               <r>cheminer<s n="vblex"/></r></p></e>
 <e>       <p><l>voji<s n="vblex"/></l>                 <r>cheminer<s n="vblex"/></r></p></e>
-<e>       <p><l>ĉirkaŭpalpi<s n="vblex"/></l>          <r>cherch<g><b/>à<b/>tâtons</g><s n="vblex"/></r></p></e>
-<e>       <p><l>serĉi<s n="vblex"/></l>                <r>cherch<g>à</g><s n="vblex"/></r></p></e>
+<e>       <p><l>ĉirkaŭpalpi<s n="vblex"/></l>          <r>chercher<g><b/>à<b/>tâtons</g><s n="vblex"/></r></p></e>
 <e>       <p><l>serĉi<s n="vblex"/></l>                <r>chercher<s n="vblex"/></r></p></e>
 <e>       <p><l>serĉi<s n="vblex"/></l>                <r>chercher<g><b/>à</g><s n="vblex"/></r></p></e>
 <e>       <p><l>rajdi<s n="vblex"/></l>                <r>chevaucher<s n="vblex"/></r></p></e>
@@ -26895,18 +26886,18 @@
 <e>       <p><l>meki<s n="vblex"/></l>                 <r>chevrotter<s n="vblex"/></r></p></e>
 <e>       <p><l>ĉikani<s n="vblex"/></l>               <r>chicaner<s n="vblex"/></r></p></e>
 <e>       <p><l>feki<s n="vblex"/></l>                 <r>chier<s n="vblex"/></r></p></e>
-<e>       <p><l>koti<s n="vblex"/></l>                 <r>chier<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>koti<s n="vblex"/></l>                 <r>chier<s n="vblex"/></r></p></e>
 <e>       <p><l>ĉifi<s n="vblex"/></l>                 <r>chiffonner<s n="vblex"/></r></p></e>
-<e>       <p><l>kodi<s n="vblex"/></l>                 <r>chiffrer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>kodi<s n="vblex"/></l>                 <r>chiffrer<s n="vblex"/></r></p></e>
 <e>       <p><l>ĉifri<s n="vblex"/></l>                <r>chiffrer<s n="vblex"/></r></p></e>
 <e>       <p><l>tinkturi<s n="vblex"/></l>             <r>chiner<s n="vblex"/></r></p></e>
 <e>       <p><l>ĉikani<s n="vblex"/></l>               <r>chipoter<s n="vblex"/></r></p></e>
 <e>       <p><l>kloroformi<s n="vblex"/></l>           <r>chloroformer<s n="vblex"/></r></p></e>
 <e>       <p><l>fali<s n="vblex"/></l>                 <r>choir<s n="vblex"/></r></p></e>
 <e>       <p><l>elekti<s n="vblex"/></l>               <r>choisir<s n="vblex"/></r></p></e>
-<e>       <p><l>adopti<s n="vblex"/></l>               <r>choisir<s n="vblex"/></r></p></e>
-<e>       <p><l>kolizii<s n="vblex"/></l>              <r>choquer<s n="vblex"/></r></p></e>
-<e>       <p><l>afekcii<s n="vblex"/></l>              <r>choquer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>adopti<s n="vblex"/></l>               <r>choisir<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>kolizii<s n="vblex"/></l>              <r>choquer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>afekcii<s n="vblex"/></l>              <r>choquer<s n="vblex"/></r></p></e>
 <e>       <p><l>ŝoki<s n="vblex"/></l>                 <r>choquer<s n="vblex"/></r></p></e>
 <e>       <p><l>kovi<s n="vblex"/></l>                 <r>choyer<s n="vblex"/></r></p></e>
 <e>       <p><l>kromi<s n="vblex"/></l>                <r>chromer<s n="vblex"/></r></p></e>
@@ -26918,18 +26909,18 @@
 <e>       <p><l>cikatriĝi<s n="vblex"/></l>            <r>cicatriser<s n="vblex"/></r></p></e>
 <e>       <p><l>cementi<s n="vblex"/></l>              <r>cimenter<s n="vblex"/></r></p></e>
 <e>       <p><l>cirkumcidi<s n="vblex"/></l>           <r>circoncire<s n="vblex"/></r></p></e>
-<e>       <p><l>ĉirkaŭparoli<s n="vblex"/></l>         <r>circonlocution<s n="vblex"/></r></p></e>
+<e>       <p><l>ĉirkaŭparolo<s n="n"/></l>         <r>circonlocution<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>ĉirkaŭskribi<s n="vblex"/></l>         <r>circonscrire<s n="vblex"/></r></p></e>
 <e>       <p><l>cirkuli<s n="vblex"/></l>              <r>circuler<s n="vblex"/></r></p></e>
 <e>       <p><l>ciri<s n="vblex"/></l>                 <r>cirer<s n="vblex"/></r></p></e>
-<e>       <p><l>vaksi<s n="vblex"/></l>                <r>cirer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>vaksi<s n="vblex"/></l>                <r>cirer<s n="vblex"/></r></p></e>
 <e>       <p><l>cizeli<s n="vblex"/></l>               <r>ciseler<s n="vblex"/></r></p></e>
 <e>       <p><l>citi<s n="vblex"/></l>                 <r>citer<s n="vblex"/></r></p></e>
 <e>       <p><l>civilizi<s n="vblex"/></l>             <r>civiliser<s n="vblex"/></r></p></e>
-<e>       <p><l>distrumpeti<s n="vblex"/></l>          <r>claironner<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>distrumpeti<s n="vblex"/></l>          <r>claironner<s n="vblex"/></r></p></e>
 <e>       <p><l>klarioni<s n="vblex"/></l>             <r>claironner<s n="vblex"/></r></p></e>
 <e>       <p><l>plaŭdi<s n="vblex"/></l>               <r>clapoter<s n="vblex"/></r></p></e>
-<e>       <p><l>ĵetfermi<s n="vblex"/></l>             <r>claquer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>ĵetfermi<s n="vblex"/></l>             <r>claquer<s n="vblex"/></r></p></e>
 <e>       <p><l>klaki<s n="vblex"/></l>                <r>claquer<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>kunbati<s n="vblex"/></l>              <r>claquer<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>plaŭdi<s n="vblex"/></l>               <r>claquer<s n="vblex"/></r></p></e>
@@ -28680,88 +28671,87 @@
 <e>       <p><l>mesaĝi<s n="vblex"/></l>               <r>envoyer<g><b/>un<b/>message</g><s n="vblex"/></r></p></e>
 <e>       <p><l>invadi<s n="vblex"/></l>               <r>envahir<s n="vblex"/></r></p></e>
 <e>       <p><l>enfali<s n="vblex"/></l>               <r>envahir<s n="vblex"/></r></p></e>
-<e>       <p><l>ĉirkaŭkovri<s n="vblex"/></l>          <r>envelopper<s n="vblex"/></r></p></e>
-<e>       <p><l>enspaci<s n="vblex"/></l>              <r>envelopper<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>ĉirkaŭkovri<s n="vblex"/></l>          <r>envelopper<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>enspaci<s n="vblex"/></l>              <r>envelopper<s n="vblex"/></r></p></e>
 <e>       <p><l>tegi<s n="vblex"/></l>                 <r>envelopper<s n="vblex"/></r></p></e>
 <e>       <p><l>envii<s n="vblex"/></l>                <r>envier<s n="vblex"/></r></p></e>
 <e>       <p><l>konsideri<s n="vblex"/></l>            <r>envisager<s n="vblex"/></r></p></e>
-<e>       <p><l>flugi<s n="vblex"/></l>                <r>envoler<s n="vblex"/></r></p></e>
-<e>       <p><l>deflugi<s n="vblex"/></l>              <r>envoler<s n="vblex"/></r></p></e>
-<e>       <p><l>forflugi<s n="vblex"/></l>             <r>envoler<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>flugi<s n="vblex"/></l>                <r>envoler<s n="vblex"/></r></p></e>
+<e>       <p><l>ekflugi<s n="vblex"/></l>              <r>envoler<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>deflugi<s n="vblex"/></l>              <r>envoler<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>forflugi<s n="vblex"/></l>             <r>envoler<s n="vblex"/></r></p></e>
 <e>       <p><l>envulti<s n="vblex"/></l>              <r>envouter<s n="vblex"/></r></p></e>
 <e>       <p><l>sendi<s n="vblex"/></l>                <r>envoyer<s n="vblex"/></r></p></e>
-<e>       <p><l>adresi<s n="vblex"/></l>               <r>envoyer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>adresi<s n="vblex"/></l>               <r>envoyer<s n="vblex"/></r></p></e>
 <e>       <p><l>ĉikani<s n="vblex"/></l>               <r>ergoter<s n="vblex"/></r></p></e>
-<e>       <p><l>erari<s n="vblex"/></l>                <r>errer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>erari<s n="vblex"/></l>                <r>errer<s n="vblex"/></r></p></e>
 <e>       <p><l>vagi<s n="vblex"/></l>                 <r>errer<s n="vblex"/></r></p></e>
 <e>       <p><l>grimpi<s n="vblex"/></l>               <r>escalader<s n="vblex"/></r></p></e>
 <e>       <p><l>forĵongli<s n="vblex"/></l>            <r>escamoter<s n="vblex"/></r></p></e>
-<e>       <p><l>malaperigi<s n="vblex"/></l>           <r>escamoter<s n="vblex"/></r></p></e>
-<e>       <p><l>diskonti<s n="vblex"/></l>             <r>escompter<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>malaperigi<s n="vblex"/></l>           <r>escamoter<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>diskonti<s n="vblex"/></l>             <r>escompter<s n="vblex"/></r></p></e>
 <e>       <p><l>eskorti<s n="vblex"/></l>              <r>escorter<s n="vblex"/></r></p></e>
 <e>       <p><l>penegi<s n="vblex"/></l>               <r>escrimer<b/>à<s n="vblex"/></r></p></e>
 <e>       <p><l>defraŭdi<s n="vblex"/></l>             <r>escroquer<s n="vblex"/></r></p></e>
-<e>       <p><l>friponi<s n="vblex"/></l>              <r>escroquer<s n="vblex"/></r></p></e>
-<e>       <p><l>ŝakri<s n="vblex"/></l>                <r>escroquer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>friponi<s n="vblex"/></l>              <r>escroquer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>ŝakri<s n="vblex"/></l>                <r>escroquer<s n="vblex"/></r></p></e>
 <e>       <p><l>interspacigi<s n="vblex"/></l>         <r>espacer<s n="vblex"/></r></p></e>
-<e>       <p><l>kaŝobservi<s n="vblex"/></l>           <r>espionner<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>kaŝobservi<s n="vblex"/></l>           <r>espionner<s n="vblex"/></r></p></e>
 <e>       <p><l>spioni<s n="vblex"/></l>               <r>espionner<s n="vblex"/></r></p></e>
 <e>       <p><l>subaŭskulti<s n="vblex"/></l>          <r>espionner<s n="vblex"/></r></p></e>
-<e>       <p><l>atendi<s n="vblex"/></l>               <r>espérer<s n="vblex"/></r></p></e>
-<e>       <p><l>ĝisatendi<s n="vblex"/></l>            <r>espérer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>atendi<s n="vblex"/></l>               <r>espérer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>ĝisatendi<s n="vblex"/></l>            <r>espérer<s n="vblex"/></r></p></e>
 <e>       <p><l>esperi<s n="vblex"/></l>               <r>espérer<s n="vblex"/></r></p></e>
-<e>       <p><l>konturiĝi<s n="vblex"/></l>            <r>esquisser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>konturiĝi<s n="vblex"/></l>            <r>esquisser<s n="vblex"/></r></p></e>
 <e>       <p><l>skizi<s n="vblex"/></l>                <r>esquisser<s n="vblex"/></r></p></e>
 <e>       <p><l>elgliti<s n="vblex"/></l>              <r>esquiver<s n="vblex"/></r></p></e>
 <e>       <p><l>provi<s n="vblex"/></l>                <r>essayer<s n="vblex"/></r></p></e>
-<e>       <p><l>pruvi<s n="vblex"/></l>                <r>essayer<s n="vblex"/></r></p></e>
-<e>       <p><l>elprovi<s n="vblex"/></l>              <r>essayer<s n="vblex"/></r></p></e>
-<e>       <p><l>surprovi<s n="vblex"/></l>             <r>essayer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>elprovi<s n="vblex"/></l>              <r>essayer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>surprovi<s n="vblex"/></l>             <r>essayer<s n="vblex"/></r></p></e>
 <e>       <p><l>sufoki<s n="vblex"/></l>               <r>essouffler<s n="vblex"/></r></p></e>
-<e>       <p><l>senspiriĝi<s n="vblex"/></l>           <r>essoufler<s n="vblex"/></r></p></e>
-<e>       <p><l>deviŝi<s n="vblex"/></l>               <r>essuyer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>senspiriĝi<s n="vblex"/></l>           <r>essoufler<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>deviŝi<s n="vblex"/></l>               <r>essuyer<s n="vblex"/></r></p></e>
 <e>       <p><l>viŝi<s n="vblex"/></l>                 <r>essuyer<s n="vblex"/></r></p></e>
-<e>       <p><l>ami<s n="vblex"/></l>                  <r>estimer<s n="vblex"/></r></p></e>
-<e>       <p><l>taksi<s n="vblex"/></l>                <r>estimer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>taksi<s n="vblex"/></l>                <r>estimer<s n="vblex"/></r></p></e>
 <e>       <p><l>estimi<s n="vblex"/></l>               <r>estimer<s n="vblex"/></r></p></e>
-<e>       <p><l>juĝi<s n="vblex"/></l>                 <r>estimer<s n="vblex"/></r></p></e>
-<e>       <p><l>prijuĝi<s n="vblex"/></l>              <r>estimer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>juĝi<s n="vblex"/></l>                 <r>estimer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>prijuĝi<s n="vblex"/></l>              <r>estimer<s n="vblex"/></r></p></e>
 <e>       <p><l>stompi<s n="vblex"/></l>               <r>estomper<s n="vblex"/></r></p></e>
-<e>       <p><l>vanui<s n="vblex"/></l>                <r>estomper<s n="vblex"/></r></p></e>
-<e>       <p><l>glavbati<s n="vblex"/></l>             <r>estoquer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>vanui<s n="vblex"/></l>                <r>estomper<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>glavbati<s n="vblex"/></l>             <r>estoquer<s n="vblex"/></r></p></e>
 <e>       <p><l>glavopiki<s n="vblex"/></l>            <r>estoquer<s n="vblex"/></r></p></e>
-<e>       <p><l>glavotranĉi<s n="vblex"/></l>          <r>estoquer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>glavotranĉi<s n="vblex"/></l>          <r>estoquer<s n="vblex"/></r></p></e>
 <e>       <p><l>kripligi<s n="vblex"/></l>             <r>estropier<s n="vblex"/></r></p></e>
 <e>       <p><l>troigi<s n="vblex"/></l>               <r>exagérer<s n="vblex"/></r></p></e>
 <e>       <p><l>ekzalti<s n="vblex"/></l>              <r>exalter<s n="vblex"/></r></p></e>
-<e>       <p><l>fervorigi<s n="vblex"/></l>            <r>exalter<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>fervorigi<s n="vblex"/></l>            <r>exalter<s n="vblex"/></r></p></e>
 <e>       <p><l>ekzameni<s n="vblex"/></l>             <r>examiner<s n="vblex"/></r></p></e>
-<e>       <p><l>ĉirkaŭrigardi<s n="vblex"/></l>        <r>examiner<s n="vblex"/></r></p></e>
-<e>       <p><l>esplori<s n="vblex"/></l>              <r>examiner<s n="vblex"/></r></p></e>
-<e>       <p><l>inspekti<s n="vblex"/></l>             <r>examiner<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>ĉirkaŭrigardi<s n="vblex"/></l>        <r>examiner<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>esplori<s n="vblex"/></l>              <r>examiner<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>inspekti<s n="vblex"/></l>             <r>examiner<s n="vblex"/></r></p></e>
 <e>       <p><l>elstari<s n="vblex"/></l>              <r>exceller<s n="vblex"/></r></p></e>
 <e>       <p><l>escepti<s n="vblex"/></l>              <r>excepter<s n="vblex"/></r></p></e>
 <e>       <p><l>eksciti<s n="vblex"/></l>              <r>exciter<s n="vblex"/></r></p></e>
-<e>       <p><l>agiti<s n="vblex"/></l>                <r>exciter<s n="vblex"/></r></p></e>
-<e>       <p><l>ekscitiĝi<s n="vblex"/></l>            <r>exciter<s n="vblex"/></r></p></e>
-<e>       <p><l>incitiĝi<s n="vblex"/></l>             <r>exciter<s n="vblex"/></r></p></e>
-<e>       <p><l>inciti<s n="vblex"/></l>               <r>exciter<s n="vblex"/></r></p></e>
-<e>       <p><l>instigi<s n="vblex"/></l>              <r>exciter<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>agiti<s n="vblex"/></l>                <r>exciter<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>ekscitiĝi<s n="vblex"/></l>            <r>exciter<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>incitiĝi<s n="vblex"/></l>             <r>exciter<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>inciti<s n="vblex"/></l>               <r>exciter<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>instigi<s n="vblex"/></l>              <r>exciter<s n="vblex"/></r></p></e>
 <e>       <p><l>ekkrii<s n="vblex"/></l>               <r>exclamer<s n="vblex"/></r></p></e>
 <e>       <p><l>ekskludi<s n="vblex"/></l>             <r>exclure<s n="vblex"/></r></p></e>
-<e>       <p><l>eksigi<s n="vblex"/></l>               <r>exclure<s n="vblex"/></r></p></e>
-<e>       <p><l>ekskluzivi<s n="vblex"/></l>           <r>exclure<s n="vblex"/></r></p></e>
-<e>       <p><l>ekskomuniki<s n="vblex"/></l>          <r>exclure<s n="vblex"/></r></p></e>
-<e>       <p><l>escepti<s n="vblex"/></l>              <r>exclure<s n="vblex"/></r></p></e>
-<e>       <p><l>eskludi<s n="vblex"/></l>              <r>exclure<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>eksigi<s n="vblex"/></l>               <r>exclure<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>ekskluzivi<s n="vblex"/></l>           <r>exclure<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>ekskomuniki<s n="vblex"/></l>          <r>exclure<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>escepti<s n="vblex"/></l>              <r>exclure<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>eskludi<s n="vblex"/></l>              <r>exclure<s n="vblex"/></r></p></e>
 <e>       <p><l>ekskomuniki<s n="vblex"/></l>          <r>excommunier<s n="vblex"/></r></p></e>
-<e>       <p><l>forkomuniigi<s n="vblex"/></l>         <r>excommunier<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>forkomuniigi<s n="vblex"/></l>         <r>excommunier<s n="vblex"/></r></p></e>
 <e>       <p><l>ekskoriacii<s n="vblex"/></l>          <r>excorier<s n="vblex"/></r></p></e>
 <e>       <p><l>ekskrecii<s n="vblex"/></l>            <r>excréter<s n="vblex"/></r></p></e>
 <e>       <p><l>ekskuzi<s n="vblex"/></l>              <r>excuser<s n="vblex"/></r></p></e>
-<e>       <p><l>pardonpeti<s n="vblex"/></l>           <r>excuser<s n="vblex"/></r></p></e>
-<e>       <p><l>senkulpigi<s n="vblex"/></l>           <r>excuser<s n="vblex"/></r></p></e>
-<e>       <p><l>pardoni<s n="vblex"/></l>              <r>excuser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>pardonpeti<s n="vblex"/></l>           <r>excuser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>senkulpigi<s n="vblex"/></l>           <r>excuser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>pardoni<s n="vblex"/></l>              <r>excuser<s n="vblex"/></r></p></e>
 <e>       <p><l>superi<s n="vblex"/></l>               <r>excéder<s n="vblex"/></r></p></e>
 <e>       <p><l>ekzempligi<s n="vblex"/></l>           <r>exemplifier<s n="vblex"/></r></p></e>
 <e>       <p><l>sendevigi<s n="vblex"/></l>            <r>exempter<s n="vblex"/></r></p></e>
@@ -28772,7 +28762,7 @@
 <e>       <p><l>ekzerci<s n="vblex"/></l>              <r>exercer<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>profesii<s n="vblex"/></l>             <r>exercer<s n="vblex"/></r></p></e>
 <e>       <p><l>elspiri<s n="vblex"/></l>              <r>exhaler<s n="vblex"/></r></p></e>
-<e>       <p><l>elmeti<s n="vblex"/></l>               <r>exhiber<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>elmeti<s n="vblex"/></l>               <r>exhiber<s n="vblex"/></r></p></e>
 <e>       <p><l>elmontri<s n="vblex"/></l>             <r>exhiber<s n="vblex"/></r></p></e>
 <e>       <p><l>admoni<s n="vblex"/></l>               <r>exhorter<s n="vblex"/></r></p></e>
 <e>       <p><l>elfosi<s n="vblex"/></l>               <r>exhumer<s n="vblex"/></r></p></e>
@@ -30337,8 +30327,7 @@
 <e>       <p><l>malbeni<s n="vblex"/></l>              <r>maudire<s n="vblex"/></r></p></e>
 <e>       <p><l>sakri<s n="vblex"/></l>                <r>maugréer<s n="vblex"/></r></p></e>
 <e>       <p><l>masoni<s n="vblex"/></l>               <r>maçonner<s n="vblex"/></r></p></e>
-<e>       <p><l>enkanaligi<s n="vblex"/></l>           <r>maîtriser<s n="vblex"/></r></p></e>
-<e>       <p><l>kanaligi<s n="vblex"/></l>             <r>maîtriser<s n="vblex"/></r></p></e>
+<e>       <p><l>superregi<s n="vblex"/></l>            <r>maîtriser<s n="vblex"/></r></p></e>
 <e>       <p><l>mensogi<s n="vblex"/></l>              <r>men<g><b/>comme<b/>un<b/>arracheur<b/>de<b/>dents</g><s n="vblex"/></r></p></e>
 <e>       <p><l>minaci<s n="vblex"/></l>               <r>menacer<s n="vblex"/></r></p></e>
 <e>       <p><l>admoni<s n="vblex"/></l>               <r>menacer<s n="vblex"/></r></p></e>
@@ -33399,7 +33388,7 @@
 <e>       <p><l>brave<s n="ij"/></l>                  <r>bravo<s n="ij"/></r></p></e>
 <e>       <p><l>unuvorte<s n="adv"/></l>               <r>bref<s n="adv"/></r></p></e>
 <e>       <p><l>bruske<s n="adv"/></l>                 <r>brusquement<s n="adv"/></r></p></e>
-<e>       <p><l>maldelikate<s n="adv"/></l>            <r>brusquement<s n="adv"/></r></p></e>
+<e r="LR"><p><l>maldelikate<s n="adv"/></l>            <r>brusquement<s n="adv"/></r></p></e>
 <e>       <p><l>brutale<s n="adv"/></l>                <r>brutalement<s n="adv"/></r></p></e>
 <e>       <p><l>prave<s n="adv"/></l>                  <r>c'est<b/>juste<s n="adv"/></r></p></e>
 <e>       <p><l>kaprice<s n="adv"/></l>                <r>capricieusement<s n="adv"/></r></p></e>
@@ -33407,7 +33396,7 @@
 <e>       <p><l>kategorie<s n="adv"/></l>              <r>catégoriquement<s n="adv"/></r></p></e>
 <e>       <p><l>ĉitage<s n="adv"/></l>                 <r>ce<b/>jour-ci<s n="adv"/></r></p></e>
 <e>       <p><l>tiutage<s n="adv"/></l>                <r>ce<b/>jour-là<s n="adv"/></r></p></e>
-<e r="LR"><p><l>intertempe<s n="adv"/></l>             <r>cependant<s n="adv"/></r></p></e>
+<e>       <p><l>tamen<s n="adv"/></l>             <r>cependant<s n="adv"/></r></p></e>
 <e>       <p><l>tamen<s n="cnjadv"/></l>               <r>cependant<s n="cnjadv"/></r></p></e>
 <e>       <p><l>certe<s n="adv"/></l>                  <r>certainement<s n="adv"/></r></p></e>
 <e>       <p><l>ja<s n="adv"/></l>                     <r>certes<s n="adv"/></r></p></e>
@@ -33827,6 +33816,7 @@
 <e>       <p><l>nun<s n="adv"/></l>                    <r>maintenant<s n="adv"/></r></p></e>
 <e>       <p><l>majoritate<s n="adv"/></l>             <r>majoritairement<s n="adv"/></r></p></e>
 <e>       <p><l>malbone<s n="adv"/></l>                <r>mal<s n="adv"/></r></p></e>
+<e>       <p><l>malbone<s n="adv"/></l>                <r>mal<s n="preadv"/></r></p></e>
 <e>       <p><l>fuŝuzi<s n="vblex"/></l>               <r>mal<b/>employer<s n="vblex"/></r></p></e>
 <e>       <p><l>sinĝena<s n="adj"/></l>                <r>mal<g><b/>à<b/>l'aise</g><s n="adj"/></r></p></e>
 <e>       <p><l>bedaŭrinde<s n="adv"/></l>             <r>malencontreusement<s n="adv"/></r></p></e>
@@ -33960,7 +33950,7 @@
 <e>       <p><l>por<b/>ke<s n="adv"/></l>              <r>pour<b/>que<s n="adv"/></r></p></e>
 <e>       <p><l>liaflanke<s n="adv"/></l>              <r>pour<b/>sa<b/>part<s n="adv"/></r></p></e>
 <e>       <p><l>kial<s n="adv"/></l>                   <r>pourquoi<s n="adv"/></r></p></e>
-<e>       <p><l>dume<s n="adv"/></l>                   <r>pourtant<s n="adv"/></r></p></e>
+<e>       <p><l>tamen<s n="adv"/></l>                   <r>pourtant<s n="adv"/></r></p></e>
 <e>       <p><l>ke<s n="adv"/></l>                     <r>pourvu<b/>que<s n="adv"/></r></p></e>
 <e>       <p><l>kondiĉe<s n="adv"/></l>                <r>pourvu<b/>que<s n="adv"/></r></p></e>
 <e>       <p><l>preskaŭ<s n="adv"/></l>                <r>pratiquement<s n="adv"/></r></p></e>
@@ -34399,22 +34389,22 @@
 <e r="LR"><p><l>jam<b/>de<s n="pr"/></l>               <r>depuis<s n="pr"/></r></p></e>
 <e>       <p><l>malantaŭ<s n="pr"/></l>                <r>derrière<s n="pr"/></r></p></e>
 <e r="LR"><p><l>dorse<b/>de<s n="pr"/></l>             <r>derrière<s n="pr"/></r></p></e>
-<e>       <p><l>post<s n="pr"/></l>                    <r>derrière<s n="pr"/></r></p></e>
+<e r="LR"><p><l>post<s n="pr"/></l>                    <r>derrière<s n="pr"/></r></p></e>
 <e>       <p><l>antaŭ<s n="pr"/></l>                   <r>devant<s n="pr"/></r></p></e>
-<e>       <p><l>fronte<b/>al<s n="pr"/></l>            <r>devant<s n="pr"/></r></p></e>
+<e r="LR"><p><l>fronte<b/>al<s n="pr"/></l>            <r>devant<s n="pr"/></r></p></e>
 <e>       <p><l>flanke<b/>de<s n="pr"/></l>            <r>du<b/>côté<b/>de<s n="pr"/></r></p></e>
 <e>       <p><l>pro<s n="pr"/></l>                     <r>du<b/>fait<b/>de<s n="pr"/></r></p></e>
-<e>       <p><l>kaŭze<b/>de<s n="pr"/></l>             <r>du<b/>fait<b/>de<s n="pr"/></r></p></e>
+<e r="LR"><p><l>kaŭze<b/>de<s n="pr"/></l>             <r>du<b/>fait<b/>de<s n="pr"/></r></p></e>
 <e r="RL"><p><l>dum<s n="pr"/></l>                     <r>durant<s n="pr"/></r></p></e>
-<e>       <p><l>de<s n="pr"/></l>                      <r>dès<s n="pr"/></r></p></e>
-<e>       <p><l>de<b/>post<s n="pr"/></l>              <r>dès<s n="pr"/></r></p></e>
+<e r="LR"><p><l>de<s n="pr"/></l>                      <r>dès<s n="pr"/></r></p></e>
+<e r="LR"><p><l>de<b/>post<s n="pr"/></l>              <r>dès<s n="pr"/></r></p></e>
 <e>       <p><l>ekde<s n="pr"/></l>                    <r>dès<s n="pr"/></r></p></e>
 <e>       <p><l>en<s n="pr"/></l>                      <r>en<s n="pr"/></r></p></e>
-<e>       <p><l>konforme<b/>al<s n="pr"/></l>          <r>en<b/>accord<b/>avec<s n="pr"/></r></p></e>
+<e r="LR"><p><l>konforme<b/>al<s n="pr"/></l>          <r>en<b/>accord<b/>avec<s n="pr"/></r></p></e>
 <e>       <p><l>konforme<b/>kun<s n="pr"/></l>         <r>en<b/>accord<b/>avec<s n="pr"/></r></p></e>
 <e>       <p><l>okaze<b/>de<s n="pr"/></l>             <r>en<b/>cas<b/>de<s n="pr"/></r></p></e>
 <e>       <p><l>koncerne<b/>al<s n="pr"/></l>          <r>en<b/>ce<b/>qui<b/>concerne<s n="pr"/></r></p></e>
-<e>       <p><l>koncerne<s n="pr"/></l>                <r>en<b/>ce<b/>qui<b/>concerne<s n="pr"/></r></p></e>
+<e r="LR"><p><l>koncerne<s n="pr"/></l>                <r>en<b/>ce<b/>qui<b/>concerne<s n="pr"/></r></p></e>
 <e>       <p><l>akompanate<b/>de<s n="pr"/></l>        <r>en<b/>compagnie<b/>de<s n="pr"/></r></p></e>
 <e>       <p><l>malgraŭ<s n="pr"/></l>                 <r>en<b/>dépit<b/>de<s n="pr"/></r></p></e>
 <e>       <p><l>fronte<b/>al<s n="pr"/></l>            <r>en<b/>face<b/>de<s n="pr"/></r></p></e>
@@ -34635,6 +34625,7 @@
     <!-- ******************************
           group vbser_symbol
       ****************************** -->
+<e>       <p><l>esti<s n="vblex"/></l>                 <r>être<s n="vblex"/></r></p></e>
 <e>       <p><l>esti<s n="vbser"/></l>                 <r>être<s n="vbser"/></r></p></e>
 <e>       <p><l>esti<s n="vbser"/></l>                 <r>être<s n="vbser"/><s n="pp"/><s n="mf"/><s n="sp"/></r></p></e>
     <!-- ******************************
@@ -34653,9 +34644,12 @@
       ****************************** -->
 <e>       <p><l>kiel<s n="rel"/></l>                   <r>comme<s n="rel"/></r></p></e>
 <e>       <p><l>kie<s n="rel"/></l>                    <r>où<s n="rel"/></r></p></e>
+<e>       <p><l>kiam<s n="rel"/></l>                   <r>quand<s n="rel"/></r></p></e>
 <e>       <p><l>kiu<s n="prn"/><s n="rel"/></l>        <r>que<s n="rel"/><s n="mf"/></r></p></e>
 <e>       <p><l>kiu<s n="prn"/><s n="rel"/></l>        <r>qui<s n="rel"/><s n="mf"/></r></p></e>
 <e>       <p><l>de<b/>kiu<s n="prn"/><s n="rel"/></l>  <r>dont<s n="rel"/><s n="mf"/></r></p></e>
+<e r="RL"><p><l>de<b/>kiu<s n="prn"/><s n="rel"/></l>  <r>duquel<s n="rel"/><s n="m"/></r></p></e>
+<e r="RL"><p><l>de<b/>kiu<s n="prn"/><s n="rel"/></l>  <r>duquel<s n="rel"/><s n="f"/></r></p></e>
     <!-- ******************************
           group preadv_symbol
       ****************************** -->

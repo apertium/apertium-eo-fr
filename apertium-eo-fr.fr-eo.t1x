@@ -54,7 +54,7 @@
       <cat-item tags="det.itg.*"/>
       <cat-item tags="det.ord.*"/>
       <cat-item tags="predet.*"/>
-      <cat-item tags="num.*"/> 
+      <cat-item tags="num.*"/>
     </def-cat>
 
    <def-cat n="dem">
@@ -355,6 +355,7 @@
       <cat-item lemma="plus" tags="adv"/>
       <cat-item lemma="plus" tags="preadv"/>
       <cat-item lemma="plus" tags="det.*"/><!-- pel tagger-->
+      <cat-item lemma="plus" tags="n.*"/><!-- pel tagger-->
       <cat-item lemma="moins" tags="adv"/>
       <cat-item lemma="moins" tags="preadv"/>
       <cat-item lemma="moins" tags="det.*"/><!-- pel tagger-->
@@ -461,7 +462,7 @@
       <attr-item tags="adj.sint.sup"/>
       <attr-item tags="adj.pos"/>
       <attr-item tags="vblex.pp"/>
-    </def-attr>  
+    </def-attr>
 
 
     <def-attr n="a_det">
@@ -569,7 +570,7 @@
 
     <def-attr n="temps">
       <attr-item tags="cni"/>
-      <attr-item tags="fti"/>  
+      <attr-item tags="fti"/>
       <attr-item tags="ifi"/>
       <attr-item tags="imp"/>
       <attr-item tags="pii"/>
@@ -592,7 +593,7 @@
 
     <def-attr n="neg">
       <attr-item tags="NEG"/>
-    </def-attr>  
+    </def-attr>
 
   </section-def-attrs>
   <section-def-vars>
@@ -600,6 +601,10 @@
     <def-var n="changecase"/>
     <def-var n="lemapos"/>
     <def-var n="nombre"/>
+<def-var n="nombre1"/>
+<def-var n="nombre2"/>
+<def-var n="xxx"/>
+<def-var n="yyy"/>
     <def-var n="genere"/>
     <def-var n="concDet"/>
     <def-var n="concAdj"/>
@@ -608,7 +613,7 @@
     <def-var n="concTercero"/>
     <def-var n="interrogativa"/>
     <def-var n="exclamativa"/>
-    <def-var n="caseFirstWord"/> 
+    <def-var n="caseFirstWord"/>
     <def-var n="lema"/>
     <def-var n="EOS"/>
     <def-var n="SVnegatiu"/>
@@ -632,15 +637,15 @@
     <list-item v="sufiĉe da"/>
     <list-item v="ne multe da"/>
     <list-item v="tiom da"/>
-    </def-list> 
+    </def-list>
   
   <def-list n="qui"> <!-- BCN EO per marcar els que no poden anar en acc-->
     <list-item v="qui"/>
-    </def-list> 
+    </def-list>
 
   <def-list n="quin"> <!-- BCN EO per marcar els que han d'anar en acc (dets int preverbals)-->
     <list-item v="quin"/>
-    </def-list> 
+    </def-list>
 
   <def-list n="moviment"> <!-- BCN EO-->
     <list-item v="anar"/>
@@ -659,19 +664,19 @@
     <list-item v="caminar"/>
     <list-item v="avançar"/>
     <list-item v="sortir"/>
-    </def-list> 
+    </def-list>
 
   <def-list n="laqualcosa">
     <list-item v="la qual cosa"/>
     <list-item v="cosa que"/>
-    </def-list> 
+    </def-list>
 
   <def-list n="vegades"> <!-- per canviar "cop/colp/pic" a "vegada" -->
     <list-item v="vegada"/>
     <list-item v="cop"/>
     <list-item v="colp"/>
     <list-item v="pic"/>
-    </def-list> 
+    </def-list>
 
   <def-list n="agradar"> <!-- BCN EO per a la inversio argumental-->
     <list-item v="agradar"/>
@@ -680,7 +685,7 @@
     <list-item v="preocupar-se"/>
     <list-item v="interesar-se"/>
     <list-item v="inquietar-se"/>
-    </def-list> 
+    </def-list>
 
   <def-list n="volition"> <!-- BCN EO verbs que porten KE -->
     <list-item v="vouloir"/>
@@ -691,7 +696,7 @@
     <list-item v="demander"/>
     <list-item v="suggérer"/>
     <list-item v="falloir"/>
-    </def-list> 
+    </def-list>
 
   <def-list n="reportingverb"> <!-- BCN EO verbs que porten KE (no s'utilitza)-->
     <list-item v="dir"/>
@@ -815,7 +820,7 @@
     </def-macro>
 
 
-    <def-macro n="nom_cas" npar="1"> <!-- EO: marca els SN que si són objecte estaran en accusatiu (les regles del t2x s'encarreguen; també marca els dets interrogatius 'quin' per a tractaclor al t2x)-->
+    <def-macro n="nom_cas" npar="1"> <!-- EO: marca els SN que si són objecte estaran en accusatiu (les regles del t2x s'encarreguen; també marca els dets interrogatius 'quin' per a tractar-los al t2x)-->
 	<choose>
   	<when>
     	<test>
@@ -900,7 +905,7 @@
 	  </test>
 	  <let>
 	    <var n="nombre"/>
-	    <lit-tag v="sg_slpl"/>
+	    <lit-tag v="sg"/>
 	  </let>
 	</when>
        <when>
@@ -926,9 +931,156 @@
 	    <clip pos="1" side="tl" part="nbr"/>
 	  </let>
 	</otherwise>
-      </choose> 
+      </choose>
     </def-macro>
 
+
+    <def-macro n="default_nombro" npar="0"> <!-- ŝanĝas nombre al sg, se ĝi estas ND aŭ sp -->
+      <choose>
+	<when>
+	  <test>
+	    <or>
+	      <equal>
+	        <var n="nombre"/>
+		<lit-tag v="ND"/>
+	      </equal>
+	      <equal>
+	        <var n="nombre"/>
+		<lit-tag v="sp"/>
+	      </equal>
+	    </or>
+	  </test>
+	  <let>
+	    <var n="nombre"/>
+	    <lit-tag v="sg"/>
+	  </let>
+	</when>
+      </choose>
+    </def-macro>
+
+
+    <def-macro n="nombro2" npar="2">
+	<!-- par1 = NOM (prioritata), par2 = DET/ADJ (malprioritata); eliro: nombre -->
+	<!-- ĝi ŝanĝas <clip pos="1" side="tl" part="nbr"/> por eventuala konsulto en makrooj nombro3, 4 ktp. -->
+<let><var n="xxx"/><concat>
+        <var n="xxx"/><lit-tag v="="/><clip pos="1" side="tl" part="nbr"/><lit-tag v=", "/><clip pos="2" side="tl" part="nbr"/><lit-tag v="; "/>
+</concat></let>
+      <choose>
+	<when>
+	  <test>
+	    <equal>
+	      <clip pos="1" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="nbr"/>
+	    </equal>
+	  </test>
+	  <let>
+	    <var n="nombre"/>
+	    <clip pos="2" side="tl" part="nbr"/>
+	  </let>
+	</when>
+	<when>
+	  <test>
+	    <and>
+	      <or>
+	        <equal>
+		  <clip pos="1" side="tl" part="nbr"/>
+		  <lit-tag v="ND"/>
+	        </equal>
+	        <equal>
+		  <clip pos="1" side="tl" part="nbr"/>
+		  <lit-tag v="sp"/>
+	        </equal>
+	      </or>
+	      <or>
+	        <equal>
+		  <clip pos="2" side="tl" part="nbr"/>
+		  <lit-tag v="sg"/>
+	        </equal>
+	        <equal>
+		  <clip pos="2" side="tl" part="nbr"/>
+		  <lit-tag v="pl"/>
+	        </equal>
+	      </or>
+	    </and>
+	  </test>
+	  <let>
+	    <clip pos="1" side="tl" part="nbr"/>
+	    <clip pos="2" side="tl" part="nbr"/>
+	  </let>
+	  <let>
+	    <var n="nombre"/>
+	    <clip pos="2" side="tl" part="nbr"/>
+	  </let>
+	</when>
+	<when>
+	  <test>
+	    <or>
+	      <equal>
+		<clip pos="2" side="tl" part="nbr"/>
+		<lit-tag v="ND"/>
+	      </equal>
+	      <equal>
+		<clip pos="2" side="tl" part="nbr"/>
+		<lit-tag v="sp"/>
+	      </equal>
+	    </or>
+	  </test>
+	  <let>
+	    <var n="nombre"/>
+	    <clip pos="1" side="tl" part="nbr"/>
+	  </let>
+	</when>
+	<otherwise>
+	  <let>
+	    <var n="nombre"/>
+	    <clip pos="1" side="tl" part="nbr"/>
+	  </let>
+	</otherwise>
+      </choose>
+    </def-macro>
+
+    <def-macro n="nombro3" npar="3"> <!-- par1 = NOM (prioritata), parn = DET/ADJ (malprioritataj); eliro: nombre -->
+<let><var n="yyy"/><concat>
+        <var n="yyy"/><lit-tag v="="/><clip pos="1" side="tl" part="nbr"/><lit-tag v=", "/><clip pos="2" side="tl" part="nbr"/><lit-tag v=", "/><clip pos="3" side="tl" part="nbr"/><lit-tag v="; "/>
+</concat></let>
+	<call-macro n="nombro2">
+	  <with-param pos="1"/>
+	  <with-param pos="2"/>
+	</call-macro>
+<let>
+<var n="nombre1"/>
+<var n="nombre"/>
+</let>
+	<call-macro n="nombro2">
+	  <with-param pos="1"/>
+	  <with-param pos="3"/>
+	</call-macro>
+    </def-macro>
+
+    <def-macro n="nombro4" npar="4"> <!-- par1 = NOM (prioritata), parn = DET/ADJ (malprioritataj); eliro: nombre -->
+	<call-macro n="nombro3">
+	  <with-param pos="1"/>
+	  <with-param pos="2"/>
+	  <with-param pos="3"/>
+	</call-macro>
+	<call-macro n="nombro2">
+	  <with-param pos="1"/>
+	  <with-param pos="4"/>
+	</call-macro>
+    </def-macro>
+
+    <def-macro n="nombro5" npar="5"> <!-- par1 = NOM (prioritata), parn = DET/ADJ (malprioritataj); eliro: nombre -->
+	<call-macro n="nombro4">
+	  <with-param pos="1"/>
+	  <with-param pos="2"/>
+	  <with-param pos="3"/>
+	  <with-param pos="4"/>
+	</call-macro>
+	<call-macro n="nombro2">
+	  <with-param pos="1"/>
+	  <with-param pos="5"/>
+	</call-macro>
+    </def-macro>
 
     <def-macro n="firstWord" npar="1">
       <choose>
@@ -942,10 +1094,10 @@
 	  <choose>
 	    <when>
 	      <test>
-		<equal> 
+		<equal>
 		  <var n="EOS"/>
 		  <lit v="true"/>
-		</equal> 
+		</equal>
 	      </test>
 	      <modify-case>
 		<clip pos="1" side="tl" part="lem"/>
@@ -978,12 +1130,12 @@
           <test>
             <equal caseless="yes"><clip pos="1" side="tl" part="gen"/><lit-tag v="GD"/></equal>
           </test>
-          <let><clip pos="1" side="tl" part="gen"/><lit-tag v="m"/></let> 
+          <let><clip pos="1" side="tl" part="gen"/><lit-tag v="m"/></let>
         </when>
       </choose>
     </def-macro>
 
-  </section-def-macros> 
+  </section-def-macros>
 
   <section-rules>
 
@@ -1014,11 +1166,11 @@
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   <!--<clip pos="1" side="tl" part="whole"/> Per a compostos: --> 
-	      <clip pos="1" side="tl" part="lemh"/> 
+	    <lu>   <!--<clip pos="1" side="tl" part="whole"/> Per a compostos: -->
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
 	      <clip pos="1" side="tl" part="gen"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
@@ -1085,10 +1237,10 @@
 	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <lit-tag v="np"/>
 	      <lit-tag v="loc"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	  </chunk>
@@ -1136,10 +1288,10 @@
 	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <lit-tag v="np"/>
 	      <lit-tag v="loc"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	  </chunk>
@@ -1185,10 +1337,10 @@
 	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="3" side="tl" part="lem"/> 
+	      <clip pos="3" side="tl" part="lem"/>
 	      <lit-tag v="np"/>
 	      <lit-tag v="loc"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	  </chunk>
@@ -1226,15 +1378,15 @@
 	      <lit v="la tuta"/>
 	      <lit-tag v="det"/>
 	      <lit-tag v="ind"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b/>   
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <lit-tag v="np"/>
 	      <lit-tag v="loc"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	  </chunk>
@@ -1258,11 +1410,15 @@
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
-	 <call-macro n="nom_cas"> <!-- assigna cas nominatiu per defecte --> 
+	 <call-macro n="nom_cas"> <!-- assigna cas nominatiu per defecte -->
 	  <with-param pos="1"/>
-	</call-macro> 
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro3">
 	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	  <with-param pos="4"/>
+	</call-macro>
+	<call-macro n="default_nombro">
 	</call-macro>
 
 
@@ -1276,11 +1432,11 @@
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
             <b pos="1"/> <!-- canvi a plej-->
                         <lu>
                         <lit v="plej"/>
@@ -1291,17 +1447,17 @@
             <lu>
               <clip pos="4" side="tl" part="lemh"/>
               <clip pos="4" side="tl" part="a_adj"/>
-              <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="4" side="tl" part="lemq"/>
             </lu>
 
 	    <b pos="3"/>
 	    <lu>     
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
               <clip pos="2" side="tl" part="gen"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
@@ -1325,11 +1481,14 @@
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
-	 <call-macro n="nom_cas"> <!-- assigna cas nominatiu per defecte --> 
+	 <call-macro n="nom_cas"> <!-- assigna cas nominatiu per defecte -->
 	  <with-param pos="1"/>
-	</call-macro> 
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro2">
+	  <with-param pos="3"/>
 	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
 	</call-macro>
 
 
@@ -1343,11 +1502,11 @@
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
             <b pos="1"/> <!-- canvi a plej-->
                         <lu>
                         <lit v="plej"/>
@@ -1358,7 +1517,7 @@
             <lu>
               <clip pos="3" side="tl" part="lemh"/>
               <clip pos="3" side="tl" part="a_adj"/>
-              <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="3" side="tl" part="lemq"/>
             </lu>
@@ -1381,11 +1540,14 @@
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
-	 <call-macro n="nom_cas"> <!-- assigna cas nominatiu per defecte --> 
+	 <call-macro n="nom_cas"> <!-- assigna cas nominatiu per defecte -->
 	  <with-param pos="1"/>
-	</call-macro> 
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro2">
 	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
 	</call-macro>
 
    <choose>
@@ -1418,7 +1580,7 @@
               <clip pos="2" side="tl" part="lemh"/>
               <clip pos="2" side="tl" part="a_nom"/>
               <clip pos="2" side="tl" part="gen"/>
-              <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="2" side="tl" part="lemq"/>
             </lu>
@@ -1438,17 +1600,17 @@
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
 	    <lu>     
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
               <clip pos="2" side="tl" part="gen"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
@@ -1500,10 +1662,10 @@
             </lu>
             <b/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
 	      <clip pos="2" side="tl" part="nbr"/>
-	    </lu> 
+	    </lu>
           </chunk>
         </out>
     </when>
@@ -1518,17 +1680,17 @@
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_num"/>
 	      <clip pos="2" side="tl" part="nbr"/>
-	    </lu> 
+	    </lu>
 	  </chunk>
 	</out>	  
      </otherwise>
@@ -1554,8 +1716,12 @@
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
 	</call-macro>
-	<call-macro n="nombre_nom">
+	<call-macro n="nombro3">
 	  <with-param pos="3"/>
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
 	</call-macro>
 	<!--<call-macro n="canvia_det">
 	  <with-param pos="1"/>
@@ -1570,7 +1736,7 @@
        	  <list n="vegades"/>
       	</in>
       </test>
-          <let><clip pos="3" side="tl" part="lemh"/><lit v="fojo"/></let> 
+          <let><clip pos="3" side="tl" part="lemh"/><lit v="fojo"/></let>
      </when>
    </choose>
 
@@ -1597,16 +1763,16 @@
             </lu>
             <b/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
 	      <clip pos="2" side="tl" part="nbr"/>
-	    </lu> 
+	    </lu>
 	    <b pos="2"/>
             <lu>
               <clip pos="3" side="tl" part="lemh"/>
               <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-              <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="3" side="tl" part="lemq"/>
             </lu>
@@ -1624,23 +1790,23 @@
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_num"/>
 	      <clip pos="2" side="tl" part="nbr"/>
-	    </lu> 
+	    </lu>
 	    <b pos="2"/>
 	    <lu>     
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
@@ -1669,8 +1835,12 @@
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
 	</call-macro>
-	<call-macro n="nombre_nom">
+	<call-macro n="nombro3">
 	  <with-param pos="3"/>
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
 	</call-macro>
 
    <!-- article definit s'elimina i es 'genera' cas: 'totes les nenes : ĉiuj knabinoj-->
@@ -1692,17 +1862,17 @@
               <tag><var n="changecase"/></tag>
             </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
             <lu>
               <clip pos="3" side="tl" part="lemh"/>
               <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-              <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="3" side="tl" part="lemq"/>
             </lu>
@@ -1720,24 +1890,24 @@
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="2"/>
 	    <lu>     
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
@@ -1758,17 +1928,20 @@
 	<pattern-item n="adj"/>
 	<pattern-item n="nom"/>
       </pattern>
-      <action>	
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro2">
 	  <with-param pos="2"/>
-	</call-macro>	
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="2"/>
-	</call-macro>	
-	<out>  
+	</call-macro>
+	<out>
 	  <chunk name="nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -1777,18 +1950,18 @@
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_adj"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="1" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="1" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
@@ -1808,16 +1981,20 @@
 	<pattern-item n="adj"/>
 	<pattern-item n="nom"/>
       </pattern>
-      <action>	
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro3">
 	  <with-param pos="3"/>
-	</call-macro>	
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
    <!-- article indefinit s'elimina-->
    <choose>
      <when>
@@ -1827,7 +2004,7 @@
         <lit v="un"/>
         </equal>
       </test>
-	<out>  
+	<out>
 	  <chunk name="nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -1836,18 +2013,18 @@
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
 	    <lu>       
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
-	      <clip pos="3" side="tl" part="gen"/> 
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <clip pos="3" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
@@ -1855,7 +2032,7 @@
 	</out>       
     </when>
 <otherwise>           <!-- article definit-->
-	<out>  
+	<out>
 	  <chunk name="det_nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -1865,25 +2042,25 @@
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>       
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
-	      <clip pos="3" side="tl" part="gen"/> 
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <clip pos="3" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
@@ -1911,16 +2088,20 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<pattern-item n="nom"/>
 	<pattern-item n="adjADJ"/>
       </pattern>
-      <action>	
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro3">
+	  <with-param pos="3"/>
 	  <with-param pos="2"/>
-	</call-macro>	
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
    <!-- article indefinit s'elimina-->
    <choose>
      <when>
@@ -1930,7 +2111,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         <lit v="un"/>
         </equal>
       </test>
-	<out>  
+	<out>
 	  <chunk name="nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -1939,18 +2120,18 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
@@ -1958,7 +2139,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</out>       
     </when>
 <otherwise>           <!-- article definit-->
-	<out>  
+	<out>
 	  <chunk name="det_nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -1968,25 +2149,25 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
@@ -2016,16 +2197,20 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<pattern-item n="nom"/>
 	<pattern-item n="adjADJ"/>
       </pattern>
-      <action>	
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro3">
 	  <with-param pos="4"/>
-	</call-macro>	
+	  <with-param pos="1"/>
+	  <with-param pos="5"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
    <!-- article indefinit s'elimina-->
    <choose>
      <when>
@@ -2035,7 +2220,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         <lit v="un"/>
         </equal>
       </test>
-	<out>  
+	<out>
 	  <chunk name="nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -2044,31 +2229,31 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="5" side="tl" part="lemh"/> 
+	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
-	      <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="5" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="5" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="4"/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>       
 	    <b pos="2"/>
 	    <lu>   
-	      <clip pos="3" side="tl" part="whole"/> 
+	      <clip pos="3" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="3"/>
 	    <lu>       
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_nom"/>
-	      <clip pos="4" side="tl" part="gen"/> 
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <clip pos="4" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
@@ -2076,7 +2261,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</out>       
     </when>
 <otherwise>           <!-- article definit-->
-	<out>  
+	<out>
 	  <chunk name="det_nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -2086,38 +2271,38 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="5" side="tl" part="lemh"/> 
+	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
-	      <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="5" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="5" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="4"/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
 	    <lu>   
-	      <clip pos="3" side="tl" part="whole"/> 
+	      <clip pos="3" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="3"/>
 	    <lu>       
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_nom"/>
-	      <clip pos="4" side="tl" part="gen"/> 
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <clip pos="4" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
@@ -2147,16 +2332,20 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<pattern-item n="guio"/>
 	<pattern-item n="adjADJ"/>
       </pattern>
-      <action>	
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro3">
 	  <with-param pos="2"/>
-	</call-macro>	
+	  <with-param pos="1"/>
+	  <with-param pos="5"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
    <!-- article indefinit s'elimina-->
    <choose>
      <when>
@@ -2166,7 +2355,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         <lit v="un"/>
         </equal>
       </test>
-	<out>  
+	<out>
 	  <chunk name="nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -2175,30 +2364,30 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
 	    <lu>   
-	      <clip pos="4" side="tl" part="whole"/> 
+	      <clip pos="4" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="4"/>
 	    <lu>   
-	      <clip pos="5" side="tl" part="lemh"/> 
+	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
-	      <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="5" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="5" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>       
@@ -2206,7 +2395,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</out>       
     </when>
 <otherwise>           <!-- article definit-->
-	<out>  
+	<out>
 	  <chunk name="det_nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -2216,37 +2405,37 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
 	    <lu>   
-	      <clip pos="4" side="tl" part="whole"/> 
+	      <clip pos="4" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="4"/>
 	    <lu>   
-	      <clip pos="5" side="tl" part="lemh"/> 
+	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
-	      <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="5" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="5" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
@@ -2277,16 +2466,21 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<pattern-item n="guio"/>
 	<pattern-item n="adjADJ"/>
       </pattern>
-      <action>	
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro4">
 	  <with-param pos="2"/>
-	</call-macro>	
+	  <with-param pos="1"/>
+	  <with-param pos="3"/>
+	  <with-param pos="6"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
    <!-- article indefinit s'elimina-->
    <choose>
      <when>
@@ -2296,7 +2490,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         <lit v="un"/>
         </equal>
       </test>
-	<out>  
+	<out>
 	  <chunk name="nom_adj_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -2305,38 +2499,38 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="4"/>
 	    <lu>   
-	      <clip pos="5" side="tl" part="whole"/> 
+	      <clip pos="5" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="5"/>
 	    <lu>   
-	      <clip pos="6" side="tl" part="lemh"/> 
+	      <clip pos="6" side="tl" part="lemh"/>
 	      <clip pos="6" side="tl" part="a_adj"/>
-	      <clip pos="6" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="6" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="6" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>       
@@ -2344,7 +2538,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</out>       
     </when>
 <otherwise>           <!-- article definit-->
-	<out>  
+	<out>
 	  <chunk name="det_nom_adj_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -2354,45 +2548,45 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="4"/>
 	    <lu>   
-	      <clip pos="5" side="tl" part="whole"/> 
+	      <clip pos="5" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="5"/>
 	    <lu>   
-	      <clip pos="6" side="tl" part="lemh"/> 
+	      <clip pos="6" side="tl" part="lemh"/>
 	      <clip pos="6" side="tl" part="a_adj"/>
-	      <clip pos="6" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="6" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="6" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
@@ -2424,16 +2618,20 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<pattern-item n="guio"/>
 	<pattern-item n="adjADJ"/>
       </pattern>
-      <action>	
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro3">
 	  <with-param pos="2"/>
-	</call-macro>	
+	  <with-param pos="1"/>
+	  <with-param pos="7"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
    <!-- article indefinit s'elimina-->
    <choose>
      <when>
@@ -2443,7 +2641,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         <lit v="un"/>
         </equal>
       </test>
-	<out>  
+	<out>
 	  <chunk name="nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -2452,42 +2650,42 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
 	    <lu>   
-	      <clip pos="4" side="tl" part="whole"/> 
+	      <clip pos="4" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="4"/>
 	    <lu>   
-	      <clip pos="5" side="tl" part="lemh"/> 
+	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
-	      <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="5" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="5" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="5"/>
 	    <lu>   
-	      <clip pos="6" side="tl" part="whole"/> 
+	      <clip pos="6" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="6"/>
 	    <lu>   
-	      <clip pos="7" side="tl" part="lemh"/> 
+	      <clip pos="7" side="tl" part="lemh"/>
 	      <clip pos="7" side="tl" part="a_adj"/>
-	      <clip pos="7" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="7" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="7" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>       
@@ -2495,7 +2693,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</out>       
     </when>
 <otherwise>           <!-- article definit-->
-	<out>  
+	<out>
 	  <chunk name="det_nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -2505,49 +2703,49 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
 	    <lu>   
-	      <clip pos="4" side="tl" part="whole"/> 
+	      <clip pos="4" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="4"/>
 	    <lu>   
-	      <clip pos="5" side="tl" part="lemh"/> 
+	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
-	      <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="5" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="5" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="5"/>
 	    <lu>   
-	      <clip pos="6" side="tl" part="whole"/> 
+	      <clip pos="6" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="6"/>
 	    <lu>   
-	      <clip pos="7" side="tl" part="lemh"/> 
+	      <clip pos="7" side="tl" part="lemh"/>
 	      <clip pos="7" side="tl" part="a_adj"/>
-	      <clip pos="7" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="7" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="7" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
@@ -2575,11 +2773,16 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
+	<call-macro n="nombro4">
+	  <with-param pos="3"/>
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	  <with-param pos="4"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>
-	<call-macro n="nombre_nom">
-	  <with-param pos="3"/>
 	</call-macro>
 
    <choose>
@@ -2590,7 +2793,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
        	  <list n="vegades"/>
       	</in>
       </test>
-          <let><clip pos="3" side="tl" part="lemh"/><lit v="fojo"/></let> 
+          <let><clip pos="3" side="tl" part="lemh"/><lit v="fojo"/></let>
      </when>
    </choose>
 
@@ -2617,15 +2820,15 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
             </lu>
             <b/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
 	      <clip pos="2" side="tl" part="nbr"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
             <lu>
               <clip pos="4" side="tl" part="lemh"/>
               <clip pos="4" side="tl" part="a_adj"/>
-              <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="4" side="tl" part="lemq"/>
             </lu>
@@ -2634,7 +2837,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="3" side="tl" part="lemh"/>
               <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-              <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="3" side="tl" part="lemq"/>
             </lu>
@@ -2652,31 +2855,31 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_num"/>
 	      <clip pos="2" side="tl" part="nbr"/>
-	    </lu> 
+	    </lu>
 	    <b pos="2"/>
             <lu>
               <clip pos="4" side="tl" part="lemh"/>
               <clip pos="4" side="tl" part="a_adj"/>
-              <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="4" side="tl" part="lemq"/>
             </lu>
 	    <b pos="3"/>
 	    <lu>     
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
@@ -2704,11 +2907,16 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
+	<call-macro n="nombro4">
+	  <with-param pos="3"/>
+	  <with-param pos="1"/>
+	  <with-param pos="2"/>
+	  <with-param pos="4"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>
-	<call-macro n="nombre_nom">
-	  <with-param pos="3"/>
 	</call-macro>
 
    <!-- article definit s'elimina i es 'genera' cas: 'totes les nenes : ĉiuj knabinoj-->
@@ -2730,16 +2938,16 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <tag><var n="changecase"/></tag>
             </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
             <lu>
               <clip pos="4" side="tl" part="lemh"/>
               <clip pos="4" side="tl" part="a_adj"/>
-              <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="4" side="tl" part="lemq"/>
             </lu>
@@ -2748,7 +2956,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="3" side="tl" part="lemh"/>
               <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-              <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="3" side="tl" part="lemq"/>
             </lu>
@@ -2766,11 +2974,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	  </chunk>
  	    <b/>
 	  <chunk name="el">
@@ -2791,25 +2999,25 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
             <lu>
               <clip pos="4" side="tl" part="lemh"/>
               <clip pos="4" side="tl" part="a_adj"/>
-              <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="4" side="tl" part="lemq"/>
             </lu>
 	    <b pos="2"/>
 	    <lu>     
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
@@ -2831,16 +3039,21 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<pattern-item n="adv_preadv"/>
 	<pattern-item n="adjADJ"/>
       </pattern>
-      <action>	
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
+	<call-macro n="nombro3">
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	  <with-param pos="3"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
-	  <with-param pos="2"/>
-	</call-macro>	
+	</call-macro>
+
    <!-- article indefinit s'elimina-->
    <choose>
      <when>
@@ -2851,7 +3064,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         </equal>
       </test>
 
-	<out>  
+	<out>
 	  <chunk name="nom_adv_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -2860,30 +3073,30 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="3" side="tl" part="whole"/> 
+	      <clip pos="3" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>         
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
+	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
 	</out>       
   </when>
   <otherwise>
-	<out>  
+	<out>
 	  <chunk name="det_nom_adv_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -2893,31 +3106,31 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="3" side="tl" part="whole"/> 
+	      <clip pos="3" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="2"/>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
 	    <lu>         
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
+	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
 	</out>       
@@ -2943,11 +3156,16 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
+	<call-macro n="nombro4">
+	  <with-param pos="3"/>
+	  <with-param pos="1"/>
+	  <with-param pos="2"/>
+	  <with-param pos="5"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>
-	<call-macro n="nombre_nom">
-	  <with-param pos="3"/>
 	</call-macro>
 
    <choose>
@@ -2958,7 +3176,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
        	  <list n="vegades"/>
       	</in>
       </test>
-          <let><clip pos="3" side="tl" part="lemh"/><lit v="fojo"/></let> 
+          <let><clip pos="3" side="tl" part="lemh"/><lit v="fojo"/></let>
      </when>
    </choose>
 
@@ -2985,16 +3203,16 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
             </lu>
             <b/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
 	      <clip pos="2" side="tl" part="nbr"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
             <lu>
               <clip pos="3" side="tl" part="lemh"/>
               <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-              <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="3" side="tl" part="lemq"/>
             </lu>
@@ -3006,7 +3224,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
             <lu>
               <clip pos="5" side="tl" part="lemh"/>
               <clip pos="5" side="tl" part="a_adj"/>
-              <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="5" side="tl" part="lemq"/>
             </lu>
@@ -3024,23 +3242,23 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_num"/>
 	      <clip pos="2" side="tl" part="nbr"/>
-	    </lu> 
+	    </lu>
 	    <b pos="2"/>
 	    <lu>     
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
@@ -3052,7 +3270,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
             <lu>
               <clip pos="5" side="tl" part="lemh"/>
               <clip pos="5" side="tl" part="a_adj"/>
-              <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="5" side="tl" part="lemq"/>
             </lu>
@@ -3077,16 +3295,22 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<pattern-item n="cnjcoo"/>
 	<pattern-item n="adj"/>
       </pattern>
-      <action>	
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
+	<call-macro n="nombro4">
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	  <with-param pos="4"/>
+	  <with-param pos="6"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
-	  <with-param pos="2"/>
-	</call-macro>	
+	</call-macro>
+
    <!-- article indefinit s'elimina-->
    <choose>
      <when>
@@ -3097,7 +3321,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         </equal>
       </test>
 
-	<out>  
+	<out>
 	  <chunk name="nom_adv_adj_coo_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -3106,42 +3330,42 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="3" side="tl" part="whole"/> 
+	      <clip pos="3" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>   
-	      <clip pos="5" side="tl" part="whole"/> 
+	      <clip pos="5" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="3"/>
 	    <lu>   
-	      <clip pos="6" side="tl" part="lemh"/> 
+	      <clip pos="6" side="tl" part="lemh"/>
 	      <clip pos="6" side="tl" part="a_adj"/>
-	      <clip pos="6" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="6" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="6" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="4"/>
 	    <lu>         
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
+	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
 	</out>       
   </when>
   <otherwise>
-	<out>  
+	<out>
 	  <chunk name="det_nom_adv_adj_coo_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -3151,43 +3375,43 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="3" side="tl" part="whole"/> 
+	      <clip pos="3" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="2"/>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
 	    <lu>   
-	      <clip pos="5" side="tl" part="whole"/> 
+	      <clip pos="5" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="4"/>
 	    <lu>   
-	      <clip pos="6" side="tl" part="lemh"/> 
+	      <clip pos="6" side="tl" part="lemh"/>
 	      <clip pos="6" side="tl" part="a_adj"/>
-	      <clip pos="6" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="6" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="6" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="5"/>
 	    <lu>         
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
+	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
 	</out>       
@@ -3209,16 +3433,22 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<pattern-item n="cnjcoo"/>
 	<pattern-item n="adj"/>
       </pattern>
-      <action>		
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro4">
 	  <with-param pos="2"/>
-	</call-macro>	
+	  <with-param pos="1"/>
+	  <with-param pos="3"/>
+	  <with-param pos="5"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
+
    <!-- article indefinit s'elimina-->
    <choose>
      <when>
@@ -3228,7 +3458,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         <lit v="un"/>
         </equal>
       </test>
-	    <out> 
+	    <out>
 	      <chunk name="nom_adj_coo_adj" case="caseFirstWord">
 		<tags>
 		  <tag><lit-tag v="SN"/></tag>
@@ -3237,38 +3467,38 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <tag><var n="case"/></tag>
 		</tags>
 		<lu>   
-		  <clip pos="3" side="tl" part="lemh"/> 
+		  <clip pos="3" side="tl" part="lemh"/>
 		  <clip pos="3" side="tl" part="a_adj"/>
-		  <clip pos="3" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="3" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="3" side="tl" part="lemq"/>
+		</lu>
 		<b pos="1"/>
 		<lu>
-		  <clip pos="4" side="tl" part="whole"/> 
+		  <clip pos="4" side="tl" part="whole"/>
 		</lu>
 		<b pos="2"/>
 		<lu>   
-		  <clip pos="5" side="tl" part="lemh"/> 
+		  <clip pos="5" side="tl" part="lemh"/>
 		  <clip pos="5" side="tl" part="a_adj"/>
-		  <clip pos="5" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="5" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="5" side="tl" part="lemq"/>
+		</lu>
 		<b pos="3"/>
 		<lu>       
-		  <clip pos="2" side="tl" part="lemh"/> 
+		  <clip pos="2" side="tl" part="lemh"/>
 		  <clip pos="2" side="tl" part="a_nom"/>
 		  <clip pos="2" side="tl" part="gen"/>
-		  <clip pos="2" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="2" side="tl" part="lemq"/>  
+		  <clip pos="2" side="tl" part="lemq"/>
 		</lu>
 	      </chunk>
 	    </out>
 </when>
 <otherwise>           <!-- article definit-->
-	    <out> 
+	    <out>
 	      <chunk name="det_nom_adj_coo_adj" case="caseFirstWord">
 		<tags>
 		  <tag><lit-tag v="SN"/></tag>
@@ -3278,39 +3508,39 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <tag><var n="changecase"/></tag>
 		</tags>
 		<lu>   
-		  <clip pos="1" side="tl" part="lem"/> 
+		  <clip pos="1" side="tl" part="lem"/>
 		  <clip pos="1" side="tl" part="a_det"/>
-		  <clip pos="1" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
 		</lu>
 		<b pos="1"/>
 		<lu>   
-		  <clip pos="3" side="tl" part="lemh"/> 
+		  <clip pos="3" side="tl" part="lemh"/>
 		  <clip pos="3" side="tl" part="a_adj"/>
-		  <clip pos="3" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="3" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="3" side="tl" part="lemq"/>
+		</lu>
 		<b pos="2"/>
 		<lu>
-		  <clip pos="4" side="tl" part="whole"/> 
+		  <clip pos="4" side="tl" part="whole"/>
 		</lu>
 		<b pos="3"/>
 		<lu>   
-		  <clip pos="5" side="tl" part="lemh"/> 
+		  <clip pos="5" side="tl" part="lemh"/>
 		  <clip pos="5" side="tl" part="a_adj"/>
-		  <clip pos="5" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="5" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="5" side="tl" part="lemq"/>
+		</lu>
 		<b pos="4"/>
 		<lu>       
-		  <clip pos="2" side="tl" part="lemh"/> 
+		  <clip pos="2" side="tl" part="lemh"/>
 		  <clip pos="2" side="tl" part="a_nom"/>
 		  <clip pos="2" side="tl" part="gen"/>
-		  <clip pos="2" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="2" side="tl" part="lemq"/>  
+		  <clip pos="2" side="tl" part="lemq"/>
 		</lu>
 	      </chunk>
 	    </out>
@@ -3332,16 +3562,22 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<pattern-item n="cnjcoo"/>
 	<pattern-item n="adj"/>
       </pattern>
-      <action>		
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro5">
 	  <with-param pos="3"/>
-	</call-macro>	
+	  <with-param pos="1"/>
+	  <with-param pos="2"/>
+	  <with-param pos="4"/>
+	  <with-param pos="6"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
 
    <choose>
      <when>
@@ -3351,7 +3587,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
        	  <list n="vegades"/>
       	</in>
       </test>
-          <let><clip pos="3" side="tl" part="lemh"/><lit v="fojo"/></let> 
+          <let><clip pos="3" side="tl" part="lemh"/><lit v="fojo"/></let>
      </when>
    </choose>
 
@@ -3364,7 +3600,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         <lit v="un"/>
         </equal>
       </test>
-	    <out> 
+	    <out>
 	      <chunk name="nom_adj_coo_adj" case="caseFirstWord">
 		<tags>
 		  <tag><lit-tag v="SN"/></tag>
@@ -3384,38 +3620,38 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
             	</lu>
 		<b pos="1"/>
 		<lu>   
-		  <clip pos="4" side="tl" part="lemh"/> 
+		  <clip pos="4" side="tl" part="lemh"/>
 		  <clip pos="4" side="tl" part="a_adj"/>
-		  <clip pos="4" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="4" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="4" side="tl" part="lemq"/>
+		</lu>
 		<b pos="2"/>
 		<lu>
-		  <clip pos="5" side="tl" part="whole"/> 
+		  <clip pos="5" side="tl" part="whole"/>
 		</lu>
 		<b pos="3"/>
 		<lu>   
-		  <clip pos="6" side="tl" part="lemh"/> 
+		  <clip pos="6" side="tl" part="lemh"/>
 		  <clip pos="6" side="tl" part="a_adj"/>
-		  <clip pos="6" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="6" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="6" side="tl" part="lemq"/>
+		</lu>
 		<b pos="4"/>
 		<lu>       
-		  <clip pos="3" side="tl" part="lemh"/> 
+		  <clip pos="3" side="tl" part="lemh"/>
 		  <clip pos="3" side="tl" part="a_nom"/>
 		  <clip pos="3" side="tl" part="gen"/>
-		  <clip pos="3" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="3" side="tl" part="lemq"/>  
+		  <clip pos="3" side="tl" part="lemq"/>
 		</lu>
 	      </chunk>
 	    </out>
 </when>
 <otherwise>           <!-- article definit-->
-	    <out> 
+	    <out>
 	      <chunk name="det_nom_adj_coo_adj" case="caseFirstWord">
 		<tags>
 		  <tag><lit-tag v="SN"/></tag>
@@ -3425,9 +3661,9 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <tag><var n="changecase"/></tag>
 		</tags>
 		<lu>   
-		  <clip pos="1" side="tl" part="lem"/> 
+		  <clip pos="1" side="tl" part="lem"/>
 		  <clip pos="1" side="tl" part="a_det"/>
-		  <clip pos="1" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
 		</lu>
 		<b pos="1"/>
@@ -3438,32 +3674,32 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
             	</lu>
 		<b pos="2"/>
 		<lu>   
-		  <clip pos="4" side="tl" part="lemh"/> 
+		  <clip pos="4" side="tl" part="lemh"/>
 		  <clip pos="4" side="tl" part="a_adj"/>
-		  <clip pos="4" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="4" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="4" side="tl" part="lemq"/>
+		</lu>
 		<b pos="3"/>
 		<lu>
-		  <clip pos="5" side="tl" part="whole"/> 
+		  <clip pos="5" side="tl" part="whole"/>
 		</lu>
 		<b pos="4"/>
 		<lu>   
-		  <clip pos="6" side="tl" part="lemh"/> 
+		  <clip pos="6" side="tl" part="lemh"/>
 		  <clip pos="6" side="tl" part="a_adj"/>
-		  <clip pos="6" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="6" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="6" side="tl" part="lemq"/>
+		</lu>
 		<b pos="5"/>
 		<lu>       
-		  <clip pos="3" side="tl" part="lemh"/> 
+		  <clip pos="3" side="tl" part="lemh"/>
 		  <clip pos="3" side="tl" part="a_nom"/>
 		  <clip pos="3" side="tl" part="gen"/>
-		  <clip pos="3" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="3" side="tl" part="lemq"/>  
+		  <clip pos="3" side="tl" part="lemq"/>
 		</lu>
 	      </chunk>
 	    </out>
@@ -3488,14 +3724,18 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro2">
 	  <with-param pos="3"/>
-	</call-macro>	
+	  <with-param pos="4"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="3"/>
-	</call-macro>	
-	<out> 
+	</call-macro>
+
+	<out>
 	  <chunk name="nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -3504,18 +3744,18 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
 	    <lu>       
-	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
-	      <clip pos="1" side="tl" part="gen"/> 
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <clip pos="1" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
@@ -3525,10 +3765,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
             </lu>
 	    <b pos="2"/>
 	    <lu>       
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
-	      <clip pos="3" side="tl" part="gen"/> 
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <clip pos="3" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
@@ -3552,14 +3792,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro2">
 	  <with-param pos="1"/>
-	</call-macro>	
+	  <with-param pos="4"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<out> 
+	</call-macro>
+	<out>
 	  <chunk name="nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -3568,30 +3811,30 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
 	    <b pos="3"/>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
 	    <lu>       
-	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
-	      <clip pos="1" side="tl" part="gen"/> 
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <clip pos="1" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
@@ -3616,14 +3859,19 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro3">
 	  <with-param pos="1"/>
-	</call-macro>	
+	  <with-param pos="2"/>
+	  <with-param pos="5"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<out> 
+	</call-macro>
+
+	<out>
 	  <chunk name="nom_adj_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -3632,38 +3880,38 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
             <lu>
               <clip pos="4" side="tl" part="whole"/>
             </lu>
 	    <b pos="4"/>
 	    <lu>   
-	      <clip pos="5" side="tl" part="lemh"/> 
+	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
-	      <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="5" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="5" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>       
-	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
-	      <clip pos="1" side="tl" part="gen"/> 
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <clip pos="1" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
@@ -3689,14 +3937,18 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro2">
 	  <with-param pos="1"/>
-	</call-macro>	
+	  <with-param pos="5"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<out> 
+	</call-macro>
+
+	<out>
 	  <chunk name="nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -3705,42 +3957,42 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
 	    <b pos="3"/>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="4"/>
             <lu>
               <clip pos="5" side="tl" part="whole"/>
             </lu>
 	    <b pos="5"/>
 	    <lu>   
-	      <clip pos="6" side="tl" part="lemh"/> 
+	      <clip pos="6" side="tl" part="lemh"/>
 	      <clip pos="6" side="tl" part="a_adj"/>
-	      <clip pos="6" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="6" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="6" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
 	    <lu>       
-	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
-	      <clip pos="1" side="tl" part="gen"/> 
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <clip pos="1" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
@@ -3762,14 +4014,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro2">
 	  <with-param pos="1"/>
-	</call-macro>	
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<out> 
+	</call-macro>
+	<out>
 	  <chunk name="nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -3778,18 +4033,18 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
 	    <lu>       
-	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
-	      <clip pos="1" side="tl" part="gen"/> 
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <clip pos="1" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
@@ -3810,16 +4065,22 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<pattern-item n="adj"/>
 	<pattern-item n="adjADJ"/>
       </pattern>
-      <action>	
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro4">
 	  <with-param pos="2"/>
-	</call-macro>	
+	  <with-param pos="1"/>
+	  <with-param pos="3"/>
+	  <with-param pos="4"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
+
    <!-- article indefinit s'elimina-->
    <choose>
      <when>
@@ -3829,7 +4090,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         <lit v="un"/>
         </equal>
       </test>
-	<out>  
+	<out>
 	  <chunk name="nom_adj_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -3838,26 +4099,26 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
 	    <lu>       
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
@@ -3865,7 +4126,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</out>       
     </when>
 <otherwise>           <!-- article definit-->
-	<out>  
+	<out>
 	  <chunk name="det_nom_adj_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -3875,33 +4136,33 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
@@ -3925,16 +4186,22 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<pattern-item n="nom"/>
 	<pattern-item n="adjADJ"/>
       </pattern>
-      <action>	
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro4">
 	  <with-param pos="3"/>
-	</call-macro>	
+	  <with-param pos="1"/>
+	  <with-param pos="2"/>
+	  <with-param pos="4"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
+
    <!-- article indefinit s'elimina-->
    <choose>
      <when>
@@ -3944,7 +4211,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         <lit v="un"/>
         </equal>
       </test>
-	<out>  
+	<out>
 	  <chunk name="nom_adj_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -3953,26 +4220,26 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
 	    <lu>       
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>       
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
-	      <clip pos="3" side="tl" part="gen"/> 
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <clip pos="3" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
@@ -3980,7 +4247,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</out>       
     </when>
 <otherwise>           <!-- article definit-->
-	<out>  
+	<out>
 	  <chunk name="det_nom_adj_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -3990,33 +4257,33 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
 	    <lu>       
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
-	      <clip pos="3" side="tl" part="gen"/> 
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <clip pos="3" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
@@ -4042,14 +4309,19 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro3">
 	  <with-param pos="1"/>
-	</call-macro>	
+	  <with-param pos="2"/>
+	  <with-param pos="3"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<out> 
+	</call-macro>
+
+	<out>
 	  <chunk name="nom_adj_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -4058,26 +4330,26 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>       
-	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
-	      <clip pos="1" side="tl" part="gen"/> 
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <clip pos="1" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
@@ -4101,14 +4373,19 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro3">
 	  <with-param pos="2"/>
-	</call-macro>	
+	  <with-param pos="1"/>
+	  <with-param pos="3"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="2"/>
-	</call-macro>	
-	<out> 
+	</call-macro>
+
+	<out>
 	  <chunk name="nom_adj_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -4117,26 +4394,26 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_adj"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="1" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="1" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
@@ -4160,14 +4437,19 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro3">
 	  <with-param pos="1"/>
-	</call-macro>	
+	  <with-param pos="2"/>
+	  <with-param pos="4"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<out> 
+	</call-macro>
+
+	<out>
 	  <chunk name="nom_adj_i_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -4176,30 +4458,30 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="3" side="tl" part="whole"/> 
+	      <clip pos="3" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="2"/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
 	    <lu>       
-	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
-	      <clip pos="1" side="tl" part="gen"/> 
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <clip pos="1" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
@@ -4224,14 +4506,20 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro4">
 	  <with-param pos="1"/>
-	</call-macro>	
+	  <with-param pos="2"/>
+	  <with-param pos="3"/>
+	  <with-param pos="4"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<out> 
+	</call-macro>
+
+	<out>
 	  <chunk name="nom_adj_adj_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -4240,34 +4528,34 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
 	    <lu>       
-	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
-	      <clip pos="1" side="tl" part="gen"/> 
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <clip pos="1" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
@@ -4289,16 +4577,23 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<pattern-item n="adj"/>
 	<pattern-item n="adjADJ"/>
       </pattern>
-      <action>	
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro5">
 	  <with-param pos="2"/>
-	</call-macro>	
+	  <with-param pos="1"/>
+	  <with-param pos="3"/>
+	  <with-param pos="4"/>
+	  <with-param pos="5"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
+
    <!-- article indefinit s'elimina-->
    <choose>
      <when>
@@ -4308,7 +4603,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         <lit v="un"/>
         </equal>
       </test>
-	<out>  
+	<out>
 	  <chunk name="nom_adj_adj_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -4317,34 +4612,34 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="5" side="tl" part="lemh"/> 
+	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
-	      <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="5" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="5" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>       
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
@@ -4352,7 +4647,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</out>       
     </when>
 <otherwise>           <!-- article definit-->
-	<out>  
+	<out>
 	  <chunk name="det_nom_adj_adj_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -4362,41 +4657,41 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b/>
 	    <lu>   
-	      <clip pos="5" side="tl" part="lemh"/> 
+	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
-	      <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="5" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="5" side="tl" part="lemq"/>
+	    </lu>
 	    <b/>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b/>
 	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
@@ -4425,14 +4720,20 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro4">
 	  <with-param pos="1"/>
-	</call-macro>	
+	  <with-param pos="2"/>
+	  <with-param pos="4"/>
+	  <with-param pos="6"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<out> 
+	</call-macro>
+
+	<out>
 	  <chunk name="nom_adj_adj_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -4441,41 +4742,41 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
 	    <b/>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b/>
             <lu>
               <clip pos="5" side="tl" part="whole"/>
             </lu>
 	    <b/>
 	    <lu>   
-	      <clip pos="6" side="tl" part="lemh"/> 
+	      <clip pos="6" side="tl" part="lemh"/>
 	      <clip pos="6" side="tl" part="a_adj"/>
-	      <clip pos="6" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="6" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="6" side="tl" part="lemq"/>
+	    </lu>
 	    <b/>
 	    <lu>       
-	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
-	      <clip pos="1" side="tl" part="gen"/> 
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <clip pos="1" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
@@ -4499,16 +4800,23 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<pattern-item n="cnjcoo"/>
 	<pattern-item n="adjADJ"/>
       </pattern>
-      <action>	
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro5">
 	  <with-param pos="2"/>
-	</call-macro>	
+	  <with-param pos="1"/>
+	  <with-param pos="3"/>
+	  <with-param pos="5"/>
+	  <with-param pos="7"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
+
    <!-- article indefinit s'elimina-->
    <choose>
      <when>
@@ -4518,7 +4826,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         <lit v="un"/>
         </equal>
       </test>
-	<out>  
+	<out>
 	  <chunk name="nom_adj_adj_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -4527,41 +4835,41 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
             <lu>
               <clip pos="4" side="tl" part="whole"/>
             </lu>
 	    <b/>
 	    <lu>   
-	      <clip pos="5" side="tl" part="lemh"/> 
+	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
-	      <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="5" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="5" side="tl" part="lemq"/>
+	    </lu>
 	    <b/>
             <lu>
               <clip pos="6" side="tl" part="whole"/>
             </lu>
 	    <b/>
 	    <lu>       
-	      <clip pos="7" side="tl" part="lemh"/> 
+	      <clip pos="7" side="tl" part="lemh"/>
 	      <clip pos="7" side="tl" part="a_adj"/>
-	      <clip pos="7" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="7" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="7" side="tl" part="lemq"/>
+	    </lu>
 	    <b/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
@@ -4569,7 +4877,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</out>       
     </when>
 <otherwise>           <!-- article definit-->
-	<out>  
+	<out>
 	  <chunk name="det_nom_adj_adj_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -4579,48 +4887,48 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b/>
 	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
             <lu>
               <clip pos="4" side="tl" part="whole"/>
             </lu>
 	    <b/>
 	    <lu>   
-	      <clip pos="5" side="tl" part="lemh"/> 
+	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
-	      <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="5" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="5" side="tl" part="lemq"/>
+	    </lu>
 	    <b/>
             <lu>
               <clip pos="6" side="tl" part="whole"/>
             </lu>
 	    <b/>
 	    <lu>   
-	      <clip pos="7" side="tl" part="lemh"/> 
+	      <clip pos="7" side="tl" part="lemh"/>
 	      <clip pos="7" side="tl" part="a_adj"/>
-	      <clip pos="7" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="7" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="7" side="tl" part="lemq"/>
+	    </lu>
 	    <b/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
@@ -4645,16 +4953,23 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<pattern-item n="adj"/>
 	<pattern-item n="adjADJ"/>
       </pattern>
-      <action>	
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro5">
 	  <with-param pos="3"/>
-	</call-macro>	
+	  <with-param pos="1"/>
+	  <with-param pos="2"/>
+	  <with-param pos="4"/>
+	  <with-param pos="5"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
+
    <!-- article indefinit s'elimina-->
    <choose>
      <when>
@@ -4664,7 +4979,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         <lit v="un"/>
         </equal>
       </test>
-	<out>  
+	<out>
 	  <chunk name="nom_adj_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -4673,34 +4988,34 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
 	    <lu>       
-	      <clip pos="5" side="tl" part="lemh"/> 
+	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
-	      <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="5" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="5" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>       
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
 	    <lu>       
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
-	      <clip pos="3" side="tl" part="gen"/> 
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <clip pos="3" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
@@ -4708,7 +5023,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</out>       
     </when>
 <otherwise>           <!-- article definit-->
-	<out>  
+	<out>
 	  <chunk name="det_nom_adj_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -4718,41 +5033,41 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>   
-	      <clip pos="5" side="tl" part="lemh"/> 
+	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
-	      <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="5" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="5" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="4"/>
 	    <lu>       
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
-	      <clip pos="3" side="tl" part="gen"/> 
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <clip pos="3" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
@@ -4783,6 +5098,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
 	</call-macro>
+
 	<out>
 	  <chunk name="nom8" case="caseFirstWord">
 	    <tags>
@@ -4791,11 +5107,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   <!--<clip pos="1" side="tl" part="whole"/> Per a compostos: --> 
-	      <clip pos="1" side="tl" part="lemh"/> 
+	    <lu>   <!--<clip pos="1" side="tl" part="whole"/> Per a compostos: -->
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
 	      <clip pos="1" side="tl" part="gen"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
@@ -4845,10 +5161,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
        	  <list n="laqualcosa"/>
       	</in>
       </test>
-        <let><clip pos="2" side="tl" part="lem"/><lit v="kio"/></let> 
+        <let><clip pos="2" side="tl" part="lem"/><lit v="kio"/></let>
      </when>
      <otherwise>
-        <let><clip pos="2" side="tl" part="lem"/><lit v="kiu"/></let> 
+        <let><clip pos="2" side="tl" part="lem"/><lit v="kiu"/></let>
      </otherwise>
    </choose>
 
@@ -4910,11 +5226,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
-	 <call-macro n="nom_cas"> <!-- assigna cas nominatiu per defecte --> 
-	  <with-param pos="1"/>
-	</call-macro> 
-	<call-macro n="nombre_nom">
+	<call-macro n="nombro2">
 	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	 <call-macro n="nom_cas"> <!-- assigna cas nominatiu per defecte -->
+	  <with-param pos="1"/>
 	</call-macro>
 
    <choose>
@@ -4947,7 +5266,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="2" side="tl" part="lemh"/>
               <clip pos="2" side="tl" part="a_nom"/>
               <clip pos="2" side="tl" part="gen"/>
-              <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="2" side="tl" part="lemq"/>
             </lu>
@@ -4967,17 +5286,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
 	    <lu>     
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
               <clip pos="2" side="tl" part="gen"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
@@ -5021,11 +5340,15 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
+	<call-macro n="nombro3">
+	  <with-param pos="3"/>
+	  <with-param pos="1"/>
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>
-	<call-macro n="nombre_nom">
-	  <with-param pos="3"/>
 	</call-macro>
 	<!--<call-macro n="canvia_det">
 	  <with-param pos="1"/>
@@ -5040,7 +5363,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
        	  <list n="vegades"/>
       	</in>
       </test>
-          <let><clip pos="3" side="tl" part="lemh"/><lit v="fojo"/></let> 
+          <let><clip pos="3" side="tl" part="lemh"/><lit v="fojo"/></let>
      </when>
    </choose>
 
@@ -5067,16 +5390,16 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
             </lu>
             <b/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
 	      <clip pos="2" side="tl" part="nbr"/>
-	    </lu> 
+	    </lu>
 	    <b pos="2"/>
             <lu>
               <clip pos="3" side="tl" part="lemh"/>
               <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-              <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="3" side="tl" part="lemq"/>
             </lu>
@@ -5094,23 +5417,23 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_num"/>
 	      <clip pos="2" side="tl" part="nbr"/>
-	    </lu> 
+	    </lu>
 	    <b pos="2"/>
 	    <lu>     
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
@@ -5155,11 +5478,15 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
+	<call-macro n="nombro3">
+	  <with-param pos="3"/>
+	  <with-param pos="1"/>
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>
-	<call-macro n="nombre_nom">
-	  <with-param pos="3"/>
 	</call-macro>
 
    <!-- article definit s'elimina i es 'genera' cas: 'totes les nenes : ĉiuj knabinoj-->
@@ -5181,17 +5508,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <tag><var n="changecase"/></tag>
             </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
             <lu>
               <clip pos="3" side="tl" part="lemh"/>
               <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-              <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="3" side="tl" part="lemq"/>
             </lu>
@@ -5209,24 +5536,24 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="2"/>
 	    <lu>     
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
@@ -5265,16 +5592,21 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<pattern-item n="adj"/>
 	<pattern-item n="cnjcoopercorregir"/>
       </pattern>
-      <action>	
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro3">
 	  <with-param pos="2"/>
-	</call-macro>	
+	  <with-param pos="1"/>
+	  <with-param pos="3"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
+
    <!-- article indefinit s'elimina-->
    <choose>
      <when>
@@ -5284,7 +5616,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         <lit v="un"/>
         </equal>
       </test>
-	<out>  
+	<out>
 	  <chunk name="nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -5293,18 +5625,18 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
@@ -5312,7 +5644,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</out>       
     </when>
 <otherwise>           <!-- article definit-->
-	<out>  
+	<out>
 	  <chunk name="det_nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -5322,25 +5654,25 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>       
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/> 
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
@@ -5384,11 +5716,16 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
+	<call-macro n="nombro4">
+	  <with-param pos="3"/>
+	  <with-param pos="1"/>
+	  <with-param pos="2"/>
+	  <with-param pos="4"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>
-	<call-macro n="nombre_nom">
-	  <with-param pos="3"/>
 	</call-macro>
 
    <choose>
@@ -5399,7 +5736,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
        	  <list n="vegades"/>
       	</in>
       </test>
-          <let><clip pos="3" side="tl" part="lemh"/><lit v="fojo"/></let> 
+          <let><clip pos="3" side="tl" part="lemh"/><lit v="fojo"/></let>
      </when>
    </choose>
 
@@ -5426,15 +5763,15 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
             </lu>
             <b/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
 	      <clip pos="2" side="tl" part="nbr"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
             <lu>
               <clip pos="4" side="tl" part="lemh"/>
               <clip pos="4" side="tl" part="a_adj"/>
-              <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="4" side="tl" part="lemq"/>
             </lu>
@@ -5443,7 +5780,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="3" side="tl" part="lemh"/>
               <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-              <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="3" side="tl" part="lemq"/>
             </lu>
@@ -5461,31 +5798,31 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_num"/>
 	      <clip pos="2" side="tl" part="nbr"/>
-	    </lu> 
+	    </lu>
 	    <b pos="2"/>
             <lu>
               <clip pos="4" side="tl" part="lemh"/>
               <clip pos="4" side="tl" part="a_adj"/>
-              <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="4" side="tl" part="lemq"/>
             </lu>
 	    <b pos="3"/>
 	    <lu>     
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
@@ -5529,11 +5866,16 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
+	<call-macro n="nombro4">
+	  <with-param pos="3"/>
+	  <with-param pos="1"/>
+	  <with-param pos="2"/>
+	  <with-param pos="4"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>
-	<call-macro n="nombre_nom">
-	  <with-param pos="3"/>
 	</call-macro>
 
    <!-- article definit s'elimina i es 'genera' cas: 'totes les nenes : ĉiuj knabinoj-->
@@ -5555,16 +5897,16 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <tag><var n="changecase"/></tag>
             </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
             <lu>
               <clip pos="4" side="tl" part="lemh"/>
               <clip pos="4" side="tl" part="a_adj"/>
-              <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="4" side="tl" part="lemq"/>
             </lu>
@@ -5573,7 +5915,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="3" side="tl" part="lemh"/>
               <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-              <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="3" side="tl" part="lemq"/>
             </lu>
@@ -5591,11 +5933,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	  </chunk>
  	    <b/>
 	  <chunk name="le">
@@ -5617,25 +5959,25 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
             <lu>
               <clip pos="4" side="tl" part="lemh"/>
               <clip pos="4" side="tl" part="a_adj"/>
-              <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="4" side="tl" part="lemq"/>
             </lu>
 	    <b pos="2"/>
 	    <lu>     
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
@@ -5674,16 +6016,20 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<pattern-item n="adj"/>
 	<pattern-item n="cnjcoopercorregir"/>
       </pattern>
-      <action>	
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
+	<call-macro n="nombro3">
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	  <with-param pos="4"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
-	  <with-param pos="2"/>
-	</call-macro>	
+	</call-macro>
 	<!--<call-macro n="canvia_det">
 	  <with-param pos="1"/>
 	  <with-param pos="2"/>
@@ -5699,7 +6045,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         </equal>
       </test>
 
-	<out>  
+	<out>
 	  <chunk name="nom_adv_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -5708,30 +6054,30 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="3" side="tl" part="whole"/> 
+	      <clip pos="3" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
 	    <lu>         
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
+	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
 	</out>       
   </when>
   <otherwise>
-	<out>  
+	<out>
 	  <chunk name="det_nom_adv_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -5741,31 +6087,31 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="3" side="tl" part="whole"/> 
+	      <clip pos="3" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="2"/>
 	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
-	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
 	    <lu>         
-	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
-	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
+	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
 	</out>       
@@ -5808,11 +6154,16 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
+	<call-macro n="nombro4">
+	  <with-param pos="3"/>
+	  <with-param pos="1"/>
+	  <with-param pos="2"/>
+	  <with-param pos="5"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>
-	<call-macro n="nombre_nom">
-	  <with-param pos="3"/>
 	</call-macro>
 
    <choose>
@@ -5823,7 +6174,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
        	  <list n="vegades"/>
       	</in>
       </test>
-          <let><clip pos="3" side="tl" part="lemh"/><lit v="fojo"/></let> 
+          <let><clip pos="3" side="tl" part="lemh"/><lit v="fojo"/></let>
      </when>
    </choose>
 
@@ -5850,10 +6201,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
             </lu>
             <b/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
 	      <clip pos="2" side="tl" part="nbr"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
                 <lu>
                   <clip pos="4" side="tl" part="whole"/>
@@ -5862,7 +6213,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
             <lu>
               <clip pos="5" side="tl" part="lemh"/>
               <clip pos="5" side="tl" part="a_adj"/>
-              <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="5" side="tl" part="lemq"/>
             </lu>
@@ -5871,7 +6222,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="3" side="tl" part="lemh"/>
               <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-              <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="3" side="tl" part="lemq"/>
             </lu>
@@ -5889,17 +6240,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
 	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_num"/>
 	      <clip pos="2" side="tl" part="nbr"/>
-	    </lu> 
+	    </lu>
 	    <b pos="2"/>
                 <lu>
                   <clip pos="4" side="tl" part="whole"/>
@@ -5908,16 +6259,16 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
             <lu>
               <clip pos="5" side="tl" part="lemh"/>
               <clip pos="5" side="tl" part="a_adj"/>
-              <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="5" side="tl" part="lemq"/>
             </lu>
 	    <b pos="4"/>
 	    <lu>     
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
-	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
@@ -5958,16 +6309,22 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<pattern-item n="adj"/>
 	<pattern-item n="cnjcoopercorregir"/>
       </pattern>
-      <action>		
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro4">
 	  <with-param pos="2"/>
-	</call-macro>	
+	  <with-param pos="1"/>
+	  <with-param pos="3"/>
+	  <with-param pos="5"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
+
    <!-- article indefinit s'elimina-->
    <choose>
      <when>
@@ -5977,7 +6334,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         <lit v="un"/>
         </equal>
       </test>
-	    <out> 
+	    <out>
 	      <chunk name="nom_adj_coo_adj" case="caseFirstWord">
 		<tags>
 		  <tag><lit-tag v="SN"/></tag>
@@ -5986,38 +6343,38 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <tag><var n="case"/></tag>
 		</tags>
 		<lu>   
-		  <clip pos="3" side="tl" part="lemh"/> 
+		  <clip pos="3" side="tl" part="lemh"/>
 		  <clip pos="3" side="tl" part="a_adj"/>
-		  <clip pos="3" side="tl" part="nbr"/>
 		  <lit-tag v="4"/>
-		  <clip pos="3" side="tl" part="lemq"/> 
-		</lu> 
+	          <lit-tag v="3"/>
+		  <clip pos="3" side="tl" part="lemq"/>
+		</lu>
 		<b pos="1"/>
 		<lu>
-		  <clip pos="4" side="tl" part="whole"/> 
+		  <clip pos="4" side="tl" part="whole"/>
 		</lu>
 		<b pos="2"/>
 		<lu>   
-		  <clip pos="5" side="tl" part="lemh"/> 
+		  <clip pos="5" side="tl" part="lemh"/>
 		  <clip pos="5" side="tl" part="a_adj"/>
-		  <clip pos="5" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="5" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="5" side="tl" part="lemq"/>
+		</lu>
 		<b pos="3"/>
 		<lu>       
-		  <clip pos="2" side="tl" part="lemh"/> 
+		  <clip pos="2" side="tl" part="lemh"/>
 		  <clip pos="2" side="tl" part="a_nom"/>
 		  <clip pos="2" side="tl" part="gen"/>
-		  <clip pos="2" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="2" side="tl" part="lemq"/>  
+		  <clip pos="2" side="tl" part="lemq"/>
 		</lu>
 	      </chunk>
 	    </out>
 </when>
 <otherwise>           <!-- article definit-->
-	    <out> 
+	    <out>
 	      <chunk name="det_nom_adj_coo_adj" case="caseFirstWord">
 		<tags>
 		  <tag><lit-tag v="SN"/></tag>
@@ -6027,39 +6384,39 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <tag><var n="changecase"/></tag>
 		</tags>
 		<lu>   
-		  <clip pos="1" side="tl" part="lem"/> 
+		  <clip pos="1" side="tl" part="lem"/>
 		  <clip pos="1" side="tl" part="a_det"/>
-		  <clip pos="1" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
 		</lu>
 		<b pos="1"/>
 		<lu>   
-		  <clip pos="3" side="tl" part="lemh"/> 
+		  <clip pos="3" side="tl" part="lemh"/>
 		  <clip pos="3" side="tl" part="a_adj"/>
-		  <clip pos="3" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="3" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="3" side="tl" part="lemq"/>
+		</lu>
 		<b pos="2"/>
 		<lu>
-		  <clip pos="4" side="tl" part="whole"/> 
+		  <clip pos="4" side="tl" part="whole"/>
 		</lu>
 		<b pos="3"/>
 		<lu>   
-		  <clip pos="5" side="tl" part="lemh"/> 
+		  <clip pos="5" side="tl" part="lemh"/>
 		  <clip pos="5" side="tl" part="a_adj"/>
-		  <clip pos="5" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="5" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="5" side="tl" part="lemq"/>
+		</lu>
 		<b pos="4"/>
 		<lu>       
-		  <clip pos="2" side="tl" part="lemh"/> 
+		  <clip pos="2" side="tl" part="lemh"/>
 		  <clip pos="2" side="tl" part="a_nom"/>
 		  <clip pos="2" side="tl" part="gen"/>
-		  <clip pos="2" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="2" side="tl" part="lemq"/>  
+		  <clip pos="2" side="tl" part="lemq"/>
 		</lu>
 	      </chunk>
 	    </out>
@@ -6098,16 +6455,22 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<pattern-item n="adj"/>
 	<pattern-item n="cnjcoopercorregir"/>
       </pattern>
-      <action>		
+      <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
-	<call-macro n="nombre_nom">
+	</call-macro>
+	<call-macro n="nombro5">
 	  <with-param pos="3"/>
-	</call-macro>	
+	  <with-param pos="1"/>
+	  <with-param pos="2"/>
+	  <with-param pos="4"/>
+	  <with-param pos="6"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
 
    <choose>
      <when>
@@ -6117,7 +6480,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
        	  <list n="vegades"/>
       	</in>
       </test>
-          <let><clip pos="3" side="tl" part="lemh"/><lit v="fojo"/></let> 
+          <let><clip pos="3" side="tl" part="lemh"/><lit v="fojo"/></let>
      </when>
    </choose>
 
@@ -6130,7 +6493,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         <lit v="un"/>
         </equal>
       </test>
-	    <out> 
+	    <out>
 	      <chunk name="nom_adj_coo_adj" case="caseFirstWord">
 		<tags>
 		  <tag><lit-tag v="SN"/></tag>
@@ -6150,38 +6513,38 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
             	</lu>
 		<b pos="1"/>
 		<lu>   
-		  <clip pos="4" side="tl" part="lemh"/> 
+		  <clip pos="4" side="tl" part="lemh"/>
 		  <clip pos="4" side="tl" part="a_adj"/>
-		  <clip pos="4" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="4" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="4" side="tl" part="lemq"/>
+		</lu>
 		<b pos="2"/>
 		<lu>
-		  <clip pos="5" side="tl" part="whole"/> 
+		  <clip pos="5" side="tl" part="whole"/>
 		</lu>
 		<b pos="3"/>
 		<lu>   
-		  <clip pos="6" side="tl" part="lemh"/> 
+		  <clip pos="6" side="tl" part="lemh"/>
 		  <clip pos="6" side="tl" part="a_adj"/>
-		  <clip pos="6" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="6" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="6" side="tl" part="lemq"/>
+		</lu>
 		<b pos="4"/>
 		<lu>       
-		  <clip pos="3" side="tl" part="lemh"/> 
+		  <clip pos="3" side="tl" part="lemh"/>
 		  <clip pos="3" side="tl" part="a_nom"/>
 		  <clip pos="3" side="tl" part="gen"/>
-		  <clip pos="3" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="3" side="tl" part="lemq"/>  
+		  <clip pos="3" side="tl" part="lemq"/>
 		</lu>
 	      </chunk>
 	    </out>
 </when>
 <otherwise>           <!-- article definit-->
-	    <out> 
+	    <out>
 	      <chunk name="det_nom_adj_coo_adj" case="caseFirstWord">
 		<tags>
 		  <tag><lit-tag v="SN"/></tag>
@@ -6191,9 +6554,9 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <tag><var n="changecase"/></tag>
 		</tags>
 		<lu>   
-		  <clip pos="1" side="tl" part="lem"/> 
+		  <clip pos="1" side="tl" part="lem"/>
 		  <clip pos="1" side="tl" part="a_det"/>
-		  <clip pos="1" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
 		</lu>
 		<b pos="1"/>
@@ -6204,32 +6567,32 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
             	</lu>
 		<b pos="2"/>
 		<lu>   
-		  <clip pos="4" side="tl" part="lemh"/> 
+		  <clip pos="4" side="tl" part="lemh"/>
 		  <clip pos="4" side="tl" part="a_adj"/>
-		  <clip pos="4" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="4" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="4" side="tl" part="lemq"/>
+		</lu>
 		<b pos="3"/>
 		<lu>
-		  <clip pos="5" side="tl" part="whole"/> 
+		  <clip pos="5" side="tl" part="whole"/>
 		</lu>
 		<b pos="4"/>
 		<lu>   
-		  <clip pos="6" side="tl" part="lemh"/> 
+		  <clip pos="6" side="tl" part="lemh"/>
 		  <clip pos="6" side="tl" part="a_adj"/>
-		  <clip pos="6" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="6" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="6" side="tl" part="lemq"/>
+		</lu>
 		<b pos="5"/>
 		<lu>       
-		  <clip pos="3" side="tl" part="lemh"/> 
+		  <clip pos="3" side="tl" part="lemh"/>
 		  <clip pos="3" side="tl" part="a_nom"/>
 		  <clip pos="3" side="tl" part="gen"/>
-		  <clip pos="3" side="tl" part="nbr"/>
+	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
-		  <clip pos="3" side="tl" part="lemq"/>  
+		  <clip pos="3" side="tl" part="lemq"/>
 		</lu>
 	      </chunk>
 	    </out>
@@ -6267,10 +6630,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       <action>     	
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
 
       <choose>
               <when>
@@ -6301,15 +6664,15 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <lit-tag v="vblex"/>
 	      <lit-tag v="pp"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="1" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="1" side="tl" part="lemq"/>
+	    </lu>
 	  </chunk>
-	</out>  
+	</out>
              </when>
       <otherwise>
 	<out>
@@ -6321,14 +6684,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_adj"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="1" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="1" side="tl" part="lemq"/>
+	    </lu>
 	  </chunk>
-	</out>  
+	</out>
         </otherwise>
       </choose>
 	<let>
@@ -6336,7 +6699,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	  <lit v="aa"/>
 	</let>
       </action>
-    </rule> 
+    </rule>
 
 
 
@@ -6351,7 +6714,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</call-macro>
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
 	    <out>
 	      <chunk name="adv_adj" case="caseFirstWord">
 		<tags>
@@ -6361,15 +6724,15 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	          <tag><var n="case"/></tag>
 		</tags>
 		<lu>   
-		  <clip pos="1" side="tl" part="whole"/> 
-		</lu> 
+		  <clip pos="1" side="tl" part="whole"/>
+		</lu>
 		<b pos="1"/>
 		<lu>   
-		  <clip pos="2" side="tl" part="lemh"/> 
+		  <clip pos="2" side="tl" part="lemh"/>
 		  <clip pos="2" side="tl" part="a_adj"/>
-	          <clip pos="2" side="sl" part="nbr"/>
+	          <lit-tag v="3"/>
 	          <lit-tag v="4"/>
-		  <clip pos="2" side="tl" part="lemq"/> 
+		  <clip pos="2" side="tl" part="lemq"/>
 		</lu>
 	      </chunk>
 	    </out>
@@ -6378,11 +6741,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	  <lit v="aa"/>
 	</let>
       </action>
-    </rule> 
+    </rule>
 
 <rule comment="REGLA: MES ADJECTIU QUE ('més/menys gran que - ') (EO)">
       <pattern>
-	<pattern-item n="plus"/> 
+	<pattern-item n="plus"/>
 	<pattern-item n="adj"/>
 	<pattern-item n="cnjcomp"/>
       </pattern>
@@ -6402,15 +6765,15 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	          <tag><var n="case"/></tag>
 		</tags>
 		<lu>   
-		  <clip pos="1" side="tl" part="whole"/> 
-		</lu> 
+		  <clip pos="1" side="tl" part="whole"/>
+		</lu>
 		<b pos="1"/>
 		<lu>   
-		  <clip pos="2" side="tl" part="lemh"/> 
+		  <clip pos="2" side="tl" part="lemh"/>
 		  <clip pos="2" side="tl" part="a_adj"/>
-	          <clip pos="2" side="sl" part="nbr"/>
+	          <lit-tag v="3"/>
 	          <lit-tag v="4"/>
-		  <clip pos="2" side="tl" part="lemq"/> 
+		  <clip pos="2" side="tl" part="lemq"/>
 		</lu>
 		<b pos="2"/>
 		<lu>
@@ -6424,11 +6787,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	  <lit v="aa"/>
 	</let>
       </action>
-    </rule> 
+    </rule>
 
 <rule comment="REGLA: TAN ADJECTIU QUE (tan gran que -> tiel granda ke) (EO)">
       <pattern>
-	<pattern-item n="si_cmp"/> 
+	<pattern-item n="si_cmp"/>
 	<pattern-item n="adj"/>
 	<pattern-item n="cnjcomp"/>
       </pattern>
@@ -6448,15 +6811,15 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	          <tag><var n="case"/></tag>
 		</tags>
 		<lu>   
-		  <clip pos="1" side="tl" part="whole"/> 
-		</lu> 
+		  <clip pos="1" side="tl" part="whole"/>
+		</lu>
 		<b pos="1"/>
 		<lu>   
-		  <clip pos="2" side="tl" part="lemh"/> 
+		  <clip pos="2" side="tl" part="lemh"/>
 		  <clip pos="2" side="tl" part="a_adj"/>
-	          <clip pos="2" side="sl" part="nbr"/>
+	          <lit-tag v="3"/>
 	          <lit-tag v="4"/>
-		  <clip pos="2" side="tl" part="lemq"/> 
+		  <clip pos="2" side="tl" part="lemq"/>
 		</lu>
 	      </chunk>
 		<b pos="2"/>
@@ -6475,7 +6838,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	  <lit v="aa"/>
 	</let>
       </action>
-    </rule> 
+    </rule>
 
 
     <rule comment="REGLA: DET:a  - the derminier 'a' should just be deleted. Having this rule makes it possible to avoid handling 'a' in all the other rules">
@@ -6509,22 +6872,22 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<call-macro n="nom_cas">
 	  <with-param pos="1"/>
 	</call-macro>
-	<out>  
+	<out>
 	  <chunk name="det" case="caseFirstWord">
 	    <tags>
-	      <tag><lit-tag v="DETx"/></tag>
+	      <tag><lit-tag v="DET"/></tag>
 	      <tag><clip pos="1" side="sl" part="gen"/></tag>
 	      <tag><clip pos="1" side="sl" part="nbr"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
-	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	  </chunk>
-	</out>  
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -6534,67 +6897,6 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 
 
 <!-- ****** REGLES DE SV *********************************************** -->
-
-
-<rule comment=", VERBfet QUE (únicament per corregir al tagger quan s'equivoca amb FAKTO i amb KE) (EO)">
-      <pattern>
-	<pattern-item n="sent_coma"/>
-	<pattern-item n="fet"/>
-	<pattern-item n="cnjcoopercorregir"/>
-      </pattern>
-      <action>    	
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
-	</call-macro>
-        <call-macro n="tipus_verbs">
-          <with-param pos="1"/>
-        </call-macro>
-
-        <out>
-	  <chunk name="punt">
-	    <tags>
-	      <tag><lit-tag v="sent"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="1" side="tl" part="whole"/>
-	    </lu>
-	  </chunk>
-	   <b pos="1"/>
-           <chunk name="nomA" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><lit-tag v="m"/></tag>
-              <tag><lit-tag v="sg"/></tag>
-              <tag><lit-tag v="nom"/></tag>
-            </tags>
-            <lu>
-                <lit v="fakto"/>
-		<lit-tag v="n"/>
-		<lit-tag v="sg"/>
-	        <lit-tag v="4"/>
-            </lu>
-           </chunk>
-	   <b pos="2"/>
-	 <chunk name="relatiu">
-            <tags>
-            <tag><lit-tag v="SNrelatiu"/></tag>
-            <tag><lit-tag v="nom"/></tag>
-            </tags>
-            <lu>
-                <lit v="kiu"/>
-		<lit-tag v="prn"/>
-		<lit-tag v="rel"/>
-		<lit-tag v="sg"/>
-		<lit-tag v="2"/>
-            </lu>
-          </chunk>
-          </out>
-        <let>
-          <var n="caseFirstWord"/>
-          <lit v="aa"/>
-        </let>
-      </action>
-    </rule>
 
 
 <rule comment="VERB QUE ( únicament per corregir al tagger quan s'equivoca amb el KE) (EO)">
@@ -7380,7 +7682,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 </let>
               </when>
             </choose>
-                <out> 
+                <out>
                   <chunk name="adv" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="ADV"/></tag>
@@ -8444,7 +8746,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     <rule comment="HAVER + PP (ell ha llegit aquell llibre - Li legis tiun libron; es tradueix per passat) (EO)">
       <pattern>
 	<pattern-item n="haver"/>
-	<pattern-item n="pp"/> 
+	<pattern-item n="pp"/>
       </pattern>
       <action>
         <call-macro n="tipus_verbs">
@@ -8617,7 +8919,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     <rule comment="HAVER + PP + QUE (ell ha llegit aquell llibre - Li legis tiun libron;  precorregir el KE) (EO)">
       <pattern>
 	<pattern-item n="haver"/>
-	<pattern-item n="pp"/> 
+	<pattern-item n="pp"/>
 	<pattern-item n="cnjcoopercorregir"/>
       </pattern>
       <action>
@@ -8807,8 +9109,8 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     <rule comment="HAVER + PP + INF (ell ha decidit marxar ) (EO)">
       <pattern>
 	<pattern-item n="haver"/>
-	<pattern-item n="pp"/> 
-	<pattern-item n="inf"/> 
+	<pattern-item n="pp"/>
+	<pattern-item n="inf"/>
       </pattern>
       <action>
         <call-macro n="tipus_verbs">
@@ -9071,7 +9373,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                     </equal>
                 </test>
               </when>
-           <otherwise> <!-- SI NO es SE: objecte indirecte (passa a 'subj' per agafar nominatiu i s'afegeix la prep 'al') -->	
+           <otherwise> <!-- SI NO es SE: objecte indirecte (passa a 'subj' per agafar nominatiu i s'afegeix la prep 'al') -->
                 <let>
                   <clip pos="1" side="tl" part="tipus_prn"/>
                   <lit-tag v="subj"/>
@@ -9210,7 +9512,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  </or>
                 </test>
               </when>
-           <otherwise> <!-- SI NO es SE: el traduim) -->	
+           <otherwise> <!-- SI NO es SE: el traduim) -->
 		<out>
 		  <chunk name="pro_obj" case="caseFirstWord">
 		    <tags>
@@ -9244,14 +9546,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 
     <rule comment="INF_IMP + ENCL + INF (haver-los de comprar; poder-los comprar; voler-los comprar; deixa'l llegir. El clític passa al final EO- )">
       <pattern>
-	<pattern-item n="inf_imp"/> 
-	<pattern-item n="enc"/> 
-	<pattern-item n="inf"/> 
+	<pattern-item n="inf_imp"/>
+	<pattern-item n="enc"/>
+	<pattern-item n="inf"/>
       </pattern>
       <action>              	
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>  
+	</call-macro>
 	<choose>
               <when>  <!-- mirem si és SE per no fer res-->
                 <test>
@@ -9286,7 +9588,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
              </lu>
 
 	  </chunk>
-	</out>  
+	</out>
              </when>
 <otherwise>
 	<out>
@@ -9315,9 +9617,9 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	    <b pos="2"/>
 	    <lu>
 	      <clip pos="2" side="tl" part="whole"/>
-	    </lu> 
+	    </lu>
 	  </chunk>
-	</out>  
+	</out>
 	</otherwise>
 	</choose>
 	<let>
@@ -9330,15 +9632,15 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 
     <rule comment="INF_IMP + ENCL + ENCL + INF (haver-los de comprar; poder-los comprar; voler-los comprar; deixa'l llegir. El clític passa al final EO- )">
       <pattern>
-	<pattern-item n="inf_imp"/> 
-	<pattern-item n="enc"/> 
-	<pattern-item n="enc"/> 
-	<pattern-item n="inf"/> 
+	<pattern-item n="inf_imp"/>
+	<pattern-item n="enc"/>
+	<pattern-item n="enc"/>
+	<pattern-item n="inf"/>
       </pattern>
       <action>              	
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>  
+	</call-macro>
 
 	<out> <!-- primer pintem els vebrs -->
 	  <chunk name="verb_enc_inf" case="caseFirstWord">
@@ -9366,7 +9668,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 
 	  </chunk>
 	 <b/>
-	</out>  
+	</out>
 
                 <out>
                   <chunk name="pro_directe" case="caseFirstWord">
@@ -9430,8 +9732,8 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 
     <rule comment="REGLA: PARTICIPI + PAR -> aimé par -> amata de">
       <pattern>
-	<pattern-item n="pp"/> 
-	<pattern-item n="par"/> 
+	<pattern-item n="pp"/>
+	<pattern-item n="par"/>
       </pattern>
       <action>       	
 	<call-macro n="firstWord">
@@ -9447,11 +9749,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="sl" part="gen"/></tag>
 	      <tag><clip pos="1" side="sl" part="nbr"/></tag>
               <tag><var n="case"/></tag>
-	    </tags> 	
+	    </tags>
 	    <lu>
-	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <lit-tag v="vblex.pp"/>
-	      <clip pos="1" side="sl" part="nbr"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="1" side="tl" part="lemq"/>    
 	    </lu>
@@ -9461,7 +9763,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <lit-tag v="pr"/>
             </lu>
 	  </chunk>
-	</out>  
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -9472,7 +9774,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 
     <rule comment="REGLA: PARTICIPI (perquè no enviï gènere ni nombre quan va sol (per tal que no doni error). Caldrà posar-lo tb en les regles d'adjectiu">
       <pattern>
-	<pattern-item n="pp"/> 
+	<pattern-item n="pp"/>
       </pattern>
       <action>       	
 	<call-macro n="firstWord">
@@ -9494,9 +9796,9 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="sl" part="nbr"/></tag>
               <tag><var n="case"/></tag>
 
-	    </tags> 	
+	    </tags>
 	    <lu>
-	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <lit-tag v="vblex.pp"/>
 	      <clip pos="1" side="sl" part="nbr"/>
 	      <clip pos="1" side="tl" part="cas" link-to="4"/>
@@ -9504,7 +9806,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="1" side="tl" part="lemq"/>    
 	    </lu>
 	  </chunk>
-	</out>  
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -9515,7 +9817,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 
     <rule comment="REGLA: VERBinf no conjugat (perquè posi bé la cua en multiparaules)">
       <pattern>
-	<pattern-item n="inf"/> 
+	<pattern-item n="inf"/>
       </pattern>
       <action>     	
 	<call-macro n="firstWord">
@@ -9529,14 +9831,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="tl" part="temps"/></tag>
 	    </tags>
 	    <lu>
-	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_verb"/>
 	      <clip pos="1" side="tl" part="sep"/>
 	      <clip pos="1" side="tl" part="temps" link-to="3"/>
 	      <clip pos="1" side="tl" part="lemq"/>    
 	    </lu>
 	  </chunk>
-	</out>  
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -9546,7 +9848,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 
     <rule comment="REGLA: VERBger no conjugat (perquè posi bé la cua en multiparaules)">
       <pattern>
-	<pattern-item n="ger"/> 
+	<pattern-item n="ger"/>
       </pattern>
       <action>     	
 	<call-macro n="firstWord">
@@ -9560,14 +9862,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="sl" part="temps"/></tag>
 	    </tags>
 	    <lu>
-	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_verb"/>
 	      <clip pos="1" side="tl" part="sep"/>
 	      <clip pos="1" side="tl" part="temps"/>
 	      <clip pos="1" side="tl" part="lemq"/>    
 	    </lu>
 	  </chunk>
-	</out>  
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -9592,14 +9894,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	  <chunk name="adv" case="caseFirstWord">
 	    <tags>
 	      <tag><clip pos="1" side="tl" part="a_adv"/></tag>
-	      <tag><clip pos="1" side="tl" part="neg"/></tag>		
+	      <tag><clip pos="1" side="tl" part="neg"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_adv"/>
 	    </lu>
 	  </chunk>
-	</out>  
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -9619,13 +9921,13 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<out>
 	  <chunk name="adv" case="caseFirstWord">
 	    <tags>
-	      <tag><clip pos="1" side="tl" part="a_adv"/></tag>	
+	      <tag><clip pos="1" side="tl" part="a_adv"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="whole"/>
 	    </lu>
 	  </chunk>
-	</out>  
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -9634,7 +9936,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
-<rule comment="PRONOM tònic/interrogatiu/possessiu EO"> 
+<rule comment="PRONOM tònic/interrogatiu/possessiu EO">
       <pattern>
 	<pattern-item n="tn_itg_pos"/>
       </pattern>
@@ -9660,12 +9962,12 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 
 	    </tags>
 	    <lu>
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_prn"/>
 	      <clip pos="1" side="tl" part="tipus_prn"/>
-	      <clip pos="1" side="tl" part="nbr" link-to="3"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	  </chunk>
 	</out>
 	<let>
@@ -9676,7 +9978,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
-<rule comment="PRONOM indefinit i companyia (EO)"> 
+<rule comment="PRONOM indefinit i companyia (EO)">
       <pattern>
 	<pattern-item n="tn"/>
       </pattern>
@@ -9700,12 +10002,12 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_prn"/>
 	      <clip pos="1" side="tl" part="tipus_prn"/>
-	      <clip pos="1" side="tl" part="nbr" link-to="3"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	  </chunk>
 	</out>
 	<let>
@@ -9715,7 +10017,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       </action>
     </rule>
 
-<rule comment="PRONOM relatiu EO"> 
+<rule comment="PRONOM relatiu EO">
       <pattern>
 	<pattern-item n="relatiu"/>
       </pattern>
@@ -9738,12 +10040,12 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>
-	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_prn"/>
 	      <clip pos="1" side="tl" part="tipus_prn"/>
-	      <clip pos="1" side="tl" part="nbr" link-to="3"/>
+	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	  </chunk>
 	</out>
 	<let>
@@ -9754,7 +10056,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
-<rule comment="PREP + PRONOM relatiu EO( dels quals, pels que, als que ...)"> 
+<rule comment="PREP + PRONOM relatiu EO( dels quals, pels que, als que ...)">
       <pattern>
 	<pattern-item n="prep"/>
 	<pattern-item n="relatiu_prep"/>
@@ -9787,11 +10089,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	    </tags>
 	    <lu>
-	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_prn"/>
               <lit-tag v="nn"/>
 	      <clip pos="2" side="tl" part="nbr" link-to="3"/>
-	    </lu> 
+	    </lu>
 	  </chunk>
 	</out>
 	<let>
@@ -9819,15 +10121,15 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="tl" part="nbr"/></tag>
 	    </tags>
 	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/>  
-	      <clip pos="1" side="tl" part="a_prn"/>  
-	      <clip pos="1" side="tl" part="tipus_prn" link-to="2"/> 
+	      <clip pos="1" side="tl" part="lem"/>
+	      <clip pos="1" side="tl" part="a_prn"/>
+	      <clip pos="1" side="tl" part="tipus_prn" link-to="2"/>
 	      <clip pos="1" side="tl" part="pers"/>
 	      <clip pos="1" side="tl" part="gen"/>
 	      <clip pos="1" side="tl" part="nbr"/>
-	    </lu> 
+	    </lu>
 	  </chunk>
-	</out>  
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -9843,11 +10145,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       <action>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>	
+	</call-macro>
 	<out>
 	  <chunk name="cnj" case="caseFirstWord">
 	    <tags>
-	      <tag><clip pos="1" side="tl" part="tags"/></tag>		
+	      <tag><clip pos="1" side="tl" part="tags"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="whole"/>

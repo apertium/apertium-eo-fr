@@ -236,6 +236,10 @@
   <e>       <p><l></l>          <r><s n="rel"/><s n="adv"/></r></p></e>
 </pardef>
 
+<pardef n="kie__itg">
+  <e>       <p><l></l>          <r><s n="adv"/><s n="itg"/></r></p></e>
+</pardef>
+
 <pardef n="tro__preadv">
   <e>       <p><l></l>          <r><s n="preadv"/></r></p></e>
 </pardef>
@@ -507,32 +511,34 @@
 
 
 <pardef n="CX__num">
-  <e>       <p><l></l>          <r><s n="num"/><s n="sp"/></r></p></e>
-  <e>       <p><l></l>          <r><s n="num"/><s n="sp"/><s n="nom"/></r></p></e>
-  <e>       <p><l></l>          <r><s n="num"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e>       <p><l></l>          <r><s n="num"/><s n="pl"/></r></p></e>
+  <e>       <p><l></l>          <r><s n="num"/><s n="pl"/><s n="nom"/></r></p></e>
+  <e>       <p><l></l>          <r><s n="num"/><s n="pl"/><s n="acc"/></r></p></e>
 </pardef>
 
 
 
 <pardef n="du__num">
-  <e>       <p><l></l>          <r><s n="num"/><s n="sp"/></r></p></e>
-  <e>       <p><l><b/>cent</l>  <r><b/>cent<s n="num"/><s n="sp"/></r></p></e>
-  <e>       <p><l><b/>mil</l>   <r><b/>mil<s n="num"/><s n="sp"/></r></p></e>
-  <e>       <p><l></l>          <r><s n="num"/><s n="sp"/><s n="acc"/></r></p></e>
-  <e>       <p><l><b/>cent</l>  <r><b/>cent<s n="num"/><s n="sp"/><s n="acc"/></r></p></e>
-  <e>       <p><l><b/>mil</l>   <r><b/>mil<s n="num"/><s n="sp"/><s n="acc"/></r></p></e>
-  <e>       <p><l></l>          <r><s n="num"/><s n="sp"/><s n="nom"/></r></p></e>
-  <e>       <p><l><b/>cent</l>  <r><b/>cent<s n="num"/><s n="sp"/><s n="nom"/></r></p></e>
-  <e>       <p><l><b/>mil</l>   <r><b/>mil<s n="num"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e>       <p><l></l>          <r><s n="num"/><s n="pl"/></r></p></e>
+  <e>       <p><l><b/>cent</l>  <r><b/>cent<s n="num"/><s n="pl"/></r></p></e>
+  <e>       <p><l><b/>mil</l>   <r><b/>mil<s n="num"/><s n="pl"/></r></p></e>
+  <e>       <p><l></l>          <r><s n="num"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e>       <p><l><b/>cent</l>  <r><b/>cent<s n="num"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e>       <p><l><b/>mil</l>   <r><b/>mil<s n="num"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e>       <p><l></l>          <r><s n="num"/><s n="pl"/><s n="nom"/></r></p></e>
+  <e>       <p><l><b/>cent</l>  <r><b/>cent<s n="num"/><s n="pl"/><s n="nom"/></r></p></e>
+  <e>       <p><l><b/>mil</l>   <r><b/>mil<s n="num"/><s n="pl"/><s n="nom"/></r></p></e>
+<!--
   <e r="RL"><p><l>o</l>         <r><s n="num"/><s n="sg"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>oj</l>        <r><s n="num"/><s n="pl"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>on</l>        <r><s n="num"/><s n="sg"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>ojn</l>       <r><s n="num"/><s n="pl"/><s n="acc"/></r></p></e>
+-->
 </pardef>
 
 
 <pardef n="million__num">
-  <e>       <p><l></l>          <r><s n="num"/><s n="sp"/></r></p></e>
+  <e>       <p><l></l>          <r><s n="num"/><s n="pl"/></r></p></e>
 </pardef>
 
 
@@ -678,7 +684,7 @@
 <e lm="kies">            <p><l>kies</l>      <r>kies<s n="prn"/><s n="rel"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="kies">            <p><l>kies</l>      <r>kies<s n="prn"/><s n="rel"/><s n="pl"/><s n="acc"/></r></p></e>
 <e lm="kio">             <p><l>kio</l>       <r>kio<s n="prn"/><s n="rel"/><s n="sg"/><s n="nom"/></r></p></e>
-<!-- interrogatius-->
+
 
 <e lm="kio">             <p><l>kio</l>       <r>kio<s n="prn"/><s n="itg"/><s n="sg"/><s n="nom"/></r></p></e>
 <e r="RL" lm="kiom">     <p><l>kio</l>       <r>kiom<s n="prn"/><s n="itg"/><s n="sg"/><s n="acc"/></r></p></e>
@@ -731,6 +737,14 @@
 <e lm="tiu">             <p><l>tiuj</l>      <r>tiu<s n="prn"/><s n="tn"/><s n="pl"/><s n="nom"/></r></p></e>
 <e lm="tiu">             <p><l>tiujn</l>     <r>tiu<s n="prn"/><s n="tn"/><s n="pl"/><s n="acc"/></r></p></e>
 <e lm="tiu">             <p><l>tiun</l>      <r>tiu<s n="prn"/><s n="tn"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="ĉi tiu">          <p><l>ĉi<b/>tiu</l> <r>ĉi<b/>tiu<s n="prn"/><s n="tn"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="ĉi tiu">          <p><l>ĉi<b/>tiuj</l><r>ĉi<b/>tiu<s n="prn"/><s n="tn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="ĉi tiu">          <p><l>ĉi<b/>tiujn</l><r>ĉi<b/>tiu<s n="prn"/><s n="tn"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="ĉi tiu">          <p><l>ĉi<b/>tiun</l><r>ĉi<b/>tiu<s n="prn"/><s n="tn"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="tiu ĉi">          <p><l>tiu<b/>ĉi</l> <r>tiu<b/>ĉi<s n="prn"/><s n="tn"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="tiu ĉi">          <p><l>tiuj<b/>ĉi</l><r>tiu<b/>ĉi<s n="prn"/><s n="tn"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="tiu ĉi">          <p><l>tiujn<b/>ĉi</l><r>tiu<b/>ĉi<s n="prn"/><s n="tn"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="tiu ĉi">          <p><l>tiun<b/>ĉi</l><r>tiu<b/>ĉi<s n="prn"/><s n="tn"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="ĉiu">             <p><l>ĉiu</l>       <r>ĉiu<s n="prn"/><s n="tn"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="ĉiu">             <p><l>ĉiuj</l>      <r>ĉiu<s n="prn"/><s n="tn"/><s n="pl"/><s n="nom"/></r></p></e>
 <e lm="ĉiu">             <p><l>ĉiujn</l>     <r>ĉiu<s n="prn"/><s n="tn"/><s n="pl"/><s n="acc"/></r></p></e>
@@ -4025,7 +4039,7 @@
 <e lm="espanjoleto">     <i>espanjolet</i><par n="o__n"/></e>
 <e lm="esparto">         <i>espart</i><par n="o__n"/></e>
 <e lm="espero">          <i>esper</i><par n="o__n"/></e>
-<e lm="esperanto">       <i>esperant</i><par n="o__n"/></e>
+<e lm="Esperanto">       <i>Esperant</i><par n="Vikipedi/o__np"/></e>
 <e lm="esperantismo">    <i>esperantism</i><par n="o__n"/></e>
 <e lm="esperantisto">    <i>esperantist</i><par n="ino__n"/></e>
 <e lm="esperantologo">   <i>esperantolog</i><par n="ino__n"/></e>
@@ -20825,7 +20839,6 @@
 <e lm="maloftiĝi">       <i>maloftiĝ</i><par n="i__vblex"/></e>
 <e lm="malpermesi">      <i>malpermes</i><par n="i__vblex"/></e>
 <e lm="malpezigi">       <i>malpezig</i><par n="i__vblex"/></e>
-<e lm="malpli">          <i>malpl</i><par n="i__vblex"/></e>
 <e lm="malplanti">       <i>malplant</i><par n="i__vblex"/></e>
 <e lm="malplaĉi">        <i>malplaĉ</i><par n="i__vblex"/></e>
 <e lm="malplenigi">      <i>malplenig</i><par n="i__vblex"/></e>
@@ -21242,7 +21255,6 @@
 <e lm="pirueti">         <i>piruet</i><par n="i__vblex"/></e>
 <e lm="pisi">            <i>pis</i><par n="i__vblex"/></e>
 <e lm="pivoti">          <i>pivot</i><par n="i__vblex"/></e>
-<e lm="pli">             <i>pl</i><par n="i__vblex"/></e>
 <e lm="plagi">           <i>plag</i><par n="i__vblex"/></e>
 <e lm="plagiati">        <i>plagiat</i><par n="i__vblex"/></e>
 <e lm="plaki">           <i>plak</i><par n="i__vblex"/></e>
@@ -21261,7 +21273,6 @@
 <e lm="plendi">          <i>plend</i><par n="i__vblex"/></e>
 <e lm="plenigi">         <i>plenig</i><par n="i__vblex"/></e>
 <e lm="plenumi">         <i>plenum</i><par n="i__vblex"/></e>
-<e lm="pli kaj pli">     <i>pli<b/>kaj<b/>pl</i><par n="i__vblex"/></e>
 <e lm="plibonigi">       <i>plibonig</i><par n="i__vblex"/></e>
 <e lm="plifortigi">      <i>plifortig</i><par n="i__vblex"/></e>
 <e lm="pligrandigi">     <i>pligrandig</i><par n="i__vblex"/></e>
@@ -23054,7 +23065,8 @@
 <e lm="plenvoĉe">        <i>plenvoĉ</i><par n="e__adv"/></e>
 <e lm="plezure">         <i>plezur</i><par n="e__adv"/></e>
 <e lm="pli">             <i>pli</i><par n="jam__adv"/></e>
-<e lm="pli kaj pli">     <i>pli<b/>kaj<b/>pli</i><par n="jam__adv"/></e>
+<e lm="pli kaj pli">     <i>pli<b/>kaj<b/>pli</i><par n="tro__preadv"/></e>
+<e lm="pli kaj pli">     <i>pli<b/>kaj<b/>pl</i><par n="after__cnjadv"/></e>
 <e lm="pli-malpli">      <i>pli-malpli</i><par n="jam__adv"/></e>
 <e lm="pli antaŭe">      <i>pli<b/>antaŭ</i><par n="e__adv"/></e>
 <e lm="pli konkrete">    <i>pli<b/>konkret</i><par n="e__adv"/></e>
@@ -23442,9 +23454,9 @@
 <e lm="ĵuse">            <i>ĵus</i><par n="e__adv"/></e>
 <e lm="ŝajne">           <i>ŝajn</i><par n="e__adv"/></e>
 <e lm="ŝtele">           <i>ŝtel</i><par n="e__adv"/></e>
-<e lm="ŭisfunde">        <i>ŭisfund</i><par n="e__adv"/></e>
-<e lm="ŭuste">           <i>ŭust</i><par n="e__adv"/></e>
-<e lm="ŭustatempe">      <i>ŭustatemp</i><par n="e__adv"/></e>
+<e lm="ĝisfunde">        <i>ĝisfund</i><par n="e__adv"/></e>
+<e lm="ĝuste">           <i>ĝust</i><par n="e__adv"/></e>
+<e lm="ĝustatempe">      <i>ĝustatemp</i><par n="e__adv"/></e>
     <!-- ******************************
           group preadv
       ****************************** -->
@@ -23471,6 +23483,7 @@
 <e lm="ciufoje">         <i>ciufoje</i><par n="after__cnjadv"/></e>
 <e lm="ciufoje kiam">    <i>ciufoje<b/>kiam</i><par n="after__cnjadv"/></e>
 <e lm="ciufoje pli">     <i>ciufoje<b/>pli</i><par n="after__cnjadv"/></e>
+<e lm="do">              <i>do</i><par n="after__cnjadv"/></e>
 <e lm="dum">             <i>dum</i><par n="after__cnjadv"/></e>
 <e lm="ekde">            <i>ekde</i><par n="after__cnjadv"/></e>
 <e lm="ekzemple">        <i>ekzemple</i><par n="after__cnjadv"/></e>
@@ -23635,7 +23648,6 @@
 <e lm="malantaŭ">        <i>malantaŭ</i><par n="al__pr"/></e>
 <e lm="maldekstre de">   <i>maldekstre<b/>d</i><par n="al__pr"/></e>
 <e lm="malgraŭ">         <i>malgraŭ</i><par n="al__pr"/></e>
-<e lm="malpli">          <i>malpli</i><par n="al__pr"/></e>
 <e lm="malpli ol">       <i>malpli<b/>ol</i><par n="al__pr"/></e>
 <e lm="malproksime de">  <i>malproksime<b/>d</i><par n="al__pr"/></e>
 <e lm="malproksime de">  <i>malproksime<b/>de</i><par n="al__pr"/></e>
@@ -23652,11 +23664,7 @@
 <e lm="oriente de">      <i>oriente<b/>d</i><par n="al__pr"/></e>
 <e lm="per">             <i>per</i><par n="al__pr"/></e>
 <e lm="per multe da">    <i>per<b/>multe<b/>da</i><par n="al__pr"/></e>
-<e lm="pere">            <i>pere</i><par n="al__pr"/></e>
 <e lm="pere de">         <i>pere<b/>de</i><par n="al__pr"/></e>
-<e lm="pli">             <i>pli</i><par n="al__pr"/></e>
-<e lm="pli ol">          <i>pli<b/>ol</i><par n="al__pr"/></e>
-<e lm="plu">             <i>plu</i><par n="al__pr"/></e>
 <e lm="por">             <i>por</i><par n="al__pr"/></e>
 <e lm="post">            <i>post</i><par n="al__pr"/></e>
 <e lm="pretekste de">    <i>pretekste<b/>de</i><par n="al__pr"/></e>
@@ -23707,6 +23715,11 @@
 <e lm="kiel">            <i>kiel</i><par n="kie__rel"/></e>
 <e lm="kien">            <i>kien</i><par n="kie__rel"/></e>
 <e lm="kiom">            <i>kiom</i><par n="kie__rel"/></e>
+<e lm="kiam">            <i>kiam</i><par n="kie__itg"/></e>
+<e lm="kie">             <i>kie</i><par n="kie__itg"/></e>
+<e lm="kiel">            <i>kiel</i><par n="kie__itg"/></e>
+<e lm="kien">            <i>kien</i><par n="kie__itg"/></e>
+<e lm="kiom">            <i>kiom</i><par n="kie__itg"/></e>
     <!-- ******************************
           group vb
       ****************************** -->
@@ -23809,6 +23822,10 @@
 <e lm="ĉi tiu">          <p><l>ĉi<b/>tiuj</l><r>ĉi<b/>tiu<s n="det"/><s n="dem"/><s n="pl"/><s n="nom"/></r></p></e>
 <e lm="ĉi tiu">          <p><l>ĉi<b/>tiujn</l><r>ĉi<b/>tiu<s n="det"/><s n="dem"/><s n="pl"/><s n="acc"/></r></p></e>
 <e lm="ĉi tiu">          <p><l>ĉi<b/>tiun</l><r>ĉi<b/>tiu<s n="det"/><s n="dem"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="tiu ĉi">          <p><l>tiu<b/>ĉi</l> <r>tiu<b/>ĉi<s n="det"/><s n="dem"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="tiu ĉi">          <p><l>tiuj<b/>ĉi</l><r>tiu<b/>ĉi<s n="det"/><s n="dem"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="tiu ĉi">          <p><l>tiujn<b/>ĉi</l><r>tiu<b/>ĉi<s n="det"/><s n="dem"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="tiu ĉi">          <p><l>tiun<b/>ĉi</l><r>tiu<b/>ĉi<s n="det"/><s n="dem"/><s n="sg"/><s n="acc"/></r></p></e>
     <!-- ******************************
           group num
       ****************************** -->
