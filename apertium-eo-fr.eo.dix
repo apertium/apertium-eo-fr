@@ -12,6 +12,7 @@
   <alphabet>·ÀÁÂÄÇÈÉÊËÌÍÎÏÑÒÓÔÖÙÚÛÜàáâäçèéêëìíîïñòóôöùúûüABCDEFGHIJKLMNOPQRSTUVWXYZĈĜĤĴŜŬabcdefghijklmnopqrstuvwxyzĉĝĥĵŝŭ</alphabet>
   <sdefs>
     <sdef n="acc" /> 
+    <sdef n="alt" /> 
     <sdef n="nomiacc" /> 
     <sdef n="nom" /> 
     <sdef n="comp" /> 
@@ -493,6 +494,16 @@
 </pardef>
 
 
+<pardef n="Vikipedi/o__np">
+  <e>       <p><l>o</l>          <r>o<s n="np"/><s n="alt"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e>       <p><l>on</l>         <r>o<s n="np"/><s n="alt"/><s n="sp"/><s n="acc"/></r></p></e>
+</pardef>
+
+<pardef n="Wikipedia__np">
+  <e>       <p><l></l>          <r><s n="np"/><s n="alt"/><s n="sg"/></r></p></e>
+</pardef>
+
+
 
 
 <pardef n="CX__num">
@@ -696,6 +707,7 @@
 <e lm="de kiu">          <p><l>de<b/>kiu</l> <r>de<b/>kiu<s n="prn"/><s n="rel"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="de kiu">          <p><l>de<b/>kiuj</l><r>de<b/>kiu<s n="prn"/><s n="rel"/><s n="pl"/><s n="nom"/></r></p></e>
 <e r="RL" lm="de kiu">   <p><l>de<b/>kiu</l> <r>de<b/>kiu<s n="prn"/><s n="rel"/><s n="sp"/><s n="nom"/></r></p></e>
+<e r="RL" lm="de kiu">   <p><l>de<b/>kiu</l> <r>de<b/>kiu<s n="prn"/><s n="rel"/><s n="sp"/></r></p></e>
 
 <e lm="kun mi">          <p><l>kun<b/>mi</l> <r>kun<b/>mi<s n="prn"/><s n="tn"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
 <e lm="kun si">          <p><l>kun<b/>si</l> <r>kun<b/>si<s n="prn"/><s n="tn"/><s n="p3"/><s n="mf"/><s n="sg"/></r></p></e>
@@ -3040,6 +3052,7 @@
 <e lm="detektilo">       <i>detektil</i><par n="o__n"/></e>
 <e lm="detektivo">       <i>detektiv</i><par n="ino__n"/></e>
 <e lm="detergento">      <i>detergent</i><par n="o__n"/></e>
+<e lm="determina">       <i>determin</i><par n="a__adj"/></e>
 <e lm="determino">       <i>determin</i><par n="o__n"/></e>
 <e lm="determinanto">    <i>determinant</i><par n="o__n"/></e>
 <e lm="detonacio">       <i>detonaci</i><par n="o__n"/></e>
@@ -4507,7 +4520,7 @@
 <e lm="flamenko">        <i>flamenk</i><par n="o__n"/></e>
 <e lm="flamingo">        <i>flaming</i><par n="o__n"/></e>
 <e lm="flano">           <i>flan</i><par n="o__n"/></e>
-<e lm="flandro">         <i>flandr</i><par n="o__n"/></e>
+<e lm="flandro">         <i>flandr</i><par n="ino__n"/></e>
 <e lm="flanelo">         <i>flanel</i><par n="o__n"/></e>
 <e lm="flanko">          <i>flank</i><par n="o__n"/></e>
 <e lm="flanka klaso">    <i>flanka<b/>klas</i><par n="o__n"/></e>
@@ -11664,6 +11677,7 @@
 <e lm="respondumo">      <i>respondum</i><par n="o__n"/></e>
 <e lm="responso">        <i>respons</i><par n="o__n"/></e>
 <e lm="responsulo">      <i>responsul</i><par n="ino__n"/></e>
+<e lm="respublika">      <i>respublik</i><par n="a__adj"/></e>
 <e lm="respubliko">      <i>respublik</i><par n="o__n"/></e>
 <e lm="respublikano">    <i>respublikan</i><par n="ino__n"/></e>
 <e lm="respublikisto">   <i>respublikist</i><par n="o__n"/></e>
