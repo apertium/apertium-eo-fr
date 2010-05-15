@@ -348,7 +348,11 @@
       <cat-item lemma="parler" tags="vblex.*"/>
     </def-cat>
 
-    <def-cat n="etre-pp">
+    <def-cat n="ser-pp">
+      <cat-item tags="vbser.pp.*"/>
+    </def-cat>
+
+    <def-cat n="vbser-pp"> <!-- verboj postulantaj la helpverbon "être" (do necesas konsideri kiel kompleksa tenso kaj ne kiel pasiva formo "être + pp" -->
       <cat-item lemma="arriver" tags="vblex.pp.*"/>
       <cat-item lemma="venir" tags="vblex.pp.*"/>
       <cat-item lemma="devenir" tags="vblex.pp.*"/>
@@ -8212,7 +8216,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         </call-macro>
 
 	<out>
-                  <chunk name="verbcj_perif" case="caseFirstWord">
+                  <chunk name="verbcj_perifK" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="1" side="tl" part="a_verb"/></tag>
@@ -8269,7 +8273,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         </call-macro>
 
 	<out>
-                  <chunk name="verbcj_perif" case="caseFirstWord">
+                  <chunk name="verbcj_perifJ" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="1" side="tl" part="a_verb"/></tag>
@@ -8327,7 +8331,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         </call-macro>
 
 	<out>
-                  <chunk name="verbcj_perif" case="caseFirstWord">
+                  <chunk name="verbcj_perifI" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="1" side="tl" part="a_verb"/></tag>
@@ -8336,7 +8340,6 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
 		      <tag><var n="tipus_verb"/></tag>
 		      <!--<tag><var n="tipus_verb2"/></tag>-->
-
                     </tags>
                     <lu>
                       <clip pos="1" side="tl" part="lemh"/>
@@ -8429,7 +8432,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         </call-macro>
 
                 <out>
-                  <chunk name="verbcj_perif" case="caseFirstWord">
+                  <chunk name="verbcj_perifH" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
@@ -8447,8 +8450,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                     <lu>
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <!-- <clip pos="2" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
+                      <lit-tag v="pp3"/>
                       <clip pos="1" side="tl" part="nbr"/>
+                      <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
                 </out>
@@ -8543,7 +8548,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	            </lu>
 	          </chunk>
 		  <b pos="2"/>
-                  <chunk name="verbcj_perif">
+                  <chunk name="verbcj_perifG">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
@@ -8561,8 +8566,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
+                      <lit-tag v="pp3"/>
                       <clip pos="1" side="tl" part="nbr"/>
+                      <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
                 </out>
@@ -8579,10 +8586,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
-    <rule comment="VERBêtre + PP-être (est venu - venis ; es tradueix per passat) (EO)">
+    <rule comment="VERBser + PP-ser (est venu - venis ; es tradueix per passat) (EO)">
       <pattern>
 	<pattern-item n="ser"/>
-	<pattern-item n="etre-pp"/>
+	<pattern-item n="vbser-pp"/>
       </pattern>
       <action>
         <call-macro n="tipus_verbs">
@@ -8634,7 +8641,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         </call-macro>
 
                 <out>
-                  <chunk name="verbcj_perif" case="caseFirstWord">
+                  <chunk name="verbcj_perifF" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
@@ -8652,8 +8659,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                     <lu>
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <!-- <clip pos="2" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
+                      <lit-tag v="pp3"/>
                       <clip pos="1" side="tl" part="nbr"/>
+                      <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
                 </out>
@@ -8670,11 +8679,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
-    <rule comment="VERBêtre + ADV + PP-être (est beaucoup venu - multe venis ; es tradueix per passat) (EO)">
+    <rule comment="VERBser + ADV + PP-ser (est beaucoup venu - multe venis ; es tradueix per passat) (EO)">
       <pattern>
 	<pattern-item n="ser"/>
 	<pattern-item n="adv"/>
-	<pattern-item n="etre-pp"/>
+	<pattern-item n="vbser-pp"/>
       </pattern>
       <action>
         <call-macro n="tipus_verbs">
@@ -8748,7 +8757,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	            </lu>
 	          </chunk>
 		  <b pos="2"/>
-                  <chunk name="verbcj_perif">
+                  <chunk name="verbcj_perifE">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
@@ -8766,8 +8775,109 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
+                      <lit-tag v="pp3"/>
                       <clip pos="1" side="tl" part="nbr"/>
+                      <clip pos="3" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+            </otherwise>
+	</choose>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>    
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+    <rule comment="VERBhaver + VERBser-pp + PP (kompleksa pasivo: a été lu - estis legita ; forfalas unu helpverbo) (EO)">
+      <pattern>
+	<pattern-item n="haver"/>
+	<pattern-item n="ser-pp"/>
+	<pattern-item n="pp"/>
+      </pattern>
+      <action>
+<!-- ĉar pasivo, prefere vbser
+        <call-macro n="tipus_verbs">
+          <with-param pos="3"/>
+        </call-macro>
+-->
+
+        <choose>
+              <when>  <!-- traduccions des de present -> passat (1)-->
+                <test>
+                  <or>
+                    <equal>
+                      <clip pos="1" side="sl" part="temps"/>
+                      <lit-tag v="pri"/><!--present indicatiu dic -->
+                    </equal>
+                    <equal>
+                      <clip pos="1" side="sl" part="temps"/>
+                      <lit-tag v="prs"/><!--present subjunctiu digui -->
+                    </equal>
+                  </or>
+                </test>
+                <let>
+                  <clip pos="1" side="tl" part="temps"/>
+                  <lit-tag v="past"/> <!-- present -->
+                </let>
+                <out>
+                  <chunk name="verbcj" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><lit-tag v="vbser"/></tag>	<!-- pasivo -->
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="pers"/></tag>
+                      <tag><clip pos="1" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+		      <lit v="esti"/>
+                      <clip pos="1" side="tl" part="a_verb"/>
+                      <clip pos="1" side="tl" part="temps"/>
+                    </lu>
+		    <b pos="1"/>
+                    <lu>
+                      <clip pos="3" side="tl" part="lemh"/>
+                      <clip pos="3" side="tl" part="a_verb"/>
+                      <lit-tag v="pp"/>
+                      <clip pos="3" side="tl" part="nbr"/>
+                      <clip pos="3" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+          </when>
+	    <otherwise>
+        <call-macro n="set_temps">
+          <with-param pos="1"/>
+        </call-macro>
+                <out>
+                  <chunk name="verbcj_perifP1" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><lit-tag v="vbser"/></tag>	<!-- pasivo -->
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="pers"/></tag>
+                      <tag><clip pos="1" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+		      <lit v="esti"/>
+                      <clip pos="1" side="tl" part="a_verb"/>
+                      <clip pos="1" side="tl" part="temps"/>
+                    </lu>
+		    <b pos="1"/>
+                    <lu>
+                      <clip pos="3" side="tl" part="lemh"/>
+                      <clip pos="3" side="tl" part="a_verb"/>
+                      <lit-tag v="pp"/>
+                      <clip pos="1" side="tl" part="nbr"/>
+                      <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
                 </out>
@@ -8817,7 +8927,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                   <lit-tag v="past"/> <!-- present -->
                 </let>
                 <out>
-                  <chunk name="verbcj_perif" case="caseFirstWord">
+                  <chunk name="verbcj_perifD" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
@@ -8852,7 +8962,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         </call-macro>
 
                 <out>
-                  <chunk name="verbcj_perif" case="caseFirstWord">
+                  <chunk name="verbcj_perifC" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
@@ -8870,8 +8980,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                     <lu>
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <!-- <clip pos="2" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
+                      <lit-tag v="pp3"/>
                       <clip pos="1" side="tl" part="nbr"/>
+                      <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                     <b pos="1"/>
                     <lu>
@@ -9656,7 +9768,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	            </lu>
 	          </chunk>
 		  <b pos="1"/>
-                  <chunk name="verbcj_perif">
+                  <chunk name="verbcj_perifB">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="4" side="tl" part="a_verb"/></tag>
@@ -9674,8 +9786,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                     <lu>
                       <clip pos="4" side="tl" part="lemh"/>
                       <clip pos="4" side="tl" part="a_verb"/>
-                      <clip pos="4" side="tl" part="temps"/>
+                      <!-- <clip pos="4" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
+                      <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
+                      <clip pos="4" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
                 </out>
@@ -9782,7 +9896,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	            </lu>
 	          </chunk>
 		  <b pos="2"/>
-                  <chunk name="verbcj_perif">
+                  <chunk name="verbcj_perifA">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="5" side="tl" part="a_verb"/></tag>
@@ -9800,8 +9914,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                      <clip pos="5" side="tl" part="temps"/>
+                      <!-- <clip pos="5" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
+                      <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
+                      <clip pos="5" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
                 </out>
@@ -9818,12 +9934,12 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
-    <rule comment="NE VERBêtre PAS + PP-être (n'est pas venu - ne venis ; es tradueix per passat) (EO)">
+    <rule comment="NE VERBser PAS + PP-ser (n'est pas venu - ne venis ; es tradueix per passat) (EO)">
       <pattern>
 	<pattern-item n="ne"/>
 	<pattern-item n="ser"/>
 	<pattern-item n="pas"/>
-	<pattern-item n="etre-pp"/>
+	<pattern-item n="vbser-pp"/>
       </pattern>
       <action>
         <call-macro n="tipus_verbs">
@@ -9884,7 +10000,6 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
           <with-param pos="2"/>
           <with-param pos="4"/>
         </call-macro>
-
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
 	            <tags>
@@ -9897,7 +10012,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	            </lu>
 	          </chunk>
 		  <b pos="1"/>
-                  <chunk name="verbcj_perif">
+                  <chunk name="verbcj_perif9">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="4" side="tl" part="a_verb"/></tag>
@@ -9915,8 +10030,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                     <lu>
                       <clip pos="4" side="tl" part="lemh"/>
                       <clip pos="4" side="tl" part="a_verb"/>
-                      <clip pos="4" side="tl" part="temps"/>
+                      <!-- <clip pos="4" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
+                      <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
+                      <clip pos="4" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
                 </out>
@@ -9933,13 +10050,124 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
-    <rule comment="NE VERBêtre PAS + ADV + PP-être (n'est pas beaucoup venu - ne multe venis ; es tradueix per passat) (EO)">
+    <rule comment="VERBhaver + VERBser-pp + PP + PAR (kompleksa pasivo: a été lu par - estis legita de; forfalas unu helpverbo + ŝanĝo prepozicio) (EO)">
+      <pattern>
+	<pattern-item n="haver"/>
+	<pattern-item n="ser-pp"/>
+	<pattern-item n="pp"/>
+	<pattern-item n="par"/>
+      </pattern>
+      <action>
+<!-- ĉar pasivo, prefere vbser
+        <call-macro n="tipus_verbs">
+          <with-param pos="3"/>
+        </call-macro>
+-->
+
+        <choose>
+              <when>  <!-- traduccions des de present -> passat (1)-->
+                <test>
+                  <or>
+                    <equal>
+                      <clip pos="1" side="sl" part="temps"/>
+                      <lit-tag v="pri"/><!--present indicatiu dic -->
+                    </equal>
+                    <equal>
+                      <clip pos="1" side="sl" part="temps"/>
+                      <lit-tag v="prs"/><!--present subjunctiu digui -->
+                    </equal>
+                  </or>
+                </test>
+                <let>
+                  <clip pos="1" side="tl" part="temps"/>
+                  <lit-tag v="past"/> <!-- present -->
+                </let>
+                <out>
+                  <chunk name="verbcj" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><lit-tag v="vbser"/></tag>	<!-- pasivo -->
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="pers"/></tag>
+                      <tag><clip pos="1" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+		      <lit v="esti"/>
+                      <clip pos="1" side="tl" part="a_verb"/>
+                      <clip pos="1" side="tl" part="temps"/>
+                    </lu>
+		    <b pos="1"/>
+                    <lu>
+                      <clip pos="3" side="tl" part="lemh"/>
+                      <clip pos="3" side="tl" part="a_verb"/>
+                      <lit-tag v="pp"/>
+                      <clip pos="3" side="tl" part="nbr"/>
+                      <clip pos="3" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+          </when>
+	    <otherwise>
+        <call-macro n="set_temps">
+          <with-param pos="1"/>
+        </call-macro>
+                <out>
+                  <chunk name="verbcj_perifP1" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><lit-tag v="vbser"/></tag>	<!-- pasivo -->
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="pers"/></tag>
+                      <tag><clip pos="1" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+		      <lit v="esti"/>
+                      <clip pos="1" side="tl" part="a_verb"/>
+                      <clip pos="1" side="tl" part="temps"/>
+                    </lu>
+		    <b pos="1"/>
+                    <lu>
+                      <clip pos="3" side="tl" part="lemh"/>
+                      <clip pos="3" side="tl" part="a_verb"/>
+                      <lit-tag v="pp"/>
+                      <clip pos="1" side="tl" part="nbr"/>
+                      <clip pos="3" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+            </otherwise>
+	</choose>
+        <out>
+          <b pos="3"/> <!-- ŝanĝo al DE-->
+	  <chunk name="pr" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="PREP"/></tag>
+	    </tags>
+            <lu>
+              <lit v="de"/>
+              <lit-tag v="pr"/>
+            </lu>
+	  </chunk>
+        </out>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>    
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+    <rule comment="NE VERBser PAS + ADV + PP-ser (n'est pas beaucoup venu - ne multe venis ; es tradueix per passat) (EO)">
       <pattern>
 	<pattern-item n="ne"/>
 	<pattern-item n="ser"/>
 	<pattern-item n="pas"/>
 	<pattern-item n="adv"/>
-	<pattern-item n="etre-pp"/>
+	<pattern-item n="vbser-pp"/>
       </pattern>
       <action>
         <call-macro n="tipus_verbs">
@@ -10023,7 +10251,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	            </lu>
 	          </chunk>
 		  <b pos="3"/>
-                  <chunk name="verbcj_perif">
+                  <chunk name="verbcj_perif8">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="5" side="tl" part="a_verb"/></tag>
@@ -10041,8 +10269,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                      <clip pos="5" side="tl" part="temps"/>
+                      <!-- <clip pos="5" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
+                      <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
+                      <clip pos="5" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
                 </out>
@@ -10248,7 +10478,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	            </lu>
 	          </chunk>
 		  <b pos="2"/>
-                  <chunk name="verbcj_perif">
+                  <chunk name="verbcj_perif7">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="5" side="tl" part="a_verb"/></tag>
@@ -10266,8 +10496,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                      <clip pos="5" side="tl" part="temps"/>
+                      <!-- <clip pos="5" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
+                      <lit-tag v="pp3"/>
                       <clip pos="3" side="tl" part="nbr"/>
+                      <clip pos="5" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
 		  <b pos="1"/>
@@ -10417,7 +10649,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	            </lu>
 	          </chunk>
 		  <b pos="3"/>
-                  <chunk name="verbcj_perif">
+                  <chunk name="verbcj_perif6">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="6" side="tl" part="a_verb"/></tag>
@@ -10435,8 +10667,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                     <lu>
                       <clip pos="6" side="tl" part="lemh"/>
                       <clip pos="6" side="tl" part="a_verb"/>
-                      <clip pos="6" side="tl" part="temps"/>
+                      <!-- <clip pos="6" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
+                      <lit-tag v="pp3"/>
                       <clip pos="3" side="tl" part="nbr"/>
+                      <clip pos="6" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
 		  <b pos="1"/>
@@ -10470,13 +10704,13 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
-    <rule comment="NE PRN VERBêtre PAS + PP-être (n'y est pas venu - ne venis tie ; es tradueix per passat) (EO)">
+    <rule comment="NE PRN VERBser PAS + PP-ser (n'y est pas venu - ne venis tie ; es tradueix per passat) (EO)">
       <pattern>
 	<pattern-item n="ne"/>
 	<pattern-item n="tn_pro"/>
 	<pattern-item n="ser"/>
 	<pattern-item n="pas"/>
-	<pattern-item n="etre-pp"/>
+	<pattern-item n="vbser-pp"/>
       </pattern>
       <action>
         <call-macro n="tipus_verbs">
@@ -10575,7 +10809,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	            </lu>
 	          </chunk>
 		  <b pos="2"/>
-                  <chunk name="verbcj_perif">
+                  <chunk name="verbcj_perif5">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="5" side="tl" part="a_verb"/></tag>
@@ -10593,8 +10827,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                      <clip pos="5" side="tl" part="temps"/>
+                      <!-- <clip pos="5" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
+                      <lit-tag v="pp3"/>
                       <clip pos="3" side="tl" part="nbr"/>
+                      <clip pos="5" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
 		  <b pos="1"/>
@@ -10628,14 +10864,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
-    <rule comment="NE PRN VERBêtre PAS + ADV + PP-être (n'y est pas beaucoup venu - ne multe venis tie ; es tradueix per passat) (EO)">
+    <rule comment="NE PRN VERBser PAS + ADV + PP-ser (n'y est pas beaucoup venu - ne multe venis tie ; es tradueix per passat) (EO)">
       <pattern>
 	<pattern-item n="ne"/>
 	<pattern-item n="tn_pro"/>
 	<pattern-item n="ser"/>
 	<pattern-item n="pas"/>
 	<pattern-item n="adv"/>
-	<pattern-item n="etre-pp"/>
+	<pattern-item n="vbser-pp"/>
       </pattern>
       <action>
         <call-macro n="tipus_verbs">
@@ -10744,7 +10980,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	            </lu>
 	          </chunk>
 		  <b pos="3"/>
-                  <chunk name="verbcj_perif">
+                  <chunk name="verbcj_perif4">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="6" side="tl" part="a_verb"/></tag>
@@ -10762,8 +10998,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                     <lu>
                       <clip pos="6" side="tl" part="lemh"/>
                       <clip pos="6" side="tl" part="a_verb"/>
-                      <clip pos="6" side="tl" part="temps"/>
+                      <!-- <clip pos="6" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
+                      <lit-tag v="pp3"/>
                       <clip pos="3" side="tl" part="nbr"/>
+                      <clip pos="6" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
 		  <b pos="1"/>
@@ -10832,7 +11070,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	            </lu>
 	          </chunk>
 		  <b pos="1"/>
-                  <chunk name="verbcj_perif">
+                  <chunk name="verbcj_perif3">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
@@ -10902,7 +11140,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	            </lu>
 	          </chunk>
 		  <b pos="1"/>
-                  <chunk name="verbcj_perif">
+                  <chunk name="verbcj_perif2">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
@@ -10961,7 +11199,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         </call-macro>
 
 	<out>
-                  <chunk name="verbcj_perif" case="caseFirstWord">
+                  <chunk name="verbcj_perif1" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="1" side="tl" part="a_verb"/></tag>
@@ -11441,6 +11679,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	  <var n="genere"/>
 	  <lit-tag v="m"/>
 	</let>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit-tag v="aa"/>
+	</let>
 	<choose>
 	  <when>
 	    <test>
@@ -11481,7 +11723,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
     
-    <rule> <!-- REGLA: sent_coma (hem afegit regla per a la coma per al pro-drop (no l'imcloem a l'anterior per no fer el reset de variables EO))-->
+    <rule> <!-- REGLA: sent_coma (hem afegit regla per a la coma per al pro-drop (no l'incloem a l'anterior per no fer el reset de variables EO))-->
       <pattern>
 	<pattern-item n="sent_coma"/>
       </pattern>
