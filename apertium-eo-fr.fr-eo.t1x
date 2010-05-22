@@ -34,12 +34,12 @@
       <cat-item tags="adj.pos.*"/>
       <cat-item tags="vblex.pp.*"/>
     </def-cat>
-    
+
     <def-cat n="adjADJ"> <!-- únicament adjs, no pp -->
       <cat-item tags="adj.*"/>
       <cat-item tags="adj.pos.*"/>
     </def-cat>
-    
+
     <def-cat n="unknown"> <!-- unknown words -->
       <cat-item tags=""/>
     </def-cat>
@@ -47,7 +47,7 @@
     <def-cat n="article">
       <cat-item lemma="le" tags="det.*"/>
     </def-cat>
-    
+
    <def-cat n="det"><!--Determinants i predeterminants, van anteposats en català -->
       <cat-item tags="det.dem.*"/>
       <cat-item tags="det.ind.*"/>
@@ -58,6 +58,10 @@
       <cat-item tags="det.ord.*"/>
       <cat-item tags="predet.*"/>
       <cat-item tags="num.*"/>
+    </def-cat>
+
+   <def-cat n="le">
+      <cat-item lemma="le" tags="det.def.*"/>
     </def-cat>
 
    <def-cat n="dem">
@@ -89,7 +93,7 @@
       <cat-item tags="prn.tn.mf.*"/>
       <cat-item tags="prn.tn.nt.*"/>
     </def-cat>
-    
+
     <def-cat n="tn_pro"> <!-- CD i CI en francès -->
 <!--
       <cat-item tags="prn.tn.m.*"/>
@@ -100,7 +104,7 @@
       <cat-item tags="prn.tn.*"/>
       <cat-item tags="prn.pro.*"/>
     </def-cat>
-    
+
     <def-cat n="tn_itg_pos"><!--Aquí no hi entren els pronoms personals, caldrà fer-ne un xunc a part. -->
       <!--<cat-item tags="prn.tn.m.*"/>
       <cat-item tags="prn.tn.f.*"/>
@@ -108,7 +112,7 @@
       <cat-item tags="prn.itg.*"/>
       <cat-item tags="prn.pos.*"/>
     </def-cat>
-    
+
     <def-cat n="pos"><!-- pel tagger-->
       <cat-item tags="prn.pos.*"/>
     </def-cat>
@@ -184,7 +188,8 @@
     </def-cat>
 
     <def-cat n="haver">
-      <cat-item tags="vbhaver.*"/>
+      <cat-item lemma="avoir" tags="vbhaver.*"/>
+      <cat-item lemma="avoir" tags="vblex.*"/>
     </def-cat>
 
     <def-cat n="falloir">
@@ -407,7 +412,7 @@
     <def-cat n="advitg">
       <cat-item tags="adv.itg"/>
     </def-cat>
-    
+
     <def-cat n="plus">
       <cat-item lemma="plus" tags="adv"/>
       <cat-item lemma="plus" tags="preadv"/>
@@ -520,7 +525,7 @@
       <attr-item tags="acr"/>
     </def-attr>
 
-    <def-attr n="a_adj">          
+    <def-attr n="a_adj">
       <attr-item tags="adj"/>
       <attr-item tags="adj.sint"/>
       <attr-item tags="adj.sint.comp"/>
@@ -649,13 +654,15 @@
       <attr-item tags="pp"/><!-- ? -->
       <attr-item tags="pp2"/><!-- ? -->
       <attr-item tags="pp3"/><!-- ? -->
-      <attr-item tags="ger"/><!-- ? -->
-      <attr-item tags="gerpast"/><!-- ? -->
+      <attr-item tags="ger"/><!-- ante -->
+      <attr-item tags="gerpast"/><!-- inte -->
       <attr-item tags="inf"/><!-- ? -->
 
     </def-attr>
 
-
+    <def-attr n="a_det_le">
+      <attr-item tags="det.def.m.sg"/>
+    </def-attr>
 
     <def-attr n="neg">
       <attr-item tags="NEG"/>
@@ -704,7 +711,7 @@
     <list-item v="ne multe da"/>
     <list-item v="tiom da"/>
     </def-list>
-  
+
   <def-list n="qui"> <!-- BCN EO per marcar els que no poden anar en acc-->
     <list-item v="qui"/>
     </def-list>
@@ -788,7 +795,7 @@
 
 
   <section-def-macros>
-   
+
     <def-macro n="tipus_verbs" npar="1"> <!-- tots els verbs passen per aqui -->
       <choose>
         <when>
@@ -865,7 +872,7 @@
     </def-macro>
 
 
- 
+
 
     <def-macro n="f_bcond" npar="1"><!--Per mirar si el blanc conté o no format. Cal posar aquesta funció en les regles en què desaparegui alguna paraula, per tal de decidir si el blanc de la paraula eliminada s'ha d'eliminar o conservar. Si conté format cal conservar-la, si no en conté cal eliminar-la perquè no apareguin dos espais seguits. -->
       <choose>
@@ -881,7 +888,7 @@
 	  <out>
 	    <b pos="1"/>
 	  </out>
-	</when>     	    
+	</when>     	
       </choose>
     </def-macro>
 
@@ -1489,7 +1496,7 @@
 	      <tag><clip pos="1" side="sl" part="gen"/></tag>
 	      <tag><var n="nombre"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="whole"/>
 	    </lu>
 	  </chunk>
@@ -1523,7 +1530,7 @@
 	      <tag><var n="nombre"/></tag>
 	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <lit-tag v="np"/>
 	      <lit-tag v="loc"/>
@@ -1576,7 +1583,7 @@
 	      <tag><var n="nombre"/></tag>
 	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <lit-tag v="np"/>
 	      <lit-tag v="loc"/>
@@ -1625,7 +1632,7 @@
 	      <tag><var n="nombre"/></tag>
 	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lem"/>
 	      <lit-tag v="np"/>
 	      <lit-tag v="loc"/>
@@ -1671,7 +1678,7 @@
 	      <tag><clip pos="2" side="sl" part="nbr"/></tag>
 	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <lit-tag v="np"/>
 	      <lit-tag v="loc"/>
@@ -1697,7 +1704,7 @@
 	      <tag><clip pos="4" side="sl" part="nbr"/></tag>
 	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lem"/>
 	      <lit-tag v="np"/>
 	      <lit-tag v="loc"/>
@@ -1748,7 +1755,7 @@
 	      <tag><clip pos="2" side="sl" part="nbr"/></tag>
 	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <lit-tag v="np"/>
 	      <lit-tag v="loc"/>
@@ -1774,7 +1781,7 @@
 	      <tag><clip pos="5" side="sl" part="nbr"/></tag>
 	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="lem"/>
 	      <lit-tag v="np"/>
 	      <lit-tag v="loc"/>
@@ -1826,7 +1833,7 @@
 	      <tag><clip pos="3" side="sl" part="nbr"/></tag>
 	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lem"/>
 	      <lit-tag v="np"/>
 	      <lit-tag v="loc"/>
@@ -1852,7 +1859,7 @@
 	      <tag><clip pos="6" side="sl" part="nbr"/></tag>
 	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="6" side="tl" part="lem"/>
 	      <lit-tag v="np"/>
 	      <lit-tag v="loc"/>
@@ -1897,8 +1904,8 @@
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
-	    <b/>   
-	    <lu>   
+	    <b/>
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <lit-tag v="np"/>
 	      <lit-tag v="loc"/>
@@ -1944,7 +1951,7 @@
 	      <tag><clip pos="2" side="sl" part="nbr"/></tag>
 	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <lit-tag v="np"/>
 	      <lit-tag v="loc"/>
@@ -1970,7 +1977,7 @@
 	      <tag><clip pos="4" side="sl" part="nbr"/></tag>
 	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lem"/>
 	      <lit-tag v="np"/>
 	      <lit-tag v="loc"/>
@@ -2019,7 +2026,7 @@
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
@@ -2041,7 +2048,7 @@
             </lu>
 
 	    <b pos="3"/>
-	    <lu>     
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
               <clip pos="2" side="tl" part="gen"/>
@@ -2051,7 +2058,7 @@
 	    </lu>
 
 	  </chunk>
-	</out>	  
+	</out>	
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -2089,7 +2096,7 @@
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
@@ -2111,7 +2118,7 @@
             </lu>
 
 	  </chunk>
-	</out>	  
+	</out>	
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -2187,14 +2194,14 @@
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>     
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
               <clip pos="2" side="tl" part="gen"/>
@@ -2203,7 +2210,7 @@
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>	  
+	</out>	
      </otherwise>
       </choose>
 	<let>
@@ -2254,7 +2261,7 @@
               <lit-tag v="adv"/>
             </lu>
             <b/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
 	      <clip pos="2" side="tl" part="nbr"/>
@@ -2272,20 +2279,20 @@
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_num"/>
 	      <clip pos="2" side="tl" part="nbr"/>
 	    </lu>
 	  </chunk>
-	</out>	  
+	</out>	
      </otherwise>
       </choose>
 	<let>
@@ -2355,7 +2362,7 @@
               <lit-tag v="adv"/>
             </lu>
             <b/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
 	      <clip pos="2" side="tl" part="nbr"/>
@@ -2382,20 +2389,20 @@
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_num"/>
 	      <clip pos="2" side="tl" part="nbr"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>     
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
@@ -2404,7 +2411,7 @@
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>	  
+	</out>	
      </otherwise>
       </choose>
 	<let>
@@ -2454,7 +2461,7 @@
               <tag><var n="case"/></tag>
               <tag><var n="changecase"/></tag>
             </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
@@ -2482,21 +2489,21 @@
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>     
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
@@ -2505,7 +2512,7 @@
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>	  
+	</out>	
      </otherwise>
       </choose>
 	<let>
@@ -2542,7 +2549,7 @@
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -2550,7 +2557,7 @@
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -2559,7 +2566,7 @@
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -2605,7 +2612,7 @@
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -2613,7 +2620,7 @@
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
 	      <clip pos="3" side="tl" part="gen"/>
@@ -2622,7 +2629,7 @@
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
@@ -2634,14 +2641,14 @@
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -2649,7 +2656,7 @@
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
 	      <clip pos="3" side="tl" part="gen"/>
@@ -2658,7 +2665,7 @@
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
      </otherwise>
       </choose>
 	<let>
@@ -2712,7 +2719,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -2720,7 +2727,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -2729,7 +2736,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
@@ -2741,14 +2748,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -2756,7 +2763,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -2765,7 +2772,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
      </otherwise>
       </choose>
 	<let>
@@ -2821,7 +2828,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -2829,20 +2836,20 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
-	    </lu>       
+	    </lu>
 	    <b pos="2"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_nom"/>
 	      <clip pos="4" side="tl" part="gen"/>
@@ -2851,7 +2858,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
@@ -2863,14 +2870,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -2878,7 +2885,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -2887,11 +2894,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_nom"/>
 	      <clip pos="4" side="tl" part="gen"/>
@@ -2900,7 +2907,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
      </otherwise>
       </choose>
 	<let>
@@ -2956,7 +2963,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -2964,11 +2971,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -2976,16 +2983,16 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
-	    </lu>       
+	    </lu>
 	  </chunk>
-	</out>       
+	</out>
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
@@ -2997,14 +3004,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3012,11 +3019,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3024,7 +3031,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -3033,7 +3040,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
      </otherwise>
       </choose>
 	<let>
@@ -3091,7 +3098,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3099,11 +3106,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="5"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="6" side="tl" part="lemh"/>
 	      <clip pos="6" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3111,7 +3118,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="6" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3119,16 +3126,16 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
-	    </lu>       
+	    </lu>
 	  </chunk>
-	</out>       
+	</out>
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
@@ -3140,14 +3147,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3155,11 +3162,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="5"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="6" side="tl" part="lemh"/>
 	      <clip pos="6" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3167,7 +3174,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="6" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3175,7 +3182,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -3184,7 +3191,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
      </otherwise>
       </choose>
 	<let>
@@ -3242,7 +3249,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3250,11 +3257,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3262,11 +3269,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="5"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="6" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="6"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="7" side="tl" part="lemh"/>
 	      <clip pos="7" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3274,16 +3281,16 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="7" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
-	    </lu>       
+	    </lu>
 	  </chunk>
-	</out>       
+	</out>
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
@@ -3295,14 +3302,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3310,11 +3317,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3322,11 +3329,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="5"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="6" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="6"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="7" side="tl" part="lemh"/>
 	      <clip pos="7" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3334,7 +3341,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="7" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -3343,7 +3350,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
      </otherwise>
       </choose>
 	<let>
@@ -3398,7 +3405,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3406,26 +3413,26 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
-	    </lu>       
+	    </lu>
 	  </chunk>
-	</out>       
+	</out>
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
@@ -3437,14 +3444,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3452,17 +3459,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -3471,7 +3478,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
      </otherwise>
       </choose>
 	<let>
@@ -3528,7 +3535,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3536,17 +3543,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="5"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="6" side="tl" part="lemh"/>
 	      <clip pos="6" side="tl" part="a_adj"/>
 	      <clip pos="6" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3554,16 +3561,16 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
-	    </lu>       
+	    </lu>
 	  </chunk>
-	</out>       
+	</out>
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
@@ -3575,14 +3582,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3590,17 +3597,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="5"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="6" side="tl" part="lemh"/>
 	      <clip pos="6" side="tl" part="a_adj"/>
 	      <clip pos="6" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3608,7 +3615,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -3617,7 +3624,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
      </otherwise>
       </choose>
 	<let>
@@ -3674,7 +3681,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3682,11 +3689,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3694,26 +3701,26 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="5"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="6" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="6"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="7" side="tl" part="lemh"/>
 	      <clip pos="7" side="tl" part="a_adj"/>
 	      <clip pos="7" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
-	    </lu>       
+	    </lu>
 	  </chunk>
-	</out>       
+	</out>
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
@@ -3725,14 +3732,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3740,11 +3747,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -3752,17 +3759,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="5"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="6" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="6"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="7" side="tl" part="lemh"/>
 	      <clip pos="7" side="tl" part="a_adj"/>
 	      <clip pos="7" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -3771,7 +3778,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
      </otherwise>
       </choose>
 	<let>
@@ -3840,7 +3847,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <lit-tag v="adv"/>
             </lu>
             <b/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
 	      <clip pos="2" side="tl" part="nbr"/>
@@ -3875,14 +3882,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_num"/>
 	      <clip pos="2" side="tl" part="nbr"/>
@@ -3896,7 +3903,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="4" side="tl" part="lemq"/>
             </lu>
 	    <b pos="3"/>
-	    <lu>     
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
@@ -3905,7 +3912,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>	  
+	</out>	
      </otherwise>
       </choose>
 	<let>
@@ -3958,7 +3965,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <tag><var n="case"/></tag>
               <tag><var n="changecase"/></tag>
             </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
@@ -3994,7 +4001,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
               <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
@@ -4019,7 +4026,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
@@ -4034,7 +4041,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="4" side="tl" part="lemq"/>
             </lu>
 	    <b pos="2"/>
-	    <lu>     
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
@@ -4043,7 +4050,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>	  
+	</out>	
      </otherwise>
       </choose>
 	<let>
@@ -4093,11 +4100,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -4105,7 +4112,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>         
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -4114,7 +4121,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
   </when>
   <otherwise>
 	<out>
@@ -4126,18 +4133,18 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -4145,7 +4152,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>         
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -4154,7 +4161,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
      </otherwise>
       </choose>
 	<let>
@@ -4223,7 +4230,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <lit-tag v="adv"/>
             </lu>
             <b/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
 	      <clip pos="2" side="tl" part="nbr"/>
@@ -4262,20 +4269,20 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_num"/>
 	      <clip pos="2" side="tl" part="nbr"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>     
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
@@ -4296,7 +4303,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="5" side="tl" part="lemq"/>
             </lu>
 	  </chunk>
-	</out>	  
+	</out>	
      </otherwise>
       </choose>
 	<let>
@@ -4350,11 +4357,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -4362,11 +4369,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="6" side="tl" part="lemh"/>
 	      <clip pos="6" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -4374,7 +4381,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="6" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>         
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -4383,7 +4390,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
   </when>
   <otherwise>
 	<out>
@@ -4395,18 +4402,18 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -4414,11 +4421,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="6" side="tl" part="lemh"/>
 	      <clip pos="6" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -4426,7 +4433,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="6" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="5"/>
-	    <lu>         
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -4435,7 +4442,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
      </otherwise>
       </choose>
 	<let>
@@ -4487,7 +4494,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <tag><var n="nombre"/></tag>
 		  <tag><var n="case"/></tag>
 		</tags>
-		<lu>   
+		<lu>
 		  <clip pos="3" side="tl" part="lemh"/>
 		  <clip pos="3" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
@@ -4499,7 +4506,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <clip pos="4" side="tl" part="whole"/>
 		</lu>
 		<b pos="2"/>
-		<lu>   
+		<lu>
 		  <clip pos="5" side="tl" part="lemh"/>
 		  <clip pos="5" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
@@ -4507,7 +4514,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <clip pos="5" side="tl" part="lemq"/>
 		</lu>
 		<b pos="3"/>
-		<lu>       
+		<lu>
 		  <clip pos="2" side="tl" part="lemh"/>
 		  <clip pos="2" side="tl" part="a_nom"/>
 		  <clip pos="2" side="tl" part="gen"/>
@@ -4528,14 +4535,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <tag><var n="case"/></tag>
 		  <tag><var n="changecase"/></tag>
 		</tags>
-		<lu>   
+		<lu>
 		  <clip pos="1" side="tl" part="lem"/>
 		  <clip pos="1" side="tl" part="a_det"/>
 	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
 		</lu>
 		<b pos="1"/>
-		<lu>   
+		<lu>
 		  <clip pos="3" side="tl" part="lemh"/>
 		  <clip pos="3" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
@@ -4547,7 +4554,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <clip pos="4" side="tl" part="whole"/>
 		</lu>
 		<b pos="3"/>
-		<lu>   
+		<lu>
 		  <clip pos="5" side="tl" part="lemh"/>
 		  <clip pos="5" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
@@ -4555,7 +4562,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <clip pos="5" side="tl" part="lemq"/>
 		</lu>
 		<b pos="4"/>
-		<lu>       
+		<lu>
 		  <clip pos="2" side="tl" part="lemh"/>
 		  <clip pos="2" side="tl" part="a_nom"/>
 		  <clip pos="2" side="tl" part="gen"/>
@@ -4640,7 +4647,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               	<clip pos="2" side="tl" part="nbr"/>
             	</lu>
 		<b pos="1"/>
-		<lu>   
+		<lu>
 		  <clip pos="4" side="tl" part="lemh"/>
 		  <clip pos="4" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
@@ -4652,7 +4659,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <clip pos="5" side="tl" part="whole"/>
 		</lu>
 		<b pos="3"/>
-		<lu>   
+		<lu>
 		  <clip pos="6" side="tl" part="lemh"/>
 		  <clip pos="6" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
@@ -4660,7 +4667,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <clip pos="6" side="tl" part="lemq"/>
 		</lu>
 		<b pos="4"/>
-		<lu>       
+		<lu>
 		  <clip pos="3" side="tl" part="lemh"/>
 		  <clip pos="3" side="tl" part="a_nom"/>
 		  <clip pos="3" side="tl" part="gen"/>
@@ -4681,7 +4688,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <tag><var n="case"/></tag>
 		  <tag><var n="changecase"/></tag>
 		</tags>
-		<lu>   
+		<lu>
 		  <clip pos="1" side="tl" part="lem"/>
 		  <clip pos="1" side="tl" part="a_det"/>
 	          <lit-tag v="3"/>
@@ -4694,7 +4701,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               	<clip pos="2" side="tl" part="nbr"/>
             	</lu>
 		<b pos="2"/>
-		<lu>   
+		<lu>
 		  <clip pos="4" side="tl" part="lemh"/>
 		  <clip pos="4" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
@@ -4706,7 +4713,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <clip pos="5" side="tl" part="whole"/>
 		</lu>
 		<b pos="4"/>
-		<lu>   
+		<lu>
 		  <clip pos="6" side="tl" part="lemh"/>
 		  <clip pos="6" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
@@ -4714,7 +4721,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <clip pos="6" side="tl" part="lemq"/>
 		</lu>
 		<b pos="5"/>
-		<lu>       
+		<lu>
 		  <clip pos="3" side="tl" part="lemh"/>
 		  <clip pos="3" side="tl" part="a_nom"/>
 		  <clip pos="3" side="tl" part="gen"/>
@@ -4764,7 +4771,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -4772,7 +4779,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
 	      <clip pos="1" side="tl" part="gen"/>
@@ -4785,7 +4792,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="2" side="tl" part="whole"/>
             </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
 	      <clip pos="3" side="tl" part="gen"/>
@@ -4794,7 +4801,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -4831,7 +4838,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -4843,7 +4850,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="3" side="tl" part="whole"/>
             </lu>
 	    <b pos="3"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -4851,7 +4858,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
 	      <clip pos="1" side="tl" part="gen"/>
@@ -4860,7 +4867,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -4900,7 +4907,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -4912,7 +4919,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="4" side="tl" part="whole"/>
             </lu>
 	    <b pos="4"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -4920,7 +4927,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -4928,7 +4935,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
 	      <clip pos="1" side="tl" part="gen"/>
@@ -4937,7 +4944,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -4977,7 +4984,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -4989,7 +4996,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="3" side="tl" part="whole"/>
             </lu>
 	    <b pos="3"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5001,7 +5008,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="5" side="tl" part="whole"/>
             </lu>
 	    <b pos="5"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="6" side="tl" part="lemh"/>
 	      <clip pos="6" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5009,7 +5016,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="6" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
 	      <clip pos="1" side="tl" part="gen"/>
@@ -5018,7 +5025,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -5054,7 +5061,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5066,13 +5073,13 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="3" side="tl" part="whole"/>
             </lu>
 	    <b pos="3"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
 	      <clip pos="1" side="tl" part="gen"/>
@@ -5081,7 +5088,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -5120,7 +5127,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5132,13 +5139,13 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="4" side="tl" part="whole"/>
             </lu>
 	    <b pos="4"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5146,7 +5153,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
 	      <clip pos="1" side="tl" part="gen"/>
@@ -5155,7 +5162,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -5194,7 +5201,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5206,7 +5213,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="3" side="tl" part="whole"/>
             </lu>
 	    <b pos="3"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5218,13 +5225,13 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="5" side="tl" part="whole"/>
             </lu>
 	    <b pos="5"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="6" side="tl" part="lemh"/>
 	      <clip pos="6" side="tl" part="a_adj"/>
 	      <clip pos="6" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
 	      <clip pos="1" side="tl" part="gen"/>
@@ -5233,7 +5240,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -5268,7 +5275,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5276,7 +5283,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
 	      <clip pos="1" side="tl" part="gen"/>
@@ -5285,7 +5292,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -5334,7 +5341,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5342,7 +5349,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5350,7 +5357,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -5359,7 +5366,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
@@ -5371,14 +5378,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5386,7 +5393,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5394,7 +5401,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -5403,7 +5410,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
      </otherwise>
       </choose>
 	<let>
@@ -5455,7 +5462,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5463,7 +5470,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5471,7 +5478,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
 	      <clip pos="3" side="tl" part="gen"/>
@@ -5480,7 +5487,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
@@ -5492,14 +5499,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5507,7 +5514,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5515,7 +5522,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
 	      <clip pos="3" side="tl" part="gen"/>
@@ -5524,7 +5531,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
      </otherwise>
       </choose>
 	<let>
@@ -5565,7 +5572,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5573,7 +5580,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5581,7 +5588,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
 	      <clip pos="1" side="tl" part="gen"/>
@@ -5590,14 +5597,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
 	</let>
       </action>
     </rule>
-    
+
 
 <rule comment="REGLA: ADJ NOM ADJ (EO, sintagmes nominals sense especificadors)">
 <!-- sobre <pattern-item n="adjADJ"/> en comptes de <pattern-item n="adj"> veure comentari per a la regla DET NOM ADJ -->
@@ -5629,7 +5636,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5637,7 +5644,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5645,7 +5652,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -5654,14 +5661,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
 	</let>
       </action>
     </rule>
-    
+
 
 <rule comment="REGLA: NOM ADJ I ADJ (EO, sintagmes nominals sense especificadors)">
       <pattern>
@@ -5693,7 +5700,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5701,11 +5708,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5713,7 +5720,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
 	      <clip pos="1" side="tl" part="gen"/>
@@ -5722,7 +5729,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -5763,7 +5770,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5771,7 +5778,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5779,7 +5786,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5787,7 +5794,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
 	      <clip pos="1" side="tl" part="gen"/>
@@ -5796,14 +5803,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
 	</let>
       </action>
     </rule>
-    
+
 <rule comment="REGLA: DET NOM ADJ ADJ ADJ (les primeres eleccions municipals democràtiques -> la unuaj demokratiaj urbaj elektoj">
 <!-- sobre <pattern-item n="adjADJ"/> en comptes de <pattern-item n="adj"> veure comentari per a la regla DET NOM ADJ -->
       <pattern>
@@ -5847,7 +5854,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5855,7 +5862,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5863,7 +5870,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5871,7 +5878,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -5880,7 +5887,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
@@ -5892,14 +5899,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5907,7 +5914,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	    <b/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5915,7 +5922,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5923,7 +5930,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -5932,7 +5939,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
      </otherwise>
       </choose>
 	<let>
@@ -5977,7 +5984,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -5988,7 +5995,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="3" side="tl" part="whole"/>
             </lu>
 	    <b/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6000,7 +6007,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="5" side="tl" part="whole"/>
             </lu>
 	    <b/>
-	    <lu>   
+	    <lu>
 	      <clip pos="6" side="tl" part="lemh"/>
 	      <clip pos="6" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6008,7 +6015,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="6" side="tl" part="lemq"/>
 	    </lu>
 	    <b/>
-	    <lu>       
+	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_nom"/>
 	      <clip pos="1" side="tl" part="gen"/>
@@ -6017,14 +6024,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
 	</let>
       </action>
     </rule>
-    
+
 <rule comment="REGLA: DET NOM ADJ, ADJ I ADJ (els escriptors catalans, gallecs i bascos -> la katalunaj, galegaj kaj eŭskaj verkistoj)">
 <!-- sobre <pattern-item n="adjADJ"/> en comptes de <pattern-item n="adj"> veure comentari per a la regla DET NOM ADJ -->
       <pattern>
@@ -6070,7 +6077,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6081,7 +6088,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="4" side="tl" part="whole"/>
             </lu>
 	    <b/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6093,7 +6100,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="6" side="tl" part="whole"/>
             </lu>
 	    <b/>
-	    <lu>       
+	    <lu>
 	      <clip pos="7" side="tl" part="lemh"/>
 	      <clip pos="7" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6101,7 +6108,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="7" side="tl" part="lemq"/>
 	    </lu>
 	    <b/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -6110,7 +6117,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
@@ -6122,14 +6129,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6140,7 +6147,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="4" side="tl" part="whole"/>
             </lu>
 	    <b/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6152,7 +6159,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="6" side="tl" part="whole"/>
             </lu>
 	    <b/>
-	    <lu>   
+	    <lu>
 	      <clip pos="7" side="tl" part="lemh"/>
 	      <clip pos="7" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6160,7 +6167,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="7" side="tl" part="lemq"/>
 	    </lu>
 	    <b/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -6169,7 +6176,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
      </otherwise>
       </choose>
 	<let>
@@ -6223,7 +6230,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6231,7 +6238,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6239,7 +6246,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6247,7 +6254,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
 	      <clip pos="3" side="tl" part="gen"/>
@@ -6256,7 +6263,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
@@ -6268,14 +6275,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6283,7 +6290,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6291,7 +6298,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6299,7 +6306,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
 	      <clip pos="3" side="tl" part="gen"/>
@@ -6308,7 +6315,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
      </otherwise>
       </choose>
 	<let>
@@ -6362,7 +6369,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6370,7 +6377,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6382,7 +6389,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="5" side="tl" part="whole"/>
             </lu>
 	    <b pos="5"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="6" side="tl" part="lemh"/>
 	      <clip pos="6" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6390,7 +6397,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="6" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
 	      <clip pos="3" side="tl" part="gen"/>
@@ -6399,7 +6406,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
@@ -6411,14 +6418,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6426,7 +6433,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6438,7 +6445,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="5" side="tl" part="whole"/>
             </lu>
 	    <b pos="5"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="6" side="tl" part="lemh"/>
 	      <clip pos="6" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -6446,7 +6453,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="6" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
 	      <clip pos="3" side="tl" part="gen"/>
@@ -6455,7 +6462,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
      </otherwise>
       </choose>
 	<let>
@@ -6670,14 +6677,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>     
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
               <clip pos="2" side="tl" part="gen"/>
@@ -6686,7 +6693,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>	  
+	</out>	
      </otherwise>
       </choose>
 	<out>
@@ -6705,7 +6712,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                         </lu>
                         </chunk>
 
-	</out>	  
+	</out>	
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -6774,7 +6781,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <lit-tag v="adv"/>
             </lu>
             <b/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
 	      <clip pos="2" side="tl" part="nbr"/>
@@ -6801,20 +6808,20 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_num"/>
 	      <clip pos="2" side="tl" part="nbr"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>     
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
@@ -6823,7 +6830,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>	  
+	</out>	
      </otherwise>
       </choose>
 		<out>
@@ -6842,7 +6849,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                         </lu>
                         </chunk>
 
-	</out>	  
+	</out>	
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -6892,7 +6899,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <tag><var n="case"/></tag>
               <tag><var n="changecase"/></tag>
             </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
@@ -6920,21 +6927,21 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
               <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>     
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
@@ -6943,7 +6950,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>	  
+	</out>	
      </otherwise>
       </choose>
 	<out>
@@ -6961,7 +6968,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               		<lit-tag v="2"/>
                         </lu>
                         </chunk>
-	</out>	  
+	</out>	
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -7009,7 +7016,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -7017,7 +7024,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -7026,7 +7033,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
@@ -7038,14 +7045,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -7053,7 +7060,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>       
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -7062,7 +7069,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
      </otherwise>
       </choose>
 	<out>
@@ -7080,7 +7087,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               		<lit-tag v="2"/>
                         </lu>
                         </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -7147,7 +7154,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <lit-tag v="adv"/>
             </lu>
             <b/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
 	      <clip pos="2" side="tl" part="nbr"/>
@@ -7182,14 +7189,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_num"/>
 	      <clip pos="2" side="tl" part="nbr"/>
@@ -7203,7 +7210,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="4" side="tl" part="lemq"/>
             </lu>
 	    <b pos="3"/>
-	    <lu>     
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
@@ -7212,7 +7219,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>	  
+	</out>	
      </otherwise>
       </choose>
 	<out>
@@ -7230,7 +7237,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               		<lit-tag v="2"/>
                         </lu>
                         </chunk>
-	</out>	  
+	</out>	
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -7281,7 +7288,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <tag><var n="case"/></tag>
               <tag><var n="changecase"/></tag>
             </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
@@ -7317,7 +7324,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
               <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
@@ -7343,7 +7350,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
               <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
@@ -7358,7 +7365,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="4" side="tl" part="lemq"/>
             </lu>
 	    <b pos="2"/>
-	    <lu>     
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
@@ -7367,7 +7374,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>	  
+	</out>	
      </otherwise>
       </choose>
 	<out>
@@ -7385,7 +7392,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               		<lit-tag v="2"/>
                         </lu>
                         </chunk>
-	</out>	  
+	</out>	
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -7438,11 +7445,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -7450,7 +7457,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>         
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -7459,7 +7466,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
   </when>
   <otherwise>
 	<out>
@@ -7471,18 +7478,18 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="3" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -7490,7 +7497,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>         
+	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
 	      <clip pos="2" side="tl" part="gen"/>
@@ -7499,7 +7506,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
      </otherwise>
       </choose>
 	<out>
@@ -7517,7 +7524,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               		<lit-tag v="2"/>
                         </lu>
                         </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -7585,7 +7592,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <lit-tag v="adv"/>
             </lu>
             <b/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_det"/>
 	      <clip pos="2" side="tl" part="nbr"/>
@@ -7624,14 +7631,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
+	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_num"/>
 	      <clip pos="2" side="tl" part="nbr"/>
@@ -7649,7 +7656,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <clip pos="5" side="tl" part="lemq"/>
             </lu>
 	    <b pos="4"/>
-	    <lu>     
+	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
@@ -7658,7 +7665,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>	  
+	</out>	
      </otherwise>
       </choose>
 	<out>
@@ -7676,7 +7683,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               		<lit-tag v="2"/>
                         </lu>
                         </chunk>
-	</out>	  
+	</out>	
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -7727,7 +7734,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <tag><var n="nombre"/></tag>
 		  <tag><var n="case"/></tag>
 		</tags>
-		<lu>   
+		<lu>
 		  <clip pos="3" side="tl" part="lemh"/>
 		  <clip pos="3" side="tl" part="a_adj"/>
 		  <lit-tag v="4"/>
@@ -7739,7 +7746,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <clip pos="4" side="tl" part="whole"/>
 		</lu>
 		<b pos="2"/>
-		<lu>   
+		<lu>
 		  <clip pos="5" side="tl" part="lemh"/>
 		  <clip pos="5" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
@@ -7747,7 +7754,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <clip pos="5" side="tl" part="lemq"/>
 		</lu>
 		<b pos="3"/>
-		<lu>       
+		<lu>
 		  <clip pos="2" side="tl" part="lemh"/>
 		  <clip pos="2" side="tl" part="a_nom"/>
 		  <clip pos="2" side="tl" part="gen"/>
@@ -7768,14 +7775,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <tag><var n="case"/></tag>
 		  <tag><var n="changecase"/></tag>
 		</tags>
-		<lu>   
+		<lu>
 		  <clip pos="1" side="tl" part="lem"/>
 		  <clip pos="1" side="tl" part="a_det"/>
 	          <lit-tag v="3"/>
 		  <lit-tag v="4"/>
 		</lu>
 		<b pos="1"/>
-		<lu>   
+		<lu>
 		  <clip pos="3" side="tl" part="lemh"/>
 		  <clip pos="3" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
@@ -7787,7 +7794,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <clip pos="4" side="tl" part="whole"/>
 		</lu>
 		<b pos="3"/>
-		<lu>   
+		<lu>
 		  <clip pos="5" side="tl" part="lemh"/>
 		  <clip pos="5" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
@@ -7795,7 +7802,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <clip pos="5" side="tl" part="lemq"/>
 		</lu>
 		<b pos="4"/>
-		<lu>       
+		<lu>
 		  <clip pos="2" side="tl" part="lemh"/>
 		  <clip pos="2" side="tl" part="a_nom"/>
 		  <clip pos="2" side="tl" part="gen"/>
@@ -7897,7 +7904,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               	<clip pos="2" side="tl" part="nbr"/>
             	</lu>
 		<b pos="1"/>
-		<lu>   
+		<lu>
 		  <clip pos="4" side="tl" part="lemh"/>
 		  <clip pos="4" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
@@ -7909,7 +7916,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <clip pos="5" side="tl" part="whole"/>
 		</lu>
 		<b pos="3"/>
-		<lu>   
+		<lu>
 		  <clip pos="6" side="tl" part="lemh"/>
 		  <clip pos="6" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
@@ -7917,7 +7924,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <clip pos="6" side="tl" part="lemq"/>
 		</lu>
 		<b pos="4"/>
-		<lu>       
+		<lu>
 		  <clip pos="3" side="tl" part="lemh"/>
 		  <clip pos="3" side="tl" part="a_nom"/>
 		  <clip pos="3" side="tl" part="gen"/>
@@ -7938,7 +7945,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <tag><var n="case"/></tag>
 		  <tag><var n="changecase"/></tag>
 		</tags>
-		<lu>   
+		<lu>
 		  <clip pos="1" side="tl" part="lem"/>
 		  <clip pos="1" side="tl" part="a_det"/>
 	          <lit-tag v="3"/>
@@ -7951,7 +7958,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               	<clip pos="2" side="tl" part="nbr"/>
             	</lu>
 		<b pos="2"/>
-		<lu>   
+		<lu>
 		  <clip pos="4" side="tl" part="lemh"/>
 		  <clip pos="4" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
@@ -7963,7 +7970,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <clip pos="5" side="tl" part="whole"/>
 		</lu>
 		<b pos="4"/>
-		<lu>   
+		<lu>
 		  <clip pos="6" side="tl" part="lemh"/>
 		  <clip pos="6" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
@@ -7971,7 +7978,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <clip pos="6" side="tl" part="lemq"/>
 		</lu>
 		<b pos="5"/>
-		<lu>       
+		<lu>
 		  <clip pos="3" side="tl" part="lemh"/>
 		  <clip pos="3" side="tl" part="a_nom"/>
 		  <clip pos="3" side="tl" part="gen"/>
@@ -8048,7 +8055,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="sl" part="nbr"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <lit-tag v="vblex"/>
 	      <lit-tag v="pp"/>
@@ -8068,7 +8075,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="sl" part="nbr"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
@@ -8108,11 +8115,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <tag><clip pos="2" side="sl" part="nbr"/></tag>
 	          <tag><var n="case"/></tag>
 		</tags>
-		<lu>   
+		<lu>
 		  <clip pos="1" side="tl" part="whole"/>
 		</lu>
 		<b pos="1"/>
-		<lu>   
+		<lu>
 		  <clip pos="2" side="tl" part="lemh"/>
 		  <clip pos="2" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
@@ -8149,11 +8156,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <tag><clip pos="2" side="sl" part="nbr"/></tag>
 	          <tag><var n="case"/></tag>
 		</tags>
-		<lu>   
+		<lu>
 		  <clip pos="1" side="tl" part="whole"/>
 		</lu>
 		<b pos="1"/>
-		<lu>   
+		<lu>
 		  <clip pos="2" side="tl" part="lemh"/>
 		  <clip pos="2" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
@@ -8164,7 +8171,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		<lu>
               		<lit v="ol"/>
 			<lit-tag v="cnjcoo"/>
-		</lu>   
+		</lu>
 	      </chunk>
 	    </out>
 	<let>
@@ -8195,11 +8202,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <tag><clip pos="2" side="sl" part="nbr"/></tag>
 	          <tag><var n="case"/></tag>
 		</tags>
-		<lu>   
+		<lu>
 		  <clip pos="1" side="tl" part="whole"/>
 		</lu>
 		<b pos="1"/>
-		<lu>   
+		<lu>
 		  <clip pos="2" side="tl" part="lemh"/>
 		  <clip pos="2" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
@@ -8215,7 +8222,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		<lu>
 	          <lit v="ke"/>
                   <lit-tag v="cnjsub"/>
-		</lu>   
+		</lu>
 	      </chunk>
 	    </out>
 	<let>
@@ -8265,7 +8272,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="sl" part="nbr"/></tag>
 	      <tag><var n="case"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <lit-tag v="3"/>
@@ -8995,7 +9002,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 
     <rule comment="VERB conjugat + INF (voulait chanter -> volis kanti)">
       <pattern>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcj2"/>
 	<pattern-item n="inf"/>
       </pattern>
       <action>    	
@@ -9221,7 +9228,40 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                     </lu>
                   </chunk>
                 </out>
-          </when>
+              </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="1" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="2" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="2" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="pers"/></tag>
+                      <tag><clip pos="1" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="2" side="tl" part="lemh"/>
+                      <clip pos="2" side="tl" part="a_verb"/>
+                      <!-- <clip pos="2" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
+                      <lit-tag v="gerpast"/>
+                      <clip pos="2" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+
 	    <otherwise>
         <call-macro n="set_temps2">
           <with-param pos="1"/>
@@ -9258,7 +9298,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</choose>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>    
+	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -9327,6 +9367,50 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                   </chunk>
                 </out>
           </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="1" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="3" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+	          <chunk name="adv" case="caseFirstWord">
+	            <tags>
+	              <tag><clip pos="2" side="tl" part="a_adv"/></tag>
+	              <tag><clip pos="2" side="tl" part="neg"/></tag>
+	            </tags>
+	            <lu>
+	              <clip pos="2" side="tl" part="lem"/>
+	              <clip pos="2" side="tl" part="a_adv"/>
+	            </lu>
+	          </chunk>
+		  <b pos="2"/>
+                  <chunk name="verbger" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="3" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="3" side="tl" part="lemh"/>
+                      <clip pos="3" side="tl" part="a_verb"/>
+                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
+                      <lit-tag v="gerpast"/>
+                      <clip pos="3" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+
 	    <otherwise>
         <call-macro n="set_temps2">
           <with-param pos="1"/>
@@ -9374,7 +9458,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</choose>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>    
+	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -9467,7 +9551,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</choose>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>    
+	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -9583,7 +9667,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</choose>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>    
+	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -9682,7 +9766,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</choose>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>    
+	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -9797,7 +9881,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</choose>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>    
+	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -10092,9 +10176,9 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_verb"/>
-	      <clip pos="1" side="tl" part="temps" link-to="3"/>      
+	      <clip pos="1" side="tl" part="temps" link-to="3"/>
 	      <clip pos="1" side="tl" part="lemq"/>
-	    </lu>	  
+	    </lu>	
             <b pos="1"/>
              <lu>
               <clip pos="3" side="tl" part="lemh"/>
@@ -10120,9 +10204,9 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_verb"/>
-	      <clip pos="1" side="tl" part="temps" link-to="3"/>      
+	      <clip pos="1" side="tl" part="temps" link-to="3"/>
 	      <clip pos="1" side="tl" part="lemq"/>
-	    </lu>	  
+	    </lu>	
             <b pos="1"/>
              <lu>
               <clip pos="3" side="tl" part="lemh"/>
@@ -10171,9 +10255,9 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_verb"/>
-	      <clip pos="1" side="tl" part="temps" link-to="3"/>      
+	      <clip pos="1" side="tl" part="temps" link-to="3"/>
 	      <clip pos="1" side="tl" part="lemq"/>
-	    </lu>	  
+	    </lu>	
             <b pos="1"/>
              <lu>
               <clip pos="4" side="tl" part="lemh"/>
@@ -10272,7 +10356,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <lit-tag v="vblex.pp"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="1" side="tl" part="lemq"/>    
+	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
             <b pos="1"/> <!-- ŝanĝo al DE-->
             <lu>
@@ -10320,7 +10404,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <lit-tag v="nom"/>
-	      <clip pos="1" side="tl" part="lemq"/>    
+	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
 	</out>
@@ -10332,14 +10416,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
-    <rule comment="REGLA: VERBinf no conjugat (perquè posi bé la cua en multiparaules)">
+    <rule comment="REGLA: INF (perquè posi bé la cua en multiparaules)">
       <pattern>
 	<pattern-item n="inf"/>
       </pattern>
       <action>     	
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>     
+	</call-macro>
 	<out>
 	  <chunk name="inf" case="caseFirstWord">
 	    <tags>
@@ -10352,7 +10436,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="1" side="tl" part="a_verb"/>
 	      <clip pos="1" side="tl" part="sep"/>
 	      <clip pos="1" side="tl" part="temps" link-to="3"/>
-	      <clip pos="1" side="tl" part="lemq"/>    
+	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
 	</out>
@@ -10362,6 +10446,107 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</let>
       </action>
     </rule>
+
+    <rule comment="AVOIRinf + PP (avoir lu - esti leginta ) (EO)">
+      <pattern>
+	<pattern-item n="haverinf"/>
+	<pattern-item n="pp"/>
+      </pattern>
+      <action>
+        <call-macro n="tipus_verbs">
+          <with-param pos="2"/>
+        </call-macro>
+
+                <out>
+                  <chunk name="verbcj_perifB">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="2" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+		      <lit v="esti"/>
+                      <clip pos="1" side="tl" part="a_verb"/>
+                      <clip pos="1" side="tl" part="temps"/>
+                    </lu>
+		    <b pos="1"/>
+                    <lu>
+                      <clip pos="2" side="tl" part="lemh"/>
+                      <clip pos="2" side="tl" part="a_verb"/>
+                      <!-- <clip pos="2" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
+                      <lit-tag v="pp3"/>
+                      <clip pos="2" side="tl" part="nbr"/>
+                      <clip pos="2" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+    <rule comment="AVOIRinf + ADV + PP (avoir beaucoup lu - esti leginta ) (EO)">
+      <pattern>
+	<pattern-item n="haver"/>
+	<pattern-item n="adv"/>
+	<pattern-item n="pp"/>
+      </pattern>
+      <action>
+        <call-macro n="tipus_verbs">
+          <with-param pos="3"/>
+        </call-macro>
+
+                <out>
+	          <chunk name="adv" case="caseFirstWord">
+	            <tags>
+	              <tag><clip pos="1" side="tl" part="a_adv"/></tag>
+	            </tags>
+	            <lu>
+	              <clip pos="2" side="tl" part="lem"/>
+	              <clip pos="2" side="tl" part="a_adv"/>
+	            </lu>
+	          </chunk>
+		  <b pos="2"/>
+                  <chunk name="verbcj_perifA">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="3" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+		      <lit v="esti"/>
+                      <clip pos="1" side="tl" part="a_verb"/>
+                      <clip pos="1" side="tl" part="temps"/>
+                    </lu>
+		    <b pos="2"/>
+                    <lu>
+                      <clip pos="3" side="tl" part="lemh"/>
+                      <clip pos="3" side="tl" part="a_verb"/>
+                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
+                      <lit-tag v="pp3"/>
+                      <clip pos="3" side="tl" part="nbr"/>
+                      <clip pos="3" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: EN + VERBger (forigo de 'en': en parlant -> parolante)">
       <pattern>
@@ -10384,7 +10569,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="2" side="tl" part="a_verb"/>
 	      <clip pos="2" side="tl" part="sep"/>
 	      <clip pos="2" side="tl" part="temps"/>
-	      <clip pos="2" side="tl" part="lemq"/>    
+	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
 	</out>
@@ -10416,7 +10601,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="1" side="tl" part="a_verb"/>
 	      <clip pos="1" side="tl" part="sep"/>
 	      <clip pos="1" side="tl" part="temps"/>
-	      <clip pos="1" side="tl" part="lemq"/>    
+	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
 	</out>
@@ -10430,19 +10615,15 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 
    <!-- *** NEGACIONS *** -->
 
-    <rule comment="NE VERBinf PAS ( ne pas chanter -> ne kanti )">
+    <rule comment="NE PAS ( ne pas -> ne )">
       <pattern>
 	<pattern-item n="ne"/>
 	<pattern-item n="pas"/>
-	<pattern-item n="inf"/>
       </pattern>
       <action>    	
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
-        <call-macro n="tipus_verbs">
-          <with-param pos="3"/>
-        </call-macro>
 
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -10455,150 +10636,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <clip pos="1" side="tl" part="a_adv"/>
 	            </lu>
 	          </chunk>
-		  <b pos="1"/>
-                  <chunk name="verbcj">
-                    <tags>
-                      <tag><lit-tag v="SV"/></tag>
-                      <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="3" side="sl" part="temps"/></tag>
-                      <tag><var n="tipus_verb"/></tag>
-                      <tag><var n="tipus_verb2"/></tag>
-                    </tags>
-                    <lu>
-                      <clip pos="3" side="tl" part="lemh"/>
-                      <clip pos="3" side="tl" part="a_verb"/>
-                      <clip pos="3" side="tl" part="sep"/>
-                      <clip pos="3" side="tl" part="temps"/>
-                      <clip pos="3" side="tl" part="lemq"/>
-                    </lu>
-                  </chunk>
                 </out>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
         </let>
-      </action>
-    </rule>
-
-
-    <rule comment="NE VERBinf PAS + PP (ne pas avoir lu - ne esti leginta ) (EO)">
-      <pattern>
-	<pattern-item n="ne"/>
-	<pattern-item n="pas"/>
-	<pattern-item n="haverinf"/>
-	<pattern-item n="pp"/>
-      </pattern>
-      <action>
-        <call-macro n="tipus_verbs">
-          <with-param pos="4"/>
-        </call-macro>
-
-                <out>
-	          <chunk name="adv" case="caseFirstWord">
-	            <tags>
-	              <tag><clip pos="1" side="tl" part="a_adv"/></tag>
-	              <tag><clip pos="1" side="tl" part="neg"/></tag>
-	            </tags>
-	            <lu>
-	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv"/>
-	            </lu>
-	          </chunk>
-		  <b pos="1"/>
-                  <chunk name="verbcj_perifB">
-                    <tags>
-                      <tag><lit-tag v="SV"/></tag>
-                      <tag><clip pos="4" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="3" side="tl" part="temps"/></tag>
-                      <tag><var n="tipus_verb"/></tag>
-                    </tags>
-                    <lu>
-		      <lit v="esti"/>
-                      <clip pos="3" side="tl" part="a_verb"/>
-                      <clip pos="3" side="tl" part="temps"/>
-                    </lu>
-		    <b pos="3"/>
-                    <lu>
-                      <clip pos="4" side="tl" part="lemh"/>
-                      <clip pos="4" side="tl" part="a_verb"/>
-                      <!-- <clip pos="4" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="pp3"/>
-                      <clip pos="4" side="tl" part="nbr"/>
-                      <clip pos="4" side="tl" part="lemq"/>
-                    </lu>
-                  </chunk>
-                </out>
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
-	</call-macro>    
-	<let>
-	  <var n="caseFirstWord"/>
-	  <lit v="aa"/>
-	</let>
-      </action>
-    </rule>
-
-
-    <rule comment="NE VERBinf PAS + ADV + PP (ne pas pas avoir beaucoup lu - ne multe esti leginta ) (EO)">
-      <pattern>
-	<pattern-item n="ne"/>
-	<pattern-item n="pas"/>
-	<pattern-item n="haver"/>
-	<pattern-item n="adv"/>
-	<pattern-item n="pp"/>
-      </pattern>
-      <action>
-        <call-macro n="tipus_verbs">
-          <with-param pos="5"/>
-        </call-macro>
-
-                <out>
-	          <chunk name="adv" case="caseFirstWord">
-	            <tags>
-	              <tag><clip pos="1" side="tl" part="a_adv"/></tag>
-	              <tag><clip pos="1" side="tl" part="neg"/></tag>
-	            </tags>
-	            <lu>
-	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv"/>
-	            </lu>
-		  <b pos="1"/>
-	            <lu>
-	              <clip pos="4" side="tl" part="lem"/>
-	              <clip pos="4" side="tl" part="a_adv"/>
-	            </lu>
-	          </chunk>
-		  <b pos="2"/>
-                  <chunk name="verbcj_perifA">
-                    <tags>
-                      <tag><lit-tag v="SV"/></tag>
-                      <tag><clip pos="5" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="3" side="tl" part="temps"/></tag>
-                      <tag><var n="tipus_verb"/></tag>
-                    </tags>
-                    <lu>
-		      <lit v="esti"/>
-                      <clip pos="3" side="tl" part="a_verb"/>
-                      <clip pos="3" side="tl" part="temps"/>
-                    </lu>
-		    <b pos="2"/>
-                    <lu>
-                      <clip pos="5" side="tl" part="lemh"/>
-                      <clip pos="5" side="tl" part="a_verb"/>
-                      <!-- <clip pos="5" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="pp3"/>
-                      <clip pos="5" side="tl" part="nbr"/>
-                      <clip pos="5" side="tl" part="lemq"/>
-                    </lu>
-                  </chunk>
-                </out>
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
-	</call-macro>    
-	<let>
-	  <var n="caseFirstWord"/>
-	  <lit v="aa"/>
-	</let>
       </action>
     </rule>
 
@@ -10767,7 +10809,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</choose>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>    
+	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -10895,7 +10937,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</choose>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>    
+	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -11011,7 +11053,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</choose>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>    
+	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -11123,7 +11165,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         </out>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>    
+	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -11250,7 +11292,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</choose>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>    
+	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -11261,7 +11303,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 
 
 
-    <rule comment="NE PRN VERBconj PAS ( ne le chante pas -> ne kantas ĝin )">
+    <rule comment="NE PRON VERBconj PAS ( ne le chante pas -> ne kantas ĝin )">
       <pattern>
 	<pattern-item n="ne"/>
 	<pattern-item n="tn_pro"/>
@@ -11343,7 +11385,74 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
-    <rule comment="NE PRN VERBhaver PAS + PP (ne l'a pas lu - ne legis ĝin ; es tradueix per passat) (EO)">
+    <rule comment="NE DET VERBconj PAS ( ne le chante pas -> ne kantas ĝin )">
+      <pattern>
+	<pattern-item n="ne"/>
+	<pattern-item n="le"/> <!-- ERROR en tagger -->
+	<pattern-item n="verbcj"/>
+	<pattern-item n="pas"/>
+      </pattern>
+      <action>    	
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+        <call-macro n="tipus_verbs">
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="set_temps">
+          <with-param pos="3"/>
+        </call-macro>
+
+                <out>
+	          <chunk name="adv" case="caseFirstWord">
+	            <tags>
+	              <tag><clip pos="1" side="tl" part="a_adv"/></tag>
+	              <tag><clip pos="1" side="tl" part="neg"/></tag>
+	            </tags>
+	            <lu>
+	              <clip pos="1" side="tl" part="lem"/>
+	              <clip pos="1" side="tl" part="a_adv"/>
+	            </lu>
+	          </chunk>
+		  <b pos="2"/>
+                  <chunk name="verbcj">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="3" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="3" side="sl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="pers"/></tag>
+                      <tag><clip pos="3" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                      <tag><var n="tipus_verb2"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="3" side="tl" part="lemh"/>
+                      <clip pos="3" side="tl" part="a_verb"/>
+                      <clip pos="3" side="tl" part="sep"/>
+                      <clip pos="3" side="tl" part="temps"/>
+                      <clip pos="3" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+		  <b pos="1"/>
+	  <chunk name="prn_nosubj">
+	    <tags>
+	      <tag><lit-tag v="SN.nt.sg.acc"/></tag>
+	    </tags>
+	    <lu>
+	      <lit v="prpers"/>
+	      <lit-tag v="prn.obj.p3.2.3"/>
+	    </lu>
+	  </chunk>
+                </out>
+        <let>
+          <var n="caseFirstWord"/>
+          <lit v="aa"/>
+        </let>
+      </action>
+    </rule>
+
+
+    <rule comment="NE PRON VERBhaver PAS + PP (ne l'a pas lu - ne legis ĝin ; es tradueix per passat) (EO)">
       <pattern>
 	<pattern-item n="ne"/>
 	<pattern-item n="tn_pro"/>
@@ -11494,7 +11603,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</choose>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>    
+	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -11503,7 +11612,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
-    <rule comment="NE PRN VERBhaver PAS + ADV + PP (ne l'a pas beaucoup lu - ne multe legis ĝin ; es tradueix per passat) (EO)">
+    <rule comment="NE PRON VERBhaver PAS + ADV + PP (ne l'a pas beaucoup lu - ne multe legis ĝin ; es tradueix per passat) (EO)">
       <pattern>
 	<pattern-item n="ne"/>
 	<pattern-item n="tn_pro"/>
@@ -11665,7 +11774,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</choose>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>    
+	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -11674,7 +11783,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
-    <rule comment="NE PRN VERBser PAS + PP-ser (n'y est pas venu - ne venis tie ; es tradueix per passat) (EO)">
+    <rule comment="NE PRON VERBser PAS + PP-ser (n'y est pas venu - ne venis tie ; es tradueix per passat) (EO)">
       <pattern>
 	<pattern-item n="ne"/>
 	<pattern-item n="tn_pro"/>
@@ -11825,7 +11934,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</choose>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>    
+	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -11834,7 +11943,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
-    <rule comment="NE PRN VERBser PAS + ADV + PP-ser (n'y est pas beaucoup venu - ne multe venis tie ; es tradueix per passat) (EO)">
+    <rule comment="NE PRON VERBser PAS + ADV + PP-ser (n'y est pas beaucoup venu - ne multe venis tie ; es tradueix per passat) (EO)">
       <pattern>
 	<pattern-item n="ne"/>
 	<pattern-item n="tn_pro"/>
@@ -11996,7 +12105,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</choose>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
-	</call-macro>    
+	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -12210,7 +12319,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
-    <rule comment="NE PRN VERBconj PAS ( ne lui chante pas -> ne kantas al li)">
+    <rule comment="NE PRON VERBconj PAS ( ne lui chante pas -> ne kantas al li)">
       <pattern>
 	<pattern-item n="ne"/>
 	<pattern-item n="tn_pro"/>
@@ -12525,7 +12634,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       </action>
     </rule>
 
-    <rule comment="PRN personal">
+    <rule comment="PRON personal">
       <pattern>
 	<pattern-item n="prpers"/>
       </pattern>
@@ -12542,7 +12651,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="tl" part="gen"/></tag>
 	      <tag><clip pos="1" side="tl" part="nbr"/></tag>
 	    </tags>
-	    <lu>   
+	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_prn"/>
 	      <clip pos="1" side="tl" part="tipus_prn" link-to="2"/>
@@ -12558,7 +12667,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</let>
       </action>
     </rule>
-    
+
 
  <rule comment="CNJ">
       <pattern>
@@ -12672,7 +12781,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  </equal>
 		</or>
 	      </not>
-	    </test>	      
+	    </test>	
 	    <let>
 	      <var n="EOS"/>
 	      <lit v="true"/>
@@ -12692,7 +12801,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       </action>
     </rule>
 
-    
+
     <rule> <!-- REGLA: sent_coma (hem afegit regla per a la coma per al pro-drop (no l'incloem a l'anterior per no fer el reset de variables EO))-->
       <pattern>
 	<pattern-item n="sent_coma"/>
