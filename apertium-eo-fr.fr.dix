@@ -88,30 +88,46 @@
   </sdefs>
   <pardefs>
 <pardef n="ordinales">
-<e>       <re>([0-9]*[02-9]1|1)</re><p><l>er</l><r>er<s n="num"/><s n="ord"/><s n="m"/><s n="sg"/></r></p></e>
-
-<e>       <re>([0-9]*[02-9]1|1)</re><p><l>re</l><r>re<s n="num"/><s n="ord"/><s n="f"/><s n="sg"/></r></p></e>
-
-<e>       <re>([0-9]*[02-9]1|1)</re><p><l>ers</l><r>er<s n="num"/><s n="ord"/><s n="m"/><s n="pl"/></r></p></e>
-
-<e>       <re>([0-9]*[02-9]1|1)</re><p><l>res</l><r>re<s n="num"/><s n="ord"/><s n="f"/><s n="pl"/></r></p></e>
-
-<e>       <re>([0-9]*[02-9]2|2)</re><p><l>d</l><r>d<s n="num"/><s n="ord"/><s n="m"/><s n="sg"/></r></p></e>
-
-<e>       <re>([0-9]*[02-9]2|2)</re><p><l>de</l><r>de<s n="num"/><s n="ord"/><s n="f"/><s n="sg"/></r></p></e>
-
-<e>       <re>([0-9]*[02-9]2|2)</re><p><l>ds</l><r>d<s n="num"/><s n="ord"/><s n="m"/><s n="pl"/></r></p></e>
-
-<e>       <re>([0-9]*[02-9]2|2)</re><p><l>des</l><r>de<s n="num"/><s n="ord"/><s n="f"/><s n="pl"/></r></p></e>
-
-<e>       <re>([0-9]*[02-9]3|3)</re><p><l>e</l><r>e<s n="num"/><s n="ord"/><s n="m"/><s n="sg"/></r></p></e>
-
-<e>       <re>([0-9]*[02-9]3|3)</re><p><l>e</l><r>e<s n="num"/><s n="ord"/><s n="f"/><s n="sg"/></r></p></e>
-
-<e>       <re>([0-9]*[02-9]3|3)</re><p><l>es</l><r>e<s n="num"/><s n="ord"/><s n="m"/><s n="pl"/></r></p></e>
-
-<e>       <re>([0-9]*[02-9]3|3)</re><p><l>es</l><r>e<s n="num"/><s n="ord"/><s n="f"/><s n="pl"/></r></p></e>
-
+<e>       <re>([0-9]*[02-9]1|1)</re><p><l>er</l><r>e<s n="num"/><s n="ord"/><s n="m"/><s n="sg"/></r></p></e>
+<e>       <re>([0-9]*[02-9]1|1)</re><p><l>re</l><r>e<s n="num"/><s n="ord"/><s n="f"/><s n="sg"/></r></p></e>
+<e>       <re>([0-9]*[02-9]1|1)</re><p><l>ers</l><r>e<s n="num"/><s n="ord"/><s n="m"/><s n="pl"/></r></p></e>
+<e>       <re>([0-9]*[02-9]1|1)</re><p><l>res</l><r>e<s n="num"/><s n="ord"/><s n="f"/><s n="pl"/></r></p></e>
+<e>       <re>([0-9]*[02-9]2|2)</re><p><l>d</l><r>e<s n="num"/><s n="ord"/><s n="m"/><s n="sg"/></r></p></e>
+<e>       <re>([0-9]*[02-9]2|2)</re><p><l>de</l><r>e<s n="num"/><s n="ord"/><s n="f"/><s n="sg"/></r></p></e>
+<e>       <re>([0-9]*[02-9]2|2)</re><p><l>ds</l><r>e<s n="num"/><s n="ord"/><s n="m"/><s n="pl"/></r></p></e>
+<e>       <re>([0-9]*[02-9]2|2)</re><p><l>des</l><r>e<s n="num"/><s n="ord"/><s n="f"/><s n="pl"/></r></p></e>
+<e r="LR"><re>([0-9]*[02-9]2|2)</re><p><l>nd</l><r>e<s n="num"/><s n="ord"/><s n="m"/><s n="sg"/></r></p></e>
+<e r="LR"><re>([0-9]*[02-9]2|2)</re><p><l>nde</l><r>e<s n="num"/><s n="ord"/><s n="f"/><s n="sg"/></r></p></e>
+<e r="LR"><re>([0-9]*[02-9]2|2)</re><p><l>nds</l><r>e<s n="num"/><s n="ord"/><s n="m"/><s n="pl"/></r></p></e>
+<e r="LR"><re>([0-9]*[02-9]2|2)</re><p><l>ndes</l><r>e<s n="num"/><s n="ord"/><s n="f"/><s n="pl"/></r></p></e>
+<e>       <re>([0-9]*[02-9]3|3)</re><p><l>e</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="sg"/></r></p></e>
+<e>       <re>([0-9]*[02-9]3|3)</re><p><l>es</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="pl"/></r></p></e>
+<e>       <re>([0-9]*[02-9]4|4)</re><p><l>e</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="sg"/></r></p></e>
+<e>       <re>([0-9]*[02-9]4|4)</re><p><l>es</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="pl"/></r></p></e>
+<e>       <re>([0-9]*[02-9]5|5)</re><p><l>e</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="sg"/></r></p></e>
+<e>       <re>([0-9]*[02-9]5|5)</re><p><l>es</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="pl"/></r></p></e>
+<e>       <re>([0-9]*[02-9]6|6)</re><p><l>e</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="sg"/></r></p></e>
+<e>       <re>([0-9]*[02-9]6|6)</re><p><l>es</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="pl"/></r></p></e>
+<e>       <re>([0-9]*[02-9]7|7)</re><p><l>e</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="sg"/></r></p></e>
+<e>       <re>([0-9]*[02-9]7|7)</re><p><l>es</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="pl"/></r></p></e>
+<e>       <re>([0-9]*[02-9]8|8)</re><p><l>e</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="sg"/></r></p></e>
+<e>       <re>([0-9]*[02-9]8|8)</re><p><l>es</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="pl"/></r></p></e>
+<e>       <re>([0-9]*[02-9]9|9)</re><p><l>e</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="sg"/></r></p></e>
+<e>       <re>([0-9]*[02-9]9|9)</re><p><l>es</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="pl"/></r></p></e>
+<e r="LR"><re>([0-9]*[02-9]3|3)</re><p><l>ème</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="sg"/></r></p></e>
+<e r="LR"><re>([0-9]*[02-9]3|3)</re><p><l>èmes</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="pl"/></r></p></e>
+<e r="LR"><re>([0-9]*[02-9]4|4)</re><p><l>ème</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="sg"/></r></p></e>
+<e r="LR"><re>([0-9]*[02-9]4|4)</re><p><l>èmes</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="pl"/></r></p></e>
+<e r="LR"><re>([0-9]*[02-9]5|5)</re><p><l>ème</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="sg"/></r></p></e>
+<e r="LR"><re>([0-9]*[02-9]5|5)</re><p><l>èmes</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="pl"/></r></p></e>
+<e r="LR"><re>([0-9]*[02-9]6|6)</re><p><l>ème</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="sg"/></r></p></e>
+<e r="LR"><re>([0-9]*[02-9]6|6)</re><p><l>èmes</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="pl"/></r></p></e>
+<e r="LR"><re>([0-9]*[02-9]7|7)</re><p><l>ème</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="sg"/></r></p></e>
+<e r="LR"><re>([0-9]*[02-9]7|7)</re><p><l>èmes</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="pl"/></r></p></e>
+<e r="LR"><re>([0-9]*[02-9]8|8)</re><p><l>ème</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="sg"/></r></p></e>
+<e r="LR"><re>([0-9]*[02-9]8|8)</re><p><l>èmes</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="pl"/></r></p></e>
+<e r="LR"><re>([0-9]*[02-9]9|9)</re><p><l>ème</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="sg"/></r></p></e>
+<e r="LR"><re>([0-9]*[02-9]9|9)</re><p><l>èmes</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="pl"/></r></p></e>
 </pardef>
 <pardef n="urls">
 <e>       <re>(((www.)|(http://))[a-z0-9\-]+([.][a-z]+)+(/[a-z0-9_]+)*([.][a-z]+)*)</re><p><l></l><r><s n="num"/></r></p></e>
@@ -7767,8 +7783,6 @@
 <pardef n="lui__prn">
 <e>       <p><l></l>          <r><s n="prn"/><s n="pro"/><s n="p3"/><s n="mf"/><s n="sg"/></r></p></e>
 
-<e>       <p><l></l>          <r><s n="prn"/><s n="tn"/><s n="p3"/><s n="m"/><s n="sg"/></r></p></e>
-
 </pardef>
 
 <pardef n="prn-même__prn">
@@ -11853,6 +11867,7 @@
 <e lm="Turquie">                                  <i>Turquie</i><par n="Andorre__np"/></e>
 <e lm="Ukraine">                                  <i>Ukraine</i><par n="Andorre__np"/></e>
 <e lm="Yougoslavie">                              <i>Yougoslavie</i><par n="Andorre__np"/></e>
+<e r="LR" lm="Éthiopie">                            <p><l>Ethiopie</l>              <r>Éthiopie</r></p><par n="Andorre__np"/></e>
 <e lm="Éthiopie">                                 <i>Éthiopie</i><par n="Andorre__np"/></e>
 <e lm="Afghanistan">                              <i>Afghanistan</i><par n="Andorre__np"/></e>
 <e lm="Amsterdam">                                <i>Amsterdam</i><par n="Andorre__np"/></e>
@@ -11898,7 +11913,9 @@
 <e lm="Vatican">                                  <i>Vatican</i><par n="Andorre__np"/></e>
 <e lm="Venezuela">                                <i>Venezuela</i><par n="Andorre__np"/></e>
 <e lm="Viêtnam">                                  <i>Viêtnam</i><par n="Andorre__np"/></e>
+<e r="LR" lm="Égypte">                            <p><l>Egypte</l>              <r>Égypte</r></p><par n="Andorre__np"/></e>
 <e lm="Égypte">                                   <i>Égypte</i><par n="Andorre__np"/></e>
+<e r="LR" lm="Équateur">                            <p><l>Equateur</l>              <r>Équateur</r></p><par n="Andorre__np"/></e>
 <e lm="Équateur">                                 <i>Équateur</i><par n="Andorre__np"/></e>
 <e lm="Asturies">                                 <i>Asturies</i><par n="Baléares__np"/></e>
 <e lm="Baléares">                                 <i>Baléares</i><par n="Baléares__np"/></e>
@@ -13107,8 +13124,8 @@
 <e lm="dater">                                    <i>dat</i><par n="abaiss/er__vblex"/></e>
 <e lm="davantage">                                <i>davantage</i><par n="hier__adv"/></e>
 <e lm="tellement">                                <i>tellement</i><par n="arrière__adj"/></e>
-<e lm="beaucoup de">                              <i>beaucoup<b/>de</i><par n="contde__pr"/></e>
-<e lm="peu de">                              <i>peu<b/>de</i><par n="contde__pr"/></e>
+<e lm="beaucoup de">                              <i>beaucoup<b/></i><par n="contde__pr"/></e>
+<e lm="peu de">                              <i>peu<b/></i><par n="contde__pr"/></e>
 <e lm="de">                                       <par n="contde__pr"/></e>
 <e lm="degré">                                    <i>degré</i><par n="accessoire__n"/></e>
 <e lm="dehors">                                   <i>dehors</i><par n="hier__adv"/></e>
@@ -14332,7 +14349,7 @@
 <e r="RL" lm="lorsque">                           <p><l><a/>lorsque</l>         <r>lorsque<s n="cnjadv"/></r></p></e>
 <e lm="louer">                                    <i>lou</i><par n="abaiss/er__vblex"/></e>
 <e lm="loup">                                     <i>loup</i><par n="accessoire__n"/></e>
-<e lm="luire">                                    <i>lu</i><par n="lu/i[]re__vblex"/></e>
+<!-- <e lm="luire">                                    <i>lu</i><par n="lu/i[]re__vblex"/></e> trop da problèmes avec "lui" -->
 <e lm="luisant">                                  <i>luisant</i><par n="abaissant__adj"/></e>
 <e lm="lumière">                                  <i>lumière</i><par n="abeille__n"/></e>
 <e lm="lundi">                                    <i>lundi</i><par n="accessoire__n"/></e>
@@ -16151,6 +16168,9 @@
 <e lm="trahison">                                 <i>trahison</i><par n="abeille__n"/></e>
 <e lm="train">                                    <i>train</i><par n="accessoire__n"/></e>
 <e lm="traitement">                               <i>traitement</i><par n="accessoire__n"/></e>
+<e lm="sous-traitance">                           <i>sous-traitance</i><par n="abeille__n"/></e>
+<e lm="sous-traitant">                            <i>sous-traitant</i><par n="africain__n"/></e>
+<e lm="sous-traiter">                             <i>sous-trait</i><par n="abaiss/er__vblex"/></e>
 <e lm="traité">                                   <i>traité</i><par n="accessoire__n"/></e>
 <e lm="trajectoire">                              <i>trajectoire</i><par n="abeille__n"/></e>
 <e lm="trajet">                                   <i>trajet</i><par n="accessoire__n"/></e>
@@ -16396,6 +16416,7 @@
 <e r="LR" lm="les États-Unis">                    <p><l>les<b/>États-Unis</l>   <r>les<b/>États-Unis</r></p><par n="Andorre__np"/></e>
 <e r="RL" lm="les États-Unis">                    <p><l><a/>les<b/>États-Unis</l><r>les<b/>États-Unis</r></p><par n="Andorre__np"/></e>
 <e r="LR" lm="Éthiopie">                          <p><l>Ethiopie</l>            <r>Éthiopie</r></p><par n="Andorre__np"/></e>
+<!-- eblas trakti nur per reguloj por kompreni, ĉu temas pri poseda pronomo aŭ ne
 <e lm="à moi">                                    <i>à<b/>moi</i><par n="à_moi__adj"/></e>
 <e lm="à toi">                                    <i>à<b/>toi</i><par n="à_moi__adj"/></e>
 <e lm="à lui">                                    <i>à<b/>lui</i><par n="à_moi__adj"/></e>
@@ -16405,6 +16426,7 @@
 <e lm="à eux">                                    <i>à<b/>eux</i><par n="à_moi__adj"/></e>
 <e lm="à elles">                                  <i>à<b/>elles</i><par n="à_moi__adj"/></e>
 <e lm="à soi">                                    <i>à<b/>soi</i><par n="à_moi__adj"/></e>
+-->
 <e lm="à">                                        <i></i><par n="conta__pr"/></e>
 <!--
 <e r="LR" lm="à">        <i>à</i><par n="attendu__pr"/></e>
@@ -16503,6 +16525,7 @@
 <e r="LR" lm="église">                            <p><l>Eglise</l>              <r>église</r></p><par n="abeille__n"/></e>
 <e lm="église">                                   <i>église</i><par n="abeille__n"/></e>
 <e lm="égyptien">                                 <i>égyptien</i><par n="ancien__adj"/></e>
+<e r="LR" lm="Égyptien">                            <p><l>Egyptien</l>              <r>Égyptien</r></p><par n="Andorre__np"/></e>
 <e lm="Égyptien">                                 <i>Égyptien</i><par n="ancien__n"/></e>
 <e r="LR" lm="élan">                              <p><l>Elan</l>                <r>élan</r></p><par n="accessoire__n"/></e>
 <e lm="élan">                                     <i>élan</i><par n="accessoire__n"/></e>
@@ -18345,6 +18368,7 @@
 <e lm="tactique" a="webform">                     <i>tactique</i><par n="académique__adj"/></e>
 <e lm="tardif" a="webform">                       <i>tardi</i><par n="affirmati/f__adj"/></e>
 <e lm="technique" a="webform">                    <i>technique</i><par n="académique__adj"/></e>
+<e lm="techniquement">                            <i>techniquement</i><par n="hier__adv"/></e>
 <e lm="technologique" a="webform">                <i>technologique</i><par n="académique__adj"/></e>
 <e lm="téméraire" a="webform">                    <i>téméraire</i><par n="académique__adj"/></e>
 <e lm="terminal" a="webform">                     <i>termina</i><par n="amica/l__adj"/></e>
@@ -18937,7 +18961,6 @@
 <e lm="facultatif" a="eleka">                     <i>facultati</i><par n="affirmati/f__adj"/></e>
 <e lm="natif" a="eleka">                          <i>nati</i><par n="affirmati/f__adj"/></e>
 <e lm="natif">                          <i>nati</i><par n="jui/f__n"/></e>
-<e lm="noël" a="eleka">                           <i>noël</i><par n="mois__n"/></e>
 <e lm="contingent" a="eleka">                     <i>contingent</i><par n="accessoire__n"/></e>
 <e lm="Belfast" a="eleka">                        <i>Belfast</i><par n="Andorre__np"/></e>
 <e lm="Berne" a="eleka">                          <i>Berne</i><par n="Andorre__np"/></e>
@@ -19701,15 +19724,19 @@
 <e lm="complainte" a="eleka">                     <i>complainte</i><par n="abeille__n"/></e>
 <e lm="ego" a="eleka">                            <i>ego</i><par n="accessoire__n"/></e>
 <e lm="Arabie Saoudite" a="eleka">                <i>Arabie<b/>Saoudite</i><par n="Andorre__np"/></e>
-<e lm="Guinée-Équatorale" a="eleka">              <i>Guinée-Équatorale</i><par n="Andorre__np"/></e>
+<e r="LR" lm="Guinée Équatoriale">                <p><l>Guinée<b/>Equatoriale</l>              <r>Guinée<b/>Équatoriale</r></p><par n="Andorre__np"/></e>
+<e lm="Guinée Équatoriale" a="eleka">             <i>Guinée<b/>Équatoriale</i><par n="Andorre__np"/></e>
+<e lm="Guinée-Bissau" a="eleka">                  <i>Guinée-Bissau</i><par n="Andorre__np"/></e>
 <e lm="Kazakhstan" a="eleka">                     <i>Kazakhstan</i><par n="Andorre__np"/></e>
 <e lm="Kirghizistan" a="eleka">                   <i>Kirghizistan</i><par n="Andorre__np"/></e>
 <e lm="Cambogde" a="eleka">                       <i>Cambogde</i><par n="Andorre__np"/></e>
 <e lm="Corée du Nord" a="eleka">                  <i>Corée<b/>du<b/>Nord</i><par n="Andorre__np"/></e>
 <e lm="Corée du Sud" a="eleka">                   <i>Corée<b/>du<b/>Sud</i><par n="Andorre__np"/></e>
 <e lm="Namibie" a="eleka">                        <i>Namibie</i><par n="Andorre__np"/></e>
-<e r="LR" lm="Equateur" a="eleka">                <i>Equateur</i><par n="Andorre__np"/></e>
-<e r="LR" lm="Érythrée" a="eleka">                <i>Érythrée</i><par n="Andorre__np"/></e>
+<e r="LR" lm="Équateur">                            <p><l>Equateur</l>              <r>Équateur</r></p><par n="Andorre__np"/></e>
+<e lm="Équateur">                <i>Équateur</i><par n="Andorre__np"/></e>
+<e r="LR" lm="Érythrée">                            <p><l>Erythrée</l>              <r>Érythrée</r></p><par n="Andorre__np"/></e>
+<e lm="Érythrée" a="eleka">                <i>Érythrée</i><par n="Andorre__np"/></e>
 <e lm="Saint-Marin" a="eleka">                    <i>Saint-Marin</i><par n="Andorre__np"/></e>
 <e lm="Tadjikistan" a="eleka">                    <i>Tadjikistan</i><par n="Andorre__np"/></e>
 <e lm="République tchèque" a="eleka">             <i>République<b/>tchèque</i><par n="Andorre__np"/></e>
@@ -19779,6 +19806,8 @@
 <e lm="serbo-croate">                          <i>serbo-croate</i><par n="académique__adj"/></e>
 <e lm="Albanais">                          <i>Albanais</i><par n="admis__n"/></e>
 <e lm="albanais">                          <i>albanais</i><par n="anglais__adj"/></e>
+<e lm="Mongol">                          <i>Mongol</i><par n="africain__n"/></e>
+<e lm="mongol">                          <i>mongol</i><par n="abaissant__adj"/></e>
 <e lm="pair" a="eleka">                           <i>pair</i><par n="abaissant__adj"/></e>
 <e lm="pair">                           <i>pair</i><par n="accessoire__n"/></e>
 <e lm="païen">                           <i>païen</i><par n="ancien__n"/></e>
@@ -20137,7 +20166,7 @@
 <e lm="acclamation">                              <i>acclamation</i><par n="abeille__n"/></e>
 <e lm="accommodement" a="paradigme_auto">         <i>accommodement</i><par n="accessoire__n"/></e>
 <e lm="accompagnateur">                           <i>accompagnat</i><par n="administrat/eur__n"/></e>
-<e lm="accompagné de">                            <i>accompagné<b/>de</i><par n="contde__pr"/></e>
+<e lm="accompagné de">                            <i>accompagné<b/></i><par n="contde__pr"/></e>
 <e lm="accompli">                                 <i>accompli</i><par n="abaissant__adj"/></e>
 <e lm="accomplir">                                <i>accompl</i><par n="about/[]ir__vblex__"/></e>
 <e lm="accorder pour" a="groupe_cree_auto">       <i>accord</i><par n="abaiss/er__vblex"/><p><l><b/>pour</l><r><g><b/>pour</g></r></p></e>
@@ -20187,13 +20216,13 @@
 <e lm="acné">                                     <i>acné</i><par n="abeille__n"/></e>
 <e lm="à colombage" a="paradigme_auto">           <i>à<b/>colombage</i><par n="arrière__adj"/></e>
 <e lm="acolyte">                                  <i>acolyte</i><par n="accessoire__n"/></e>
-<e lm="à compter de">                             <i>à<b/>compter<b/>de</i><par n="contde__pr"/></e>
+<e lm="à compter de">                             <i>à<b/>compter<b/></i><par n="contde__pr"/></e>
 <e lm="à condition que" a="paradigme_auto">       <i>à<b/>condition<b/>que</i><par n="hier__adv"/></e>
 <e lm="aconit">                                   <i>aconit</i><par n="accessoire__n"/></e>
 <e lm="à contre-cœur" a="paradigme_auto">         <i>à<b/>contre-cœur</i><par n="hier__adv"/></e>
 <e lm="à contre-courant" a="paradigme_auto">      <i>à<b/>contre-courant</i><par n="hier__adv"/></e>
 <e lm="à-côté">                <i>à-côté</i><par n="accessoire__n"/></e>
-<e lm="à côté de">                                <i>à<b/>côté<b/>de</i><par n="contde__pr"/></e>
+<e lm="à côté de">                                <i>à<b/>côté<b/></i><par n="contde__pr"/></e>
 <e lm="acquéreur">                                <i>acquére</i><par n="acquére/ur__n"/></e>
 <e lm="acre">                  <i>acre</i><par n="abeille__n"/></e>
 <e lm="à crédit">                                 <i>à<b/>crédit</i><par n="hier__adv"/></e>
@@ -20258,7 +20287,7 @@
 <e lm="Adolphe">                                  <i>Adolphe</i><par n="Abraham__np"/></e>
 <e lm="adoucir">                                  <i>adouc</i><par n="about/[]ir__vblex"/></e>
 <e lm="adoucissement" a="paradigme_auto">         <i>adoucissement</i><par n="accessoire__n"/></e>
-<e lm="à droite de">                              <i>à<b/>droite<b/>de</i><par n="contde__pr"/></e>
+<e lm="à droite de">                              <i>à<b/>droite<b/></i><par n="contde__pr"/></e>
 <e lm="à droite">                                 <i>à<b/>droite</i><par n="hier__adv"/></e>
 <e lm="adroit">                                   <i>adroit</i><par n="abaissant__adj"/></e>
 <e lm="aduler" a="paradigme_auto">                <i>adul</i><par n="abaiss/er__vblex"/></e>
@@ -20316,7 +20345,7 @@
 <e lm="agaric">                                   <i>agaric</i><par n="accessoire__n"/></e>
 <e lm="agate">                 <i>agate</i><par n="abeille__n"/></e>
 <e lm="agathe">                 <i>agathe</i><par n="abeille__n"/></e>
-<e lm="à gauche de">                              <i>à<b/>gauche<b/>de</i><par n="contde__pr"/></e>
+<e lm="à gauche de">                              <i>à<b/>gauche<b/></i><par n="contde__pr"/></e>
 <e lm="à gauche">                                 <i>à<b/>gauche</i><par n="hier__adv"/></e>
 <e lm="agave" a="paradigme_auto">                 <i>agave</i><par n="abeille__n"/></e>
 <e lm="à gaz" a="paradigme_auto">                 <i>à<b/>gaz</i><par n="arrière__adj"/></e>
@@ -20419,8 +20448,8 @@
 <e lm="Acadien">                                  <i>Acadien</i><par n="ancien__n"/></e>
 <e lm="acadien">                                  <i>acadien</i><par n="ancien__adj"/></e>
 <e lm="à la dérobée" a="paradigme_auto">          <i>à<b/>la<b/>dérobée</i><par n="hier__adv"/></e>
-<e lm="à la différence de">                       <i>à<b/>la<b/>différence<b/>de</i><par n="contde__pr"/></e>
-<e lm="à la faveur de">                           <i>à<b/>la<b/>faveur<b/>de</i><par n="contde__pr"/></e>
+<e lm="à la différence de">                       <i>à<b/>la<b/>différence<b/></i><par n="contde__pr"/></e>
+<e lm="à la faveur de">                           <i>à<b/>la<b/>faveur<b/></i><par n="contde__pr"/></e>
 <e lm="à la fin de">                              <i>à<b/>la<b/>fin<b/></i><par n="contde__pr"/></e>
 <e lm="Alain">                                    <i>Alain</i><par n="Abraham__np"/></e>
 <e lm="à la lettre" a="paradigme_auto">           <i>à<b/>la<b/>lettre</i><par n="hier__adv"/></e>
@@ -20463,7 +20492,7 @@
 <e lm="aléatoire">                                <i>aléatoire</i><par n="académique__adj"/></e>
 <e lm="alène" a="paradigme_auto">                 <i>alène</i><par n="abeille__n"/></e>
 <e lm="alentour" a="paradigme_auto">              <i>alentour</i><par n="hier__adv"/></e>
-<e lm="alentour de">                              <i>alentour<b/>de</i><par n="contde__pr"/></e>
+<e lm="alentour de">                              <i>alentour<b/></i><par n="contde__pr"/></e>
 <e lm="à l'envers" a="paradigme_auto">            <i>à<b/>l'envers</i><par n="hier__adv"/></e>
 <e lm="à l'envie" a="paradigme_auto">             <i>à<b/>l'envie</i><par n="hier__adv"/></e>
 <e lm="Aléoute">               <i>Aléoute</i><par n="abeille__n"/></e>
@@ -20472,14 +20501,14 @@
 <e lm="aléser" a="paradigme_auto">                <i>alés</i><par n="abaiss/er__vblex"/></e>
 <e lm="alésoir">                                  <i>alésoir</i><par n="accessoire__n"/></e>
 <e lm="à l'est" a="paradigme_auto">               <i>à<b/>l'est</i><par n="hier__adv"/></e>
-<e lm="à l'est de">                               <i>à<b/>l'est<b/>de</i><par n="contde__pr"/></e>
+<e lm="à l'est de">                               <i>à<b/>l'est<b/></i><par n="contde__pr"/></e>
 <e lm="à l'évidence" a="paradigme_auto">          <i>à<b/>l'évidence</i><par n="hier__adv"/></e>
 <e lm="alevins" a="paradigme_auto">               <i>alevins</i><par n="mois__n"/></e>
 <e lm="Alexandre">                                <i>Alexandre</i><par n="Abraham__np"/></e>
 <e lm="Alexandre le grand">                       <i>Alexandre<b/>le<b/>grand</i><par n="Abraham__np"/></e>
 <e lm="Alexandrie">                               <i>Alexandrie</i><par n="Andorre__np"/></e>
 <e lm="à l'extérieur" a="paradigme_auto">         <i>à<b/>l'extérieur</i><par n="hier__adv"/></e>
-<e lm="à l'extérieur de">                         <i>à<b/>l'extérieur<b/>de</i><par n="contde__pr"/></e>
+<e lm="à l'extérieur de">                         <i>à<b/>l'extérieur<b/></i><par n="contde__pr"/></e>
 <e lm="alfa">                                     <i>alfa</i><par n="accessoire__n"/></e>
 <e lm="alfénide" a="paradigme_auto">              <i>alfénide</i><par n="abeille__n"/></e>
 <e lm="Alfred">                                   <i>Alfred</i><par n="Abraham__np"/></e>
@@ -20496,11 +20525,11 @@
 <e lm="alimentation de base" a="groupe_cree_auto"><i>alimentation</i><par n="abeille__n"/><p><l><b/>de<b/>base</l><r><g><b/>de<b/>base</g></r></p></e>
 <e lm="à l'improviste" a="paradigme_auto">        <i>à<b/>l'improviste</i><par n="hier__adv"/></e>
 <e lm="à l'instar de">                            <i>à<b/>l'instar<b/></i><par n="contde__pr"/></e>
-<e lm="à l'intérieur de">                         <i>à<b/>l'intérieur<b/>de</i><par n="contde__pr"/></e>
+<e lm="à l'intérieur de">                         <i>à<b/>l'intérieur<b/></i><par n="contde__pr"/></e>
 <e lm="alise" a="paradigme_auto">                 <i>alise</i><par n="abeille__n"/></e>
 <e lm="alisier">                                  <i>alisier</i><par n="accessoire__n"/></e>
 <e lm="alizier">                                  <i>alizier</i><par n="accessoire__n"/></e>
-<e lm="à l'issue de">                             <i>à<b/>l'issue<b/>de</i><par n="contde__pr"/></e>
+<e lm="à l'issue de">                             <i>à<b/>l'issue<b/></i><par n="contde__pr"/></e>
 <e lm="allant à pas de loup" a="groupe_cree_auto"><i>allant</i><par n="abaissant__adj"/><p><l><b/>à<b/>pas<b/>de<b/>loup</l><r><g><b/>à<b/>pas<b/>de<b/>loup</g></r></p></e>
 <e lm="alléchant" a="paradigme_auto">             <i>alléchant</i><par n="abaissant__adj"/></e>
 <e lm="allécher" a="paradigme_auto">              <i>alléch</i><par n="abaiss/er__vblex"/></e>
@@ -20524,7 +20553,7 @@
 <e lm="aller">                                    <i></i><par n="/aller__vblex"/></e>
 <e lm="aller son chemin" a="groupe_cree_auto">    <i></i><par n="/aller__vblex"/><p><l><b/>son<b/>chemin</l><r><g><b/>son<b/>chemin</g></r></p></e>
 <e lm="allié">                                    <i>allié</i><par n="africain__n"/></e>
-<e lm="allié">                                    <i>allié</i><par n="académique__adj"/></e>
+<e lm="allié">                                    <i>allié</i><par n="abaissant__adj"/></e>
 <e lm="alligator">                                <i>alligator</i><par n="accessoire__n"/></e>
 <e lm="alligatoridés" a="paradigme_auto">         <i>alligatoridés</i><par n="gens__n"/></e>
 <e lm="allitération">                             <i>allitération</i><par n="abeille__n"/></e>
@@ -20539,7 +20568,7 @@
 <e lm="alopécie" a="paradigme_auto">              <i>alopécie</i><par n="abeille__n"/></e>
 <e lm="alors que">                                <i>alors<b/>que</i><par n="afin_que__cnjadv"/></e>
 <e lm="alose" a="paradigme_auto">                 <i>alose</i><par n="abeille__n"/></e>
-<e lm="à l'ouest de">                             <i>à<b/>l'ouest<b/>de</i><par n="contde__pr"/></e>
+<e lm="à l'ouest de">                             <i>à<b/>l'ouest<b/></i><par n="contde__pr"/></e>
 <e lm="alourdir">                                 <i>alourd</i><par n="about/[]ir__vblex"/></e>
 <e lm="alpaca">                                   <i>alpaca</i><par n="accessoire__n"/></e>
 <e lm="alpaga">                                   <i>alpaga</i><par n="accessoire__n"/></e>
@@ -20890,7 +20919,7 @@
 <e lm="araignée de mer" a="groupe_cree_auto">     <i>araignée</i><par n="abeille__n"/><p><l><b/>de<b/>mer</l><r><g><b/>de<b/>mer</g></r></p></e>
 <e lm="araignée-loup"> <p><l>araignée-loup</l> <r>araignée-loup</r></p> <par n="alma_mater__n"/></e>
 <e lm="araignée-loup"> <p><l>araignées-loups</l> <r>araignée-loup</r></p> <par n="vacances__n"/></e>
-<e lm="à raison de">                              <i>à<b/>raison<b/>de</i><par n="contde__pr"/></e>
+<e lm="à raison de">                              <i>à<b/>raison<b/></i><par n="contde__pr"/></e>
 <e lm="araliacées">                               <i>araliacées</i><par n="vacances__n"/></e>
 <e lm="araucaria">                                <i>araucaria</i><par n="accessoire__n"/></e>
 <e lm="arbalète">                                 <i>arbalète</i><par n="abeille__n"/></e>
@@ -21186,22 +21215,22 @@
 <e lm="aubépine" a="paradigme_auto">              <i>aubépine</i><par n="abeille__n"/></e>
 <e lm="aubier">                                   <i>aubier</i><par n="accessoire__n"/></e>
 <e lm="au bon moment">                            <i>au<b/>bon<b/>moment</i><par n="hier__adv"/></e>
-<e lm="au commencement de">                       <i>au<b/>commencement<b/>de</i><par n="contde__pr"/></e>
+<e lm="au commencement de">                       <i>au<b/>commencement<b/></i><par n="contde__pr"/></e>
 <e lm="au contraire" a="paradigme_auto">          <i>au<b/>contraire</i><par n="hier__adv"/></e>
 <e lm="audace">                                   <i>audace</i><par n="abeille__n"/></e>
-<e lm="au début de">                              <i>au<b/>début<b/>de</i><par n="contde__pr"/></e>
-<e lm="au dehors de">                             <i>au<b/>dehors<b/>de</i><par n="contde__pr"/></e>
-<e lm="au-delà de">                               <i>au-delà<b/>de</i><par n="contde__pr"/></e>
+<e lm="au début de">                              <i>au<b/>début<b/></i><par n="contde__pr"/></e>
+<e lm="au dehors de">                             <i>au<b/>dehors<b/></i><par n="contde__pr"/></e>
+<e lm="au-delà de">                               <i>au-delà<b/></i><par n="contde__pr"/></e>
 <e lm="au-delà">                                  <i>au-delà</i><par n="hier__adv"/></e>
 <e lm="au dessus">                                <i>au<b/>dessus</i><par n="hier__adv"/></e>
 <e lm="au détail">                                <i>au<b/>détail</i><par n="hier__adv"/></e>
-<e lm="au devant de">                             <i>au<b/>devant<b/>de</i><par n="contde__pr"/></e>
+<e lm="au devant de">                             <i>au<b/>devant<b/></i><par n="contde__pr"/></e>
 <e lm="auditif" a="paradigme_auto">               <i>auditi</i><par n="affirmati/f__adj"/></e>
 <e lm="auditorium" a="paradigme_auto">            <i>auditorium</i><par n="accessoire__n"/></e>
 <e lm="au fil de l'eau" a="paradigme_auto">       <i>au<b/>fil<b/>de<b/>l'eau</i><par n="hier__adv"/></e>
 <e lm="au final" a="paradigme_auto">              <i>au<b/>final</i><par n="hier__adv"/></e>
 <e lm="au fond" a="paradigme_auto">               <i>au<b/>fond</i><par n="hier__adv"/></e>
-<e lm="au fond de">                               <i>au<b/>fond<b/>de</i><par n="contde__pr"/></e>
+<e lm="au fond de">                               <i>au<b/>fond<b/></i><par n="contde__pr"/></e>
 <e lm="au galop">                                 <i>au<b/>galop</i><par n="hier__adv"/></e>
 <e lm="auge">                                     <i>auge</i><par n="abeille__n"/></e>
 <e lm="augure">                                   <i>augure</i><par n="accessoire__n"/></e>
@@ -21212,18 +21241,18 @@
 <e lm="aulne" a="paradigme_auto">                 <i>aulne</i><par n="abeille__n"/></e>
 <e lm="au loin">                                  <i>au<b/>loin</i><par n="hier__adv"/></e>
 <e lm="au moment où">                             <i>au<b/>moment<b/>où</i><par n="afin_que__cnjadv"/></e>
-<e lm="au moyen de">                              <i>au<b/>moyen<b/>de</i><par n="contde__pr"/></e>
+<e lm="au moyen de">                              <i>au<b/>moyen<b/></i><par n="contde__pr"/></e>
 <e lm="à un argument" a="paradigme_auto">         <i>à<b/>un<b/>argument</i><par n="arrière__adj"/></e>
-<e lm="au nom de">                                <i>au<b/>nom<b/>de</i><par n="contde__pr"/></e>
-<e lm="au nord de">                               <i>au<b/>nord<b/>de</i><par n="contde__pr"/></e>
-<e lm="au nord-est de">                               <i>au<b/>nord-est<b/>de</i><par n="contde__pr"/></e>
-<e lm="au nord-ouest de">                               <i>au<b/>nord-ouest<b/>de</i><par n="contde__pr"/></e>
+<e lm="au nom de">                                <i>au<b/>nom<b/></i><par n="contde__pr"/></e>
+<e lm="au nord de">                               <i>au<b/>nord<b/></i><par n="contde__pr"/></e>
+<e lm="au nord-est de">                               <i>au<b/>nord-est<b/></i><par n="contde__pr"/></e>
+<e lm="au nord-ouest de">                               <i>au<b/>nord-ouest<b/></i><par n="contde__pr"/></e>
 <e lm="à un plus haut degré" a="paradigme_auto">  <i>à<b/>un<b/>plus<b/>haut<b/>degré</i><par n="hier__adv"/></e>
-<e lm="au pied de">                               <i>au<b/>pied<b/>de</i><par n="contde__pr"/></e>
+<e lm="au pied de">                               <i>au<b/>pied<b/></i><par n="contde__pr"/></e>
 <e lm="au premier chef" a="paradigme_auto">       <i>au<b/>premier<b/>chef</i><par n="hier__adv"/></e>
-<e lm="auprès de">                                <i>auprès<b/>de</i><par n="contde__pr"/></e>
-<e lm="au prix de">                               <i>au<b/>prix<b/>de</i><par n="contde__pr"/></e>
-<e lm="au rebours de">                            <i>au<b/>rebours<b/>de</i><par n="contde__pr"/></e>
+<e lm="auprès de">                                <i>auprès<b/></i><par n="contde__pr"/></e>
+<e lm="au prix de">                               <i>au<b/>prix<b/></i><par n="contde__pr"/></e>
+<e lm="au rebours de">                            <i>au<b/>rebours<b/></i><par n="contde__pr"/></e>
 <e lm="Aurélien">                                 <i>Aurélien</i><par n="Abraham__np"/></e>
 <e lm="auréole" a="paradigme_auto">               <i>auréole</i><par n="abeille__n"/></e>
 <e lm="au reste" a="paradigme_auto">              <i>au<b/>reste</i><par n="hier__adv"/></e>
@@ -21239,9 +21268,9 @@
 <e lm="auspicieux" a="paradigme_auto">            <i>auspicieu</i><par n="affectueu/x__adj"/></e>
 <e lm="austral">                                  <i>austral</i><par n="abaissant__adj"/></e>
 <e lm="australopithèque" a="paradigme_auto">      <i>australopithèque</i><par n="abeille__n"/></e>
-<e lm="au sud de">                                <i>au<b/>sud<b/>de</i><par n="contde__pr"/></e>
-<e lm="au sud-est de">                                <i>au<b/>sud-est<b/>de</i><par n="contde__pr"/></e>
-<e lm="au sud-ouest de">                                <i>au<b/>sud-ouest<b/>de</i><par n="contde__pr"/></e>
+<e lm="au sud de">                                <i>au<b/>sud<b/></i><par n="contde__pr"/></e>
+<e lm="au sud-est de">                                <i>au<b/>sud-est<b/></i><par n="contde__pr"/></e>
+<e lm="au sud-ouest de">                                <i>au<b/>sud-ouest<b/></i><par n="contde__pr"/></e>
 <e lm="autant que">                               <i>autant<b/>que</i><par n="afin_que__cnjadv"/></e>
 <e lm="autant que possible" a="paradigme_auto">   <i>autant<b/>que<b/>possible</i><par n="hier__adv"/></e>
 <e lm="autarcie" a="paradigme_auto">              <i>autarcie</i><par n="abeille__n"/></e>
@@ -21278,15 +21307,15 @@
 <e lm="autrement dit">                            <i>autrement<b/>dit</i><par n="hier__adv"/></e>
 <e lm="autrement">                                <i>autrement</i><par n="hier__adv"/></e>
 <e lm="autruche">                                 <i>autruche</i><par n="abeille__n"/></e>
-<e lm="au voisinage de">                          <i>au<b/>voisinage<b/>de</i><par n="contde__pr"/></e>
+<e lm="au voisinage de">                          <i>au<b/>voisinage<b/></i><par n="contde__pr"/></e>
 <e lm="au vol" a="paradigme_auto">                <i>au<b/>vol</i><par n="hier__adv"/></e>
 <e lm="aux alentours">                         <i>aux<b/>alentours</i><par n="hier__adv"/></e>
 <e lm="aux environs">                          <i>aux<b/>environs</i><par n="hier__adv"/></e>
-<e lm="aux alentours de">                         <i>aux<b/>alentours<b/>de</i><par n="contde__pr"/></e>
-<e lm="aux côtés de">                             <i>aux<b/>côtés<b/>de</i><par n="contde__pr"/></e>
-<e lm="aux environs de">                          <i>aux<b/>environs<b/>de</i><par n="contde__pr"/></e>
+<e lm="aux alentours de">                         <i>aux<b/>alentours<b/></i><par n="contde__pr"/></e>
+<e lm="aux côtés de">                             <i>aux<b/>côtés<b/></i><par n="contde__pr"/></e>
+<e lm="aux environs de">                          <i>aux<b/>environs<b/></i><par n="contde__pr"/></e>
 <e lm="auxiliaire de vente" a="groupe_cree_auto"> <i>auxiliaire</i><par n="artiste__n"/><p><l><b/>de<b/>vente</l><r><g><b/>de<b/>vente</g></r></p></e>
-<e lm="aux pieds de">                             <i>aux<b/>pieds<b/>de</i><par n="contde__pr"/></e>
+<e lm="aux pieds de">                             <i>aux<b/>pieds<b/></i><par n="contde__pr"/></e>
 <e lm="avaler">                                   <i>aval</i><par n="abaiss/er__vblex"/></e>
 <e lm="Avalokitesvara">                           <i>Avalokitesvara</i><par n="Abraham__np"/></e>
 <e lm="avantageusement" a="paradigme_auto">       <i>avantageusement</i><par n="hier__adv"/></e>
@@ -21378,6 +21407,7 @@
 <e lm="avoir pitié" a="groupe_cree_auto">         <i></i><par n="/avoir__vblex"/><p><l><b/>pitié</l><r><g><b/>pitié</g></r></p></e>
 <e lm="avoir pitié de" a="groupe_cree_auto">      <i></i><par n="/avoir__vblex"/><p><l><b/>pitié<b/>de</l><r><g><b/>pitié<b/>de</g></r></p></e>
 <e lm="avoir pour but" a="groupe_cree_auto">      <i></i><par n="/avoir__vblex"/><p><l><b/>pour<b/>but</l><r><g><b/>pour<b/>but</g></r></p></e>
+<e lm="avoir pour but de" a="groupe_cree_auto">      <i></i><par n="/avoir__vblex"/><p><l><b/>pour<b/>but<b/>de</l><r><g><b/>pour<b/>but<b/>de</g></r></p></e>
 <e lm="avoir pour objectif" a="groupe_cree_auto"> <i></i><par n="/avoir__vblex"/><p><l><b/>pour<b/>objectif</l><r><g><b/>pour<b/>objectif</g></r></p></e>
 <e lm="avoir pour origine" a="groupe_cree_auto">  <i></i><par n="/avoir__vblex"/><p><l><b/>pour<b/>origine</l><r><g><b/>pour<b/>origine</g></r></p></e>
 <e lm="avoir pour partenaire" a="groupe_cree_auto"><i></i><par n="/avoir__vblex"/><p><l><b/>pour<b/>partenaire</l><r><g><b/>pour<b/>partenaire</g></r></p></e>
@@ -23369,6 +23399,7 @@
 <e lm="compagnon d'armes" a="groupe_cree_auto">   <i>compagnon</i><par n="accessoire__n"/><p><l><b/>d'armes</l><r><g><b/>d'armes</g></r></p></e>
 <e lm="comparatif">                               <i>comparati</i><par n="accessoire__n"/></e>
 <e lm="comparatif">                               <i>comparati</i><par n="affirmati/f__adj"/></e>
+<e lm="comparable">                               <i>comparable</i><par n="académique__adj"/></e>
 <e lm="comparativement à">                        <i>comparativement<b/></i><par n="conta__pr"/></e>
 <e lm="comparé à">                                <i>comparé<b/></i><par n="conta__pr"/></e>
 <e lm="comparse" a="paradigme_auto">              <i>comparse</i><par n="abeille__n"/></e>
@@ -24066,9 +24097,9 @@
 <e lm="danseur">                                  <i>danseu</i><par n="causeu/r__n"/></e>
 <e lm="danseuse" a="paradigme_auto">              <i>danseuse</i><par n="abeille__n"/></e>
 <e lm="dans la quantité que">                     <i>dans<b/>la<b/>quantité<b/>que</i><par n="afin_que__cnjadv"/></e>
-<e lm="dans la mesure de" a="paradigme_auto">     <i>dans<b/>la<b/>mesure<b/>de</i><par n="contde__pr"/></e>
+<e lm="dans la mesure de" a="paradigme_auto">     <i>dans<b/>la<b/>mesure<b/></i><par n="contde__pr"/></e>
 <e lm="dans le cadre de">                         <i>dans<b/>le<b/>cadre<b/></i><par n="contde__pr"/></e>
-<e lm="dans le dos de">                           <i>dans<b/>le<b/>dos<b/>de</i><par n="contde__pr"/></e>
+<e lm="dans le dos de">                           <i>dans<b/>le<b/>dos<b/></i><par n="contde__pr"/></e>
 <e lm="dans le sens contraire des aiguilles d'une montre" a="paradigme_auto"><i>dans<b/>le<b/>sens<b/>contraire<b/>des<b/>aiguilles<b/>d'une<b/>montre</i><par n="arrière__adj"/></e>
 <e lm="dans le sens des aiguilles d'une montre" a="paradigme_auto"><i>dans<b/>le<b/>sens<b/>des<b/>aiguilles<b/>d'une<b/>montre</i><par n="arrière__adj"/></e>
 <e lm="dans son genre" a="paradigme_auto">        <i>dans<b/>son<b/>genre</i><par n="arrière__adj"/></e>
@@ -24337,7 +24368,7 @@
 <e lm="de la façon que">                          <i>de<b/>la<b/>façon<b/>que</i><par n="afin_que__cnjadv"/></e>
 <e lm="de la manière que">                        <i>de<b/>la<b/>manière<b/>que</i><par n="afin_que__cnjadv"/></e>
 <e lm="de la manière suivante" a="paradigme_auto"><i>de<b/>la<b/>manière<b/>suivante</i><par n="hier__adv"/></e>
-<e lm="de la part de">                            <i>de<b/>la<b/>part<b/>de</i><par n="contde__pr"/></e>
+<e lm="de la part de">                            <i>de<b/>la<b/>part<b/></i><par n="contde__pr"/></e>
 <e lm="de Laplace" a="paradigme_auto">            <i>de<b/>Laplace</i><par n="arrière__adj"/></e>
 <e lm="délayer" a="paradigme_auto">               <i>déla</i><par n="bala/yer__vblex"/></e>
 <e lm="de Lebesgue" a="paradigme_auto">           <i>de<b/>Lebesgue</i><par n="arrière__adj"/></e>
@@ -25062,7 +25093,7 @@
 <e lm="dualisme" a="paradigme_auto">              <i>dualisme</i><par n="accessoire__n"/></e>
 <e lm="dubitatif" a="paradigme_auto">             <i>dubitati</i><par n="affirmati/f__adj"/></e>
 <e lm="ducat">                                    <i>ducat</i><par n="accessoire__n"/></e>
-<e lm="du côté de">                               <i>du<b/>côté<b/>de</i><par n="contde__pr"/></e>
+<e lm="du côté de">                               <i>du<b/>côté<b/></i><par n="contde__pr"/></e>
 <e lm="ductile">                                  <i>ductile</i><par n="académique__adj"/></e>
 <e lm="duègne" a="paradigme_auto">                <i>duègne</i><par n="abeille__n"/></e>
 <e lm="duelliste" a="paradigme_auto">             <i>duelliste</i><par n="artiste__n"/></e>
@@ -25254,6 +25285,7 @@
 <e lm="égrainer" a="paradigme_auto">              <i>égrain</i><par n="abaiss/er__vblex"/></e>
 <e lm="égratigner" a="paradigme_auto">            <i>égratign</i><par n="abaiss/er__vblex"/></e>
 <e lm="égrener" a="paradigme_auto">               <i>égren</i><par n="abaiss/er__vblex"/></e>
+<e r="LR" lm="Écosse">                            <p><l>Ecosse</l>              <r>Écosse</r></p><par n="Andorre__np"/></e>
 <e lm="Égyptien">                                 <i>Égyptien</i><par n="ancien__n"/></e>
 <e lm="égyptien">                                 <i>égyptien</i><par n="ancien__adj"/></e>
 <e lm="égyptologie" a="paradigme_auto">           <i>égyptologie</i><par n="abeille__n"/></e>
@@ -25473,14 +25505,14 @@
 <e lm="encombrement" a="paradigme_auto">          <i>encombrement</i><par n="accessoire__n"/></e>
 <e lm="en commun" a="paradigme_auto">             <i>en<b/>commun</i><par n="arrière__adj"/></e>
 <e lm="en commun" a="paradigme_auto">             <i>en<b/>commun</i><par n="hier__adv"/></e>
-<e lm="en compagnie de">                          <i>en<b/>compagnie<b/>de</i><par n="contde__pr"/></e>
-<e lm="en comparaison de">                        <i>en<b/>comparaison<b/>de</i><par n="contde__pr"/></e>
+<e lm="en compagnie de">                          <i>en<b/>compagnie<b/></i><par n="contde__pr"/></e>
+<e lm="en comparaison de">                        <i>en<b/>comparaison<b/></i><par n="contde__pr"/></e>
 <e lm="en compensation" a="paradigme_auto">       <i>en<b/>compensation</i><par n="hier__adv"/></e>
-<e lm="en compensation de">                       <i>en<b/>compensation<b/>de</i><par n="contde__pr"/></e>
+<e lm="en compensation de">                       <i>en<b/>compensation<b/></i><par n="contde__pr"/></e>
 <e lm="en connexion" a="paradigme_auto">          <i>en<b/>connexion</i><par n="hier__adv"/></e>
 <e lm="en contrat de prestation" a="paradigme_auto"><i>en<b/>contrat<b/>de<b/>prestation</i><par n="arrière__adj"/></e>
 <e lm="en contrepartie" a="paradigme_auto">       <i>en<b/>contrepartie</i><par n="hier__adv"/></e>
-<e lm="en contrepartie de">                       <i>en<b/>contrepartie<b/>de</i><par n="contde__pr"/></e>
+<e lm="en contrepartie de">                       <i>en<b/>contrepartie<b/></i><par n="contde__pr"/></e>
 <e lm="encorbellement" a="paradigme_auto">        <i>encorbellement</i><par n="accessoire__n"/></e>
 <e lm="encorner" a="paradigme_auto">              <i>encorn</i><par n="abaiss/er__vblex"/></e>
 <e lm="en cours">                                 <i>en<b/>cours</i><par n="hier__adv"/></e>
@@ -25530,7 +25562,7 @@
 <e lm="énervement" a="paradigme_auto">            <i>énervement</i><par n="accessoire__n"/></e>
 <e lm="énerver">                                  <i>énerv</i><par n="abaiss/er__vblex"/></e>
 <e lm="en été" a="paradigme_auto">                <i>en<b/>été</i><par n="hier__adv"/></e>
-<e lm="en face de">                               <i>en<b/>face<b/>de</i><par n="contde__pr"/></e>
+<e lm="en face de">                               <i>en<b/>face<b/></i><par n="contde__pr"/></e>
 <e lm="en face">                                  <i>en<b/>face</i><par n="hier__adv"/></e>
 <e lm="enfant du péché" a="groupe_cree_auto">     <i>enfant</i><par n="artiste__n"/><p><l><b/>du<b/>péché</l><r><g><b/>du<b/>péché</g></r></p></e>
 <e lm="enfant du péché" a="groupe_cree_auto">     <i>enfant</i><par n="accessoire__n"/><p><l><b/>du<b/>péché</l><r><g><b/>du<b/>péché</g></r></p></e>
@@ -25574,14 +25606,14 @@
 <e lm="enjoliveur">                               <i>enjoliveur</i><par n="accessoire__n"/></e>
 <e lm="enjoué" a="paradigme_auto">                <i>enjoué</i><par n="abaissant__adj"/></e>
 <e lm="enjuguer" a="paradigme_auto">              <i>enjugu</i><par n="abaiss/er__vblex"/></e>
-<e lm="en l'absence de">                          <i>en<b/>l'absence<b/>de</i><par n="contde__pr"/></e>
+<e lm="en l'absence de">                          <i>en<b/>l'absence<b/></i><par n="contde__pr"/></e>
 <e lm="enlacer" a="paradigme_auto">               <i>enla</i><par n="annon/cer__vblex"/></e>
 <e lm="en l'air" a="paradigme_auto">              <i>en<b/>l'air</i><par n="arrière__adj"/></e>
 <e lm="enlever">                                  <i>enl</i><par n="ach/e[T]er__vblex__v"/></e>
 <e lm="en libre-service" a="paradigme_auto">     <i>en<b/>libre-service</i><par n="arrière__adj"/></e>
 <e lm="enliser" a="paradigme_auto">               <i>enlis</i><par n="abaiss/er__vblex"/></e>
 <e lm="en long">                                  <i>en<b/>long</i><par n="hier__adv"/></e>
-<e lm="en mémoire de">                            <i>en<b/>mémoire<b/>de</i><par n="contde__pr"/></e>
+<e lm="en mémoire de">                            <i>en<b/>mémoire<b/></i><par n="contde__pr"/></e>
 <e lm="ennui">                                    <i>ennui</i><par n="accessoire__n"/></e>
 <e lm="ennuyé" a="paradigme_auto">                <i>ennuyé</i><par n="abaissant__adj"/></e>
 <e lm="ennuyeux">                                 <i>ennuyeu</i><par n="affectueu/x__adj"/></e>
@@ -25607,8 +25639,8 @@
 <e lm="enquêteur">                                <i>enquêteu</i><par n="causeu/r__n"/></e>
 <e lm="enragé" a="paradigme_auto">                <i>enragé</i><par n="abaissant__adj"/></e>
 <e lm="en rapporter" a="paradigme_auto">            <i>en<b/>rapport</i><par n="abaiss/er__vblex"/></e>
-<e lm="en récompense de">                         <i>en<b/>récompense<b/>de</i><par n="contde__pr"/></e>
-<e lm="en regard de">                             <i>en<b/>regard<b/>de</i><par n="contde__pr"/></e>
+<e lm="en récompense de">                         <i>en<b/>récompense<b/></i><par n="contde__pr"/></e>
+<e lm="en regard de">                             <i>en<b/>regard<b/></i><par n="contde__pr"/></e>
 <e lm="enregistreur">                             <i>enregistreu</i><par n="causeu/r__n"/></e>
 <e lm="en remettre" a="paradigme_auto">            <i>en<b/>rem</i><par n="adm/ettre__vblex"/></e>
 <e lm="en remplacement" a="paradigme_auto">       <i>en<b/>remplacement</i><par n="hier__adv"/></e>
@@ -26011,7 +26043,7 @@
 <e lm="être conçu" a="groupe_cree_auto">          <i></i><par n="/être__vblex"/><p><l><b/>conçu</l><r><g><b/>conçu</g></r></p></e>
 <e lm="être conducteur" a="groupe_cree_auto">     <i></i><par n="/être__vblex"/><p><l><b/>conducteur</l><r><g><b/>conducteur</g></r></p></e>
 <e lm="être confirmé" a="groupe_cree_auto">       <i></i><par n="/être__vblex"/><p><l><b/>confirmé</l><r><g><b/>confirmé</g></r></p></e>
-<e lm="être conforme">                            <i></i><par n="/être__vblex"/></e>
+<e lm="être conforme" a="groupe_cree_auto">       <i></i><par n="/être__vblex"/><p><l><b/>conforme</l><r><g><b/>conforme</g></r></p></e>
 <e lm="être congru" a="groupe_cree_auto">         <i></i><par n="/être__vblex"/><p><l><b/>congru</l><r><g><b/>congru</g></r></p></e>
 <e lm="être conscient de" a="groupe_cree_auto">   <i></i><par n="/être__vblex"/><p><l><b/>conscient<b/>de</l><r><g><b/>conscient<b/>de</g></r></p></e>
 <e lm="être consommé" a="groupe_cree_auto">       <i></i><par n="/être__vblex"/><p><l><b/>consommé</l><r><g><b/>consommé</g></r></p></e>
@@ -26082,7 +26114,6 @@
 <e lm="être épris" a="groupe_cree_auto">          <i></i><par n="/être__vblex"/><p><l><b/>épris</l><r><g><b/>épris</g></r></p></e>
 <e lm="être éprouvé" a="groupe_cree_auto">        <i></i><par n="/être__vblex"/><p><l><b/>éprouvé</l><r><g><b/>éprouvé</g></r></p></e>
 <e lm="être essoufflé" a="groupe_cree_auto">      <i></i><par n="/être__vblex"/><p><l><b/>essoufflé</l><r><g><b/>essoufflé</g></r></p></e>
-<e lm="être essouflé ," a="groupe_cree_auto">     <i></i><par n="/être__vblex"/><p><l><b/>essouflé<b/>,</l><r><g><b/>essouflé<b/>,</g></r></p></e>
 <e lm="être étendu" a="groupe_cree_auto">         <i></i><par n="/être__vblex"/><p><l><b/>étendu</l><r><g><b/>étendu</g></r></p></e>
 <e lm="être expérimenté en" a="groupe_cree_auto"> <i></i><par n="/être__vblex"/><p><l><b/>expérimenté<b/>en</l><r><g><b/>expérimenté<b/>en</g></r></p></e>
 <e lm="être fâché" a="groupe_cree_auto">          <i></i><par n="/être__vblex"/><p><l><b/>fâché</l><r><g><b/>fâché</g></r></p></e>
@@ -26151,6 +26182,9 @@
 <e lm="être tard" a="groupe_cree_auto">           <i></i><par n="/être__vblex"/><p><l><b/>tard</l><r><g><b/>tard</g></r></p></e>
 <e lm="être tardif" a="groupe_cree_auto">         <i></i><par n="/être__vblex"/><p><l><b/>tardif</l><r><g><b/>tardif</g></r></p></e>
 <e lm="être tenté" a="groupe_cree_auto">          <i></i><par n="/être__vblex"/><p><l><b/>tenté</l><r><g><b/>tenté</g></r></p></e>
+<e r="LR" lm="être tenté">          <i></i><par n="/être__vblex"/><p><l><b/>tentée</l><r><g><b/>tenté</g></r></p></e>
+<e r="LR" lm="être tenté">          <i></i><par n="/être__vblex"/><p><l><b/>tentés</l><r><g><b/>tenté</g></r></p></e>
+<e r="LR" lm="être tenté">          <i></i><par n="/être__vblex"/><p><l><b/>tentées</l><r><g><b/>tenté</g></r></p></e>
 <e lm="être tenu" a="groupe_cree_auto">           <i></i><par n="/être__vblex"/><p><l><b/>tenu</l><r><g><b/>tenu</g></r></p></e>
 <e lm="être tôt" a="groupe_cree_auto">            <i></i><par n="/être__vblex"/><p><l><b/>tôt</l><r><g><b/>tôt</g></r></p></e>
 <e lm="être tourné" a="groupe_cree_auto">         <i></i><par n="/être__vblex"/><p><l><b/>tourné</l><r><g><b/>tourné</g></r></p></e>
@@ -26165,6 +26199,300 @@
 <e lm="être vivant">                              <p><l>êtres vivants</l>       <r>être vivant<s n="n"/><s n="m"/><s n="pl"/></r></p></e>
 <e lm="être vivant">                              <p><l>être vivant</l>         <r>être vivant<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
 <e lm="être voisin" a="groupe_cree_auto">         <i></i><par n="/être__vblex"/><p><l><b/>voisin</l><r><g><b/>voisin</g></r></p></e>
+<!--
+Mi ne aldonas, ĉar, kiam oni tion faras, ial la tagger freneziĝas kaj ekinterpretas "est" kiel "oriento" en amaso da eraraj kuntekstoj
+<e r="LR" lm="être abonné"> <i></i><par n="/être__vblex"/><p><l><b/>abonnée</l><r><g><b/>abonné</g></r></p></e>
+<e r="LR" lm="être abonné"> <i></i><par n="/être__vblex"/><p><l><b/>abonnés</l><r><g><b/>abonné</g></r></p></e>
+<e r="LR" lm="être abonné"> <i></i><par n="/être__vblex"/><p><l><b/>abonnées</l><r><g><b/>abonné</g></r></p></e>
+<e r="LR" lm="être absent"> <i></i><par n="/être__vblex"/><p><l><b/>absente</l><r><g><b/>absent</g></r></p></e>
+<e r="LR" lm="être absent"> <i></i><par n="/être__vblex"/><p><l><b/>absents</l><r><g><b/>absent</g></r></p></e>
+<e r="LR" lm="être absent"> <i></i><par n="/être__vblex"/><p><l><b/>absentes</l><r><g><b/>absent</g></r></p></e>
+<e r="LR" lm="être adapté"> <i></i><par n="/être__vblex"/><p><l><b/>adaptée</l><r><g><b/>adapté</g></r></p></e>
+<e r="LR" lm="être adapté"> <i></i><par n="/être__vblex"/><p><l><b/>adaptés</l><r><g><b/>adapté</g></r></p></e>
+<e r="LR" lm="être adapté"> <i></i><par n="/être__vblex"/><p><l><b/>adaptées</l><r><g><b/>adapté</g></r></p></e>
+<e r="LR" lm="être affamé"> <i></i><par n="/être__vblex"/><p><l><b/>affamée</l><r><g><b/>affamé</g></r></p></e>
+<e r="LR" lm="être affamé"> <i></i><par n="/être__vblex"/><p><l><b/>affamés</l><r><g><b/>affamé</g></r></p></e>
+<e r="LR" lm="être affamé"> <i></i><par n="/être__vblex"/><p><l><b/>affamées</l><r><g><b/>affamé</g></r></p></e>
+<e r="LR" lm="être âgé"> <i></i><par n="/être__vblex"/><p><l><b/>âgée</l><r><g><b/>âgé</g></r></p></e>
+<e r="LR" lm="être âgé"> <i></i><par n="/être__vblex"/><p><l><b/>âgés</l><r><g><b/>âgé</g></r></p></e>
+<e r="LR" lm="être âgé"> <i></i><par n="/être__vblex"/><p><l><b/>âgées</l><r><g><b/>âgé</g></r></p></e>
+<e r="LR" lm="être agenouillé"> <i></i><par n="/être__vblex"/><p><l><b/>agenouillée</l><r><g><b/>agenouillé</g></r></p></e>
+<e r="LR" lm="être agenouillé"> <i></i><par n="/être__vblex"/><p><l><b/>agenouillés</l><r><g><b/>agenouillé</g></r></p></e>
+<e r="LR" lm="être agenouillé"> <i></i><par n="/être__vblex"/><p><l><b/>agenouillées</l><r><g><b/>agenouillé</g></r></p></e>
+<e r="LR" lm="être angoissé"> <i></i><par n="/être__vblex"/><p><l><b/>angoissée</l><r><g><b/>angoissé</g></r></p></e>
+<e r="LR" lm="être angoissé"> <i></i><par n="/être__vblex"/><p><l><b/>angoissés</l><r><g><b/>angoissé</g></r></p></e>
+<e r="LR" lm="être angoissé"> <i></i><par n="/être__vblex"/><p><l><b/>angoissées</l><r><g><b/>angoissé</g></r></p></e>
+<e r="LR" lm="être approprié"> <i></i><par n="/être__vblex"/><p><l><b/>appropriée</l><r><g><b/>approprié</g></r></p></e>
+<e r="LR" lm="être approprié"> <i></i><par n="/être__vblex"/><p><l><b/>appropriés</l><r><g><b/>approprié</g></r></p></e>
+<e r="LR" lm="être approprié"> <i></i><par n="/être__vblex"/><p><l><b/>appropriées</l><r><g><b/>approprié</g></r></p></e>
+<e r="LR" lm="être ardent"> <i></i><par n="/être__vblex"/><p><l><b/>ardente</l><r><g><b/>ardent</g></r></p></e>
+<e r="LR" lm="être ardent"> <i></i><par n="/être__vblex"/><p><l><b/>ardents</l><r><g><b/>ardent</g></r></p></e>
+<e r="LR" lm="être ardent"> <i></i><par n="/être__vblex"/><p><l><b/>ardentes</l><r><g><b/>ardent</g></r></p></e>
+<e r="LR" lm="être assis"> <i></i><par n="/être__vblex"/><p><l><b/>assise</l><r><g><b/>assis</g></r></p></e>
+<e r="LR" lm="être assis"> <i></i><par n="/être__vblex"/><p><l><b/>assises</l><r><g><b/>assis</g></r></p></e>
+<e r="LR" lm="être avare"> <i></i><par n="/être__vblex"/><p><l><b/>avares</l><r><g><b/>avare</g></r></p></e>
+<e r="LR" lm="être avide"> <i></i><par n="/être__vblex"/><p><l><b/>avides</l><r><g><b/>avide</g></r></p></e>
+<e r="LR" lm="être bête"> <i></i><par n="/être__vblex"/><p><l><b/>bêtes</l><r><g><b/>bête</g></r></p></e>
+<e r="LR" lm="être candidat"> <i></i><par n="/être__vblex"/><p><l><b/>candidate</l><r><g><b/>candidat</g></r></p></e>
+<e r="LR" lm="être candidat"> <i></i><par n="/être__vblex"/><p><l><b/>candidats</l><r><g><b/>candidat</g></r></p></e>
+<e r="LR" lm="être candidat"> <i></i><par n="/être__vblex"/><p><l><b/>candidates</l><r><g><b/>candidat</g></r></p></e>
+<e r="LR" lm="être capable"> <i></i><par n="/être__vblex"/><p><l><b/>capables</l><r><g><b/>capable</g></r></p></e>
+<e r="LR" lm="être cave"> <i></i><par n="/être__vblex"/><p><l><b/>caves</l><r><g><b/>cave</g></r></p></e>
+<e r="LR" lm="être compatible"> <i></i><par n="/être__vblex"/><p><l><b/>compatibles</l><r><g><b/>compatible</g></r></p></e>
+<e r="LR" lm="être compétent"> <i></i><par n="/être__vblex"/><p><l><b/>compétente</l><r><g><b/>compétent</g></r></p></e>
+<e r="LR" lm="être compétent"> <i></i><par n="/être__vblex"/><p><l><b/>compétents</l><r><g><b/>compétent</g></r></p></e>
+<e r="LR" lm="être compétent"> <i></i><par n="/être__vblex"/><p><l><b/>compétentes</l><r><g><b/>compétent</g></r></p></e>
+<e r="LR" lm="être concourant"> <i></i><par n="/être__vblex"/><p><l><b/>concourante</l><r><g><b/>concourant</g></r></p></e>
+<e r="LR" lm="être concourant"> <i></i><par n="/être__vblex"/><p><l><b/>concourants</l><r><g><b/>concourant</g></r></p></e>
+<e r="LR" lm="être concourant"> <i></i><par n="/être__vblex"/><p><l><b/>concourantes</l><r><g><b/>concourant</g></r></p></e>
+<e r="LR" lm="être conçu"> <i></i><par n="/être__vblex"/><p><l><b/>conçue</l><r><g><b/>conçu</g></r></p></e>
+<e r="LR" lm="être conçu"> <i></i><par n="/être__vblex"/><p><l><b/>conçus</l><r><g><b/>conçu</g></r></p></e>
+<e r="LR" lm="être conçu"> <i></i><par n="/être__vblex"/><p><l><b/>conçues</l><r><g><b/>conçu</g></r></p></e>
+<e r="LR" lm="être conducteur"> <i></i><par n="/être__vblex"/><p><l><b/>conductrice</l><r><g><b/>conducteur</g></r></p></e>
+<e r="LR" lm="être conducteur"> <i></i><par n="/être__vblex"/><p><l><b/>conducteurs</l><r><g><b/>conducteur</g></r></p></e>
+<e r="LR" lm="être conducteur"> <i></i><par n="/être__vblex"/><p><l><b/>conductrices</l><r><g><b/>conducteur</g></r></p></e>
+<e r="LR" lm="être confirmé"> <i></i><par n="/être__vblex"/><p><l><b/>confirmée</l><r><g><b/>confirmé</g></r></p></e>
+<e r="LR" lm="être confirmé"> <i></i><par n="/être__vblex"/><p><l><b/>confirmés</l><r><g><b/>confirmé</g></r></p></e>
+<e r="LR" lm="être confirmé"> <i></i><par n="/être__vblex"/><p><l><b/>confirmées</l><r><g><b/>confirmé</g></r></p></e>
+<e r="LR" lm="être conforme"> <i></i><par n="/être__vblex"/><p><l><b/>conformes</l><r><g><b/>conforme</g></r></p></e>
+<e r="LR" lm="être congru"> <i></i><par n="/être__vblex"/><p><l><b/>congrue</l><r><g><b/>congru</g></r></p></e>
+<e r="LR" lm="être congru"> <i></i><par n="/être__vblex"/><p><l><b/>congrus</l><r><g><b/>congru</g></r></p></e>
+<e r="LR" lm="être congru"> <i></i><par n="/être__vblex"/><p><l><b/>congrues</l><r><g><b/>congru</g></r></p></e>
+<e r="LR" lm="être consommé"> <i></i><par n="/être__vblex"/><p><l><b/>consommée</l><r><g><b/>consommé</g></r></p></e>
+<e r="LR" lm="être consommé"> <i></i><par n="/être__vblex"/><p><l><b/>consommés</l><r><g><b/>consommé</g></r></p></e>
+<e r="LR" lm="être consommé"> <i></i><par n="/être__vblex"/><p><l><b/>consommées</l><r><g><b/>consommé</g></r></p></e>
+<e r="LR" lm="être couché"> <i></i><par n="/être__vblex"/><p><l><b/>couchée</l><r><g><b/>couché</g></r></p></e>
+<e r="LR" lm="être couché"> <i></i><par n="/être__vblex"/><p><l><b/>couchés</l><r><g><b/>couché</g></r></p></e>
+<e r="LR" lm="être couché"> <i></i><par n="/être__vblex"/><p><l><b/>couchées</l><r><g><b/>couché</g></r></p></e>
+<e r="LR" lm="être courroucé"> <i></i><par n="/être__vblex"/><p><l><b/>courroucée</l><r><g><b/>courroucé</g></r></p></e>
+<e r="LR" lm="être courroucé"> <i></i><par n="/être__vblex"/><p><l><b/>courroucés</l><r><g><b/>courroucé</g></r></p></e>
+<e r="LR" lm="être courroucé"> <i></i><par n="/être__vblex"/><p><l><b/>courroucées</l><r><g><b/>courroucé</g></r></p></e>
+<e r="LR" lm="être creux"> <i></i><par n="/être__vblex"/><p><l><b/>creuse</l><r><g><b/>creux</g></r></p></e>
+<e r="LR" lm="être creux"> <i></i><par n="/être__vblex"/><p><l><b/>creuses</l><r><g><b/>creux</g></r></p></e>
+<e r="LR" lm="être dangereux"> <i></i><par n="/être__vblex"/><p><l><b/>dangereuse</l><r><g><b/>dangereux</g></r></p></e>
+<e r="LR" lm="être dangereux"> <i></i><par n="/être__vblex"/><p><l><b/>dangereuses</l><r><g><b/>dangereux</g></r></p></e>
+<e r="LR" lm="être décent"> <i></i><par n="/être__vblex"/><p><l><b/>décente</l><r><g><b/>décent</g></r></p></e>
+<e r="LR" lm="être décent"> <i></i><par n="/être__vblex"/><p><l><b/>décents</l><r><g><b/>décent</g></r></p></e>
+<e r="LR" lm="être décent"> <i></i><par n="/être__vblex"/><p><l><b/>décentes</l><r><g><b/>décent</g></r></p></e>
+<e r="LR" lm="être déchaîné"> <i></i><par n="/être__vblex"/><p><l><b/>déchaînée</l><r><g><b/>déchaîné</g></r></p></e>
+<e r="LR" lm="être déchaîné"> <i></i><par n="/être__vblex"/><p><l><b/>déchaînés</l><r><g><b/>déchaîné</g></r></p></e>
+<e r="LR" lm="être déchaîné"> <i></i><par n="/être__vblex"/><p><l><b/>déchaînées</l><r><g><b/>déchaîné</g></r></p></e>
+<e r="LR" lm="être déçu"> <i></i><par n="/être__vblex"/><p><l><b/>déçue</l><r><g><b/>déçu</g></r></p></e>
+<e r="LR" lm="être déçu"> <i></i><par n="/être__vblex"/><p><l><b/>déçus</l><r><g><b/>déçu</g></r></p></e>
+<e r="LR" lm="être déçu"> <i></i><par n="/être__vblex"/><p><l><b/>déçues</l><r><g><b/>déçu</g></r></p></e>
+<e r="LR" lm="être dément"> <i></i><par n="/être__vblex"/><p><l><b/>démente</l><r><g><b/>dément</g></r></p></e>
+<e r="LR" lm="être dément"> <i></i><par n="/être__vblex"/><p><l><b/>déments</l><r><g><b/>dément</g></r></p></e>
+<e r="LR" lm="être dément"> <i></i><par n="/être__vblex"/><p><l><b/>démentes</l><r><g><b/>dément</g></r></p></e>
+<e r="LR" lm="être dépassé"> <i></i><par n="/être__vblex"/><p><l><b/>dépassée</l><r><g><b/>dépassé</g></r></p></e>
+<e r="LR" lm="être dépassé"> <i></i><par n="/être__vblex"/><p><l><b/>dépassés</l><r><g><b/>dépassé</g></r></p></e>
+<e r="LR" lm="être dépassé"> <i></i><par n="/être__vblex"/><p><l><b/>dépassées</l><r><g><b/>dépassé</g></r></p></e>
+<e r="LR" lm="être différent"> <i></i><par n="/être__vblex"/><p><l><b/>différente</l><r><g><b/>différent</g></r></p></e>
+<e r="LR" lm="être différent"> <i></i><par n="/être__vblex"/><p><l><b/>différents</l><r><g><b/>différent</g></r></p></e>
+<e r="LR" lm="être différent"> <i></i><par n="/être__vblex"/><p><l><b/>différentes</l><r><g><b/>différent</g></r></p></e>
+<e r="LR" lm="être digne"> <i></i><par n="/être__vblex"/><p><l><b/>dignes</l><r><g><b/>digne</g></r></p></e>
+<e r="LR" lm="être disposé"> <i></i><par n="/être__vblex"/><p><l><b/>disposée</l><r><g><b/>disposé</g></r></p></e>
+<e r="LR" lm="être disposé"> <i></i><par n="/être__vblex"/><p><l><b/>disposés</l><r><g><b/>disposé</g></r></p></e>
+<e r="LR" lm="être disposé"> <i></i><par n="/être__vblex"/><p><l><b/>disposées</l><r><g><b/>disposé</g></r></p></e>
+<e r="LR" lm="être douloureux"> <i></i><par n="/être__vblex"/><p><l><b/>douloureuse</l><r><g><b/>douloureux</g></r></p></e>
+<e r="LR" lm="être douloureux"> <i></i><par n="/être__vblex"/><p><l><b/>douloureuses</l><r><g><b/>douloureux</g></r></p></e>
+<e r="LR" lm="être doux"> <i></i><par n="/être__vblex"/><p><l><b/>douce</l><r><g><b/>doux</g></r></p></e>
+<e r="LR" lm="être doux"> <i></i><par n="/être__vblex"/><p><l><b/>douces</l><r><g><b/>doux</g></r></p></e>
+<e r="LR" lm="être égal"> <i></i><par n="/être__vblex"/><p><l><b/>égale</l><r><g><b/>égal</g></r></p></e>
+<e r="LR" lm="être égal"> <i></i><par n="/être__vblex"/><p><l><b/>égals</l><r><g><b/>égal</g></r></p></e>
+<e r="LR" lm="être égal"> <i></i><par n="/être__vblex"/><p><l><b/>égales</l><r><g><b/>égal</g></r></p></e>
+<e r="LR" lm="être embusqué"> <i></i><par n="/être__vblex"/><p><l><b/>embusquée</l><r><g><b/>embusqué</g></r></p></e>
+<e r="LR" lm="être embusqué"> <i></i><par n="/être__vblex"/><p><l><b/>embusqués</l><r><g><b/>embusqué</g></r></p></e>
+<e r="LR" lm="être embusqué"> <i></i><par n="/être__vblex"/><p><l><b/>embusquées</l><r><g><b/>embusqué</g></r></p></e>
+<e r="LR" lm="être encaissé"> <i></i><par n="/être__vblex"/><p><l><b/>encaissée</l><r><g><b/>encaissé</g></r></p></e>
+<e r="LR" lm="être encaissé"> <i></i><par n="/être__vblex"/><p><l><b/>encaissés</l><r><g><b/>encaissé</g></r></p></e>
+<e r="LR" lm="être encaissé"> <i></i><par n="/être__vblex"/><p><l><b/>encaissées</l><r><g><b/>encaissé</g></r></p></e>
+<e r="LR" lm="être enclin"> <i></i><par n="/être__vblex"/><p><l><b/>encline</l><r><g><b/>enclin</g></r></p></e>
+<e r="LR" lm="être enclin"> <i></i><par n="/être__vblex"/><p><l><b/>enclins</l><r><g><b/>enclin</g></r></p></e>
+<e r="LR" lm="être enclin"> <i></i><par n="/être__vblex"/><p><l><b/>enclines</l><r><g><b/>enclin</g></r></p></e>
+<e r="LR" lm="être enflammé"> <i></i><par n="/être__vblex"/><p><l><b/>enflammée</l><r><g><b/>enflammé</g></r></p></e>
+<e r="LR" lm="être enflammé"> <i></i><par n="/être__vblex"/><p><l><b/>enflammés</l><r><g><b/>enflammé</g></r></p></e>
+<e r="LR" lm="être enflammé"> <i></i><par n="/être__vblex"/><p><l><b/>enflammées</l><r><g><b/>enflammé</g></r></p></e>
+<e r="LR" lm="être engendré"> <i></i><par n="/être__vblex"/><p><l><b/>engendrée</l><r><g><b/>engendré</g></r></p></e>
+<e r="LR" lm="être engendré"> <i></i><par n="/être__vblex"/><p><l><b/>engendrés</l><r><g><b/>engendré</g></r></p></e>
+<e r="LR" lm="être engendré"> <i></i><par n="/être__vblex"/><p><l><b/>engendrées</l><r><g><b/>engendré</g></r></p></e>
+<e r="LR" lm="être enraciné"> <i></i><par n="/être__vblex"/><p><l><b/>enracinée</l><r><g><b/>enraciné</g></r></p></e>
+<e r="LR" lm="être enraciné"> <i></i><par n="/être__vblex"/><p><l><b/>enracinés</l><r><g><b/>enraciné</g></r></p></e>
+<e r="LR" lm="être enraciné"> <i></i><par n="/être__vblex"/><p><l><b/>enracinées</l><r><g><b/>enraciné</g></r></p></e>
+<e r="LR" lm="être enragé"> <i></i><par n="/être__vblex"/><p><l><b/>enragée</l><r><g><b/>enragé</g></r></p></e>
+<e r="LR" lm="être enragé"> <i></i><par n="/être__vblex"/><p><l><b/>enragés</l><r><g><b/>enragé</g></r></p></e>
+<e r="LR" lm="être enragé"> <i></i><par n="/être__vblex"/><p><l><b/>enragées</l><r><g><b/>enragé</g></r></p></e>
+<e r="LR" lm="être ensemble"> <i></i><par n="/être__vblex"/><p><l><b/>ensembles</l><r><g><b/>ensemble</g></r></p></e>
+<e r="LR" lm="être entériné"> <i></i><par n="/être__vblex"/><p><l><b/>entérinée</l><r><g><b/>entériné</g></r></p></e>
+<e r="LR" lm="être entériné"> <i></i><par n="/être__vblex"/><p><l><b/>entérinés</l><r><g><b/>entériné</g></r></p></e>
+<e r="LR" lm="être entériné"> <i></i><par n="/être__vblex"/><p><l><b/>entérinées</l><r><g><b/>entériné</g></r></p></e>
+<e r="LR" lm="être épris"> <i></i><par n="/être__vblex"/><p><l><b/>éprise</l><r><g><b/>épris</g></r></p></e>
+<e r="LR" lm="être épris"> <i></i><par n="/être__vblex"/><p><l><b/>éprises</l><r><g><b/>épris</g></r></p></e>
+<e r="LR" lm="être éprouvé"> <i></i><par n="/être__vblex"/><p><l><b/>éprouvée</l><r><g><b/>éprouvé</g></r></p></e>
+<e r="LR" lm="être éprouvé"> <i></i><par n="/être__vblex"/><p><l><b/>éprouvés</l><r><g><b/>éprouvé</g></r></p></e>
+<e r="LR" lm="être éprouvé"> <i></i><par n="/être__vblex"/><p><l><b/>éprouvées</l><r><g><b/>éprouvé</g></r></p></e>
+<e r="LR" lm="être essoufflé"> <i></i><par n="/être__vblex"/><p><l><b/>essoufflée</l><r><g><b/>essoufflé</g></r></p></e>
+<e r="LR" lm="être essoufflé"> <i></i><par n="/être__vblex"/><p><l><b/>essoufflés</l><r><g><b/>essoufflé</g></r></p></e>
+<e r="LR" lm="être essoufflé"> <i></i><par n="/être__vblex"/><p><l><b/>essoufflées</l><r><g><b/>essoufflé</g></r></p></e>
+<e r="LR" lm="être étendu"> <i></i><par n="/être__vblex"/><p><l><b/>étendue</l><r><g><b/>étendu</g></r></p></e>
+<e r="LR" lm="être étendu"> <i></i><par n="/être__vblex"/><p><l><b/>étendus</l><r><g><b/>étendu</g></r></p></e>
+<e r="LR" lm="être étendu"> <i></i><par n="/être__vblex"/><p><l><b/>étendues</l><r><g><b/>étendu</g></r></p></e>
+<e r="LR" lm="être fâché"> <i></i><par n="/être__vblex"/><p><l><b/>fâchée</l><r><g><b/>fâché</g></r></p></e>
+<e r="LR" lm="être fâché"> <i></i><par n="/être__vblex"/><p><l><b/>fâchés</l><r><g><b/>fâché</g></r></p></e>
+<e r="LR" lm="être fâché"> <i></i><par n="/être__vblex"/><p><l><b/>fâchées</l><r><g><b/>fâché</g></r></p></e>
+<e r="LR" lm="être favorable"> <i></i><par n="/être__vblex"/><p><l><b/>favorables</l><r><g><b/>favorable</g></r></p></e>
+<e r="LR" lm="être fébrile"> <i></i><par n="/être__vblex"/><p><l><b/>fébriles</l><r><g><b/>fébrile</g></r></p></e>
+<e r="LR" lm="être fervent"> <i></i><par n="/être__vblex"/><p><l><b/>fervente</l><r><g><b/>fervent</g></r></p></e>
+<e r="LR" lm="être fervent"> <i></i><par n="/être__vblex"/><p><l><b/>fervents</l><r><g><b/>fervent</g></r></p></e>
+<e r="LR" lm="être fervent"> <i></i><par n="/être__vblex"/><p><l><b/>ferventes</l><r><g><b/>fervent</g></r></p></e>
+<e r="LR" lm="être fier"> <i></i><par n="/être__vblex"/><p><l><b/>fiere</l><r><g><b/>fier</g></r></p></e>
+<e r="LR" lm="être fier"> <i></i><par n="/être__vblex"/><p><l><b/>fiers</l><r><g><b/>fier</g></r></p></e>
+<e r="LR" lm="être fier"> <i></i><par n="/être__vblex"/><p><l><b/>fieres</l><r><g><b/>fier</g></r></p></e>
+<e r="LR" lm="être fiévreux"> <i></i><par n="/être__vblex"/><p><l><b/>fiévreuse</l><r><g><b/>fiévreux</g></r></p></e>
+<e r="LR" lm="être fiévreux"> <i></i><par n="/être__vblex"/><p><l><b/>fiévreuses</l><r><g><b/>fiévreux</g></r></p></e>
+<e r="LR" lm="être fluorescent"> <i></i><par n="/être__vblex"/><p><l><b/>fluorescente</l><r><g><b/>fluorescent</g></r></p></e>
+<e r="LR" lm="être fluorescent"> <i></i><par n="/être__vblex"/><p><l><b/>fluorescents</l><r><g><b/>fluorescent</g></r></p></e>
+<e r="LR" lm="être fluorescent"> <i></i><par n="/être__vblex"/><p><l><b/>fluorescentes</l><r><g><b/>fluorescent</g></r></p></e>
+<e r="LR" lm="être fou"> <i></i><par n="/être__vblex"/><p><l><b/>folle</l><r><g><b/>fou</g></r></p></e>
+<e r="LR" lm="être fou"> <i></i><par n="/être__vblex"/><p><l><b/>fous</l><r><g><b/>fou</g></r></p></e>
+<e r="LR" lm="être fou"> <i></i><par n="/être__vblex"/><p><l><b/>folles</l><r><g><b/>fou</g></r></p></e>
+<e r="LR" lm="être furieux"> <i></i><par n="/être__vblex"/><p><l><b/>furieuse</l><r><g><b/>furieux</g></r></p></e>
+<e r="LR" lm="être furieux"> <i></i><par n="/être__vblex"/><p><l><b/>furieuses</l><r><g><b/>furieux</g></r></p></e>
+<e r="LR" lm="être gai"> <i></i><par n="/être__vblex"/><p><l><b/>gaie</l><r><g><b/>gai</g></r></p></e>
+<e r="LR" lm="être gai"> <i></i><par n="/être__vblex"/><p><l><b/>gais</l><r><g><b/>gai</g></r></p></e>
+<e r="LR" lm="être gai"> <i></i><par n="/être__vblex"/><p><l><b/>gaies</l><r><g><b/>gai</g></r></p></e>
+<e r="LR" lm="être gêné"> <i></i><par n="/être__vblex"/><p><l><b/>gênée</l><r><g><b/>gêné</g></r></p></e>
+<e r="LR" lm="être gêné"> <i></i><par n="/être__vblex"/><p><l><b/>gênés</l><r><g><b/>gêné</g></r></p></e>
+<e r="LR" lm="être gêné"> <i></i><par n="/être__vblex"/><p><l><b/>gênées</l><r><g><b/>gêné</g></r></p></e>
+<e r="LR" lm="être grave"> <i></i><par n="/être__vblex"/><p><l><b/>graves</l><r><g><b/>grave</g></r></p></e>
+<e r="LR" lm="être hérétique"> <i></i><par n="/être__vblex"/><p><l><b/>hérétiques</l><r><g><b/>hérétique</g></r></p></e>
+<e r="LR" lm="être homologué"> <i></i><par n="/être__vblex"/><p><l><b/>homologuée</l><r><g><b/>homologué</g></r></p></e>
+<e r="LR" lm="être homologué"> <i></i><par n="/être__vblex"/><p><l><b/>homologués</l><r><g><b/>homologué</g></r></p></e>
+<e r="LR" lm="être homologué"> <i></i><par n="/être__vblex"/><p><l><b/>homologuées</l><r><g><b/>homologué</g></r></p></e>
+<e r="LR" lm="être horrifié"> <i></i><par n="/être__vblex"/><p><l><b/>horrifiée</l><r><g><b/>horrifié</g></r></p></e>
+<e r="LR" lm="être horrifié"> <i></i><par n="/être__vblex"/><p><l><b/>horrifiés</l><r><g><b/>horrifié</g></r></p></e>
+<e r="LR" lm="être horrifié"> <i></i><par n="/être__vblex"/><p><l><b/>horrifiées</l><r><g><b/>horrifié</g></r></p></e>
+<e r="LR" lm="être hypocrite"> <i></i><par n="/être__vblex"/><p><l><b/>hypocrites</l><r><g><b/>hypocrite</g></r></p></e>
+<e r="LR" lm="être impliqué"> <i></i><par n="/être__vblex"/><p><l><b/>impliquée</l><r><g><b/>impliqué</g></r></p></e>
+<e r="LR" lm="être impliqué"> <i></i><par n="/être__vblex"/><p><l><b/>impliqués</l><r><g><b/>impliqué</g></r></p></e>
+<e r="LR" lm="être impliqué"> <i></i><par n="/être__vblex"/><p><l><b/>impliquées</l><r><g><b/>impliqué</g></r></p></e>
+<e r="LR" lm="être incandescent"> <i></i><par n="/être__vblex"/><p><l><b/>incandescente</l><r><g><b/>incandescent</g></r></p></e>
+<e r="LR" lm="être incandescent"> <i></i><par n="/être__vblex"/><p><l><b/>incandescents</l><r><g><b/>incandescent</g></r></p></e>
+<e r="LR" lm="être incandescent"> <i></i><par n="/être__vblex"/><p><l><b/>incandescentes</l><r><g><b/>incandescent</g></r></p></e>
+<e r="LR" lm="être incident"> <i></i><par n="/être__vblex"/><p><l><b/>incidente</l><r><g><b/>incident</g></r></p></e>
+<e r="LR" lm="être incident"> <i></i><par n="/être__vblex"/><p><l><b/>incidents</l><r><g><b/>incident</g></r></p></e>
+<e r="LR" lm="être incident"> <i></i><par n="/être__vblex"/><p><l><b/>incidentes</l><r><g><b/>incident</g></r></p></e>
+<e r="LR" lm="être indigné"> <i></i><par n="/être__vblex"/><p><l><b/>indignée</l><r><g><b/>indigné</g></r></p></e>
+<e r="LR" lm="être indigné"> <i></i><par n="/être__vblex"/><p><l><b/>indignés</l><r><g><b/>indigné</g></r></p></e>
+<e r="LR" lm="être indigné"> <i></i><par n="/être__vblex"/><p><l><b/>indignées</l><r><g><b/>indigné</g></r></p></e>
+<e r="LR" lm="être intermittent"> <i></i><par n="/être__vblex"/><p><l><b/>intermittente</l><r><g><b/>intermittent</g></r></p></e>
+<e r="LR" lm="être intermittent"> <i></i><par n="/être__vblex"/><p><l><b/>intermittents</l><r><g><b/>intermittent</g></r></p></e>
+<e r="LR" lm="être intermittent"> <i></i><par n="/être__vblex"/><p><l><b/>intermittentes</l><r><g><b/>intermittent</g></r></p></e>
+<e r="LR" lm="être invité"> <i></i><par n="/être__vblex"/><p><l><b/>invitée</l><r><g><b/>invité</g></r></p></e>
+<e r="LR" lm="être invité"> <i></i><par n="/être__vblex"/><p><l><b/>invités</l><r><g><b/>invité</g></r></p></e>
+<e r="LR" lm="être invité"> <i></i><par n="/être__vblex"/><p><l><b/>invitées</l><r><g><b/>invité</g></r></p></e>
+<e r="LR" lm="être jaloux"> <i></i><par n="/être__vblex"/><p><l><b/>jalouse</l><r><g><b/>jaloux</g></r></p></e>
+<e r="LR" lm="être jaloux"> <i></i><par n="/être__vblex"/><p><l><b/>jalouses</l><r><g><b/>jaloux</g></r></p></e>
+<e r="LR" lm="être légal"> <i></i><par n="/être__vblex"/><p><l><b/>légale</l><r><g><b/>légal</g></r></p></e>
+<e r="LR" lm="être légal"> <i></i><par n="/être__vblex"/><p><l><b/>légals</l><r><g><b/>légal</g></r></p></e>
+<e r="LR" lm="être légal"> <i></i><par n="/être__vblex"/><p><l><b/>légales</l><r><g><b/>légal</g></r></p></e>
+<e r="LR" lm="être l'hôte"> <i></i><par n="/être__vblex"/><p><l><b/>les<b/>hôtes</l><r><g><b/>l'hôte</g></r></p></e>
+<e r="LR" lm="être mêlé"> <i></i><par n="/être__vblex"/><p><l><b/>mêlée</l><r><g><b/>mêlé</g></r></p></e>
+<e r="LR" lm="être mêlé"> <i></i><par n="/être__vblex"/><p><l><b/>mêlés</l><r><g><b/>mêlé</g></r></p></e>
+<e r="LR" lm="être mêlé"> <i></i><par n="/être__vblex"/><p><l><b/>mêlées</l><r><g><b/>mêlé</g></r></p></e>
+<e r="LR" lm="être mouillé"> <i></i><par n="/être__vblex"/><p><l><b/>mouillée</l><r><g><b/>mouillé</g></r></p></e>
+<e r="LR" lm="être mouillé"> <i></i><par n="/être__vblex"/><p><l><b/>mouillés</l><r><g><b/>mouillé</g></r></p></e>
+<e r="LR" lm="être mouillé"> <i></i><par n="/être__vblex"/><p><l><b/>mouillées</l><r><g><b/>mouillé</g></r></p></e>
+<e r="LR" lm="être passible"> <i></i><par n="/être__vblex"/><p><l><b/>passibles</l><r><g><b/>passible</g></r></p></e>
+<e r="LR" lm="être permis"> <i></i><par n="/être__vblex"/><p><l><b/>permise</l><r><g><b/>permis</g></r></p></e>
+<e r="LR" lm="être permis"> <i></i><par n="/être__vblex"/><p><l><b/>permises</l><r><g><b/>permis</g></r></p></e>
+<e r="LR" lm="être phosphorescent"> <i></i><par n="/être__vblex"/><p><l><b/>phosphorescente</l><r><g><b/>phosphorescent</g></r></p></e>
+<e r="LR" lm="être phosphorescent"> <i></i><par n="/être__vblex"/><p><l><b/>phosphorescents</l><r><g><b/>phosphorescent</g></r></p></e>
+<e r="LR" lm="être phosphorescent"> <i></i><par n="/être__vblex"/><p><l><b/>phosphorescentes</l><r><g><b/>phosphorescent</g></r></p></e>
+<e r="LR" lm="être plein"> <i></i><par n="/être__vblex"/><p><l><b/>pleine</l><r><g><b/>plein</g></r></p></e>
+<e r="LR" lm="être plein"> <i></i><par n="/être__vblex"/><p><l><b/>pleins</l><r><g><b/>plein</g></r></p></e>
+<e r="LR" lm="être plein"> <i></i><par n="/être__vblex"/><p><l><b/>pleines</l><r><g><b/>plein</g></r></p></e>
+<e r="LR" lm="être porté"> <i></i><par n="/être__vblex"/><p><l><b/>portée</l><r><g><b/>porté</g></r></p></e>
+<e r="LR" lm="être porté"> <i></i><par n="/être__vblex"/><p><l><b/>portés</l><r><g><b/>porté</g></r></p></e>
+<e r="LR" lm="être porté"> <i></i><par n="/être__vblex"/><p><l><b/>portées</l><r><g><b/>porté</g></r></p></e>
+<e r="LR" lm="être précoce"> <i></i><par n="/être__vblex"/><p><l><b/>précoces</l><r><g><b/>précoce</g></r></p></e>
+<e r="LR" lm="être prédisposé"> <i></i><par n="/être__vblex"/><p><l><b/>prédisposée</l><r><g><b/>prédisposé</g></r></p></e>
+<e r="LR" lm="être prédisposé"> <i></i><par n="/être__vblex"/><p><l><b/>prédisposés</l><r><g><b/>prédisposé</g></r></p></e>
+<e r="LR" lm="être prédisposé"> <i></i><par n="/être__vblex"/><p><l><b/>prédisposées</l><r><g><b/>prédisposé</g></r></p></e>
+<e r="LR" lm="être présent"> <i></i><par n="/être__vblex"/><p><l><b/>présente</l><r><g><b/>présent</g></r></p></e>
+<e r="LR" lm="être présent"> <i></i><par n="/être__vblex"/><p><l><b/>présents</l><r><g><b/>présent</g></r></p></e>
+<e r="LR" lm="être présent"> <i></i><par n="/être__vblex"/><p><l><b/>présentes</l><r><g><b/>présent</g></r></p></e>
+<e r="LR" lm="être prêtre"> <i></i><par n="/être__vblex"/><p><l><b/>prêtres</l><r><g><b/>prêtre</g></r></p></e>
+<e r="LR" lm="être prioritaire"> <i></i><par n="/être__vblex"/><p><l><b/>prioritaires</l><r><g><b/>prioritaire</g></r></p></e>
+<e r="LR" lm="être proche"> <i></i><par n="/être__vblex"/><p><l><b/>proches</l><r><g><b/>proche</g></r></p></e>
+<e r="LR" lm="être publié"> <i></i><par n="/être__vblex"/><p><l><b/>publiée</l><r><g><b/>publié</g></r></p></e>
+<e r="LR" lm="être publié"> <i></i><par n="/être__vblex"/><p><l><b/>publiés</l><r><g><b/>publié</g></r></p></e>
+<e r="LR" lm="être publié"> <i></i><par n="/être__vblex"/><p><l><b/>publiées</l><r><g><b/>publié</g></r></p></e>
+<e r="LR" lm="être qualifié"> <i></i><par n="/être__vblex"/><p><l><b/>qualifiée</l><r><g><b/>qualifié</g></r></p></e>
+<e r="LR" lm="être qualifié"> <i></i><par n="/être__vblex"/><p><l><b/>qualifiés</l><r><g><b/>qualifié</g></r></p></e>
+<e r="LR" lm="être qualifié"> <i></i><par n="/être__vblex"/><p><l><b/>qualifiées</l><r><g><b/>qualifié</g></r></p></e>
+<e r="LR" lm="être ratifié"> <i></i><par n="/être__vblex"/><p><l><b/>ratifiée</l><r><g><b/>ratifié</g></r></p></e>
+<e r="LR" lm="être ratifié"> <i></i><par n="/être__vblex"/><p><l><b/>ratifiés</l><r><g><b/>ratifié</g></r></p></e>
+<e r="LR" lm="être ratifié"> <i></i><par n="/être__vblex"/><p><l><b/>ratifiées</l><r><g><b/>ratifié</g></r></p></e>
+<e r="LR" lm="être reconnaissant"> <i></i><par n="/être__vblex"/><p><l><b/>reconnaissante</l><r><g><b/>reconnaissant</g></r></p></e>
+<e r="LR" lm="être reconnaissant"> <i></i><par n="/être__vblex"/><p><l><b/>reconnaissants</l><r><g><b/>reconnaissant</g></r></p></e>
+<e r="LR" lm="être reconnaissant"> <i></i><par n="/être__vblex"/><p><l><b/>reconnaissantes</l><r><g><b/>reconnaissant</g></r></p></e>
+<e r="LR" lm="être reçu"> <i></i><par n="/être__vblex"/><p><l><b/>reçue</l><r><g><b/>reçu</g></r></p></e>
+<e r="LR" lm="être reçu"> <i></i><par n="/être__vblex"/><p><l><b/>reçus</l><r><g><b/>reçu</g></r></p></e>
+<e r="LR" lm="être reçu"> <i></i><par n="/être__vblex"/><p><l><b/>reçues</l><r><g><b/>reçu</g></r></p></e>
+<e r="LR" lm="être redevable"> <i></i><par n="/être__vblex"/><p><l><b/>redevables</l><r><g><b/>redevable</g></r></p></e>
+<e r="LR" lm="être relié"> <i></i><par n="/être__vblex"/><p><l><b/>reliée</l><r><g><b/>relié</g></r></p></e>
+<e r="LR" lm="être relié"> <i></i><par n="/être__vblex"/><p><l><b/>reliés</l><r><g><b/>relié</g></r></p></e>
+<e r="LR" lm="être relié"> <i></i><par n="/être__vblex"/><p><l><b/>reliées</l><r><g><b/>relié</g></r></p></e>
+<e r="LR" lm="être ruiné"> <i></i><par n="/être__vblex"/><p><l><b/>ruinée</l><r><g><b/>ruiné</g></r></p></e>
+<e r="LR" lm="être ruiné"> <i></i><par n="/être__vblex"/><p><l><b/>ruinés</l><r><g><b/>ruiné</g></r></p></e>
+<e r="LR" lm="être ruiné"> <i></i><par n="/être__vblex"/><p><l><b/>ruinées</l><r><g><b/>ruiné</g></r></p></e>
+<e r="LR" lm="être sanctionné"> <i></i><par n="/être__vblex"/><p><l><b/>sanctionnée</l><r><g><b/>sanctionné</g></r></p></e>
+<e r="LR" lm="être sanctionné"> <i></i><par n="/être__vblex"/><p><l><b/>sanctionnés</l><r><g><b/>sanctionné</g></r></p></e>
+<e r="LR" lm="être sanctionné"> <i></i><par n="/être__vblex"/><p><l><b/>sanctionnées</l><r><g><b/>sanctionné</g></r></p></e>
+<e r="LR" lm="être saoul"> <i></i><par n="/être__vblex"/><p><l><b/>saoule</l><r><g><b/>saoul</g></r></p></e>
+<e r="LR" lm="être saoul"> <i></i><par n="/être__vblex"/><p><l><b/>saouls</l><r><g><b/>saoul</g></r></p></e>
+<e r="LR" lm="être saoul"> <i></i><par n="/être__vblex"/><p><l><b/>saoules</l><r><g><b/>saoul</g></r></p></e>
+<e r="LR" lm="être sécant"> <i></i><par n="/être__vblex"/><p><l><b/>sécante</l><r><g><b/>sécant</g></r></p></e>
+<e r="LR" lm="être sécant"> <i></i><par n="/être__vblex"/><p><l><b/>sécants</l><r><g><b/>sécant</g></r></p></e>
+<e r="LR" lm="être sécant"> <i></i><par n="/être__vblex"/><p><l><b/>sécantes</l><r><g><b/>sécant</g></r></p></e>
+<e r="LR" lm="être signé"> <i></i><par n="/être__vblex"/><p><l><b/>signée</l><r><g><b/>signé</g></r></p></e>
+<e r="LR" lm="être signé"> <i></i><par n="/être__vblex"/><p><l><b/>signés</l><r><g><b/>signé</g></r></p></e>
+<e r="LR" lm="être signé"> <i></i><par n="/être__vblex"/><p><l><b/>signées</l><r><g><b/>signé</g></r></p></e>
+<e r="LR" lm="être soûl"> <i></i><par n="/être__vblex"/><p><l><b/>soûle</l><r><g><b/>soûl</g></r></p></e>
+<e r="LR" lm="être soûl"> <i></i><par n="/être__vblex"/><p><l><b/>soûls</l><r><g><b/>soûl</g></r></p></e>
+<e r="LR" lm="être soûl"> <i></i><par n="/être__vblex"/><p><l><b/>soûles</l><r><g><b/>soûl</g></r></p></e>
+<e r="LR" lm="être stupéfié"> <i></i><par n="/être__vblex"/><p><l><b/>stupéfiée</l><r><g><b/>stupéfié</g></r></p></e>
+<e r="LR" lm="être stupéfié"> <i></i><par n="/être__vblex"/><p><l><b/>stupéfiés</l><r><g><b/>stupéfié</g></r></p></e>
+<e r="LR" lm="être stupéfié"> <i></i><par n="/être__vblex"/><p><l><b/>stupéfiées</l><r><g><b/>stupéfié</g></r></p></e>
+<e r="LR" lm="être surpris"> <i></i><par n="/être__vblex"/><p><l><b/>surprise</l><r><g><b/>surpris</g></r></p></e>
+<e r="LR" lm="être surpris"> <i></i><par n="/être__vblex"/><p><l><b/>surprises</l><r><g><b/>surpris</g></r></p></e>
+<e r="LR" lm="être suspendu"> <i></i><par n="/être__vblex"/><p><l><b/>suspendue</l><r><g><b/>suspendu</g></r></p></e>
+<e r="LR" lm="être suspendu"> <i></i><par n="/être__vblex"/><p><l><b/>suspendus</l><r><g><b/>suspendu</g></r></p></e>
+<e r="LR" lm="être suspendu"> <i></i><par n="/être__vblex"/><p><l><b/>suspendues</l><r><g><b/>suspendu</g></r></p></e>
+<e r="LR" lm="être tapi"> <i></i><par n="/être__vblex"/><p><l><b/>tapie</l><r><g><b/>tapi</g></r></p></e>
+<e r="LR" lm="être tapi"> <i></i><par n="/être__vblex"/><p><l><b/>tapis</l><r><g><b/>tapi</g></r></p></e>
+<e r="LR" lm="être tapi"> <i></i><par n="/être__vblex"/><p><l><b/>tapies</l><r><g><b/>tapi</g></r></p></e>
+<e r="LR" lm="être tardif"> <i></i><par n="/être__vblex"/><p><l><b/>tardive</l><r><g><b/>tardif</g></r></p></e>
+<e r="LR" lm="être tardif"> <i></i><par n="/être__vblex"/><p><l><b/>tardifs</l><r><g><b/>tardif</g></r></p></e>
+<e r="LR" lm="être tardif"> <i></i><par n="/être__vblex"/><p><l><b/>tardives</l><r><g><b/>tardif</g></r></p></e>
+<e r="LR" lm="être tenté"> <i></i><par n="/être__vblex"/><p><l><b/>tentée</l><r><g><b/>tenté</g></r></p></e>
+<e r="LR" lm="être tenté"> <i></i><par n="/être__vblex"/><p><l><b/>tentés</l><r><g><b/>tenté</g></r></p></e>
+<e r="LR" lm="être tenté"> <i></i><par n="/être__vblex"/><p><l><b/>tentées</l><r><g><b/>tenté</g></r></p></e>
+<e r="LR" lm="être tenu"> <i></i><par n="/être__vblex"/><p><l><b/>tenue</l><r><g><b/>tenu</g></r></p></e>
+<e r="LR" lm="être tenu"> <i></i><par n="/être__vblex"/><p><l><b/>tenus</l><r><g><b/>tenu</g></r></p></e>
+<e r="LR" lm="être tenu"> <i></i><par n="/être__vblex"/><p><l><b/>tenues</l><r><g><b/>tenu</g></r></p></e>
+<e r="LR" lm="être tourné"> <i></i><par n="/être__vblex"/><p><l><b/>tournée</l><r><g><b/>tourné</g></r></p></e>
+<e r="LR" lm="être tourné"> <i></i><par n="/être__vblex"/><p><l><b/>tournés</l><r><g><b/>tourné</g></r></p></e>
+<e r="LR" lm="être tourné"> <i></i><par n="/être__vblex"/><p><l><b/>tournées</l><r><g><b/>tourné</g></r></p></e>
+<e r="LR" lm="être triste"> <i></i><par n="/être__vblex"/><p><l><b/>tristes</l><r><g><b/>triste</g></r></p></e>
+<e r="LR" lm="être valable"> <i></i><par n="/être__vblex"/><p><l><b/>valables</l><r><g><b/>valable</g></r></p></e>
+<e r="LR" lm="être validé"> <i></i><par n="/être__vblex"/><p><l><b/>validée</l><r><g><b/>validé</g></r></p></e>
+<e r="LR" lm="être validé"> <i></i><par n="/être__vblex"/><p><l><b/>validés</l><r><g><b/>validé</g></r></p></e>
+<e r="LR" lm="être validé"> <i></i><par n="/être__vblex"/><p><l><b/>validées</l><r><g><b/>validé</g></r></p></e>
+<e r="LR" lm="être voisin"> <i></i><par n="/être__vblex"/><p><l><b/>voisine</l><r><g><b/>voisin</g></r></p></e>
+<e r="LR" lm="être voisin"> <i></i><par n="/être__vblex"/><p><l><b/>voisins</l><r><g><b/>voisin</g></r></p></e>
+<e r="LR" lm="être voisin"> <i></i><par n="/être__vblex"/><p><l><b/>voisines</l><r><g><b/>voisin</g></r></p></e>
+-->
 <e lm="étrier">                                   <i>étrier</i><par n="accessoire__n"/></e>
 <e lm="étrille" a="paradigme_auto">               <i>étrille</i><par n="abeille__n"/></e>
 <e lm="étriller" a="paradigme_auto">              <i>étrill</i><par n="abaiss/er__vblex"/></e>
@@ -26173,6 +26501,8 @@
 <e lm="étudier à fond" a="groupe_cree_auto">      <i>étudi</i><par n="abaiss/er__vblex"/><p><l><b/>à<b/>fond</l><r><g><b/>à<b/>fond</g></r></p></e>
 <e lm="étui">                                     <i>étui</i><par n="accessoire__n"/></e>
 <e lm="et voilà">                                 <i>et<b/>voilà</i><par n="ah__ij"/></e>
+<e lm="et voilà que">                             <i>et<b/>voilà<b/>que</i><par n="afin_que__cnjadv"/></e>
+<e lm="voilà que">                             <i>voilà<b/>que</i><par n="afin_que__cnjadv"/></e>
 <e lm="étymologie">                               <i>étymologie</i><par n="abeille__n"/></e>
 <e lm="étymon">                                   <i>étymon</i><par n="accessoire__n"/></e>
 <e lm="eucalyptus" a="paradigme_auto">            <i>eucalyptus</i><par n="mois__n"/></e>
@@ -27983,7 +28313,7 @@
 <e lm="hors connexion" a="paradigme_auto">        <i>hors<b/>connexion</i><par n="hier__adv"/></e>
 <e lm="hors de danger" a="groupe_cree_auto">      <i>hors</i><par n="attendu__pr"/><p><l><b/>de<b/>danger</l><r><g><b/>de<b/>danger</g></r></p></e>
 <e lm="hors de doute" a="groupe_cree_auto">       <i>hors</i><par n="attendu__pr"/><p><l><b/>de<b/>doute</l><r><g><b/>de<b/>doute</g></r></p></e>
-<e lm="hors de">                                  <i>hors<b/>de</i><par n="contde__pr"/></e>
+<e lm="hors de">                                  <i>hors<b/></i><par n="contde__pr"/></e>
 <e lm="hors d'œuvre" a="groupe_cree_auto">        <i>hors</i><par n="attendu__pr"/><p><l><b/>d'œuvre</l><r><g><b/>d'œuvre</g></r></p></e>
 <e lm="hors-d'œuvre">                             <i>hors-d'œuvre</i><par n="accessoire__n"/></e>
 <e lm="hors pair">                                <i>hors<b/>pair</i><par n="arrière__adj"/></e>
@@ -29173,7 +29503,7 @@
 <e lm="loi de composition externe" a="groupe_cree_auto"><i>loi</i><par n="abeille__n"/><p><l><b/>de<b/>composition<b/>externe</l><r><g><b/>de<b/>composition<b/>externe</g></r></p></e>
 <e lm="loi de composition interne" a="groupe_cree_auto"><i>loi</i><par n="abeille__n"/><p><l><b/>de<b/>composition<b/>interne</l><r><g><b/>de<b/>composition<b/>interne</g></r></p></e>
 <e lm="loi de probabilité" a="groupe_cree_auto">  <i>loi</i><par n="abeille__n"/><p><l><b/>de<b/>probabilité</l><r><g><b/>de<b/>probabilité</g></r></p></e>
-<e lm="loin de">                                  <i>loin<b/>de</i><par n="contde__pr"/></e>
+<e lm="loin de">                                  <i>loin<b/></i><par n="contde__pr"/></e>
 <e lm="loin">                                     <i>loin</i><par n="académique__adj"/></e>
 <e lm="lointain">                                 <i>lointain</i><par n="africain__n"/></e>
 <e lm="loir">                                     <i>loir</i><par n="accessoire__n"/></e>
@@ -29233,7 +29563,7 @@
 <e lm="luette">                                   <i>luette</i><par n="abeille__n"/></e>
 <e lm="luge" a="paradigme_auto">                  <i>luge</i><par n="abeille__n"/></e>
 <e lm="lui">                                      <i>lui</i><par n="lui__prn"/></e>
-<e lm="luire">                                    <i>lu</i><par n="lu/i[]re__vblex__"/></e>
+<!-- <e lm="luire">                                    <i>lu</i><par n="lu/i[]re__vblex__"/></e> trop da problèmes avec "lui" -->
 <e lm="luminaire">           <i>luminaire</i><par n="accessoire__n"/></e>
 <e lm="luminescence" a="paradigme_auto">          <i>luminescence</i><par n="abeille__n"/></e>
 <e lm="luminescent">                              <i>luminescent</i><par n="abaissant__adj"/></e>
@@ -30809,7 +31139,7 @@
 <e lm="parler de façon saccadée" a="groupe_cree_auto"><i>parl</i><par n="abaiss/er__vblex"/><p><l><b/>de<b/>façon<b/>saccadée</l><r><g><b/>de<b/>façon<b/>saccadée</g></r></p></e>
 <e lm="parler en argot" a="groupe_cree_auto">     <i>parl</i><par n="abaiss/er__vblex"/><p><l><b/>en<b/>argot</l><r><g><b/>en<b/>argot</g></r></p></e>
 <e lm="parler">                                   <i>parler</i><par n="mois__n"/></e>
-<e lm="par les soins de">                         <i>par<b/>les<b/>soins<b/>de</i><par n="contde__pr"/></e>
+<e lm="par les soins de">                         <i>par<b/>les<b/>soins<b/></i><par n="contde__pr"/></e>
 <e lm="par malheur" a="paradigme_auto">           <i>par<b/>malheur</i><par n="hier__adv"/></e>
 <e lm="parodie">                                  <i>parodie</i><par n="abeille__n"/></e>
 <e lm="parodier" a="paradigme_auto">              <i>parodi</i><par n="abaiss/er__vblex"/></e>
@@ -31421,6 +31751,7 @@
 <e lm="polyptère">                                <i>polyptère</i><par n="accessoire__n"/></e>
 <e lm="polystyrène">           <i>polystyrène</i><par n="accessoire__n"/></e>
 <e lm="polytechnique" a="paradigme_auto">         <i>polytechnique</i><par n="abeille__n"/></e>
+<e lm="polytechnique">                    <i>polytechnique</i><par n="académique__adj"/></e>
 <e lm="pomelo">                                   <i>pomelo</i><par n="accessoire__n"/></e>
 <e lm="pommade" a="paradigme_auto">               <i>pommade</i><par n="abeille__n"/></e>
 <e lm="pommader" a="paradigme_auto">              <i>pommad</i><par n="abaiss/er__vblex"/></e>
@@ -31545,9 +31876,9 @@
 <e lm="pourboire">             <i>pourboire</i><par n="accessoire__n"/></e>
 <e lm="pourcent">                                 <i>pourcent</i><par n="mois__n"/></e>
 <e lm="pour ce qui concerne">  <i>pour<b/>ce<b/>qui<b/>concerne</i><par n="attendu__pr"/></e>
-<e lm="pour ce qui est de">    <i>pour<b/>ce<b/>qui<b/>est<b/>de</i><par n="contde__pr"/></e>
+<e lm="pour ce qui est de">    <i>pour<b/>ce<b/>qui<b/>est<b/></i><par n="contde__pr"/></e>
 <e lm="pour essayer" a="paradigme_auto">          <i>pour<b/>essayer</i><par n="hier__adv"/></e>
-<e lm="pour la peine de">                         <i>pour<b/>la<b/>peine<b/>de</i><par n="contde__pr"/></e>
+<e lm="pour la peine de">                         <i>pour<b/>la<b/>peine<b/></i><par n="contde__pr"/></e>
 <e lm="pourpier">                                 <i>pourpier</i><par n="accessoire__n"/></e>
 <e lm="pourpoint">                                <i>pourpoint</i><par n="accessoire__n"/></e>
 <e lm="pourpre">                                  <i>pourpre</i><par n="académique__adj"/></e>
@@ -33429,7 +33760,7 @@
 <e lm="surabondance" a="paradigme_auto">          <i>surabondance</i><par n="abeille__n"/></e>
 <e lm="surabonder" a="paradigme_auto">            <i>surabond</i><par n="abaiss/er__vblex"/></e>
 <e lm="surcharge">                                <i>surcharge</i><par n="abeille__n"/></e>
-<e lm="sur commission de">                        <i>sur<b/>commission<b/>de</i><par n="contde__pr"/></e>
+<e lm="sur commission de">                        <i>sur<b/>commission<b/></i><par n="contde__pr"/></e>
 <e lm="sur-corps" a="paradigme_auto">             <i>sur-corps</i><par n="mois__n"/></e>
 <e lm="surcouper" a="paradigme_auto">             <i>surcoup</i><par n="abaiss/er__vblex"/></e>
 <e lm="sureau" a="paradigme_auto">                <i>sureau</i><par n="lieu__n"/></e>
@@ -33442,12 +33773,12 @@
 <e lm="surhumain">                                <i>surhumain</i><par n="abaissant__adj"/></e>
 <e lm="surjectif" a="paradigme_auto">             <i>surjecti</i><par n="affirmati/f__adj"/></e>
 <e lm="surjection" a="paradigme_auto">            <i>surjection</i><par n="abeille__n"/></e>
-<e lm="sur la base de">                           <i>sur<b/>la<b/>base<b/>de</i><par n="contde__pr"/></e>
+<e lm="sur la base de">                           <i>sur<b/>la<b/>base<b/></i><par n="contde__pr"/></e>
 <e lm="sur le côté" a="paradigme_auto">           <i>sur<b/>le<b/>côté</i><par n="hier__adv"/></e>
 <e lm="sur le fond" a="paradigme_auto">           <i>sur<b/>le<b/>fond</i><par n="hier__adv"/></e>
 <e lm="sur le pourtour" a="paradigme_auto">       <i>sur<b/>le<b/>pourtour</i><par n="hier__adv"/></e>
 <e lm="sur le pourtour de" a="paradigme_auto">    <i>sur<b/>le<b/>pourtour<b/>de</i><par n="hier__adv"/></e>
-<e lm="sur le pourtour de">                       <i>sur<b/>le<b/>pourtour<b/>de</i><par n="contde__pr"/></e>
+<e lm="sur le pourtour de">                       <i>sur<b/>le<b/>pourtour<b/></i><par n="contde__pr"/></e>
 <e lm="sur mesure">                               <i>sur<b/>mesure</i><par n="hier__adv"/></e>
 <e lm="surnaï">                                   <i>surnaï</i><par n="abeille__n"/></e>
 <e lm="zurna">                                   <i>zurna</i><par n="abeille__n"/></e>
@@ -33891,7 +34222,7 @@
 <e lm="tous">                                     <i>tous</i><par n="hier__adv"/></e>
 <e lm="tousser" a="paradigme_auto">               <i>touss</i><par n="abaiss/er__vblex"/></e>
 <e lm="tout à fait">                              <i>tout<b/>à<b/>fait</i><par n="hier__adv"/></e>
-<e lm="tout autour de">                           <i>tout<b/>autour<b/>de</i><par n="contde__pr"/></e>
+<e lm="tout autour de">                           <i>tout<b/>autour<b/></i><par n="contde__pr"/></e>
 <e lm="tout autour">                              <i>tout<b/>autour</i><par n="hier__adv"/></e>
 <e lm="tout boulotter">      <i>tout<b/>boulott</i><par n="abaiss/er__vblex"/></e>
 <e lm="tout comme">                               <i>tout<b/>comme</i><par n="combien__rel"/></e>
@@ -34334,7 +34665,7 @@
 <e lm="virtuel">                                  <i>virtuel</i><par n="annuel__adj"/></e>
 <e lm="virus">                                    <i>virus</i><par n="mois__n"/></e>
 <e lm="vis-à-vis" a="paradigme_auto">             <i>vis-à-vis</i><par n="hier__adv"/></e>
-<e lm="vis-à-vis de">                             <i>vis-à-vis<b/>de</i><par n="contde__pr"/></e>
+<e lm="vis-à-vis de">                             <i>vis-à-vis<b/></i><par n="contde__pr"/></e>
 <e lm="viscère">                                  <i>viscère</i><par n="accessoire__n"/></e>
 <e lm="viscose" a="paradigme_auto">               <i>viscose</i><par n="abeille__n"/></e>
 <e lm="visé" a="paradigme_auto">                  <i>visé</i><par n="abaissant__adj"/></e>
@@ -35822,6 +36153,8 @@
 <e lm="moutarde noire"> <p><l>moutardes<b/>noires</l> <r>moutarde<b/>noire</r></p> <par n="vacances__n"/></e>
 <e lm="mouvement espérantiste"> <p><l>mouvement<b/>espérantiste</l> <r>mouvement<b/>espérantiste</r></p> <par n="personnel__n"/></e>
 <e lm="mouvement espérantiste"> <p><l>mouvements<b/>espérantistes</l> <r>mouvement<b/>espérantiste</r></p> <par n="gens__n"/></e>
+<e lm="mouvement scout"> <p><l>mouvement<b/>scout</l> <r>mouvement<b/>scout</r></p> <par n="personnel__n"/></e>
+<e lm="mouvement scout"> <p><l>mouvements<b/>scout</l> <r>mouvement<b/>scout</r></p> <par n="gens__n"/></e>
 <e lm="multiplication matricielle"> <p><l>multiplication<b/>matricielle</l> <r>multiplication<b/>matricielle</r></p> <par n="alma_mater__n"/></e>
 <e lm="multiplication matricielle"> <p><l>multiplications<b/>matricielles</l> <r>multiplication<b/>matricielle</r></p> <par n="vacances__n"/></e>
 <e lm="multiplication polynomiale"> <p><l>multiplication<b/>polynomiale</l> <r>multiplication<b/>polynomiale</r></p> <par n="alma_mater__n"/></e>
@@ -36830,8 +37163,8 @@
 <e r="LR">                                        <p><l>est-ce<b/>qu'</l>       <r>est-ce<b/>que<s n="prn"/><s n="itg"/><s n="mf"/><s n="sp"/></r></p></e>
 <e r="LR" lm="avoir pour objectif d'">            <par n="/avoir__vblex"/><p><l><b/>pour<b/>objectif<b/>de</l><r><g><b/>pour<b/>objectif<b/>de</g></r></p></e>
 <e r="LR" lm="avoir pour objet d'">               <par n="/avoir__vblex"/><p><l><b/>pour<b/>objet<b/>de</l><r><g><b/>pour<b/>objectif<b/>de</g></r></p></e>
-<e r="LR" lm="avoir pour but d'">                 <par n="/avoir__vblex"/><p><l><b/>pour<b/>but<b/>de</l><r><g><b/>pour<b/>objectif<b/>de</g></r></p></e>
-<e r="LR" lm="avoir pour seul but d'">            <par n="/avoir__vblex"/><p><l><b/>pour<b/>seul<b/>but<b/>de</l><r><g><b/>pour<b/>objectif<b/>de</g></r></p></e>
+<e r="LR" lm="avoir pour but d'">                 <par n="/avoir__vblex"/><p><l><b/>pour<b/>but<b/>de</l><r><g><b/>pour<b/>but<b/>de</g></r></p></e>
+<e r="LR" lm="avoir pour seul but d'">            <par n="/avoir__vblex"/><p><l><b/>pour<b/>seul<b/>but<b/>de</l><r><g><b/>pour<b/>but<b/>de</g></r></p></e>
 <e r="LR" lm="au gré d'" a="webform">             <p><l>au<b/>gré<b/>d'</l>     <r>au<b/>gré<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="aussi bien que" a="webform">        <p><l>aussi<b/>bien<b/>qu'</l><r>aussi<b/>bien<b/>que<s n="cnjadv"/></r></p></e>
 <e r="LR" lm="à présent que" a="webform">         <p><l>à<b/>présent<b/>qu'</l> <r>à<b/>présent<b/>que<s n="cnjadv"/></r></p></e>
