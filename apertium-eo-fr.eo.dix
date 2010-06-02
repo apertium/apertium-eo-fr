@@ -334,20 +334,18 @@
 
 
 <pardef n="mia__det">
-  <e r="LR"><p><l></l>          <r><s n="det"/><s n="pos"/><s n="sp"/></r></p></e>
-  <e r="RL"><p><l></l>          <r><s n="det"/><s n="pos"/><s n="sg"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>j</l>         <r><s n="det"/><s n="pos"/><s n="pl"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>n</l>         <r><s n="det"/><s n="pos"/><s n="sg"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l>jn</l>        <r><s n="det"/><s n="pos"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e><p><l></l>          <r><s n="det"/><s n="pos"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e><p><l>j</l>         <r><s n="det"/><s n="pos"/><s n="pl"/><s n="nom"/></r></p></e>
+  <e><p><l>n</l>         <r><s n="det"/><s n="pos"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e><p><l>jn</l>        <r><s n="det"/><s n="pos"/><s n="pl"/><s n="acc"/></r></p></e>
 </pardef>
 
 
 <pardef n="dem__det">
-  <e r="LR"><p><l></l>          <r><s n="det"/><s n="dem"/><s n="sp"/></r></p></e>
-  <e r="RL"><p><l></l>          <r><s n="det"/><s n="dem"/><s n="sg"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>j</l>         <r><s n="det"/><s n="dem"/><s n="pl"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>n</l>         <r><s n="det"/><s n="dem"/><s n="sg"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l>jn</l>        <r><s n="det"/><s n="dem"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e><p><l></l>          <r><s n="det"/><s n="dem"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e><p><l>j</l>         <r><s n="det"/><s n="dem"/><s n="pl"/><s n="nom"/></r></p></e>
+  <e><p><l>n</l>         <r><s n="det"/><s n="dem"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e><p><l>jn</l>        <r><s n="det"/><s n="dem"/><s n="pl"/><s n="acc"/></r></p></e>
 </pardef>
 
 	 
@@ -541,6 +539,14 @@
 
 
 
+<pardef n="unu__num">
+  <e>       <p><l></l>          <r><s n="num"/><s n="sg"/></r></p></e>
+</pardef>
+
+<pardef n="nul__num">
+  <e>       <p><l></l>          <r><s n="num"/><s n="pl"/></r></p></e>
+</pardef>
+
 <pardef n="du__num">
   <e>       <p><l></l>          <r><s n="num"/><s n="pl"/></r></p></e>
   <e>       <p><l><b/>cent</l>  <r><b/>cent<s n="num"/><s n="pl"/></r></p></e>
@@ -600,6 +606,8 @@
 
 <pardef n="si__prn">
   <e>       <p><l></l>          <r>prpers<s n="prn"/><s n="ref"/><s n="p3"/><s n="mf"/><s n="sp"/></r></p></e>
+  <e r="RL"><p><l></l>          <r>prpers<s n="prn"/><s n="ref"/><s n="p3"/><s n="mf"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l></l>          <r>prpers<s n="prn"/><s n="ref"/><s n="p3"/><s n="mf"/><s n="pl"/></r></p></e>
 </pardef>
 
 <pardef n="premf__prn">
@@ -4097,6 +4105,7 @@
 <e lm="estinteco">       <i>estintec</i><par n="o__n"/></e>
 <e lm="estono">          <i>eston</i><par n="ino__n"/></e>
 <e lm="estonteco">       <i>estontec</i><par n="o__n"/></e>
+<e lm="estonto">         <i>estont</i><par n="o__n"/></e>
 <e lm="estro">           <i>estr</i><par n="ino__n"/></e>
 <e lm="estrado">         <i>estrad</i><par n="o__n"/></e>
 <e lm="estraro">         <i>estrar</i><par n="o__n"/></e>
@@ -7725,13 +7734,12 @@
 <e lm="kronikisto">      <i>kronikist</i><par n="o__n"/></e>
 <e lm="kronologio">      <i>kronologi</i><par n="o__n"/></e>
 <e lm="kronometro">      <i>kronometr</i><par n="o__n"/></e>
-<e lm="kronprinco">      <i>kronprinc</i><par n="o__n"/></e>
+<e lm="kronprinco">      <i>kronprinc</i><par n="ino__n"/></e>
 <e lm="kropo">           <i>krop</i><par n="o__n"/></e>
 <e lm="krozisto">        <i>krozist</i><par n="ino__n"/></e>
 <e lm="krozŝipo">        <i>krozŝip</i><par n="o__n"/></e>
 <e lm="kroĉilo">         <i>kroĉil</i><par n="o__n"/></e>
 <e lm="kruco">           <i>kruc</i><par n="o__n"/></e>
-<e lm="krucbekulo">      <i>krucbekul</i><par n="ino__n"/></e>
 <e lm="krucbekulo">      <i>krucbekul</i><par n="o__n"/></e>
 <e lm="krucifikso">      <i>krucifiks</i><par n="o__n"/></e>
 <e lm="krucisto">        <i>krucist</i><par n="o__n"/></e>
@@ -9761,7 +9769,7 @@
 <e lm="noktuo">          <i>noktu</i><par n="o__n"/></e>
 <e lm="nokturno">        <i>nokturn</i><par n="o__n"/></e>
 <e lm="nomo">            <i>nom</i><par n="o__n"/></e>
-<e lm="nomado">          <i>nomad</i><par n="o__n"/></e>
+<e lm="nomado">          <i>nomad</i><par n="ino__n"/></e>
 <e lm="nomadismo">       <i>nomadism</i><par n="o__n"/></e>
 <e lm="nomarko">         <i>nomark</i><par n="o__n"/></e>
 <e lm="nombro">          <i>nombr</i><par n="o__n"/></e>
@@ -18310,7 +18318,9 @@
 <e lm="Hipokrato">       <i>Hipokrat</i><par n="Mark/o__np"/></e>
 <e lm="Hipolito">        <i>Hipolit</i><par n="Mark/o__np"/></e>
 <e lm="Hispanameriko">   <i>Hispanamerik</i><par n="Barcelon/o__np"/></e>
-<e lm="Hispanio">        <i>Hispani</i><par n="Barcelon/o__np"/></e>
+<e lm="Hispanio">        <i>Hispan</i><par n="Alban/io__np"/></e>
+<e lm="Sovetio">         <i>Sovet</i><par n="Alban/io__np"/></e>
+<e lm="USSR">            <i>USSR</i><par n="Barcelona__np"/></e>
 <e lm="Holando">         <i>Holand</i><par n="Barcelon/o__np"/></e>
 <e lm="Homero">          <i>Homer</i><par n="Mark/o__np"/></e>
 <e lm="Honduro">         <i>Hondur</i><par n="Barcelon/o__np"/></e>
@@ -23684,6 +23694,7 @@
 <e lm="antaŭ">           <i>antaŭ</i><par n="al__pr"/></e>
 <e lm="antaŭ ol">        <i>antaŭ<b/>ol</i><par n="al__pr"/></e>
 <e lm="apoge al">        <i>apoge<b/>al</i><par n="al__pr"/></e>
+<e lm="sekve al">        <i>sekve<b/>al</i><par n="al__pr"/></e>
 <e lm="apud">            <i>apud</i><par n="al__pr"/></e>
 <e lm="atendante">       <i>atendante</i><par n="al__pr"/></e>
 <e lm="cele al">         <i>cele<b/>al</i><par n="al__pr"/></e>
@@ -23859,6 +23870,12 @@
 <e lm="ĉiu">             <i>ĉiu</i><par n="quant__det"/></e>
 <e lm="ĝia">             <i>ĝia</i><par n="mia__det"/></e>
 <e lm="ŝia">             <i>ŝia</i><par n="mia__det"/></e>
+<e lm="tiu tuta">        <p><l>tiu<b/>tuta</l>       <r>tiu<b/>tuta<s n="det"/><s n="dem"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="tiu tuta">        <p><l>tiun<b/>tutan</l>     <r>tiu<b/>tuta<s n="det"/><s n="dem"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="tiu tuta">        <p><l>tiuj<b/>tutaj</l>     <r>tiu<b/>tuta<s n="det"/><s n="dem"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="tiu tuta">        <p><l>tiujn<b/>tutajn</l>   <r>tiu<b/>tuta<s n="det"/><s n="dem"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="ĉiu ĉi">        <p><l>ĉiuj<b/>ĉi</l>     <r>ĉiu<b/>ĉi<s n="det"/><s n="dem"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="ĉiu ĉi">        <p><l>ĉiujn<b/>ĉi</l>   <r>ĉiu<b/>ĉi<s n="det"/><s n="dem"/><s n="pl"/><s n="acc"/></r></p></e>
     <!-- ******************************
           group det_symbol
       ****************************** -->
@@ -23941,6 +23958,8 @@
 <e lm="naŭcent">            <i>naŭcent</i><par n="du__num"/></e>
 <e lm="D">               <i>D</i><par n="CX__num"/></e>
 <e lm="dek">             <i>dek</i><par n="dudek__num"/></e>
+<e lm="nul">              <i>nul</i><par n="nul__num"/></e>
+<e lm="unu">              <i>unu</i><par n="unu__num"/></e>
 <e lm="du">              <i>du</i><par n="du__num"/></e>
 <e lm="dudek">           <i>dudek</i><par n="dudek__num"/></e>
 <e lm="I">               <i>I</i><par n="CX__num"/></e>

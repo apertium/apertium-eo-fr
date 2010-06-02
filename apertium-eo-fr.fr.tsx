@@ -56,13 +56,13 @@
     <tags-item tags="ij"/>
   </def-label> 
   <def-label name="ANTROPONIM">
-    <tags-item tags="np.ant"/>
+    <tags-item tags="np.ant.*"/>
   </def-label>
   <def-label name="TOPONIM">
-    <tags-item tags="np.loc"/>
+    <tags-item tags="np.loc.*"/>
   </def-label>
   <def-label name="NPALTRES">
-    <tags-item tags="np.al"/>
+    <tags-item tags="np.al.*"/>
   </def-label>
   <def-label name="NUM" closed="true">
     <tags-item tags="num.*"/>
@@ -1021,6 +1021,43 @@
       <label-item label="VLEXGER"/>
     </label-sequence>   
     
+<!--prova prohibició de nom i imp + ger pq trie ppres (2010.06.02)-->   
+    <label-sequence>
+      <label-item label="NOMM"/>
+      <label-item label="VLEXIMP"/>
+    </label-sequence>   
+     <label-sequence>
+      <label-item label="NOMM"/>
+      <label-item label="VSERIMP"/>
+    </label-sequence>   
+     <label-sequence>
+      <label-item label="NOMM"/>
+      <label-item label="VMODALIMP"/>
+    </label-sequence> 
+    <label-sequence>
+      <label-item label="NOMF"/>
+      <label-item label="VLEXIMP"/>
+    </label-sequence>   
+     <label-sequence>
+      <label-item label="NOMF"/>
+      <label-item label="VSERIMP"/>
+    </label-sequence>   
+     <label-sequence>
+      <label-item label="NOMF"/>
+      <label-item label="VMODALIMP"/>
+    </label-sequence> 
+    <label-sequence>
+      <label-item label="NOMMF"/>
+      <label-item label="VLEXIMP"/>
+    </label-sequence>   
+     <label-sequence>
+      <label-item label="NOMMF"/>
+      <label-item label="VSERIMP"/>
+    </label-sequence>   
+     <label-sequence>
+      <label-item label="NOMMF"/>
+      <label-item label="VMODALIMP"/>
+    </label-sequence> 
       
     <label-sequence>
       <label-item label="NOMM"/>
