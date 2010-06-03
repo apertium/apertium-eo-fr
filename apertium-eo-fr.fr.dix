@@ -1844,6 +1844,14 @@
 <e>       <p><l>yeux</l>      <r>oeil<s n="n"/><s n="m"/><s n="pl"/></r></p></e>
 
 </pardef>
+<pardef n="/œil__n" c="autoconcord:m,sgpl">
+<e r="LR"><p><l>œils</l>     <r>œil<s n="n"/><s n="m"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>œil</l>      <r>œil<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>yeux</l>      <r>œil<s n="n"/><s n="m"/><s n="pl"/></r></p></e>
+
+</pardef>
 <pardef n="butor__n" c="autoconcord:m_f,sgpl">
 <e>       <p><l></l>          <r><s n="n"/><s n="m"/><s n="sg"/></r></p></e>
 <e>       <p><l>s</l>         <r><s n="n"/><s n="m"/><s n="pl"/></r></p></e>
@@ -13484,10 +13492,8 @@
 <e lm="empreinte">                                <i>empreinte</i><par n="abeille__n"/></e>
 <e lm="lentille">                                 <i>lentille</i><par n="abeille__n"/></e>
 <e lm="empêcher">                                 <i>empêch</i><par n="abaiss/er__vblex"/></e>
-<!--
 <e r="LR" lm="en">       <i>en</i><par n="en__prn"/></e>
 <e r="RL" lm="en">       <p><l><a/>en</l>    <r>en</r></p><par n="en__prn"/></e>
--->
 <e lm="en">                                       <p><l>en</l>                  <r>en</r></p><par n="attendu__pr"/></e>
 <e lm="enchanter">                                <i>enchant</i><par n="abaiss/er__vblex"/></e>
 <e lm="enclume">                                  <i>enclume</i><par n="abeille__n"/></e>
@@ -13568,6 +13574,7 @@
 <e lm="espèce">                                   <i>espèce</i><par n="abeille__n"/></e>
 <e lm="espérance">                                <i>espérance</i><par n="abeille__n"/></e>
 <e lm="espérer">                                  <i>esp</i><par n="accél/é[R]er__vblex__r"/></e>
+<e lm="inespéré">                                <i>inespéré</i><par n="abaissant__adj"/></e>
 <e lm="essai">                                    <i>essai</i><par n="accessoire__n"/></e>
 <e lm="essayer">                                  <i>essa</i><par n="bala/yer__vblex"/></e>
 <e lm="essence">                                  <i>essence</i><par n="abeille__n"/></e>
@@ -14795,8 +14802,8 @@
 <e lm="oeuf">                                     <i>oeuf</i><par n="accessoire__n"/></e>
 <e lm="oeuvre">                                   <i>oeuvre</i><par n="abeille__n"/></e>
 <e lm="oeuvrer">                                  <i>oeuvr</i><par n="abaiss/er__vblex"/></e>
-<e r="LR" lm="office">                            <i>office</i><par n="abeille__n"/></e>
-<e r="LR" lm="office">                            <i>office</i><par n="accessoire__n"/></e>
+<e lm="office">                            <i>office</i><par n="abeille__n"/></e>
+<e lm="office">                            <i>office</i><par n="accessoire__n"/></e>
 <e lm="officiel">                                 <i>officiel</i><par n="annuel__adj"/></e>
 <e lm="officiel">                                 <i>officiel</i><par n="colonel__n"/></e>
 <e lm="officiellement">                           <i>officiellement</i><par n="hier__adv"/></e>
@@ -16584,6 +16591,7 @@
 <e lm="éliminer">                                 <i>élimin</i><par n="abaiss/er__vblex"/></e>
 <e r="LR" lm="élire">                             <p><l>El</l>                  <r>él</r></p><par n="l/ire__vblex"/></e>
 <e lm="élire">                                    <i>él</i><par n="l/ire__vblex"/></e>
+<e lm="réélire">                                  <i>réél</i><par n="l/ire__vblex"/></e>
 <e r="LR" lm="éloge">                             <p><l>Eloge</l>               <r>éloge</r></p><par n="accessoire__n"/></e>
 <e lm="éloge">                                    <i>éloge</i><par n="accessoire__n"/></e>
 <e r="LR" lm="éloigner">                          <p><l>Eloign</l>              <r>éloign</r></p><par n="abaiss/er__vblex"/></e>
@@ -19636,7 +19644,8 @@
 <e lm="dextérité" a="eleka">                      <i>dextérité</i><par n="abeille__n"/></e>
 <e lm="jeu vidéo" a="eleka">                      <p><l>jeu<b/>vidéo</l>        <r>jeu<b/>vidéo<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
 <e lm="jeu vidéo" a="eleka">                      <p><l>jeux<b/>vidéos</l>      <r>jeu<b/>vidéo<s n="n"/><s n="m"/><s n="pl"/></r></p></e>
-<e lm="accusé" a="eleka">                         <i>accusé</i><par n="abaissant__adj"/></e>
+<e lm="accusé">                         <i>accusé</i><par n="africain__n"/></e>
+<e lm="coaccusé">                         <i>coaccusé</i><par n="africain__n"/></e>
 <e lm="session plénière" a="eleka">               <p><l>session<b/>plénière</l> <r>session<b/>plénière<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
 <e lm="session plénière" a="eleka">               <p><l>sessions<b/>plénières</l><r>session<b/>plénière<s n="n"/><s n="f"/><s n="pl"/></r></p></e>
 <e lm="ligne droite" a="eleka">                   <p><l>ligne<b/>droite</l>     <r>ligne<b/>droite<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
@@ -24165,13 +24174,13 @@
 <e r="RL" lm="d'assurance" a="paradigme_auto">           <i>d'assurance</i><par n="arrière__adj"/></e>
 <e lm="dasypodidés" a="paradigme_auto">           <i>dasypodidés</i><par n="gens__n"/></e>
 <e lm="datif">                                    <i>datif</i><par n="accessoire__n"/></e>
-<e lm="datte" a="paradigme_auto">                 <i>datte</i><par n="abeille__n"/></e>
+<e lm="datte">                 <i>datte</i><par n="abeille__n"/></e>
 <e lm="dattier">                                  <i>dattier</i><par n="accessoire__n"/></e>
 <e lm="datura">                                   <i>datura</i><par n="accessoire__n"/></e>
 <e lm="d'aucune sorte" a="paradigme_auto">        <i>d'aucune<b/>sorte</i><par n="arrière__adj"/></e>
 <e r="RL" lm="d'aujourd'hui" a="paradigme_auto">         <i>d'aujourd'hui</i><par n="arrière__adj"/></e>
 <e lm="dauphinelle" a="paradigme_auto">           <i>dauphinelle</i><par n="abeille__n"/></e>
-<e lm="dauphin">                                  <i>dauphin</i><par n="africain__n"/></e>
+<e lm="dauphin">                                  <i>dauphin</i><par n="accessoire__n"/></e>
 <e lm="Dauphin">                                  <i>Dauphin</i><par n="Andorre__np"/></e>
 <e lm="distant de">           <i>distant</i><par n="contde__pr"/></e>
 <e lm="d'auprès de" a="paradigme_auto">           <i>d'auprès</i><par n="contde__pr"/></e>
@@ -25288,6 +25297,7 @@
 <e lm="Edgar">                                    <i>Edgar</i><par n="Abraham__np"/></e>
 <e lm="édicule" a="paradigme_auto">               <i>édicule</i><par n="abeille__n"/></e>
 <e lm="édification">                              <i>édification</i><par n="abeille__n"/></e>
+<e r="LR" lm="édifier">                           <p><l>Edifi</l>             <r>édifi</r></p><par n="abaiss/er__vblex"/></e>
 <e lm="édifier" a="paradigme_auto">               <i>édifi</i><par n="abaiss/er__vblex"/></e>
 <e lm="édile" a="paradigme_auto">                 <i>édile</i><par n="abeille__n"/></e>
 <e lm="éditeur de liens" a="groupe_cree_auto">    <i>édit</i><par n="administrat/eur__n"/><p><l><b/>de<b/>liens</l><r><g><b/>de<b/>liens</g></r></p></e>
@@ -25296,6 +25306,7 @@
 <e lm="Édouard">                                  <i>Édouard</i><par n="Abraham__np"/></e>
 <e lm="éducateur">                                <i>éducat</i><par n="administrat/eur__n"/></e>
 <e lm="éducateur">                                <i>éducat</i><par n="conduct/eur__adj"/></e>
+<e r="LR" lm="éduquer">                           <p><l>Eduqu</l>             <r>éduqu</r></p><par n="abaiss/er__vblex"/></e>
 <e lm="éduquer" a="paradigme_auto">               <i>éduqu</i><par n="abaiss/er__vblex"/></e>
 <e lm="effectuer du calcul informatique" a="groupe_cree_auto"><i>effectu</i><par n="abaiss/er__vblex"/><p><l><b/>du<b/>calcul<b/>informatique</l><r><g><b/>du<b/>calcul<b/>informatique</g></r></p></e>
 <e lm="effectuer l'imposition" a="groupe_cree_auto"><i>effectu</i><par n="abaiss/er__vblex"/><p><l><b/>l'imposition</l><r><g><b/>l'imposition</g></r></p></e>
@@ -27953,6 +27964,8 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e lm="greffier">                                 <i>greffi</i><par n="bouch/er__n"/></e>
 <e lm="greffon">                                  <i>greffon</i><par n="accessoire__n"/></e>
 <e lm="grégaire" a="paradigme_auto">              <i>grégaire</i><par n="académique__adj"/></e>
+<e lm="grégorien">              <i>grégorien</i><par n="ancien__adj"/></e>
+<e lm="julien">              <i>julien</i><par n="ancien__adj"/></e>
 <e lm="gré">                                      <i>gré</i><par n="accessoire__n"/></e>
 <e lm="grêler">                                   <i>grêl</i><par n="abaiss/er__vblex"/></e>
 <e lm="grelin">                                   <i>grelin</i><par n="accessoire__n"/></e>
@@ -28663,6 +28676,7 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e lm="incognito">                                <i>incognito</i><par n="incognito__n"/></e>
 <e lm="incohérent">                               <i>incohérent</i><par n="abaissant__adj"/></e>
 <e lm="incolore">              <i>incolore</i><par n="académique__adj"/></e>
+<e lm="tricolore">              <i>tricolore</i><par n="académique__adj"/></e>
 <e lm="incombustible" a="paradigme_auto">         <i>incombustible</i><par n="académique__adj"/></e>
 <e lm="combustible" a="paradigme_auto">         <i>combustible</i><par n="académique__adj"/></e>
 <e lm="incommensurable" a="paradigme_auto">       <i>incommensurable</i><par n="académique__adj"/></e>
@@ -29027,6 +29041,8 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e lm="jazz New Orleans">                         <i>jazz<b/>New<b/>Orleans</i><par n="personnel__n"/></e>
 <e lm="jazz Nouvelle-Orléans">                    <i>jazz<b/>Nouvelle-Orléans</i><par n="personnel__n"/></e>
 <e lm="Jean">                                     <i>Jean</i><par n="Abraham__np"/></e>
+<e lm="Pierre">                                   <i>Pierre</i><par n="Abraham__np"/></e>
+<e lm="Julien">                                   <i>Julien</i><par n="Abraham__np"/></e>
 <e lm="Jeanne">                                   <i>Jeanne</i><par n="Abraham__np"/></e>
 <e lm="jeans">                                    <i>jeans</i><par n="gens__n"/></e>
 <e lm="jeep">                                     <i>jeep</i><par n="abeille__n"/></e>
@@ -30645,7 +30661,7 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e lm="noceur">                                   <i>noceu</i><par n="causeu/r__adj"/></e>
 <e lm="nocturne">                                 <i>nocturne</i><par n="académique__adj"/></e>
 <e lm="nocturne">                                 <i>nocturne</i><par n="accessoire__n"/></e>
-<e lm="Noël">                                     <i>Noël</i><par n="Abraham__np"/></e>
+<e lm="Noël">                                     <i>Noël</i><par n="Carrefour__np"/></e>
 <e lm="nœud">                                     <i>nœud</i><par n="accessoire__n"/></e>
 <e lm="nô">                                       <i>nô</i><par n="accessoire__n"/></e>
 <e lm="noircir">                                  <i>noirc</i><par n="about/[]ir__vblex"/></e>
@@ -30829,7 +30845,7 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e lm="odorant" a="paradigme_auto">               <i>odorant</i><par n="abaissant__adj"/></e>
 <e lm="Odyssée">                                  <i>Odyssée</i><par n="Carrefour__np"/></e>
 <e lm="œdème" a="paradigme_auto">                 <i>œdème</i><par n="abeille__n"/></e>
-<e lm="œil">                                      <i></i><par n="/oeil__n"/></e>
+<e lm="œil">                                      <i></i><par n="/œil__n"/></e>
 <e lm="œillet">                                   <i>œillet</i><par n="accessoire__n"/></e>
 <e lm="œnanthe" a="paradigme_auto">               <i>œnanthe</i><par n="abeille__n"/></e>
 <e lm="œnothéracées">                             <i>œnothéracées</i><par n="vacances__n"/></e>
@@ -30837,6 +30853,7 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e lm="œuf">                                      <i>œuf</i><par n="accessoire__n"/></e>
 <e lm="œufs" a="paradigme_auto">                  <i>œufs</i><par n="mois__n"/></e>
 <e lm="œuvre" a="paradigme_auto">                 <i>œuvre</i><par n="abeille__n"/></e>
+<e lm="œuvrer">                                  <i>œuvr</i><par n="abaiss/er__vblex"/></e>
 <e lm="offensant">                                <i>offensant</i><par n="abaissant__adj"/></e>
 <e lm="offenser">                                 <i>offens</i><par n="abaiss/er__vblex"/></e>
 <e lm="officialiser">                             <i>officialis</i><par n="abaiss/er__vblex"/></e>
@@ -37310,7 +37327,7 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e r="LR" lm="accompagné d'">                            <p><l>accompagné<b/>d'</l>  <r>accompagné<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="à compter d'">                             <p><l>à<b/>compter<b/>d'</l>  <r>à<b/>compter<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="à côté d'">                                <p><l>à<b/>côté<b/>d'</l>  <r>à<b/>côté<b/>de<s n="pr"/></r></p></e>
-<e r="LR" lm="à défaut d'">                              <p><l>à<b/>défaut<b/></l>  <r>à<b/>défaut<b/><s n="pr"/></r></p></e>
+<e r="LR" lm="à défaut d'">                              <p><l>à<b/>défaut<b/>d'</l>  <r>à<b/>défaut<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="à droite d'">                              <p><l>à<b/>droite<b/>d'</l>  <r>à<b/>droite<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="à gauche d'">                              <p><l>à<b/>gauche<b/>d'</l>  <r>à<b/>gauche<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="à la différence d'">                       <p><l>à<b/>la<b/>différence<b/>d'</l>  <r>à<b/>la<b/>différence<b/>de<s n="pr"/></r></p></e>
@@ -37319,7 +37336,7 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e r="LR" lm="alentour d'">                              <p><l>alentour<b/>d'</l>  <r>alentour<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="à l'est d'">                               <p><l>à<b/>l'est<b/>d'</l>  <r>à<b/>l'est<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="à l'extérieur d'">                         <p><l>à<b/>l'extérieur<b/>d'</l>  <r>à<b/>l'extérieur<b/>de<s n="pr"/></r></p></e>
-<e r="LR" lm="à l'instar d'">                            <p><l>à<b/>l'instar<b/></l>  <r>à<b/>l'instar<b/><s n="pr"/></r></p></e>
+<e r="LR" lm="à l'instar d'">                            <p><l>à<b/>l'instar<b/>d'</l>  <r>à<b/>l'instar<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="à l'intérieur d'">                         <p><l>à<b/>l'intérieur<b/>d'</l>  <r>à<b/>l'intérieur<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="à l'issue d'">                             <p><l>à<b/>l'issue<b/>d'</l>  <r>à<b/>l'issue<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="à l'ouest d'">                             <p><l>à<b/>l'ouest<b/>d'</l>  <r>à<b/>l'ouest<b/>de<s n="pr"/></r></p></e>
@@ -37327,11 +37344,11 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e r="LR" lm="à raison d'">                              <p><l>à<b/>raison<b/>d'</l>  <r>à<b/>raison<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="au commencement d'">                       <p><l>au<b/>commencement<b/>d'</l>  <r>au<b/>commencement<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="au début d'">                              <p><l>au<b/>début<b/>d'</l>  <r>au<b/>début<b/>de<s n="pr"/></r></p></e>
-<e r="LR" lm="au d'hors de">                             <p><l>au<b/>dehors<b/>d'</l>  <r>au<b/>dehors<b/>de<s n="pr"/></r></p></e>
+<e r="LR" lm="au d'hors d'">                             <p><l>au<b/>dehors<b/>d'</l>  <r>au<b/>dehors<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="au-delà d'">                               <p><l>au-delà<b/>d'</l>  <r>au-delà<b/>de<s n="pr"/></r></p></e>
-<e r="LR" lm="au d'vant de">                             <p><l>au<b/>devant<b/>d'</l>  <r>au<b/>devant<b/>de<s n="pr"/></r></p></e>
+<e r="LR" lm="au devant d'">                             <p><l>au<b/>devant<b/>d'</l>  <r>au<b/>devant<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="au fond d'">                               <p><l>au<b/>fond<b/>d'</l>  <r>au<b/>fond<b/>de<s n="pr"/></r></p></e>
-<e r="LR" lm="au lieu d'">                               <p><l>au<b/>lieu<b/></l>  <r>au<b/>lieu<b/><s n="pr"/></r></p></e>
+<e r="LR" lm="au lieu d'">                               <p><l>au<b/>lieu<b/>d'</l>  <r>au<b/>lieu<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="au moyen d'">                              <p><l>au<b/>moyen<b/>d'</l>  <r>au<b/>moyen<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="au nom d'">                                <p><l>au<b/>nom<b/>d'</l>  <r>au<b/>nom<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="au nord d'">                               <p><l>au<b/>nord<b/>d'</l>  <r>au<b/>nord<b/>de<s n="pr"/></r></p></e>
@@ -37350,11 +37367,11 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e r="LR" lm="aux environs d'">                          <p><l>aux<b/>environs<b/>d'</l>  <r>aux<b/>environs<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="aux pieds d'">                             <p><l>aux<b/>pieds<b/>d'</l>  <r>aux<b/>pieds<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="dans la mesure d'" a="paradigme_auto">     <p><l>dans<b/>la<b/>mesure<b/>d'</l>  <r>dans<b/>la<b/>mesure<b/>de<s n="pr"/></r></p></e>
-<e r="LR" lm="dans le cadre d'">                         <p><l>dans<b/>le<b/>cadre<b/></l>  <r>dans<b/>le<b/>cadre<b/><s n="pr"/></r></p></e>
+<e r="LR" lm="dans le cadre d'">                         <p><l>dans<b/>le<b/>cadre<b/>d'</l>  <r>dans<b/>le<b/>cadre<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="dans le dos d'">                           <p><l>dans<b/>le<b/>dos<b/>d'</l>  <r>dans<b/>le<b/>dos<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="de la part d'">                            <p><l>de<b/>la<b/>part<b/>d'</l>  <r>de<b/>la<b/>part<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="du côté d'">                               <p><l>du<b/>côté<b/>d'</l>  <r>du<b/>côté<b/>de<s n="pr"/></r></p></e>
-<e r="LR" lm="en cas d'">                                <p><l>en<b/>cas<b/></l>  <r>en<b/>cas<b/><s n="pr"/></r></p></e>
+<e r="LR" lm="en cas d'">                                <p><l>en<b/>cas<b/>d'</l>  <r>en<b/>cas<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="en compagnie d'">                          <p><l>en<b/>compagnie<b/>d'</l>  <r>en<b/>compagnie<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="en comparaison d'">                        <p><l>en<b/>comparaison<b/>d'</l>  <r>en<b/>comparaison<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="en compensation d'">                       <p><l>en<b/>compensation<b/>d'</l>  <r>en<b/>compensation<b/>de<s n="pr"/></r></p></e>
@@ -37364,12 +37381,12 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e r="LR" lm="en mémoire d'">                            <p><l>en<b/>mémoire<b/>d'</l>  <r>en<b/>mémoire<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="en récompense d'">                         <p><l>en<b/>récompense<b/>d'</l>  <r>en<b/>récompense<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="en regard d'">                             <p><l>en<b/>regard<b/>d'</l>  <r>en<b/>regard<b/>de<s n="pr"/></r></p></e>
-<e r="LR" lm="en vue d'">                                <p><l>en<b/>vue<b/></l>  <r>en<b/>vue<b/><s n="pr"/></r></p></e>
-<e r="LR" lm="faute d'">                                 <p><l>faute<b/></l>  <r>faute<b/><s n="pr"/></r></p></e>
+<e r="LR" lm="en vue d'">                                <p><l>en<b/>vue<b/>d0</l>  <r>en<b/>vue<b/>de<s n="pr"/></r></p></e>
+<e r="LR" lm="faute d'">                                 <p><l>faute<b/>d'</l>  <r>faute<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="hors d'">                                  <p><l>hors<b/>d'</l>  <r>hors<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="loin d'">                                  <p><l>loin<b/>d'</l>  <r>loin<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="par les soins d'">                         <p><l>par<b/>les<b/>soins<b/>d'</l>  <r>par<b/>les<b/>soins<b/>de<s n="pr"/></r></p></e>
-<e r="LR" lm="plein d'">                                 <p><l>plein<b/></l>  <r>plein<b/><s n="pr"/></r></p></e>
+<e r="LR" lm="plein d'">                                 <p><l>plein<b/>d'</l>  <r>plein<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="pour la peine d'">                         <p><l>pour<b/>la<b/>peine<b/>d'</l>  <r>pour<b/>la<b/>peine<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="près d'">                                  <p><l>près<b/>d'</l>  <r>près<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="sur commission d'">                        <p><l>sur<b/>commission<b/>d'</l>  <r>sur<b/>commission<b/>de<s n="pr"/></r></p></e>
