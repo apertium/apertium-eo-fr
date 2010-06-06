@@ -391,6 +391,8 @@
   <e>       <p><l>itaj</l>      <r>i<s n="vblex"/><s n="pp"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l>itan</l>      <r>i<s n="vblex"/><s n="pp"/><s n="sg"/><s n="acc"/></r></p></e>
   <e>       <p><l>itajn</l>     <r>i<s n="vblex"/><s n="pp"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>ita</l>       <r>i<s n="vblex"/><s n="pp"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>itan</l>      <r>i<s n="vblex"/><s n="pp"/><s n="sp"/><s n="acc"/></r></p></e>
   <e>       <p><l>onta</l>      <r>i<s n="vblex"/><s n="pp2"/><s n="sg"/></r></p></e>
   <e>       <p><l>ontaj</l>     <r>i<s n="vblex"/><s n="pp2"/><s n="pl"/></r></p></e>
   <e>       <p><l>inta</l>      <r>i<s n="vblex"/><s n="pp3"/></r></p></e>
@@ -723,10 +725,15 @@
 <e r="RL" lm="kiom">     <p><l>kio</l>       <r>kiom<s n="prn"/><s n="itg"/><s n="pl"/><s n="acc"/></r></p></e>
 <e lm="kio">             <p><l>kioj</l>      <r>kio<s n="prn"/><s n="rel"/><s n="pl"/><s n="nom"/></r></p></e>
 <e lm="kio">             <p><l>kiojn</l>     <r>kio<s n="prn"/><s n="rel"/><s n="pl"/><s n="acc"/></r></p></e>
+<!--
 <e lm="kiom">            <p><l>kiom</l>      <r>kiom<s n="prn"/><s n="itg"/><s n="sg"/><s n="nom"/></r></p></e>
 <e r="RL" lm="kiom">     <p><l>kiom</l>      <r>kiom<s n="prn"/><s n="itg"/><s n="pl"/><s n="nom"/></r></p></e>
+-->
 <e lm="kio">             <p><l>kion</l>      <r>kio<s n="prn"/><s n="rel"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="kio">             <p><l>kion</l>      <r>kio<s n="prn"/><s n="itg"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="kiom">            <p><l>kiom</l>      <r>kiom<s n="adv"/><s n="itg"/></r></p></e>
+<e lm="kiel">            <p><l>kiel</l>      <r>kiel<s n="adv"/><s n="itg"/></r></p></e>
+<e lm="kiam">            <p><l>kiam</l>      <r>kiam<s n="adv"/><s n="itg"/></r></p></e>
 <!--<e lm="sin" ><p><i>sin</i><s n="prn"/><s n="pro"/><s n="ref"/><s n="p3"/><s n="mf"/><s n="sp"/></e>-->
 
 <!--<e lm=oni"><i>oni</i><par n="everyone__prn"/></e>-->
@@ -2427,6 +2434,10 @@
 <e lm="bofratino">       <i>bofratin</i><par n="o__n"/></e>
 <e lm="bogefratoj">      <i>bogefrat</i><par n="oj__n"/></e>
 <e lm="bogepatroj">      <i>bogepatr</i><par n="oj__n"/></e>
+<e lm="bogefiloj">      <i>bogefil</i><par n="oj__n"/></e>
+<e lm="gebofratoj">      <i>gebofrat</i><par n="oj__n"/></e>
+<e lm="gebopatroj">      <i>gebopatr</i><par n="oj__n"/></e>
+<e lm="gebofiloj">      <i>gebofil</i><par n="oj__n"/></e>
 <e lm="bogomilo">        <i>bogomil</i><par n="o__n"/></e>
 <e lm="bohemo">          <i>bohem</i><par n="o__n"/></e>
 <e lm="bojo">            <i>boj</i><par n="o__n"/></e>
@@ -4513,6 +4524,7 @@
 <e lm="filumo">          <i>filum</i><par n="o__n"/></e>
 <e lm="fimbrilo">        <i>fimbril</i><par n="o__n"/></e>
 <e lm="fino">            <i>fin</i><par n="o__n"/></e>
+<e lm="fina">            <i>fin</i><par n="a__adj"/></e>
 <e lm="fina stacio">     <i>fina<b/>staci</i><par n="o__n"/></e>
 <e lm="finalisto">       <i>finalist</i><par n="ino__n"/></e>
 <e lm="financo">         <i>financ</i><par n="o__n"/></e>
@@ -9661,6 +9673,7 @@
 <e lm="neono">           <i>neon</i><par n="o__n"/></e>
 <e lm="neonlampo">       <i>neonlamp</i><par n="o__n"/></e>
 <e lm="nepo">            <i>nep</i><par n="ino__n"/></e>
+<e lm="genepoj">         <i>genep</i><par n="oj__n"/></e>
 <e lm="nepalano">        <i>nepalan</i><par n="ino__n"/></e>
 <e lm="neparhufuloj">    <i>neparhuful</i><par n="oj__n"/></e>
 <e lm="nepero">          <i>neper</i><par n="o__n"/></e>
@@ -18620,6 +18633,7 @@
 <e lm="Odro">            <i>Odr</i><par n="Barcelon/o__np"/></e>
 <e lm="Okcidento">       <i>Okcident</i><par n="Barcelon/o__np"/></e>
 <e lm="Okcidenta Azio">  <i>Okcidenta<b/>Azi</i><par n="Barcelon/o__np"/></e>
+<e lm="Malgranda Azio">  <i>Malgranda<b/>Azi</i><par n="Barcelon/o__np"/></e>
 <e lm="Okcitanio">       <i>Okcitani</i><par n="Barcelon/o__np"/></e>
 <e lm="Omo">             <i>Om</i><par n="Mark/o__np"/></e>
 <e lm="Onufrio">         <i>Onufri</i><par n="Mark/o__np"/></e>
@@ -22508,9 +22522,9 @@
 <e lm="ŝveligi">         <i>ŝvelig</i><par n="i__vblex"/></e>
 <e lm="ŝviti">           <i>ŝvit</i><par n="i__vblex"/></e>
 <e lm="ŝvitiĝi">         <i>ŝvitiĝ</i><par n="i__vblex"/></e>
-    <!-- ******************************
-          group adv
-      ****************************** -->
+
+<!-- ADVERBOJ -->
+
 <e lm="-e">              <i>-</i><par n="e__adv"/></e>
 <e lm="abomene">         <i>abomen</i><par n="e__adv"/></e>
 <e lm="abrupte">         <i>abrupt</i><par n="e__adv"/></e>
@@ -23433,6 +23447,7 @@
 <e lm="tion ne necesas diri"><i>tion<b/>ne<b/>necesas<b/>diri</i><par n="jam__adv"/></e>
 <e lm="tipe">            <i>tip</i><par n="e__adv"/></e>
 <e lm="tre">             <i>tr</i><par n="e__adv"/></e>
+<e lm="tro">             <i>tro</i><par n="jam__adv"/></e>
 <e lm="trae">            <i>tra</i><par n="e__adv"/></e>
 <e lm="tradicie">        <i>tradici</i><par n="e__adv"/></e>
 <e lm="tragike">         <i>tragik</i><par n="e__adv"/></e>
@@ -23527,9 +23542,12 @@
 <e lm="ĉiakoste">        <i>ĉiakost</i><par n="e__adv"/></e>
 <e lm="ĉiam">            <i>ĉiam</i><par n="jam__adv"/></e>
 <e lm="ĉiam je via dispono"><i>ĉiam<b/>je<b/>via<b/>dispono</i><par n="jam__adv"/></e>
-
-
-<!-- ADVERBIOS -->
+<e r="RL" lm="ankaŭ mi"> <i>ankaŭ<b/>mi</i><par n="jam__adv"/></e>
+<e r="RL" lm="ankaŭ vi"> <i>ankaŭ<b/>vi</i><par n="jam__adv"/></e>
+<e r="RL" lm="ankaŭ li"> <i>ankaŭ<b/>li</i><par n="jam__adv"/></e>
+<e r="RL" lm="ankaŭ ŝi"> <i>ankaŭ<b/>ŝi</i><par n="jam__adv"/></e>
+<e r="RL" lm="ankaŭ ni"> <i>ankaŭ<b/>ni</i><par n="jam__adv"/></e>
+<e r="RL" lm="ankaŭ ili"> <i>ankaŭ<b/>ili</i><par n="jam__adv"/></e>
 
 <e lm="ĉiaokaze">        <i>ĉiaokaz</i><par n="e__adv"/></e>
 <e lm="ĉijare">          <i>ĉijar</i><par n="e__adv"/></e>
@@ -23577,6 +23595,7 @@
           group preadv
       ****************************** -->
 <e lm="iom">             <i>iom</i><par n="tro__preadv"/></e>
+<e lm="preskaŭ">         <i>preskaŭ</i><par n="tro__preadv"/></e>
 <e lm="malmulte">        <i>malmulte</i><par n="tro__preadv"/></e>
 <e lm="malpli">          <i>malpli</i><par n="tro__preadv"/></e>
 <e lm="tre">             <i>multe</i><par n="tro__preadv"/></e>
@@ -23601,6 +23620,7 @@
 <e lm="ciufoje pli">     <i>ciufoje<b/>pli</i><par n="after__cnjadv"/></e>
 <e lm="do">              <i>do</i><par n="after__cnjadv"/></e>
 <e lm="dum">             <i>dum</i><par n="after__cnjadv"/></e>
+<e lm="ĉu">             <i>ĉu</i><par n="after__cnjadv"/></e>
 <e lm="ekde">            <i>ekde</i><par n="after__cnjadv"/></e>
 <e lm="ekzemple">        <i>ekzemple</i><par n="after__cnjadv"/></e>
 <e lm="en la okazo ke">  <i>en<b/>la<b/>okazo<b/>ke</i><par n="after__cnjadv"/></e>
