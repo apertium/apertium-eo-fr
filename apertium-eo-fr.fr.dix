@@ -452,11 +452,11 @@
 
 <e>       <p><l>-moi</l>      <r>me<s n="prn"/><s n="enc"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
 
-<e r="RL"><p><l>-nous</l>     <r>nous<s n="prn"/><s n="enc"/><s n="p1"/><s n="mf"/><s n="pl"/></r></p></e> <!-- Por eviti misanalizoj (imperativo anstataŭ prezenco) -->
+<e r="RL"><p><l>-nous</l>     <r>nous<s n="prn"/><s n="enc"/><s n="p1"/><s n="mf"/><s n="pl"/></r></p></e> <!-- Por eviti misanalizoj (imperativo anstatau prezenco) -->
 
 <e>       <p><l>-toi</l>      <r>te<s n="prn"/><s n="enc"/><s n="p2"/><s n="mf"/><s n="sg"/></r></p></e>
 
-<e r="RL"><p><l>-vous</l>     <r>vous<s n="prn"/><s n="enc"/><s n="p2"/><s n="mf"/><s n="pl"/></r></p></e> <!-- Por eviti misanalizoj (imperativo anstataŭ prezenco) -->
+<e r="RL"><p><l>-vous</l>     <r>vous<s n="prn"/><s n="enc"/><s n="p2"/><s n="mf"/><s n="pl"/></r></p></e> <!-- Por eviti misanalizoj (imperativo anstatau prezenco) -->
 
 <e>       <p><l>-y</l>        <r>y<s n="prn"/><s n="enc"/><s n="adv"/></r></p></e>
 
@@ -4811,11 +4811,12 @@
 
 <e>       <p><l>isions</l>     <r>ire<s n="vblex"/><s n="prs"/><s n="p1"/><s n="pl"/></r></p></e>
 
-<e>       <p><l>isirent</l>    <r>ire<s n="vblex"/><s n="ifi"/><s n="p3"/><s n="pl"/></r></p></e>
-
-<e>       <p><l>isis</l>       <r>ire<s n="vblex"/><s n="ifi"/><s n="p1"/><s n="sg"/></r></p></e>
-
-<e>       <p><l>isis</l>       <r>ire<s n="vblex"/><s n="ifi"/><s n="p2"/><s n="sg"/></r></p></e>
+<e>       <p><l>is</l>       <r>ire<s n="vblex"/><s n="ifi"/><s n="p1"/><s n="sg"/></r></p></e>
+<e>       <p><l>is</l>       <r>ire<s n="vblex"/><s n="ifi"/><s n="p2"/><s n="sg"/></r></p></e>
+<e>       <p><l>it</l>       <r>ire<s n="vblex"/><s n="ifi"/><s n="p3"/><s n="sg"/></r></p></e>
+<e>       <p><l>îmes</l>     <r>ire<s n="vblex"/><s n="ifi"/><s n="p1"/><s n="pl"/></r></p></e>
+<e>       <p><l>îtes</l>     <r>ire<s n="vblex"/><s n="ifi"/><s n="p2"/><s n="pl"/></r></p></e>
+<e>       <p><l>irent</l>    <r>ire<s n="vblex"/><s n="ifi"/><s n="p3"/><s n="pl"/></r></p></e>
 
 <e>       <p><l>isse</l>     <r>ire<s n="vblex"/><s n="pis"/><s n="p1"/><s n="sg"/></r></p></e>
 <e>       <p><l>isses</l>    <r>ire<s n="vblex"/><s n="pis"/><s n="p2"/><s n="sg"/></r></p></e>
@@ -4823,19 +4824,13 @@
 <e>       <p><l>issiez</l>   <r>ire<s n="vblex"/><s n="pis"/><s n="p2"/><s n="pl"/></r></p></e>
 <e>       <p><l>issent</l>   <r>ire<s n="vblex"/><s n="pis"/><s n="p3"/><s n="pl"/></r></p></e>
 
-<e>       <p><l>isit</l>       <r>ire<s n="vblex"/><s n="ifi"/><s n="p3"/><s n="sg"/></r></p></e>
-
 <e>       <p><l>isons</l>      <r>ire<s n="vblex"/><s n="imp"/><s n="p1"/><s n="pl"/></r></p></e>
 
 <e>       <p><l>isons</l>      <r>ire<s n="vblex"/><s n="imp"/><s n="p1"/><s n="pl"/><j/></r></p><par n="S__encimp"/></e>
 
 <e>       <p><l>isons</l>      <r>ire<s n="vblex"/><s n="pri"/><s n="p1"/><s n="pl"/></r></p></e>
 
-<e>       <p><l>isîmes</l>     <r>ire<s n="vblex"/><s n="ifi"/><s n="p1"/><s n="pl"/></r></p></e>
-
 <e>       <p><l>ît</l>       <r>ire<s n="vblex"/><s n="pis"/><s n="p3"/><s n="sg"/></r></p></e>
-
-<e>       <p><l>isîtes</l>     <r>ire<s n="vblex"/><s n="ifi"/><s n="p2"/><s n="pl"/></r></p></e>
 
 <e>       <p><l>is</l>         <r>ire<s n="vblex"/><s n="pp"/><s n="m"/><s n="sp"/></r></p></e>
 
@@ -6904,6 +6899,118 @@
 <e>       <p><l>ît</l>        <r>oir<s n="vblex"/><s n="pis"/><s n="p3"/><s n="sg"/></r></p></e>
 
 <e>       <p><l>îtes</l>      <r>oir<s n="vblex"/><s n="ifi"/><s n="p2"/><s n="pl"/></r></p></e>
+
+</pardef>
+<pardef n="pourv/oir__vblex">
+<e>       <p><l>oirra</l>      <r>oir<s n="vblex"/><s n="fti"/><s n="p3"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>oirrai</l>     <r>oir<s n="vblex"/><s n="fti"/><s n="p1"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>oirraient</l>  <r>oir<s n="vblex"/><s n="cni"/><s n="p3"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>oirrais</l>    <r>oir<s n="vblex"/><s n="cni"/><s n="p1"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>oirrais</l>    <r>oir<s n="vblex"/><s n="cni"/><s n="p2"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>oirrait</l>    <r>oir<s n="vblex"/><s n="cni"/><s n="p3"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>oirras</l>     <r>oir<s n="vblex"/><s n="fti"/><s n="p2"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>oirrez</l>     <r>oir<s n="vblex"/><s n="fti"/><s n="p2"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>oirriez</l>    <r>oir<s n="vblex"/><s n="cni"/><s n="p2"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>oirrions</l>   <r>oir<s n="vblex"/><s n="cni"/><s n="p1"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>oirrons</l>    <r>oir<s n="vblex"/><s n="fti"/><s n="p1"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>oirront</l>    <r>oir<s n="vblex"/><s n="fti"/><s n="p3"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>urent</l>     <r>oir<s n="vblex"/><s n="ifi"/><s n="p3"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>us</l>        <r>oir<s n="vblex"/><s n="ifi"/><s n="p1"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>us</l>        <r>oir<s n="vblex"/><s n="ifi"/><s n="p2"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>usse</l>      <r>oir<s n="vblex"/><s n="pis"/><s n="p1"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>ussent</l>    <r>oir<s n="vblex"/><s n="pis"/><s n="p3"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>usses</l>     <r>oir<s n="vblex"/><s n="pis"/><s n="p2"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>ussiez</l>    <r>oir<s n="vblex"/><s n="pis"/><s n="p2"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>ussions</l>   <r>oir<s n="vblex"/><s n="pis"/><s n="p1"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>ut</l>        <r>oir<s n="vblex"/><s n="ifi"/><s n="p3"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>oie</l>       <r>oir<s n="vblex"/><s n="prs"/><s n="p1"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>oie</l>       <r>oir<s n="vblex"/><s n="prs"/><s n="p3"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>oient</l>     <r>oir<s n="vblex"/><s n="pri"/><s n="p3"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>oient</l>     <r>oir<s n="vblex"/><s n="prs"/><s n="p3"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>oies</l>      <r>oir<s n="vblex"/><s n="prs"/><s n="p2"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>oir</l>       <r>oir<s n="vblex"/><s n="inf"/></r></p></e>
+
+<e>       <p><l>ois</l>       <r>oir<s n="vblex"/><s n="imp"/><s n="p2"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>ois</l>       <r>oir<s n="vblex"/><s n="imp"/><s n="p2"/><s n="sg"/><j/></r></p><par n="S__encimp"/></e>
+
+<e>       <p><l>ois</l>       <r>oir<s n="vblex"/><s n="pri"/><s n="p1"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>ois</l>       <r>oir<s n="vblex"/><s n="pri"/><s n="p2"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>oit</l>       <r>oir<s n="vblex"/><s n="pri"/><s n="p3"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>oyaient</l>   <r>oir<s n="vblex"/><s n="pii"/><s n="p3"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>oyais</l>     <r>oir<s n="vblex"/><s n="pii"/><s n="p1"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>oyais</l>     <r>oir<s n="vblex"/><s n="pii"/><s n="p2"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>oyait</l>     <r>oir<s n="vblex"/><s n="pii"/><s n="p3"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>oyant</l>     <r>oir<s n="vblex"/><s n="ger"/></r></p></e>
+
+<!-- <e>       <p><l>oyant</l>     <r>oir<s n="vblex"/><s n="ppres"/><s n="p3"/><s n="ND"/></r></p></e> -->
+
+<e>       <p><l>oyez</l>      <r>oir<s n="vblex"/><s n="imp"/><s n="p2"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>oyez</l>      <r>oir<s n="vblex"/><s n="imp"/><s n="p2"/><s n="pl"/><j/></r></p><par n="S__encimp"/></e>
+
+<e>       <p><l>oyez</l>      <r>oir<s n="vblex"/><s n="pri"/><s n="p2"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>oyiez</l>     <r>oir<s n="vblex"/><s n="pii"/><s n="p2"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>oyiez</l>     <r>oir<s n="vblex"/><s n="prs"/><s n="p2"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>oyions</l>    <r>oir<s n="vblex"/><s n="pii"/><s n="p1"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>oyions</l>    <r>oir<s n="vblex"/><s n="prs"/><s n="p1"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>oyons</l>     <r>oir<s n="vblex"/><s n="imp"/><s n="p1"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>oyons</l>     <r>oir<s n="vblex"/><s n="imp"/><s n="p1"/><s n="pl"/><j/></r></p><par n="S__encimp"/></e>
+
+<e>       <p><l>oyons</l>     <r>oir<s n="vblex"/><s n="pri"/><s n="p1"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>u</l>         <r>oir<s n="vblex"/><s n="pp"/><s n="m"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>ue</l>        <r>oir<s n="vblex"/><s n="pp"/><s n="f"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>ues</l>       <r>oir<s n="vblex"/><s n="pp"/><s n="f"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>us</l>        <r>oir<s n="vblex"/><s n="pp"/><s n="m"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>ûmes</l>      <r>oir<s n="vblex"/><s n="ifi"/><s n="p1"/><s n="pl"/></r></p></e>
+
+<e>       <p><l>ût</l>        <r>oir<s n="vblex"/><s n="pis"/><s n="p3"/><s n="sg"/></r></p></e>
+
+<e>       <p><l>ûtes</l>      <r>oir<s n="vblex"/><s n="ifi"/><s n="p2"/><s n="pl"/></r></p></e>
 
 </pardef>
 <pardef n="env/oyer__vblex">
@@ -12178,9 +12285,6 @@
 <e>       <p><l></l>          <r><s n="n"/><s n="mf"/><s n="sg"/></r></p></e>
 <e>       <p><l>s</l>         <r><s n="n"/><s n="mf"/><s n="pl"/></r></p></e>
 </pardef>
-<pardef n="paradigme_inconnu__vblex">
-<e>       <p><l>a</l>         <r>er<s n="vblex"/><s n="ifi"/><s n="p3"/><s n="sg"/></r></p></e>
-</pardef>
   </pardefs>
 
   <section id="main" type="standard">
@@ -13722,6 +13826,7 @@
 <e lm="diminution">                               <i>diminution</i><par n="abeille__n"/></e>
 <e lm="diplomatie">                               <i>diplomatie</i><par n="abeille__n"/></e>
 <e lm="dire">                                     <i>d</i><par n="d/i[]re__vblex"/></e>
+<e lm="redire">                                     <i>red</i><par n="d/i[]re__vblex"/></e>
 <e lm="prédire">                                  <i>préd</i><par n="d/i[]re__vblex"/></e>
 <e lm="direct">                                   <i>direct</i><par n="abaissant__adj"/></e>
 <e lm="directement">                              <i>directement</i><par n="hier__adv"/></e>
@@ -15661,7 +15766,7 @@
 <e lm="poursuite">                                <i>poursuite</i><par n="abeille__n"/></e>
 <e lm="poursuivre">                               <i>poursui</i><par n="poursui/vre__vblex"/></e>
 <e lm="pourtant">                                 <i>pourtant</i><par n="hier__adv"/></e>
-<e r="LR" lm="pourvoir">                          <i>pourv</i><par n="dépourv/oir__vblex"/></e>
+<e lm="pourvoir">                          <i>pourv</i><par n="dépourv/oir__vblex"/></e>
 <e lm="poutre">                                   <i>poutre</i><par n="abeille__n"/></e>
 <e lm="pouvoir">                                  <i>p</i><par n="p/ouvoir__vbmod"/></e>
 <e lm="pouvoir">                                  <i>pouvoir</i><par n="accessoire__n"/></e>
@@ -30527,8 +30632,9 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e lm="médiatrice" a="paradigme_auto">            <i>médiatrice</i><par n="abeille__n"/></e>
 <e lm="Médie">                                    <i>Médie</i><par n="Andorre__np"/></e>
 <e lm="médiocre">                                 <i>médiocre</i><par n="académique__adj"/></e>
-<e lm="médire de" a="groupe_cree_auto">           <i>méd</i><par n="maud/i[]re__vblex"/><p><l><b/>de</l><r><g><b/>de</g></r></p></e>
-<e lm="médire">                                   <i>méd</i><par n="maud/i[]re__vblex"/></e>
+<e lm="médire de">           <i>méd</i><par n="contred/i[]re__vblex"/><p><l><b/>de</l><r><g><b/>de</g></r></p></e>
+<e lm="médire">                <i>méd</i><par n="contred/i[]re__vblex"/></e>
+<e lm="médire">                <i>méd</i><par n="contred/i[]re__vblex__"/></e>
 <e lm="médisance" a="paradigme_auto">             <i>médisance</i><par n="abeille__n"/></e>
 <e lm="méditatif" a="paradigme_auto">             <i>méditati</i><par n="affirmati/f__adj"/></e>
 <e lm="méditation">                               <i>méditation</i><par n="abeille__n"/></e>
@@ -31700,7 +31806,7 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e lm="parafe" a="paradigme_auto">                <i>parafe</i><par n="abeille__n"/></e>
 <e lm="paraffine" a="paradigme_auto">             <i>paraffine</i><par n="abeille__n"/></e>
 <e lm="parafoudre">            <i>parafoudre</i><par n="accessoire__n"/></e>
-<e lm="paraître">                                 <i>paraître</i><par n="paradigme_inconnu__vblex"/></e>
+<e lm="paraître">                                 <i>par</i><par n="appar/aître__vblex"/></e>
 <e lm="parallèle">                                <i>parallèle</i><par n="abeille__n"/></e>
 <e lm="parallélépipède" a="paradigme_auto">       <i>parallélépipède</i><par n="abeille__n"/></e>
 <e lm="parallélogramme">                          <i>parallélogramme</i><par n="accessoire__n"/></e>
@@ -31733,7 +31839,7 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e lm="parenthèse">                               <i>parenthèse</i><par n="abeille__n"/></e>
 <e lm="paresser" a="paradigme_auto">              <i>paress</i><par n="abaiss/er__vblex"/></e>
 <e lm="par exemple">                              <i>par<b/>exemple</i><par n="hier__adv"/></e>
-<e lm="parfaire">                                 <i>parfaire</i><par n="paradigme_inconnu__vblex"/></e>
+<e lm="parfaire">                                 <i>parf</i><par n="déf/aire__vblex"/></e>
 <e lm="parfumer">                                 <i>parfum</i><par n="abaiss/er__vblex"/></e>
 <e lm="par heure" a="paradigme_auto">             <i>par<b/>heure</i><par n="hier__adv"/></e>
 <e lm="pari">                                     <i>pari</i><par n="accessoire__n"/></e>
@@ -32496,7 +32602,6 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e lm="pourquoi">                                 <i>pourquoi</i><par n="comme__adv"/></e>
 <e lm="poursuivre en justice" a="groupe_cree_auto"><i>poursui</i><par n="poursui/vre__vblex"/><p><l><b/>en<b/>justice</l><r><g><b/>en<b/>justice</g></r></p></e>
 <e lm="pourtour">                                 <i>pourtour</i><par n="accessoire__n"/></e>
-<e lm="pourvoir">                                 <i>pourvoir</i><par n="paradigme_inconnu__vblex"/></e>
 <e lm="pourvu que">                               <i>pourvu<b/>que</i><par n="afin_que__cnjadv"/></e>
 <e lm="poussée">                                  <i>poussée</i><par n="abeille__n"/></e>
 <e lm="pousser à l'adultère" a="groupe_cree_auto"><i>pouss</i><par n="abaiss/er__vblex"/><p><l><b/>à<b/>l'adultère</l><r><g><b/>à<b/>l'adultère</g></r></p></e>
@@ -32538,7 +32643,8 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e lm="prédication">                              <i>prédication</i><par n="abeille__n"/></e>
 <e lm="prédicat">                                 <i>prédicat</i><par n="accessoire__n"/></e>
 <e lm="prédiposer" a="paradigme_auto">            <i>prédipos</i><par n="abaiss/er__vblex"/></e>
-<e lm="prédire">                                  <i>prédire</i><par n="paradigme_inconnu__vblex"/></e>
+<e lm="prédire">                               <i>préd</i><par n="contred/i[]re__vblex"/></e>
+<e lm="prédire">                               <i>préd</i><par n="contred/i[]re__vblex__"/></e>
 <e lm="prédisposé">                               <i>prédisposé</i><par n="abaissant__adj"/></e>
 <e lm="prédominance" a="paradigme_auto">          <i>prédominance</i><par n="abeille__n"/></e>
 <e lm="préface">                                  <i>préface</i><par n="abeille__n"/></e>
@@ -32721,7 +32827,7 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e lm="propylée" a="paradigme_auto">              <i>propylée</i><par n="abeille__n"/></e>
 <e lm="prosaïque" a="paradigme_auto">             <i>prosaïque</i><par n="académique__adj"/></e>
 <e lm="proscription" a="paradigme_auto">          <i>proscription</i><par n="abeille__n"/></e>
-<e lm="proscrire">                                <i>proscrire</i><par n="paradigme_inconnu__vblex"/></e>
+<e lm="proscrire">                                <i>proscrire</i><par n="décri/re__vblex"/></e>
 <e lm="hors-la-loi">                                 <i>hors-la-loi</i><par n="mois__n"/></e>
 <e lm="proscrit">                                 <i>proscrit</i><par n="artiste__n"/></e>
 <e lm="proscrit">                                 <i>proscrit</i><par n="abaissant__adj"/></e>
@@ -33365,7 +33471,7 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e lm="retrouver sur la paille" a="groupe_cree_auto"><i>retrouv</i><par n="abaiss/er__vblex"/><p><l><b/>sur<b/>la<b/>paille</l><r><g><b/>sur<b/>la<b/>paille</g></r></p></e>
 <e lm="réunir">                                   <i>réun</i><par n="about/[]ir__vblex__"/></e>
 <e lm="réussir">                                  <i>réuss</i><par n="about/[]ir__vblex__"/></e>
-<e lm="revaloir">                                 <i>revaloir</i><par n="paradigme_inconnu__vblex"/></e>
+<e lm="revaloir">                                 <i>revaloir</i><par n="va/loir__vblex"/></e>
 <e lm="réveil">                                   <i>réveil</i><par n="accessoire__n"/></e>
 <e lm="réveille-matin">                           <i>réveille-matin</i><par n="accessoire__n"/></e>
 <e lm="réveillon">                                <i>réveillon</i><par n="accessoire__n"/></e>
@@ -33857,7 +33963,7 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e lm="sentinelle" a="paradigme_auto">            <i>sentinelle</i><par n="abeille__n"/></e>
 <e lm="sentir bon" a="groupe_cree_auto">          <i>sen</i><par n="consen/tir__vblex"/><p><l><b/>bon</l><r><g><b/>bon</g></r></p></e>
 <e lm="sentir mauvais" a="groupe_cree_auto">      <i>sen</i><par n="consen/tir__vblex"/><p><l><b/>mauvais</l><r><g><b/>mauvais</g></r></p></e>
-<e lm="seoir">                                    <i>seoir</i><par n="paradigme_inconnu__vblex"/></e>
+<!-- <e lm="seoir">                                    <i>seoir</i><par n="paradigme_inconnu__vblex"/></e> -->
 <e lm="sépale" a="paradigme_auto">                <i>sépale</i><par n="abeille__n"/></e>
 <e lm="séparable" a="paradigme_auto">             <i>séparable</i><par n="académique__adj"/></e>
 <e lm="séparatisme" a="paradigme_auto">           <i>séparatisme</i><par n="accessoire__n"/></e>
@@ -34216,11 +34322,13 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e lm="stature">               <i>stature</i><par n="abeille__n"/></e>
 <e lm="stèle" a="paradigme_auto">                 <i>stèle</i><par n="abeille__n"/></e>
 <e lm="stencil">                                  <i>stencil</i><par n="accessoire__n"/></e>
-<e lm="sténodactylographie">                      <i>sténodactylographie</i><par n="paradigme_inconnu__vblex"/></e>
+<e lm="sténodactylographe">                      <i>sténodactylographe</i><par n="artiste__n"/></e>
+<e lm="sténodactylographie">                      <i>sténodactylographie</i><par n="abeille__n"/></e>
 <e lm="sténodactylo">                             <i>sténodactylo</i><par n="artiste__n"/></e>
 <e lm="sténographe">                              <i>sténographe</i><par n="artiste__n"/></e>
 <e lm="sténographie">                             <i>sténographie</i><par n="abeille__n"/></e>
 <e lm="sténographier" a="paradigme_auto">         <i>sténographi</i><par n="abaiss/er__vblex"/></e>
+<e lm="sténodactylographier" a="paradigme_auto">         <i>sténodactylographi</i><par n="abaiss/er__vblex"/></e>
 <e lm="Stéphane">                                 <i>Stéphane</i><par n="Abraham__np"/></e>
 <e lm="steppe">                                   <i>steppe</i><par n="abeille__n"/></e>
 <e lm="stéradian">                                <i>stéradian</i><par n="accessoire__n"/></e>
@@ -37998,7 +38106,7 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e r="LR" lm="faire partie d'" a="groupe_cree_auto">          <i>f</i><par n="déf/aire__vblex"/><p><l><b/>partie<b/>d'</l><r><g><b/>partie<b/>de</g></r></p></e>
 <e r="LR" lm="faire preuve d'" a="groupe_cree_auto">     <i>f</i><par n="déf/aire__vblex"/><p><l><b/>preuve<b/>d'</l><r><g><b/>preuve<b/>de</g></r></p></e>
 <e r="LR" lm="faire sa proie d'" a="groupe_cree_auto">   <i>f</i><par n="déf/aire__vblex"/><p><l><b/>sa<b/>proie<b/>d'</l><r><g><b/>sa<b/>proie<b/>de</g></r></p></e>
-<e r="LR" lm="médire d'" a="groupe_cree_auto">           <i>méd</i><par n="maud/i[]re__vblex"/><p><l><b/>d'</l><r><g><b/>de</g></r></p></e>
+<e r="LR" lm="médire d'" a="groupe_cree_auto">           <i>méd</i><par n="contred/i[]re__vblex"/><p><l><b/>d'</l><r><g><b/>de</g></r></p></e>
 <e r="LR" lm="moquer d'">                      <i>moqu</i><par n="abaiss/er__vblex"/><p><l><b/>d'</l><r><g><b/>de</g></r></p></e>
 <e r="LR" lm="occuper d'">                               <i>occup</i><par n="abaiss/er__vblex"/><p><l>de</l><r><g>de</g></r></p></e>
 <e r="LR" lm="passer à côté d'" a="groupe_cree_auto">    <i>pass</i><par n="abaiss/er__vblex"/><p><l><b/>à<b/>côté<b/>d'</l><r><g><b/>à<b/>côté<b/>de</g></r></p></e>
