@@ -44,8 +44,12 @@
       <cat-item tags=""/>
     </def-cat>
 
-    <def-cat n="article">
+    <def-cat n="le_det">
       <cat-item lemma="le" tags="det.*"/>
+    </def-cat>
+
+    <def-cat n="les_det">
+      <cat-item lemma="le" tags="det.def.mf.pl"/>
     </def-cat>
 
     <def-cat n="le-erara">
@@ -516,6 +520,10 @@
     <def-cat n="pronneg">
       <cat-item lemma="rien" tags="prn.*"/>
       <cat-item lemma="point" tags="n.*"/>
+    </def-cat>
+
+    <def-cat n="tout">
+      <cat-item lemma="tout" tags="adv"/>
     </def-cat>
 
     <def-cat n="cnjcoo">
@@ -1598,6 +1606,57 @@
   <section-rules>
 
 
+<!--******** REGLES DE "DES" (article) ******************************************** -->
+
+<rule comment="REGLA: SENT DE LE (EO, ex. des rues -> stratoj, de la farine -> faruno)">
+      <pattern>
+	<pattern-item n="sent"/>
+	<pattern-item n="de"/>
+	<pattern-item n="le_det"/>
+      </pattern>
+      <action>
+	<out>
+	  <chunk name="punt">
+	    <tags>
+	      <tag><lit-tag v="sent"/></tag>
+	    </tags>
+	    <lu>
+	      <clip pos="1" side="tl" part="whole"/>
+	    </lu>
+	  </chunk>
+	</out>	
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: PREP DE LE (EO, ex. dans des rues -> en stratoj, à de la farine -> al faruno)">
+      <pattern>
+	<pattern-item n="prep"/>
+	<pattern-item n="de"/>
+	<pattern-item n="le_det"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+
+	<out>
+	  <chunk name="prep" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="PREP"/></tag>
+	    </tags>
+	    <lu>
+              <clip pos="1" side="tl" part="whole"/>
+	    </lu>
+	  </chunk>
+	</out>	
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
 
 
 <!--******** REGLES DE SN ******************************************** -->
@@ -2162,7 +2221,7 @@
 
 <rule comment="REGLA: ART NOM més ADJ (EO, més -> plej ex: la casa més gran -> la plej granda domo)">
       <pattern>
-	<pattern-item n="article"/>
+	<pattern-item n="le_det"/>
 	<pattern-item n="nom"/>
 	<pattern-item n="plus"/>
 	<pattern-item n="adj"/>
@@ -2234,7 +2293,7 @@
 
 <rule comment="REGLA: ART més ADJ (EO, més -> plej ex: la més gran -> la plej granda)">
       <pattern>
-	<pattern-item n="article"/>
+	<pattern-item n="le_det"/>
 	<pattern-item n="plus"/>
 	<pattern-item n="adj"/>
       </pattern>
@@ -11635,6 +11694,40 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
+    <rule comment="REGLA: TOUT EN + VERBger (forigo de 'tout en': tout en parlant -> parolante)">
+      <pattern>
+	<pattern-item n="tout"/>
+	<pattern-item n="en"/>
+	<pattern-item n="ger"/>
+      </pattern>
+      <action>     	
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<out>
+	  <chunk name="ger" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SV"/></tag>
+	      <tag><clip pos="3" side="tl" part="a_verb"/></tag>
+	      <tag><clip pos="3" side="sl" part="temps"/></tag>
+	    </tags>
+	    <lu>
+	      <clip pos="3" side="tl" part="lemh"/>
+	      <clip pos="3" side="tl" part="a_verb"/>
+	      <clip pos="3" side="tl" part="sep"/>
+	      <clip pos="3" side="tl" part="temps"/>
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: EN + VERBger (forigo de 'en': en parlant -> parolante)">
       <pattern>
 	<pattern-item n="en"/>
@@ -11911,7 +12004,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 
     <rule comment="DET VERBconj ( le chante -> kantas ĝin )">
       <pattern>
-	<pattern-item n="article"/> <!-- ERROR en tagger -->
+	<pattern-item n="le_det"/> <!-- ERROR en tagger -->
 	<pattern-item n="verbcj"/>
       </pattern>
       <action>    	
@@ -12792,7 +12885,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     <rule comment="NE DET VERBconj PAS ( ne le chante pas -> ne kantas ĝin )">
       <pattern>
 	<pattern-item n="ne"/>
-	<pattern-item n="article"/> <!-- ERROR en tagger -->
+	<pattern-item n="le_det"/> <!-- ERROR en tagger -->
 	<pattern-item n="verbcj"/>
 	<pattern-item n="pas"/>
       </pattern>
