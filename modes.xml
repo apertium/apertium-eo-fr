@@ -51,6 +51,40 @@
     </pipeline>
   </mode>
 
+<!-- Tiu ĉi modo ne donas esperigajn rezultojn, sed male. Estas tro multaj memstaraj vortoj komencantaj per majusklo
+(État, Région, Tribunal, Présidant ktp.), kiuj estas tuj transprenitaj kvazaŭ propraj nomoj kaj ne tradukitaj -->
+  <mode name="fr-eo-pn" install="yes">
+    <pipeline>
+      <program name="lt-proc">
+        <file name="fr-eo.automorf.bin"/>
+      </program>
+      <program name="apertium-tagger -p -g $2">
+        <file name="fr-eo.prob"/>
+      </program>
+      <program name="apertium-pn-recogniser">
+        <file name="fr-pn.dat"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="apertium-transfer">
+        <file name="apertium-eo-fr.fr-eo.t1x"/>
+        <file name="fr-eo.t1x.bin"/>
+        <file name="fr-eo.autobil.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-eo-fr.fr-eo.t2x"/>
+        <file name="fr-eo.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-eo-fr.fr-eo.t3x"/>
+        <file name="fr-eo.t3x.bin"/>
+      </program>
+      <program name="lt-proc -g">
+        <file name="fr-eo.autogen.bin"/>
+      </program>
+      <!-- Removes special mark: -->
+      <program name="apertium-pn-recogniser-final"/>
+    </pipeline>
+  </mode>
 
   <mode name="fr-eo-bytecode" install="yes">
     <pipeline>

@@ -44,6 +44,8 @@ EXTRA_DIST=$(BASENAME).$(LANG1).dix $(BILNAME) \
 	   $(PREFIX1).prob \
 	   $(BASENAME).$(PREFIX1).t1x $(BASENAME).$(PREFIX1).t2x \
 	   $(BASENAME).$(PREFIX1).t3x \
+	   $(LANG1)-pn.dat \
+	   $(LANG2)-pn.dat \
 	   modes.xml
 
 apertium_eo_ca_DATA=$(PREFIX1).automorf.bin \
@@ -52,6 +54,8 @@ apertium_eo_ca_DATA=$(PREFIX1).automorf.bin \
 		    $(PREFIX1).prob \
 		    $(PREFIX1).t1x.bin $(PREFIX1).t2x.bin $(PREFIX1).t3x.bin \
 		    $(BASENAME).$(PREFIX1).t1x $(BASENAME).$(PREFIX1).t2x $(BASENAME).$(PREFIX1).t3x \
+		    $(LANG1)-pn.dat \
+		    $(LANG2)-pn.dat \
 		    $(PREFIX1).mode
 
 apertium_eo_cadir=$(prefix)/share/apertium/apertium-$(PREFIX1)/
@@ -69,7 +73,8 @@ install-data-local:
 	$(INSTALL_DATA) $(PREFIX1).mode $(apertium_eo_camodesdir)
 	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t1x $(BASENAME).$(PREFIX1).t2x $(apertium_eo_cadir)
 	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t3x $(apertium_eo_cadir)
-
+	$(INSTALL_DATA) $(PREFIX1)-pn.mode $(apertium_es_modesdir)
+	$(INSTALL_DATA) $(PREFIX2)-pn.mode $(apertium_es_modesdir)
 
 CLEANFILES = -rf $(TARGETS) *.translit modes 
 
