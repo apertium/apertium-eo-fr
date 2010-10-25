@@ -1,10 +1,10 @@
 #!/bin/bash
 
-TESTNAME=Regression_tests
+TESTNAME=Outstanding_tests
 
 NODOWNLOAD=$1
 #TEMPDIR=/tmp/testcache # `mktemp -d`;
-TEMPDIR=testcache
+TEMPDIR=testcache_out
 DATADIR=`pwd`;
 
 cp *.mode modes/
@@ -74,5 +74,3 @@ for dir in $DIRS; do
 	for i in $FAIL; do grep " $i : " testtmp; done
 
 done
-
-
