@@ -108,28 +108,64 @@
   </sdefs>
   <pardefs>
 
-<pardef n="_mf_m" c="autoconcord:mf-m">
-  <e>       <p><l><s n="mf"/></l><r><s n="f"/></r></p></e>
+<pardef n="_sengenra_m" c="autoconcord:sengenra-m/expand">
+  <e>       <p><l></l><r><s n="m"/></r></p></e>
 </pardef>
 
-<pardef n="_mf_f" c="autoconcord:mf-f">
-  <e>       <p><l><s n="mf"/></l><r><s n="f"/></r></p></e>
+<pardef n="_sengenra_f" c="autoconcord:sengenra-f/expand">
+  <e>       <p><l></l><r><s n="f"/></r></p></e>
 </pardef>
 
-<pardef n="_mf_mf" c="autoconcord:mf-mf/OMIT">
-  <e>       <i></i></e>
+<pardef n="_sengenra_m_f" c="autoconcord:sengenra-m_f/expand">
+  <e>       <p><l></l><r><s n="m"/></r></p></e>
+  <e>       <p><l></l><r><s n="f"/></r></p></e>
 </pardef>
+
+<pardef n="_sengenra_mf" c="autoconcord:sengenra-mf/expand">
+  <e>       <p><l></l><r><s n="mf"/></r></p></e>
+</pardef>
+
+
+<pardef n="_genra_m" c="autoconcord:genra-m">
+  <e>       <p><l><s n="m"/></l><r><s n="m"/></r></p></e>
+  <e r="LR"><p><l><s n="f"/></l><r><s n="m"/></r></p></e>
+</pardef>
+
+<pardef n="_genra_f" c="autoconcord:genra-f">
+  <e r="LR"><p><l><s n="m"/></l><r><s n="f"/></r></p></e>
+  <e>       <p><l><s n="f"/></l><r><s n="f"/></r></p></e>
+</pardef>
+
+<pardef n="_genra_m_f" c="autoconcord:genra-m_f/omit">
+  <e>       <p><l></l><r></r></p></e>
+</pardef>
+
+<pardef n="_genra_mf" c="autoconcord:genra-mf">
+  <e>       <p><l><s n="m"/></l><r><s n="mf"/></r></p></e>
+  <e r="LR"><p><l><s n="f"/></l><r><s n="mf"/></r></p></e>
+</pardef>
+
 
 
 <pardef n="_sgpl_sp" c="autoconcord:sgpl-sp">
-  <e r="LR"><p><l><s n="sp"/></l><r><s n="ND"/></r></p></e>
-  <e r="RL"><p><l><s n="sp"/></l><r><s n="sg"/></r></p></e>
-  <e r="RL"><p><l><s n="sp"/></l><r><s n="pl"/></r></p></e>
+  <e r="RL"><p><l><s n="ND"/></l><r><s n="sp"/></r></p></e>
+  <e r="LR"><p><l><s n="sg"/></l><r><s n="sp"/></r></p></e>
+  <e r="LR"><p><l><s n="pl"/></l><r><s n="sp"/></r></p></e>
 </pardef>
+
 
 <pardef n="_sgpl_sgpl" c="autoconcord:sgpl-sgpl/OMIT">
   <e>       <i></i></e>
 </pardef>
+
+<pardef n="_pl_sgpl" c="autoconcord:sgpl-sgpl">
+  <e>       <p><l><s n="pl"/></l><r><s n="pl"/></r></p></e>
+  <e r="LR"><p><l><s n="pl"/></l><r><s n="sg"/></r></p></e>
+</pardef>
+
+
+
+
 
 <pardef n="Abc">
   <e>       <re>[ÀÁÂÄÇÈÉÊËÌÍÎÏÑÒÓÔÖÙÚÛÜÚABCDEFGHIJKLMNOPQRSTUVWXYZĈĜĤĴŜŬÆØÅæøåàáâäçèéêëìíîïñòóôöõùúûüabcdefghijklmnopqrstuvwxyzĉĝĥĵŝŭÚéõóöäíáòñúŵã -.]*</re></e>

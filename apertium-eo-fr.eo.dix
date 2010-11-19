@@ -111,14 +111,14 @@
 -->
 
 
-<pardef n="o__n" c="autoconcord:sgpl">
+<pardef n="o__n" c="autoconcord:sengenra,sgpl">
   <e>       <p><l>o</l>         <r>o<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
   <e>       <p><l>oj</l>        <r>o<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l>on</l>        <r>o<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
   <e>       <p><l>ojn</l>       <r>o<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
 </pardef>
 
-<pardef n="oj__n" c="autoconcord:pl">
+<pardef n="oj__n" c="autoconcord:sengenra,pl">
   <e>       <p><l>oj</l>        <r>o<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l>ojn</l>       <r>o<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
 </pardef>
@@ -289,14 +289,14 @@
 
 <!-- Paradigna NOM-->
 
-<pardef n="nom__n" c="autoconcord:sgpl">
+<pardef n="nom__n" c="autoconcord:sengenra,sgpl">
   <e>       <p><l></l>          <r><s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
   <e>       <p><l>j</l>         <r><s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l>n</l>         <r><s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
   <e>       <p><l>jn</l>        <r><s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
 </pardef>
 
-<pardef n="nomf__n" c="autoconcord:sgpl">
+<pardef n="nomf__n" c="autoconcord:sengenra,sgpl">
   <e>       <p><l></l>          <r><s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
   <e>       <p><l>j</l>         <r><s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l>n</l>         <r><s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
@@ -304,7 +304,7 @@
 </pardef>
 
 
-<pardef n="ino__n" c="autoconcord:m_f,sgpl">
+<pardef n="ino__n" c="autoconcord:genra,sgpl">
   <e>       <p><l>o</l>         <r>o<s n="n"/><s n="m"/><s n="sg"/><s n="nom"/></r></p></e>
   <e>       <p><l>oj</l>        <r>o<s n="n"/><s n="m"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l>ino</l>       <r>o<s n="n"/><s n="f"/><s n="sg"/><s n="nom"/></r></p></e>
@@ -1790,7 +1790,7 @@
 <e lm="aĝo">             <i>aĝ</i><par n="o__n"/></e>
 <e lm="aĝio">            <i>aĝi</i><par n="o__n"/></e>
 <e lm="aĵo">             <i>aĵ</i><par n="o__n"/></e>
-<e lm="aŝkenazo">        <i>aŝkenaz</i><par n="o__n"/></e>
+<e lm="aŝkenazo">        <i>aŝkenaz</i><par n="ino__n"/></e>
 <e lm="Aŝoko">           <i>Aŝok</i><par n="o__n"/></e>
 <e lm="aŭdo">            <i>aŭd</i><par n="o__n"/></e>
 <e lm="aŭdaco">          <i>aŭdac</i><par n="o__n"/></e>
