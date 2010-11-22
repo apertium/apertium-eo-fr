@@ -7,10 +7,18 @@ BASENAME=apertium-eo-fr
 BILNAME=apertium-eo-fr.eo-fr.dix
 
 TARGETS_COMMON = $(PREFIX1).automorf.bin $(PREFIX1).autobil.bin $(PREFIX1).autogen.bin \
-     $(PREFIX1).t1x.bin $(PREFIX1).t2x.bin $(PREFIX1).t3x.bin \
+     $(PREFIX1).t1x.bin $$(PREFIX1).antaux_t2x.bin $(PREFIX1).antaux2_t2x.bin (PREFIX1).t2x.bin $(PREFIX1).t3x.bin \
      modes $(PREFIX1).mode
 
 TARGETS = $(TARGETS_COMMON)
+
+$(PREFIX1).antaux_t2x.bin: $(BASENAME).$(PREFIX1).antaux_t2x
+	apertium-validate-interchunk $(BASENAME).$(PREFIX1).antaux_t2x
+	apertium-preprocess-transfer $(BASENAME).$(PREFIX1).antaux_t2x $@
+
+$(PREFIX1).antaux2_t2x.bin: $(BASENAME).$(PREFIX1).antaux2_t2x
+	apertium-validate-interchunk $(BASENAME).$(PREFIX1).antaux2_t2x
+	apertium-preprocess-transfer $(BASENAME).$(PREFIX1).antaux2_t2x $@
 
 $(PREFIX1).automorf.bin: $(BASENAME).$(LANG2).dix
 	apertium-validate-dictionary $(BASENAME).$(LANG2).dix
@@ -42,7 +50,7 @@ EXTRA_DIST=$(BASENAME).$(LANG1).dix $(BILNAME) \
 	   $(BASENAME).post-$(LANG1).dix \
 	   $(BASENAME).$(LANG2).dix \
 	   $(PREFIX1).prob \
-	   $(BASENAME).$(PREFIX1).t1x $(BASENAME).$(PREFIX1).t2x \
+	   $(BASENAME).$(PREFIX1).t1x $(BASENAME).$(PREFIX1).antaux_t2x $(BASENAME).$(PREFIX1).antaux2_t2x $(BASENAME).$(PREFIX1).t2x \
 	   $(BASENAME).$(PREFIX1).t3x \
 	   $(LANG1)-pn.dat \
 	   $(LANG2)-pn.dat \
@@ -52,7 +60,7 @@ apertium_eo_ca_DATA=$(PREFIX1).automorf.bin \
 		    $(PREFIX1).autobil.bin  \
 		    $(PREFIX1).autogen.bin  \
 		    $(PREFIX1).prob \
-		    $(PREFIX1).t1x.bin $(PREFIX1).t2x.bin $(PREFIX1).t3x.bin \
+		    $(PREFIX1).t1x.bin $(PREFIX1).antaux_t2x.bin $(PREFIX1).antaux2_t2x.bin $(PREFIX1).t2x.bin $(PREFIX1).t3x.bin \
 		    $(BASENAME).$(PREFIX1).t1x $(BASENAME).$(PREFIX1).t2x $(BASENAME).$(PREFIX1).t3x \
 		    $(LANG1)-pn.dat \
 		    $(LANG2)-pn.dat \
@@ -71,7 +79,7 @@ modes: modes.xml
 install-data-local:
 	apertium-gen-modes modes.xml apertium-$(PREFIX1)
 	$(INSTALL_DATA) $(PREFIX1).mode $(apertium_eo_camodesdir)
-	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t1x $(BASENAME).$(PREFIX1).t2x $(apertium_eo_cadir)
+	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t1x $(BASENAME).$(PREFIX1).antaux_t2x  $(BASENAME).$(PREFIX1).antaux2_t2x $(BASENAME).$(PREFIX1).t2x $(apertium_eo_cadir)
 	$(INSTALL_DATA) $(BASENAME).$(PREFIX1).t3x $(apertium_eo_cadir)
 	$(INSTALL_DATA) $(PREFIX1)-pn.mode $(apertium_es_modesdir)
 	$(INSTALL_DATA) $(PREFIX2)-pn.mode $(apertium_es_modesdir)
