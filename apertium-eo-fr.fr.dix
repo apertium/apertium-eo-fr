@@ -2982,9 +2982,11 @@
 </pardef>
 <pardef n="artiste__n" c="autoconcord:mf,sgpl">
   <e>       <p><l></l>          <r><s n="n"/><s n="mf"/><s n="sg"/></r></p></e>
-
   <e>       <p><l>s</l>         <r><s n="n"/><s n="mf"/><s n="pl"/></r></p></e>
-
+  <e r="RL"><p><l></l>          <r><s n="n"/><s n="m"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l></l>          <r><s n="n"/><s n="f"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l>s</l>         <r><s n="n"/><s n="m"/><s n="pl"/></r></p></e>
+  <e r="RL"><p><l>s</l>         <r><s n="n"/><s n="f"/><s n="pl"/></r></p></e>
 </pardef>
 <pardef n="attend/re__vblex">
   <e>       <p><l></l>          <r>re<s n="vblex"/><s n="pri"/><s n="p3"/><s n="sg"/></r></p></e>
@@ -8101,9 +8103,12 @@
 </pardef>
 <pardef n="accessoire__n" c="autoconcord:m,sgpl">
   <e>       <p><l></l>          <r><s n="n"/><s n="m"/><s n="sg"/></r></p></e>
-
   <e>       <p><l>s</l>         <r><s n="n"/><s n="m"/><s n="pl"/></r></p></e>
-
+</pardef>
+<pardef n="matéri/el__n" c="autoconcord:m,sgpl">
+  <e>       <p><l>el</l>        <r>el<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
+  <e>       <p><l>els</l>       <r>el<s n="n"/><s n="m"/><s n="pl"/></r></p></e>
+  <e r="LR"><p><l>aux</l>       <r>el<s n="n"/><s n="m"/><s n="pl"/></r></p></e>
 </pardef>
 <pardef n="businessm/an__n" c="autoconcord:m,sgpl">
   <e>       <p><l>an</l>        <r>an<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
@@ -13128,6 +13133,7 @@
 <e lm="brasserie">       <i>brasserie</i><par n="abeille__n"/></e>
 <e lm="bref">            <i>br</i><par n="br/ef__adj"/></e>
 <e lm="bref">            <i>bref</i><par n="hier__adv"/></e>
+<e lm="brièvement">      <i>brièvement</i><par n="hier__adv"/></e>
 <e lm="brigade">         <i>brigade</i><par n="abeille__n"/></e>
 <e lm="brigand">         <i>brigand</i><par n="accessoire__n"/></e>
 <e lm="brillant">        <i>brillant</i><par n="abaissant__adj"/></e>
@@ -15124,7 +15130,7 @@
 <e lm="matinée">         <i>matinée</i><par n="abeille__n"/></e>
 <e lm="matière">         <i>matière</i><par n="abeille__n"/></e>
 <e lm="matériel">        <i>matériel</i><par n="annuel__adj"/></e>
-<e lm="matériel">        <i>matériel</i><par n="accessoire__n"/></e>
+<e lm="matériel">        <i>matéri</i><par n="matéri/el__n"/></e>
 <e lm="maudire">         <i>maud</i><par n="maud/i[]re__vblex"/></e>
 <e lm="maudit">          <i>maudit</i><par n="abaissant__adj"/></e>
 <e lm="maugréer">        <i>maugré</i><par n="abaiss/er__vblex"/></e>
@@ -17213,6 +17219,7 @@
 <e lm="édition">         <i>édition</i><par n="abeille__n"/></e>
 <e r="LR" lm="éducation"><p><l>Education</l> <r>éducation</r></p><par n="abeille__n"/></e>
 <e lm="éducation">       <i>éducation</i><par n="abeille__n"/></e>
+<e lm="rééducation">       <i>rééducation</i><par n="abeille__n"/></e>
 <e r="LR" lm="égal">     <p><l>Ega</l>       <r>éga</r></p><par n="amica/l__adj"/></e>
 <e lm="égal">            <i>éga</i><par n="amica/l__adj"/></e>
 <e lm="égal">            <i>éga</i><par n="anima/l__n"/></e>
@@ -19107,6 +19114,7 @@
 <e lm="trivial" a="webform"><i>trivia</i><par n="amica/l__adj"/></e>
 <e lm="vulgaire" a="webform"><i>vulgaire</i><par n="académique__adj"/></e>
 <e lm="typique" a="webform"><i>typique</i><par n="académique__adj"/></e>
+<e lm="typiquement"><i>typiquement</i><par n="hier__adv"/></e>
 <e lm="unanime" a="webform"><i>unanime</i><par n="académique__adj"/></e>
 <e lm="universel" a="webform"><i>universel</i><par n="annuel__adj"/></e>
 <e lm="vacant" a="webform"><i>vacant</i><par n="abaissant__adj"/></e>
@@ -19828,7 +19836,7 @@
 <e lm="interposer" a="eleka"><i>interpos</i><par n="abaiss/er__vblex"/></e>
 <e lm="subventionner" a="eleka"><i>subventionn</i><par n="abaiss/er__vblex"/></e>
 <e lm="tremper" a="eleka"><i>tremp</i><par n="abaiss/er__vblex"/></e>
-<e lm="chaos" a="eleka"> <i>chaos</i><par n="ex__n"/></e>
+<e lm="chaos"> <i>chaos</i><par n="mois__n"/></e>
 <e lm="massacre" a="eleka"><i>massacre</i><par n="accessoire__n"/></e>
 <e lm="gratte-ciel" a="eleka"><i>gratte-ciel</i><par n="mois__n"/></e>
 <e lm="concrétiser" a="eleka"><i>concrétis</i><par n="abaiss/er__vblex"/></e>
@@ -20135,10 +20143,10 @@
 <e lm="Lorrain"><i>Lorrain</i><par n="africain__n"/></e>
 <e lm="alsacien"><i>alsacien</i><par n="ancien__adj"/></e>
 <e lm="Alsacien"><i>Alsacien</i><par n="ancien__n"/></e>
-<e lm="roussillonais"><i>roussillonais</i><par n="abaissant__adj"/></e>
-<e lm="Roussillonais"><i>Roussillonais</i><par n="africain__n"/></e>
-<e lm="champagnois"><i>champagnois</i><par n="abaissant__adj"/></e>
-<e lm="Champagnois"><i>Champagnois</i><par n="africain__n"/></e>
+<e lm="roussillonais"><i>roussillonais</i><par n="anglais__adj"/></e>
+<e lm="Roussillonais"><i>Roussillonais</i><par n="admis__n"/></e>
+<e lm="champagnois"><i>champagnois</i><par n="anglais__adj"/></e>
+<e lm="Champagnois"><i>Champagnois</i><par n="admis__n"/></e>
 <e lm="bourguignon"><i>bourguignon</i><par n="ancien__adj"/></e>
 <e lm="Bourguignon"><i>Bourguignon</i><par n="ancien__n"/></e>
 <e lm="court-circuit" a="eleka"><i>court-circuit</i><par n="accessoire__n"/></e>
@@ -23532,7 +23540,6 @@
 <e lm="cervelle" a="paradigme_auto"><i>cervelle</i><par n="abeille__n"/></e>
 <e lm="cervidés" a="paradigme_auto"><i>cervidés</i><par n="gens__n"/></e>
 <e lm="César">           <i>César</i><par n="Abraham__np"/></e>
-<e lm="César">           <i>César</i><par n="Carrefour__np"/></e>
 <e lm="césium" a="paradigme_auto"><i>césium</i><par n="accessoire__n"/></e>
 <e lm="cessation">       <i>cessation</i><par n="abeille__n"/></e>
 <e lm="cessez-le-feu">   <i>cessez-le-feu</i><par n="mois__n"/></e>
@@ -23839,7 +23846,7 @@
 <e lm="cinématographe">  <i>cinématographe</i><par n="accessoire__n"/></e>
 <e lm="cinétique" a="paradigme_auto"><i>cinétique</i><par n="académique__adj"/></e>
 <e lm="cinglant" a="paradigme_auto"><i>cinglant</i><par n="abaissant__adj"/></e>
-<e lm="cinquième">       <i>cinquième</i><par n="artiste__n"/></e>
+<e lm="cinquième">       <i>cinquième</i><par n="accessoire__n"/></e>
 <e lm="cinquièmement" a="paradigme_auto"><i>cinquièmement</i><par n="hier__adv"/></e>
 <e lm="cirage" a="paradigme_auto"><i>cirage</i><par n="accessoire__n"/></e>
 <e lm="circassien" a="paradigme_auto"><i>circassien</i><par n="ancien__adj"/></e>
@@ -23959,7 +23966,8 @@
 <e lm="cobalt">          <i>cobalt</i><par n="accessoire__n"/></e>
 <e lm="cobaye" a="paradigme_auto"><i>cobaye</i><par n="abeille__n"/></e>
 <e lm="cobitidés" a="paradigme_auto"><i>cobitidés</i><par n="gens__n"/></e>
-<e lm="coca">            <i>coca</i><par n="artiste__n"/></e>
+<e lm="coca">            <i>coca</i><par n="abeille__n"/></e>
+<e lm="coca">            <i>coca</i><par n="accessoire__n"/></e>
 <e lm="cocaïnisme" a="paradigme_auto"><i>cocaïnisme</i><par n="accessoire__n"/></e>
 <e lm="cocaïsme" a="paradigme_auto"><i>cocaïsme</i><par n="accessoire__n"/></e>
 <e lm="cocarde" a="paradigme_auto"><i>cocarde</i><par n="abeille__n"/></e>
@@ -25253,7 +25261,6 @@
 <e lm="déphasé" a="paradigme_auto"><i>déphasé</i><par n="abaissant__adj"/></e>
 <e lm="dépiauter" a="paradigme_auto"><i>dépiaut</i><par n="abaiss/er__vblex"/></e>
 <e r="RL" lm="de pierre" a="paradigme_auto"><i>de<b/>pierre</i><par n="arrière__adj"/></e>
-<e lm="dépiler une donnée"><i>dépiler</i><par n="abaiss/er__vblex"/><p><l><b/>une<b/>donnée</l><r><g><b/>une<b/>donnée</g></r></p></e>
 <e lm="déplaire">        <i>dépl</i><par n="compl/aire__vblex"/></e>
 <e lm="de Platon" a="paradigme_auto"><i>de<b/>Platon</i><par n="arrière__adj"/></e>
 <e lm="de plein droit" a="paradigme_auto"><i>de<b/>plein<b/>droit</i><par n="hier__adv"/></e>
@@ -25999,6 +26006,7 @@
 <e lm="éducateur">       <i>éducat</i><par n="conduct/eur__adj"/></e>
 <e r="LR" lm="éduquer">  <p><l>Eduqu</l>     <r>éduqu</r></p><par n="abaiss/er__vblex"/></e>
 <e lm="éduquer" a="paradigme_auto"><i>éduqu</i><par n="abaiss/er__vblex"/></e>
+<e lm="rééduquer" a="paradigme_auto"><i>rééduqu</i><par n="abaiss/er__vblex"/></e>
 <e lm="effectuer du calcul informatique" a="groupe_cree_auto"><i>effectu</i><par n="abaiss/er__vblex"/><p><l><b/>du<b/>calcul<b/>informatique</l><r><g><b/>du<b/>calcul<b/>informatique</g></r></p></e>
 <e lm="effectuer l'imposition" a="groupe_cree_auto"><i>effectu</i><par n="abaiss/er__vblex"/><p><l><b/>l'imposition</l><r><g><b/>l'imposition</g></r></p></e>
 <e lm="effectuer une révolution" a="groupe_cree_auto"><i>effectu</i><par n="abaiss/er__vblex"/><p><l><b/>une<b/>révolution</l><r><g><b/>une<b/>révolution</g></r></p></e>
@@ -26391,7 +26399,7 @@
 <e lm="en rapporter" a="paradigme_auto"><i>en<b/>rapport</i><par n="abaiss/er__vblex"/></e>
 <e lm="en récompense de"><i>en<b/>récompense<b/></i><par n="contde__pr"/></e>
 <e lm="en regard de">    <i>en<b/>regard<b/></i><par n="contde__pr"/></e>
-<e lm="enregistreur">    <i>enregistreu</i><par n="causeu/r__n"/></e>
+<e lm="enregistreur">    <i>enregistreu</i><par n="accessoire__n"/></e>
 <e lm="en remettre" a="paradigme_auto"><i>en<b/>rem</i><par n="adm/ettre__vblex"/></e>
 <e lm="en remplacement" a="paradigme_auto"><i>en<b/>remplacement</i><par n="hier__adv"/></e>
 <e lm="en résumé">       <i>en<b/>résumé</i><par n="hier__adv"/></e>
@@ -26671,6 +26679,7 @@
 <e lm="espérantiste" a="paradigme_auto"><i>espérantiste</i><par n="artiste__n"/></e>
 <e lm="espérantiste" a="paradigme_auto"><i>espérantiste</i><par n="académique__adj"/></e>
 <e lm="espéranto">       <i>espéranto</i><par n="accessoire__n"/></e>
+<e lm="l'espéranto">     <i>l'espéranto</i><par n="accessoire__n"/></e>
 <e lm="espérantologie" a="paradigme_auto"><i>espérantologie</i><par n="abeille__n"/></e>
 <e lm="espérantologue" a="paradigme_auto"><i>espérantologue</i><par n="artiste__n"/></e>
 <e lm="espérons que">    <i>espérons<b/>que</i><par n="afin_que__cnjadv"/></e>
@@ -30663,8 +30672,8 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e lm="matérialiste" a="paradigme_auto"><i>matérialiste</i><par n="académique__adj"/></e>
 <e lm="matérialité" a="paradigme_auto"><i>matérialité</i><par n="abeille__n"/></e>
 <e lm="matériau">        <i>matériau</i><par n="accessoire__n"/></e>
-<e lm="matériel de gymnastique" a="groupe_cree_auto"><i>matériel</i><par n="accessoire__n"/><p><l><b/>de<b/>gymnastique</l><r><g><b/>de<b/>gymnastique</g></r></p></e>
-<e lm="matériel de propagande" a="groupe_cree_auto"><i>matériel</i><par n="accessoire__n"/><p><l><b/>de<b/>propagande</l><r><g><b/>de<b/>propagande</g></r></p></e>
+<e lm="matériel de gymnastique"><i>matéri</i><par n="matéri/el__n"/><p><l><b/>de<b/>gymnastique</l><r><g><b/>de<b/>gymnastique</g></r></p></e>
+<e lm="matériel de propagande"><i>matéri</i><par n="matéri/el__n"/><p><l><b/>de<b/>propagande</l><r><g><b/>de<b/>propagande</g></r></p></e>
 <e lm="mathématicien">   <i>mathématicien</i><par n="ancien__n"/></e>
 <e lm="mathématiques">   <i>mathématiques</i><par n="vacances__n"/></e>
 <e lm="mathématique">    <i>mathématique</i><par n="académique__adj"/></e>
@@ -34777,7 +34786,6 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e lm="télégramme">      <i>télégramme</i><par n="accessoire__n"/></e>
 <e lm="télégraphe">      <i>télégraphe</i><par n="accessoire__n"/></e>
 <e lm="télégraphier" a="paradigme_auto"><i>télégraphi</i><par n="abaiss/er__vblex"/></e>
-<e lm="télé-">           <i>télé-</i><par n="arrière__adj"/></e>
 <e lm="télé">            <i>télé</i><par n="abeille__n"/></e>
 <e lm="téléobjectif">    <i>téléobjectif</i><par n="accessoire__n"/></e>
 <e lm="téléphérique" a="paradigme_auto"><i>téléphérique</i><par n="abeille__n"/></e>
@@ -35675,6 +35683,9 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <!-- FINO DE REVO -->
 
 <!-- préfixes -->
+<e lm="demi">           <i>demi</i><par n="arrière__adj"/></e>
+<e lm="mi">             <i>mi</i><par n="arrière__adj"/></e>
+<e lm="télé">           <i>télé</i><par n="arrière__adj"/></e>
 <e lm="politico">        <i>politico</i><par n="ex-__adj"/></e>
 <e lm="socio">           <i>socio</i><par n="ex-__adj"/></e>
 <e lm="franco">          <i>franco</i><par n="ex-__adj"/></e>
@@ -36374,8 +36385,8 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e lm="endroit touffu">  <p><l>endroits<b/>touffus</l><r>endroit<b/>touffu</r></p><par n="gens__n"/></e>
 <e lm="énergie cinétique"><p><l>énergie<b/>cinétique</l><r>énergie<b/>cinétique</r></p><par n="alma_mater__n"/></e>
 <e lm="énergie cinétique"><p><l>énergies<b/>cinétiques</l><r>énergie<b/>cinétique</r></p><par n="vacances__n"/></e>
-<e lm="enfant illégitime"><p><l>enfant<b/>illégitime</l><r>enfant<b/>illégitime</r></p><par n="alma_mater__n"/></e>
-<e lm="enfant illégitime"><p><l>enfants<b/>illégitimes</l><r>enfant<b/>illégitime</r></p><par n="vacances__n"/></e>
+<e lm="enfant illégitime"><p><l>enfant<b/>illégitime</l><r>enfant<b/>illégitime</r></p><par n="personnel__n"/></e>
+<e lm="enfant illégitime"><p><l>enfants<b/>illégitimes</l><r>enfant<b/>illégitime</r></p><par n="gens__n"/></e>
 <e lm="enfant prématuré"><p><l>enfant<b/>prématuré</l><r>enfant<b/>prématuré</r></p><par n="personnel__n"/></e>
 <e lm="enfant prématuré"><p><l>enfants<b/>prématurés</l><r>enfant<b/>prématuré</r></p><par n="gens__n"/></e>
 <e lm="enfant prodige">  <p><l>enfant<b/>prodige</l><r>enfant<b/>prodige</r></p><par n="personnel__n"/></e>
@@ -37789,7 +37800,7 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e lm="filet à poissons"><i>filet</i><par n="accessoire__n"/><p><l><b/>à<b/>poissons</l><r><g><b/>à<b/>poissons</g></r></p></e>
 <e lm="filet à provisions"><i>filet</i><par n="accessoire__n"/><p><l><b/>à<b/>provisions</l><r><g><b/>à<b/>provisions</g></r></p></e>
 <e lm="flocon de neige"> <i>flocon</i><par n="accessoire__n"/><p><l><b/>de<b/>neige</l><r><g><b/>de<b/>neige</g></r></p></e>
-<e lm="flocons de maïs"> <i>flocons</i><par n="gens__n"/><p><l><b/>de<b/>maïs</l><r><g><b/>de<b/>maïs</g></r></p></e>
+<e lm="flocon de maïs"> <i>flocon</i><par n="accessoire__n"/><p><l><b/>de<b/>maïs</l><r><g><b/>de<b/>maïs</g></r></p></e>
 <e lm="folie des grandeurs"><i>folie</i><par n="abeille__n"/><p><l><b/>des<b/>grandeurs</l><r><g><b/>des<b/>grandeurs</g></r></p></e>
 <e lm="folium de Descartes"><i>folium</i><par n="accessoire__n"/><p><l><b/>de<b/>Descartes</l><r><g><b/>de<b/>Descartes</g></r></p></e>
 <e lm="fonction circulaire réciproque"><p><l>fonction<b/>circulaire<b/>réciproque</l><r>fonction<b/>circulaire<b/>réciproque</r></p><par n="alma_mater__n"/></e>
