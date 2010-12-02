@@ -86,6 +86,8 @@
     <sdef n="ref" /> 
     <sdef n="sup" /> 
     <sdef n="num" /> 
+    <sdef n="percent" /> 
+    <sdef n="ciph" /> 
     <sdef n="ij" /> 
     <sdef n="sent" /> 
     <sdef n="cm" /> 
@@ -223,15 +225,26 @@
 
 
 <pardef n="numeros">
-  <e>       <re>[0-9]+([.,][0-9]+)?</re><p><l></l><r><s n="num"/></r></p></e>
+  <e>       <re>[0-9]+([.,][0-9]+)*</re><p><l></l><r><s n="num"/><s n="ciph"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e>       <re>[0-9]+([.,][0-9]+)*</re><p><l></l><r><s n="num"/><s n="ciph"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e r="RL"><re>[0-9]+([.,][0-9]+)*</re><p><l></l><r><s n="num"/><s n="ciph"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e r="RL"><re>[0-9]+([.,][0-9]+)*</re><p><l></l><r><s n="num"/><s n="ciph"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e r="RL"><re>[0-9]+([.,][0-9]+)*</re><p><l></l><r><s n="num"/><s n="ciph"/><s n="pl"/><s n="nom"/></r></p></e>
+  <e r="RL"><re>[0-9]+([.,][0-9]+)*</re><p><l></l><r><s n="num"/><s n="ciph"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e>       <re>[0-9]+([.,][0-9]+)*%</re><p><l></l><r><s n="num"/><s n="percent"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e>       <re>[0-9]+([.,][0-9]+)*%</re><p><l></l><r><s n="num"/><s n="percent"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e r="RL"><re>[0-9]+([.,][0-9]+)*%</re><p><l></l><r><s n="num"/><s n="percent"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e r="RL"><re>[0-9]+([.,][0-9]+)*%</re><p><l></l><r><s n="num"/><s n="percent"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e r="RL"><re>[0-9]+([.,][0-9]+)*%</re><p><l></l><r><s n="num"/><s n="percent"/><s n="pl"/><s n="nom"/></r></p></e>
+  <e r="RL"><re>[0-9]+([.,][0-9]+)*%</re><p><l></l><r><s n="num"/><s n="percent"/><s n="pl"/><s n="acc"/></r></p></e>
 
 </pardef>
 
 <pardef n="ordinales">
-  <e>       <re>[0-9]+([.,][0-9]+)</re><p><l>a</l><r>a<s n="num"/><s n="ord"/><s n="sg"/><s n="nom"/></r></p></e>
-  <e>       <re>[0-9]+([.,][0-9]+)</re><p><l>aj</l><r>a<s n="num"/><s n="ord"/><s n="pl"/><s n="nom"/></r></p></e>
-  <e>       <re>[0-9]+([.,][0-9]+)</re><p><l>an</l><r>a<s n="num"/><s n="ord"/><s n="sg"/><s n="acc"/></r></p></e>
-  <e>       <re>[0-9]+([.,][0-9]+)</re><p><l>ajn</l><r>a<s n="num"/><s n="ord"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e>       <re>[0-9]+([.,][0-9]+)*</re><p><l>a</l><r>a<s n="num"/><s n="ord"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e>       <re>[0-9]+([.,][0-9]+)*</re><p><l>aj</l><r>a<s n="num"/><s n="ord"/><s n="pl"/><s n="nom"/></r></p></e>
+  <e>       <re>[0-9]+([.,][0-9]+)*</re><p><l>an</l><r>a<s n="num"/><s n="ord"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e>       <re>[0-9]+([.,][0-9]+)*</re><p><l>ajn</l><r>a<s n="num"/><s n="ord"/><s n="pl"/><s n="acc"/></r></p></e>
 
 </pardef>
 
@@ -583,10 +596,14 @@
 
 <pardef n="unu__num">
   <e>       <p><l></l>          <r><s n="num"/><s n="sg"/></r></p></e>
+  <e>       <p><l></l>          <r><s n="num"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e>       <p><l></l>          <r><s n="num"/><s n="sg"/><s n="acc"/></r></p></e>
 </pardef>
 
 <pardef n="nul__num">
   <e>       <p><l></l>          <r><s n="num"/><s n="pl"/></r></p></e>
+  <e>       <p><l></l>          <r><s n="num"/><s n="pl"/><s n="nom"/></r></p></e>
+  <e>       <p><l></l>          <r><s n="num"/><s n="pl"/><s n="acc"/></r></p></e>
 </pardef>
 
 <pardef n="du__num">
@@ -8789,7 +8806,6 @@
 <e lm="meĥaniko">        <i>meĥanik</i><par n="o__n"/></e>
 <e lm="meĥanikisto">     <i>meĥanikist</i><par n="ino__n"/></e>
 <e lm="meĥanismo">       <i>meĥanism</i><par n="o__n"/></e>
-<e lm="mi">              <i>mi</i><par n="o__n"/></e>
 <e lm="miaŭo">           <i>miaŭ</i><par n="o__n"/></e>
 <e lm="midineto">        <i>midinet</i><par n="o__n"/></e>
 <e lm="midŝipmano">      <i>midŝipman</i><par n="ino__n"/></e>
@@ -14497,6 +14513,7 @@
 <e lm="ŝvelaĵo">         <i>ŝvelaĵ</i><par n="o__n"/></e>
 <e lm="ŝvito">           <i>ŝvit</i><par n="o__n"/></e>
 <e lm="1a">              <i>1</i><par n="a__adj"/></e>
+<e r="RL" lm="1a">       <p><l>1</l><r>1a</r></p><par n="a__adj"/></e> <!-- porkaĵo por simpligo la pritrakto de 1r mai en t1x -->
 <e lm="10a">             <i>10</i><par n="a__adj"/></e>
 <e lm="11a">             <i>11</i><par n="a__adj"/></e>
 <e lm="12a">             <i>12</i><par n="a__adj"/></e>
@@ -18962,7 +18979,6 @@
 <e lm="butoni">          <i>buton</i><par n="i__vblex"/></e>
 <e lm="butonumi">        <i>butonum</i><par n="i__vblex"/></e>
 <e lm="buĉi">            <i>buĉ</i><par n="i__vblex"/></e>
-<e lm="ci">              <i>c</i><par n="i__vblex"/></e>
 <e lm="cedi">            <i>ced</i><par n="i__vblex"/></e>
 <e lm="celi">            <i>cel</i><par n="i__vblex"/></e>
 <e lm="celebri">         <i>celebr</i><par n="i__vblex"/></e>
@@ -20439,7 +20455,6 @@
 <e lm="lumĝeni">         <i>lumĝen</i><par n="i__vblex"/></e>
 <e lm="lupreni">         <i>lupren</i><par n="i__vblex"/></e>
 <e lm="luti">            <i>lut</i><par n="i__vblex"/></e>
-<e lm="mi">              <i>m</i><par n="i__vblex"/></e>
 <e lm="maceri">          <i>macer</i><par n="i__vblex"/></e>
 <e lm="magnetizi">       <i>magnetiz</i><par n="i__vblex"/></e>
 <e lm="makadami">        <i>makadam</i><par n="i__vblex"/></e>
@@ -20580,7 +20595,6 @@
 <e lm="manifestiĝi">     <i>manifestiĝ</i><par n="i__vblex"/></e>
 <e lm="manikuri">        <i>manikur</i><par n="i__vblex"/></e>
 <e lm="manipuli">        <i>manipul</i><par n="i__vblex"/></e>
-<e lm="manki">           <i>mank</i><par n="i__vblex"/></e>
 <e lm="mankateni">       <i>mankaten</i><par n="i__vblex"/></e>
 <e lm="manovri">         <i>manovr</i><par n="i__vblex"/></e>
 <e lm="mansvingi">       <i>mansving</i><par n="i__vblex"/></e>
@@ -20714,7 +20728,6 @@
 <e lm="muziki">          <i>muzik</i><par n="i__vblex"/></e>
 <e lm="muzikigi">        <i>muzikig</i><par n="i__vblex"/></e>
 <e lm="muĝi">            <i>muĝ</i><par n="i__vblex"/></e>
-<e lm="ni">              <i>n</i><par n="i__vblex"/></e>
 <e lm="naciigi">         <i>naciig</i><par n="i__vblex"/></e>
 <e lm="najli">           <i>najl</i><par n="i__vblex"/></e>
 <e lm="narkoti">         <i>narkot</i><par n="i__vblex"/></e>
@@ -21963,7 +21976,6 @@
 <e lm="zorgi">           <i>zorg</i><par n="i__vblex"/></e>
 <e lm="zorgi pri">       <i>zorg</i><par n="i__vblex"/><p><l><b/>pri</l><r><g><b/>pri</g></r></p></e>
 <e lm="zumi">            <i>zum</i><par n="i__vblex"/></e>
-<e lm="ĉi">              <i>ĉ</i><par n="i__vblex"/></e>
 <e lm="ĉagreni">         <i>ĉagren</i><par n="i__vblex"/></e>
 <e lm="ĉantaĝi">         <i>ĉantaĝ</i><par n="i__vblex"/></e>
 <e lm="ĉarmi">           <i>ĉarm</i><par n="i__vblex"/></e>
@@ -22031,7 +22043,6 @@
 <e lm="ĵurigi">          <i>ĵurig</i><par n="i__vblex"/></e>
 <e lm="ĵurpeti">         <i>ĵurpet</i><par n="i__vblex"/></e>
 <e lm="ĵurrompi">        <i>ĵurromp</i><par n="i__vblex"/></e>
-<e lm="ŝi">              <i>ŝ</i><par n="i__vblex"/></e>
 <e lm="ŝablondesegni">   <i>ŝablondesegn</i><par n="i__vblex"/></e>
 <e lm="ŝafbleki">        <i>ŝafblek</i><par n="i__vblex"/></e>
 <e lm="ŝajni">           <i>ŝajn</i><par n="i__vblex"/></e>
@@ -23411,7 +23422,7 @@
 <e lm="tio, kion asertis"><i>tio,<b/>kion<b/>asertis</i><par n="al__pr"/></e>
 <e lm="tra">             <i>tra</i><par n="al__pr"/></e>
 <e lm="trans">           <i>trans</i><par n="al__pr"/></e>
-<e lm="ĉi">           <i>ĉi</i><par n="jam__adv"/></e>
+<e lm="ĉi">              <i>ĉi</i><par n="jam__adv"/></e>
 <e lm="ĉiel">           <i>ĉiel</i><par n="jam__adv"/></e>
 <e lm="ĉiom">           <i>ĉiom</i><par n="jam__adv"/></e>
 <e lm="tuj poste">       <i>tuj<b/>poste</i><par n="al__pr"/></e>
@@ -23442,6 +23453,11 @@
 <e lm="ekzisti">         <i>ekzist</i><par n="ser__vb"/></e>
 <e lm="esti">            <i>est</i><par n="ser__vb"/></e>
 <e lm="manki">           <i>mank</i><par n="ser__vb"/></e>
+<e lm="resti">           <i>rest</i><par n="ser__vb"/></e>
+<e lm="aperi">           <i>aper</i><par n="ser__vb"/></e>
+<e lm="malaperi">        <i>malaper</i><par n="ser__vb"/></e>
+<e lm="reaperi">         <i>reaper</i><par n="ser__vb"/></e>
+<e lm="formalaperi">     <i>formalaper</i><par n="ser__vb"/></e>
     <!-- ******************************
           group det
       ****************************** -->

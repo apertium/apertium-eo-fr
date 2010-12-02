@@ -57,6 +57,7 @@
     <sdef n="p2" /> 
     <sdef n="p3" /> 
     <sdef n="percent" /> 
+    <sdef n="ciph" /> 
     <sdef n="pii" /> 
     <sdef n="pis" /> 
     <sdef n="pl" /> 
@@ -99,6 +100,7 @@
 </pardef>
 
 <pardef n="ordinales">
+<!-- ne marche pas: 22e est juste et non pas 22nd
   <e>       <re>([0-9]*[02-9]1|1)</re><p><l>er</l><r>e<s n="num"/><s n="ord"/><s n="m"/><s n="sg"/></r></p></e>
   <e>       <re>([0-9]*[02-9]1|1)</re><p><l>re</l><r>e<s n="num"/><s n="ord"/><s n="f"/><s n="sg"/></r></p></e>
   <e>       <re>([0-9]*[02-9]1|1)</re><p><l>ers</l><r>e<s n="num"/><s n="ord"/><s n="m"/><s n="pl"/></r></p></e>
@@ -139,6 +141,27 @@
   <e r="LR"><re>([0-9]*[02-9]8|8)</re><p><l>èmes</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="pl"/></r></p></e>
   <e r="LR"><re>([0-9]*[02-9]9|9)</re><p><l>ème</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="sg"/></r></p></e>
   <e r="LR"><re>([0-9]*[02-9]9|9)</re><p><l>èmes</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="pl"/></r></p></e>
+-->
+  <e>       <re>[0-9]+([.,][0-9]+)*</re><p><l>e</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="sg"/></r></p></e>
+  <e>       <re>[0-9]+([.,][0-9]+)*</re><p><l>es</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="pl"/></r></p></e>
+  <e r="LR"><re>[0-9]+([.,][0-9]+)*</re><p><l>ème</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="sg"/></r></p></e>
+  <e r="LR"><re>[0-9]+([.,][0-9]+)*</re><p><l>èmes</l><r>e<s n="num"/><s n="ord"/><s n="mf"/><s n="pl"/></r></p></e>
+  <e>       <p><l>1r</l>          <r>1e<s n="num"/><s n="ord"/><s n="m"/><s n="sg"/></r></p></e>
+  <e>       <p><l>1re</l>         <r>1e<s n="num"/><s n="ord"/><s n="f"/><s n="sg"/></r></p></e>
+  <e>       <p><l>1rs</l>         <r>1e<s n="num"/><s n="ord"/><s n="m"/><s n="pl"/></r></p></e>
+  <e>       <p><l>1res</l>        <r>1e<s n="num"/><s n="ord"/><s n="f"/><s n="pl"/></r></p></e>
+  <e r="LR"><p><l>1er</l>         <r>1e<s n="num"/><s n="ord"/><s n="m"/><s n="sg"/></r></p></e>
+  <e r="LR"><p><l>1ère</l>        <r>1e<s n="num"/><s n="ord"/><s n="f"/><s n="sg"/></r></p></e>
+  <e r="LR"><p><l>1ers</l>        <r>1e<s n="num"/><s n="ord"/><s n="m"/><s n="pl"/></r></p></e>
+  <e r="LR"><p><l>1ères</l>       <r>1e<s n="num"/><s n="ord"/><s n="f"/><s n="pl"/></r></p></e>
+  <e>       <p><l>2d</l>          <r>2e<s n="num"/><s n="ord"/><s n="m"/><s n="sg"/></r></p></e>
+  <e>       <p><l>2de</l>         <r>2e<s n="num"/><s n="ord"/><s n="f"/><s n="sg"/></r></p></e>
+  <e>       <p><l>2ds</l>         <r>2e<s n="num"/><s n="ord"/><s n="m"/><s n="pl"/></r></p></e>
+  <e>       <p><l>2des</l>        <r>2e<s n="num"/><s n="ord"/><s n="f"/><s n="pl"/></r></p></e>
+  <e r="LR"><p><l>2nd</l>         <r>2e<s n="num"/><s n="ord"/><s n="m"/><s n="sg"/></r></p></e>
+  <e r="LR"><p><l>2nde</l>        <r>2e<s n="num"/><s n="ord"/><s n="f"/><s n="sg"/></r></p></e>
+  <e r="LR"><p><l>2nds</l>        <r>2e<s n="num"/><s n="ord"/><s n="m"/><s n="pl"/></r></p></e>
+  <e r="LR"><p><l>2ndes</l>       <r>2e<s n="num"/><s n="ord"/><s n="f"/><s n="pl"/></r></p></e>
 </pardef>
 <pardef n="urls">
   <e>       <re>(((www.)|(http://))[a-z0-9\-]+([.][a-z]+)+(/[a-z0-9_]+)*([.][a-z]+)*)</re><p><l></l><r><s n="num"/></r></p></e>
@@ -9163,10 +9186,8 @@
 
 </pardef>
 <pardef n="numeros">
-  <e>       <re>[0-9]+([.,][0-9]+)?%</re><p><l></l><r><s n="num"/><s n="percent"/></r></p></e>
-
-  <e>       <re>[0-9]+([.,][0-9]+)?</re><p><l></l><r><s n="num"/></r></p></e>
-
+  <e>       <re>[0-9]+([.,][0-9]+)*</re><p><l></l><r><s n="num"/><s n="ciph"/><s n="mf"/><s n="sp"/></r></p></e>
+  <e>       <re>[0-9]+([.,][0-9]+)*%</re><p><l></l><r><s n="num"/><s n="percent"/><s n="mf"/><s n="sp"/></r></p></e>
 </pardef>
 <pardef n="o/uïr__vblex">
   <e>       <p><l>ie</l>        <r>uïr<s n="vblex"/><s n="prs"/><s n="p1"/><s n="sg"/></r></p></e>
@@ -12842,6 +12863,7 @@
 <e lm="août">            <i>août</i><par n="accessoire__n"/></e>
 <e lm="aperçu">          <i>aperçu</i><par n="accessoire__n"/></e>
 <e lm="apparaître">      <i>appar</i><par n="appar/aître__vblex"/></e>
+<e lm="réapparaître">    <i>réappar</i><par n="appar/aître__vblex"/></e>
 <e lm="appareil">        <i>appareil</i><par n="accessoire__n"/></e>
 <e lm="appareiller">     <i>appareill</i><par n="abaiss/er__vblex"/></e>
 <e lm="apparemment">     <i>apparemment</i><par n="hier__adv"/></e>
@@ -15543,7 +15565,7 @@
 <e lm="ouvertement">     <i>ouvertement</i><par n="hier__adv"/></e>
 <e lm="ouverture">       <i>ouverture</i><par n="abeille__n"/></e>
 <e lm="ouvrage">         <i>ouvrage</i><par n="accessoire__n"/></e>
-<e lm="ouvrer">          <i>ouvr</i><par n="abaiss/er__vblex"/></e>
+<e r="RL" lm="ouvrer">   <i>ouvr</i><par n="abaiss/er__vblex"/></e> <!-- trop da problèmes avec ouvrir -->
 <e lm="ouvrier">         <i>ouvri</i><par n="bouch/er__n"/></e>
 <e lm="ouvrier">         <i>ouvri</i><par n="ch/er__adj"/></e>
 <e lm="ouvrir">          <i>ouv</i><par n="couv/rir__vblex"/></e>

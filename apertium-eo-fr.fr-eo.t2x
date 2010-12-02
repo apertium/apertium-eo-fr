@@ -1298,16 +1298,17 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
       </action>
 </rule>
 
-<rule comment="REGLA: SN SV SN (EO per l'acusatiu dels SN objecte amb changecase=nom)">
+<rule comment="REGLA: SN ADV SV SN (EO per l'acusatiu dels SN objecte amb changecase=nom)">
       <pattern>
 	<pattern-item n="SN"/>
+	<pattern-item n="ADV"/>
 	<pattern-item n="SVlex"/>
 	<pattern-item n="SNacc"/>
       </pattern>
       <action>
 
 	    <let>
-	      <clip pos="3" part="case"/>
+	      <clip pos="4" part="case"/>
 	      <lit-tag v="acc"/>
 	    </let>
 
@@ -1328,6 +1329,12 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
             <clip pos="3" part="lem"/>
             <clip pos="3" part="tags"/>
 	    <clip pos="3" part="chcontent"/>
+	  </chunk>
+	  <b pos="3"/>
+	  <chunk>
+            <clip pos="4" part="lem"/>
+            <clip pos="4" part="tags"/>
+	    <clip pos="4" part="chcontent"/>
 	  </chunk>
 	</out>
       </action>

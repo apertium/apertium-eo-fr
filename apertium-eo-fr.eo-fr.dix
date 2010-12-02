@@ -191,7 +191,7 @@
     <!-- ******************************
           group num_symbol
       ****************************** -->
-<e>       <re>[0-9]+([.,][0-9]+)?</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
+<e>       <re>[0-9]+([.,][0-9]+)*</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
 <e>       <p><l>C<s n="num"/></l>                      <r>C<s n="num"/></r></p></e>
 <e>       <p><l>dek<b/>unu<s n="num"/></l>             <r>onze<s n="num"/></r></p></e>
 <e>       <p><l>dek<b/>du<s n="num"/></l>              <r>douze<s n="num"/></r></p></e>
@@ -26566,11 +26566,12 @@
 <e r="LR"><p><l>platigi<s n="vblex"/></l>              <r>aplatir<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>kreiĝi<s n="vblex"/></l>               <r>apparaître<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>vidiĝi<s n="vblex"/></l>               <r>apparaître<s n="vblex"/></r></p></e>
-<e>       <p><l>aperi<s n="vblex"/></l>                <r>apparaître<s n="vblex"/></r></p></e>
+<e>       <p><l>aperi<s n="vbser"/></l>                <r>apparaître<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>finveni<s n="vblex"/></l>              <r>apparaître<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>distingiĝi<s n="vblex"/></l>           <r>apparaître<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>formiĝi<s n="vblex"/></l>              <r>apparaître<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>kreiĝi<s n="vblex"/></l>               <r>apparaître<s n="vblex"/></r></p></e>
+<e>       <p><l>reaperi<s n="vbser"/></l>              <r>réapparaître<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>parigi<s n="vblex"/></l>               <r>appareiller<s n="vblex"/></r></p></e>
 <e>       <p><l>debordiĝi<s n="vblex"/></l>            <r>appareiller<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>geigi<s n="vblex"/></l>                <r>apparier<s n="vblex"/></r></p></e>
@@ -27424,7 +27425,7 @@
 <e r="LR"><p><l>komunikiĝi<s n="vblex"/></l>           <r>communiquer<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>komutiĝi<s n="vblex"/></l>             <r>commuter<s n="vblex"/></r></p></e>
 <e>       <p><l>komuti<s n="vblex"/></l>               <r>commuter<s n="vblex"/></r></p></e>
-<e>       <p><l>aperi<s n="vblex"/></l>                <r>comparaître<s n="vblex"/></r></p></e>
+<e>       <p><l>aperi<s n="vbser"/></l>                <r>comparaître<s n="vblex"/></r></p></e>
 <e>       <p><l>kompari<s n="vblex"/></l>              <r>comparer<s n="vblex"/></r></p></e>
 <e>       <p><l>kompati<s n="vblex"/></l>              <r>compatir<s n="vblex"/></r></p></e>
 <e>       <p><l>kompensi<s n="vblex"/></l>             <r>compenser<s n="vblex"/></r></p></e>
@@ -28049,7 +28050,7 @@
 <e r="LR"><p><l>dissolviĝi<s n="vblex"/></l>           <r>disloquer<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>malkomponiĝi<s n="vblex"/></l>         <r>disloquer<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>malkomponi<s n="vblex"/></l>           <r>disloquer<s n="vblex"/></r></p></e>
-<e>       <p><l>malaperi<s n="vblex"/></l>             <r>disparaître<s n="vblex"/></r></p></e>
+<e>       <p><l>malaperi<s n="vbser"/></l>             <r>disparaître<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>fadi<s n="vblex"/></l>                 <r>disparaître<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>formorti<s n="vblex"/></l>             <r>disparaître<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>sveni<s n="vblex"/></l>                <r>disparaître<s n="vblex"/></r></p></e>
@@ -30612,7 +30613,7 @@
 <e>       <p><l>ekvaciigi<s n="vblex"/></l>            <r>mettre<g><b/>en<b/>équations</g><s n="vblex"/></r></p></e>
 <e>       <p><l>gravedigi<s n="vblex"/></l>            <r>mettre<g><b/>enceinte</g><s n="vblex"/></r></p></e>
 <e>       <p><l>finigi<s n="vblex"/></l>               <r>mettre<g><b/>fin<b/>à</g><s n="vblex"/></r></p></e>
-<e>       <p><l>elŝalti<s n="vblex"/></l>              <r>mettre<g><b/>hors<b/>circuit</g><s n="vblex"/></r></p></e>
+<e r="LR"><p><l>elŝalti<s n="vblex"/></l>              <r>mettre<g><b/>hors<b/>circuit</g><s n="vblex"/></r></p></e>
 <e>       <p><l>malŝalti<s n="vblex"/></l>             <r>mettre<g><b/>hors<b/>circuit</g><s n="vblex"/></r></p></e>
 <e>       <p><l>nokaŭti<s n="vblex"/></l>              <r>mettre<g><b/>k.o.</g><s n="vblex"/></r></p></e>
 <e>       <p><l>embargi<s n="vblex"/></l>              <r>mettre<g><b/>l'embargo</g><s n="vblex"/></r></p></e>
@@ -30624,74 +30625,74 @@
 <e>       <p><l>enkovertigi<s n="vblex"/></l>          <r>mettre<g><b/>sous<b/>pli</g><s n="vblex"/></r></p></e>
 <e>       <p><l>surtabligi<s n="vblex"/></l>           <r>mettre<g><b/>sur<b/>la<b/>table</g><s n="vblex"/></r></p></e>
 <e>       <p><l>envojigi<s n="vblex"/></l>             <r>mettre<g><b/>sur<b/>la<b/>voie</g><s n="vblex"/></r></p></e>
-<e>       <p><l>enmerkatigi<s n="vblex"/></l>          <r>mettre<g><b/>sur<b/>le<b/>marché</g><s n="vblex"/></r></p></e>
+<e r="LR"><p><l>enmerkatigi<s n="vblex"/></l>          <r>mettre<g><b/>sur<b/>le<b/>marché</g><s n="vblex"/></r></p></e>
 <e>       <p><l>surmerkatigi<s n="vblex"/></l>         <r>mettre<g><b/>sur<b/>le<b/>marché</g><s n="vblex"/></r></p></e>
 <e>       <p><l>surtronigi<s n="vblex"/></l>           <r>mettre<g><b/>sur<b/>le<b/>trône</g><s n="vblex"/></r></p></e>
 <e>       <p><l>surpiediĝi<s n="vblex"/></l>           <r>mettre<g><b/>sur<b/>pieds</g><s n="vblex"/></r></p></e>
 <e>       <p><l>diakriti<s n="vblex"/></l>             <r>mettre<g><b/>un<b/>diacritique</g><s n="vblex"/></r></p></e>
 <e>       <p><l>disponigi<s n="vblex"/></l>            <r>mettre<g><b/>à<b/>disposition</g><s n="vblex"/></r></p></e>
 <e>       <p><l>ekprovi<s n="vblex"/></l>              <r>mettre<g><b/>à<b/>essayer</g><s n="vblex"/></r></p></e>
-<e>       <p><l>ekgenui<s n="vblex"/></l>              <r>mettre<g><b/>à<b/>genoux</g><s n="vblex"/></r></p></e>
+<e r="LR"><p><l>ekgenui<s n="vblex"/></l>              <r>mettre<g><b/>à<b/>genoux</g><s n="vblex"/></r></p></e>
 <e>       <p><l>genuigi<s n="vblex"/></l>              <r>mettre<g><b/>à<b/>genoux</g><s n="vblex"/></r></p></e>
-<e>       <p><l>genuiĝi<s n="vblex"/></l>              <r>mettre<g><b/>à<b/>genoux</g><s n="vblex"/></r></p></e>
+<e r="LR"><p><l>genuiĝi<s n="vblex"/></l>              <r>mettre<g><b/>à<b/>genoux</g><s n="vblex"/></r></p></e>
 <e>       <p><l>surgenuiĝi<s n="vblex"/></l>           <r>mettre<g><b/>à<b/>genoux</g><s n="vblex"/></r></p></e>
 <e>       <p><l>komfortigi<s n="vblex"/></l>           <r>mettre<g><b/>à<b/>l'aise</g><s n="vblex"/></r></p></e>
 <e>       <p><l>elprovi<s n="vblex"/></l>              <r>mettre<g><b/>à<b/>l'épreuve</g><s n="vblex"/></r></p></e>
-<e>       <p><l>provi<s n="vblex"/></l>                <r>mettre<g><b/>à<b/>l'épreuve</g><s n="vblex"/></r></p></e>
-<e>       <p><l>eksigi<s n="vblex"/></l>               <r>mettre<g><b/>à<b/>la<b/>porte</g><s n="vblex"/></r></p></e>
+<e r="LR"><p><l>provi<s n="vblex"/></l>                <r>mettre<g><b/>à<b/>l'épreuve</g><s n="vblex"/></r></p></e>
+<e r="LR"><p><l>eksigi<s n="vblex"/></l>               <r>mettre<g><b/>à<b/>la<b/>porte</g><s n="vblex"/></r></p></e>
 <e>       <p><l>maldungi<s n="vblex"/></l>             <r>mettre<g><b/>à<b/>la<b/>porte</g><s n="vblex"/></r></p></e>
 <e>       <p><l>ĉetabliĝi<s n="vblex"/></l>            <r>mettre<g><b/>à<b/>table</g><s n="vblex"/></r></p></e>
 <e>       <p><l>instali<s n="vblex"/></l>              <r>mettre<g><b/>à<b/>un<b/>poste</g><s n="vblex"/></r></p></e>
-<e>       <p><l>agordi<s n="vblex"/></l>               <r>mettre<g>en place</g><s n="vblex"/></r></p></e>
-<e>       <p><l>eningigi<s n="vblex"/></l>             <r>mettre<g>en place</g><s n="vblex"/></r></p></e>
-<e>       <p><l>instali<s n="vblex"/></l>              <r>mettre<g>en place</g><s n="vblex"/></r></p></e>
-<e>       <p><l>loki<s n="vblex"/></l>                 <r>mettre<g>en place</g><s n="vblex"/></r></p></e>
-<e>       <p><l>meti<s n="vblex"/></l>                 <r>mettre<g>en place</g><s n="vblex"/></r></p></e>
-<e>       <p><l>primeti<s n="vblex"/></l>              <r>mettre<g>en place</g><s n="vblex"/></r></p></e>
-<e>       <p><l>surmeti<s n="vblex"/></l>              <r>mettre<g>en place</g><s n="vblex"/></r></p></e>
+<e r="LR"><p><l>agordi<s n="vblex"/></l>               <r>mettre<g>en place</g><s n="vblex"/></r></p></e>
+<e r="LR"><p><l>eningigi<s n="vblex"/></l>             <r>mettre<g>en place</g><s n="vblex"/></r></p></e>
+<e r="LR"><p><l>instali<s n="vblex"/></l>              <r>mettre<g>en place</g><s n="vblex"/></r></p></e>
+<e>       <p><l>funkciigi<s n="vblex"/></l>            <r>mettre<g>en place</g><s n="vblex"/></r></p></e>
+<e r="LR"><p><l>loki<s n="vblex"/></l>                 <r>mettre<g>en place</g><s n="vblex"/></r></p></e>
+<e r="LR"><p><l>meti<s n="vblex"/></l>                 <r>mettre<g>en place</g><s n="vblex"/></r></p></e>
+<e r="LR"><p><l>primeti<s n="vblex"/></l>              <r>mettre<g>en place</g><s n="vblex"/></r></p></e>
+<e r="LR"><p><l>surmeti<s n="vblex"/></l>              <r>mettre<g>en place</g><s n="vblex"/></r></p></e>
 <e>       <p><l>makadami<s n="vblex"/></l>             <r>macadamiser<s n="vblex"/></r></p></e>
-<e>       <p><l>iniciati<s n="vblex"/></l>             <r>machiner<s n="vblex"/></r></p></e>
-<e>       <p><l>kaŭzi<s n="vblex"/></l>                <r>machiner<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>iniciati<s n="vblex"/></l>             <r>machiner<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>kaŭzi<s n="vblex"/></l>                <r>machiner<s n="vblex"/></r></p></e>
 <e>       <p><l>maĥinacii<s n="vblex"/></l>            <r>machiner<s n="vblex"/></r></p></e>
 <e>       <p><l>maceri<s n="vblex"/></l>               <r>macérer<s n="vblex"/></r></p></e>
 <e>       <p><l>intrigi<s n="vblex"/></l>              <r>magouiller<s n="vblex"/></r></p></e>
 <e>       <p><l>maldikiĝi<s n="vblex"/></l>            <r>maigrir<s n="vblex"/></r></p></e>
 <e>       <p><l>vivteni<s n="vblex"/></l>              <r>maintenir<g><b/>en<b/>vie</g><s n="vblex"/></r></p></e>
-<e>       <p><l>kunglui<s n="vblex"/></l>              <r>maintenir<g><b/>ensemble</g><s n="vblex"/></r></p></e>
+<e r="LR"><p><l>kunglui<s n="vblex"/></l>              <r>maintenir<g><b/>ensemble</g><s n="vblex"/></r></p></e>
 <e>       <p><l>kunteni<s n="vblex"/></l>              <r>maintenir<g><b/>ensemble</g><s n="vblex"/></r></p></e>
-<e>       <p><l>subteni<s n="vblex"/></l>              <r>maintenir<s n="vblex"/></r></p></e>
-<e>       <p><l>bonteni<s n="vblex"/></l>              <r>maintenir<s n="vblex"/></r></p></e>
-<e>       <p><l>konfirmi<s n="vblex"/></l>             <r>maintenir<s n="vblex"/></r></p></e>
-<e>       <p><l>reteni<s n="vblex"/></l>               <r>maintenir<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>subteni<s n="vblex"/></l>              <r>maintenir<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>bonteni<s n="vblex"/></l>              <r>maintenir<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>konfirmi<s n="vblex"/></l>             <r>maintenir<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>reteni<s n="vblex"/></l>               <r>maintenir<s n="vblex"/></r></p></e>
 <e>       <p><l>teni<s n="vblex"/></l>                 <r>maintenir<s n="vblex"/></r></p></e>
 <e>       <p><l>superregi<s n="vblex"/></l>            <r>maitriser<s n="vblex"/></r></p></e>
 <e>       <p><l>knedi<s n="vblex"/></l>                <r>malaxer<s n="vblex"/></r></p></e>
 <e>       <p><l>maltigi<s n="vblex"/></l>              <r>malter<s n="vblex"/></r></p></e>
 <e>       <p><l>mistrakti<s n="vblex"/></l>            <r>maltraiter<s n="vblex"/></r></p></e>
-<e>       <p><l>malkaresi<s n="vblex"/></l>            <r>maltraiter<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>malkaresi<s n="vblex"/></l>            <r>maltraiter<s n="vblex"/></r></p></e>
 <e>       <p><l>delegi<s n="vblex"/></l>               <r>mandater<s n="vblex"/></r></p></e>
 <e>       <p><l>dirigi<s n="vblex"/></l>               <r>mander<s n="vblex"/></r></p></e>
 <e>       <p><l>frandi<s n="vblex"/></l>               <r>manger<g><b/>avec<b/>gourmandise</g><s n="vblex"/></r></p></e>
 <e>       <p><l>formanĝi<s n="vblex"/></l>             <r>manger<g><b/>complètement</g><s n="vblex"/></r></p></e>
 <e>       <p><l>manĝi<s n="vblex"/></l>                <r>manger<s n="vblex"/></r></p></e>
 <e>       <p><l>manipuli<s n="vblex"/></l>             <r>manier<s n="vblex"/></r></p></e>
-<e>       <p><l>manifestacii<s n="vblex"/></l>         <r>manifester<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>manifestacii<s n="vblex"/></l>         <r>manifester<s n="vblex"/></r></p></e>
 <e>       <p><l>manifesti<s n="vblex"/></l>            <r>manifester<s n="vblex"/></r></p></e>
-<e>       <p><l>manifestiĝi<s n="vblex"/></l>          <r>manifester<s n="vblex"/></r></p></e>
-<e>       <p><l>sentiĝi<s n="vblex"/></l>              <r>manifester<s n="vblex"/></r></p></e>
-<e>       <p><l>sin<b/>manifesti<s n="vblex"/></l>     <r>manifester<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>manifestiĝi<s n="vblex"/></l>          <r>manifester<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>sentiĝi<s n="vblex"/></l>              <r>manifester<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>sin<b/>manifesti<s n="vblex"/></l>     <r>manifester<s n="vblex"/></r></p></e>
 <e>       <p><l>artifiki<s n="vblex"/></l>             <r>manigancer<s n="vblex"/></r></p></e>
 <e>       <p><l>komploti<s n="vblex"/></l>             <r>manigancer<s n="vblex"/></r></p></e>
 <e>       <p><l>manipuli<s n="vblex"/></l>             <r>manipuler<s n="vblex"/></r></p></e>
-<e>       <p><l>manuzi<s n="vblex"/></l>               <r>manipuler<s n="vblex"/></r></p></e>
-<e>       <p><l>morsi<s n="vblex"/></l>                <r>manipuler<s n="vblex"/></r></p></e>
-<e>       <p><l>malrespekti<s n="vblex"/></l>          <r>manqu<g><b/>de<b/>respect</g><s n="vblex"/></r></p></e>
-<e>       <p><l>malabundi<s n="vblex"/></l>            <r>manquer<s n="vblex"/></r></p></e>
-<e>       <p><l>malhavi<s n="vblex"/></l>              <r>manquer<s n="vblex"/></r></p></e>
-<e>       <p><l>manki<s n="vblex"/></l>                <r>manquer<s n="vblex"/></r></p></e>
-<e r="LR"><p><l>fordormi<s n="vblex"/></l>             <r>manquer<s n="vblex"/></r></p></e>
-<e>       <p><l>malesti<s n="vblex"/></l>              <r>manquer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>manuzi<s n="vblex"/></l>               <r>manipuler<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>morsi<s n="vblex"/></l>                <r>manipuler<s n="vblex"/></r></p></e>
+<e>       <p><l>malrespekti<s n="vblex"/></l>          <r>manquer<g><b/>de<b/>respect</g><s n="vblex"/></r></p></e>
+<e r="LR"><p><l>malabundi<s n="vblex"/></l>            <r>manquer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>malhavi<s n="vblex"/></l>              <r>manquer<s n="vblex"/></r></p></e>
 <e>       <p><l>manki<s n="vbser"/></l>                <r>manquer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>fordormi<s n="vblex"/></l>             <r>manquer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>malesti<s n="vblex"/></l>              <r>manquer<s n="vblex"/></r></p></e>
 <e>       <p><l>manikuri<s n="vblex"/></l>             <r>manucurer<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>intrigi<s n="vblex"/></l>              <r>manœuvrer<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>funkciigi<s n="vblex"/></l>            <r>manœuvrer<s n="vblex"/></r></p></e>
@@ -30700,60 +30701,60 @@
 <e>       <p><l>malantaŭeniri<s n="vblex"/></l>        <r>march<g><b/>à<b/>reculons</g><s n="vblex"/></r></p></e>
 <e>       <p><l>marĉandi<s n="vblex"/></l>             <r>marchander<s n="vblex"/></r></p></e>
 <e>       <p><l>marŝi<s n="vblex"/></l>                <r>marcher<s n="vblex"/></r></p></e>
-<e>       <p><l>funkcii<s n="vblex"/></l>              <r>marcher<s n="vblex"/></r></p></e>
-<e>       <p><l>iri<s n="vblex"/></l>                  <r>marcher<s n="vblex"/></r></p></e>
-<e>       <p><l>piediri<s n="vblex"/></l>              <r>marcher<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>funkcii<s n="vblex"/></l>              <r>marcher<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>iri<s n="vblex"/></l>                  <r>marcher<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>piediri<s n="vblex"/></l>              <r>marcher<s n="vblex"/></r></p></e>
 <e>       <p><l>markoti<s n="vblex"/></l>              <r>marcotter<s n="vblex"/></r></p></e>
 <e>       <p><l>geedziĝi<s n="vblex"/></l>             <r>marier<s n="vblex"/></r></p></e>
-<e>       <p><l>kasacii<s n="vblex"/></l>              <r>marier<s n="vblex"/></r></p></e>
-<e>       <p><l>akordigi<s n="vblex"/></l>             <r>marier<s n="vblex"/></r></p></e>
-<e>       <p><l>akordiĝi<s n="vblex"/></l>             <r>marier<s n="vblex"/></r></p></e>
-<e>       <p><l>akordi<s n="vblex"/></l>               <r>marier<s n="vblex"/></r></p></e>
-<e>       <p><l>edzigi<s n="vblex"/></l>               <r>marier<s n="vblex"/></r></p></e>
-<e>       <p><l>edziĝi<s n="vblex"/></l>               <r>marier<s n="vblex"/></r></p></e>
-<e>       <p><l>edzinigi<s n="vblex"/></l>             <r>marier<s n="vblex"/></r></p></e>
-<e>       <p><l>edziniĝi<s n="vblex"/></l>             <r>marier<s n="vblex"/></r></p></e>
-<e>       <p><l>harmoniigi<s n="vblex"/></l>           <r>marier<s n="vblex"/></r></p></e>
-<e>       <p><l>harmonii<s n="vblex"/></l>             <r>marier<s n="vblex"/></r></p></e>
-<e>       <p><l>interedziĝi<s n="vblex"/></l>          <r>marier<s n="vblex"/></r></p></e>
-<e>       <p><l>interkonformigi<s n="vblex"/></l>      <r>marier<s n="vblex"/></r></p></e>
-<e>       <p><l>kunedziĝi<s n="vblex"/></l>            <r>marier<s n="vblex"/></r></p></e>
-<e>       <p><l>poenti<s n="vblex"/></l>               <r>marqu<g><b/>un<b/>point</g><s n="vblex"/></r></p></e>
-<e>       <p><l>diski<s n="vblex"/></l>                <r>marquer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>kasacii<s n="vblex"/></l>              <r>marier<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>akordigi<s n="vblex"/></l>             <r>marier<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>akordiĝi<s n="vblex"/></l>             <r>marier<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>akordi<s n="vblex"/></l>               <r>marier<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>edzigi<s n="vblex"/></l>               <r>marier<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>edziĝi<s n="vblex"/></l>               <r>marier<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>edzinigi<s n="vblex"/></l>             <r>marier<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>edziniĝi<s n="vblex"/></l>             <r>marier<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>harmoniigi<s n="vblex"/></l>           <r>marier<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>harmonii<s n="vblex"/></l>             <r>marier<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>interedziĝi<s n="vblex"/></l>          <r>marier<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>interkonformigi<s n="vblex"/></l>      <r>marier<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>kunedziĝi<s n="vblex"/></l>            <r>marier<s n="vblex"/></r></p></e>
+<e>       <p><l>poenti<s n="vblex"/></l>               <r>marquer<g><b/>un<b/>point</g><s n="vblex"/></r></p></e>
+<e r="LR"><p><l>diski<s n="vblex"/></l>                <r>marquer<s n="vblex"/></r></p></e>
 <e>       <p><l>marki<s n="vblex"/></l>                <r>marquer<s n="vblex"/></r></p></e>
-<e>       <p><l>signi<s n="vblex"/></l>                <r>marquer<s n="vblex"/></r></p></e>
-<e>       <p><l>brulmarki<s n="vblex"/></l>            <r>marquer<g><b/>au<b/>fer</g><s n="vblex"/></r></p></e>
+<e r="LR"><p><l>signi<s n="vblex"/></l>                <r>marquer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>brulmarki<s n="vblex"/></l>            <r>marquer<g><b/>au<b/>fer</g><s n="vblex"/></r></p></e>
 <e>       <p><l>marteli<s n="vblex"/></l>              <r>marteler<s n="vblex"/></r></p></e>
 <e>       <p><l>martirigi<s n="vblex"/></l>            <r>martyriser<s n="vblex"/></r></p></e>
 <e>       <p><l>maski<s n="vblex"/></l>                <r>masquer<s n="vblex"/></r></p></e>
-<e>       <p><l>amasmurdi<s n="vblex"/></l>            <r>massacrer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>amasmurdi<s n="vblex"/></l>            <r>massacrer<s n="vblex"/></r></p></e>
 <e>       <p><l>buĉi<s n="vblex"/></l>                 <r>massacrer<s n="vblex"/></r></p></e>
 <e>       <p><l>knedi<s n="vblex"/></l>                <r>masser<s n="vblex"/></r></p></e>
-<e>       <p><l>koncentriĝi<s n="vblex"/></l>          <r>masser<s n="vblex"/></r></p></e>
-<e>       <p><l>koncentri<s n="vblex"/></l>            <r>masser<s n="vblex"/></r></p></e>
-<e>       <p><l>masaĝi<s n="vblex"/></l>               <r>masser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>koncentriĝi<s n="vblex"/></l>          <r>masser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>koncentri<s n="vblex"/></l>            <r>masser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>masaĝi<s n="vblex"/></l>               <r>masser<s n="vblex"/></r></p></e>
 <e>       <p><l>mastiki<s n="vblex"/></l>              <r>mastiquer<s n="vblex"/></r></p></e>
 <e>       <p><l>kvereli<s n="vblex"/></l>              <r>matcher<s n="vblex"/></r></p></e>
-<e>       <p><l>pridisputi<s n="vblex"/></l>           <r>matcher<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>pridisputi<s n="vblex"/></l>           <r>matcher<s n="vblex"/></r></p></e>
 <e>       <p><l>subpremi<s n="vblex"/></l>             <r>mater<s n="vblex"/></r></p></e>
 <e>       <p><l>efektivigi<s n="vblex"/></l>           <r>matérialiser<s n="vblex"/></r></p></e>
-<e>       <p><l>damni<s n="vblex"/></l>                <r>maudire<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>damni<s n="vblex"/></l>                <r>maudire<s n="vblex"/></r></p></e>
 <e>       <p><l>malbeni<s n="vblex"/></l>              <r>maudire<s n="vblex"/></r></p></e>
 <e>       <p><l>sakri<s n="vblex"/></l>                <r>maugréer<s n="vblex"/></r></p></e>
 <e>       <p><l>masoni<s n="vblex"/></l>               <r>maçonner<s n="vblex"/></r></p></e>
 <e>       <p><l>superregi<s n="vblex"/></l>            <r>maîtriser<s n="vblex"/></r></p></e>
-<e>       <p><l>mensogi<s n="vblex"/></l>              <r>men<g><b/>comme<b/>un<b/>arracheur<b/>de<b/>dents</g><s n="vblex"/></r></p></e>
+<e>       <p><l>mensogi<s n="vblex"/></l>              <r>mentir<g><b/>comme<b/>un<b/>arracheur<b/>de<b/>dents</g><s n="vblex"/></r></p></e>
 <e>       <p><l>minaci<s n="vblex"/></l>               <r>menacer<s n="vblex"/></r></p></e>
-<e>       <p><l>admoni<s n="vblex"/></l>               <r>menacer<s n="vblex"/></r></p></e>
-<e>       <p><l>insidi<s n="vblex"/></l>               <r>menacer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>admoni<s n="vblex"/></l>               <r>menacer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>insidi<s n="vblex"/></l>               <r>menacer<s n="vblex"/></r></p></e>
 <e>       <p><l>almozi<s n="vblex"/></l>               <r>mendier<s n="vblex"/></r></p></e>
-<e>       <p><l>almozpeti<s n="vblex"/></l>            <r>mendier<s n="vblex"/></r></p></e>
-<e>       <p><l>demeti<s n="vblex"/></l>               <r>mener<s n="vblex"/></r></p></e>
-<e>       <p><l>gvidi<s n="vblex"/></l>                <r>mener<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>almozpeti<s n="vblex"/></l>            <r>mendier<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>demeti<s n="vblex"/></l>               <r>mener<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>gvidi<s n="vblex"/></l>                <r>mener<s n="vblex"/></r></p></e>
 <e>       <p><l>konduki<s n="vblex"/></l>              <r>mener<s n="vblex"/></r></p></e>
-<e>       <p><l>obeigi<s n="vblex"/></l>               <r>mener<s n="vblex"/></r></p></e>
-<e>       <p><l>tiri<s n="vblex"/></l>                 <r>mener<s n="vblex"/></r></p></e>
-<e>       <p><l>veturigi<s n="vblex"/></l>             <r>mener<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>obeigi<s n="vblex"/></l>               <r>mener<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>tiri<s n="vblex"/></l>                 <r>mener<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>veturigi<s n="vblex"/></l>             <r>mener<s n="vblex"/></r></p></e>
 <e>       <p><l>efektivigi<s n="vblex"/></l>           <r>mener<g><b/>à<b/>terme</g><s n="vblex"/></r></p></e>
 <e>       <p><l>mencii<s n="vblex"/></l>               <r>mentionner<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>referenci<s n="vblex"/></l>            <r>mentionner<s n="vblex"/></r></p></e>
@@ -31138,7 +31139,7 @@
 <e r="LR"><p><l>frostiĝi<s n="vblex"/></l>             <r>paralyser<s n="vblex"/></r></p></e>
 <e>       <p><l>agordi<s n="vblex"/></l>               <r>paramétrer<s n="vblex"/></r></p></e>
 <e>       <p><l>parafrazi<s n="vblex"/></l>            <r>paraphraser<s n="vblex"/></r></p></e>
-<e>       <p><l>aperi<s n="vblex"/></l>                <r>paraître<s n="vblex"/></r></p></e>
+<e>       <p><l>ŝajni<s n="vblex"/></l>                <r>paraître<s n="vblex"/></r></p></e>
 <e>       <p><l>trairo<s n="n"/></l>                   <r>parcours<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>irvojo<s n="n"/></l>                   <r>parcours<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>vojiro<s n="n"/></l>                   <r>parcours<s n="n"/><s n="m"/></r></p></e>
@@ -32163,7 +32164,7 @@
 <e>       <p><l>maldormi<s n="vblex"/></l>             <r>rester<g><b/>éveillé</g><s n="vblex"/></r></p></e>
 <e>       <p><l>restaŭri<s n="vblex"/></l>             <r>restaurer<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>ripari<s n="vblex"/></l>               <r>restaurer<s n="vblex"/></r></p></e>
-<e>       <p><l>resti<s n="vblex"/></l>                <r>rester<s n="vblex"/></r></p></e>
+<e>       <p><l>resti<s n="vbser"/></l>                <r>rester<s n="vblex"/></r></p></e>
 <e>       <p><l>redoni<s n="vblex"/></l>               <r>restituer<s n="vblex"/></r></p></e>
 <e>       <p><l>restrikti<s n="vblex"/></l>            <r>restreindre<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>malpliigi<s n="vblex"/></l>            <r>restreindre<s n="vblex"/></r></p></e>
@@ -33296,7 +33297,7 @@
 <e r="LR"><p><l>koncepti<s n="vblex"/></l>             <r>voir<s n="vblex"/></r></p></e>
 <e r="RL"><p><l>transporti<s n="vblex"/></l>           <r>voiturer<s n="vblex"/></r></p></e>
 <e>       <p><l>ĉirkaŭflugi<s n="vblex"/></l>          <r>voler<g><b/>autour</g><s n="vblex"/></r></p></e>
-<e>       <p><l>formalaperi<s n="vblex"/></l>          <r>volatiliser<s n="vblex"/></r></p></e>
+<e>       <p><l>formalaperi<s n="vbser"/></l>          <r>volatiliser<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>forperdiĝi<s n="vblex"/></l>           <r>volatiliser<s n="vblex"/></r></p></e>
 <e>       <p><l>flugi<s n="vblex"/></l>                <r>voler<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>ŝteli<s n="vblex"/></l>                <r>voler<s n="vblex"/></r></p></e>
@@ -33643,7 +33644,7 @@
 <e>       <p><l>sveni<s n="vblex"/></l>                <r>évanouir<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>vanui<s n="vblex"/></l>                <r>évanouir<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>elvaporiĝi<s n="vblex"/></l>           <r>évaporer<s n="vblex"/></r></p></e>
-<e r="LR"><p><l>formalaperi<s n="vblex"/></l>          <r>évaporer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>formalaperi<s n="vbser"/></l>          <r>évaporer<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>forperdiĝi<s n="vblex"/></l>           <r>évaporer<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>forvaporiĝi<s n="vblex"/></l>          <r>évaporer<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>vaporigi<s n="vblex"/></l>             <r>évaporer<s n="vblex"/></r></p></e>
@@ -34824,7 +34825,8 @@
 <e>       <p><l>sude<b/>de<s n="pr"/></l>              <r>au<b/>sud<b/>de<s n="pr"/></r></p></e>
 <e>       <p><l>sud-oriente<b/>de<s n="pr"/></l>       <r>au<b/>sud-est<b/>de<s n="pr"/></r></p></e>
 <e>       <p><l>sud-okcidente<b/>de<s n="pr"/></l>     <r>au<b/>sud-ouest<b/>de<s n="pr"/></r></p></e>
-<e>       <p><l>en<b/>la<b/>komenco<b/>al<s n="pr"/></l><r>au<b/>début<b/>de<s n="pr"/></r></p></e>
+<e r="LR"><p><l>en<b/>la<b/>komenco<b/>de<s n="pr"/></l><r>au<b/>début<b/>de<s n="pr"/></r></p></e>
+<e r="LR"><p><l>en<b/>la<b/>komenco<b/>al<s n="pr"/></l><r>au<b/>début<b/>de<s n="pr"/></r></p></e>
 <e r="LR"><p><l>komence<b/>al<s n="pr"/></l>           <r>au<b/>début<b/>de<s n="pr"/></r></p></e>
 <e>       <p><l>en<b/>la<b/>fino<b/>al<s n="pr"/></l>  <r>à<b/>la<b/>fin<b/>de<s n="pr"/></r></p></e>
 <e r="LR"><p><l>fine<b/>al<s n="pr"/></l>              <r>à<b/>la<b/>fin<b/>de<s n="pr"/></r></p></e>
@@ -35184,10 +35186,11 @@
 <e>       <p><l>-<s n="guio"/></l>                     <r>-<s n="guio"/></r></p></e>
 <e>       <p><l>,<s n="cm"/></l>                       <r>,<s n="cm"/></r></p></e>
 
-<e>       <re>[0-9]+([.,][0-9]+)?</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
-<e r="RL"><re>[0-9]+([.,][0-9]+)?</re><p><l>a<s n="num"/><s n="ord"/></l><r>e<s n="num"/><s n="ord"/><s n="m"/></r></p></e>
-<e r="RL"><re>[0-9]+([.,][0-9]+)?</re><p><l>a<s n="num"/><s n="ord"/></l><r>e<s n="num"/><s n="ord"/><s n="f"/></r></p></e>
-<e>       <re>[0-9]+([.,][0-9]+)?</re><p><l>a<s n="num"/><s n="ord"/></l><r>e<s n="num"/><s n="ord"/><s n="mf"/></r></p></e>
+<e>       <re>[0-9]+([.,][0-9]+)*</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
+<e>       <re>[0-9]+([.,][0-9]+)*%</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
+<e r="RL"><re>[0-9]+([.,][0-9]+)*</re><p><l>a<s n="num"/><s n="ord"/></l><r>e<s n="num"/><s n="ord"/><s n="m"/></r></p></e>
+<e r="RL"><re>[0-9]+([.,][0-9]+)*</re><p><l>a<s n="num"/><s n="ord"/></l><r>e<s n="num"/><s n="ord"/><s n="f"/></r></p></e>
+<e>       <re>[0-9]+([.,][0-9]+)*</re><p><l>a<s n="num"/><s n="ord"/></l><r>e<s n="num"/><s n="ord"/><s n="mf"/></r></p></e>
 
   </section>
   <section id="propraj_nomoj" type="standard">
