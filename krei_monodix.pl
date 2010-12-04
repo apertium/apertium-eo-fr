@@ -57,7 +57,7 @@ sub skribi {
 			|| $lemo =~ /into$/o
 			|| $lemo =~ /ito$/o
 			|| $lemo =~ /onto$/o
-			|| $lemo =~ /oto$/o) {
+			|| $lemo =~ /oto$/o
 			|| $lemo =~ /ologo$/o) {
 			$radiko = substr ($lemo, 0, -1);
 			printf "<e lm=\"%s\">            <i>%s</i><par n=\"%s\"/></e>\n", $lemo, $radiko, 'ino__n';
@@ -118,4 +118,3 @@ sub skribi {
 		print STDERR "Eraro 9: Ne konata paradigmo en linio $.: $paradigmo.\n";
 	}
 }
-
