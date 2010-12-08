@@ -247,6 +247,8 @@
   <e>       <re>[0-9]+([.,][0-9]+)*</re><p><l>aj</l><r>a<s n="num"/><s n="ord"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <re>[0-9]+([.,][0-9]+)*</re><p><l>an</l><r>a<s n="num"/><s n="ord"/><s n="sg"/><s n="acc"/></r></p></e>
   <e>       <re>[0-9]+([.,][0-9]+)*</re><p><l>ajn</l><r>a<s n="num"/><s n="ord"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e r="RL"><re>[0-9]+([.,][0-9]+)*</re><p><l>a</l><r>a<s n="num"/><s n="ord"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e r="RL"><re>[0-9]+([.,][0-9]+)*</re><p><l>an</l><r>a<s n="num"/><s n="ord"/><s n="sp"/><s n="acc"/></r></p></e>
 
 </pardef>
 
@@ -592,6 +594,9 @@
   <e>       <p><l></l>          <r><s n="num"/><s n="pl"/></r></p></e>
   <e>       <p><l></l>          <r><s n="num"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l></l>          <r><s n="num"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e>       <p><l></l>          <r><s n="num"/><s n="sp"/></r></p></e>
+  <e>       <p><l></l>          <r><s n="num"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e>       <p><l></l>          <r><s n="num"/><s n="sp"/><s n="acc"/></r></p></e>
 </pardef>
 
 
@@ -3069,6 +3074,7 @@
 <e lm="asketo">          <i>asket</i><par n="ino__n"/></e>
 <e lm="asketismo">       <i>asketism</i><par n="o__n"/></e>
 <e lm="Askio">           <i>Aski</i><par n="Vikipedi/o__np"/></e>
+<e lm="Pasko">           <i>Pask</i><par n="Vikipedi/o__np"/></e>
 <e lm="askiigi">         <i>askiig</i><par n="i__vblex"/></e>
 <e lm="asklepiado">      <i>asklepiad</i><par n="o__n"/></e>
 <e lm="asmo">            <i>asm</i><par n="o__n"/></e>
@@ -4899,6 +4905,7 @@
 <e lm="Bárbara">         <i>Bárbara</i><par n="Marie__np"/></e>
 <e lm="co">              <i>c</i><par n="o__n"/></e>
 <e lm="C">               <i>C</i><par n="CX__num"/></e>
+<e lm="D">               <i>D</i><par n="CX__num"/></e>
 <e lm="Cade">            <i>Cade</i><par n="Mark__np"/></e>
 <e lm="Caden">           <i>Caden</i><par n="Mark__np"/></e>
 <e lm="Cadence">         <i>Cadence</i><par n="Marie__np"/></e>
@@ -5164,7 +5171,7 @@
 <e lm="cerasto">         <i>cerast</i><par n="o__n"/></e>
 <e lm="cerbo">           <i>cerb</i><par n="o__n"/></e>
 <e lm="cerbaĵo">         <i>cerbaĵ</i><par n="o__n"/></e>
-<e lm="Cerbero">         <i>Cerber</i><par n="Mark/o__np"/></e>
+<e lm="cerbero">         <i>cerber</i><par n="o__n"/></e>
 <e lm="cerbeto">         <i>cerbet</i><par n="o__n"/></e>
 <e lm="cerblaboristo">   <i>cerblaborist</i><par n="ino__n"/></e>
 <e lm="cerbujo">         <i>cerbuj</i><par n="o__n"/></e>
@@ -8531,11 +8538,16 @@
 <e lm="esperantismo">    <i>esperantism</i><par n="o__n"/></e>
 <e lm="esperantisto">    <i>esperantist</i><par n="ino__n"/></e>
 <e lm="esperantista">    <i>esperantist</i><par n="a__adj"/></e>
-<e lm="esperanto-movado"><i>esperanto-movad</i><par n="o__n"/></e>
+<e lm="Esperanto-movado"><i>Esperanto-movad</i><par n="o__n"/></e>
 <e lm="esperantologo">   <i>esperantolog</i><par n="ino__n"/></e>
 <e lm="esperantologio">  <i>esperantologi</i><par n="o__n"/></e>
 <e lm="esperantologiisto"><i>esperantologiist</i><par n="ino__n"/></e>
-<e lm="Esperantujo">     <i>Esperantuj</i><par n="Barcelon/o__np"/></e>
+<e r="LR" lm="Esperantismo">    <i>Esperantism</i><par n="o__n"/></e>
+<e r="LR" lm="Esperantisto">    <i>Esperantist</i><par n="ino__n"/></e>
+<e r="LR" lm="Esperantista">    <i>Esperantist</i><par n="a__adj"/></e>
+<e r="LR" lm="Esperantologo">   <i>Esperantolog</i><par n="ino__n"/></e>
+<e r="LR" lm="Esperantologio">  <i>Esperantologi</i><par n="o__n"/></e>
+<e r="LR" lm="Esperantologiisto"><i>Esperantologiist</i><par n="ino__n"/></e>
 <e lm="Esperanza">       <i>Esperanza</i><par n="Marie__np"/></e>
 <e lm="Esperaunce">      <i>Esperaunce</i><par n="Mark__np"/></e>
 <e lm="espereble">       <i>esperebl</i><par n="e__adv"/></e>
@@ -8998,6 +9010,8 @@
 <e lm="farbi">           <i>farb</i><par n="i__vblex"/></e>
 <e lm="farbisto">        <i>farbist</i><par n="ino__n"/></e>
 <e lm="farboplato">      <i>farboplat</i><par n="o__n"/></e>
+<e lm="numerplato">      <i>numerplat</i><par n="o__n"/></e>
+<e lm="licencplato">      <i>licencplat</i><par n="o__n"/></e>
 <e lm="Farcilaso">       <i>Farcilaso</i><par n="Mark__np"/></e>
 <e lm="farebla">         <i>farebl</i><par n="a__adj"/></e>
 <e lm="farenhejta">      <i>farenhejt</i><par n="a__adj"/></e>
@@ -9363,7 +9377,8 @@
 <e lm="filipinano">      <i>filipinan</i><par n="ino__n"/></e>
 <e lm="Filipo">          <i>Filipo</i><par n="Mark__np"/></e>
 <e lm="Filis">           <i>Filis</i><par n="Marie__np"/></e>
-<e lm="filistro">        <i>filistr</i><par n="o__n"/></e>
+<e lm="filistro">        <i>filistr</i><par n="ino__n"/></e>
+<e lm="filistra">        <i>filistr</i><par n="a__adj"/></e>
 <e lm="filmo">           <i>film</i><par n="o__n"/></e>
 <e lm="filmi">           <i>film</i><par n="i__vblex"/></e>
 <e lm="filmaktoro">      <i>filmaktor</i><par n="o__n"/></e>
@@ -10053,7 +10068,7 @@
 <e lm="frazo">           <i>fraz</i><par n="o__n"/></e>
 <e lm="frazi">           <i>fraz</i><par n="i__vblex"/></e>
 <e lm="frazadi">         <i>frazad</i><par n="i__vblex"/></e>
-<e lm="frazisto">        <i>frazist</i><par n="o__n"/></e>
+<e lm="frazisto">        <i>frazist</i><par n="ino__n"/></e>
 <e lm="fraŭdo">          <i>fraŭd</i><par n="o__n"/></e>
 <e lm="fraŭda">          <i>fraŭd</i><par n="a__adj"/></e>
 <e lm="fraŭdi">          <i>fraŭd</i><par n="i__vblex"/></e>
@@ -12651,7 +12666,7 @@
 <e lm="iniciatemo">      <i>iniciatem</i><par n="o__n"/></e>
 <e lm="iniciatinto">     <i>iniciatint</i><par n="ino__n"/></e>
 <e lm="iniciativo">      <i>iniciativ</i><par n="o__n"/></e>
-<e lm="iniciatoro">      <i>iniciator</i><par n="o__n"/></e>
+<e lm="iniciatoro">      <i>iniciator</i><par n="ino__n"/></e>
 <e lm="inicito">         <i>inicit</i><par n="o__n"/></e>
 <e lm="inismo">          <i>inism</i><par n="o__n"/></e>
 <e lm="injekto">         <i>injekt</i><par n="o__n"/></e>
@@ -15198,6 +15213,7 @@
 <e lm="komencao">        <i>komenca</i><par n="o__n"/></e>
 <e lm="komencanto">      <i>komencant</i><par n="ino__n"/></e>
 <e lm="komence de">      <i>komence<b/>de</i><par n="al__pr"/></e>
+<e lm="fine de">      <i>fine<b/>de</i><par n="al__pr"/></e>
 <e lm="komenciĝi">       <i>komenciĝ</i><par n="i__vblex"/></e>
 <e lm="komenciĝanta">    <i>komenciĝant</i><par n="a__adj"/></e>
 <e lm="komencloko">      <i>komenclok</i><par n="o__n"/></e>
@@ -17448,7 +17464,6 @@
 <e lm="linotipisto">     <i>linotipist</i><par n="ino__n"/></e>
 <e lm="linsemo">         <i>linsem</i><par n="o__n"/></e>
 <e lm="lintelo">         <i>lintel</i><par n="o__n"/></e>
-<e lm="Linukso">         <i>Linuks</i><par n="o__n"/></e>
 <e lm="Linukso">         <i>Linuks</i><par n="Vikipedi/o__np"/></e>
 <e lm="linĉi">           <i>linĉ</i><par n="i__vblex"/></e>
 <e lm="liona">           <i>lion</i><par n="a__adj"/></e>
@@ -18894,9 +18909,14 @@
 <e lm="markolo">         <i>markol</i><par n="o__n"/></e>
 <e lm="markoto">         <i>markot</i><par n="o__n"/></e>
 <e lm="markoti">         <i>markot</i><par n="i__vblex"/></e>
+<e lm="dadaismo">       <i>dadaism</i><par n="o__n"/></e>
+<e lm="dadaisma">       <i>dadaism</i><par n="a__adj"/></e>
+<e lm="dadaista">       <i>dadaist</i><par n="a__adj"/></e>
+<e lm="dadaisto">       <i>dadaist</i><par n="ino__n"/></e>
 <e lm="marksismo">       <i>marksism</i><par n="o__n"/></e>
 <e lm="marksisma">       <i>marksism</i><par n="a__adj"/></e>
 <e lm="marksista">       <i>marksist</i><par n="a__adj"/></e>
+<e lm="marksisto">       <i>marksist</i><par n="ino__n"/></e>
 <e lm="markukumo">       <i>markukum</i><par n="o__n"/></e>
 <e lm="Markus">          <i>Markus</i><par n="Mark__np"/></e>
 <e lm="markŝtono">       <i>markŝton</i><par n="o__n"/></e>
@@ -20349,6 +20369,7 @@
 <e lm="najbararo">       <i>najbarar</i><par n="o__n"/></e>
 <e lm="najbaraĵo">       <i>najbaraĵ</i><par n="o__n"/></e>
 <e lm="najbare de">      <i>najbare<b/>de</i><par n="al__pr"/></e>
+<e lm="multe da">      <i>multe<b/>da</i><par n="al__pr"/></e>
 <e lm="najbareco">       <i>najbarec</i><par n="o__n"/></e>
 <e lm="najlo">           <i>najl</i><par n="o__n"/></e>
 <e lm="najli">           <i>najl</i><par n="i__vblex"/></e>
@@ -20595,10 +20616,10 @@
 <e lm="nedeca">          <i>nedec</i><par n="a__adj"/></e>
 <e lm="nedecidema">      <i>nedecidem</i><par n="a__adj"/></e>
 <e lm="nedecidita">      <i>nedecidit</i><par n="a__adj"/></e>
-<e lm="nederlanda">      <i>nederland</i><par n="ino__n"/></e>
+<e lm="nederlandano">      <i>nederlandan</i><par n="ino__n"/></e>
 <e lm="nederlanda">      <i>nederland</i><par n="a__adj"/></e>
 <e lm="Nederlando">      <i>Nederland</i><par n="Barcelon/o__np"/></e>
-<e lm="nederlanda lingvo"><i>nederlanda<b/>lingv</i><par n="ino__n"/></e>
+<e lm="nederlanda lingvo"><i>nederlanda<b/>lingv</i><par n="o__n"/></e>
 <e lm="nederlandano">    <i>nederlandan</i><par n="ino__n"/></e>
 <e lm="nederlandlingva"> <i>nederlandlingv</i><par n="a__adj"/></e>
 <e lm="nederlandlingvano"><i>nederlandlingvan</i><par n="ino__n"/></e>
@@ -21225,7 +21246,6 @@
 <e lm="notinde">         <i>notind</i><par n="e__adv"/></e>
 <e lm="notlibreto">      <i>notlibret</i><par n="o__n"/></e>
 <e lm="nova">            <i>nov</i><par n="a__adj"/></e>
-<e lm="Nova">            <i>Nov</i><par n="a__adj"/></e>
 <e lm="nov">             <i>nov</i><par n="eks__adj"/></e>
 <e lm="nov">             <i>nov</i><par n="eks__adv"/></e>
 <e lm="nove">            <i>nov</i><par n="e__adv"/></e>
@@ -28347,7 +28367,6 @@
 <e lm="Tajlando">        <i>Tajland</i><par n="Barcelon/o__np"/></e>
 <e lm="tajlandano">      <i>tajlandan</i><par n="ino__n"/></e>
 <e lm="tajloro">         <i>tajlor</i><par n="ino__n"/></e>
-<e lm="tajlorino">       <i>tajlorin</i><par n="o__n"/></e>
 <e lm="tajpi">           <i>tajp</i><par n="i__vblex"/></e>
 <e lm="Tajvano">         <i>Tajvan</i><par n="Barcelon/o__np"/></e>
 <e lm="tajĝiĉuano">      <i>tajĝiĉuan</i><par n="ino__n"/></e>
@@ -28881,10 +28900,14 @@
 <e lm="Ticiano">         <i>Ticiano</i><par n="Mark__np"/></e>
 <e lm="Ticio">           <i>Ticio</i><par n="Mark__np"/></e>
 <e lm="Tideo">           <i>Tideo</i><par n="Mark__np"/></e>
+<e r="RL" lm="iom">      <p><l>iom</l>       <r>iom<s n="adv"/><s n="nom"/></r></p></e>
+<e r="RL" lm="iom">      <p><l>iom</l>       <r>iom<s n="adv"/><s n="acc"/></r></p></e>
 <e r="RL" lm="tie">      <p><l>tie</l>       <r>tie<s n="adv"/><s n="nom"/></r></p></e>
 <e r="RL" lm="tie">      <p><l>tie</l>       <r>tie<s n="adv"/><s n="acc"/></r></p></e>
 <e lm="tiea">            <i>tie</i><par n="a__adj"/></e>
 <e lm="tie">             <i>tie</i><par n="jam__adv"/></e>
+<e lm="ĉi tie">             <i>ĉi<b/>tie</i><par n="jam__adv"/></e>
+<e lm="tie ĉi">             <i>tie<b/>ĉi</i><par n="jam__adv"/></e>
 <e lm="tiel">            <i>tiel</i><par n="jam__adv"/></e>
 <e lm="tiele">           <i>tiel</i><par n="e__adv"/></e>
 <e lm="tiel">            <i>tiel</i><par n="tro__preadv"/></e>
@@ -29745,10 +29768,8 @@
 <e lm="uniforme">        <i>uniform</i><par n="e__adv"/></e>
 <e lm="unika">           <i>unik</i><par n="a__adj"/></e>
 <e lm="unike">           <i>unik</i><par n="e__adv"/></e>
-<e lm="Unikodo">         <i>Unikod</i><par n="o__n"/></e>
 <e lm="Unikodo">         <i>Unikod</i><par n="Vikipedi/o__np"/></e>
 <e lm="unikorno">        <i>unikorn</i><par n="o__n"/></e>
-<e lm="Unikso">          <i>Uniks</i><par n="o__n"/></e>
 <e lm="Unikso">          <i>Uniks</i><par n="Vikipedi/o__np"/></e>
 <e lm="uniksulo">        <i>uniksul</i><par n="ino__n"/></e>
 <e lm="Unique">          <i>Unique</i><par n="Marie__np"/></e>
@@ -30506,7 +30527,7 @@
 <e lm="vino">            <i>vin</i><par n="o__n"/></e>
 <e lm="vinao">           <i>vina</i><par n="o__n"/></e>
 <e lm="vinagro">         <i>vinagr</i><par n="o__n"/></e>
-<e lm="Vinajo">          <i>Vinaj</i><par n="o__n"/></e>
+<e lm="Vinajo">          <i>Vinaj</i><par n="Vikipedi/o__np"/></e>
 <e lm="vinbero">         <i>vinber</i><par n="o__n"/></e>
 <e lm="vinberaro">       <i>vinberar</i><par n="o__n"/></e>
 <e lm="vinberarbo">      <i>vinberarb</i><par n="o__n"/></e>
@@ -30672,12 +30693,13 @@
 <e lm="vizono">          <i>vizon</i><par n="o__n"/></e>
 <e lm="viŝi">            <i>viŝ</i><par n="i__vblex"/></e>
 <e lm="Viŝnuo">          <i>Viŝnu</i><par n="Mark/o__np"/></e>
-<e lm="Viŝnuismo">       <i>Viŝnuism</i><par n="o__n"/></e>
 <e lm="viŝnuismo">       <i>viŝnuism</i><par n="o__n"/></e>
 <e lm="viŝpapero">       <i>viŝpaper</i><par n="o__n"/></e>
 <e lm="viŝtuko">         <i>viŝtuk</i><par n="o__n"/></e>
 <e lm="vjelo">           <i>vjel</i><par n="o__n"/></e>
 <e lm="Vjetnamio">       <i>Vjetnam</i><par n="Alban/io__np"/></e>
+<e lm="vjetnamo">       <i>vjetnam</i><par n="ino__n"/></e>
+<e lm="vjetnama">       <i>vjetnam</i><par n="a__adj"/></e>
 <e lm="vjolo">           <i>vjol</i><par n="o__n"/></e>
 <e lm="Vladimiro">       <i>Vladimir</i><par n="Mark/o__np"/></e>
 <e lm="Vladimir">        <i>Vladimir</i><par n="Mark__np"/></e>
@@ -31307,7 +31329,6 @@
 <e lm="ĉi">              <i>ĉi</i><par n="jam__adv"/></e>
 <e lm="ĉi-jare">         <i>ĉi-jar</i><par n="e__adv"/></e>
 <e lm="ĉi-rilate">       <i>ĉi-rilat</i><par n="e__adv"/></e>
-<e lm="ĉi tie">          <i>ĉi<b/>ti</i><par n="e__adv"/></e>
 <e lm="ĉi tio">          <p><l>ĉi<b/>tio</l> <r>ĉi<b/>tio<s n="prn"/><s n="tn"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="ĉi tio">          <p><l>ĉi<b/>tion</l><r>ĉi<b/>tio<s n="prn"/><s n="tn"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="ĉi tiu">          <p><l>ĉi<b/>tiu</l> <r>ĉi<b/>tiu<s n="prn"/><s n="tn"/><s n="sg"/><s n="nom"/></r></p></e>
