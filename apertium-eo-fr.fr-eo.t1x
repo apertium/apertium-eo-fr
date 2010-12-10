@@ -585,6 +585,10 @@
       <cat-item tags="adv.itg"/>
     </def-cat>
 
+    <def-cat n="advrel">
+      <cat-item tags="rel.adv"/>
+    </def-cat>
+
     <def-cat n="plus_moins">
       <cat-item lemma="plus" tags="adv"/>
       <cat-item lemma="plus" tags="preadv"/>
@@ -807,6 +811,7 @@
       <attr-item tags="adj.sint.comp"/>
       <attr-item tags="adj.sint.sup"/>
       <attr-item tags="adj.pos"/>
+      <attr-item tags="prn.itg"/> <!-- quel -> kiu -->
       <attr-item tags="vblex.pp"/>
       <attr-item tags="vblex.geradj"/>
       <attr-item tags="vbser.pp"/>
@@ -869,6 +874,7 @@
       <attr-item tags="adv"/>
       <attr-item tags="preadv"/>
       <attr-item tags="adv.itg"/>
+      <attr-item tags="rel.adv"/>
     </def-attr>
 
     <def-attr n="a_pp">
@@ -901,6 +907,8 @@
       <attr-item tags="rel"/><!--EO-->
       <attr-item tags="nn"/><!--EO-->
       <attr-item tags="adv"/><!--EO-->
+      <attr-item tags="adj"/><!-- autrui -> alia -->
+      <attr-item tags="rel"/><!--EO-->
     </def-attr>
     <def-attr n="pers">
       <attr-item tags="p1"/>
@@ -20778,6 +20786,32 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 <rule comment="ADV ITG">
       <pattern>
 	<pattern-item n="advitg"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<out>
+	  <chunk name="adv" case="caseFirstWord">
+	    <tags>
+	      <tag><clip pos="1" side="tl" part="a_adv"/></tag>
+	    </tags>
+	    <lu>
+	      <clip pos="1" side="tl" part="whole"/>
+	    </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="ADV REL">
+      <pattern>
+	<pattern-item n="advrel"/>
       </pattern>
       <action>
 	<call-macro n="firstWord">

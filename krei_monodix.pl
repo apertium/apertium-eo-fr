@@ -64,15 +64,15 @@ sub skribi {
 		} elsif ($lemo =~ /o$/o) {
 			printf "<e lm=\"%s\">            <i>%s</i><par n=\"%s\"/></e>\n", $lemo, $`, 'o__n';
 		} else {
-			print STDERR "Eraro 2: Ne konata paradigmo en linio $.: $paradigmo.\n";
+			print STDERR "Eraro 2: Ne konata paradigmo en linio $.: $paradigmo, lemo = $lemo.\n";
 		}
 	} elsif ($paradigmo eq "n><acr") {
 			printf "<e lm=\"%s\">            <i>%s</i><par n=\"%s\"/></e>\n", $lemo, $lemo, 'BBC__n';
 	} elsif ($paradigmo eq "adj") {
 		if ($lemo =~ /a$/o) {
 			printf "<e lm=\"%s\">            <i>%s</i><par n=\"%s\"/></e>\n", $lemo, $`, 'a__adj';
-		} else {
-			print STDERR "Eraro 3: Ne konata paradigmo en linio $.: $paradigmo.\n";
+		} else {	# prefiksoj
+			printf "<e lm=\"%s\">            <i>%s</i><par n=\"%s\"/></e>\n", $lemo, $lemo, 'eks__adj';
 		}
 	} elsif ($paradigmo eq "adv") {
 		if ($lemo =~ /e$/o) {
@@ -115,6 +115,6 @@ sub skribi {
 			printf "<e lm=\"%s\">            <i>%s</i><par n=\"%s\"/></e>\n", $lemo, $lemo, 'Wikipedia__np';
 		}
 	} else {
-		print STDERR "Eraro 9: Ne konata paradigmo en linio $.: $paradigmo.\n";
+		print STDERR "Eraro 9: Ne konata paradigmo en linio $.: $paradigmo, lemo = $lemo.\n";
 	}
 }
