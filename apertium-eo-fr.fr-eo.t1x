@@ -14,6 +14,32 @@
       <cat-item tags="np.ant.*"/>
     </def-cat>
 
+     <def-cat n="antunk">
+      <cat-item tags="np.ant"/>
+      <cat-item tags="np.ant.*"/>
+      <cat-item tags=""/>
+    </def-cat>
+
+     <def-cat n="Saint">
+      <cat-item lemma="Saintxxxx" tags="adj.*"/>
+      <cat-item lemma="Stxxx" tags=""/>
+    </def-cat>
+
+     <def-cat n="npunk">
+      <cat-item tags="np.ant"/>
+      <cat-item tags="np.ant.*"/>
+      <cat-item tags="np.loc"/>
+      <cat-item tags="np.loc.*"/>
+      <cat-item tags=""/>
+    </def-cat>
+
+     <def-cat n="Marie" c="pour corriger">
+      <cat-item lemma="marier" tags="vblex.pri.p1.sg"/>
+      <cat-item lemma="marier" tags="vblex.pri.p3.sg"/>
+      <cat-item lemma="marier" tags="vblex.prs.p1.sg"/>
+      <cat-item lemma="marier" tags="vblex.prs.p3.sg"/>
+      <cat-item lemma="marier" tags="vblex.imp.p2.sg"/>
+    </def-cat>
      <def-cat n="loc">
       <cat-item tags="np.loc"/>
       <cat-item tags="np.loc.*"/>
@@ -57,6 +83,22 @@
     <def-cat n="le-erara">
       <cat-item lemma="le" tags="det.*"/>
       <cat-item lemma="le" tags="prn.*"/>
+    </def-cat>
+
+    <def-cat n="ce-erara">
+      <cat-item lemma="ce" tags="det.*"/>
+      <cat-item lemma="ce" tags="prn.*"/>
+    </def-cat>
+
+    <def-cat n="que-erara">
+      <cat-item lemma="que" tags="prn.*"/>
+      <cat-item lemma="que" tags="cnjsub"/>
+    </def-cat>
+
+    <def-cat n="quequi-erara">
+      <cat-item lemma="que" tags="prn.*"/>
+      <cat-item lemma="que" tags="cnjsub"/>
+      <cat-item lemma="qui" tags="prn.*"/>
     </def-cat>
 
     <def-cat n="tout_predet">
@@ -691,6 +733,16 @@
       <cat-item lemma="à" tags="pr"/>
     </def-cat>
 
+    <def-cat n="de_von"> <!-- por familiaj nomoj -->
+      <cat-item lemma="de" tags="pr"/>
+      <cat-item lemma="von" tags=""/>
+      <cat-item lemma="van" tags=""/>
+      <cat-item lemma="del" tags=""/>
+      <cat-item lemma="do" tags=""/>
+      <cat-item lemma="da" tags=""/>
+      <cat-item lemma="du" tags="pr"/>
+    </def-cat>
+
     <def-cat n="en">
       <cat-item lemma="en" tags="pr"/>
     </def-cat>
@@ -1034,8 +1086,7 @@
     </def-list>
 
   <def-list n="laqualcosa">
-    <list-item v="la qual cosa"/>
-    <list-item v="cosa que"/>
+    <list-item v="ce qui"/>
     </def-list>
 
   <def-list n="agradar"> <!-- BCN EO per a la inversio argumental-->
@@ -2635,7 +2686,7 @@
 	  <clip pos="1" side="tl" part="nbr"/>
 	</let>
 	<out>
-	  <chunk name="ant" case="caseFirstWord">
+	  <chunk name="ant1" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="1" side="sl" part="gen"/></tag>
@@ -2647,6 +2698,370 @@
               <clip pos="1" side="tl" part="tags"/>
               <lit-tag v="4"/>
             </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: ANTROPÒNIM ANTROPÒNIM (Pierre Dupont)">
+      <pattern>
+	<pattern-item n="ant"/>
+	<pattern-item n="antunk"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="1"/>
+	</call-macro>
+	<let>
+	  <var n="nombre"/>
+	  <clip pos="1" side="tl" part="nbr"/>
+	</let>
+	<out>
+	  <chunk name="ant2" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="1" side="sl" part="gen"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><var n="case"/></tag>
+	    </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+              <lit-tag v="4"/>
+            </lu>
+	    <b pos="1"/>
+	    <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="tags"/>
+	    </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: ANTROPÒNIM ANTROPÒNIM (Pierre Dupont)">
+      <pattern>
+	<pattern-item n="antunk"/>
+	<pattern-item n="ant"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="2"/>
+	</call-macro>
+	<let>
+	  <var n="nombre"/>
+	  <clip pos="1" side="tl" part="nbr"/>
+	</let>
+	<out>
+	  <chunk name="ant3" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="2" side="sl" part="gen"/></tag>
+	      <tag><var n="nombre"/></tag>
+	    </tags>
+	    <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+              <lit-tag v="4"/>
+	    </lu>
+	    <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="tags"/>
+              <lit-tag v="4"/>
+            </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: ANTROPÒNIM de NP (Pierre de Bretagne, Alexander von Humboldt)">
+      <pattern>
+	<pattern-item n="ant"/>
+	<pattern-item n="de_von"/>
+	<pattern-item n="npunk"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="1"/>
+	</call-macro>
+	<let>
+	  <var n="nombre"/>
+	  <clip pos="1" side="tl" part="nbr"/>
+	</let>
+	<out>
+	  <chunk name="ant2" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="1" side="sl" part="gen"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><var n="case"/></tag>
+	    </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+              <lit-tag v="4"/>
+            </lu>
+	    <b pos="1"/>
+	    <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="tags"/>
+	    </lu>
+	    <b pos="2"/>
+	    <lu>
+              <clip pos="3" side="tl" part="lem"/>
+              <clip pos="3" side="tl" part="tags"/>
+	    </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: ANTROPÒNIM-ANTROPÒNIM (Jean-Michel)">
+      <pattern>
+	<pattern-item n="ant"/>
+	<pattern-item n="guio"/>
+	<pattern-item n="antunk"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="1"/>
+	</call-macro>
+	<let>
+	  <var n="nombre"/>
+	  <clip pos="1" side="tl" part="nbr"/>
+	</let>
+	<out>
+	  <chunk name="ant2" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="1" side="sl" part="gen"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><var n="case"/></tag>
+	    </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+              <lit-tag v="4"/>
+            </lu>
+	    <b pos="1"/>
+	    <lu>
+	      <clip pos="2" side="tl" part="whole"/>
+	    </lu>
+	    <b pos="2"/>
+	    <lu>
+              <clip pos="3" side="tl" part="lem"/>
+              <clip pos="3" side="tl" part="tags"/>
+	    </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: ANTROPÒNIM-ANTROPÒNIM (Jean-Michel)">
+      <pattern>
+	<pattern-item n="antunk"/>
+	<pattern-item n="guio"/>
+	<pattern-item n="ant"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="3"/>
+	</call-macro>
+	<let>
+	  <var n="nombre"/>
+	  <clip pos="1" side="tl" part="nbr"/>
+	</let>
+	<out>
+	  <chunk name="ant3" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="3" side="sl" part="gen"/></tag>
+	      <tag><var n="nombre"/></tag>
+	    </tags>
+	    <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+              <lit-tag v="4"/>
+	    </lu>
+	    <b pos="1"/>
+	    <lu>
+	      <clip pos="2" side="tl" part="whole"/>
+	    </lu>
+	    <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="lem"/>
+              <clip pos="3" side="tl" part="tags"/>
+              <lit-tag v="4"/>
+            </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: Marie-ANTROPÒNIM (Marie-Jeanne)">
+      <pattern>
+	<pattern-item n="Marie"/>
+	<pattern-item n="guio"/>
+	<pattern-item n="antunk"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<let>
+	  <var n="nombre"/>
+	  <clip pos="1" side="tl" part="nbr"/>
+	</let>
+	<out>
+	  <chunk name="ant2" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN.f.sg.nom"/></tag>
+	    </tags>
+            <lu>
+              <lit v="Marie"/>
+              <lit-tag v="np.ant.f.sg.4"/>
+            </lu>
+	    <b pos="1"/>
+	    <lu>
+	      <clip pos="2" side="tl" part="whole"/>
+	    </lu>
+	    <b pos="2"/>
+	    <lu>
+              <clip pos="3" side="tl" part="lem"/>
+              <clip pos="3" side="tl" part="tags"/>
+	    </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: ANTROPÒNIM-Marie (Jeanne-Marie)">
+      <pattern>
+	<pattern-item n="antunk"/>
+	<pattern-item n="guio"/>
+	<pattern-item n="Marie"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<let>
+	  <var n="nombre"/>
+	  <clip pos="1" side="tl" part="nbr"/>
+	</let>
+	<out>
+	  <chunk name="ant3" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN.f.sg.nom"/></tag>
+	    </tags>
+	    <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+	    </lu>
+	    <b pos="1"/>
+	    <lu>
+	      <clip pos="2" side="tl" part="whole"/>
+	    </lu>
+	    <b pos="2"/>
+            <lu>
+              <lit v="Marie"/>
+              <lit-tag v="np.ant.f.sg.4"/>
+            </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: Saint-NP (Saint-Pierre)">
+      <pattern>
+	<pattern-item n="Saint"/>
+	<pattern-item n="guio"/>
+	<pattern-item n="npunk"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<let>
+	  <var n="nombre"/>
+	  <clip pos="1" side="tl" part="nbr"/>
+	</let>
+	<out>
+	  <chunk name="loc" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="1" side="sl" part="gen"/></tag>
+	      <tag><lit-tag v="sg.nom"/></tag>
+	    </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+            </lu>
+	    <b pos="1"/>
+	    <lu>
+	      <clip pos="2" side="tl" part="whole"/>
+	    </lu>
+	    <b pos="2"/>
+	    <lu>
+              <clip pos="3" side="tl" part="lem"/>
+              <clip pos="3" side="tl" part="tags"/>
+	    </lu>
 	  </chunk>
 	</out>
 	<let>
@@ -2680,8 +3095,7 @@
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
-	      <lit-tag v="np"/>
-	      <lit-tag v="loc"/>
+	      <clip pos="2" side="tl" part="a_nom"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
@@ -8965,7 +9379,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="1"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="SNrelatiuY"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -8986,7 +9400,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
-
+<!--
 <rule comment="REGLA: COMA QUE (EO, regles específiques de SN amb causula de relatiu, creades per a corregir el tagger 'que -> kiu' )">
       <pattern>
 	<pattern-item n="sent_coma"/>
@@ -9042,7 +9456,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="1"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="SNrelatiu2"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -9061,6 +9475,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</let>
       </action>
     </rule>
+-->
 
 <rule comment="REGLA: DET NOM QUE (EO, regles específiques de SN amb causula de relatiu, creades per a corregir el tagger 'que -> kiu' )">
       <pattern>
@@ -9162,7 +9577,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="1"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="SNrelatiu3"/></tag>
 	                <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -9298,7 +9713,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="3"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="SNrelatiu4"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -9426,7 +9841,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="3"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="SNrelatiu5"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -9554,7 +9969,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="3"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="SNrelatiu6"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -9704,7 +10119,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="4"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="SNrelatiu7"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -9867,7 +10282,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="4"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="SNrelatiu8"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -10008,7 +10423,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="4"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="SNrelatiu9"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -10167,7 +10582,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="5"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="SNrelatiuA"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -10323,7 +10738,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="5"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="SNrelatiuB"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -10499,7 +10914,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="6"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="SNrelatiuC"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -13235,7 +13650,6 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <lit-tag v="vblex.pp"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <lit-tag v="nom"/>
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
@@ -20937,7 +21351,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<out>
 	  <chunk name="prn" case="caseFirstWord">
 	    <tags>
-	      <tag><lit-tag v="SNrelatiu"/></tag>
+	      <tag><lit-tag v="SNrelatiu1"/></tag>
 	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
@@ -20988,7 +21402,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	  <b pos="1"/>
 	  <chunk name="prn">
 	    <tags>
-	      <tag><lit-tag v="SNrelatiu"/></tag>
+	      <tag><lit-tag v="SNrelatiuZ"/></tag>
               <tag><lit-tag v="rel"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
@@ -21228,6 +21642,43 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	    <lu>
               <lit v="pli ol"/>
 	      <lit-tag v="cnjadv"/>
+	    </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: CE QUE: ce que -> tio kio, ce qui -> tio kio ">
+      <pattern>
+	<pattern-item n="ce-erara"/>
+	<pattern-item n="quequi-erara"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<out>
+	  <chunk name="prn_nosubj" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN.tn.sg.nom"/></tag>
+	    </tags>
+	    <lu>
+              <lit v="tio"/>
+	      <lit-tag v="prn.tn.3.4"/>
+	    </lu>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk name="prn">
+	    <tags>
+	      <tag><lit-tag v="SNrelatiu.rel.sg.nom"/></tag>
+	    </tags>
+	    <lu>
+              <lit v="kio"/>
+	      <lit-tag v="prn.rel.3.4"/>
 	    </lu>
 	  </chunk>
 	</out>

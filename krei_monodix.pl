@@ -58,6 +58,7 @@ sub skribi {
 			|| $lemo =~ /ito$/o
 			|| $lemo =~ /onto$/o
 			|| $lemo =~ /oto$/o
+			|| $lemo =~ /estro$/o
 			|| $lemo =~ /ologo$/o) {
 			$radiko = substr ($lemo, 0, -1);
 			printf "<e lm=\"%s\">            <i>%s</i><par n=\"%s\"/></e>\n", $lemo, $radiko, 'ino__n';
