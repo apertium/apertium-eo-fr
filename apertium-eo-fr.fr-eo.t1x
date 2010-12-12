@@ -21,8 +21,8 @@
     </def-cat>
 
      <def-cat n="Saint">
-      <cat-item lemma="Saintxxxx" tags="adj.*"/>
-      <cat-item lemma="Stxxx" tags=""/>
+      <cat-item lemma="saint" tags="adj.*"/>
+      <cat-item lemma="St" tags=""/>
     </def-cat>
 
      <def-cat n="npunk">
@@ -2513,162 +2513,9 @@
       </action>
     </rule>
 
-<!-- FINO KOMENCO DATOJ -->
+<!-- FINO DATOJ -->
 
-
-
-<rule comment="REGLA: NOM (per a col·locar la cua en les multiparaules amb g (EO)">
-      <pattern>
-	<pattern-item n="nom"/>
-      </pattern>
-      <action>
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
-	</call-macro>
-	<call-macro n="nombro1">
-	  <with-param pos="1"/>
-	</call-macro>
-	<call-macro n="default_nombro">
-	</call-macro>
-	<call-macro n="nom_cas">
-	  <with-param pos="1"/>
-	</call-macro>
-	<out>
-	  <chunk name="nom" case="caseFirstWord">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="1" side="sl" part="gen"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	    </tags>
-	    <lu>   <!--<clip pos="1" side="tl" part="whole"/> Per a compostos: -->
-	      <clip pos="1" side="tl" part="lemh"/>
-	      <clip pos="1" side="tl" part="a_nom"/>
-	      <clip pos="1" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	      <lit-tag v="4"/>
-	      <clip pos="1" side="tl" part="lemq"/>
-	    </lu>
-	  </chunk>
-	</out>
-	<let>
-	  <var n="caseFirstWord"/>
-	  <lit v="aa"/>
-	</let>
-      </action>
-    </rule>
-
-<rule comment="REGLA: NOMda DE (millon de -> miliono da)">
-      <pattern>
-	<pattern-item n="nom_da"/>
-	<pattern-item n="de"/>
-      </pattern>
-      <action>
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
-	</call-macro>
-	<call-macro n="nombro1">
-	  <with-param pos="1"/>
-	</call-macro>
-	<call-macro n="default_nombro">
-	</call-macro>
-	<call-macro n="nom_cas">
-	  <with-param pos="1"/>
-	</call-macro>
-	<out>
-	  <chunk name="nom" case="caseFirstWord">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="1" side="sl" part="gen"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	    </tags>
-	    <lu>   <!--<clip pos="1" side="tl" part="whole"/> Per a compostos: -->
-	      <clip pos="1" side="tl" part="lemh"/>
-	      <clip pos="1" side="tl" part="a_nom"/>
-	      <clip pos="1" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	      <lit-tag v="4"/>
-	      <clip pos="1" side="tl" part="lemq"/>
-	    </lu>
-	  </chunk>
- 	  <b pos="1"/>
-	  <chunk name="pr">
-	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
-	    </tags>
-	    <lu>
-	      <lit v="da"/>
-	      <lit-tag v="pr"/>
-	    </lu>
-	  </chunk>
-	</out>
-	<let>
-	  <var n="caseFirstWord"/>
-	  <lit v="aa"/>
-	</let>
-      </action>
-    </rule>
-
-<rule comment="REGLA: NUM NOMda DE (15 millons de -> 15 milionoj da)">
-      <pattern>
-	<pattern-item n="num"/>
-	<pattern-item n="nom_da"/>
-	<pattern-item n="de"/>
-      </pattern>
-      <action>
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
-	</call-macro>
-	<call-macro n="nombro1">
-	  <with-param pos="2"/>
-	</call-macro>
-	<call-macro n="default_nombro">
-	</call-macro>
-	<call-macro n="nom_cas">
-	  <with-param pos="2"/>
-	</call-macro>
-	<out>
-	  <chunk name="num_nom" case="caseFirstWord">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="2" side="sl" part="gen"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="1" side="tl" part="lem"/>
-	      <clip pos="1" side="tl" part="a_num"/>
-	      <clip pos="1" side="tl" part="nbr"/>
-              <lit-tag v="4"/>
-	    </lu>
-	    <b pos="1"/>
-	    <lu>
-	      <clip pos="2" side="tl" part="lemh"/>
-	      <clip pos="2" side="tl" part="a_nom"/>
-	      <clip pos="2" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/>
-	    </lu>
-	  </chunk>
- 	  <b pos="2"/>
-	  <chunk name="pr">
-	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
-	    </tags>
-	    <lu>
-	      <lit v="da"/>
-	      <lit-tag v="pr"/>
-	    </lu>
-	  </chunk>
-	</out>
-	<let>
-	  <var n="caseFirstWord"/>
-	  <lit v="aa"/>
-	</let>
-      </action>
-    </rule>
+<!-- KOMENCO PROPRAJ NOMOJ -->
 
 <rule comment="REGLA: ANTROPÒNIM (Jean)">
       <pattern>
@@ -2830,6 +2677,50 @@
 	    <lu>
               <clip pos="2" side="tl" part="lem"/>
               <clip pos="2" side="tl" part="tags"/>
+	    </lu>
+	    <b pos="2"/>
+	    <lu>
+              <clip pos="3" side="tl" part="lem"/>
+              <clip pos="3" side="tl" part="tags"/>
+	    </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: Saint-NP (Saint-Pierre)">
+      <pattern>
+	<pattern-item n="Saint"/>
+	<pattern-item n="guio"/>
+	<pattern-item n="npunk"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<let>
+	  <var n="nombre"/>
+	  <clip pos="1" side="tl" part="nbr"/>
+	</let>
+	<out>
+	  <chunk name="loc" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="1" side="sl" part="gen"/></tag>
+	      <tag><lit-tag v="sg.nom"/></tag>
+	    </tags>
+            <lu>
+              <clip pos="1" side="sl" part="lem"/> <!-- ni conservas la lemon de la originalo -->
+              <clip pos="1" side="tl" part="tags"/>
+            </lu>
+	    <b pos="1"/>
+	    <lu>
+	      <clip pos="2" side="tl" part="whole"/>
 	    </lu>
 	    <b pos="2"/>
 	    <lu>
@@ -3028,50 +2919,6 @@
     </rule>
 
 
-<rule comment="REGLA: Saint-NP (Saint-Pierre)">
-      <pattern>
-	<pattern-item n="Saint"/>
-	<pattern-item n="guio"/>
-	<pattern-item n="npunk"/>
-      </pattern>
-      <action>
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
-	</call-macro>
-	<let>
-	  <var n="nombre"/>
-	  <clip pos="1" side="tl" part="nbr"/>
-	</let>
-	<out>
-	  <chunk name="loc" case="caseFirstWord">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="1" side="sl" part="gen"/></tag>
-	      <tag><lit-tag v="sg.nom"/></tag>
-	    </tags>
-            <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="tags"/>
-            </lu>
-	    <b pos="1"/>
-	    <lu>
-	      <clip pos="2" side="tl" part="whole"/>
-	    </lu>
-	    <b pos="2"/>
-	    <lu>
-              <clip pos="3" side="tl" part="lem"/>
-              <clip pos="3" side="tl" part="tags"/>
-	    </lu>
-	  </chunk>
-	</out>
-	<let>
-	  <var n="caseFirstWord"/>
-	  <lit v="aa"/>
-	</let>
-      </action>
-    </rule>
-
-
 <rule comment="REGLA: ART PROPRA_NOMO/AKRONIMO (les Pyrénées - Pireneoj; forigo de la artikolo)">
       <pattern>
 	<pattern-item n="def"/>
@@ -3108,6 +2955,163 @@
       </action>
     </rule>
 
+
+
+<!-- FINO PROPRAJ NOMOJ -->
+
+
+<rule comment="REGLA: NOM (per a col·locar la cua en les multiparaules amb g (EO)">
+      <pattern>
+	<pattern-item n="nom"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nombro1">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="1"/>
+	</call-macro>
+	<out>
+	  <chunk name="nom" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="1" side="sl" part="gen"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><var n="case"/></tag>
+	    </tags>
+	    <lu>   <!--<clip pos="1" side="tl" part="whole"/> Per a compostos: -->
+	      <clip pos="1" side="tl" part="lemh"/>
+	      <clip pos="1" side="tl" part="a_nom"/>
+	      <clip pos="1" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="1" side="tl" part="lemq"/>
+	    </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+<rule comment="REGLA: NOMda DE (millon de -> miliono da)">
+      <pattern>
+	<pattern-item n="nom_da"/>
+	<pattern-item n="de"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nombro1">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="1"/>
+	</call-macro>
+	<out>
+	  <chunk name="nom" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="1" side="sl" part="gen"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><var n="case"/></tag>
+	    </tags>
+	    <lu>   <!--<clip pos="1" side="tl" part="whole"/> Per a compostos: -->
+	      <clip pos="1" side="tl" part="lemh"/>
+	      <clip pos="1" side="tl" part="a_nom"/>
+	      <clip pos="1" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="1" side="tl" part="lemq"/>
+	    </lu>
+	  </chunk>
+ 	  <b pos="1"/>
+	  <chunk name="pr">
+	    <tags>
+	      <tag><lit-tag v="PREP"/></tag>
+	    </tags>
+	    <lu>
+	      <lit v="da"/>
+	      <lit-tag v="pr"/>
+	    </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+<rule comment="REGLA: NUM NOMda DE (15 millons de -> 15 milionoj da)">
+      <pattern>
+	<pattern-item n="num"/>
+	<pattern-item n="nom_da"/>
+	<pattern-item n="de"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nombro1">
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="2"/>
+	</call-macro>
+	<out>
+	  <chunk name="num_nom" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="2" side="sl" part="gen"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><var n="case"/></tag>
+	    </tags>
+	    <lu>
+	      <clip pos="1" side="tl" part="lem"/>
+	      <clip pos="1" side="tl" part="a_num"/>
+	      <clip pos="1" side="tl" part="nbr"/>
+              <lit-tag v="4"/>
+	    </lu>
+	    <b pos="1"/>
+	    <lu>
+	      <clip pos="2" side="tl" part="lemh"/>
+	      <clip pos="2" side="tl" part="a_nom"/>
+	      <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
+	  </chunk>
+ 	  <b pos="2"/>
+	  <chunk name="pr">
+	    <tags>
+	      <tag><lit-tag v="PREP"/></tag>
+	    </tags>
+	    <lu>
+	      <lit v="da"/>
+	      <lit-tag v="pr"/>
+	    </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
 
 <rule comment="REGLA: À LOKNOMO (a Barcelona - en Barcelono; ŝanĝo de prepozicio)">
       <pattern>
