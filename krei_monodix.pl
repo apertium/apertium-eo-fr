@@ -112,6 +112,8 @@ sub skribi {
 	} elsif ($paradigmo eq "np><al") {
 		if ($lemo =~ /o$/o) {
 			printf "<e lm=\"%s\">            <i>%s</i><par n=\"%s\"/></e>\n", $lemo, $`, 'Vikipedi/o__np';
+		} elsif ($lemo =~ /oj$/o) {
+			printf "<e lm=\"%s\">            <i>%s</i><par n=\"%s\"/></e>\n", $lemo, $`, 'Olimipik/oj__np';
 		} else {
 			printf "<e lm=\"%s\">            <i>%s</i><par n=\"%s\"/></e>\n", $lemo, $lemo, 'Wikipedia__np';
 		}
