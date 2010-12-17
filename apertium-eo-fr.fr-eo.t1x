@@ -85,6 +85,10 @@
       <cat-item lemma="le" tags="prn.*"/>
     </def-cat>
 
+    <def-cat n="toutce">
+      <cat-item lemma="tout ce" tags="det.*"/>
+    </def-cat>
+
     <def-cat n="ce-erara">
       <cat-item lemma="ce" tags="det.*"/>
       <cat-item lemma="ce" tags="prn.*"/>
@@ -713,6 +717,7 @@
       <cat-item lemma="que" tags="cnjcoo"/>
       <cat-item lemma="que" tags="cnjsub"/>
       <cat-item lemma="que" tags="cnjadv"/>
+      <cat-item lemma="que" tags="prn.*"/>
     </def-cat>
 
     <def-cat n="plus">
@@ -2091,7 +2096,7 @@
     </rule>
 
 
-<rule comment="REGLA: NUM-NUM MES (2-3 juillet -> 2an-3an de julio)">
+<rule comment="REGLA: NUM-NUM MOIS (2-3 juillet -> 2an-3an de julio)">
       <pattern>
         <pattern-item n="num_dato"/>
 	<pattern-item n="guio"/>
@@ -2143,7 +2148,7 @@
       </action>
     </rule>
 
-<rule comment="REGLA: NUM-NUM MES ANY (2-3 juillet 1930 -> 2an-3an de julio 1930)">
+<rule comment="REGLA: NUM-NUM MOIS ANNÉE (2-3 juillet 1930 -> 2an-3an de julio 1930)">
       <pattern>
         <pattern-item n="num_dato"/>
 	<pattern-item n="guio"/>
@@ -2203,7 +2208,7 @@
       </action>
     </rule>
 
-<rule comment="REGLA: NUM MES (2 juillet -> 2an de julio)">
+<rule comment="REGLA: NUM MOIS (2 juillet -> 2an de julio)">
       <pattern>
         <pattern-item n="num_dato"/>
         <pattern-item n="monato"/>
@@ -2242,7 +2247,7 @@
       </action>
     </rule>
 
-<rule comment="REGLA: NUM MES ANY (2 juillet 1930 -> 2an de julio 1930)">
+<rule comment="REGLA: NUM MOIS ANNÉE (2 juillet 1930 -> 2an de julio 1930)">
       <pattern>
         <pattern-item n="num_dato"/>
         <pattern-item n="monato"/>
@@ -2289,7 +2294,7 @@
       </action>
     </rule>
 
-<rule comment="REGLA: DET NUM MES (le 2 juillet -> la 2a de julio)">
+<rule comment="REGLA: DET NUM MOIS (le 2 juillet -> la 2a de julio)">
       <pattern>
 	<pattern-item n="le-erara"/>
         <pattern-item n="num_dato"/>
@@ -2336,7 +2341,7 @@
       </action>
     </rule>
 
-<rule comment="REGLA: DET NUM MES ANY (le 2 juillet 1930 -> la 2a de julio 1930)">
+<rule comment="REGLA: DET NUM MOIS ANNÉE (le 2 juillet 1930 -> la 2a de julio 1930)">
       <pattern>
 	<pattern-item n="le-erara"/>
         <pattern-item n="num_dato"/>
@@ -2391,7 +2396,7 @@
       </action>
     </rule>
 
-<rule comment="REGLA: PREP DET NUM MES (depuis le 2 juillet -> de la 2a de julio)">
+<rule comment="REGLA: PREP DET NUM MOIS (depuis le 2 juillet -> de la 2a de julio)">
       <pattern>
         <pattern-item n="prep"/>
 	<pattern-item n="le-erara"/>
@@ -2448,7 +2453,7 @@
       </action>
     </rule>
 
-<rule comment="REGLA: PREP DET NUM MES ANY (depuis le 2 juillet 1930 -> de la 2a de julio 1930)">
+<rule comment="REGLA: PREP DET NUM MOIS ANNÉE (depuis le 2 juillet 1930 -> de la 2a de julio 1930)">
       <pattern>
         <pattern-item n="prep"/>
 	<pattern-item n="le-erara"/>
@@ -2539,6 +2544,7 @@
 	      <tag><clip pos="1" side="sl" part="gen"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
@@ -2578,6 +2584,7 @@
 	      <tag><clip pos="1" side="sl" part="gen"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
@@ -2667,6 +2674,7 @@
 	      <tag><clip pos="1" side="sl" part="gen"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
@@ -2761,6 +2769,7 @@
 	      <tag><clip pos="1" side="sl" part="gen"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
@@ -2925,6 +2934,12 @@
 	<pattern-item n="np_acr"/>
       </pattern>
       <action>
+	<call-macro n="genro2">
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_genro">
+	</call-macro>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
@@ -2936,13 +2951,14 @@
 	  <chunk name="nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="2" side="sl" part="gen"/></tag>
+	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><lit-tag v="nom"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_nom"/>
+	      <clip pos="2" side="tl" part="gen"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	    </lu>
@@ -2983,6 +2999,7 @@
 	      <tag><clip pos="1" side="sl" part="gen"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   <!--<clip pos="1" side="tl" part="whole"/> Per a compostos: -->
 	      <clip pos="1" side="tl" part="lemh"/>
@@ -3025,6 +3042,7 @@
 	      <tag><clip pos="1" side="sl" part="gen"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   <!--<clip pos="1" side="tl" part="whole"/> Per a compostos: -->
 	      <clip pos="1" side="tl" part="lemh"/>
@@ -3078,6 +3096,7 @@
 	      <tag><clip pos="2" side="sl" part="gen"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -3112,6 +3131,132 @@
 	</let>
       </action>
     </rule>
+
+<rule comment="REGLA: DET NOMda DE (une dizaine de -> deko da)">
+      <pattern>
+	<pattern-item n="det"/>
+	<pattern-item n="nom_da"/>
+	<pattern-item n="de"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	 <call-macro n="nom_cas"> <!-- assigna cas nominatiu per defecte -->
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nombro2">
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="genro2">
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_genro">
+	</call-macro>
+	<call-macro n="genro_tl">
+	  <with-param pos="2"/>
+	</call-macro>
+
+   <choose>
+     <when>   <!-- article indefinit s'elimina -->
+      <test>
+       <or>
+       <equal caseless="yes">
+        <clip pos="1" side="sl" part="lem"/>
+        <lit v="un"/>
+        </equal>
+       <equal caseless="yes">
+        <clip pos="1" side="sl" part="lem"/>
+        <lit v="XXcert"/>
+        </equal>
+       <equal caseless="yes">
+        <clip pos="1" side="sl" part="lem"/>
+        <lit v="XXalgun"/>
+        </equal>
+       </or>
+      </test>
+        <out>
+          <chunk name="nom" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><clip pos="2" side="sl" part="gen"/></tag>
+              <tag><var n="nombre"/></tag>
+              <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lemh"/>
+              <clip pos="2" side="tl" part="a_nom"/>
+              <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
+              <lit-tag v="4"/>
+              <clip pos="2" side="tl" part="lemq"/>
+            </lu>
+          </chunk>
+ 	  <b pos="2"/>
+	  <chunk name="pr">
+	    <tags>
+	      <tag><lit-tag v="PREP"/></tag>
+	    </tags>
+	    <lu>
+	      <lit v="da"/>
+	      <lit-tag v="pr"/>
+	    </lu>
+	  </chunk>
+        </out>
+    </when>
+
+<otherwise>           <!-- altres (amb cas)-->
+
+	<out>
+	  <chunk name="det_nom3" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="2" side="sl" part="gen"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
+	    </tags>
+	    <lu>
+	      <clip pos="1" side="tl" part="lem"/>
+	      <clip pos="1" side="tl" part="a_det"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	    </lu>
+	    <b pos="1"/>
+	    <lu>
+	      <clip pos="2" side="tl" part="lemh"/>
+	      <clip pos="2" side="tl" part="a_nom"/>
+              <clip pos="2" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
+	  </chunk>
+ 	  <b pos="2"/>
+	  <chunk name="pr">
+	    <tags>
+	      <tag><lit-tag v="PREP"/></tag>
+	    </tags>
+	    <lu>
+	      <lit v="da"/>
+	      <lit-tag v="pr"/>
+	    </lu>
+	  </chunk>
+	</out>	
+     </otherwise>
+      </choose>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
 
 <rule comment="REGLA: À LOKNOMO (a Barcelona - en Barcelono; ŝanĝo de prepozicio)">
       <pattern>
@@ -3715,6 +3860,7 @@
 	      <tag><clip pos="2" side="sl" part="gen"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -3811,6 +3957,7 @@
 	      <tag><clip pos="3" side="sl" part="gen"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -3894,6 +4041,7 @@
               <tag><clip pos="2" side="sl" part="gen"/></tag>
               <tag><var n="nombre"/></tag>
               <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
             </tags>
             <lu>
               <clip pos="2" side="tl" part="lemh"/>
@@ -3916,6 +4064,7 @@
 	      <tag><clip pos="2" side="sl" part="gen"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -3978,6 +4127,7 @@
               <tag><clip pos="1" side="sl" part="gen"/></tag>
               <tag><var n="nombre"/></tag>
               <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
             </tags>
             <lu>
               <lit v="ĉirkaŭ"/>
@@ -4001,6 +4151,7 @@
 	      <tag><clip pos="1" side="sl" part="gen"/></tag>
               <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -4078,6 +4229,7 @@
               <tag><clip pos="3" side="sl" part="gen"/></tag>
               <tag><var n="nombre"/></tag>
               <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
             </tags>
             <lu>
               <lit v="ĉirkaŭ"/>
@@ -4110,6 +4262,7 @@
 	      <tag><clip pos="3" side="sl" part="gen"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -4192,6 +4345,7 @@
               <tag><clip pos="3" side="sl" part="gen"/></tag>
               <tag><var n="nombre"/></tag>
               <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
             </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -4219,6 +4373,7 @@
 	      <tag><clip pos="3" side="sl" part="gen"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -4288,6 +4443,7 @@
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
@@ -4361,6 +4517,7 @@
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
@@ -4389,6 +4546,7 @@
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -4478,6 +4636,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
@@ -4506,6 +4665,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -4596,6 +4756,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
@@ -4637,6 +4798,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -4740,6 +4902,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
@@ -4780,6 +4943,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -4874,6 +5038,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
@@ -4915,6 +5080,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -5021,6 +5187,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
@@ -5069,6 +5236,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -5181,6 +5349,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
@@ -5233,6 +5402,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -5345,6 +5515,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
@@ -5383,6 +5554,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -5484,6 +5656,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
@@ -5530,6 +5703,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -5638,6 +5812,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
@@ -5688,6 +5863,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -5797,6 +5973,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
               <tag><var n="nombre"/></tag>
               <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
             </tags>
             <lu>
               <lit v="ĉirkaŭ"/>
@@ -5837,6 +6014,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -5931,6 +6109,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
               <tag><var n="nombre"/></tag>
               <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
             </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -5966,6 +6145,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -5991,6 +6171,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
@@ -6075,6 +6256,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="3" side="tl" part="whole"/>
@@ -6107,6 +6289,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -6198,6 +6381,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
               <tag><var n="nombre"/></tag>
               <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
             </tags>
             <lu>
               <lit v="ĉirkaŭ"/>
@@ -6242,6 +6426,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -6342,6 +6527,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="3" side="tl" part="whole"/>
@@ -6386,6 +6572,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -6489,6 +6676,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	          <tag><var n="genere"/></tag>
 		  <tag><var n="nombre"/></tag>
 		  <tag><var n="case"/></tag>
+	          <tag><var n="changecase"/></tag>
 		</tags>
 		<lu>
 		  <clip pos="3" side="tl" part="lemh"/>
@@ -6529,6 +6717,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	          <tag><var n="genere"/></tag>
 		  <tag><var n="nombre"/></tag>
 		  <tag><var n="case"/></tag>
+	          <tag><var n="changecase"/></tag>
 		</tags>
 		<lu>
 		  <clip pos="1" side="tl" part="lem"/>
@@ -6630,6 +6819,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	          <tag><var n="genere"/></tag>
 		  <tag><var n="nombre"/></tag>
 		  <tag><var n="case"/></tag>
+	          <tag><var n="changecase"/></tag>
 		</tags>
             <lu>
               <lit v="ĉirkaŭ"/>
@@ -6682,6 +6872,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	          <tag><var n="genere"/></tag>
 		  <tag><var n="nombre"/></tag>
 		  <tag><var n="case"/></tag>
+	          <tag><var n="changecase"/></tag>
 		</tags>
 		<lu>
 		  <clip pos="1" side="tl" part="lem"/>
@@ -6774,6 +6965,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
@@ -6850,6 +7042,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
@@ -6924,6 +7117,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
@@ -7005,6 +7199,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
@@ -7091,6 +7286,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
@@ -7168,6 +7364,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
@@ -7243,6 +7440,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
@@ -7317,6 +7515,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
@@ -7400,6 +7599,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
@@ -7490,6 +7690,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -7579,6 +7780,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
               <lit v="kiel"/>
@@ -7664,6 +7866,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
@@ -7700,6 +7903,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -7783,6 +7987,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -7872,6 +8077,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
@@ -7908,6 +8114,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -7991,6 +8198,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
@@ -8062,6 +8270,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
@@ -8132,6 +8341,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
@@ -8206,6 +8416,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
@@ -8287,6 +8498,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="4" side="tl" part="lemh"/>
@@ -8383,6 +8595,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="5" side="tl" part="lemh"/>
@@ -8427,6 +8640,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -8523,6 +8737,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
@@ -8628,6 +8843,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
@@ -8679,6 +8895,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -8786,6 +9003,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
@@ -8906,6 +9124,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
@@ -8968,6 +9187,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -9092,6 +9312,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
@@ -9136,6 +9357,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -9241,6 +9463,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
@@ -9289,6 +9512,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -9370,6 +9594,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>   <!--<clip pos="1" side="tl" part="whole"/> Per a compostos: -->
 	      <clip pos="1" side="tl" part="lemh"/>
@@ -9535,6 +9760,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
               <tag><var n="nombre"/></tag>
               <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
             </tags>
             <lu>
               <clip pos="2" side="tl" part="lemh"/>
@@ -9557,6 +9783,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -9654,6 +9881,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
               <tag><var n="nombre"/></tag>
               <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
             </tags>
             <lu>
               <lit v="ĉirkaŭ"/>
@@ -9686,6 +9914,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -9787,6 +10016,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
               <tag><var n="nombre"/></tag>
               <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
             </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -9814,6 +10044,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -9913,6 +10144,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
@@ -9941,6 +10173,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -10044,6 +10277,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
               <tag><var n="nombre"/></tag>
               <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
             </tags>
             <lu>
               <lit v="ĉirkaŭ"/>
@@ -10084,6 +10318,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -10194,6 +10429,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
               <tag><var n="nombre"/></tag>
               <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
             </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -10229,6 +10465,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -10254,6 +10491,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
@@ -10359,6 +10597,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="3" side="tl" part="whole"/>
@@ -10391,6 +10630,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -10499,6 +10739,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
               <tag><var n="nombre"/></tag>
               <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
             </tags>
             <lu>
               <lit v="ĉirkaŭ"/>
@@ -10543,6 +10784,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="genere"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -10658,6 +10900,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	          <tag><var n="genere"/></tag>
 		  <tag><var n="nombre"/></tag>
 		  <tag><var n="case"/></tag>
+	          <tag><var n="changecase"/></tag>
 		</tags>
 		<lu>
 		  <clip pos="3" side="tl" part="lemh"/>
@@ -10698,6 +10941,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	          <tag><var n="genere"/></tag>
 		  <tag><var n="nombre"/></tag>
 		  <tag><var n="case"/></tag>
+	          <tag><var n="changecase"/></tag>
 		</tags>
 		<lu>
 		  <clip pos="1" side="tl" part="lem"/>
@@ -10816,6 +11060,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	          <tag><var n="genere"/></tag>
 		  <tag><var n="nombre"/></tag>
 		  <tag><var n="case"/></tag>
+	          <tag><var n="changecase"/></tag>
 		</tags>
             <lu>
               <lit v="ĉirkaŭ"/>
@@ -10868,6 +11113,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	          <tag><var n="genere"/></tag>
 		  <tag><var n="nombre"/></tag>
 		  <tag><var n="case"/></tag>
+	          <tag><var n="changecase"/></tag>
 		</tags>
 		<lu>
 		  <clip pos="1" side="tl" part="lem"/>
@@ -10978,6 +11224,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="sl" part="gen"/></tag>
 	      <tag><clip pos="1" side="sl" part="nbr"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
@@ -10998,6 +11245,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="sl" part="gen"/></tag>
 	      <tag><clip pos="1" side="sl" part="nbr"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
@@ -11038,6 +11286,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <tag><clip pos="2" side="sl" part="gen"/></tag>
 		  <tag><clip pos="2" side="sl" part="nbr"/></tag>
 	          <tag><var n="case"/></tag>
+	          <tag><var n="changecase"/></tag>
 		</tags>
 		<lu>
 		  <clip pos="1" side="tl" part="whole"/>
@@ -11094,6 +11343,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="2" side="sl" part="gen"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
@@ -11113,6 +11363,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="2" side="sl" part="gen"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -11140,7 +11391,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
-<rule comment="REGLA: MES ADJECTIU QUE ('més/menys gran que - ') (EO)">
+<rule comment="REGLA: PLUS ADJECTIU QUE ('més/menys gran que - ') (EO)">
       <pattern>
 	<pattern-item n="plus_moins"/>
 	<pattern-item n="adj"/>
@@ -11175,7 +11426,6 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
      </otherwise>
    </choose>
 
-
 	    <out>
 	      <chunk name="adj_comparatiu" case="caseFirstWord">
 		<tags>
@@ -11183,6 +11433,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <tag><clip pos="2" side="sl" part="gen"/></tag>
 		  <tag><clip pos="2" side="sl" part="nbr"/></tag>
 	          <tag><var n="case"/></tag>
+	          <tag><var n="changecase"/></tag>
 		</tags>
                 <lu>
 	          <clip pos="1" side="tl" part="lem"/>
@@ -11210,7 +11461,145 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       </action>
     </rule>
 
-<rule comment="REGLA: TAN ADJECTIU QUE (tan gran que -> tiel granda ke) (EO)">
+<rule comment="REGLA: PLUS ADV QUE ('més/menys gran que - ') (EO)">
+      <pattern>
+	<pattern-item n="plus_moins"/>
+	<pattern-item n="adv"/>
+	<pattern-item n="cnjcomp"/>
+      </pattern>
+      <action>          	
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+
+   <choose>
+     <when>
+      <test>
+       <equal caseless="yes">
+        <clip pos="1" side="sl" part="lem"/>
+        <lit v="plus"/>
+        </equal>
+      </test>
+        <let>
+          <clip pos="1" side="tl" part="lem"/>
+          <lit v="pli"/>
+        </let>
+     </when>
+     <otherwise>
+        <let>
+          <clip pos="1" side="tl" part="lem"/>
+          <lit v="malpli"/>
+        </let>
+     </otherwise>
+   </choose>
+
+	    <out>
+	      <chunk name="adv" case="caseFirstWord">
+		<tags>
+		  <tag><lit-tag v="adv"/></tag>
+		</tags>
+                <lu>
+	          <clip pos="1" side="tl" part="lem"/>
+                  <lit-tag v="adv"/>
+                </lu>
+		<b pos="1"/>
+		<lu>
+                  <clip pos="2" side="tl" part="lemh"/>
+                  <clip pos="2" side="tl" part="a_adv"/>
+                  <clip pos="2" side="tl" part="lemq"/>
+		</lu>
+		<b pos="2"/>
+		<lu>
+              	   <lit v="ol"/>
+		   <lit-tag v="cnjcoo"/>
+		</lu>
+	      </chunk>
+	    </out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+<rule comment="REGLA: PLUS DE NOM QUE ('plus/moins de liberté que - pli/malpli da libereco ol')">
+      <pattern>
+	<pattern-item n="plus_moins"/>
+	<pattern-item n="de"/>
+	<pattern-item n="nom"/>
+	<pattern-item n="cnjcoopercorregir"/>
+      </pattern>
+      <action>          	
+	<call-macro n="nom_cas">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+
+   <choose>
+     <when>
+      <test>
+       <equal caseless="yes">
+        <clip pos="1" side="sl" part="lem"/>
+        <lit v="plus"/>
+        </equal>
+      </test>
+        <let>
+          <clip pos="1" side="tl" part="lem"/>
+          <lit v="pli"/>
+        </let>
+     </when>
+     <otherwise>
+        <let>
+          <clip pos="1" side="tl" part="lem"/>
+          <lit v="malpli"/>
+        </let>
+     </otherwise>
+   </choose>
+
+	    <out>
+	      <chunk name="nom_comparatiu" case="caseFirstWord">
+		<tags>
+	           <tag><lit-tag v="SN"/></tag>
+	           <tag><clip pos="2" side="sl" part="gen"/></tag>
+	           <tag><var n="nombre"/></tag>
+	           <tag><var n="case"/></tag>
+	           <tag><var n="changecase"/></tag>
+		</tags>
+		<lu>   
+		  <clip pos="1" side="tl" part="whole"/> 
+		</lu> 
+		<b pos="1"/>
+                <lu>
+                  <lit v="da"/>
+                  <lit-tag v="pr"/>
+                </lu>
+		<b pos="2"/>
+		<lu>   
+	          <clip pos="3" side="tl" part="lemh"/> 
+	          <clip pos="3" side="tl" part="a_nom"/>
+                  <clip pos="3" side="tl" part="gen"/>
+	          <clip pos="3" side="tl" part="nbr"/>
+	          <lit-tag v="nom"/>
+	          <clip pos="3" side="tl" part="lemq"/>
+		</lu>
+		<b pos="3"/>
+                <lu>
+                  <lit v="ol"/>
+                  <lit-tag v="cnjcoo"/>
+		</lu>   
+	      </chunk>
+	    </out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule> 
+
+
+<rule comment="REGLA: SI ADJECTIU QUE (si grand que -> tiel granda ke) (EO)">
       <pattern>
 	<pattern-item n="si_cmp"/>
 	<pattern-item n="adj"/>
@@ -11230,6 +11619,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		  <tag><clip pos="2" side="sl" part="gen"/></tag>
 		  <tag><clip pos="2" side="sl" part="nbr"/></tag>
 	          <tag><var n="case"/></tag>
+	          <tag><var n="changecase"/></tag>
 		</tags>
 		<lu>
 		  <clip pos="1" side="tl" part="whole"/>
@@ -11300,6 +11690,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="sl" part="gen"/></tag>
 	      <tag><clip pos="1" side="sl" part="nbr"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -13557,6 +13948,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="sl" part="gen"/></tag>
 	      <tag><clip pos="1" side="sl" part="nbr"/></tag>
               <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
@@ -13601,6 +13993,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="sl" part="gen"/></tag>
 	      <tag><clip pos="1" side="sl" part="nbr"/></tag>
               <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
@@ -13610,6 +14003,104 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
             <b pos="1"/> <!-- ŝanĝo al DE-->
+            <lu>
+              <lit v="de"/>
+              <lit-tag v="pr"/>
+            </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: ADV PARTICIPI + PAR -> très aimé par -> tre amata de">
+      <pattern>
+	<pattern-item n="adv_preadv"/>
+	<pattern-item n="pp"/>
+	<pattern-item n="par"/>
+      </pattern>
+      <action>       	
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+        <call-macro n="nom_cas">
+          <with-param pos="2"/>
+        </call-macro>
+	<out>
+	  <chunk name="pp" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SA"/></tag>
+	      <tag><clip pos="2" side="sl" part="gen"/></tag>
+	      <tag><clip pos="2" side="sl" part="nbr"/></tag>
+              <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
+	    </tags>
+		<lu>
+		  <clip pos="1" side="tl" part="whole"/>
+		</lu>
+		<b pos="1"/>
+	    <lu>
+	      <clip pos="2" side="tl" part="lemh"/>
+	      <lit-tag v="vblex.pp"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
+            <b pos="2"/> <!-- ŝanĝo al DE-->
+            <lu>
+              <lit v="de"/>
+              <lit-tag v="pr"/>
+            </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: ADV PARTICIPI + PAR + DE + LE -> très aimé par des -> tre amata de">
+      <pattern>
+	<pattern-item n="adv_preadv"/>
+	<pattern-item n="pp"/>
+	<pattern-item n="par"/>
+	<pattern-item n="de"/>
+	<pattern-item n="le_det"/>
+      </pattern>
+      <action>       	
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+        <call-macro n="nom_cas">
+          <with-param pos="2"/>
+        </call-macro>
+	<out>
+	  <chunk name="pp" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SA"/></tag>
+	      <tag><clip pos="2" side="sl" part="gen"/></tag>
+	      <tag><clip pos="2" side="sl" part="nbr"/></tag>
+              <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
+	    </tags>
+		<lu>
+		  <clip pos="1" side="tl" part="whole"/>
+		</lu>
+		<b pos="1"/>
+	    <lu>
+	      <clip pos="2" side="tl" part="lemh"/>
+	      <lit-tag v="vblex.pp"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
+            <b pos="2"/> <!-- ŝanĝo al DE-->
             <lu>
               <lit v="de"/>
               <lit-tag v="pr"/>
@@ -13647,6 +14138,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="sl" part="gen"/></tag>
 	      <tag><clip pos="1" side="sl" part="nbr"/></tag>
               <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 
 	    </tags>
 	    <lu>
@@ -13948,6 +14440,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -14031,6 +14524,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -14081,6 +14575,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -14246,6 +14741,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -14317,6 +14813,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
@@ -14419,6 +14916,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -14554,6 +15052,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -14604,6 +15103,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -15855,6 +16355,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
@@ -16016,6 +16517,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
@@ -16077,6 +16579,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
@@ -16182,6 +16685,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
@@ -16248,6 +16752,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
@@ -16347,6 +16852,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
@@ -16408,6 +16914,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
@@ -16513,6 +17020,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
@@ -16579,6 +17087,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
@@ -16871,6 +17380,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
@@ -17128,6 +17638,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
@@ -17222,6 +17733,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
@@ -17283,6 +17795,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
@@ -18280,6 +18793,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
@@ -18352,6 +18866,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="2" side="tl" part="lem"/>
@@ -18395,6 +18910,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="2" side="tl" part="lem"/>
@@ -18500,6 +19016,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="2" side="tl" part="lem"/>
@@ -18542,6 +19059,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="2" side="tl" part="lem"/>
@@ -18608,6 +19126,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="2" side="tl" part="lem"/>
@@ -18657,6 +19176,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="2" side="tl" part="lem"/>
@@ -18773,6 +19293,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="2" side="tl" part="lem"/>
@@ -18815,6 +19336,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="2" side="tl" part="lem"/>
@@ -18881,6 +19403,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="2" side="tl" part="lem"/>
@@ -18930,6 +19453,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="2" side="tl" part="lem"/>
@@ -19035,6 +19559,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="3" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="3" side="tl" part="lem"/>
@@ -19089,6 +19614,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="3" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="3" side="tl" part="lem"/>
@@ -19207,6 +19733,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="3" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="3" side="tl" part="lem"/>
@@ -19260,6 +19787,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="3" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="3" side="tl" part="lem"/>
@@ -19337,6 +19865,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="3" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="3" side="tl" part="lem"/>
@@ -19397,6 +19926,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="3" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="3" side="tl" part="lem"/>
@@ -19526,6 +20056,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="3" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="3" side="tl" part="lem"/>
@@ -19579,6 +20110,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="3" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="3" side="tl" part="lem"/>
@@ -19656,6 +20188,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="3" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="3" side="tl" part="lem"/>
@@ -19716,6 +20249,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	              <tag><clip pos="3" side="tl" part="tipus_prn"/></tag>
 	              <tag><var n="nombre"/></tag>
 	              <tag><var n="case"/></tag>
+	              <tag><var n="changecase"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="3" side="tl" part="lem"/>
@@ -21277,6 +21811,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
               <tag><var n="nombre"/></tag>
               <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -21319,6 +21854,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -21359,6 +21895,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lem"/>
@@ -21410,6 +21947,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
               <tag><lit-tag v="rel"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
@@ -21461,6 +21999,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
@@ -21668,7 +22207,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<out>
 	  <chunk name="prn_nosubj" case="caseFirstWord">
 	    <tags>
-	      <tag><lit-tag v="SN.tn.sg.nom"/></tag>
+	      <tag><lit-tag v="SN.tn.sg.nom.nom"/></tag>
 	    </tags>
 	    <lu>
               <lit v="tio"/>
@@ -21678,7 +22217,44 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	  <b pos="1"/>
 	  <chunk name="prn">
 	    <tags>
-	      <tag><lit-tag v="SNrelatiu.rel.sg.nom"/></tag>
+	      <tag><lit-tag v="SNrelatiu.rel.sg.nom.nom"/></tag>
+	    </tags>
+	    <lu>
+              <lit v="kio"/>
+	      <lit-tag v="prn.rel.3.4"/>
+	    </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: TOUT CE QUE: tout ce que -> ĉio kio, tout ce qui -> ĉio kio ">
+      <pattern>
+	<pattern-item n="toutce"/>
+	<pattern-item n="quequi-erara"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<out>
+	  <chunk name="prn_nosubj" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN.tn.sg.nom.nom"/></tag>
+	    </tags>
+	    <lu>
+              <lit v="ĉio"/>
+	      <lit-tag v="prn.tn.3.4"/>
+	    </lu>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk name="prn">
+	    <tags>
+	      <tag><lit-tag v="SNrelatiu.rel.sg.nom.nom"/></tag>
 	    </tags>
 	    <lu>
               <lit v="kio"/>
