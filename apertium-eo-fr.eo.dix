@@ -620,6 +620,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e>       <p><l></l>          <r><s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
   <e>       <p><l></l>          <r><s n="np"/><s n="al"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l></l>          <r><s n="np"/><s n="al"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e>       <p><l></l>          <r><s n="np"/><s n="al"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e>       <p><l></l>          <r><s n="np"/><s n="al"/><s n="sp"/><s n="acc"/></r></p></e>
 </pardef>
 
 
@@ -2244,6 +2246,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Amelia">          <i>Amelia</i><par n="Marie__np"/></e>
 <e lm="Ameliane" a="sans accents"><i>Ameliane</i><par n="Marie__np"/></e>
 <e lm="Amelie">          <i>Amelie</i><par n="Marie__np"/></e>
+<e lm="Amélie">          <i>Amélie</i><par n="Marie__np"/></e>
 <e lm="Amelina">         <i>Amelina</i><par n="Marie__np"/></e>
 <e lm="Amelio">          <i>Amelio</i><par n="Mark__np"/></e>
 <e lm="Amelya" a="sans accents"><i>Amelya</i><par n="Marie__np"/></e>
@@ -39140,7 +39143,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="ŝafido">          <i>ŝafid</i><par n="o__n"/></e>
 <e lm="ŝafto">           <i>ŝaft</i><par n="o__n"/></e>
 <e lm="ŝajno">           <i>ŝajn</i><par n="o__n"/></e>
-<e lm="ŝajni">           <i>ŝajn</i><par n="i__vblex"/></e>
+<e lm="ŝajni">           <i>ŝajn</i><par n="ser__vb"/></e>
 <e lm="ŝajne">           <i>ŝajn</i><par n="e__adv"/></e>
 <e lm="ŝajne">           <i>ŝajne</i><par n="after__cnjadv"/></e>
 <e lm="ŝajnigi">         <i>ŝajnig</i><par n="i__vblex"/></e>
@@ -39540,10 +39543,14 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
     <!-- ******************************
           group np_symbol
       ****************************** -->
+<e lm="Nordo-Kaleza Markolo"><p><l>Nordo-Kaleza<b/>Markolo</l><r>Nordo-Kaleza<b/>Markolo<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Nordo-Kaleza Markolo"><p><l>Nordon-Kalezan<b/>Markolon</l><r>Nordo-Kaleza<b/>Markolo<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="Franca Polinezio"><p><l>Franca<b/>Polinezio</l><r>Franca<b/>Polinezio<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="Franca Polinezio"><p><l>Franca<b/>Polinezio</l><r>Franca<b/>Polinezio<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="Unuiĝintaj Nacioj"><p><l>Unuiĝintaj<b/>Nacioj</l><r>Unuiĝintaj<b/>Nacioj<s n="np"/><s n="al"/><s n="pl"/><s n="nom"/></r></p></e>
 <e lm="Unuiĝintaj Nacioj"><p><l>Unuiĝintajn<b/>Naciojn</l><r>Unuiĝintaj<b/>Nacioj<s n="np"/><s n="al"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="Unuiĝintaj Provincoj"><p><l>Unuiĝintaj<b/>Provincoj</l><r>Unuiĝintaj<b/>Provincoj<s n="np"/><s n="al"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="Unuiĝintaj Provincoj"><p><l>Unuiĝintajn<b/>Provincojn</l><r>Unuiĝintaj<b/>Provincoj<s n="np"/><s n="al"/><s n="pl"/><s n="acc"/></r></p></e>
 <e lm="Valiso kaj Futuno"><p><l>Valiso<b/>kaj<b/>Futuno</l><r>Valiso<b/>kaj<b/>Futuno<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="Valiso kaj Futuno"><p><l>Valison<b/>kaj<b/>Futunon</l><r>Unuiĝintaj<b/>kaj<b/>Futuno<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
     <!-- ******************************

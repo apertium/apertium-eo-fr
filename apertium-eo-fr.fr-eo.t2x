@@ -1621,13 +1621,281 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
       </action>
 </rule>
 -->
-    <rule comment="REGLA: SN SV SA (- viuen feliços (BCN s'ha modificat) EO">
+    <rule comment="REGLA: SN SVser SA (- viuen feliços (BCN s'ha modificat) EO">
       <pattern>
         <pattern-item n="SN"/>
-        <pattern-item n="SV"/>
+        <pattern-item n="ser"/>
         <pattern-item n="SA"/>
       </pattern>
       <action>
+        <choose>
+          <when>
+            <test>
+              <equal caseless="yes">
+                <clip pos="2" part="lem"/>
+                <lit v="inf"/>
+              </equal>
+            </test>
+            <let>
+              <clip pos="2" part="temps"/>
+              <lit-tag v="pri"/>
+            </let>
+          </when>
+        </choose>
+        <choose>
+          <when>
+            <test>
+              <equal caseless="yes">
+                <clip pos="1" part="lem"/>
+                <lit v="prnsubj"/>
+              </equal>
+            </test>
+            <choose>
+              <when>
+                <test>
+                  <equal>
+                    <clip pos="2" part="pers"/>
+                    <lit-tag v="PD"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="2" part="pers"/>
+                  <clip pos="1" part="pers"/>
+                </let>
+              </when>
+            </choose>
+            <choose>
+              <when>
+                <test>
+                  <equal>
+                    <clip pos="2" part="nbr"/>
+                    <lit-tag v="ND"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="2" part="nbr"/>
+                  <clip pos="1" part="nbr"/>
+                </let>
+              </when>
+            </choose>
+            <call-macro n="f_bcond">
+              <with-param pos="1"/>
+            </call-macro>
+            <out>
+              <chunk><!--el pronom no l'envio, només el 2n chunk -->
+                <get-case-from pos="1">
+                  <clip pos="2" part="lem"/>
+                </get-case-from>
+                <clip pos="2" part="tags"/>
+                <clip pos="2" part="chcontent"/>
+              </chunk>
+            </out>
+          </when>
+          <otherwise><!--Quan SN no és pronom subjecte, per tant, quan és qualsevol altre SN -->
+            <choose>
+              <when>
+                <test>
+                  <equal>
+                    <clip pos="1" part="gen"/>
+                    <lit-tag v="GD"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="1" part="gen"/>
+                  <lit-tag v="m"/>
+                </let>
+              </when>
+            </choose>
+            <choose>
+              <when>
+                <test>
+                  <equal>
+                    <clip pos="1" part="nbr"/>
+                    <lit-tag v="ND"/>
+                  </equal>
+                </test>
+                <choose>
+                  <when>
+                    <test>
+                      <and>
+                        <equal>
+                          <clip pos="2" part="temps"/>
+                          <lit-tag v="pri"/>
+                        </equal>
+                        <equal>
+                          <clip pos="2" part="nbr"/>
+                          <lit-tag v="ND"/>
+                        </equal>
+                      </and>
+                    </test>
+                    <let>
+                      <clip pos="1" part="nbr"/>
+                      <lit-tag v="pl"/>
+                    </let>
+                  </when>
+                  <when>
+                    <test>
+                      <equal>
+                        <clip pos="2" part="temps"/>
+                        <lit-tag v="pri"/>
+                      </equal>
+                    </test>
+                    <let>
+                      <clip pos="1" part="nbr"/>
+                      <lit-tag v="sg"/>
+                    </let>
+                  </when>
+                  <when>
+                    <test>
+                      <and>
+                        <equal>
+                          <clip pos="2" part="temps"/>
+                          <lit-tag v="ifip"/>
+                        </equal>
+                        <equal caseless="yes">
+                          <clip pos="2" part="lem"/>
+                          <lit v="be"/>
+                        </equal>
+                        <equal>
+                          <clip pos="2" part="nbr"/>
+                          <lit-tag v="ND"/>
+                        </equal>
+                      </and>
+                    </test>
+                    <let>
+                      <clip pos="1" part="nbr"/>
+                      <lit-tag v="pl"/>
+                    </let>
+                  </when>
+                  <otherwise>
+                    <let>
+                      <clip pos="1" part="nbr"/>
+                      <lit-tag v="sg"/>
+                    </let>
+                  </otherwise>
+                </choose>
+              </when>
+            </choose>
+
+            <choose>
+              <when>
+                <test>
+                  <equal>
+                    <clip pos="2" part="pers"/>
+                    <lit-tag v="PD"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="2" part="pers"/>
+                  <lit-tag v="p3"/>
+                </let>
+              </when>
+            </choose>
+            <choose>
+              <when>
+                <test>
+                  <equal>
+                    <clip pos="2" part="nbr"/>
+                    <lit-tag v="ND"/>
+                  </equal>
+                </test>
+                <choose>
+                  <when>
+                    <test>
+                      <not>
+                        <equal>
+                          <clip pos="1" part="nbr"/>
+                          <lit-tag v="sp"/>
+                        </equal>
+                      </not>
+                    </test>
+                    <let>
+                      <clip pos="2" part="nbr"/>
+                      <clip pos="1" part="nbr"/>
+                    </let>
+                  </when>
+                  <otherwise>
+                    <let>
+                      <clip pos="2" part="nbr"/>
+                      <lit-tag v="sg"/>
+                    </let>
+                  </otherwise>
+                </choose>
+              </when>
+            </choose>
+            <out>
+              <chunk>
+                <clip pos="1" part="lem"/>
+                <clip pos="1" part="tags"/>
+                <clip pos="1" part="chcontent"/>
+              </chunk>
+              <b pos="1"/>
+              <chunk>
+                <clip pos="2" part="lem"/>
+                <clip pos="2" part="tags"/>
+                <clip pos="2" part="chcontent"/>
+              </chunk>
+            </out>
+          </otherwise>
+        </choose>
+        <choose>
+          <when>
+            <test>
+                <or>
+                  <equal>
+                    <clip pos="1" part="gen"/>
+                    <lit-tag v="m"/>
+                  </equal>
+                  <equal>
+                    <clip pos="1" part="gen"/>
+                    <lit-tag v="f"/>
+                  </equal>
+                </or>
+            </test>
+            <let>
+              <clip pos="3" part="gen"/>
+              <clip pos="1" part="gen"/>
+            </let>
+          </when>
+          <otherwise>
+            <let>
+              <clip pos="3" part="gen"/>
+              <lit-tag v="m"/>
+            </let>
+          </otherwise>
+        </choose>
+        <!--<call-macro n="nombre_SN">
+          <with-param pos="1"/>
+        </call-macro>
+        <let>
+          <clip pos="3" part="nbr"/>
+          <var n="nombre"/>
+        </let>-->
+            <let>
+              <clip pos="3" part="gen"/>
+              <lit-tag v="m"/>
+            </let>
+        <out>
+          <b pos="2"/>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: SN SVlex SA (parlent anglais - parolas anglan">
+      <pattern>
+        <pattern-item n="SN"/>
+	<pattern-item n="SVlex"/>
+        <pattern-item n="SA"/>
+      </pattern>
+      <action>
+	    <let>
+	      <clip pos="3" part="case"/>
+	      <lit-tag v="acc"/>
+	    </let>
+
         <choose>
           <when>
             <test>
