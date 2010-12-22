@@ -68,6 +68,11 @@
       <cat-item tags="adj.pos.*"/>
     </def-cat>
 
+    <def-cat n="meilleur">
+      <cat-item lemma="meilleur" tags="adj.*"/>
+      <cat-item lemma="pire" tags="adj.*"/>
+    </def-cat>
+
     <def-cat n="unknown"> <!-- unknown words -->
       <cat-item tags=""/>
     </def-cat>
@@ -1958,6 +1963,64 @@
               </when>
             </choose>
     </def-macro>
+
+<def-macro n="pli_plej" npar="1">
+   <choose>
+        <when>
+          <test>
+            <equal caseless="yes">
+              <clip pos="1" side="sl" part="lem"/>
+              <lit v="plus"/>
+            </equal>
+          </test>
+          <let>
+            <clip pos="1" side="tl" part="lem"/>
+            <lit v="plej"/>
+          </let>
+        </when>
+        <when>
+          <test>
+            <equal caseless="yes">
+              <clip pos="1" side="sl" part="lem"/>
+              <lit v="moins"/>
+            </equal>
+          </test>
+          <let>
+            <clip pos="1" side="tl" part="lem"/>
+            <lit v="malplej"/>
+          </let>
+        </when>
+   </choose>
+</def-macro>
+
+<def-macro n="pli_plej2" npar="1">
+   <choose>
+        <when>
+          <test>
+            <equal caseless="yes">
+              <clip pos="1" side="sl" part="lem"/>
+              <lit v="meilleur"/>
+            </equal>
+          </test>
+          <let>
+            <clip pos="1" side="tl" part="lem"/>
+            <lit v="plej bona"/>
+          </let>
+        </when>
+        <when>
+          <test>
+            <equal caseless="yes">
+              <clip pos="1" side="sl" part="lem"/>
+              <lit v="pire"/>
+            </equal>
+          </test>
+          <let>
+            <clip pos="1" side="tl" part="lem"/>
+            <lit v="plej malbona"/>
+          </let>
+        </when>
+   </choose>
+</def-macro>
 
   </section-def-macros>
 
@@ -3988,6 +4051,143 @@
       </action>
     </rule>
 
+<rule comment="REGLA: EL MAJOR ('el mayor/menor - la plej granda/plej malgranda') (EOes)">
+      <pattern>
+	<pattern-item n="le_det"/>
+	<pattern-item n="meilleur"/>
+      </pattern>
+      <action>          	
+	<call-macro n="nom_cas">
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="pli_plej2">
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nombro2">
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="genro2">
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_genro">
+	</call-macro>
+	<call-macro n="genro_tl">
+	  <with-param pos="2"/>
+	</call-macro>
+	    <out>
+	      <chunk name="det_adj_comparatiu" case="caseFirstWord">
+		<tags>
+	           <tag><lit-tag v="SA"/></tag>
+	           <tag><var n="genere"/></tag>
+	           <tag><var n="nombre"/></tag>
+	           <tag><var n="case"/></tag>
+	           <tag><var n="changecase"/></tag>
+		</tags>
+	        <lu>
+	          <clip pos="1" side="tl" part="lem"/> 
+	          <clip pos="1" side="tl" part="a_det"/>
+	          <lit-tag v="3"/>
+	          <lit-tag v="4"/>
+	        </lu> 
+                <b pos="1"/>
+		<lu>   
+		  <clip pos="2" side="tl" part="lemh"/> 
+		  <clip pos="2" side="tl" part="a_adj"/>
+	          <lit-tag v="3"/>
+	          <lit-tag v="4"/>
+		  <clip pos="2" side="tl" part="lemq"/> 
+		</lu> 
+	      </chunk>
+	    </out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule> 
+
+
+<rule comment="REGLA: EL MAJOR DE ('el mayor/menor de - la plej granda/plej malgranda el') (EOes)">
+      <pattern>
+	<pattern-item n="le_det"/>
+	<pattern-item n="meilleur"/>
+	<pattern-item n="de"/>
+      </pattern>
+      <action>          	
+	<call-macro n="nom_cas">
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="pli_plej2">
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nombro2">
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="genro2">
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_genro">
+	</call-macro>
+	<call-macro n="genro_tl">
+	  <with-param pos="2"/>
+	</call-macro>
+	    <out>
+	      <chunk name="det_adj_comparatiu" case="caseFirstWord">
+		<tags>
+	           <tag><lit-tag v="SA"/></tag>
+	           <tag><var n="genere"/></tag>
+	           <tag><var n="nombre"/></tag>
+	           <tag><var n="case"/></tag>
+	           <tag><var n="changecase"/></tag>
+		</tags>
+	        <lu>
+	          <clip pos="1" side="tl" part="lem"/> 
+	          <clip pos="1" side="tl" part="a_det"/>
+	          <lit-tag v="3"/>
+	          <lit-tag v="4"/>
+	        </lu> 
+                <b pos="1"/>
+		<lu>   
+		  <clip pos="2" side="tl" part="lemh"/> 
+		  <clip pos="2" side="tl" part="a_adj"/>
+	          <lit-tag v="3"/>
+	          <lit-tag v="4"/>
+		  <clip pos="2" side="tl" part="lemq"/> 
+		</lu> 
+	      </chunk>
+	      <b pos="2"/>
+	      <chunk name="pr">
+	        <tags>
+	          <tag><lit-tag v="PREP"/></tag>
+	        </tags>
+	        <lu>
+	          <lit v="el"/>
+	          <lit-tag v="pr"/>
+	        </lu>
+	      </chunk>
+	    </out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule> 
+
+
 <rule comment="REGLA: DET NOM (EO ex. els llibres, les cases -> la libroj, la domoj)">
       <pattern>
 	<pattern-item n="det"/>
@@ -4111,39 +4311,6 @@
 	  <with-param pos="1"/>
 	</call-macro>
 
-   <!-- article indefinit té valor d'aproximació -->
-   <choose>
-     <when>
-      <test>
-       <equal caseless="yes">
-        <clip pos="1" side="sl" part="lem"/>
-        <lit v="un"/>
-        </equal>
-      </test>
-        <out>
-          <chunk name="num" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><clip pos="1" side="sl" part="gen"/></tag>
-              <tag><var n="nombre"/></tag>
-              <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-            </tags>
-            <lu>
-              <lit v="ĉirkaŭ"/>
-              <lit-tag v="adv"/>
-            </lu>
-            <b/>
-	    <lu>
-	      <clip pos="2" side="tl" part="lem"/>
-	      <clip pos="2" side="tl" part="a_num"/>
-	      <clip pos="2" side="tl" part="nbr"/>
-              <lit-tag v="4"/>
-	    </lu>
-          </chunk>
-        </out>
-    </when>
-<otherwise>           <!-- article definit-->
 	<out>
 	  <chunk name="det_num" case="caseFirstWord">
 	    <tags>
@@ -4168,8 +4335,6 @@
 	    </lu>
 	  </chunk>
 	</out>	
-     </otherwise>
-      </choose>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -4213,48 +4378,6 @@
 	  <with-param pos="3"/>
 	</call-macro>-->
 
-   <!-- article indefinit té valor d'aproximació -->
-   <choose>
-     <when>
-      <test>
-       <equal caseless="yes">
-        <clip pos="1" side="sl" part="lem"/>
-        <lit v="un"/>
-        </equal>
-      </test>
-        <out>
-          <chunk name="num_nom" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><clip pos="3" side="sl" part="gen"/></tag>
-              <tag><var n="nombre"/></tag>
-              <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-            </tags>
-            <lu>
-              <lit v="ĉirkaŭ"/>
-              <lit-tag v="adv"/>
-            </lu>
-            <b/>
-	    <lu>
-	      <clip pos="2" side="tl" part="lem"/>
-	      <clip pos="2" side="tl" part="a_num"/>
-	      <clip pos="2" side="tl" part="nbr"/>
-              <lit-tag v="4"/>
-	    </lu>
-	    <b pos="2"/>
-            <lu>
-              <clip pos="3" side="tl" part="lemh"/>
-              <clip pos="3" side="tl" part="a_nom"/>
-              <clip pos="3" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-              <lit-tag v="4"/>
-              <clip pos="3" side="tl" part="lemq"/>
-            </lu>
-          </chunk>
-        </out>
-    </when>
-<otherwise>           <!-- article definit-->
 	<out>
 	  <chunk name="det_num_nom" case="caseFirstWord">
 	    <tags>
@@ -4288,8 +4411,498 @@
 	    </lu>
 	  </chunk>
 	</out>	
-     </otherwise>
-      </choose>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: DET NUM ADJ NOM (EO, ex. les dues últimes noies, aquests tres últims llibres -> la du lastaj knabinoj, ĉi tiuj tri lastaj libroj)">
+      <pattern>
+	<pattern-item n="det"/>
+	<pattern-item n="num"/>
+	<pattern-item n="adj"/>
+	<pattern-item n="nom"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nombro4">
+	  <with-param pos="4"/>
+	  <with-param pos="3"/>
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="genro4">
+	  <with-param pos="4"/>
+	  <with-param pos="3"/>
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_genro">
+	</call-macro>
+	<call-macro n="genro_tl">
+	  <with-param pos="4"/>
+	</call-macro>
+	<!--<call-macro n="canvia_det">
+	  <with-param pos="1"/>
+	  <with-param pos="3"/>
+	</call-macro>-->
+
+	<out>
+	  <chunk name="det_num_nom" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="4" side="sl" part="gen"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
+	    </tags>
+	    <lu>   
+	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="a_det"/>
+	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	    </lu> 
+	    <b pos="1"/>
+	    <lu>   
+	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="a_num"/>
+	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	    </lu> 
+	    <b pos="2"/>
+	    <lu>
+	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="a_adj"/>
+	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	      <clip pos="3" side="tl" part="lemq"/> 
+	    </lu>
+	    <b pos="3"/>
+	    <lu>     
+	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="a_nom"/>
+              <clip pos="4" side="tl" part="gen"/>
+	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
+	  </chunk>
+	</out>	  
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: DET NUM ADJ NOM ADJ (EO, ex. els tres últims corrents polítics -> la tri lastaj politikaj kurentoj)">
+      <pattern>
+	<pattern-item n="det"/>
+	<pattern-item n="num"/>
+	<pattern-item n="adj"/>
+	<pattern-item n="nom"/>
+	<pattern-item n="adjADJ"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nombro5">
+	  <with-param pos="4"/>
+	  <with-param pos="5"/>
+	  <with-param pos="3"/>
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="genro5">
+	  <with-param pos="4"/>
+	  <with-param pos="5"/>
+	  <with-param pos="3"/>
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_genro">
+	</call-macro>
+	<call-macro n="genro_tl">
+	  <with-param pos="4"/>
+	</call-macro>
+	<!--<call-macro n="canvia_det">
+	  <with-param pos="1"/>
+	  <with-param pos="3"/>
+	</call-macro>-->
+
+	<call-macro n="pli_plej2">
+	  <with-param pos="3"/>
+	</call-macro>
+	<out>
+	  <chunk name="det_num_nom" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="4" side="sl" part="gen"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
+	    </tags>
+	    <lu>   
+	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="a_det"/>
+	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	    </lu> 
+	    <b pos="1"/>
+	    <lu>   
+	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="a_num"/>
+	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	    </lu> 
+	    <b pos="2"/>
+	    <lu>
+	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="a_adj"/>
+	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	      <clip pos="3" side="tl" part="lemq"/> 
+	    </lu>
+	    <b pos="3"/>
+	    <lu>
+	      <clip pos="5" side="tl" part="lemh"/> 
+	      <clip pos="5" side="tl" part="a_adj"/>
+	      <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	      <clip pos="5" side="tl" part="lemq"/> 
+	    </lu>
+	    <b pos="4"/>
+	    <lu>     
+	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="a_nom"/>
+              <clip pos="4" side="tl" part="gen"/>
+	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
+	  </chunk>
+	</out>	  
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: DET NUM ADJ ADJ NOM (EO, ex. aquests tres últims grans llibres -> ĉi tiuj tri lastaj grandaj libroj)">
+      <pattern>
+	<pattern-item n="det"/>
+	<pattern-item n="num"/>
+	<pattern-item n="adj"/>
+	<pattern-item n="adj"/>
+	<pattern-item n="nom"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nombro5">
+	  <with-param pos="5"/>
+	  <with-param pos="4"/>
+	  <with-param pos="3"/>
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="genro5">
+	  <with-param pos="5"/>
+	  <with-param pos="4"/>
+	  <with-param pos="3"/>
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_genro">
+	</call-macro>
+	<call-macro n="genro_tl">
+	  <with-param pos="5"/>
+	</call-macro>
+	<!--<call-macro n="canvia_det">
+	  <with-param pos="1"/>
+	  <with-param pos="3"/>
+	</call-macro>-->
+
+	<call-macro n="pli_plej2">
+	  <with-param pos="3"/>
+	</call-macro>
+	<out>
+	  <chunk name="det_num_nom" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="5" side="sl" part="gen"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
+	    </tags>
+	    <lu>   
+	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="a_det"/>
+	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	    </lu> 
+	    <b pos="1"/>
+	    <lu>   
+	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="a_num"/>
+	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	    </lu> 
+	    <b pos="2"/>
+	    <lu>
+	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="a_adj"/>
+	      <clip pos="3" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	      <clip pos="3" side="tl" part="lemq"/> 
+	    </lu>
+	    <b pos="3"/>
+	    <lu>
+	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="a_adj"/>
+	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	      <clip pos="4" side="tl" part="lemq"/> 
+	    </lu>
+	    <b pos="4"/>
+	    <lu>     
+	      <clip pos="5" side="tl" part="lemh"/> 
+	      <clip pos="5" side="tl" part="a_nom"/>
+              <clip pos="5" side="tl" part="gen"/>
+	      <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	      <clip pos="5" side="tl" part="lemq"/>
+	    </lu>
+	  </chunk>
+	</out>	  
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: DET NUM ADV ADJ NOM (EO, ex. els tres més grans llibres -> la tri plej grandaj libroj)">
+      <pattern>
+	<pattern-item n="det"/>
+	<pattern-item n="num"/>
+	<pattern-item n="adv_preadv"/>
+	<pattern-item n="adj"/>
+	<pattern-item n="nom"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nombro4">
+	  <with-param pos="5"/>
+	  <with-param pos="4"/>
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="genro4">
+	  <with-param pos="5"/>
+	  <with-param pos="4"/>
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_genro">
+	</call-macro>
+	<call-macro n="genro_tl">
+	  <with-param pos="5"/>
+	</call-macro>
+	<!--<call-macro n="canvia_det">
+	  <with-param pos="1"/>
+	  <with-param pos="3"/>
+	</call-macro>-->
+
+	<call-macro n="pli_plej">
+	  <with-param pos="3"/>
+	</call-macro>
+	<out>
+	  <chunk name="det_num_nom" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="5" side="sl" part="gen"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
+	    </tags>
+	    <lu>   
+	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="a_det"/>
+	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	    </lu> 
+	    <b pos="1"/>
+	    <lu>   
+	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="a_num"/>
+	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	    </lu> 
+	    <b pos="2"/>
+	    <lu>
+	      <clip pos="3" side="tl" part="lem"/> 
+	      <clip pos="3" side="tl" part="tags"/> 
+	    </lu>
+	    <b pos="3"/>
+	    <lu>
+	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="a_adj"/>
+	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	      <clip pos="4" side="tl" part="lemq"/> 
+	    </lu>
+	    <b pos="4"/>
+	    <lu>     
+	      <clip pos="5" side="tl" part="lemh"/> 
+	      <clip pos="5" side="tl" part="a_nom"/>
+              <clip pos="5" side="tl" part="gen"/>
+	      <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	      <clip pos="5" side="tl" part="lemq"/>
+	    </lu>
+	  </chunk>
+	</out>	  
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: DET NUM ADV ADJ NOM ADJ (EO, ex. els tres més grans llibres infantils -> la tri plej grandaj infanaj libroj)">
+      <pattern>
+	<pattern-item n="det"/>
+	<pattern-item n="num"/>
+	<pattern-item n="adv_preadv"/>
+	<pattern-item n="adj"/>
+	<pattern-item n="nom"/>
+	<pattern-item n="adjADJ"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nombro5">
+	  <with-param pos="5"/>
+	  <with-param pos="6"/>
+	  <with-param pos="4"/>
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="genro5">
+	  <with-param pos="5"/>
+	  <with-param pos="6"/>
+	  <with-param pos="4"/>
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_genro">
+	</call-macro>
+	<call-macro n="genro_tl">
+	  <with-param pos="5"/>
+	</call-macro>
+	<!--<call-macro n="canvia_det">
+	  <with-param pos="1"/>
+	  <with-param pos="3"/>
+	</call-macro>-->
+
+	<call-macro n="pli_plej">
+	  <with-param pos="3"/>
+	</call-macro>
+	<out>
+	  <chunk name="det_num_nom" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="5" side="sl" part="gen"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
+	    </tags>
+	    <lu>   
+	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="a_det"/>
+	      <clip pos="1" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	    </lu> 
+	    <b pos="1"/>
+	    <lu>   
+	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="a_num"/>
+	      <clip pos="2" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	    </lu> 
+	    <b pos="2"/>
+	    <lu>
+	      <clip pos="3" side="tl" part="lem"/> 
+	      <clip pos="3" side="tl" part="tags"/> 
+	    </lu>
+	    <b pos="3"/>
+	    <lu>
+	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="a_adj"/>
+	      <clip pos="4" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	      <clip pos="4" side="tl" part="lemq"/> 
+	    </lu>
+	    <b pos="4"/>
+	    <lu>
+	      <clip pos="6" side="tl" part="lemh"/> 
+	      <clip pos="6" side="tl" part="a_adj"/>
+	      <clip pos="6" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	      <clip pos="6" side="tl" part="lemq"/> 
+	    </lu>
+	    <b pos="5"/>
+	    <lu>     
+	      <clip pos="5" side="tl" part="lemh"/> 
+	      <clip pos="5" side="tl" part="a_nom"/>
+              <clip pos="5" side="tl" part="gen"/>
+	      <clip pos="5" side="tl" part="nbr"/>
+	      <lit-tag v="4"/>
+	      <clip pos="5" side="tl" part="lemq"/>
+	    </lu>
+	  </chunk>
+	</out>	  
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -4748,7 +5361,7 @@
 	<pattern-item n="adv_preadv"/>
 	<pattern-item n="adj"/>
 	<pattern-item n="nom"/>
-	<pattern-item n="adj"/>
+	<pattern-item n="adjADJ"/>
       </pattern>
       <action>
 	<call-macro n="firstWord">
@@ -11989,7 +12602,196 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
-    <rule comment="REGLA: DET:a  - the derminier 'a' should just be deleted. Having this rule makes it possible to avoid handling 'a' in all the other rules">
+<rule comment="REGLA: MAJOR QUE ('mayor/menor que - pli granda/pli malgranda ol') (EOes)">
+      <pattern>
+	<pattern-item n="meilleur"/>
+	<pattern-item n="cnjcoopercorregir"/>
+      </pattern>
+      <action>          	
+	<call-macro n="nom_cas">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	    <out>
+	      <chunk name="adj_comparatiu" case="caseFirstWord">
+		<tags>
+	           <tag><lit-tag v="SA"/></tag>
+	           <tag><var n="genere"/></tag>
+	           <tag><var n="nombre"/></tag>
+	           <tag><var n="case"/></tag>
+	           <tag><var n="changecase"/></tag>
+		</tags>
+		<lu>   
+		  <clip pos="1" side="tl" part="lemh"/> 
+		  <clip pos="1" side="tl" part="a_adj"/>
+	          <clip pos="1" side="sl" part="nbr"/>
+	          <lit-tag v="4"/>
+		  <clip pos="1" side="tl" part="lemq"/> 
+		</lu> 
+		<b pos="1"/>
+                <lu>
+                  <lit v="ol"/>
+                  <lit-tag v="cnjcoo"/>
+		</lu>   
+	      </chunk>
+	    </out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule> 
+
+
+<rule comment="REGLA: MAJOR NOM QUE ('mayor/menor libertad que - pli granda/pli malgranda libereco ol') (EOes)">
+      <pattern>
+	<pattern-item n="meilleur"/>
+	<pattern-item n="nom"/>
+	<pattern-item n="cnjcoopercorregir"/>
+      </pattern>
+      <action>          	
+	<call-macro n="nom_cas">
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nombro2">
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="genro2">
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_genro">
+	</call-macro>
+	<call-macro n="genro_tl">
+	  <with-param pos="2"/>
+	</call-macro>
+	    <out>
+	      <chunk name="nom_comparatiuXXX" case="caseFirstWord">
+		<tags>
+	           <tag><lit-tag v="SN"/></tag>
+	           <tag><var n="genere"/></tag>
+	           <tag><var n="nombre"/></tag>
+	           <tag><var n="case"/></tag>
+	           <tag><var n="changecase"/></tag>
+		</tags>
+		<lu>   
+		  <clip pos="1" side="tl" part="lemh"/> 
+		  <clip pos="1" side="tl" part="a_adj"/>
+	          <lit-tag v="3"/>
+	          <lit-tag v="4"/>
+		  <clip pos="1" side="tl" part="lemq"/> 
+		</lu> 
+		<b pos="1"/>
+		<lu>   
+	          <clip pos="2" side="tl" part="lemh"/> 
+	          <clip pos="2" side="tl" part="a_nom"/>
+	          <lit-tag v="3"/>
+	          <lit-tag v="4"/>
+	          <clip pos="2" side="tl" part="lemq"/>
+		</lu>
+		<b pos="2"/>
+                <lu>
+                  <lit v="ol"/>
+                  <lit-tag v="cnjcoo"/>
+		</lu>   
+	      </chunk>
+	    </out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule> 
+
+
+<rule comment="REGLA: MAJOR NOM ADJ QUE ('mayor/menor libertad individual que - pli granda/pli malgranda libereco ol') (EOes)">
+      <pattern>
+	<pattern-item n="meilleur"/>
+	<pattern-item n="nom"/>
+	<pattern-item n="adj"/>
+	<pattern-item n="cnjcoopercorregir"/>
+      </pattern>
+      <action>          	
+	<call-macro n="nom_cas">
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nombro3">
+	  <with-param pos="2"/>
+	  <with-param pos="3"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="genro3">
+	  <with-param pos="2"/>
+	  <with-param pos="3"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_genro">
+	</call-macro>
+	<call-macro n="genro_tl">
+	  <with-param pos="2"/>
+	</call-macro>
+	    <out>
+	      <chunk name="nom_comparatiu" case="caseFirstWord">
+		<tags>
+	           <tag><lit-tag v="SN"/></tag>
+	           <tag><var n="genere"/></tag>
+	           <tag><var n="nombre"/></tag>
+	           <tag><var n="case"/></tag>
+	           <tag><var n="changecase"/></tag>
+		</tags>
+		<lu>   
+		  <clip pos="1" side="tl" part="lemh"/> 
+		  <clip pos="1" side="tl" part="a_adj"/>
+	          <lit-tag v="3"/>
+	          <lit-tag v="4"/>
+		  <clip pos="1" side="tl" part="lemq"/> 
+		</lu> 
+		<b pos="1"/>
+		<lu>   
+		  <clip pos="3" side="tl" part="lemh"/> 
+		  <clip pos="3" side="tl" part="a_adj"/>
+	          <lit-tag v="3"/>
+	          <lit-tag v="4"/>
+		  <clip pos="3" side="tl" part="lemq"/> 
+		</lu>
+		<b pos="2"/>
+		<lu>   
+	          <clip pos="2" side="tl" part="lemh"/> 
+	          <clip pos="2" side="tl" part="a_nom"/>
+                  <clip pos="2" side="tl" part="gen"/>
+	          <lit-tag v="3"/>
+	          <lit-tag v="4"/>
+	          <clip pos="2" side="tl" part="lemq"/>
+		</lu>
+		<b pos="3"/>
+                <lu>
+                  <lit v="ol"/>
+                  <lit-tag v="cnjcoo"/>
+		</lu>   
+	      </chunk>
+	    </out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule> 
+
+
+    <rule comment="REGLA: DET:a  - the determiner 'a' should just be deleted. Having this rule makes it possible to avoid handling 'a' in all the other rules">
       <pattern>
         <pattern-item n="un_det"/>
       </pattern>
@@ -12152,7 +12954,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		<b pos="2"/>
 		 <chunk name="cnjsub" >
             		<tags>
-            	  	<tag><lit-tag v="CNJCSUB"/></tag>
+            	  	<tag><lit-tag v="cnjsub"/></tag>
             		</tags>
             		<lu>
               		<lit v="ke"/>
@@ -12220,7 +13022,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		<b pos="3"/>
 		 <chunk name="cnjsub" >
             		<tags>
-            	  	<tag><lit-tag v="CNJCSUB"/></tag>
+            	  	<tag><lit-tag v="cnjsub"/></tag>
             		</tags>
             		<lu>
               		<lit v="ke"/>
