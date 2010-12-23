@@ -848,6 +848,7 @@
       <cat-item lemma="milier" tags="n.*"/>
       <cat-item lemma="million" tags="n.*"/>
       <cat-item lemma="milliard" tags="n.*"/>
+      <cat-item lemma="quantité" tags="n.*"/>
     </def-cat>
 
   </section-def-cats>
@@ -1051,6 +1052,7 @@
     <def-var n="tipus_verb"/>
     <def-var n="tipus_verb2"/>
     <def-var n="vegada"/>
+    <def-var n="nprep"/>
     <def-var n="test"/>
   </section-def-vars>
 
@@ -1077,35 +1079,25 @@
     </def-list>
 
   <def-list n="moviment"> <!-- BCN EO-->
-    <list-item v="anar"/>
-    <list-item v="afegir"/>
-    <list-item v="posar"/>
-    <list-item v="treure"/>
-    <list-item v="introduir"/>
-    <list-item v="entrar"/>
-    <list-item v="caure"/>
-    <list-item v="pujar"/>
-    <list-item v="creuar"/>
-    <list-item v="relliscar"/>
-    <list-item v="arribar"/>
-    <list-item v="volar"/>
-    <list-item v="córrer"/>
-    <list-item v="caminar"/>
-    <list-item v="avançar"/>
-    <list-item v="sortir"/>
+    <list-item v="aller"/>
+    <list-item v="introduire"/>
+    <list-item v="entrer"/>
+    <list-item v="traduire"/>
     </def-list>
 
   <def-list n="laqualcosa">
     <list-item v="ce qui"/>
     </def-list>
 
-  <def-list n="agradar"> <!-- BCN EO per a la inversio argumental-->
-    <list-item v="agradar"/>
+  <def-list n="plaire"> <!-- BCN EO per a la inversio argumental-->
+    <list-item v="plaire"/>
+<!--
     <list-item v="encantar"/>
     <list-item v="plaure"/>
     <list-item v="preocupar-se"/>
     <list-item v="interesar-se"/>
     <list-item v="inquietar-se"/>
+-->
     </def-list>
 
   <def-list n="volition"> <!-- BCN EO verbs que porten KE -->
@@ -1143,7 +1135,7 @@
           <test>
           <in>
          <clip pos="1" side="sl" part="lemh"/>
-         <list n="agradar"/>
+         <list n="plaire"/>
           </in>
           </test>
           <let>
@@ -2064,11 +2056,12 @@
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
+	<let><var n="nprep"/><clip pos="1" side="tl" part="lem"/></let>
 
 	<out>
-	  <chunk name="prep" case="caseFirstWord">
+	  <chunk namefrom="nprep" case="caseFirstWord">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -2128,11 +2121,12 @@
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
+	<let><var n="nprep"/><clip pos="1" side="tl" part="lem"/></let>
 
 	<out>
-	  <chunk name="prep" case="caseFirstWord">
+	  <chunk namefrom="nprep"  case="caseFirstWord">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -2468,10 +2462,11 @@
       </pattern>
       <action>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
+	<let><var n="nprep"/><clip pos="1" side="tl" part="lem"/></let>
         <out>
-	  <chunk name="pr" case="caseFirstWord">
+	  <chunk namefrom="nprep" case="caseFirstWord">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="whole"/>
@@ -2526,10 +2521,11 @@
       </pattern>
       <action>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
+	<let><var n="nprep"/><clip pos="1" side="tl" part="lem"/></let>
         <out>
-	  <chunk name="pr" case="caseFirstWord">
+	  <chunk namefrom="nprep" case="caseFirstWord">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="whole"/>
@@ -3117,9 +3113,9 @@
 	    </lu>
 	  </chunk>
  	  <b pos="1"/>
-	  <chunk name="pr">
+	  <chunk name="da">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <lit v="da"/>
@@ -3178,9 +3174,9 @@
 	    </lu>
 	  </chunk>
  	  <b pos="2"/>
-	  <chunk name="pr">
+	  <chunk name="da">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <lit v="da"/>
@@ -3261,9 +3257,9 @@
             </lu>
           </chunk>
  	  <b pos="2"/>
-	  <chunk name="pr">
+	  <chunk name="da">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <lit v="da"/>
@@ -3301,9 +3297,9 @@
 	    </lu>
 	  </chunk>
  	  <b pos="2"/>
-	  <chunk name="pr">
+	  <chunk name="da">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <lit v="da"/>
@@ -3340,9 +3336,9 @@
 	  <clip pos="2" side="tl" part="nbr"/>
 	</let>
 	<out>
-	  <chunk name="pr" case="caseFirstWord">
+	  <chunk name="en" case="caseFirstWord">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <lit v="en"/>
@@ -3389,9 +3385,9 @@
 	  <clip pos="3" side="tl" part="nbr"/>
 	</let>
 	<out>
-	  <chunk name="pr" case="caseFirstWord">
+	  <chunk name="en" case="caseFirstWord">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <lit v="en"/>
@@ -3435,9 +3431,9 @@
 	  <with-param pos="1"/>
 	</call-macro>
 	<out>
-	  <chunk name="pr" case="caseFirstWord">
+	  <chunk name="de" case="caseFirstWord">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <lit v="de"/>
@@ -3461,9 +3457,9 @@
 	    </lu>
 	  </chunk>
  	  <b pos="2"/>
-	  <chunk name="pr">
+	  <chunk name="al">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <lit v="al"/>
@@ -3512,9 +3508,9 @@
 	  <clip pos="3" side="tl" part="nbr"/>
 	</let>
 	<out>
-	  <chunk name="pr" case="caseFirstWord">
+	  <chunk name="de" case="caseFirstWord">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <lit v="de"/>
@@ -3538,9 +3534,9 @@
 	    </lu>
 	  </chunk>
  	  <b pos="2"/>
-	  <chunk name="pr">
+	  <chunk name="al">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <lit v="al"/>
@@ -3590,9 +3586,9 @@
 	  <clip pos="3" side="tl" part="nbr"/>
 	</let>
 	<out>
-	  <chunk name="pr" case="caseFirstWord">
+	  <chunk name="de" case="caseFirstWord">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <lit v="de"/>
@@ -3616,9 +3612,9 @@
 	    </lu>
 	  </chunk>
  	  <b pos="3"/>
-	  <chunk name="pr">
+	  <chunk name="al">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <lit v="al"/>
@@ -3803,9 +3799,9 @@
 	  <with-param pos="1"/>
 	</call-macro>
 	<out>
-	  <chunk name="pr" case="caseFirstWord">
+	  <chunk name="de" case="caseFirstWord">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <lit v="de"/>
@@ -3829,9 +3825,9 @@
 	    </lu>
 	  </chunk>
  	  <b pos="2"/>
-	  <chunk name="pr">
+	  <chunk name="al">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <lit v="al"/>
@@ -4051,7 +4047,7 @@
       </action>
     </rule>
 
-<rule comment="REGLA: EL MAJOR ('el mayor/menor - la plej granda/plej malgranda') (EOes)">
+<rule comment="REGLA: LE MEILLEUR ('el mayor/menor - la plej granda/plej malgranda') (EOes)">
       <pattern>
 	<pattern-item n="le_det"/>
 	<pattern-item n="meilleur"/>
@@ -4082,7 +4078,7 @@
 	  <with-param pos="2"/>
 	</call-macro>
 	    <out>
-	      <chunk name="det_adj_comparatiu" case="caseFirstWord">
+	      <chunk name="det_adj_comparatiu2" case="caseFirstWord">
 		<tags>
 	           <tag><lit-tag v="SA"/></tag>
 	           <tag><var n="genere"/></tag>
@@ -4114,7 +4110,7 @@
     </rule> 
 
 
-<rule comment="REGLA: EL MAJOR DE ('el mayor/menor de - la plej granda/plej malgranda el') (EOes)">
+<rule comment="REGLA: LE MEILLEUR DE ('el mayor/menor de - la plej granda/plej malgranda el') (EOes)">
       <pattern>
 	<pattern-item n="le_det"/>
 	<pattern-item n="meilleur"/>
@@ -4146,7 +4142,7 @@
 	  <with-param pos="2"/>
 	</call-macro>
 	    <out>
-	      <chunk name="det_adj_comparatiu" case="caseFirstWord">
+	      <chunk name="det_adj_comparatiu3" case="caseFirstWord">
 		<tags>
 	           <tag><lit-tag v="SA"/></tag>
 	           <tag><var n="genere"/></tag>
@@ -4170,9 +4166,9 @@
 		</lu> 
 	      </chunk>
 	      <b pos="2"/>
-	      <chunk name="pr">
+	      <chunk name="el">
 	        <tags>
-	          <tag><lit-tag v="PREP"/></tag>
+	          <tag><lit-tag v="pr"/></tag>
 	        </tags>
 	        <lu>
 	          <lit v="el"/>
@@ -5076,6 +5072,479 @@
 	    </lu>
 	  </chunk>
 	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: ADV ADJ NOM (EO) molt grans persones -> tre grandaj homoj">
+      <pattern>
+	<pattern-item n="adv_preadv"/>
+	<pattern-item n="adj"/>
+	<pattern-item n="nom"/>
+      </pattern>
+      <action>	
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>	
+	<call-macro n="nombro2">
+	  <with-param pos="3"/>
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="genro2">
+	  <with-param pos="3"/>
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="default_genro">
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="3"/>
+	</call-macro>
+	<call-macro n="genro_tl">
+	  <with-param pos="3"/>
+	</call-macro>
+	<out>  
+	  <chunk name="nom_adj" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><var n="genere"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
+	    </tags>
+	    <lu>
+	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="tags"/> 
+	    </lu>
+	    <b pos="1"/>
+	    <lu>   
+	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="a_adj"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="2" side="tl" part="lemq"/> 
+	    </lu> 
+	    <b pos="2"/>
+	    <lu>       
+	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="a_nom"/>
+	      <clip pos="3" side="tl" part="gen"/> 
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
+	  </chunk>
+	</out>       
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: ADV ADJ NOM ADJ (EO) molt diferents tendències socialistes -> tre malsamaj socialismaj tendencoj">
+      <pattern>
+	<pattern-item n="adv_preadv"/>
+	<pattern-item n="adj"/>
+	<pattern-item n="nom"/>
+	<pattern-item n="adjADJ"/>
+      </pattern>
+      <action>	
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>	
+	<call-macro n="nombro3">
+	  <with-param pos="3"/>
+	  <with-param pos="4"/>
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="genro3">
+	  <with-param pos="3"/>
+	  <with-param pos="4"/>
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="default_genro">
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="3"/>
+	</call-macro>
+	<call-macro n="genro_tl">
+	  <with-param pos="3"/>
+	</call-macro>
+	<out>  
+	  <chunk name="nom_adj" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><var n="genere"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
+	    </tags>
+	    <lu>
+	      <clip pos="1" side="tl" part="lem"/> 
+	      <clip pos="1" side="tl" part="tags"/> 
+	    </lu>
+	    <b pos="1"/>
+	    <lu>   
+	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="a_adj"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="2" side="tl" part="lemq"/> 
+	    </lu> 
+	    <b pos="2"/>
+	    <lu>   
+	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="a_adj"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="4" side="tl" part="lemq"/> 
+	    </lu> 
+	    <b pos="3"/>
+	    <lu>       
+	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="a_nom"/>
+	      <clip pos="3" side="tl" part="gen"/> 
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
+	  </chunk>
+	</out>       
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: ADJ ADJ NOM (EO) primer gran concert -> unua granda concerto ">
+      <pattern>
+	<pattern-item n="adj"/>
+	<pattern-item n="adj"/>
+	<pattern-item n="nom"/>
+      </pattern>
+      <action>	
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>	
+	<call-macro n="nombro3">
+	  <with-param pos="3"/>
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="genro3">
+	  <with-param pos="3"/>
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_genro">
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="3"/>
+	</call-macro>
+	<call-macro n="genro_tl">
+	  <with-param pos="3"/>
+	</call-macro>
+	<out>  
+	  <chunk name="nom_adj" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><var n="genere"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
+	    </tags>
+	    <lu>   
+	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="a_adj"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="1" side="tl" part="lemq"/> 
+	    </lu> 
+	    <b pos="1"/>
+	    <lu>   
+	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="a_adj"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="2" side="tl" part="lemq"/> 
+	    </lu> 
+	    <b pos="2"/>
+	    <lu>       
+	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="a_nom"/>
+	      <clip pos="3" side="tl" part="gen"/> 
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
+	  </chunk>
+	</out>       
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: ADJ ADJ NOM ADJ (EO) primer gran concert públic -> unua granda publika concerto">
+      <pattern>
+	<pattern-item n="adj"/>
+	<pattern-item n="adj"/>
+	<pattern-item n="nom"/>
+	<pattern-item n="adjADJ"/>
+      </pattern>
+      <action>	
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>	
+	<call-macro n="nombro4">
+	  <with-param pos="3"/>
+	  <with-param pos="4"/>
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="genro4">
+	  <with-param pos="3"/>
+	  <with-param pos="4"/>
+	  <with-param pos="2"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_genro">
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="3"/>
+	</call-macro>
+	<call-macro n="genro_tl">
+	  <with-param pos="3"/>
+	</call-macro>
+	<out>  
+	  <chunk name="nom_adj" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><var n="genere"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
+	    </tags>
+	    <lu>   
+	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="a_adj"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="1" side="tl" part="lemq"/> 
+	    </lu> 
+	    <b pos="1"/>
+	    <lu>   
+	      <clip pos="2" side="tl" part="lemh"/> 
+	      <clip pos="2" side="tl" part="a_adj"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="2" side="tl" part="lemq"/> 
+	    </lu> 
+	    <b pos="2"/>
+	    <lu>   
+	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="a_adj"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="4" side="tl" part="lemq"/> 
+	    </lu> 
+	    <b pos="3"/>
+	    <lu>       
+	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="a_nom"/>
+	      <clip pos="3" side="tl" part="gen"/> 
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
+	  </chunk>
+	</out>       
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: ADJ conj ADJ NOM (EO) primer i últim concert -> unua kaj lasta koncerto">
+      <pattern>
+	<pattern-item n="adj"/>
+	<pattern-item n="cnjcoo"/>
+	<pattern-item n="adj"/>
+	<pattern-item n="nom"/>
+      </pattern>
+      <action>	
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>	
+	<call-macro n="nombro3">
+	  <with-param pos="4"/>
+	  <with-param pos="3"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="genro3">
+	  <with-param pos="4"/>
+	  <with-param pos="3"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_genro">
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="4"/>
+	</call-macro>
+	<call-macro n="genro_tl">
+	  <with-param pos="4"/>
+	</call-macro>
+	<out>  
+	  <chunk name="nom_adj" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><var n="genere"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
+	    </tags>
+	    <lu>   
+	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="a_adj"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="1" side="tl" part="lemq"/> 
+	    </lu> 
+	    <b pos="1"/>
+	    <lu>
+	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="tags"/> 
+	    </lu>
+	    <b pos="2"/>
+	    <lu>   
+	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="a_adj"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="3" side="tl" part="lemq"/> 
+	    </lu> 
+	    <b pos="3"/>
+	    <lu>       
+	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="a_nom"/>
+	      <clip pos="4" side="tl" part="gen"/> 
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
+	  </chunk>
+	</out>       
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: ADJ conj ADJ NOM ADJ (EO) primer i últim concert públic -> unua kaj lasta publika koncerto">
+      <pattern>
+	<pattern-item n="adj"/>
+	<pattern-item n="cnjcoo"/>
+	<pattern-item n="adj"/>
+	<pattern-item n="nom"/>
+	<pattern-item n="adjADJ"/>
+      </pattern>
+      <action>	
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>	
+	<call-macro n="nombro4">
+	  <with-param pos="4"/>
+	  <with-param pos="5"/>
+	  <with-param pos="3"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="genro4">
+	  <with-param pos="4"/>
+	  <with-param pos="5"/>
+	  <with-param pos="3"/>
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_genro">
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="4"/>
+	</call-macro>
+	<call-macro n="genro_tl">
+	  <with-param pos="4"/>
+	</call-macro>
+	<out>  
+	  <chunk name="nom_adj" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><var n="genere"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
+	    </tags>
+	    <lu>   
+	      <clip pos="1" side="tl" part="lemh"/> 
+	      <clip pos="1" side="tl" part="a_adj"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="1" side="tl" part="lemq"/> 
+	    </lu> 
+	    <b pos="1"/>
+	    <lu>
+	      <clip pos="2" side="tl" part="lem"/> 
+	      <clip pos="2" side="tl" part="tags"/> 
+	    </lu>
+	    <b pos="2"/>
+	    <lu>   
+	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="a_adj"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="3" side="tl" part="lemq"/> 
+	    </lu> 
+	    <b pos="3"/>
+	    <lu>   
+	      <clip pos="5" side="tl" part="lemh"/> 
+	      <clip pos="5" side="tl" part="a_adj"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="5" side="tl" part="lemq"/> 
+	    </lu> 
+	    <b pos="4"/>
+	    <lu>       
+	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="a_nom"/>
+	      <clip pos="4" side="tl" part="gen"/> 
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
+	  </chunk>
+	</out>       
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -7107,7 +7576,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
  	    <b/>
 	  <chunk name="el">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <lit v="el"/>
@@ -11427,7 +11896,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
  	    <b/>
 	  <chunk name="el">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <lit v="el"/>
@@ -12377,7 +12846,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
    </choose>
 
 	    <out>
-	      <chunk name="adj_comparatiu" case="caseFirstWord">
+	      <chunk name="adj_comparatiu4" case="caseFirstWord">
 		<tags>
 		  <tag><lit-tag v="SA"/></tag>
 		  <tag><clip pos="2" side="sl" part="gen"/></tag>
@@ -12550,6 +13019,9 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 
 
 <rule comment="REGLA: SI ADJECTIU QUE (si grand que -> tiel granda ke) (EO)">
+<!--
+laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
+-->
       <pattern>
 	<pattern-item n="si_cmp"/>
 	<pattern-item n="adj"/>
@@ -12563,7 +13035,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	  <with-param pos="1"/>
 	</call-macro>
 	    <out>
-	      <chunk name="adj_comparatiu" case="caseFirstWord">
+	      <chunk name="adj_comparatiu5" case="caseFirstWord">
 		<tags>
 		  <tag><lit-tag v="SA"/></tag>
 		  <tag><clip pos="2" side="sl" part="gen"/></tag>
@@ -12602,7 +13074,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule>
 
 
-<rule comment="REGLA: MAJOR QUE ('mayor/menor que - pli granda/pli malgranda ol') (EOes)">
+<rule comment="REGLA: MEILLEUR QUE ('mayor/menor que - pli granda/pli malgranda ol') (EOes)">
       <pattern>
 	<pattern-item n="meilleur"/>
 	<pattern-item n="cnjcoopercorregir"/>
@@ -12615,11 +13087,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	  <with-param pos="1"/>
 	</call-macro>
 	    <out>
-	      <chunk name="adj_comparatiu" case="caseFirstWord">
+	      <chunk name="adj_comparatiu1" case="caseFirstWord">
 		<tags>
 	           <tag><lit-tag v="SA"/></tag>
-	           <tag><var n="genere"/></tag>
-	           <tag><var n="nombre"/></tag>
+	           <tag><clip pos="1" side="sl" part="gen"/></tag>
+	           <tag><clip pos="1" side="sl" part="nbr"/></tag>
 	           <tag><var n="case"/></tag>
 	           <tag><var n="changecase"/></tag>
 		</tags>
@@ -12645,7 +13117,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule> 
 
 
-<rule comment="REGLA: MAJOR NOM QUE ('mayor/menor libertad que - pli granda/pli malgranda libereco ol') (EOes)">
+<rule comment="REGLA: MEILLEUR NOM QUE ('mayor/menor libertad que - pli granda/pli malgranda libereco ol') (EOes)">
       <pattern>
 	<pattern-item n="meilleur"/>
 	<pattern-item n="nom"/>
@@ -12674,7 +13146,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	  <with-param pos="2"/>
 	</call-macro>
 	    <out>
-	      <chunk name="nom_comparatiuXXX" case="caseFirstWord">
+	      <chunk name="nom_comparatiu" case="caseFirstWord">
 		<tags>
 	           <tag><lit-tag v="SN"/></tag>
 	           <tag><var n="genere"/></tag>
@@ -12712,7 +13184,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </rule> 
 
 
-<rule comment="REGLA: MAJOR NOM ADJ QUE ('mayor/menor libertad individual que - pli granda/pli malgranda libereco ol') (EOes)">
+<rule comment="REGLA: MEILLEUR NOM ADJ QUE ('mayor/menor libertad individual que - pli granda/pli malgranda libereco ol') (EOes)">
       <pattern>
 	<pattern-item n="meilleur"/>
 	<pattern-item n="nom"/>
@@ -15739,6 +16211,61 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 -->
 
 
+<!-- montriĝas, ke ofte temas pri verboj mankantaj en nia vortaro; ni konsideras la nekonataĵon kiel verbon por helpi la postan sintaksan analizon -->
+    <rule comment="REGLA: PRON UNK ( le manje -> *manje lin ) ">
+      <pattern>
+	<pattern-item n="pro"/>
+	<pattern-item n="unknown"/>
+      </pattern>
+      <action>    	
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nombro1">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="1"/>
+	</call-macro>
+
+                <out>
+		  <chunk name="pro_obj" case="caseFirstWord">
+		    <tags>
+		      <tag><lit-tag v="SN"/></tag>
+		      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
+		      <tag><clip pos="1" side="tl" part="pers"/></tag>
+		      <tag><clip pos="1" side="tl" part="gen"/></tag>
+		      <tag><clip pos="1" side="tl" part="nbr"/></tag>
+		    </tags>
+		    <lu>
+	              <clip pos="1" side="tl" part="lem"/>
+		      <clip pos="1" side="tl" part="a_prn"/>
+		      <clip pos="1" side="tl" part="tipus_prn" link-to="2"/>
+		      <clip pos="1" side="tl" part="pers"/>
+		      <clip pos="1" side="tl" part="gen"/>
+		      <clip pos="1" side="tl" part="nbr"/>
+		    </lu>
+		  </chunk>
+                  <b pos="1"/>
+                  <chunk name="verbcj">
+                    <tags>
+                      <tag><lit-tag v="SV.vblex.pri.p3.sg.res"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="2" side="tl" part="whole"/>
+                    </lu>
+                  </chunk>
+                </out>
+        <let>
+          <var n="caseFirstWord"/>
+          <lit v="aa"/>
+        </let>
+      </action>
+    </rule>
+
+
     <rule comment="DET VERBconj ( le chante -> kantas ĝin )">
       <pattern>
 	<pattern-item n="le_det"/> <!-- ERROR en tagger -->
@@ -17040,9 +17567,9 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</choose>
         <out>
           <b pos="3"/> <!-- ŝanĝo al DE-->
-	  <chunk name="pr" case="caseFirstWord">
+	  <chunk name="de" case="caseFirstWord">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
             <lu>
               <lit v="de"/>
@@ -17153,9 +17680,9 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</choose>
         <out>
           <b pos="3"/> <!-- ŝanĝo al DE-->
-	  <chunk name="pr" case="caseFirstWord">
+	  <chunk name="de" case="caseFirstWord">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
             <lu>
               <lit v="de"/>
@@ -23069,10 +23596,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	</call-macro>
 	<call-macro n="default_nombro">
 	</call-macro>
+	<let><var n="nprep"/><clip pos="1" side="tl" part="lem"/></let>
 	<out>
-          <chunk name="pr" case="caseFirstWord">
+          <chunk namefrom="nprep" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="PREP"/></tag>
+              <tag><lit-tag v="pr"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -23217,32 +23745,6 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       </action>
     </rule>
 
- <rule comment="de">
-      <pattern>
-	<pattern-item n="de"/>
-      </pattern>
-      <action>
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
-	</call-macro>
-	<out>
-	  <chunk name="de" case="caseFirstWord">
-	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="1" side="tl" part="whole"/>
-	    </lu>
-	  </chunk>
-	</out>
-	<let>
-	  <var n="caseFirstWord"/>
-	  <lit v="aa"/>
-	</let>
-      </action>
-    </rule>
-
-
     <rule comment="PREP">
       <pattern>
 	<pattern-item n="prep"/>
@@ -23251,10 +23753,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
+	<let><var n="nprep"/><clip pos="1" side="tl" part="lem"/></let>
 	<out>
-	  <chunk name="pr" case="caseFirstWord">
+	  <chunk namefrom="nprep" case="caseFirstWord">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="whole"/>
@@ -23277,10 +23780,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
+	<let><var n="nprep"/><clip pos="1" side="tl" part="lem"/></let>
 	<out>
-	  <chunk name="pr" case="caseFirstWord">
+	  <chunk namefrom="nprep" case="caseFirstWord">
 	    <tags>
-	      <tag><lit-tag v="PREP"/></tag>
+	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="whole"/>
