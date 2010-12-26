@@ -14,4 +14,4 @@ paste -d _  ${PREF}1.txt  ${PREF}2.txt  ${PREF}3.txt | sed 's/\^;<sent>\$//g' | 
 
 grep '@' ${PREF}2.txt | head
 grep '#' ${PREF}3.txt | head
-echo "Resulto estas en: $0.txt"
+echo "Rezulto estas en: $0.txt"
