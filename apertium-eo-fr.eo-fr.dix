@@ -212,6 +212,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
       ****************************** -->
 <e>       <re>[0-9]+([.,][0-9]+)*</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
 <e>       <re>[0-9]+([.,][0-9]+)*%</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
+<e>       <re>[0-9]+([.,][0-9]+)*</re><p><l><b/>fojojn<s n="adv"/></l><r><b/>fois<s n="adv"/></r></p></e>
 <e r="RL"><p><l>ŝlosila<b/><s n="adj"/></l>            <r>-clef<s n="adj"/></r></p></e>
 <e>       <p><l>ŝlosila<b/><s n="adj"/></l>            <r>-clé<s n="adj"/></r></p></e>
 <e r="LR"><p><l>klea<b/><s n="adj"/></l>               <r>-clé<s n="adj"/></r></p></e>
@@ -1861,6 +1862,11 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e r="LR"><p><l>galla<s n="adj"/></l>                  <r>gaulois<s n="adj"/></r></p></e>
 <e>       <p><l>anglo<s n="n"/></l>                    <r>Anglais<s n="n"/></r></p><par n="_sgpl_sp2"/></e>
 <e>       <p><l>angla<s n="adj"/></l>                  <r>anglais<s n="adj"/></r></p></e>
+<e>       <p><l>kirgizo<s n="n"/></l>                  <r>Kirghiz<s n="n"/></r></p><par n="_sgpl_sp2"/></e>
+<e>       <p><l>kirgiza<s n="adj"/></l>                <r>kirghiz<s n="adj"/></r></p></e>
+<e>       <p><l>mjanmaano<s n="n"/></l>                <r>Myanmarais<s n="n"/></r></p><par n="_sgpl_sp2"/></e>
+<e>       <p><l>mjanmaa<s n="adj"/></l>                <r>myanmarais<s n="adj"/></r></p></e>
+<e>       <p><l>angula<s n="adj"/></l>                 <r>angulaire<s n="adj"/></r></p></e>
 <e>       <p><l>angulo<s n="n"/></l>                   <r>angle<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>sektoro<s n="n"/></l>                  <r>angle<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>komplemento<s n="n"/></l>              <r>angle<b/>complémentaire<s n="n"/><s n="m"/></r></p></e>
@@ -4452,6 +4458,8 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>bilboko<s n="n"/></l>                  <r>bilboquet<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>galo<s n="n"/></l>                     <r>bile<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>dulingva<s n="adj"/></l>               <r>bilingue<s n="adj"/></r></p></e>
+<e>       <p><l>trilingva<s n="adj"/></l>              <r>trilingue<s n="adj"/></r></p></e>
+<e>       <p><l>kvarlingva<s n="adj"/></l>             <r>quatrilingue<s n="adj"/></r></p></e>
 <e>       <p><l>bilardo<s n="n"/></l>                  <r>billard<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>bileto<s n="n"/></l>                   <r>billet<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>banknoto<s n="n"/></l>                 <r>billet<s n="n"/><s n="m"/></r></p></e>
@@ -6182,6 +6190,10 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>katafalko<s n="n"/></l>                <r>catafalque<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>florenca<s n="adj"/></l>               <r>florentin<s n="adj"/></r></p></e>
 <e>       <p><l>florencano<s n="n"/></l>               <r>Florentin<s n="n"/></r></p></e>
+<e>       <p><l>birmana<s n="adj"/></l>               <r>birman<s n="adj"/></r></p></e>
+<e>       <p><l>birmano<s n="n"/></l>                 <r>Birman<s n="n"/></r></p></e>
+<e>       <p><l>ujgura<s n="adj"/></l>               <r>ouïghour<s n="adj"/></r></p></e>
+<e>       <p><l>ujguro<s n="n"/></l>                 <r>Ouïghour<s n="n"/></r></p></e>
 <e>       <p><l>kataluna<s n="adj"/></l>               <r>catalan<s n="adj"/></r></p></e>
 <e>       <p><l>kataluno<s n="n"/></l>                 <r>Catalan<s n="n"/></r></p></e>
 <e>       <p><l>katalepsio<s n="n"/></l>               <r>catalepsie<s n="n"/><s n="f"/></r></p></e>
@@ -6338,6 +6350,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>Celle-Saint-Cloud<s n="np"/><s n="loc"/></l><r>Celle-Saint-Cloud<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e>       <p><l>celofano<s n="n"/></l>                 <r>cellophane<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>ĉelo<s n="n"/></l>                     <r>cellule<s n="n"/><s n="f"/></r></p></e>
+<e>       <p><l>ĉela<s n="adj"/></l>                     <r>cellulaire<s n="adj"/></r></p></e>
 <e>       <p><l>nervoĉelo<s n="n"/></l>                <r>cellule<b/>nerveuse<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>celulito<s n="n"/></l>                 <r>cellulite<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>celulozo<s n="n"/></l>                 <r>cellulose<s n="n"/><s n="f"/></r></p></e>
@@ -6689,9 +6702,10 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>karitato<s n="n"/></l>                 <r>charité<s n="n"/><s n="f"/></r></p></e>
 <e r="LR"><p><l>karito<s n="n"/></l>                   <r>charité<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>ĉarlatano<s n="n"/></l>                <r>charlatan<s n="n"/></r></p><par n="_genra_m"/></e>
-<e>       <p><l>Karolo<b/>la<b/>Granda<s n="np"/></l>  <r>Charlemagne<s n="np"/></r></p></e>
+<e>       <p><l>Karolo<b/>la<b/>Granda<s n="np"/><s n="ant"/><s n="m"/></l>  <r>Charlemagne<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
 <e>       <p><l>Karloreĝo<s n="np"/><s n="loc"/></l>   <r>Charleroi<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e r="LR"><p><l>Karolo<s n="np"/><s n="ant"/></l>      <r>Charles<s n="np"/><s n="ant"/></r></p></e>
+<e>       <p><l>Karolo<b/>la<b/>Kvina<s n="np"/><s n="ant"/><s n="m"/></l>      <r>Charles<b/>Quint<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
 <e>       <p><l>Charleville-Mézières<s n="np"/><s n="loc"/></l><r>Charleville-Mézières<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e r="LR"><p><l>aminda<s n="adj"/></l>                 <r>charmant<s n="adj"/></r></p></e>
 <e>       <p><l>ĉarma<s n="adj"/></l>                  <r>charmant<s n="adj"/></r></p></e>
@@ -7067,7 +7081,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e r="LR"><p><l>okcidenta<b/>kristismo<s n="n"/></l>   <r>christianisme<b/>occidental<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>orienta<b/>kristanismo<s n="n"/></l>   <r>christianisme<b/>oriental<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>orienta<b/>kristismo<s n="n"/></l>     <r>christianisme<b/>oriental<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>Kristoforo<s n="np"/><s n="ant"/></l>  <r>Christophe<s n="np"/><s n="ant"/></r></p></e>
+<e r="LR"><p><l>Kristoforo<s n="np"/><s n="ant"/></l>  <r>Christophe<s n="np"/><s n="ant"/></r></p></e>
 <e>       <p><l>ĉajoto<s n="n"/></l>                   <r>christophine<s n="n"/></r></p><par n="_genra_f"/></e>
 <e>       <p><l>kromio<s n="n"/></l>                   <r>chrome<s n="n"/><s n="f"/></r></p></e>
 <e r="LR"><p><l>kromo<s n="n"/></l>                    <r>chrome<s n="n"/><s n="f"/></r></p></e>
@@ -7159,7 +7173,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>cikatriĝi<s n="vblex"/></l>            <r>cicatriser<s n="vblex"/></r></p></e>
 <e>       <p><l>cikoniedo<s n="n"/></l>                <r>ciconiidé<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>cicero<s n="n"/></l>                   <r>cicéro<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>Cicerono<s n="np"/><s n="ant"/></l>    <r>Cicéron<s n="np"/><s n="ant"/></r></p></e>
+<e>       <p><l>Cicerono<s n="np"/><s n="ant"/><s n="m"/></l>    <r>Cicéron<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
 <e>       <p><l>cidro<s n="n"/></l>                    <r>cidre<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>Cie Nationale à Portefeuille<s n="np"/><s n="al"/></l><r>Cie Nationale à Portefeuille<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
 <e>       <p><l>ĉielo<s n="n"/></l>                    <r>ciel<s n="n"/><s n="m"/></r></p></e>
@@ -7191,6 +7205,9 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>kvindeko<s n="n"/></l>                 <r>cinquantaine<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>kvindek<s n="num"/></l>                <r>cinquante<s n="num"/></r></p></e>
 <e>       <p><l>kvindeka<s n="adj"/></l>               <r>cinquantième<s n="adj"/></r></p></e>
+<e>       <p><l>kvina<s n="adj"/></l>                  <r>quint<s n="adj"/></r></p></e>
+<e>       <p><l>kvinono<s n="n"/></l>                  <r>quint<s n="n"/><s n="m"/></r></p></e>
+<e>       <p><l>kvinto<s n="n"/></l>                  <r>quint<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>kvina<s n="adj"/></l>                  <r>cinquième<s n="adj"/></r></p></e>
 <e>       <p><l>kvinono<s n="n"/></l>                  <r>cinquième<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>kvine<s n="adv"/></l>                  <r>cinquièmement<s n="adv"/></r></p></e>
@@ -7454,7 +7471,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>klemato<s n="n"/></l>                  <r>clématite<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>indulgo<s n="n"/></l>                  <r>clémence<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>indulgema<s n="adj"/></l>              <r>clément<s n="adj"/></r></p></e>
-<e>       <p><l>Klemento<s n="np"/><s n="ant"/></l>    <r>Clément<s n="np"/><s n="ant"/></r></p></e>
+<e r="LR"><p><l>Klemento<s n="np"/><s n="ant"/></l>    <r>Clément<s n="np"/><s n="ant"/></r></p></e>
 <e>       <p><l>klerikala<s n="adj"/></l>              <r>clérical<s n="adj"/></r></p></e>
 <e>       <p><l>klerikalismo<s n="n"/></l>             <r>cléricalisme<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>barilo<s n="n"/></l>                   <r>clôture<s n="n"/><s n="f"/></r></p></e>
@@ -7779,14 +7796,21 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>brulo<s n="n"/></l>                    <r>combustion<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>Comcast<s n="np"/><s n="al"/></l>      <r>Comcast<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
 <e>       <p><l>Komenio<s n="np"/></l>                 <r>Comenius<s n="np"/></r></p></e>
+<e r="LR"><p><l>komedie<s n="adv"/></l>                <r>comiquement<s n="adv"/></r></p></e>
+<e>       <p><l>komike<s n="adv"/></l>                 <r>comiquement<s n="adv"/></r></p></e>
 <e r="LR"><p><l>komedia<s n="adj"/></l>                <r>comique<s n="adj"/></r></p></e>
 <e>       <p><l>komika<s n="adj"/></l>                 <r>comique<s n="adj"/></r></p></e>
+<e>       <p><l>arba<s n="adj"/></l>                 <r>arboricole<s n="adj"/></r></p></e>
 <e>       <p><l>amuzisto<s n="n"/></l>                 <r>comique<s n="n"/></r></p><par n="_genra_mf"/></e>
 <e r="LR"><p><l>komikeco<s n="n"/></l>                 <r>comique<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>burleskulo<s n="n"/></l>               <r>comique<b/>burlesque<s n="n"/></r></p></e>
 <e>       <p><l>komitato<s n="n"/></l>                 <r>comité<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>plenumkomitato<s n="n"/></l>           <r>comité<b/>exécutif<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>komao<s n="n"/></l>                    <r>comma<s n="n"/><s n="m"/></r></p></e>
+<e>       <p><l>ĉiutaga<s n="adj"/></l>                    <r>journalier<s n="adj"/></r></p></e>
+<e r="LR"><p><l>tagulo<s n="n"/></l>                    <r>journalier<s n="n"/></r></p></e>
+<e>       <p><l>tagsalajra<b/>laboristo<s n="n"/></l>                    <r>journalier<s n="n"/></r></p></e>
+<e>       <p><l>tagulo<s n="n"/></l>                    <r>journalier<s n="n"/></r></p></e>
 <e>       <p><l>majoro<s n="n"/></l>                   <r>commandant<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>komisio<s n="n"/></l>                  <r>commande<s n="n"/><s n="f"/></r></p></e>
 <e r="LR"><p><l>komando<s n="n"/></l>                  <r>commande<s n="n"/><s n="f"/></r></p></e>
@@ -7836,6 +7860,10 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>komerca<s n="adj"/></l>                <r>commercial<s n="adj"/></r></p></e>
 <e r="LR"><p><l>negoca<s n="adj"/></l>                 <r>commercial<s n="adj"/></r></p></e>
 <e>       <p><l>vendisto<s n="n"/></l>                 <r>commercial<s n="n"/></r></p></e>
+<e r="LR"><p><l>enmerkatigo<s n="n"/></l>          <r>commercialisation<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>enmerkatiĝo<s n="n"/></l>          <r>commercialisation<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>surmerkatigo<s n="n"/></l>         <r>commercialisation<s n="n"/><s n="f"/></r></p></e>
+<e>       <p><l>surmerkatiĝo<s n="n"/></l>         <r>commercialisation<s n="n"/><s n="f"/></r></p></e>
 <e r="LR"><p><l>enmerkatigi<s n="vblex"/></l>          <r>commercialiser<s n="vblex"/></r></p></e>
 <e>       <p><l>surmerkatigi<s n="vblex"/></l>         <r>commercialiser<s n="vblex"/></r></p></e>
 <e>       <p><l>Commerzbank<s n="np"/><s n="al"/></l>  <r>Commerzbank<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
@@ -9144,6 +9172,8 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>kaperisto<s n="n"/></l>                <r>corsaire<s n="n"/></r></p><par n="_genra_m"/></e>
 <e>       <p><l>Korsiko<s n="np"/><s n="loc"/></l>     <r>Corse<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e>       <p><l>Corse-du-Sud<s n="np"/><s n="loc"/></l><r>Corse-du-Sud<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
+<e>       <p><l>korsikano<s n="n"/></l>                  <r>Corse<s n="n"/></r></p><par n="_genra_mf"/></e>
+<e>       <p><l>korsika<s n="adj"/></l>                  <r>corse<s n="adj"/></r></p></e>
 <e>       <p><l>korseto<s n="n"/></l>                  <r>corset<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>kortiko<s n="n"/></l>                  <r>cortex<s n="n"/><s n="m"/></r></p><par n="_sgpl_sp"/></e>
 <e>       <p><l>kortizono<s n="n"/></l>                <r>cortisone<s n="n"/><s n="f"/></r></p></e>
@@ -9956,8 +9986,11 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e r="LR"><p><l>greno<s n="n"/></l>                    <r>céréale<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>ceremonio<s n="n"/></l>                <r>cérémonie<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>cerezino<s n="n"/></l>                 <r>cérésine<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>Cezaro<s n="np"/><s n="ant"/></l>      <r>César<s n="np"/><s n="ant"/></r></p></e>
-<e>       <p><l>Napoleono<s n="np"/><s n="ant"/></l>      <r>Napoléon<s n="np"/><s n="ant"/></r></p></e>
+<e>       <p><l>Kleopatra<s n="np"/><s n="ant"/><s n="f"/></l>      <r>Cléopâtre<s n="np"/><s n="ant"/><s n="f"/></r></p></e>
+<e>       <p><l>Pio<s n="np"/><s n="ant"/><s n="m"/></l>      <r>Pie<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
+<e>       <p><l>Cezaro<s n="np"/><s n="ant"/><s n="m"/></l>      <r>César<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
+<e>       <p><l>Julio<b/>Cezaro<s n="np"/><s n="ant"/><s n="m"/></l>      <r>Jules<b/>César<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
+<e>       <p><l>Napoleono<s n="np"/><s n="ant"/><s n="m"/></l>      <r>Napoléon<s n="np"/><s n="ant"/><s n="m"/></r></p></e>
 <e>       <p><l>cezio<s n="n"/></l>                    <r>césium<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>cezuro<s n="n"/></l>                   <r>césure<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>cetaco<s n="n"/></l>                   <r>cétacé<s n="n"/><s n="m"/></r></p></e>
@@ -11054,7 +11087,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>preterdistanci<s n="vblex"/></l>       <r>distancer<s n="vblex"/></r></p></e>
 <e>       <p><l>malproksima<s n="adj"/></l>            <r>distant<s n="adj"/></r></p></e>
 <e r="LR"><p><l>dista<s n="adj"/></l>                  <r>distant<s n="adj"/></r></p></e>
-<e>       <p><l>fora<b/>de<s n="adj"/></l>             <r>distant<b/>de<s n="adj"/></r></p></e>
+<e>       <p><l>fora<b/>de<s n="pr"/></l>             <r>distant<b/>de<s n="pr"/></r></p></e>
 <e>       <p><l>distilado<s n="n"/></l>                <r>distillation<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>distili<s n="vblex"/></l>              <r>distiller<s n="vblex"/></r></p></e>
 <e>       <p><l>distilejo<s n="n"/></l>                <r>distillerie<s n="n"/><s n="f"/></r></p></e>
@@ -14207,7 +14240,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>elŝiri<s n="vblex"/></l>               <r>extirper<s n="vblex"/></r></p></e>
 <e>       <p><l>eldevigi<s n="vblex"/></l>             <r>extorquer<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>elpremi<s n="vblex"/></l>              <r>extorquer<s n="vblex"/></r></p></e>
-<e>       <p><l>eltordi<s n="vblex"/></l>              <r>extorquer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>eltordi<s n="vblex"/></l>              <r>extorquer<s n="vblex"/></r></p></e>
 <e>       <p><l>ekstra<s n="adj"/></l>                 <r>extra<s n="adj"/></r></p></e>
 <e>       <p><l>eksterterano<s n="n"/></l>             <r>extra-terrestre<s n="n"/></r></p></e>
 <e>       <p><l>ekstertera<s n="adj"/></l>             <r>extra-terrestre<s n="adj"/></r></p></e>
@@ -17640,8 +17673,13 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>hindia<b/>lingvo<s n="n"/></l>         <r>hindi<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>hindia<s n="adj"/></l>                 <r>hindi<s n="adj"/></r></p></e>
 <e>       <p><l>hindua<s n="adj"/></l>                 <r>hindou<s n="adj"/></r></p></e>
-<e>       <p><l>hinduo<s n="n"/></l>                   <r>hindou<s n="n"/></r></p></e>
+<e>       <p><l>hinduo<s n="n"/></l>                   <r>Hindou<s n="n"/></r></p></e>
 <e>       <p><l>Hindukuŝo<s n="np"/><s n="loc"/></l>   <r>Hindou<b/>Kouch<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
+<e>       <p><l>Oksuso<s n="np"/><s n="loc"/></l>   <r>Oxus<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
+<e>       <p><l>Pamiro<s n="np"/><s n="loc"/></l>   <r>Pamir<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
+<e>       <p><l>Amudarjo<s n="np"/><s n="loc"/></l>   <r>Amou-Daria<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
+<e>       <p><l>Sirdarjo<s n="np"/><s n="loc"/></l>   <r>Syr-Daria<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
+<e>       <p><l>Transoksusio<s n="np"/><s n="loc"/></l>   <r>Transoxanie<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e>       <p><l>hinduismo<s n="n"/></l>                <r>hindouisme<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>hinduo<s n="n"/></l>                   <r>hindouiste<s n="n"/></r></p><par n="_genra_mf"/></e>
 <e>       <p><l>hindua<s n="adj"/></l>                 <r>hindouiste<s n="adj"/></r></p></e>
@@ -18629,6 +18667,11 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e r="LR"><p><l>neakcentita<s n="adj"/></l>            <r>inaccentuée<s n="adj"/></r></p></e>
 <e>       <p><l>senakcenta<s n="adj"/></l>             <r>inaccentuée<s n="adj"/></r></p></e>
 <e>       <p><l>neakceptebla<s n="adj"/></l>           <r>inacceptable<s n="adj"/></r></p></e>
+<e>       <p><l>akceptebla<s n="adj"/></l>           <r>acceptable<s n="adj"/></r></p></e>
+<e>       <p><l>akcepteblo<s n="n"/></l>               <r>acceptabilité<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>akceptebleco<s n="n"/></l>               <r>acceptabilité<s n="n"/><s n="f"/></r></p></e>
+<e>       <p><l>neakcepteblo<s n="n"/></l>               <r>inacceptabilité<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>neakceptebleco<s n="n"/></l>               <r>inacceptabilité<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>nealirebla<s n="adj"/></l>             <r>inaccessible<s n="adj"/></r></p></e>
 <e r="LR"><p><l>senkomunikiĝa<s n="adj"/></l>          <r>inaccessible<s n="adj"/></r></p></e>
 <e>       <p><l>nekutima<s n="adj"/></l>               <r>inaccoutumé<s n="adj"/></r></p></e>
@@ -20242,14 +20285,14 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>Jupitero<s n="np"/><s n="ant"/></l>    <r>Jupiter<s n="np"/><s n="ant"/></r></p></e>
 <e>       <p><l>subjupo<s n="n"/></l>                  <r>jupon<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>Ĵuraso<s n="np"/><s n="loc"/></l>      <r>Jura<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
-<e>       <p><l>Jura<s n="np"/><s n="loc"/></l>        <r>Jura<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>Jura<s n="np"/><s n="loc"/></l>        <r>Jura<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e r="RL"><p><l>ĵuraso<s n="n"/></l>                   <r>jurassien<s n="n"/><s n="m"/></r></p></e>
 <e r="RL"><p><l>ĵurasa<s n="adj"/></l>                 <r>jurassien<s n="adj"/></r></p></e>
 <e>       <p><l>ĵuraso<s n="n"/></l>                   <r>jurassique<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>ĵurasa<s n="adj"/></l>                 <r>jurassique<s n="adj"/></r></p></e>
 <e>       <p><l>ĵuri<s n="vblex"/></l>                 <r>jurer<s n="vblex"/></r></p></e>
-<e>       <p><l>blasfemi<s n="vblex"/></l>             <r>jurer<s n="vblex"/></r></p></e>
-<e>       <p><l>sakri<s n="vblex"/></l>                <r>jurer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>blasfemi<s n="vblex"/></l>             <r>jurer<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>sakri<s n="vblex"/></l>                <r>jurer<s n="vblex"/></r></p></e>
 <e>       <p><l>jurisdikcio<s n="n"/></l>              <r>juridiction<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>jura<s n="adj"/></l>                   <r>juridique<s n="adj"/></r></p></e>
 <e r="LR"><p><l>juĝa<s n="adj"/></l>                   <r>juridique<s n="adj"/></r></p></e>
@@ -20290,7 +20333,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>Justiniano<s n="np"/></l>              <r>Justinien<s n="np"/></r></p></e>
 <e>       <p><l>juto<s n="n"/></l>                     <r>jute<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>suka<s n="adj"/></l>                   <r>juteux<s n="adj"/></r></p></e>
-<e>       <p><l>sukriĉa<s n="adj"/></l>                <r>juteux<s n="adj"/></r></p></e>
+<e r="LR"><p><l>sukriĉa<s n="adj"/></l>                <r>juteux<s n="adj"/></r></p></e>
 <e>       <p><l>JX Holdings<s n="np"/><s n="al"/></l>  <r>JX Holdings<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
 <e>       <p><l>Jerusalemo<s n="np"/><s n="loc"/></l>  <r>Jérusalem<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e r="LR"><p><l>Hieronimo<s n="np"/><s n="ant"/></l>   <r>Jérôme<s n="np"/><s n="ant"/></r></p></e>
@@ -20352,6 +20395,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>ĥano<s n="n"/></l>                     <r>khan<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>ĥanlando<s n="n"/></l>                 <r>khanat<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>ĥanujo<s n="n"/></l>                   <r>khanat<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>ĥanejo<s n="n"/></l>                   <r>khanat<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>kiango<s n="n"/></l>                   <r>kiang<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>kibuco<s n="n"/></l>                   <r>kibboutz<s n="n"/><s n="m"/></r></p><par n="_sgpl_sp"/></e>
 <e>       <p><l>sekvestri<s n="vblex"/></l>            <r>kidnapper<s n="vblex"/></r></p></e>
@@ -20360,6 +20404,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>alaĵo<s n="n"/></l>                    <r>kiegészíté<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>kilogramo<s n="n"/></l>                <r>kilo<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>kilobito<s n="n"/></l>                 <r>kilobit<s n="n"/><s n="m"/></r></p></e>
+<e>       <p><l>megabito<s n="n"/></l>                 <r>mégabit<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>kilokalorio<s n="n"/></l>              <r>kilocalorie<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>kilogramo<s n="n"/></l>                <r>kilogramme<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>kilogramforto<s n="n"/></l>            <r>kilogramme-force<s n="n"/><s n="f"/></r></p></e>
@@ -20369,6 +20414,13 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>kilometro<s n="n"/></l>                <r>kilomètre<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>kilobitoko<s n="n"/></l>               <r>kilooctet<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>kilobajto<s n="n"/></l>                <r>kilooctet<s n="n"/><s n="m"/></r></p></e>
+<e>       <p><l>gigabajto<s n="n"/></l>                <r>gigaoctet<s n="n"/><s n="m"/></r></p></e>
+<e>       <p><l>terabajto<s n="n"/></l>                <r>téraoctet<s n="n"/><s n="m"/></r></p></e>
+<e r="RL"><p><l>bajto<s n="n"/></l>                <r>byte<s n="n"/><s n="m"/></r></p></e>
+<e r="RL"><p><l>kilobajto<s n="n"/></l>                <r>kilobyte<s n="n"/><s n="m"/></r></p></e>
+<e r="RL"><p><l>megabajto<s n="n"/></l>                <r>mégabyte<s n="n"/><s n="m"/></r></p></e>
+<e r="RL"><p><l>gigabajto<s n="n"/></l>                <r>gigabyte<s n="n"/><s n="m"/></r></p></e>
+<e r="RL"><p><l>terabajto<s n="n"/></l>                <r>térabyte<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>kilovolto<s n="n"/></l>                <r>kilovolt<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>kilovato<s n="n"/></l>                 <r>kilowatt<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>kilovathoro<s n="n"/></l>              <r>kilowatt-heure<s n="n"/><s n="m"/></r></p></e>
@@ -20380,7 +20432,9 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>kinino<s n="n"/></l>                   <r>kinine<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>kiosko<s n="n"/></l>                   <r>kiosque<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>budo<s n="n"/></l>                     <r>kiosque<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>Kirgizio<s n="np"/><s n="loc"/></l>    <r>Kirghizistan<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
+<e>       <p><l>Kirgizio<s n="np"/><s n="loc"/></l>    <r>Kirghizstan<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
+<e>       <p><l>Mjanmao<s n="np"/><s n="loc"/></l>    <r>Myanmar<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
+<e>       <p><l>Birmo<s n="np"/><s n="loc"/></l>    <r>Birmanie<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e>       <p><l>Kiribato<s n="np"/><s n="loc"/></l>    <r>Kiribati<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e>       <p><l>Kirin<s n="np"/><s n="al"/></l>        <r>Kirin<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
 <e>       <p><l>Kirin Holdings<s n="np"/><s n="al"/></l><r>Kirin Holdings<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
@@ -20393,7 +20447,34 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>hupi<s n="vblex"/></l>                 <r>klaxonner<s n="vblex"/></r></p></e>
 <e>       <p><l>Kline<s n="np"/><s n="al"/></l>        <r>Kline<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
 <e>       <p><l>KLM<s n="np"/><s n="al"/></l>          <r>KLM<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
+<e>       <p><l>cal<s n="n"/><s n="acr"/></l>          <r>cal<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>kcal<s n="n"/><s n="acr"/></l>         <r>kcal<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
 <e>       <p><l>km<s n="n"/><s n="acr"/></l>           <r>km<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>kg<s n="n"/><s n="acr"/></l>           <r>kg<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>dg<s n="n"/><s n="acr"/></l>           <r>dg<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>cg<s n="n"/><s n="acr"/></l>           <r>cg<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>mg<s n="n"/><s n="acr"/></l>           <r>mg<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>dl<s n="n"/><s n="acr"/></l>           <r>dl<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>cl<s n="n"/><s n="acr"/></l>           <r>cl<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>ml<s n="n"/><s n="acr"/></l>           <r>ml<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>g<s n="n"/><s n="acr"/></l>           <r>g<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>W<s n="n"/><s n="acr"/></l>           <r>W<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>kW<s n="n"/><s n="acr"/></l>           <r>kW<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>MW<s n="n"/><s n="acr"/></l>           <r>MW<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>b<s n="n"/><s n="acr"/></l>           <r>b<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>kb<s n="n"/><s n="acr"/></l>           <r>kb<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>Mb<s n="n"/><s n="acr"/></l>           <r>Mb<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>kB<s n="n"/><s n="acr"/></l>           <r>kB<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>MB<s n="n"/><s n="acr"/></l>           <r>MB<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>GB<s n="n"/><s n="acr"/></l>           <r>GB<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>TB<s n="n"/><s n="acr"/></l>           <r>TB<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>o<s n="n"/><s n="acr"/></l>           <r>o<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>ko<s n="n"/><s n="acr"/></l>           <r>ko<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>Mo<s n="n"/><s n="acr"/></l>           <r>Mo<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>Go<s n="n"/><s n="acr"/></l>           <r>Go<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>To<s n="n"/><s n="acr"/></l>           <r>To<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>km²<s n="n"/><s n="acr"/></l>           <r>km²<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
+<e>       <p><l>m²<s n="n"/><s n="acr"/></l>           <r>m²<s n="n"/><s n="acr"/><s n="m"/></r></p></e>
 <e>       <p><l>koano<s n="n"/></l>                    <r>koan<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>Kobe Steel<s n="np"/><s n="al"/></l>   <r>Kobe Steel<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
 <e r="LR"><p><l>gnomo<s n="n"/><s n="m"/></l>          <r>kobold<s n="n"/><s n="m"/></r></p></e>
@@ -20447,7 +20528,6 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>L'Oréal<s n="np"/><s n="al"/></l>      <r>L'Oréal<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
 <e>       <p><l>reciproke<s n="adv"/></l>              <r>l'un<b/>de<b/>l'autre<s n="adv"/></r></p></e>
 <e>       <p><l>ambaŭ<s n="adv"/></l>                  <r>l'un<b/>et<b/>l'autre<s n="adv"/></r></p></e>
-<e>       <p><l>Eternulo<s n="np"/></l>                <r>l'Éternel<s n="np"/></r></p></e>
 <e>       <p><l>L.M. Ericsson<s n="np"/><s n="al"/></l><r>L.M. Ericsson<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
 <e>       <p><l>la<s n="adj"/></l>                     <r>la<s n="adj"/></r></p></e>
 <e>       <p><l>La Celle-Saint-Cloud<s n="np"/><s n="loc"/></l><r>La Celle-Saint-Cloud<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
@@ -20510,8 +20590,9 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e r="RL"><p><l>apro<s n="n"/></l>                     <r>laie<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>lano<s n="n"/></l>                     <r>laine<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>lasi<s n="vblex"/></l>                 <r>laisser<s n="vblex"/></r></p></e>
-<e>       <p><l>heredigi<s n="vblex"/></l>             <r>laisser<s n="vblex"/></r></p></e>
-<e>       <p><l>restigi<s n="vblex"/></l>              <r>laisser<s n="vblex"/></r></p></e>
+<e>       <p><l>forlasi<s n="vblex"/></l>              <r>délaisser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>heredigi<s n="vblex"/></l>             <r>laisser<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>restigi<s n="vblex"/></l>              <r>laisser<s n="vblex"/></r></p></e>
 <e>       <p><l>deĵeti<s n="vblex"/></l>               <r>laisser<g><b/>choir</g><s n="vblex"/></r></p></e>
 <e>       <p><l>postlasi<s n="vblex"/></l>             <r>laisser<g><b/>derrière<b/>soi</g><s n="vblex"/></r></p></e>
 <e>       <p><l>deponi<s n="vblex"/></l>               <r>laisser<g><b/>en<b/>dépôt</g><s n="vblex"/></r></p></e>
@@ -20543,17 +20624,17 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>lambliozo<s n="n"/></l>                <r>lamblia<b/>intestinalis<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>lambliozo<s n="n"/></l>                <r>lambliase<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>plakaĵo<s n="n"/></l>                  <r>lame<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>klingo<s n="n"/></l>                   <r>lame<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>lato<s n="n"/></l>                     <r>lame<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>klingo<s n="n"/></l>                   <r>lame<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>lato<s n="n"/></l>                     <r>lame<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>pargetero<s n="n"/></l>                <r>lame<g><b/>de<b/>parquet</g><s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>lamelibranko<s n="n"/></l>             <r>lamellibranche<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>lamelikorno<s n="n"/></l>              <r>lamellicorne<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>kompatinda<s n="adj"/></l>             <r>lamentable<s n="adj"/></r></p></e>
 <e>       <p><l>bedaŭrinde<s n="adv"/></l>             <r>lamentablement<s n="adv"/></r></p></e>
 <e>       <p><l>lamento<s n="n"/></l>                  <r>lamentation<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>veo<s n="n"/></l>                      <r>lamentation<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>veo<s n="n"/></l>                      <r>lamentation<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>lamenti<s n="vblex"/></l>              <r>lamenter<s n="vblex"/></r></p></e>
-<e>       <p><l>vei<s n="vblex"/></l>                  <r>lamenter<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>vei<s n="vblex"/></l>                  <r>lamenter<s n="vblex"/></r></p></e>
 <e>       <p><l>Lamentin<s n="np"/><s n="loc"/></l>    <r>Lamentin<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e>       <p><l>lamiaco<s n="n"/></l>                  <r>lamiacée<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>foliigi<s n="vblex"/></l>              <r>laminer<s n="vblex"/></r></p></e>
@@ -20632,7 +20713,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>laosano<s n="n"/></l>                  <r>Laotien<s n="n"/></r></p></e>
 <e>       <p><l>laosa<s n="adj"/></l>                  <r>laotien<s n="adj"/></r></p></e>
 <e>       <p><l>langtrinki<s n="vblex"/></l>           <r>laper<s n="vblex"/></r></p></e>
-<e>       <p><l>ŝtonmortigi<s n="vblex"/></l>          <r>lapider<s n="vblex"/></r></p></e>
+<e r="LR"><p><l>ŝtonmortigi<s n="vblex"/></l>          <r>lapider<s n="vblex"/></r></p></e>
 <e>       <p><l>ŝtonumi<s n="vblex"/></l>              <r>lapider<s n="vblex"/></r></p></e>
 <e>       <p><l>kuniklo<s n="n"/></l>                  <r>lapin<s n="n"/></r></p></e>
 <e>       <p><l>lazurito<s n="n"/></l>                 <r>lapis<b/>lazuli<s n="n"/><s n="m"/></r></p><par n="_sgpl_sp"/></e>
@@ -20672,7 +20753,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e r="RL"><p><l>lascivo<s n="n"/></l>                  <r>lascivité<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>lasero<s n="n"/></l>                   <r>laser<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>enua<s n="adj"/></l>                   <r>lassant<s n="adj"/></r></p></e>
-<e>       <p><l>enuiga<s n="adj"/></l>                 <r>lassant<s n="adj"/></r></p></e>
+<e r="LR"><p><l>enuiga<s n="adj"/></l>                 <r>lassant<s n="adj"/></r></p></e>
 <e r="LR"><p><l>enuigi<s n="vblex"/></l>               <r>lasser<s n="vblex"/></r></p></e>
 <e>       <p><l>tedi<s n="vblex"/></l>                 <r>lasser<s n="vblex"/></r></p></e>
 <e>       <p><l>enuo<s n="n"/></l>                     <r>lassitude<s n="n"/><s n="f"/></r></p></e>
@@ -23608,16 +23689,16 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>Meduzo<s n="np"/><s n="ant"/></l>      <r>Méduse<s n="np"/><s n="ant"/></r></p></e>
 <e>       <p><l>Mée-sur-Seine<s n="np"/><s n="loc"/></l><r>Mée-sur-Seine<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e>       <p><l>kanajlaĵo<s n="n"/></l>                <r>méfait<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>malfido<s n="n"/></l>                  <r>méfiance<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>malfido<s n="n"/></l>                  <r>méfiance<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>malkonfido<s n="n"/></l>               <r>méfiance<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>skeptiko<s n="n"/></l>                 <r>méfiance<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>suspekto<s n="n"/></l>                 <r>méfiance<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>skeptiko<s n="n"/></l>                 <r>méfiance<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>suspekto<s n="n"/></l>                 <r>méfiance<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>malkonfidema<s n="adj"/></l>           <r>méfiant<s n="adj"/></r></p></e>
-<e>       <p><l>suspektema<s n="adj"/></l>             <r>méfiant<s n="adj"/></r></p></e>
+<e r="LR"><p><l>suspektema<s n="adj"/></l>             <r>méfiant<s n="adj"/></r></p></e>
 <e>       <p><l>malfidi<s n="vblex"/></l>              <r>méfier<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>malkonfidi<s n="vblex"/></l>           <r>méfier<s n="vblex"/></r></p></e>
 <e>       <p><l>megalito<s n="n"/></l>                 <r>mégalithe<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>gigantomanio<s n="n"/></l>             <r>mégalomanie<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>gigantomanio<s n="n"/></l>             <r>mégalomanie<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>megalomanio<s n="n"/></l>              <r>mégalomanie<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>urbego<s n="n"/></l>                   <r>mégalopole<s n="n"/><s n="f"/></r></p></e>
 <e r="LR"><p><l>megabitoko<s n="n"/></l>               <r>mégaoctet<s n="n"/><s n="m"/></r></p></e>
@@ -25430,7 +25511,14 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>ŝerce<s n="adv"/></l>                  <r>par<b/>plaisanterie<s n="adv"/></r></p></e>
 <e>       <p><l>supozeble<s n="adv"/></l>              <r>par<b/>présomption<s n="adv"/></r></p></e>
 <e>       <p><l>koncerne<b/>al<s n="pr"/></l>          <r>par<b/>rapport<b/>à<s n="pr"/></r></p></e>
-<e>       <p><l>sekve<b/>de<s n="pr"/></l>             <r>par<b/>suite<b/>de<s n="pr"/></r></p></e>
+<e r="RL"><p><l>sekve<b/>de<s n="pr"/></l>             <r>par<b/>suite<b/>de<s n="pr"/></r></p></e>
+<e>       <p><l>sekve<b/>de<s n="pr"/></l>             <r>à<b/>la<b/>suite<b/>de<s n="pr"/></r></p></e>
+<e>       <p><l>sinsekve<s n="adv"/></l>             <r>à<b/>la<b/>suite<s n="adv"/></r></p></e>
+<e r="RL"><p><l>poste<s n="adv"/></l>             <r>par<b/>la<b/>suite<s n="adv"/></r></p></e>
+<e r="RL"><p><l>poste<s n="adv"/></l>             <r>dans<b/>la<b/>suite<s n="adv"/></r></p></e>
+<e>       <p><l>tuj<s n="adv"/></l>             <r>tout<b/>de<b/>suite<s n="adv"/></r></p></e>
+<e r="LR"><p><l>senprokraste<s n="adv"/></l>             <r>tout<b/>de<b/>suite<s n="adv"/></r></p></e>
+<e r="RL"><p><l>tuj<s n="adv"/></l>             <r>de<b/>suite<s n="adv"/></r></p></e>
 <e>       <p><l>laŭkape<s n="adv"/></l>                <r>par<b/>tête<s n="adv"/></r></p></e>
 <e>       <p><l>parabolo<s n="n"/></l>                 <r>parabole<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>paraboloido<s n="n"/></l>              <r>paraboloïde<s n="n"/><s n="f"/></r></p></e>
@@ -26318,6 +26406,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e r="LR"><p><l>filateliisto<s n="n"/></l>             <r>philatéliste<s n="n"/></r></p><par n="_genra_mf"/></e>
 <e>       <p><l>filatelisto<s n="n"/></l>              <r>philatéliste<s n="n"/></r></p><par n="_genra_mf"/></e>
 <e>       <p><l>filharmonio<s n="n"/></l>              <r>philharmonie<s n="n"/><s n="f"/></r></p></e>
+<e>       <p><l>filharmonia<s n="adj"/></l>            <r>philharmonique<s n="adj"/></r></p></e>
 <e>       <p><l>Philip Morris<s n="np"/><s n="al"/></l><r>Philip Morris<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
 <e>       <p><l>Philip Morris International<s n="np"/><s n="al"/></l><r>Philip Morris International<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
 <e r="LR"><p><l>Filipo<s n="np"/><s n="ant"/></l>      <r>Philippe<s n="np"/><s n="ant"/></r></p></e>
@@ -26328,6 +26417,10 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>filistra<s n="adj"/></l>               <r>philistin<s n="adj"/></r></p></e>
 <e>       <p><l>Phillips<s n="np"/><s n="al"/></l>     <r>Phillips<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
 <e>       <p><l>filologio<s n="n"/></l>                <r>philologie<s n="n"/><s n="f"/></r></p></e>
+<e>       <p><l>filologia<s n="adj"/></l>              <r>philologique<s n="adj"/></r></p></e>
+<e>       <p><l>filozofia<s n="adj"/></l>              <r>philosophique<s n="adj"/></r></p></e>
+<e>       <p><l>filologie<s n="adv"/></l>              <r>philologiquement<s n="adv"/></r></p></e>
+<e>       <p><l>filozofie<s n="adv"/></l>              <r>philosophiquement<s n="adv"/></r></p></e>
 <e r="LR"><p><l>filologiisto<s n="n"/></l>             <r>philologue<s n="n"/></r></p><par n="_genra_m"/></e>
 <e>       <p><l>filologo<s n="n"/></l>                 <r>philologue<s n="n"/></r></p><par n="_genra_m"/></e>
 <e>       <p><l>filozofo<s n="n"/></l>                 <r>philosophe<s n="n"/></r></p><par n="_genra_mf"/></e>
@@ -27662,6 +27755,8 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e r="LR"><p><l>fekunda<s n="adj"/></l>                <r>productif<s n="adj"/></r></p></e>
 <e>       <p><l>produktiva<s n="adj"/></l>                <r>productif<s n="adj"/></r></p></e>
 <e>       <p><l>produktiveco<s n="n"/></l>                <r>productivité<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>superproduktaĵo<s n="n"/></l>               <r>superproduction<s n="n"/><s n="f"/></r></p></e>
+<e>       <p><l>superproduktado<s n="n"/></l>               <r>superproduction<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>produktado<s n="n"/></l>               <r>production<s n="n"/><s n="f"/></r></p></e>
 <e r="LR"><p><l>farado<s n="n"/></l>                   <r>production<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>produkti<s n="vblex"/></l>             <r>produire<s n="vblex"/></r></p></e>
@@ -28459,7 +28554,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>peki<s n="vblex"/></l>                 <r>pécher<s n="vblex"/></r></p></e>
 <e>       <p><l>pekulo<s n="n"/></l>                   <r>pécheur<s n="n"/></r></p></e>
 <e>       <p><l>peko<s n="n"/></l>                     <r>péché<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>falo<s n="n"/></l>                     <r>péché<b/>originel<s n="n"/><s n="m"/></r></p></e>
+<e>       <p><l>prapeko<s n="n"/></l>                  <r>péché<b/>originel<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>pedagogio<s n="n"/></l>                <r>pédagogie<s n="n"/><s n="f"/></r></p></e>
 <e r="LR"><p><l>didaktiko<s n="n"/></l>                <r>pédagogie<s n="n"/><s n="f"/></r></p></e>
 <e r="LR"><p><l>didaktika<s n="adj"/></l>              <r>pédagogique<s n="adj"/></r></p></e>
@@ -29837,6 +29932,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>renio<s n="n"/></l>                    <r>rhénium<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>retoriko<s n="n"/></l>                 <r>rhétorique<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>Rodano<s n="np"/><s n="loc"/></l>      <r>Rhône<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
+<e>       <p><l>Saono<s n="np"/><s n="loc"/></l>      <r>Saône<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e>       <p><l>Rodano-Alpoj<s n="np"/><s n="loc"/></l><r>Rhône-Alpes<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e>       <p><l>kaskado<s n="n"/></l>                  <r>ribambelle<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>ridaĉo<s n="n"/></l>                   <r>ricanement<s n="n"/><s n="m"/></r></p></e>
@@ -30179,6 +30275,9 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e r="LR"><p><l>kalcitri<s n="vblex"/></l>             <r>ruer<s n="vblex"/></r></p></e>
 <e>       <p><l>kalcitri<s n="vblex"/></l>             <r>ruer<b/>dans<b/>les<b/>brancards<s n="vblex"/></r></p></e>
 <e>       <p><l>rugbeo<s n="n"/></l>                   <r>rugby<s n="n"/><s n="m"/></r></p></e>
+<e>       <p><l>rugbeo<g><b/>15</g><s n="n"/></l>      <r>rugby<b/>à<b/>XV<s n="n"/><s n="m"/></r></p></e>
+<e>       <p><l>rugbeo<g><b/>13</g><s n="n"/></l>      <r>rugby<b/>à<b/>XIII<s n="n"/><s n="m"/></r></p></e>
+<e>       <p><l>rugbeo<g><b/>7</g><s n="n"/></l>      <r>rugby<b/>sept<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>rugbeisto<s n="n"/></l>                <r>rugbyman<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>murmuregi<s n="vblex"/></l>            <r>rugir<s n="vblex"/></r></p></e>
 <e>       <p><l>murmurego<s n="n"/></l>                <r>rugissement<s n="n"/><s n="m"/></r></p></e>
@@ -31356,16 +31455,16 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>rezulto<s n="n"/></l>                  <r>score<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>skorpio<s n="n"/></l>                  <r>scorpion<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>skorzonero<s n="n"/></l>               <r>scorsonère<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>presbiopa<s n="n"/></l>               <r>presbyte<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>presbiopulo<s n="adj"/></l>             <r>presbyte<s n="adj"/></r></p></e>
+<e>       <p><l>presbiopa<s n="n"/></l>               <r>presbyte<s n="adj"/></r></p></e>
+<e>       <p><l>presbiopulo<s n="adj"/></l>            <r>presbyte<s n="n"/></r></p><par n="_genra_mf"/></e>
 <e>       <p><l>presbitera<s n="adj"/></l>             <r>presbytéral<s n="adj"/></r></p></e>
 <e r="LR"><p><l>pastra<s n="adj"/></l>             <r>presbytéral<s n="adj"/></r></p></e>
 <e r="LR"><p><l>pastrejo<s n="n"/></l>               <r>presbytère<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>paroĥestrejo<s n="n"/></l>               <r>presbytère<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>presbiterianismo<s n="n"/></l>               <r>presbytérianisme<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>presbiteriano<s n="n"/></l>               <r>presbytérien<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>presbiteriana<s n="n"/></l>               <r>presbytérien<s n="adj"/></r></p></e>
-<e>       <p><l>presbiopeco<s n="n"/></l>               <r>presbytie<s n="n"/><s n="f"/></r></p></e>
+<e>       <p><l>paroĥestrejo<s n="n"/></l>             <r>presbytère<s n="n"/><s n="f"/></r></p></e>
+<e>       <p><l>presbiterianismo<s n="n"/></l>         <r>presbytérianisme<s n="n"/><s n="m"/></r></p></e>
+<e>       <p><l>presbiteriano<s n="n"/></l>            <r>presbytérien<s n="n"/></r></p></e>
+<e>       <p><l>presbiteriana<s n="adj"/></l>          <r>presbytérien<s n="adj"/></r></p></e>
+<e>       <p><l>presbiopeco<s n="n"/></l>              <r>presbytie<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>glubendo<s n="n"/></l>                 <r>scotch<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>skotiŝo<s n="n"/></l>                  <r>scottish<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>skolto<s n="n"/><s n="m"/></l>         <r>scout<s n="n"/><s n="m"/></r></p></e>
@@ -31426,15 +31525,15 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e r="LR"><p><l>deskui<s n="vblex"/></l>               <r>secouer<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>taŭzi<s n="vblex"/></l>                <r>secouer<s n="vblex"/></r></p></e>
 <e>       <p><l>helpa<s n="adj"/></l>                  <r>secourable<s n="adj"/></r></p></e>
-<e>       <p><l>kompatema<s n="adj"/></l>              <r>secourable<s n="adj"/></r></p></e>
+<e r="LR"><p><l>kompatema<s n="adj"/></l>              <r>secourable<s n="adj"/></r></p></e>
 <e>       <p><l>helpi<s n="vblex"/></l>                <r>secourir<s n="vblex"/></r></p></e>
 <e>       <p><l>helpo<s n="n"/></l>                    <r>secours<s n="n"/><s n="m"/></r></p><par n="_sgpl_sp"/></e>
 <e>       <p><l>afekcio<s n="n"/></l>                  <r>secousse<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>terskuo<s n="n"/></l>                  <r>secousse<b/>tellurique<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>sekreta<s n="adj"/></l>                <r>secret<s n="adj"/></r></p></e>
-<e>       <p><l>intima<s n="adj"/></l>                 <r>secret<s n="adj"/></r></p></e>
-<e>       <p><l>kaŝema<s n="adj"/></l>                 <r>secret<s n="adj"/></r></p></e>
-<e>       <p><l>sekretema<s n="adj"/></l>              <r>secret<s n="adj"/></r></p></e>
+<e r="LR"><p><l>intima<s n="adj"/></l>                 <r>secret<s n="adj"/></r></p></e>
+<e r="LR"><p><l>kaŝema<s n="adj"/></l>                 <r>secret<s n="adj"/></r></p></e>
+<e r="LR"><p><l>sekretema<s n="adj"/></l>              <r>secret<s n="adj"/></r></p></e>
 <e>       <p><l>sekreto<s n="n"/></l>                  <r>secret<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>konfidenco<s n="n"/></l>               <r>secret<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>publika<b/>sekreto<s n="n"/></l>       <r>secret<g><b/>de<b/>Polichinelle</g><s n="n"/><s n="m"/></r></p></e>
@@ -31481,7 +31580,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>memdire<s n="adv"/></l>                <r>selon<b/>ses<b/>propres<b/>termes<s n="adv"/></r></p></e>
 <e>       <p><l>semajno<s n="n"/></l>                  <r>semaine<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>Paska<b/>semajno<s n="np"/></l>        <r>semaine<b/>sainte<s n="np"/></r></p></e>
-<e>       <p><l>Sankta<b/>Semajno<s n="np"/></l>       <r>semaine<b/>sainte<s n="np"/></r></p></e>
+<e r="LR"><p><l>Sankta<b/>Semajno<s n="np"/></l>       <r>semaine<b/>sainte<s n="np"/></r></p></e>
 <e>       <p><l>simila<s n="adj"/></l>                 <r>semblable<s n="adj"/></r></p></e>
 <e>       <p><l>fantomo<s n="n"/></l>                  <r>semblant<s n="n"/></r></p><par n="_genra_m"/></e>
 <e r="LR"><p><l>simili<s n="vblex"/></l>               <r>sembler<s n="vblex"/></r></p></e>
@@ -31495,6 +31594,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e r="LR"><p><l>jarduono<s n="n"/></l>                 <r>semestre<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>semestro<s n="n"/></l>                 <r>semestre<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>semestra<s n="adj"/></l>               <r>semestriel<s n="adj"/></r></p></e>
+<e>       <p><l>semestre<s n="adv"/></l>               <r>semestriellement<s n="adv"/></r></p></e>
 <e r="RL"><p><l>duon<s n="adj"/></l>                   <r>semi<s n="adj"/></r></p></e>
 <e r="RL"><p><l>duon<s n="adv"/></l>                   <r>semi<s n="adv"/></r></p></e>
 <e>       <p><l>duonkonduka<s n="adj"/></l>            <r>semi-conducteur<s n="adj"/></r></p></e>
@@ -31507,7 +31607,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>duonmaratono<s n="n"/></l>             <r>semi-marathon<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>duonnormo<s n="n"/></l>                <r>semi-norme<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>duonvokalo<s n="n"/></l>               <r>semi-voyelle<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>kvazaŭvokalo<s n="n"/></l>             <r>semi-voyelle<s n="n"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>kvazaŭvokalo<s n="n"/></l>             <r>semi-voyelle<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>duonkonduka<s n="adj"/></l>            <r>semiconducteur<s n="adj"/></r></p></e>
 <e>       <p><l>duonkondukanto<s n="n"/></l>           <r>semiconducteur<s n="n"/></r></p></e>
 <e r="LR"><p><l>duonkonduktanto<s n="n"/></l>          <r>semiconducteur<s n="n"/></r></p></e>
@@ -31534,12 +31634,12 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>sentivigi<s n="vblex"/></l>            <r>sensibiliser<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>sentiveco<s n="n"/></l>                <r>sensibilité<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>sentemo<s n="n"/></l>                  <r>sensibilité<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>sentiva<s n="adj"/></l>                <r>sensible<s n="adj"/></r></p></e>
-<e>       <p><l>delikata<s n="adj"/></l>               <r>sensible<s n="adj"/></r></p></e>
-<e>       <p><l>humana<s n="adj"/></l>                 <r>sensible<s n="adj"/></r></p></e>
-<e>       <p><l>kompatema<s n="adj"/></l>              <r>sensible<s n="adj"/></r></p></e>
-<e>       <p><l>senta<s n="adj"/></l>                  <r>sensible<s n="adj"/></r></p></e>
-<e>       <p><l>sentebla<s n="adj"/></l>               <r>sensible<s n="adj"/></r></p></e>
+<e r="LR"><p><l>sentiva<s n="adj"/></l>                <r>sensible<s n="adj"/></r></p></e>
+<e r="LR"><p><l>delikata<s n="adj"/></l>               <r>sensible<s n="adj"/></r></p></e>
+<e r="LR"><p><l>humana<s n="adj"/></l>                 <r>sensible<s n="adj"/></r></p></e>
+<e r="LR"><p><l>kompatema<s n="adj"/></l>              <r>sensible<s n="adj"/></r></p></e>
+<e r="LR"><p><l>senta<s n="adj"/></l>                  <r>sensible<s n="adj"/></r></p></e>
+<e r="LR"><p><l>sentebla<s n="adj"/></l>               <r>sensible<s n="adj"/></r></p></e>
 <e>       <p><l>sentema<s n="adj"/></l>                <r>sensible<s n="adj"/></r></p></e>
 <e r="LR"><p><l>rimarkeble<s n="adv"/></l>             <r>sensiblement<s n="adv"/></r></p></e>
 <e>       <p><l>senteble<s n="adv"/></l>               <r>sensiblement<s n="adv"/></r></p></e>
@@ -31553,7 +31653,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>pado<s n="n"/></l>                     <r>sentier<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>vojeto<s n="n"/></l>                   <r>sentier<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>irejo<s n="n"/></l>                    <r>sentier<s n="n"/><s n="m"/></r></p></e>
-<e>       <p><l>vojstreko<s n="n"/></l>                <r>sentier<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>vojstreko<s n="n"/></l>                <r>sentier<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>sento<s n="n"/></l>                    <r>sentiment<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>sentimento<s n="n"/></l>               <r>sentiment<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>lingvosento<s n="n"/></l>              <r>sentiment<b/>linguistique<s n="n"/><s n="m"/></r></p></e>
@@ -32511,6 +32611,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e r="RL"><p><l>stanco<s n="n"/></l>                   <r>stanza<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>Staples<s n="np"/><s n="al"/></l>      <r>Staples<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
 <e>       <p><l>stelulo<s n="n"/></l>                  <r>star<s n="n"/></r></p><par n="_genra_f"/></e>
+<e>       <p><l>superstelulo<s n="n"/></l>                  <r>superstar<s n="n"/></r></p><par n="_genra_f"/></e>
 <e>       <p><l>State Bank of India<s n="np"/><s n="al"/></l><r>State Bank of India<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
 <e>       <p><l>State Farm Insurance Cos.<s n="np"/><s n="al"/></l><r>State Farm Insurance Cos.<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
 <e>       <p><l>State Grid<s n="np"/><s n="al"/></l>   <r>State Grid<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
@@ -34322,7 +34423,9 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e r="LR"><p><l>drogemulo<s n="n"/></l>                <r>toxicomane<s n="n"/></r></p><par n="_genra_mf"/></e>
 <e>       <p><l>narkotaĵemulo<s n="n"/></l>            <r>toxicomane<s n="n"/></r></p><par n="_genra_mf"/></e>
 <e>       <p><l>toksino<s n="n"/></l>                  <r>toxine<s n="n"/><s n="f"/></r></p></e>
-<e>       <p><l>venena<s n="adj"/></l>                 <r>toxique<s n="adj"/></r></p></e>
+<e>       <p><l>toksa<s n="adj"/></l>                 <r>toxique<s n="adj"/></r></p></e>
+<e>       <p><l>tokso<s n="n"/></l>                 <r>toxique<s n="n"/><s n="m"/></r></p></e>
+<e>       <p><l>tokseco<s n="n"/></l>                 <r>toxicité<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>Toyota<s n="np"/><s n="al"/></l>       <r>Toyota<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
 <e>       <p><l>Toyota Motor<s n="np"/><s n="al"/></l> <r>Toyota Motor<s n="np"/><s n="al"/><s n="mf"/></r></p></e>
 <e>       <p><l>embaraso<s n="n"/></l>                 <r>tracas<s n="n"/><s n="m"/></r></p><par n="_sgpl_sp"/></e>
@@ -34354,6 +34457,8 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e r="LR"><p><l>translingvigi<s n="vblex"/></l>        <r>traduire<s n="vblex"/></r></p></e>
 <e>       <p><l>trafiko<s n="n"/></l>                  <r>trafic<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>tragikomedio<s n="n"/></l>             <r>tragicomédie<s n="n"/><s n="f"/></r></p></e>
+<e>       <p><l>tragike<s n="adv"/></l>                <r>tragiquement<s n="adv"/></r></p></e>
+<e r="LR"><p><l>tragedie<s n="adv"/></l>               <r>tragiquement<s n="adv"/></r></p></e>
 <e>       <p><l>tragika<s n="adj"/></l>                <r>tragique<s n="adj"/></r></p></e>
 <e r="LR"><p><l>tragedia<s n="adj"/></l>               <r>tragique<s n="adj"/></r></p></e>
 <e>       <p><l>tragedio<s n="n"/></l>                 <r>tragédie<s n="n"/><s n="f"/></r></p></e>
@@ -34589,6 +34694,8 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e r="LR"><p><l>jarkvarono<s n="n"/></l>               <r>trimestre<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>trimestro<s n="n"/></l>                <r>trimestre<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>trimonato<s n="n"/></l>                <r>trimestre<s n="n"/><s n="m"/></r></p></e>
+<e>       <p><l>trimonate<s n="adv"/></l>              <r>trimestriellement<s n="adv"/></r></p></e>
+<e r="LR"><p><l>kvaronjare<s n="adv"/></l>             <r>trimestriellement<s n="adv"/></r></p></e>
 <e>       <p><l>trimonata<s n="adj"/></l>              <r>trimestriel<s n="adj"/></r></p></e>
 <e r="LR"><p><l>kvaronjara<s n="adj"/></l>             <r>trimestriel<s n="adj"/></r></p></e>
 <e>       <p><l>tosti<s n="vblex"/></l>                <r>trinquer<s n="vblex"/></r></p></e>
@@ -36390,7 +36497,6 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e r="RL"><p><l>eksa<s n="adj"/></l>                   <r>à<b/>la<b/>retraite<s n="adj"/></r></p></e>
 <e>       <p><l>ĉirkaŭe<s n="adv"/></l>                <r>à<b/>la<b/>ronde<s n="adv"/></r></p></e>
 <e>       <p><l>ŝtele<s n="adv"/></l>                  <r>à<b/>la<b/>silencieuse<s n="adv"/></r></p></e>
-<e>       <p><l>vice<s n="adv"/></l>                   <r>à<b/>la<b/>suite<s n="adv"/></r></p></e>
 <e>       <p><l>ĉe<b/>la<b/>fronto<s n="adv"/></l>     <r>à<b/>la<b/>tête<s n="adv"/></r></p></e>
 <e>       <p><l>longtempe<s n="adv"/></l>              <r>à<b/>long<b/>terme<s n="adv"/></r></p></e>
 <e r="RL"><p><l>lia<s n="adj"/></l>                    <r>à<b/>lui<s n="adj"/><s n="pos"/></r></p></e>
@@ -37818,6 +37924,11 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
           group(s) with only one element
       ****************************** -->
 <e r="RL"><p><l>St</l>                                 <r>St</r></p></e>
+<e>       <p><l>von</l>                                 <r>von</r></p></e>
+<e>       <p><l>van</l>                                 <r>van</r></p></e>
+<e>       <p><l>del</l>                                 <r>del</r></p></e>
+<e>       <p><l>do</l>                                 <r>do</r></p></e>
+<e>       <p><l>da</l>                                 <r>da</r></p></e>
 <e>       <re>[.\?;:!]</re><p><l><s n="sent"/></l>     <r><s n="sent"/></r></p></e>
 <e>       <re>[¿¡]</re><p><l><s n="lquest"/></l>       <r><s n="lquest"/></r></p></e>
 <e>       <re>[\(\[]</re><p><l><s n="lpar"/></l>       <r><s n="lpar"/></r></p></e>

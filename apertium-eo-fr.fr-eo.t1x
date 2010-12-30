@@ -234,7 +234,6 @@
       <cat-item lemma="prpers_fort" tags="prn.pro.*"/>
     </def-cat>
 
-
     <def-cat n="relatiu"> <!-- EO-->
       <cat-item tags="prn.rel.*"/>
     </def-cat>
@@ -853,7 +852,85 @@
       <cat-item lemma="milier" tags="n.*"/>
       <cat-item lemma="million" tags="n.*"/>
       <cat-item lemma="milliard" tags="n.*"/>
+      <cat-item lemma="billion" tags="n.*"/>
       <cat-item lemma="quantité" tags="n.*"/>
+      <cat-item lemma="mètre" tags="n.*"/>
+      <cat-item lemma="décimètre" tags="n.*"/>
+      <cat-item lemma="centimètre" tags="n.*"/>
+      <cat-item lemma="millimètre" tags="n.*"/>
+      <cat-item lemma="micromètre" tags="n.*"/>
+      <cat-item lemma="decamètre" tags="n.*"/>
+      <cat-item lemma="hectomètre" tags="n.*"/>
+      <cat-item lemma="kilomètre" tags="n.*"/>
+      <cat-item lemma="mille" tags="n.*"/>
+      <cat-item lemma="lieue" tags="n.*"/>
+      <cat-item lemma="hectàrea" tags="n.*"/>
+      <cat-item lemma="litre" tags="n.*"/>
+      <cat-item lemma="décilitre" tags="n.*"/>
+      <cat-item lemma="centilitre" tags="n.*"/>
+      <cat-item lemma="millilitre" tags="n.*"/>
+      <cat-item lemma="microlitre" tags="n.*"/>
+      <cat-item lemma="décalitre" tags="n.*"/>
+      <cat-item lemma="héctolitre" tags="n.*"/>
+      <cat-item lemma="gramme" tags="n.*"/>
+      <cat-item lemma="décigramme" tags="n.*"/>
+      <cat-item lemma="centigramme" tags="n.*"/>
+      <cat-item lemma="milligramme" tags="n.*"/>
+      <cat-item lemma="microgramme" tags="n.*"/>
+      <cat-item lemma="décagramme" tags="n.*"/>
+      <cat-item lemma="hectogramme" tags="n.*"/>
+      <cat-item lemma="kilogramme" tags="n.*"/>
+      <cat-item lemma="quintal" tags="n.*"/>
+      <cat-item lemma="tonne" tags="n.*"/>
+      <cat-item lemma="watt" tags="n.*"/>
+      <cat-item lemma="kilowatt" tags="n.*"/>
+      <cat-item lemma="mégawatt" tags="n.*"/>
+      <cat-item lemma="bit" tags="n.*"/>
+      <cat-item lemma="kilobit" tags="n.*"/>
+      <cat-item lemma="mégabit" tags="n.*"/>
+      <cat-item lemma="byte" tags="n.*"/>
+      <cat-item lemma="kilobyte" tags="n.*"/>
+      <cat-item lemma="mégabyte" tags="n.*"/>
+      <cat-item lemma="gigabyte" tags="n.*"/>
+      <cat-item lemma="térabyte" tags="n.*"/>
+      <cat-item lemma="octet" tags="n.*"/>
+      <cat-item lemma="kilooctet" tags="n.*"/>
+      <cat-item lemma="mégaoctet" tags="n.*"/>
+      <cat-item lemma="gigaoctet" tags="n.*"/>
+      <cat-item lemma="téraoctet" tags="n.*"/>
+      <cat-item lemma="calorie" tags="n.*"/>
+      <cat-item lemma="kilocalorie" tags="n.*"/>
+      <cat-item lemma="km²" tags="n.*"/>
+      <cat-item lemma="m²" tags="n.*"/>
+      <cat-item lemma="km" tags="n.*"/>
+      <cat-item lemma="m" tags="n.*"/>
+      <cat-item lemma="l" tags="n.*"/>
+      <cat-item lemma="dl" tags="n.*"/>
+      <cat-item lemma="cl" tags="n.*"/>
+      <cat-item lemma="ml" tags="n.*"/>
+      <cat-item lemma="kg" tags="n.*"/>
+      <cat-item lemma="g" tags="n.*"/>
+      <cat-item lemma="dg" tags="n.*"/>
+      <cat-item lemma="cg" tags="n.*"/>
+      <cat-item lemma="mg" tags="n.*"/>
+      <cat-item lemma="W" tags="n.*"/>
+      <cat-item lemma="kW" tags="n.*"/>
+      <cat-item lemma="MW" tags="n.*"/>
+      <cat-item lemma="b" tags="n.*"/>
+      <cat-item lemma="kb" tags="n.*"/>
+      <cat-item lemma="Mb" tags="n.*"/>
+      <cat-item lemma="B" tags="n.*"/>
+      <cat-item lemma="KB" tags="n.*"/>
+      <cat-item lemma="MB" tags="n.*"/>
+      <cat-item lemma="GB" tags="n.*"/>
+      <cat-item lemma="TB" tags="n.*"/>
+      <cat-item lemma="o" tags="n.*"/>
+      <cat-item lemma="Ko" tags="n.*"/>
+      <cat-item lemma="Mo" tags="n.*"/>
+      <cat-item lemma="Go" tags="n.*"/>
+      <cat-item lemma="To" tags="n.*"/>
+      <cat-item lemma="cal" tags="n.*"/>
+      <cat-item lemma="kcal" tags="n.*"/>
     </def-cat>
 
   </section-def-cats>
@@ -1417,8 +1494,9 @@
 	<var n="nombre"/>
 	<lit v=""/>
       </let>
+
       <choose>
-	<when>
+	<when> <!-- okazo 1: se la nombroj egalas, ni elektas tiun ĉi -->
 	  <test>
 	    <equal>
 	      <clip pos="1" side="tl" part="nbr"/>
@@ -1429,10 +1507,14 @@
 	    <var n="nombre"/>
 	    <clip pos="2" side="tl" part="nbr"/>
 	  </let>
+<let>
+<var n="xxx"/>
+<lit-tag v="1"/>
+</let>
 	</when>
-	<when>
+
+	<when> <!-- okazo 2: se la unua nombro estas nedifinita -->
 	  <test>
-	    <and>
 	      <or>
 	        <equal>
 		  <clip pos="1" side="tl" part="nbr"/>
@@ -1443,28 +1525,84 @@
 		  <lit-tag v="sp"/>
 	        </equal>
 	      </or>
-	      <or>
-	        <equal>
-		  <clip pos="2" side="tl" part="nbr"/>
-		  <lit-tag v="sg"/>
-	        </equal>
-	        <equal>
-		  <clip pos="2" side="tl" part="nbr"/>
-		  <lit-tag v="pl"/>
-	        </equal>
-	      </or>
-	    </and>
 	  </test>
-	  <let>
-	    <clip pos="1" side="tl" part="nbr"/>
-	    <clip pos="2" side="tl" part="nbr"/>
-	  </let>
-	  <let>
-	    <var n="nombre"/>
-	    <clip pos="2" side="tl" part="nbr"/>
-	  </let>
+	  <choose>
+	    <when> <!-- 2.1: se dua nombro estas difinita, ni elektas ĝin -->
+	      <test>
+	        <or>
+	          <equal>
+		    <clip pos="2" side="tl" part="nbr"/>
+		    <lit-tag v="sg"/>
+	          </equal>
+	          <equal>
+		    <clip pos="2" side="tl" part="nbr"/>
+		    <lit-tag v="pl"/>
+	          </equal>
+	        </or>
+	      </test>
+	      <let>
+	        <clip pos="1" side="tl" part="nbr"/>
+	        <clip pos="2" side="tl" part="nbr"/>
+	      </let>
+	      <let>
+	        <var n="nombre"/>
+	        <clip pos="2" side="tl" part="nbr"/>
+	      </let>
+<let>
+<var n="xxx"/>
+<lit-tag v="2"/>
+</let>
+	    </when>
+	    <when> <!-- 2.2: se dua elemento estas nombro, ni esploras ĝin -->
+	      <test>
+	        <equal>
+		  <clip pos="2" side="sl" part="a_num"/>
+		  <lit-tag v="num.ciph"/>
+	        </equal>
+	      </test>
+<let>
+<var n="xxx"/>
+<lit-tag v="4a"/>
+</let>
+	      <choose>
+	        <when> <!-- 2.2.1: se la nombro estas 1, ni elektas singularon -->
+	          <test>
+	            <equal>
+		      <clip pos="2" side="sl" part="lem"/>
+		      <lit v="1"/>
+	            </equal>
+	          </test>
+	          <let>
+	            <var n="nombre"/>
+	            <lit-tag v="sg"/>
+	          </let>
+	        </when>
+	        <otherwise> <!-- 2.2.2: aliokaze, ni elektas pluralon -->
+	          <let>
+	            <var n="nombre"/>
+	            <lit-tag v="pl"/>
+	          </let>
+	        </otherwise>
+	      </choose>
+	    </when>
+	    <otherwise> <!-- 2.3: aliokaze, ni elektas la nombron de la dua elemento -->
+	      <let>
+	        <var n="nombre"/>
+	        <clip pos="2" side="tl" part="nbr"/>
+	      </let>
+<let>
+<var n="xxx"/>
+<concat>
+<lit-tag v="3a"/>
+<clip pos="1" side="sl" part="lem"/>
+<clip pos="2" side="sl" part="lem"/>
+</concat>
+</let>
+	    </otherwise>
+	  </choose>
 	</when>
-	<when>
+
+	<when> <!-- okazo 3: se la dua nombro estas nedifinita -->
 	  <test>
 	    <or>
 	      <equal>
@@ -1477,16 +1615,61 @@
 	      </equal>
 	    </or>
 	  </test>
-	  <let>
-	    <var n="nombre"/>
-	    <clip pos="1" side="tl" part="nbr"/>
-	  </let>
+	  <choose>
+	    <when> <!-- 3.1: se unua elemento estas nombro, ni esploras ĝin -->
+	      <test>
+	        <equal>
+		  <clip pos="1" side="sl" part="a_num"/>
+		  <lit-tag v="num.ciph"/>
+	        </equal>
+	      </test>
+<let>
+<var n="xxx"/>
+<lit-tag v="4b"/>
+</let>
+	      <choose>
+	      <when> <!-- 3.1.1: se la nombro estas 1, ni elektas singularon -->
+	        <test>
+	          <equal>
+		    <clip pos="1" side="sl" part="lem"/>
+		    <lit v="1"/>
+	          </equal>
+	        </test>
+	        <let>
+	          <var n="nombre"/>
+	          <lit-tag v="sg"/>
+	        </let>
+	      </when>
+	      <otherwise> <!-- 3.1.2: aliokaze, ni elektas pluralon -->
+	        <let>
+	          <var n="nombre"/>
+	          <lit-tag v="pl"/>
+	        </let>
+	      </otherwise>
+	      </choose>
+	    </when>
+	    <otherwise> <!-- 3.2: aliokaze, ni elektas la nombron de la unua elemento -->
+	      <let>
+	        <var n="nombre"/>
+	        <clip pos="1" side="tl" part="nbr"/>
+	      </let>
+<let>
+<var n="xxx"/>
+<lit-tag v="3b"/>
+</let>
+	    </otherwise>
+	  </choose>
 	</when>
-	<otherwise>
+
+	<otherwise> <!-- 4: aliokaze, ni elektas la nombron de la unua elemento (eblus de la dua: io ajn) -->
 	  <let>
 	    <var n="nombre"/>
 	    <clip pos="1" side="tl" part="nbr"/>
 	  </let>
+<let>
+<var n="xxx"/>
+<lit-tag v="5"/>
+</let>
 	</otherwise>
       </choose>
     </def-macro>
@@ -3051,6 +3234,48 @@
     </rule>
 
 
+<rule comment="REGLA: LOKNOMO (identigo de loknomo por t2x)">
+      <pattern>
+	<pattern-item n="loc"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="nombro1">
+	  <with-param pos="1"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<let>
+	  <var n="nombre"/>
+	  <clip pos="1" side="tl" part="nbr"/>
+	</let>
+	<out>
+	  <chunk name="loc" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><lit-tag v="m"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><lit-tag v="nom"/></tag>
+	    </tags>
+	    <lu>
+	      <clip pos="1" side="tl" part="lem"/>
+	      <lit-tag v="np"/>
+	      <lit-tag v="loc"/>
+	      <lit-tag v="3"/>
+	      <lit-tag v="4"/>
+	    </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
 <rule comment="REGLA: ART PROPRA_NOMO/AKRONIMO (les Pyrénées - Pireneoj; forigo de la artikolo)">
       <pattern>
 	<pattern-item n="def"/>
@@ -3071,7 +3296,7 @@
 	  <clip pos="2" side="tl" part="nbr"/>
 	</let>
 	<out>
-	  <chunk name="nom" case="caseFirstWord">
+	  <chunk name="loc" case="caseFirstWord"> <!-- ne ĉiam loknomo, sed ne gravas -->
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -3336,7 +3561,7 @@
 <otherwise>           <!-- altres (amb cas)-->
 
 	<out>
-	  <chunk name="det_nom3" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="2" side="sl" part="gen"/></tag>
@@ -3410,7 +3635,7 @@
 	    </lu>
 	  </chunk>
  	  <b pos="1"/>
-	  <chunk name="nom">
+	  <chunk name="loc">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><lit-tag v="m"/></tag>
@@ -3459,7 +3684,7 @@
 	    </lu>
 	  </chunk>
  	    <b/>
-	  <chunk name="nom">
+	  <chunk name="loc">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="3" side="sl" part="gen"/></tag>
@@ -3505,7 +3730,7 @@
 	    </lu>
 	  </chunk>
  	  <b pos="1"/>
-	  <chunk name="nom">
+	  <chunk name="loc">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="2" side="sl" part="gen"/></tag>
@@ -3531,7 +3756,7 @@
 	    </lu>
 	  </chunk>
  	  <b pos="3"/>
-	  <chunk name="nom">
+	  <chunk name="loc">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="4" side="sl" part="gen"/></tag>
@@ -3582,7 +3807,7 @@
 	    </lu>
 	  </chunk>
  	  <b pos="1"/>
-	  <chunk name="nom">
+	  <chunk name="loc">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="2" side="sl" part="gen"/></tag>
@@ -3608,7 +3833,7 @@
 	    </lu>
 	  </chunk>
  	  <b pos="4"/>
-	  <chunk name="nom">
+	  <chunk name="loc">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="5" side="sl" part="gen"/></tag>
@@ -3660,7 +3885,7 @@
 	    </lu>
 	  </chunk>
  	  <b pos="2"/>
-	  <chunk name="nom">
+	  <chunk name="loc">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="3" side="sl" part="gen"/></tag>
@@ -3686,7 +3911,7 @@
 	    </lu>
 	  </chunk>
  	  <b pos="5"/>
-	  <chunk name="nom">
+	  <chunk name="loc">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="6" side="sl" part="gen"/></tag>
@@ -3725,7 +3950,7 @@
 	  <clip pos="1" side="tl" part="nbr"/>
 	</let>
 	<out>
-	  <chunk name="det_nom5" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="3" side="sl" part="gen"/></tag>
@@ -3773,7 +3998,7 @@
 	  <clip pos="1" side="tl" part="nbr"/>
 	</let>
 	<out>
-	  <chunk name="det_nom6" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="2" side="sl" part="gen"/></tag>
@@ -3820,7 +4045,7 @@
 	  <clip pos="1" side="tl" part="nbr"/>
 	</let>
 	<out>
-	  <chunk name="det_nom7" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="2" side="sl" part="gen"/></tag>
@@ -3873,7 +4098,7 @@
 	    </lu>
 	  </chunk>
  	  <b pos="1"/>
-	  <chunk name="nom">
+	  <chunk name="loc">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="2" side="sl" part="gen"/></tag>
@@ -3899,7 +4124,7 @@
 	    </lu>
 	  </chunk>
  	  <b pos="3"/>
-	  <chunk name="nom">
+	  <chunk name="loc">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="4" side="sl" part="gen"/></tag>
@@ -4074,7 +4299,7 @@
    </choose>
 
 	<out>
-	  <chunk name="det_nom2" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SA"/></tag>
 	      <tag><clip pos="3" side="sl" part="gen"/></tag>
@@ -4324,7 +4549,7 @@
 <otherwise>           <!-- altres (amb cas)-->
 
 	<out>
-	  <chunk name="det_nom3" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="2" side="sl" part="gen"/></tag>
@@ -6286,7 +6511,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
-	  <chunk name="det_nom_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -6433,7 +6658,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
-	  <chunk name="det_nom_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -6572,7 +6797,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
-	  <chunk name="det_nom_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -6730,7 +6955,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
-	  <chunk name="det_nom_adj_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -6899,7 +7124,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
-	  <chunk name="det_nom_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -7054,7 +7279,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
-	  <chunk name="det_nom_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -7205,7 +7430,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
-	  <chunk name="det_nom_adj_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -7368,7 +7593,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
-	  <chunk name="det_nom_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -7678,7 +7903,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	    </lu>
 	  </chunk>
  	    <b/>
-	  <chunk name="det_nom_adj">
+	  <chunk name="det_nom">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -7734,14 +7959,14 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	<call-macro n="nombro3">
 	  <with-param pos="2"/>
 	  <with-param pos="1"/>
-	  <with-param pos="3"/>
+	  <with-param pos="4"/>
 	</call-macro>
 	<call-macro n="default_nombro">
 	</call-macro>
 	<call-macro n="genro3">
 	  <with-param pos="2"/>
 	  <with-param pos="1"/>
-	  <with-param pos="3"/>
+	  <with-param pos="4"/>
 	</call-macro>
 	<call-macro n="default_genro">
 	</call-macro>
@@ -7797,7 +8022,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
   </when>
   <otherwise>
 	<out>
-	  <chunk name="det_nom_adv_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -8085,7 +8310,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
   </when>
   <otherwise>
 	<out>
-	  <chunk name="det_nom_adv_adj_coo_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -8233,7 +8458,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 </when>
 <otherwise>           <!-- article definit-->
 	    <out>
-	      <chunk name="det_nom_adj_coo_adj" case="caseFirstWord">
+	      <chunk name="det_nom" case="caseFirstWord">
 		<tags>
 		  <tag><lit-tag v="SN"/></tag>
 	          <tag><var n="genere"/></tag>
@@ -8390,7 +8615,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 </when>
 <otherwise>           <!-- article definit-->
 	    <out>
-	      <chunk name="det_nom_adj_coo_adj" case="caseFirstWord">
+	      <chunk name="det_nom" case="caseFirstWord">
 		<tags>
 		  <tag><lit-tag v="SN"/></tag>
 	          <tag><var n="genere"/></tag>
@@ -9219,7 +9444,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
    </choose>
 
 	<out>
-	  <chunk name="det_nom_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -9432,7 +9657,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
-	  <chunk name="det_nom_adj_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -9643,7 +9868,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
-	  <chunk name="det_nom_adj_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -10170,7 +10395,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
-	  <chunk name="det_nom_adj_adj_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -10429,7 +10654,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
-	  <chunk name="det_nom_adj_adj_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -10729,7 +10954,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
-	  <chunk name="det_nom_adj_adj_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -10902,7 +11127,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
-	  <chunk name="det_nom_adj_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -11058,7 +11283,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
-	  <chunk name="det_nom_adj_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -11331,7 +11556,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 <otherwise>           <!-- altres (amb cas)-->
 
 	<out>
-	  <chunk name="det_nom4" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -11721,7 +11946,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </when>
 <otherwise>           <!-- article definit-->
 	<out>
-	  <chunk name="det_nom_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -12039,7 +12264,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	    </lu>
 	  </chunk>
  	    <b/>
-	  <chunk name="det_nom_adj">
+	  <chunk name="det_nom">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -12179,7 +12404,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
   </when>
   <otherwise>
 	<out>
-	  <chunk name="det_nom_adv_adj" case="caseFirstWord">
+	  <chunk name="det_nom" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><var n="genere"/></tag>
@@ -12494,7 +12719,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 </when>
 <otherwise>           <!-- article definit-->
 	    <out>
-	      <chunk name="det_nom_adj_coo_adj" case="caseFirstWord">
+	      <chunk name="det_nom" case="caseFirstWord">
 		<tags>
 		  <tag><lit-tag v="SN"/></tag>
 	          <tag><var n="genere"/></tag>
@@ -12668,7 +12893,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 </when>
 <otherwise>           <!-- article definit-->
 	    <out>
-	      <chunk name="det_nom_adj_coo_adj" case="caseFirstWord">
+	      <chunk name="det_nom" case="caseFirstWord">
 		<tags>
 		  <tag><lit-tag v="SN"/></tag>
 	          <tag><var n="genere"/></tag>
