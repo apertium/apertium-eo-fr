@@ -247,10 +247,6 @@
       <cat-item tags="prn.rel.*"/>
     </def-cat>
 
-    <def-cat n="relatiu_prep"> <!-- EO-->
-      <cat-item tags="rel.*"/>
-    </def-cat>
-
     <def-cat n="enc">
       <cat-item tags="prn.enc.*"/>
     </def-cat>
@@ -759,10 +755,15 @@
     <def-cat n="de_von"> <!-- por familiaj nomoj -->
       <cat-item lemma="de" tags="pr"/>
       <cat-item lemma="von" tags=""/>
-      <cat-item lemma="van" tags=""/>
+      <cat-item lemma="van" tags="n.*"/>
       <cat-item lemma="del" tags=""/>
+      <cat-item lemma="dello" tags=""/>
+      <cat-item lemma="della" tags=""/>
+      <cat-item lemma="delli" tags=""/>
+      <cat-item lemma="delle" tags=""/>
       <cat-item lemma="do" tags=""/>
       <cat-item lemma="da" tags=""/>
+      <cat-item lemma="di" tags=""/>
       <cat-item lemma="du" tags="pr"/>
     </def-cat>
 
@@ -1167,6 +1168,7 @@
 
   <def-list n="moviment"> <!-- BCN EO-->
     <list-item v="aller"/>
+    <list-item v="venir"/>
     <list-item v="introduire"/>
     <list-item v="entrer"/>
     <list-item v="mettre"/>
@@ -24505,7 +24507,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 <rule comment="PREP + PRONOM relatiu EO( dels quals, pels que, als que ...)">
       <pattern>
 	<pattern-item n="prep"/>
-	<pattern-item n="relatiu_prep"/>
+	<pattern-item n="relatiu"/>
       </pattern>
       <action>
 	<call-macro n="firstWord">
@@ -24531,7 +24533,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
 	  <b pos="1"/>
-	  <chunk name="prn">
+	  <chunk name="relatiu">
 	    <tags>
 	      <tag><lit-tag v="SNrelatiuZ"/></tag>
               <tag><lit-tag v="rel"/></tag>
@@ -24542,8 +24544,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	    <lu>
 	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_prn"/>
-              <lit-tag v="nn"/>
-	      <clip pos="2" side="tl" part="nbr" link-to="3"/>
+	      <clip pos="2" side="tl" part="tipus_prn"/>
+              <lit-tag v="3"/>
+              <lit-tag v="4"/>
 	    </lu>
 	  </chunk>
 	</out>
