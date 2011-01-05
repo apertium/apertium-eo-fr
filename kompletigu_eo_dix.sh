@@ -2,7 +2,9 @@
 
 PREF=/tmp/kompletigu_fr-eo
 
- lt-expand apertium-eo-fr.fr.dix |grep -v REGEXP | grep -e ':>:' -e '\w:\w' | sed 's/:>:/%/g' | sed 's/:/%/g' | cut -f2 -d'%' | uniq -u | sed 's/^/^/g' | sed 's/$/$^;<sent>$/g' | 
+make
+
+lt-expand apertium-eo-fr.fr.dix |grep -v REGEXP | grep -e ':>:' -e '\w:\w' | sed 's/:>:/%/g' | sed 's/:/%/g' | cut -f2 -d'%' | uniq -u | sed 's/^/^/g' | sed 's/$/$^;<sent>$/g' | 
 #	head -1000 |
         apertium-pretransfer|
 #        apertium-transfer-j fr-eo.t1x.class fr-eo.t1x.bin fr-eo.autobil.bin |

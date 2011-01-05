@@ -803,10 +803,10 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e r="LR"><p><l>al<b/>oni</l> <r>prpers<s n="prn"/><s n="dat"/><s n="p3"/><s n="mf"/><s n="sg"/></r></p></e>
 </pardef>
 <pardef n="urls">
-  <e>       <re>(((www.)|(http://))[a-z0-9\-]+([.][a-z]+)+(/[a-z0-9_]+)*([.][a-z]+)*)</re><p><l></l><r><s n="num"/></r></p></e>
+  <e>       <re>(((www.)|(http://))[a-z0-9\-]+([.][a-z]+)+(/[a-z0-9_]+)*([.][a-z]+)*)</re><p><l></l><r><s n="np"/><s n="loc"/><s n="mf"/><s n="sg"/></r></p></e>
 </pardef>
 <pardef n="emails">
-  <e>       <re>[a-z.]+@[a-z.]+</re><p><l></l><r><s n="num"/></r></p></e>
+  <e>       <re>[a-zA-Z0-9._\-]+@[a-zA-Z0-9._\-]+</re><p><l></l><r><s n="np"/><s n="loc"/><s n="mf"/><s n="sg"/></r></p></e>
 </pardef>
   </pardefs>
 
@@ -983,7 +983,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="abrikotarbo">     <i>abrikotarb</i><par n="o__n"/></e>
 <e lm="Abril">           <i>Abril</i><par n="Marie__np"/></e>
 <e lm="abrogi">          <i>abrog</i><par n="i__vblex"/></e>
-<e lm="abrotano">        <i>abrotan</i><par n="ino__n"/></e>
+<e lm="abrotano">        <i>abrotan</i><par n="o__n"/></e>
 <e lm="abrupta">         <i>abrupt</i><par n="a__adj"/></e>
 <e lm="abrupte">         <i>abrupt</i><par n="e__adv"/></e>
 <e lm="Absalón">         <i>Absalón</i><par n="Mark__np"/></e>
@@ -991,7 +991,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="absciso">         <i>abscis</i><par n="o__n"/></e>
 <e lm="absido">          <i>absid</i><par n="o__n"/></e>
 <e lm="absideto">        <i>absidet</i><par n="o__n"/></e>
-<e lm="absinto">         <i>absint</i><par n="ino__n"/></e>
+<e lm="absinto">         <i>absint</i><par n="o__n"/></e>
 <e lm="absoluta">        <i>absolut</i><par n="a__adj"/></e>
 <e lm="absolute">        <i>absolut</i><par n="e__adv"/></e>
 <e lm="absolute konverĝa"><i>absolute<b/>konverĝ</i><par n="a__adj"/></e>
@@ -2285,7 +2285,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Amar">            <i>Amar</i><par n="Smith__np"/></e>
 <e lm="Amara">           <i>Amara</i><par n="Marie__np"/></e>
 <e lm="Amaral">          <i>Amaral</i><par n="Smith__np"/></e>
-<e lm="amaranto">        <i>amarant</i><par n="ino__n"/></e>
+<e lm="amaranto">        <i>amarant</i><par n="o__n"/></e>
 <e lm="Amaranta">        <i>Amaranta</i><par n="Marie__np"/></e>
 <e lm="amareco">         <i>amarec</i><par n="o__n"/></e>
 <e lm="Amari">           <i>Amari</i><par n="Marie__np"/></e>
@@ -7080,14 +7080,10 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Cinda">           <i>Cinda</i><par n="Marie__np"/></e>
 <e lm="Cindra">          <i>Cindr</i><par n="a__adj"/></e>
 <e lm="cindro">          <i>cindr</i><par n="o__n"/></e>
-<e lm="Cindra Merkredo"> <p><l>Cindra<b/>Merkredo</l><r>Cindra<b/>Merkredo<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
-<e lm="Cindra Merkredo"> <p><l>Cindraj<b/>Merkredoj</l><r>Cindra<b/>Merkredo<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
-<e lm="Cindra Merkredo"> <p><l>Cindrajn<b/>Merkredojn</l><r>Cindra<b/>Merkredo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
-<e lm="Cindra Merkredo"> <p><l>Cindran<b/>Merkredon</l><r>Cindra<b/>Merkredo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="cindrigi">        <i>cindrig</i><par n="i__vblex"/></e>
 <e lm="cindrigo">        <i>cindrig</i><par n="o__n"/></e>
 <e lm="cindrogriza">     <i>cindrogriz</i><par n="a__adj"/></e>
-<e lm="Cindromerkredo">  <i>Cindromerkred</i><par n="o__n"/></e>
+<e lm="Cindromerkredo">  <i>Cindromerkred</i><par n="Vikipedi/o__np"/></e>
 <e lm="cindrujo">        <i>cindruj</i><par n="o__n"/></e>
 <e lm="cindrulino">      <i>cindrulin</i><par n="o__n"/></e>
 <e lm="Cindy">           <i>Cindy</i><par n="Marie__np"/></e>
@@ -7916,16 +7912,25 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="daŭra">           <i>daŭr</i><par n="a__adj"/></e>
 <e lm="hieraŭa">           <i>hieraŭ</i><par n="a__adj"/></e>
 <e lm="tiaspeca">           <i>tiaspec</i><par n="a__adj"/></e>
+<e lm="grada">           <i>grad</i><par n="a__adj"/></e>
+<e lm="potencialhava">           <i>potencialhav</i><par n="a__adj"/></e>
+<e lm="rezerva">           <i>rezerv</i><par n="a__adj"/></e>
 <e lm="ordona">           <i>ordon</i><par n="a__adj"/></e>
 <e lm="daŭri">           <i>daŭr</i><par n="i__vblex"/></e>
 <e lm="daŭre">           <i>daŭr</i><par n="e__adv"/></e>
 <e lm="daŭro">           <i>daŭr</i><par n="o__n"/></e>
+<e lm="ekzistopruvo">           <i>ekzistopruv</i><par n="o__n"/></e>
 <e lm="daŭrigi">         <i>daŭrig</i><par n="i__vblex"/></e>
 <e lm="daŭrigo">         <i>daŭrig</i><par n="o__n"/></e>
 <e lm="de">              <i>de</i><par n="al__pr"/></e>
 <e lm="elde">              <i>elde</i><par n="al__pr"/></e>
 <e lm="de diste">        <i>de<b/>diste</i><par n="jam__adv"/></e>
+<e lm="de ĉirkaŭ">        <i>de<b/>ĉirkaŭ</i><par n="al__pr"/></e>
+<e lm="de ĉirkaŭe">        <i>de<b/>ĉirkaŭe</i><par n="jam__adv"/></e>
+<e lm="de antaŭ">        <i>de<b/>antaŭ</i><par n="al__pr"/></e>
 <e lm="de ĉe">        <i>de<b/>ĉe</i><par n="al__pr"/></e>
+<e lm="akompanate de">        <i>akompanate<b/>de</i><par n="al__pr"/></e>
+<e lm="kontraŭpaĝe de">        <i>kontraŭpaĝe<b/>de</i><par n="al__pr"/></e>
 <e lm="de hodiaŭ">       <i>de<b/>hodiaŭ</i><par n="jam__adv"/></e>
 <e lm="de ilia flanko">  <i>de<b/>ilia<b/>flanko</i><par n="jam__adv"/></e>
 <e lm="de kiam">         <i>de<b/>kiam</i><par n="after__cnjadv"/></e>
@@ -8259,6 +8264,15 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="peti ies manon">   <i>pet</i><par n="i__vblex"/><p><l><b/>ies<b/>manon</l><r><g><b/>ies<b/>manon</g></r></p></e>
 <e lm="demandi">         <i>demand</i><par n="i__vblex"/></e>
 <e lm="demandi sin">     <i>demand</i><par n="i__vblex"/><p><l><b/>sin</l><r><g><b/>sin</g></r></p></e> <!-- ERARO: NE FUNKCIAS -->
+<e lm="teni sin">     <i>ten</i><par n="i__vblex"/><p><l><b/>sin</l><r><g><b/>sin</g></r></p></e> <!-- ERARO: NE FUNKCIAS -->
+<e lm="deteni sin">     <i>deten</i><par n="i__vblex"/><p><l><b/>sin</l><r><g><b/>sin</g></r></p></e> <!-- ERARO: NE FUNKCIAS -->
+<e lm="glori sin">     <i>glor</i><par n="i__vblex"/><p><l><b/>sin</l><r><g><b/>sin</g></r></p></e> <!-- ERARO: NE FUNKCIAS -->
+<e lm="forpafi sin">     <i>forpaf</i><par n="i__vblex"/><p><l><b/>sin</l><r><g><b/>sin</g></r></p></e> <!-- ERARO: NE FUNKCIAS -->
+<e lm="gvidi sin">     <i>gvid</i><par n="i__vblex"/><p><l><b/>sin</l><r><g><b/>sin</g></r></p></e> <!-- ERARO: NE FUNKCIAS -->
+<e lm="trudi sin">     <i>trud</i><par n="i__vblex"/><p><l><b/>sin</l><r><g><b/>sin</g></r></p></e> <!-- ERARO: NE FUNKCIAS -->
+<e lm="interesi sin">     <i>interes</i><par n="i__vblex"/><p><l><b/>sin</l><r><g><b/>sin</g></r></p></e> <!-- ERARO: NE FUNKCIAS -->
+<e lm="mortigi sin">     <i>mortig</i><par n="i__vblex"/><p><l><b/>sin</l><r><g><b/>sin</g></r></p></e> <!-- ERARO: NE FUNKCIAS -->
+<e lm="svati sin">     <i>svat</i><par n="i__vblex"/><p><l><b/>sin</l><r><g><b/>sin</g></r></p></e> <!-- ERARO: NE FUNKCIAS -->
 <e lm="intersekci sin">     <i>intersekc</i><par n="i__vblex"/><p><l><b/>sin</l><r><g><b/>sin</g></r></p></e> <!-- ERARO: NE FUNKCIAS -->
 <e lm="kondamni sin">     <i>kondamn</i><par n="i__vblex"/><p><l><b/>sin</l><r><g><b/>sin</g></r></p></e> <!-- ERARO: NE FUNKCIAS -->
 <e lm="konfidi sin">     <i>konfid</i><par n="i__vblex"/><p><l><b/>sin</l><r><g><b/>sin</g></r></p></e> <!-- ERARO: NE FUNKCIAS -->
@@ -8441,7 +8455,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="dermatologiisto"> <i>dermatologiist</i><par n="ino__n"/></e>
 <e lm="dermatozo">       <i>dermatoz</i><par n="o__n"/></e>
 <e lm="Dermidio">        <i>Dermidio</i><par n="Mark__np"/></e>
-<e lm="dermito">         <i>dermit</i><par n="ino__n"/></e>
+<e lm="dermito">         <i>dermit</i><par n="o__n"/></e>
 <e lm="Derome">          <i>Derome</i><par n="Smith__np"/></e>
 <e lm="derompi">         <i>deromp</i><par n="i__vblex"/></e>
 <e lm="Derosa">          <i>Derosa</i><par n="Smith__np"/></e>
@@ -9682,7 +9696,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="dunganto">        <i>dungant</i><par n="ino__n"/></e>
 <e lm="dungito">         <i>dungit</i><par n="ino__n"/></e>
 <e lm="dungitaro">       <i>dungitar</i><par n="o__n"/></e>
-<e lm="dungosoldato">    <i>dungosoldat</i><par n="ino__n"/></e>
 <e lm="dungosoldato">    <i>dungosoldat</i><par n="o__n"/></e>
 <e lm="Dunkerque">       <i>Dunkerque</i><par n="Barcelona__np"/></e>
 <e lm="Dunn">            <i>Dunn</i><par n="Smith__np"/></e>
@@ -9713,7 +9726,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="duonfinalo">      <i>duonfinal</i><par n="o__n"/></e>
 <e lm="duonfrato">       <i>duonfrat</i><par n="ino__n"/></e>
 <e lm="Duong">           <i>Duong</i><par n="Smith__np"/></e>
-<e lm="duonganto">       <i>duongant</i><par n="o__n"/></e>
 <e lm="duonglobo">       <i>duonglob</i><par n="o__n"/></e>
 <e lm="duongrupo">       <i>duongrup</i><par n="o__n"/></e>
 <e lm="duoniganto">      <i>duonigant</i><par n="o__n"/></e>
@@ -12243,6 +12255,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="fereca">          <i>ferec</i><par n="a__adj"/></e>
 <e lm="ferepoko">        <i>ferepok</i><par n="o__n"/></e>
 <e lm="ferganto">        <i>fergant</i><par n="o__n"/></e>
+<e lm="duonganto">        <i>duonganto</i><par n="o__n"/></e>
 <e lm="Fergus">          <i>Fergus</i><par n="Mark__np"/></e>
 <e lm="Ferguson">        <i>Ferguson</i><par n="Smith__np"/></e>
 <e lm="ferii">           <i>feri</i><par n="i__vblex"/></e>
@@ -12444,7 +12457,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="filmi">           <i>film</i><par n="i__vblex"/></e>
 <e lm="filmo">           <i>film</i><par n="o__n"/></e>
 <e lm="videofilmo">      <i>videofilm</i><par n="o__n"/></e>
-<e lm="filmaktoro">      <i>filmaktor</i><par n="o__n"/></e>
+<e lm="filmaktoro">      <i>filmaktor</i><par n="ino__n"/></e>
 <e lm="filmilo">         <i>filmil</i><par n="o__n"/></e>
 <e lm="filmkaseto">      <i>filmkaset</i><par n="o__n"/></e>
 <e lm="filmludi">        <i>filmlud</i><par n="i__vblex"/></e>
@@ -13455,7 +13468,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="frostoŝvelo">     <i>frostoŝvel</i><par n="o__n"/></e>
 <e lm="frostujo">        <i>frostuj</i><par n="o__n"/></e>
 <e lm="froti">           <i>frot</i><par n="i__vblex"/></e>
-<e lm="froto">           <i>frot</i><par n="ino__n"/></e>
+<e lm="froto">           <i>frot</i><par n="o__n"/></e>
 <e lm="frotado">         <i>frotad</i><par n="o__n"/></e>
 <e lm="frotaĵo">         <i>frotaĵ</i><par n="o__n"/></e>
 <e lm="froteto">         <i>frotet</i><par n="o__n"/></e>
@@ -14319,7 +14332,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="gimnazia diplomito"><p><l>gimnazian<b/>diplomitinon</l><r>gimnazia<b/>diplomito<s n="n"/><s n="f"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="gimnazia diplomito"><p><l>gimnazian<b/>diplomiton</l><r>gimnazia<b/>diplomito<s n="n"/><s n="m"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="gimnospermo">     <i>gimnosperm</i><par n="o__n"/></e>
-<e lm="gimnoto">         <i>gimnot</i><par n="ino__n"/></e>
+<e lm="gimnoto">         <i>gimnot</i><par n="o__n"/></e>
 <e lm="gimnotedo">       <i>gimnoted</i><par n="o__n"/></e>
 <e lm="Gina">            <i>Gina</i><par n="Marie__np"/></e>
 <e lm="Gince">           <i>Gince</i><par n="Smith__np"/></e>
@@ -14470,7 +14483,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="gliti">           <i>glit</i><par n="i__vblex"/></e>
 <e lm="glito">           <i>glit</i><par n="o__n"/></e>
 <e lm="glitado">         <i>glitad</i><par n="o__n"/></e>
-<e lm="glitboato">       <i>glitboat</i><par n="ino__n"/></e>
+<e lm="glitboato">       <i>glitboat</i><par n="o__n"/></e>
 <e lm="glite-glate">     <i>glite-glat</i><par n="e__adv"/></e>
 <e lm="glitfali">        <i>glitfal</i><par n="i__vblex"/></e>
 <e lm="glitfoldo">       <i>glitfold</i><par n="o__n"/></e>
@@ -15181,7 +15194,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="halfo">           <i>half</i><par n="o__n"/></e>
 <e lm="Halie">           <i>Halie</i><par n="Marie__np"/></e>
 <e lm="Halim">           <i>Halim</i><par n="Mark__np"/></e>
-<e lm="halioto">         <i>haliot</i><par n="ino__n"/></e>
+<e lm="halioto">         <i>haliot</i><par n="o__n"/></e>
 <e lm="Hall">            <i>Hall</i><par n="Smith__np"/></e>
 <e lm="Halle">           <i>Halle</i><par n="Marie__np"/></e>
 <e lm="Hallie">          <i>Hallie</i><par n="Marie__np"/></e>
@@ -15202,7 +15215,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="haltejo">         <i>haltej</i><par n="o__n"/></e>
 <e lm="haltero">         <i>halter</i><par n="o__n"/></e>
 <e lm="haltigi">         <i>haltig</i><par n="i__vblex"/></e>
-<e lm="haltigilo">       <i>haltigil</i><par n="ino__n"/></e>
+<e lm="haltigilo">       <i>haltigil</i><par n="o__n"/></e>
 <e lm="haltigŝuo">       <i>haltigŝu</i><par n="o__n"/></e>
 <e lm="haltsignalo">     <i>haltsignal</i><par n="o__n"/></e>
 <e lm="haltstreko">      <i>haltstrek</i><par n="o__n"/></e>
@@ -15522,7 +15535,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Helvetia">        <i>Helvetia</i><par n="Marie__np"/></e>
 <e lm="Helvio">          <i>Helvio</i><par n="Mark__np"/></e>
 <e lm="Hem">             <i>Hem</i><par n="Barcelona__np"/></e>
-<e lm="hematito">        <i>hematit</i><par n="ino__n"/></e>
+<e lm="hematito">        <i>hematit</i><par n="o__n"/></e>
 <e lm="hematomo">        <i>hematom</i><par n="o__n"/></e>
 <e lm="Hemenegilda">     <i>Hemenegilda</i><par n="Marie__np"/></e>
 <e lm="hemerokalo">      <i>hemerokal</i><par n="o__n"/></e>
@@ -15710,7 +15723,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Hidalgo">         <i>Hidalgo</i><par n="Smith__np"/></e>
 <e lm="hidri">           <i>hidr</i><par n="i__vblex"/></e>
 <e lm="hidro">           <i>hidr</i><par n="o__n"/></e>
-<e lm="hidranto">        <i>hidrant</i><par n="ino__n"/></e>
+<e lm="hidranto">        <i>hidrant</i><par n="o__n"/></e>
 <e lm="hidrargo">        <i>hidrarg</i><par n="o__n"/></e>
 <e lm="hidrata">         <i>hidrat</i><par n="a__adj"/></e>
 <e lm="hidrato">         <i>hidrat</i><par n="o__n"/></e>
@@ -16377,7 +16390,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="identigi">        <i>identig</i><par n="i__vblex"/></e>
 <e lm="identigo">        <i>identig</i><par n="o__n"/></e>
 <e lm="identiĝi">        <i>identiĝ</i><par n="i__vblex"/></e>
-<e lm="idento-rilato">   <i>idento-rilat</i><par n="ino__n"/></e>
+<e lm="idento-rilato">   <i>idento-rilat</i><par n="o__n"/></e>
 <e lm="ideografio">      <i>ideografi</i><par n="o__n"/></e>
 <e lm="ideografiaĵo">    <i>ideografiaĵ</i><par n="o__n"/></e>
 <e lm="ideologo">        <i>ideolog</i><par n="ino__n"/></e>
@@ -17020,7 +17033,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="intermita">       <i>intermit</i><par n="a__adj"/></e>
 <e lm="intermiti">       <i>intermit</i><par n="i__vblex"/></e>
 <e lm="intermite">       <i>intermit</i><par n="e__adv"/></e>
-<e lm="intermito">       <i>intermit</i><par n="ino__n"/></e>
+<e lm="intermito">       <i>intermit</i><par n="o__n"/></e>
 <e lm="intermonto">      <i>intermont</i><par n="o__n"/></e>
 <e lm="intermuro">       <i>intermur</i><par n="o__n"/></e>
 <e lm="interna">         <i>intern</i><par n="a__adj"/></e>
@@ -18220,7 +18233,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Kajima">          <i>Kajima</i><par n="Wikipedia__np"/></e>
 <e lm="kajmano">         <i>kajman</i><par n="o__n"/></e>
 <e lm="kajto">           <i>kajt</i><par n="o__n"/></e>
-<e lm="kajtielpluo">     <i>kajtielplu</i><par n="o__n"/></e>
+<e lm="kaj tiel plu">     <i>kaj<b/>tiel<b/>plu</i><par n="jam__adv"/></e>
+<e lm="kotopo">     <i>kotopo</i><par n="jam__adv"/></e>
 <e lm="kajuto">          <i>kajut</i><par n="o__n"/></e>
 <e lm="kako">            <i>kak</i><par n="o__n"/></e>
 <e lm="kakao">           <i>kaka</i><par n="o__n"/></e>
@@ -19005,7 +19019,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="kaŝludo">         <i>kaŝlud</i><par n="o__n"/></e>
 <e lm="kaŝnomo">         <i>kaŝnom</i><par n="o__n"/></e>
 <e lm="kaŝobservi">      <i>kaŝobserv</i><par n="i__vblex"/></e>
-<e lm="kaŝpasaĝero">     <i>kaŝpasaĝer</i><par n="o__n"/></e>
+<e lm="kaŝpasaĝero">     <i>kaŝpasaĝer</i><par n="ino__n"/></e>
 <e lm="kaŝslipeto">      <i>kaŝslipet</i><par n="o__n"/></e>
 <e lm="kaŝtano">         <i>kaŝtan</i><par n="o__n"/></e>
 <e lm="kaŝtanarbo">      <i>kaŝtanarb</i><par n="o__n"/></e>
@@ -19424,7 +19438,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="klakĉapelo">      <i>klakĉapel</i><par n="o__n"/></e>
 <e lm="klana">           <i>klan</i><par n="a__adj"/></e>
 <e lm="klano">           <i>klan</i><par n="o__n"/></e>
-<e lm="klangulo">        <i>klangul</i><par n="ino__n"/></e>
+<e lm="klangulo">        <i>klangul</i><par n="o__n"/></e>
 <e lm="klapo">           <i>klap</i><par n="o__n"/></e>
 <e lm="klapego">         <i>klapeg</i><par n="o__n"/></e>
 <e lm="klappordo">       <i>klappord</i><par n="o__n"/></e>
@@ -19489,7 +19503,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="kliento">         <i>klient</i><par n="ino__n"/></e>
 <e lm="klientaro">       <i>klientar</i><par n="o__n"/></e>
 <e lm="klifo">           <i>klif</i><par n="o__n"/></e>
-<e lm="kliko">           <i>klik</i><par n="ino__n"/></e>
+<e lm="kliko">           <i>klik</i><par n="o__n"/></e>
 <e lm="klimakso">        <i>klimaks</i><par n="o__n"/></e>
 <e lm="klimata">         <i>klimat</i><par n="a__adj"/></e>
 <e lm="klimato">         <i>klimat</i><par n="o__n"/></e>
@@ -20090,6 +20104,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="kondiĉa probablo"><p><l>kondiĉajn<b/>probablojn</l><r>kondiĉa<b/>probablo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
 <e lm="kondiĉa probablo"><p><l>kondiĉan<b/>probablon</l><r>kondiĉa<b/>probablo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="kondiĉe ke">      <i>kondiĉe<b/>ke</i><par n="after__cnjadv"/></e>
+<e lm="tiamaniere ke">      <i>tiamaniere<b/>ke</i><par n="after__cnjadv"/></e>
 <e lm="kondolenci">      <i>kondolenc</i><par n="i__vblex"/></e>
 <e lm="kondolenco">      <i>kondolenc</i><par n="o__n"/></e>
 <e lm="kondomo">         <i>kondom</i><par n="o__n"/></e>
@@ -20884,7 +20899,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="kriminalisto">    <i>kriminalist</i><par n="ino__n"/></e>
 <e lm="krimoscienco">    <i>krimoscienc</i><par n="o__n"/></e>
 <e lm="krimosciencisto"> <i>krimosciencist</i><par n="ino__n"/></e>
-<e lm="krimromano">      <i>krimroman</i><par n="ino__n"/></e>
+<e lm="krimromano">      <i>krimroman</i><par n="o__n"/></e>
 <e lm="krimscienco">     <i>krimscienc</i><par n="o__n"/></e>
 <e lm="krimulo">         <i>krimul</i><par n="ino__n"/></e>
 <e lm="krimularo">       <i>krimular</i><par n="o__n"/></e>
@@ -23015,22 +23030,22 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="London">          <i>London</i><par n="Smith__np"/></e>
 <e lm="Londono">         <i>London</i><par n="Barcelon/o__np"/></e>
 <e lm="Ontario">         <i>Ontari</i><par n="Barcelon/o__np"/></e>
-<e lm="Londona Akciborso"><p><l>Londona<b/>Akciborso</l><r>Londona<b/>Akciborso<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
-<e lm="Londona Akciborso"><p><l>Londonaj<b/>Akciborsoj</l><r>Londona<b/>Akciborso<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
-<e lm="Londona Akciborso"><p><l>Londonajn<b/>Akciborsojn</l><r>Londona<b/>Akciborso<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="Londona Akciborso"><p><l>Londona<b/>Akciborso</l><r>Londona<b/>Akciborso<s n="np"/><s n="al"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Londona Akciborso"><p><l>Londonaj<b/>Akciborsoj</l><r>Londona<b/>Akciborso<s n="np"/><s n="al"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="Londona Akciborso"><p><l>Londonajn<b/>Akciborsojn</l><r>Londona<b/>Akciborso<s n="np"/><s n="al"/><s n="pl"/><s n="acc"/></r></p></e>
 <e lm="londonano">       <i>londonan</i><par n="ino__n"/></e>
-<e lm="Londona Akciborso"><p><l>Londonan<b/>Akciborson</l><r>Londona<b/>Akciborso<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Londona Akciborso"><p><l>Londonan<b/>Akciborson</l><r>Londona<b/>Akciborso<s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="longa">           <i>long</i><par n="a__adj"/></e>
 <e lm="longe">           <i>long</i><par n="e__adv"/></e>
 <e lm="longo">           <i>long</i><par n="o__n"/></e>
 <e lm="Long">            <i>Long</i><par n="Smith__np"/></e>
-<e lm="longa hararo">    <p><l>longa hararo</l><r>longa hararo<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="longa hararo">    <p><l>longa<b/>hararo</l><r>longa<b/>hararo<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="longa-krura">     <i>longa-krur</i><par n="a__adj"/></e>
 <e lm="longa tempo">     <i>longa<b/>tempo</i><par n="jam__adv"/></e>
-<e lm="longa hararo">    <p><l>longaj hararoj</l><r>longa hararo<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
-<e lm="longa hararo">    <p><l>longajn hararojn</l><r>longa hararo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="longa hararo">    <p><l>longaj<b/>hararoj</l><r>longa<b/>hararo<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="longa hararo">    <p><l>longajn<b/>hararojn</l><r>longa<b/>hararo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
 <e lm="longano">         <i>longan</i><par n="o__n"/></e>
-<e lm="longa hararo">    <p><l>longan hararon</l><r>longa hararo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="longa hararo">    <p><l>longan<b/>hararon</l><r>longa<b/>hararo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="longanarbo">      <i>longanarb</i><par n="o__n"/></e>
 <e lm="longanujo">       <i>longanuj</i><par n="o__n"/></e>
 <e lm="longatempe">      <i>longatemp</i><par n="e__adv"/></e>
@@ -23319,7 +23334,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="luprenanto">      <i>luprenant</i><par n="ino__n"/></e>
 <e lm="luprezo">         <i>luprez</i><par n="o__n"/></e>
 <e lm="Lusignan">        <i>Lusignan</i><par n="Smith__np"/></e>
-<e lm="lusoldato">       <i>lusoldat</i><par n="ino__n"/></e>
 <e lm="lusoldato">       <i>lusoldat</i><par n="o__n"/></e>
 <e lm="Lussier">         <i>Lussier</i><par n="Smith__np"/></e>
 <e lm="lustro">          <i>lustr</i><par n="o__n"/></e>
@@ -24100,14 +24114,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="malnobla">        <i>malnobl</i><par n="a__adj"/></e>
 <e lm="malnobligi">      <i>malnoblig</i><par n="i__vblex"/></e>
 <e lm="malnova">         <i>malnov</i><par n="a__adj"/></e>
-<e lm="malnova mondo">   <p><l>malnova<b/>mondo</l><r>malnova<b/>mondo<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
-<e lm="Malnova testamento"><p><l>Malnova<b/>testamento</l><r>Malnova<b/>testamento<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
-<e lm="malnova mondo">   <p><l>malnovaj<b/>mondoj</l><r>malnova<b/>mondo<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
-<e lm="Malnova testamento"><p><l>Malnovaj<b/>testamentoj</l><r>Malnova<b/>testamento<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
-<e lm="malnova mondo">   <p><l>malnovajn<b/>mondojn</l><r>malnova<b/>mondo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
-<e lm="Malnova testamento"><p><l>Malnovajn<b/>testamentojn</l><r>Malnova<b/>testamento<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
-<e lm="malnova mondo">   <p><l>malnovan<b/>mondon</l><r>malnova<b/>mondo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
-<e lm="Malnova testamento"><p><l>Malnovan<b/>testamenton</l><r>Malnova<b/>testamento<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="Malo">            <i>Malo</i><par n="Smith__np"/></e>
 <e lm="malobei">         <i>malobe</i><par n="i__vblex"/></e>
 <e lm="malobeado">       <i>malobead</i><par n="o__n"/></e>
@@ -24989,7 +24995,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="matriarkeco">     <i>matriarkec</i><par n="o__n"/></e>
 <e lm="matrica">         <i>matric</i><par n="a__adj"/></e>
 <e lm="matrico">         <i>matric</i><par n="o__n"/></e>
-<e lm="Unio de Sovetaj Socialismaj Respublikoj"><i>Uni</i><par n="Barcelon/o__np"/><p><l><b/>de<b/>Sovetaj<b/>Socialismaj<b/>Respublikoj</l><r><g><b/>de<b/>Sovetaj<b/>Socialismaj<b/>Respublikoj</g></r></p></e>
 <e lm="matrico de vektora homomorfio"><i>matric</i><par n="o__n"/><p><l><b/>de<b/>vektora<b/>homomorfio</l><r><g><b/>de<b/>vektora<b/>homomorfio</g></r></p></e>
 <e lm="matrica adicio">  <p><l>matrica<b/>adicio</l><r>matrica<b/>adicio<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="matrica multipliko"><p><l>matrica<b/>multipliko</l><r>matrica<b/>multipliko<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
@@ -26045,6 +26050,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Moderie">         <i>Moderie</i><par n="Smith__np"/></e>
 <e lm="moderigi">        <i>moderig</i><par n="i__vblex"/></e>
 <e lm="Organizaĵo de Petrol-Eksportaj Landoj">    <i>Organizaĵ</i><par n="Vikipedi/o__np"/><p><l><b/>de<b/>Petrol-Eksportaj<b/>Landoj</l><r><g><b/>de<b/>Petrol-Eksportaj<b/>Landoj</g></r></p></e>
+<e lm="Unio de Sovetaj Socialismaj Respublikoj">    <i>Uni</i><par n="Barcelon/o__np"/><p><l><b/>de<b/>Sovetaj<b/>Socialismaj<b/>Respublikoj</l><r><g><b/>de<b/>Sovetaj<b/>Socialismaj<b/>Respublikoj</g></r></p></e>
 <e lm="Organizaĵo por Ekonomiaj Kunlaboro kaj Evoluigo">    <i>Organizaĵ</i><par n="Vikipedi/o__np"/><p><l><b/>por<b/>Ekonomiaj<b/>Kunlaboro<b/>kaj<b/>Evoluigo</l><r><g><b/>por<b/>Ekonomiaj<b/>Kunlaboro<b/>kaj<b/>Evoluigo</g></r></p></e>
 <e lm="moderigi sin">    <i>moderig</i><par n="i__vblex"/><p><l><b/>sin</l><r><g><b/>sin</g></r></p></e>
 <e lm="elorbitigi la okulojn">    <i>elorbitig</i><par n="i__vblex"/><p><l><b/>la<b/>okulojn</l><r><g><b/>la<b/>okulojn</g></r></p></e>
@@ -26054,6 +26060,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="modernigi">       <i>modernig</i><par n="i__vblex"/></e>
 <e lm="modesta">         <i>modest</i><par n="a__adj"/></e>
 <e lm="modeste">         <i>modest</i><par n="e__adv"/></e>
+<e lm="pudore">         <i>pudor</i><par n="e__adv"/></e>
+<e lm="heroe">         <i>hero</i><par n="e__adv"/></e>
 <e lm="modesto">         <i>modest</i><par n="o__n"/></e>
 <e lm="modesteco">       <i>modestec</i><par n="o__n"/></e>
 <e lm="Modesto">         <i>Modesto</i><par n="Mark__np"/></e>
@@ -26138,7 +26146,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Monaghan">        <i>Monaghan</i><par n="Smith__np"/></e>
 <e lm="mona subunuo">    <p><l>monaj<b/>subunuoj</l><r>mona<b/>subunuo<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
 <e lm="mona subunuo">    <p><l>monajn<b/>subunuojn</l><r>mona<b/>subunuo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
-<e lm="monako">          <i>monak</i><par n="o__n"/></e>
 <e lm="Monako">          <i>Monak</i><par n="Barcelon/o__np"/></e>
 <e lm="monakano">        <i>monakan</i><par n="ino__n"/></e>
 <e lm="monalo">          <i>monal</i><par n="o__n"/></e>
@@ -26410,7 +26417,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="mortinto">        <i>mortint</i><par n="ino__n"/></e>
 <e lm="mortintaĵo">      <i>mortintaĵ</i><par n="o__n"/></e>
 <e lm="mortokondamni">   <i>mortokondamn</i><par n="i__vblex"/></e>
-<e lm="mortokvanto">     <i>mortokvant</i><par n="ino__n"/></e>
+<e lm="mortokvanto">     <i>mortokvant</i><par n="o__n"/></e>
 <e lm="Morton">          <i>Morton</i><par n="Smith__np"/></e>
 <e lm="mortonto">        <i>mortont</i><par n="ino__n"/></e>
 <e lm="mortopuno">       <i>mortopun</i><par n="o__n"/></e>
@@ -26902,7 +26909,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Nasir">           <i>Nasir</i><par n="Mark__np"/></e>
 <e lm="naski">           <i>nask</i><par n="i__vblex"/></e>
 <e lm="naskanto">        <i>naskant</i><par n="ino__n"/></e>
-<e lm="naskantino">      <i>naskantin</i><par n="o__n"/></e>
 <e lm="naskema">         <i>naskem</i><par n="a__adj"/></e>
 <e lm="naskigi">         <i>naskig</i><par n="i__vblex"/></e>
 <e lm="naskita">         <i>naskit</i><par n="a__adj"/></e>
@@ -28005,15 +28011,16 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Nov-Zelando">     <i>Nov-Zeland</i><par n="Barcelon/o__np"/></e>
 <e lm="nov-zelandano">   <i>nov-zelandan</i><par n="ino__n"/></e>
 <e lm="novao">           <i>nova</i><par n="o__n"/></e>
-<e lm="nova mondo">      <p><l>nova<b/>mondo</l><r>nova<b/>mondo<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
-<e lm="Nova testamento"> <p><l>Nova<b/>testamento</l><r>Nova<b/>testamento<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
-<e lm="nova mondo">      <p><l>novaj<b/>mondoj</l><r>nova<b/>mondo<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
-<e lm="Nova testamento"> <p><l>Novaj<b/>testamentoj</l><r>Nova<b/>testamento<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
-<e lm="nova mondo">      <p><l>novajn<b/>mondojn</l><r>nova<b/>mondo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
-<e lm="Nova testamento"> <p><l>Novajn<b/>testamentojn</l><r>Nova<b/>testamento<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="Malnova Testamento"><p><l>Malnova<b/>Testamento</l><r>Malnova<b/>Testamento<s n="np"/><s n="al"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Malnova Testamento"><p><l>Malnovaj<b/>Testamentoj</l><r>Malnova<b/>Testamento<s n="np"/><s n="al"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="Malnova Testamento"><p><l>Malnovajn<b/>Testamentojn</l><r>Malnova<b/>Testamento<s n="np"/><s n="al"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="Malnova Testamento"><p><l>Malnovan<b/>Testamenton</l><r>Malnova<b/>Testamento<s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Nova Testamento"> <p><l>Nova<b/>Testamento</l><r>Nova<b/>Testamento<s n="np"/><s n="al"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Nova Testamento"> <p><l>Novaj<b/>Testamentoj</l><r>Nova<b/>Testamento<s n="np"/><s n="al"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="Nova Testamento"> <p><l>Novajn<b/>Testamentojn</l><r>Nova<b/>Testamento<s n="np"/><s n="al"/><s n="pl"/><s n="acc"/></r></p></e>
 <e lm="Novak">           <i>Novak</i><par n="Smith__np"/></e>
 <e lm="Novalinga">       <i>Novalinga</i><par n="Smith__np"/></e>
-<e lm="nova mondo">      <p><l>novan<b/>mondon</l><r>nova<b/>mondo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="nova mondo">      <p><l>novan<b/>Mondon</l><r>nova<b/>Mondo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="Nova testamento"> <p><l>Novan<b/>testamenton</l><r>Nova<b/>testamento<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="Novartis">        <i>Novartis</i><par n="Wikipedia__np"/></e>
 <e lm="novaĵo">          <i>novaĵ</i><par n="o__n"/></e>
@@ -28048,6 +28055,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="nu">              <i>nu</i><par n="jam__adv"/></e>
 <e lm="nu">              <i>nu</i><par n="after__cnjadv"/></e>
 <e lm="nu">              <i>nu</i><par n="adiós__ij"/></e>
+<e lm="jen">              <i>jen</i><par n="adiós__ij"/></e>
 <e lm="nuanci">          <i>nuanc</i><par n="i__vblex"/></e>
 <e lm="nuanco">          <i>nuanc</i><par n="o__n"/></e>
 <e lm="nuba">            <i>nub</i><par n="a__adj"/></e>
@@ -28779,7 +28787,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="orta simetrio">   <p><l>ortan<b/>simetrion</l><r>orta<b/>simetrio<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="ortangula">       <i>ortangul</i><par n="a__adj"/></e>
 <e lm="ortangulo">       <i>ortangul</i><par n="o__n"/></e>
-<e lm="ortanto">         <i>ortant</i><par n="ino__n"/></e>
+<e lm="ortanto">         <i>ortant</i><par n="o__n"/></e>
 <e lm="Ortega">          <i>Ortega</i><par n="Smith__np"/></e>
 <e lm="ortilo">          <i>ortil</i><par n="o__n"/></e>
 <e lm="Ortiz">           <i>Ortiz</i><par n="Smith__np"/></e>
@@ -30817,6 +30825,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="posta steveno">   <p><l>postan<b/>stevenon</l><r>posta<b/>steveno<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="postanto">        <i>postant</i><par n="ino__n"/></e>
 <e lm="postaĵo">         <i>postaĵ</i><par n="o__n"/></e>
+<e lm="legiano">         <i>legian</i><par n="o__n"/></e>
 <e lm="postbutiko">      <i>postbutik</i><par n="o__n"/></e>
 <e lm="postbuŝo">        <i>postbuŝ</i><par n="o__n"/></e>
 <e lm="postdiploma kurso"><p><l>postdiploma<b/>kurso</l><r>postdiploma<b/>kurso<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
@@ -31207,7 +31216,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="princlando">      <i>princland</i><par n="o__n"/></e>
 <e lm="princujo">        <i>princuj</i><par n="o__n"/></e>
 <e lm="prinoti">         <i>prinot</i><par n="i__vblex"/></e>
-<e lm="prinoto">         <i>prinot</i><par n="ino__n"/></e>
+<e lm="prinoto">         <i>prinot</i><par n="o__n"/></e>
 <e lm="printi">          <i>print</i><par n="i__vblex"/></e>
 <e lm="printempa">       <i>printemp</i><par n="a__adj"/></e>
 <e lm="printempo">       <i>printemp</i><par n="o__n"/></e>
@@ -31605,8 +31614,9 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="pruvo per indukto"><i>pruv</i><par n="o__n"/><p><l><b/>per<b/>indukto</l><r><g><b/>per<b/>indukto</g></r></p></e>
 <e lm="pruvo de ekzisto"><i>pruv</i><par n="o__n"/><p><l><b/>de<b/>ekzisto</l><r><g><b/>de<b/>ekzisto</g></r></p></e>
 <e lm="pruvo de indukto"><i>pruv</i><par n="o__n"/><p><l><b/>de<b/>indukto</l><r><g><b/>de<b/>indukto</g></r></p></e>
-<e lm="pruvo de redukto al absurdo"><i>pruv</i><par n="o__n"/><p><l><b/>de<b/>redukto<b/>al<b/>absurdo</l><r><g><b/>de<b/>redukto<b/>al<b/>absurdo</g></r></p></e>
+<e lm="pruvo per redukto al absurdo"><i>pruv</i><par n="o__n"/><p><l><b/>per<b/>redukto<b/>al<b/>absurdo</l><r><g><b/>per<b/>redukto<b/>al<b/>absurdo</g></r></p></e>
 <e lm="pruvo">           <i>pruv</i><par n="o__n"/></e>
+<e lm="vojforko">           <i>vojfork</i><par n="o__n"/></e>
 <e lm="pruvebla">        <i>pruvebl</i><par n="a__adj"/></e>
 <e lm="Práxedes">        <i>Práxedes</i><par n="Marie__np"/></e>
 <e lm="Précourt">        <i>Précourt</i><par n="Smith__np"/></e>
@@ -31709,7 +31719,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="puglekulo">       <i>puglekul</i><par n="ino__n"/></e>
 <e lm="Pugliese">        <i>Pugliese</i><par n="Smith__np"/></e>
 <e lm="pugno">           <i>pugn</i><par n="o__n"/></e>
-<e lm="pugnoganto">      <i>pugnogant</i><par n="ino__n"/></e>
 <e lm="pugnoganto">      <i>pugnogant</i><par n="o__n"/></e>
 <e lm="pugtruo">         <i>pugtru</i><par n="o__n"/></e>
 <e lm="Pujol">           <i>Pujol</i><par n="Smith__np"/></e>
@@ -34851,7 +34860,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="serĉante">        <i>serĉante</i><par n="al__pr"/></e>
 <e lm="serĉfosi">        <i>serĉfos</i><par n="i__vblex"/></e>
 <e lm="serĝo">           <i>serĝ</i><par n="o__n"/></e>
-<e lm="serĝento">        <i>serĝent</i><par n="ino__n"/></e>
+<e lm="serĝento">        <i>serĝent</i><par n="o__n"/></e>
 <e lm="sesa">            <i>ses</i><par n="a__adj"/></e>
 <e lm="sese">            <i>ses</i><par n="e__adv"/></e>
 <e lm="ses">             <i>ses</i><par n="du__num"/></e>
@@ -35638,9 +35647,9 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Solania">         <i>Solania</i><par n="Marie__np"/></e>
 <e lm="Solano">          <i>Solano</i><par n="Mark__np"/></e>
 <e lm="soldo">           <i>sold</i><par n="o__n"/></e>
-<e lm="soldato">         <i>soldat</i><par n="ino__n"/></e>
+<e lm="soldato">         <i>soldat</i><par n="o__n"/></e>
 <e lm="soldatejo">       <i>soldatej</i><par n="o__n"/></e>
-<e lm="soldulo">         <i>soldul</i><par n="ino__n"/></e>
+<e lm="soldulo">         <i>soldul</i><par n="o__n"/></e>
 <e lm="soleo">           <i>sole</i><par n="o__n"/></e>
 <e lm="soleca">          <i>solec</i><par n="a__adj"/></e>
 <e lm="soleco">          <i>solec</i><par n="o__n"/></e>
@@ -36151,8 +36160,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="sternumo">        <i>sternum</i><par n="o__n"/></e>
 <e lm="stertoro">        <i>stertor</i><par n="o__n"/></e>
 <e lm="stetoskopo">      <i>stetoskop</i><par n="o__n"/></e>
-<e lm="stevardo">        <i>stevard</i><par n="o__n"/></e>
-<e lm="stevardino">      <i>stevardin</i><par n="o__n"/></e>
+<e lm="stevardo">        <i>stevard</i><par n="ino__n"/></e>
 <e lm="Steve">           <i>Steve</i><par n="Mark__np"/></e>
 <e lm="Steven">          <i>Steven</i><par n="Mark__np"/></e>
 <e lm="Stevens">         <i>Stevens</i><par n="Smith__np"/></e>
@@ -36203,6 +36211,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="stokasta variablo"><p><l>stokastajn<b/>variablojn</l><r>stokasta<b/>variablo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
 <e lm="stokasta variablo"><p><l>stokastan<b/>variablon</l><r>stokasta<b/>variablo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="Stokholmo">       <i>Stokholm</i><par n="Barcelon/o__np"/></e>
+<e lm="Aralo">       <i>Aral</i><par n="Barcelon/o__np"/></e>
 <e lm="stolo">           <i>stol</i><par n="o__n"/></e>
 <e lm="stolono">         <i>stolon</i><par n="o__n"/></e>
 <e lm="stomako">         <i>stomak</i><par n="o__n"/></e>
@@ -36997,6 +37006,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="taga">            <i>tag</i><par n="a__adj"/></e>
 <e lm="tage">            <i>tag</i><par n="e__adv"/></e>
 <e lm="tago de Valenteno"><i>tag</i><par n="o__n"/><p><l><b/>de<b/>Valenteno</l><r><g><b/>de<b/>Valenteno</g></r></p></e>
+<e lm="topologio de simpla konverĝo"><i>topologi</i><par n="o__n"/><p><l><b/>de<b/>simpla<b/>konverĝo</l><r><g><b/>de<b/>simpla<b/>konverĝo</g></r></p></e>
+<e lm="topologio de unforma konverĝo"><i>topologi</i><par n="o__n"/><p><l><b/>de<b/>unforma<b/>konverĝo</l><r><g><b/>de<b/>unforma<b/>konverĝo</g></r></p></e>
 <e lm="tago">            <i>tag</i><par n="o__n"/></e>
 <e lm="tagaloga">        <i>tagalog</i><par n="a__adj"/></e>
 <e lm="tagalogo">        <i>tagalog</i><par n="o__n"/></e>
@@ -38869,7 +38880,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="unuj el">         <p><l>unuj<b/>el</l><r>unu<b/>el<s n="det"/><s n="ind"/><s n="pl"/><s n="nom"/></r></p></e>
 <e lm="unu">             <p><l>unujn</l>     <r>unu<s n="prn"/><s n="tn"/><s n="pl"/><s n="acc"/></r></p></e>
 <e lm="unujn el">        <p><l>unujn<b/>el</l><r>unu<b/>el<s n="det"/><s n="ind"/><s n="pl"/><s n="acc"/></r></p></e>
-<e lm="unukornulo">      <i>unukornul</i><par n="ino__n"/></e>
+<e lm="unukornulo">      <i>unukornul</i><par n="o__n"/></e>
 <e lm="unukotiledona">   <i>unukotiledon</i><par n="a__adj"/></e>
 <e lm="unuloka">         <i>unulok</i><par n="a__adj"/></e>
 <e lm="pensiga">         <i>pensig</i><par n="a__adj"/></e>
@@ -39119,7 +39130,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Vallipuram">      <i>Vallipuram</i><par n="Smith__np"/></e>
 <e lm="Vallières">       <i>Vallières</i><par n="Smith__np"/></e>
 <e lm="Vallée">          <i>Vallée</i><par n="Smith__np"/></e>
-<e lm="Valo de la Reĝoj"><i>Valo<b/>de<b/>la<b/>Reĝ</i><par n="And/oj__np"/></e>
 <e lm="Valois">          <i>Valois</i><par n="Smith__np"/></e>
 <e lm="valona">          <i>valon</i><par n="a__adj"/></e>
 <e lm="valono">          <i>valon</i><par n="ino__n"/></e>
@@ -39968,7 +39978,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="vivmedio">        <i>vivmedi</i><par n="o__n"/></e>
 <e lm="vivograva">       <i>vivograv</i><par n="a__adj"/></e>
 <e lm="vivokuro">        <i>vivokur</i><par n="o__n"/></e>
-<e lm="vivopano">        <i>vivopan</i><par n="ino__n"/></e>
 <e lm="vivopano">        <i>vivopan</i><par n="o__n"/></e>
 <e lm="vivoplena">       <i>vivoplen</i><par n="a__adj"/></e>
 <e lm="vivoprotokolo">   <i>vivoprotokol</i><par n="o__n"/></e>
@@ -40765,7 +40774,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="ĉagrena">         <i>ĉagren</i><par n="a__adj"/></e>
 <e lm="ĉagreni">         <i>ĉagren</i><par n="i__vblex"/></e>
 <e lm="ĉagreno">         <i>ĉagren</i><par n="o__n"/></e>
-<e lm="ĉajoto">          <i>ĉajot</i><par n="ino__n"/></e>
+<e lm="ĉajoto">          <i>ĉajot</i><par n="o__n"/></e>
 <e lm="ĉako">            <i>ĉak</i><par n="o__n"/></e>
 <e lm="ĉakono">          <i>ĉakon</i><par n="o__n"/></e>
 <e lm="ĉakro">           <i>ĉakr</i><par n="o__n"/></e>
@@ -41330,7 +41339,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="ĵonglisto">       <i>ĵonglist</i><par n="ino__n"/></e>
 <e lm="ĵudo">            <i>ĵud</i><par n="o__n"/></e>
 <e lm="ĵudisto">         <i>ĵudist</i><par n="ino__n"/></e>
-<e lm="ĵulo">            <i>ĵul</i><par n="ino__n"/></e>
 <e lm="ĵulo">            <i>ĵul</i><par n="o__n"/></e>
 <e lm="Ĵulo">            <i>Ĵul</i><par n="Mark/o__np"/></e>
 <e lm="ĵuri">            <i>ĵur</i><par n="i__vblex"/></e>
@@ -42975,6 +42983,179 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Supra Normandio"><p><l>Supran<b/>Normandion</l><r>Supra<b/>Normandio<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="Silicia Valo"><p><l>Silicia<b/>Valo</l><r>Silicia<b/>Valo<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="Silicia Valo"><p><l>Silician<b/>Valon</l><r>Silicia<b/>Valo<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
+
+<e lm="griza materio"><p><l>griza<b/>materio</l><r>griza<b/>materio<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="griza materio"><p><l>grizan<b/>materion</l><r>griza<b/>materio<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="griza materio"><p><l>grizaj<b/>materioj</l><r>griza<b/>materio<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="griza materio"><p><l>grizajn<b/>materiojn</l><r>griza<b/>materio<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="blanka materio"><p><l>blanka<b/>materio</l><r>blanka<b/>materio<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="blanka materio"><p><l>blankan<b/>materion</l><r>blanka<b/>materio<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="blanka materio"><p><l>blankaj<b/>materioj</l><r>blanka<b/>materio<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="blanka materio"><p><l>blankajn<b/>materiojn</l><r>blanka<b/>materio<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+
+<e lm="dungigi">            <i>dungig</i><par n="i__vblex"/></e>
+<e lm="legia">            <i>legi</i><par n="a__adj"/></e>
+<e lm="lektoreco">            <i>lektorec</i><par n="o__n"/></e>
+<e lm="teozofia">            <i>teozofi</i><par n="a__adj"/></e>
+<e lm="vojoforko">            <i>vojofork</i><par n="o__n"/></e>
+
+<e lm="rapida ŝoseo"><p><l>rapida<b/>ŝoseo</l><r>rapida<b/>ŝoseo<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="rapida ŝoseo"><p><l>rapida<b/>ŝoseo</l><r>rapida<b/>ŝoseo<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="rapida ŝoseo"><p><l>rapidan<b/>ŝoseon</l><r>rapida<b/>ŝoseo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="rapida ŝoseo"><p><l>rapidaj<b/>ŝoseoj</l><r>rapida<b/>ŝoseo<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="rapida ŝoseo"><p><l>rapidajn<b/>ŝoseojn</l><r>rapida<b/>ŝoseo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="kontinenta drivo"><p><l>kontinenta<b/>drivo</l><r>kontinenta<b/>drivo<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="kontinenta drivo"><p><l>kontinentan<b/>drivon</l><r>kontinenta<b/>drivo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="kontinenta drivo"><p><l>kontinentaj<b/>drivoj</l><r>kontinenta<b/>drivo<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="kontinenta drivo"><p><l>kontinentajn<b/>drivojn</l><r>kontinenta<b/>drivo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="nigra skatolo"><p><l>nigra<b/>skatolo</l><r>nigra<b/>skatolo<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="nigra skatolo"><p><l>nigran<b/>skatolon</l><r>nigra<b/>skatolo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="nigra skatolo"><p><l>nigraj<b/>skatoloj</l><r>nigra<b/>skatolo<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="nigra skatolo"><p><l>nigrajn<b/>skatolojn</l><r>nigra<b/>skatolo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="vektora projekcio"><p><l>vektora<b/>projekcio</l><r>vektora<b/>projekcio<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="vektora projekcio"><p><l>vektoran<b/>projekcion</l><r>vektora<b/>projekcio<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="vektora projekcio"><p><l>vektoraj<b/>projekcioj</l><r>vektora<b/>projekcio<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="vektora projekcio"><p><l>vektorajn<b/>projekciojn</l><r>vektora<b/>projekcio<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="blanka substanco"><p><l>blanka<b/>substanco</l><r>blanka<b/>substanco<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="blanka substanco"><p><l>blankan<b/>substancon</l><r>blanka<b/>substanco<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="blanka substanco"><p><l>blankaj<b/>substancoj</l><r>blanka<b/>substanco<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="blanka substanco"><p><l>blankajn<b/>substancojn</l><r>blanka<b/>substanco<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="griza substanco"><p><l>griza<b/>substanco</l><r>griza<b/>substanco<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="griza substanco"><p><l>grizan<b/>substancon</l><r>griza<b/>substanco<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="griza substanco"><p><l>grizaj<b/>substancoj</l><r>griza<b/>substanco<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="griza substanco"><p><l>grizajn<b/>substancojn</l><r>griza<b/>substanco<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="rapida ŝoseo"><p><l>rapidan<b/>ŝoseon</l><r>rapida<b/>ŝoseo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="rapida ŝoseo"><p><l>rapidaj<b/>ŝoseoj</l><r>rapida<b/>ŝoseo<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="rapida ŝoseo"><p><l>rapidajn<b/>ŝoseojn</l><r>rapida<b/>ŝoseo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="kontinenta drivo"><p><l>kontinenta<b/>drivo</l><r>kontinenta<b/>drivo<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="kontinenta drivo"><p><l>kontinentan<b/>drivon</l><r>kontinenta<b/>drivo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="kontinenta drivo"><p><l>kontinentaj<b/>drivoj</l><r>kontinenta<b/>drivo<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="kontinenta drivo"><p><l>kontinentajn<b/>drivojn</l><r>kontinenta<b/>drivo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="nigra skatolo"><p><l>nigra<b/>skatolo</l><r>nigra<b/>skatolo<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="nigra skatolo"><p><l>nigran<b/>skatolon</l><r>nigra<b/>skatolo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="nigra skatolo"><p><l>nigraj<b/>skatoloj</l><r>nigra<b/>skatolo<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="nigra skatolo"><p><l>nigrajn<b/>skatolojn</l><r>nigra<b/>skatolo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="vektora projekcio"><p><l>vektora<b/>projekcio</l><r>vektora<b/>projekcio<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="vektora projekcio"><p><l>vektoran<b/>projekcion</l><r>vektora<b/>projekcio<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="vektora projekcio"><p><l>vektoraj<b/>projekcioj</l><r>vektora<b/>projekcio<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="vektora projekcio"><p><l>vektorajn<b/>projekciojn</l><r>vektora<b/>projekcio<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="blanka substanco"><p><l>blanka<b/>substanco</l><r>blanka<b/>substanco<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="blanka substanco"><p><l>blankan<b/>substancon</l><r>blanka<b/>substanco<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="blanka substanco"><p><l>blankaj<b/>substancoj</l><r>blanka<b/>substanco<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="blanka substanco"><p><l>blankajn<b/>substancojn</l><r>blanka<b/>substanco<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="griza substanco"><p><l>griza<b/>substanco</l><r>griza<b/>substanco<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="griza substanco"><p><l>grizan<b/>substancon</l><r>griza<b/>substanco<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="griza substanco"><p><l>grizaj<b/>substancoj</l><r>griza<b/>substanco<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="griza substanco"><p><l>grizajn<b/>substancojn</l><r>griza<b/>substanco<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+
+<e lm="Malnova Mondo"><p><l>Malnova<b/>Mondo</l><r>Malnova<b/>Mondo<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Malnova Mondo"><p><l>Malnovan<b/>Mondon</l><r>Malnova<b/>Mondo<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Nova Mondo"><p><l>Nova<b/>Mondo</l><r>Nova<b/>Mondo<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Nova Mondo"><p><l>Novan<b/>Mondon</l><r>Nova<b/>Mondo<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Arabia Maro"><p><l>Arabia<b/>Maro</l><r>Arabia<b/>Maro<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Arabia Maro"><p><l>Arabian<b/>Maron</l><r>Arabia<b/>Maro<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Oĥocka Maro"><p><l>Oĥocka<b/>Maro</l><r>Oĥocka<b/>Maro<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Oĥocka Maro"><p><l>Oĥockan<b/>Maron</l><r>Oĥocka<b/>Maro<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Arala Maro"><p><l>Arala<b/>Maro</l><r>Arala<b/>Maro<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Arala Maro"><p><l>Aralan<b/>Maron</l><r>Arala<b/>Maro<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Azova Maro"><p><l>Azova<b/>Maro</l><r>Azova<b/>Maro<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Azova Maro"><p><l>Azovan<b/>Maron</l><r>Azova<b/>Maro<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Beringa Maro"><p><l>Beringa<b/>Maro</l><r>Beringa<b/>Maro<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Beringa Maro"><p><l>Beringan<b/>Maron</l><r>Beringa<b/>Maro<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
+
+<e lm="Eŭska Naciisma Partio"><p><l>Eŭska<b/>Naciisma<b/>Partio</l><r>Eŭska<b/>Naciisma<b/>Partio<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Eŭska Naciisma Partio"><p><l>Eŭskan<b/>Naciisman<b/>Partion</l><r>Eŭska<b/>Naciisma<b/>Partio<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Eŭska Naciisma Partio"><p><l>Eŭskaj<b/>Naciismaj<b/>Partioj</l><r>Eŭska<b/>Naciisma<b/>Partio<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="Eŭska Naciisma Partio"><p><l>Eŭskajn<b/>Naciismajn<b/>Partiojn</l><r>Eŭska<b/>Naciisma<b/>Partio<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="gazetara konferenco"><p><l>gazetara<b/>konferenco</l><r>gazetara<b/>konferenco<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="gazetara konferenco"><p><l>gazetaran<b/>konferencon</l><r>gazetara<b/>konferenco<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="gazetara konferenco"><p><l>gazetaraj<b/>konferencoj</l><r>gazetara<b/>konferenco<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="gazetara konferenco"><p><l>gazetarajn<b/>konferencojn</l><r>gazetara<b/>konferenco<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="frange d'interférence"><p><l>frange<b/>d'interférence</l><r>frange<b/>d'interférence<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="frange d'interférence"><p><l>frangen<b/>d'interférencen</l><r>frange<b/>d'interférence<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="frange d'interférence"><p><l>frangej<b/>d'interférencej</l><r>frange<b/>d'interférence<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="frange d'interférence"><p><l>frangejn<b/>d'interférencejn</l><r>frange<b/>d'interférence<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="nov-orleana ĵazo"><p><l>nov-orleana<b/>ĵazo</l><r>nov-orleana<b/>ĵazo<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="nov-orleana ĵazo"><p><l>nov-orleanan<b/>ĵazon</l><r>nov-orleana<b/>ĵazo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="nov-orleana ĵazo"><p><l>nov-orleanaj<b/>ĵazoj</l><r>nov-orleana<b/>ĵazo<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="nov-orleana ĵazo"><p><l>nov-orleanajn<b/>ĵazojn</l><r>nov-orleana<b/>ĵazo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="tria stato"><p><l>tria<b/>stato</l><r>tria<b/>stato<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="tria stato"><p><l>trian<b/>staton</l><r>tria<b/>stato<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="tria stato"><p><l>triaj<b/>statoj</l><r>tria<b/>stato<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="tria stato"><p><l>triajn<b/>statojn</l><r>tria<b/>stato<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+
+
+<e lm="adekvateco">            <i>adekvatec</i><par n="o__n"/></e>
+<e lm="akvoimuna">            <i>akvoimun</i><par n="a__adj"/></e>
+<e lm="akvoimuneco">            <i>akvoimunec</i><par n="o__n"/></e>
+<e lm="akvoimunigi">            <i>akvoimunig</i><par n="i__vblex"/></e>
+<e lm="akvoimunigo">            <i>akvoimunig</i><par n="o__n"/></e>
+<e lm="asketa">            <i>asket</i><par n="a__adj"/></e>
+<e lm="askete">            <i>asket</i><par n="e__adv"/></e>
+<e lm="ĉarlatana">            <i>ĉarlatan</i><par n="a__adj"/></e>
+<e lm="ĉarlataneca">            <i>ĉarlatanec</i><par n="a__adj"/></e>
+<e lm="ĉarlatanismo">            <i>ĉarlatanism</i><par n="o__n"/></e>
+<e lm="ĉaskorno">            <i>ĉaskorn</i><par n="o__n"/></e>
+<e lm="duonganto">            <i>duongant</i><par n="ino__n"/></e>
+<e lm="dupieda">            <i>dupied</i><par n="a__adj"/></e>
+<e lm="farita">            <i>farit</i><par n="a__adj"/></e>
+<e lm="fluktua">            <i>fluktu</i><par n="a__adj"/></e>
+<e lm="halioto">            <i>haliot</i><par n="ino__n"/></e>
+<e lm="hematito">            <i>hematit</i><par n="ino__n"/></e>
+<e lm="hidranto">            <i>hidrant</i><par n="ino__n"/></e>
+<e lm="intermito">            <i>intermit</i><par n="ino__n"/></e>
+<e lm="karitata">            <i>karitat</i><par n="a__adj"/></e>
+<e lm="konfesie">            <i>konfesi</i><par n="e__adv"/></e>
+<e lm="lingvoplanado">            <i>lingvoplanad</i><par n="o__n"/></e>
+<e lm="malabunde">            <i>malabund</i><par n="e__adv"/></e>
+<e lm="malsincera">            <i>malsincer</i><par n="a__adj"/></e>
+<e lm="malsincero">            <i>malsincer</i><par n="o__n"/></e>
+<e lm="malsincerulo">            <i>malsincerul</i><par n="ino__n"/></e>
+<e lm="maranemono">            <i>maranemon</i><par n="o__n"/></e>
+<e lm="materie">            <i>materi</i><par n="e__adv"/></e>
+<e lm="materiigi">            <i>materiig</i><par n="i__vblex"/></e>
+<e lm="materiiĝo">            <i>materiiĝ</i><par n="o__n"/></e>
+<e lm="merkatikisto">            <i>merkatikist</i><par n="ino__n"/></e>
+<e lm="monako">            <i>monak</i><par n="ino__n"/></e>
+<e lm="mortokondamnito">            <i>mortokondamnit</i><par n="ino__n"/></e>
+<e lm="mortokvanto">            <i>mortokvant</i><par n="ino__n"/></e>
+<e lm="muŝfungo">            <i>muŝfung</i><par n="o__n"/></e>
+<e lm="naskantino">            <i>naskantin</i><par n="o__n"/></e>
+<e lm="neadekvata">            <i>neadekvat</i><par n="a__adj"/></e>
+<e lm="neadekvate">            <i>neadekvat</i><par n="e__adv"/></e>
+<e lm="neadekvateco">            <i>neadekvatec</i><par n="o__n"/></e>
+<e lm="neelfarita">            <i>neelfarit</i><par n="a__adj"/></e>
+<e lm="nekorektaĵo">            <i>nekorektaĵ</i><par n="o__n"/></e>
+<e lm="nekorekte">            <i>nekorekt</i><par n="e__adv"/></e>
+<e lm="nematerie">            <i>nemateri</i><par n="e__adv"/></e>
+<e lm="nepruvebla">            <i>nepruvebl</i><par n="a__adj"/></e>
+<e lm="nepubera">            <i>nepuber</i><par n="a__adj"/></e>
+<e lm="nepuberulo">            <i>nepuberul</i><par n="ino__n"/></e>
+<e lm="obscene">            <i>obscen</i><par n="e__adv"/></e>
+<e lm="postlumoj">            <i>postlum</i><par n="oj__n"/></e>
+<e lm="profundaĝa">            <i>profundaĝ</i><par n="a__adj"/></e>
+<e lm="protozoa">            <i>protozo</i><par n="a__adj"/></e>
+<e lm="pubera">            <i>puber</i><par n="a__adj"/></e>
+<e lm="puberulo">            <i>puberul</i><par n="ino__n"/></e>
+<e lm="pugnoganto">            <i>pugnogant</i><par n="ino__n"/></e>
+<e lm="retorika">            <i>retorik</i><par n="a__adj"/></e>
+<e lm="rumori">            <i>rumor</i><par n="i__vblex"/></e>
+<e lm="sagaco">            <i>sagac</i><par n="o__n"/></e>
+<e lm="saŝimio">            <i>saŝimi</i><par n="o__n"/></e>
+<e lm="senpova">            <i>senpov</i><par n="a__adj"/></e>
+<e lm="serĝento">            <i>serĝent</i><par n="o__n"/></e>
+<e lm="simpligo">            <i>simplig</i><par n="o__n"/></e>
+<e lm="ŝtataneco">            <i>ŝtatanec</i><par n="o__n"/></e>
+<e lm="ŝtatigo">            <i>ŝtatig</i><par n="o__n"/></e>
+<e lm="stoikulo">            <i>stoikul</i><par n="ino__n"/></e>
+<e lm="tralasiveco">            <i>tralasivec</i><par n="o__n"/></e>
+<e lm="tralasivigi">            <i>tralasivig</i><par n="i__vblex"/></e>
+<e lm="tralasivigo">            <i>tralasivig</i><par n="o__n"/></e>
+<e lm="unukornulo">            <i>unukornul</i><par n="ino__n"/></e>
+<e lm="urbofesto">            <i>urbofest</i><par n="o__n"/></e>
+<e lm="vesperiĝi">            <i>vesperiĝ</i><par n="i__vblex"/></e>
+
+
 
   <e>       <re>A[0-9]+</re><p><l></l><r><s n="n"/><s n="acr"/><s n="sg"/><s n="nom"/></r></p></e> <!-- autoroutes -->
   <e>       <re>A[0-9]+</re><p><l></l><r><s n="n"/><s n="acr"/><s n="sg"/><s n="acc"/></r></p></e> <!-- autoroutes -->
