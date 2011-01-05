@@ -19,6 +19,12 @@
   <def-label name="NOMMF">
     <tags-item tags="n.mf.*"/>
   </def-label>
+  <def-label name="PRNPOS" closed="true">
+    <tags-item tags="prn.pos.*"/>
+  </def-label> 
+  <def-label name="PRNNOM" closed="true">
+    <tags-item tags="prn.rel.*"/>
+  </def-label> 
   <def-label name="INTNOM" closed="true">
     <tags-item tags="prn.itg.*"/>
   </def-label> 

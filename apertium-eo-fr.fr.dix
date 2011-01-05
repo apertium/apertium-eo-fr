@@ -194,15 +194,17 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
   <e r="RL"><p><l>les<b/></l>   <r></r></p></e>
 
 </pardef>
+<pardef n="d/uquel__rel">
+  <e><p><l>uquel</l>        <r>e<s n="pr"/><j/>lequel<s n="prn"/><s n="rel"/><s n="m"/><s n="sg"/></r></p></e>
+  <e><p><l>esquels</l>       <r>e<s n="pr"/><j/>lequel<s n="prn"/><s n="rel"/><s n="m"/><s n="pl"/></r></p></e>
+  <e><p><l>e<b/>laquelle</l>       <r>e<s n="pr"/><j/>lequel<s n="prn"/><s n="rel"/><s n="f"/><s n="pl"/></r></p></e>
+  <e><p><l>esquelles</l>       <r>e<s n="pr"/><j/>lequel<s n="prn"/><s n="rel"/><s n="f"/><s n="pl"/></r></p></e>
+</pardef>
 <pardef n="/auquel__rel">
-  <e r="LR"><p><l>auquel</l>    <r>à<s n="pr"/><j/>lequel<s n="prn"/><s n="rel"/><s n="m"/><s n="sg"/></r></p></e>
-
-  <e>       <p><l>auxquelles</l><r>à<s n="pr"/><j/>lequel<s n="prn"/><s n="rel"/><s n="f"/><s n="pl"/></r></p></e>
-
-  <e>       <p><l>auxquels</l>  <r>à<s n="pr"/><j/>lequel<s n="prn"/><s n="rel"/><s n="m"/><s n="pl"/></r></p></e>
-
-  <e>       <p><l>à<b/>laquelle</l><r>à<s n="pr"/><j/>lequel<s n="prn"/><s n="rel"/><s n="f"/><s n="sg"/></r></p></e>
-
+  <e><p><l>auquel</l>        <r>à<s n="pr"/><j/>lequel<s n="prn"/><s n="rel"/><s n="m"/><s n="sg"/></r></p></e>
+  <e><p><l>auxquels</l>       <r>à<s n="pr"/><j/>lequel<s n="prn"/><s n="rel"/><s n="m"/><s n="pl"/></r></p></e>
+  <e><p><l>à<b/>laquelle</l>       <r>à<s n="pr"/><j/>lequel<s n="prn"/><s n="rel"/><s n="f"/><s n="pl"/></r></p></e>
+  <e><p><l>auxquelles</l>       <r>à<s n="pr"/><j/>lequel<s n="prn"/><s n="rel"/><s n="f"/><s n="pl"/></r></p></e>
 </pardef>
 <pardef n="/avoir__vbhaver">
   <e>       <p><l>a</l>         <r>avoir<s n="vbhaver"/><s n="pri"/><s n="p3"/><s n="sg"/></r></p></e>
@@ -6083,16 +6085,6 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
   <e>       <p><l>éesses</l>    <r>ieu<s n="n"/><s n="f"/><s n="pl"/></r></p></e>
 
 </pardef>
-<pardef n="d/uquel__rel">
-  <e>       <p><l>e<b/>laquelle</l><r>uquel<s n="prn"/><s n="rel"/><s n="f"/><s n="sg"/></r></p></e>
-
-  <e>       <p><l>esquelles</l> <r>uquel<s n="prn"/><s n="rel"/><s n="f"/><s n="pl"/></r></p></e>
-
-  <e>       <p><l>esquels</l>   <r>uquel<s n="prn"/><s n="rel"/><s n="m"/><s n="pl"/></r></p></e>
-
-  <e>       <p><l>uquel</l>     <r>uquel<s n="prn"/><s n="rel"/><s n="m"/><s n="sg"/></r></p></e>
-
-</pardef>
 <pardef n="ce/lui_que__rel">
   <e>       <p><l>lle<b/>que</l><r>lui<b/>que<s n="prn"/><s n="rel"/><s n="f"/><s n="sg"/></r></p></e>
 
@@ -7985,13 +7977,9 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 </pardef>
 <pardef n="l/equel__rel">
   <e>       <p><l>aquelle</l>   <r>equel<s n="prn"/><s n="rel"/><s n="f"/><s n="sg"/></r></p></e>
-
   <e>       <p><l>equel</l>     <r>equel<s n="prn"/><s n="rel"/><s n="m"/><s n="sg"/></r></p></e>
-
   <e>       <p><l>esquelles</l> <r>equel<s n="prn"/><s n="rel"/><s n="f"/><s n="pl"/></r></p></e>
-
   <e>       <p><l>esquels</l>   <r>equel<s n="prn"/><s n="rel"/><s n="m"/><s n="pl"/></r></p></e>
-
 </pardef>
 <pardef n="l/ire__vblex">
   <e>       <p><l>ira</l>       <r>ire<s n="vblex"/><s n="fti"/><s n="p3"/><s n="sg"/></r></p></e>
@@ -22179,7 +22167,6 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="dire oui"><i>d</i><par n="d/i[]re__vblex__"/><p><l><b/>oui</l><r><g><b/>oui</g></r></p></e>
 <e lm="dire oui"><i>d</i><par n="d/i[]re__vblex"/><p><l><b/>oui</l><r><g><b/>oui</g></r></p></e>
 <e lm="devoir">          <i>d</i><par n="d/evoir__vbmod"/></e>
-<e lm="duquel">          <i>d</i><par n="d/uquel__rel"/></e>
 <e lm="D">               <i>D</i><par n="ö"/><i>rler</i><par n="Smith__np"/></e>
 <e lm="d'abord">         <i>d'abord</i><par n="hier__adv"/></e>
 <e lm="d'accord">        <i>d'accord</i><par n="hier__adv"/></e>
@@ -33215,7 +33202,8 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="L">               <i>L</i><par n="I__num"/></e>
 <e r="LR" lm="le">       <i>l</i><par n="l/e__det"/></e>
 <e lm="lequel">          <i>l</i><par n="l/equel__rel"/></e>
-<!-- <e lm="auquel">          <i></i><par n="/auquel__rel"/></e> -->
+<e lm="auquel">          <i></i><par n="/auquel__rel"/></e>
+<e lm="duquel">          <i>d</i><par n="d/uquel__rel"/></e>
 <e lm="l">               <i>l</i><par n="BBVA__n"/></e>
 <e lm="dl">               <i>dl</i><par n="BBVA__n"/></e>
 <e lm="cl">               <i>cl</i><par n="BBVA__n"/></e>
