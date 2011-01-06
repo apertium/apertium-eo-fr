@@ -237,8 +237,6 @@
   </def-label>
   <def-label name="PUNCT" closed="true"><tags-item tags="sent"/></def-label>
   <def-label name="GUIO" closed="true"><tags-item tags="guio"/></def-label>
-  <def-label name="LPAR" closed="true"><tags-item tags="lpar"/></def-label>
-  <def-label name="RPAR" closed="true"><tags-item tags="rpar"/></def-label>
   <def-label name="COMA" closed="true"><tags-item tags="cm"/></def-label>
 
   <def-mult name="PREPDET" closed="true">
