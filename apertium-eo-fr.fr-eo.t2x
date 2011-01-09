@@ -205,7 +205,6 @@
 	  <attr-item tags="pprs"/>
 	  <attr-item tags="subs"/>
 	  <attr-item tags="imp"/>
-	  
       </def-attr>
 
 
@@ -282,6 +281,7 @@
   <section-rules>
 
 
+<!--
 <rule comment="REGLA: SVvolition cnjsub SN SV ( je veux que tu viennes - mi volas ke vi venu (verb subordinat en volitiu)">
       <pattern>
 	<pattern-item n="SVvolition"/>
@@ -290,11 +290,6 @@
 	<pattern-item n="SV"/>
       </pattern>
       <action>
-            <let>
-              <clip pos="4" part="temps"/>
-              <lit-tag v="imp"/>
-            </let>
-
 	<out>
 	  <chunk>
 	    <clip pos="1" part="whole"/>
@@ -311,14 +306,21 @@
 	  <chunk>
             <clip pos="4" part="lem"/>
             <clip pos="4" part="tags"/>
-            <clip pos="4" part="chcontent"/>
-          </chunk>
-
+	    <lit v="{^"/>
+lema
+	    <clip pos="4" part="a_verb"/>
+	    <lit-tag v="imp"/>
+	    <lit v="$}"/>
+	  </chunk>
+	  <b/>	   
+	  <chunk>
 	</out>
       </action>
 </rule>
+-->
 
-<rule comment="REGLA: ne SVvolition cnjsub SV ( vull que vinguis - volas ke tu venu (verb subordinat en futur); EO)">
+<!-- verŝajne sencela en la franca
+<rule comment="REGLA: SVvolition cnjsub SV ( vull que vinguis - volas ke vi venu (verb subordinat en futur); EO)">
       <pattern>
 	<pattern-item n="SVvolition"/>
 	<pattern-item n="cnjsub"/>
@@ -364,6 +366,7 @@
 	</out>
       </action>
 </rule>
+-->
 
 
 <!-- primer conjunt de regles per a tractar el cas /acusatiu/nominatiu dels SN pronoms. 
