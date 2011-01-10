@@ -37,6 +37,9 @@
       <cat-item tags="cnjcoo.*"/>
       <cat-item tags="cnjcoo"/>
     </def-cat>
+    <def-cat n="que">
+      <cat-item tags="SN.itg.*"/>
+    </def-cat>
   </section-def-cats>
 
   <section-def-attrs>
@@ -714,6 +717,34 @@
 -->
 
 <!-- Reguloj de SV -->
+
+    <rule comment="REGLA: SV ADV   -   SV ">
+      <pattern>
+        <pattern-item n="SV"/>
+        <pattern-item n="que"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+	  <chunk>
+	    <get-case-from pos="1">
+	      <lit v="ke"/>
+	    </get-case-from>
+	    <lit-tag v="cnjsub"/>
+	    <lit v="{^"/>
+	    <get-case-from pos="1">
+	      <lit v="ke"/>
+	    </get-case-from>
+	    <lit-tag v="cnjsub"/>
+	    <lit v="$}"/>
+	  </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: ADV SV   -   SV ">
       <pattern>

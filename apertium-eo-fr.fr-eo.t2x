@@ -4,10 +4,12 @@
 
     <def-cat n="SN">
       <cat-item tags="SN.*"/>
+      <cat-item tags="SNrelatiu.*"/>
     </def-cat>
 
     <def-cat n="SNSA">
       <cat-item tags="SN.*"/>
+      <cat-item tags="SNrelatiu.*"/>
       <cat-item tags="SA.*"/>
     </def-cat>
 
@@ -42,6 +44,9 @@
 
    <def-cat n="SNobj"><!-- EO: identifica objecte directe (únicament ho porten els pronoms)-->
       <cat-item tags="SN.obj.*.*.*"/>
+    </def-cat>
+
+   <def-cat n="SNdat"><!-- EO: identifica objecte directe (únicament ho porten els pronoms)-->
       <cat-item tags="SN.dat.*.*.*"/>
     </def-cat>
 
@@ -149,6 +154,11 @@
       <cat-item tags="cnjcoo"/> <!-- també amb i/o -->
     </def-cat>
 
+    <def-cat n="cm">
+      <cat-item lemma="cm" tags="sent"/>
+      <cat-item lemma="lpar" tags="sent"/>
+    </def-cat>
+
   </section-def-cats>
 
   <section-def-attrs>
@@ -195,6 +205,7 @@
       <def-attr n="temps">
           <attr-item tags="inf"/>
 	  <attr-item tags="pres"/>
+<attr-item tags="prs"/>
 	  <attr-item tags="past"/>
 	  <attr-item tags="pri"/>
 	  <attr-item tags="ifip"/>
@@ -257,6 +268,23 @@
     </def-macro>
 
 
+    <def-macro n="kunordigo_SN_SNrel" npar="2">
+       <choose>
+          <when>
+            <test>
+                <equal>
+                  <clip pos="2" part="nbr"/>
+		  <lit-tag v="sp"/>
+                </equal>
+            </test>
+            <let>
+              <clip pos="2" part="nbr"/>
+              <clip pos="1" part="nbr"/>
+            </let>
+	</when>
+      </choose>
+    </def-macro>
+
 
   <def-macro n="f_bcond" npar="1"><!--Per mirar si el blanc conté o no format. Cal posar aquesta funció en les regles en què desaparegui alguna paraula, per tal de decidir si el blanc de la paraula eliminada s'ha d'eliminar o conservar. Si conté format cal conservar-la, si no en conté cal eliminar-la perquè no apareguin dos espais seguits. -->
      	<choose>
@@ -281,7 +309,6 @@
   <section-rules>
 
 
-<!--
 <rule comment="REGLA: SVvolition cnjsub SN SV ( je veux que tu viennes - mi volas ke vi venu (verb subordinat en volitiu)">
       <pattern>
 	<pattern-item n="SVvolition"/>
@@ -290,6 +317,10 @@
 	<pattern-item n="SV"/>
       </pattern>
       <action>
+            <let>
+              <clip pos="4" part="temps"/>
+              <lit-tag v="imp"/>
+            </let>
 	<out>
 	  <chunk>
 	    <clip pos="1" part="whole"/>
@@ -306,73 +337,16 @@
 	  <chunk>
             <clip pos="4" part="lem"/>
             <clip pos="4" part="tags"/>
-	    <lit v="{^"/>
-lema
-	    <clip pos="4" part="a_verb"/>
-	    <lit-tag v="imp"/>
-	    <lit v="$}"/>
-	  </chunk>
-	  <b/>	   
-	  <chunk>
-	</out>
-      </action>
-</rule>
--->
-
-<!-- verŝajne sencela en la franca
-<rule comment="REGLA: SVvolition cnjsub SV ( vull que vinguis - volas ke vi venu (verb subordinat en futur); EO)">
-      <pattern>
-	<pattern-item n="SVvolition"/>
-	<pattern-item n="cnjsub"/>
-	<pattern-item n="SV"/>
-      </pattern>
-      <action>
-            <let>
-              <clip pos="3" part="temps"/>
-              <lit-tag v="imp"/>
-            </let>
-
-	<out>
-	  <chunk>
-	    <clip pos="1" part="whole"/>
-	  </chunk>
-	 <b/>
-	  <chunk>
-	    <clip pos="2" part="whole"/>
-	  </chunk>
-	  <b pos="1"/>
-	  <chunk>
-	    <get-case-from pos="3">
-	      <lit v="subj"/>
-	    </get-case-from>
-	    <lit-tag v="prn.subj"/>
-	    <clip pos="3" part="pers"/>
-	    <lit-tag v="GD"/>
-	    <clip pos="3" part="nbr"/>
-	    <lit v="{^"/>
-	    <get-case-from pos="3">
-	      <lit v="prpers"/>
-	    </get-case-from>
-	    <lit-tag v="prn.subj.3.4.5"/>
-	    <lit v="$}"/>
-	  </chunk>
-	  <b/>	   
-	  <chunk>
-            <clip pos="3" part="lem"/>
-            <clip pos="3" part="tags"/>
-            <clip pos="3" part="chcontent"/>
+            <clip pos="4" part="chcontent"/>
           </chunk>
-
 	</out>
       </action>
 </rule>
--->
-
 
 <!-- primer conjunt de regles per a tractar el cas /acusatiu/nominatiu dels SN pronoms. 
 Venen marcats del t1x com a SN.obj, aqui els indentifiquem i segons el patró en que es trobin canviem els casos.
 
-Segon paques de regles per a indentificar els SN objectes i possar-los en acusatiu-->  
+Segon paquet de regles per a indentificar els SN objectes i posar-los en acusatiu-->  
 
 
 <rule comment="REGLA: SNitg SV SN (EO per l'acusatiu dels SN interrogatiu amb changecase=nom; volem que posi acc al primer SN ja que el segon suposem que serà el subjecte: què menja la nena?-> kion manĝas la knabino?)">
@@ -546,6 +520,7 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
       </action>
 </rule>
  
+
 <rule comment="REGLA: SN SV PRO SN (EO per l'acusatiu dels SN objecte amb changecase=nom); la nena va donar-me el llibre; el clitic passa a objecte indirecte precedit per al i el SN objecte agafa cas acusatiu">
       <pattern>
 	<pattern-item n="SN"/>
@@ -606,23 +581,18 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
       </action>
 </rule>
 
-<rule comment="REGLA: SN SV PRO SN and SNacc (EO per l'acusatiu dels SN objecte amb changecase=nom); la nena va donar-me el llibre i els fulls; el clitic passa a objecte indirecte precedit per al i el SN objecte agafa cas acusatiu">
+
+<rule comment="REGLA: SN SV DAT SN (EO per l'acusatiu dels SN objecte amb changecase=nom); la nena va donar-me el llibre; el clitic passa a objecte indirecte precedit per al i el SN objecte agafa cas acusatiu">
       <pattern>
 	<pattern-item n="SN"/>
 	<pattern-item n="SVlex"/>
-	<pattern-item n="SNobj"/>
-	<pattern-item n="SNacc"/>
-	<pattern-item n="cnjcoo"/>
+	<pattern-item n="SNdat"/>
 	<pattern-item n="SNacc"/>
       </pattern>
       <action>
 
 	    <let>
 	      <clip pos="4" part="case"/>
-	      <lit-tag v="acc"/>
-	    </let>
-	    <let>
-	      <clip pos="6" part="case"/>
 	      <lit-tag v="acc"/>
 	    </let>
 	    <let>
@@ -637,26 +607,6 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
 	    <clip pos="1" part="chcontent"/>
 	  </chunk>
 	  <b pos="1"/>
-
-	  <chunk>
-	    <get-case-from pos="3">
-	      <lit v="al"/>
-	    </get-case-from>
-	    <lit-tag v="pr"/>
-	    <lit v="{^"/>
-	    <get-case-from pos="3">
-	      <lit v="al"/>
-	    </get-case-from>
-	    <lit-tag v="pr"/>
-	    <lit v="$}"/>
-	  </chunk>
-	  <b/>
-	  <chunk>
-            <clip pos="3" part="lem"/>
-            <clip pos="3" part="tags"/>
-	    <clip pos="3" part="chcontent"/>
-	  </chunk>
-	  <b pos="1"/>
 	  <chunk>
             <clip pos="2" part="lem"/>
             <clip pos="2" part="tags"/>
@@ -664,19 +614,15 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
 	  </chunk>
 	  <b pos="2"/>
 	  <chunk>
+            <clip pos="3" part="lem"/>
+            <clip pos="3" part="tags"/>
+	    <clip pos="3" part="chcontent"/>
+	  </chunk>
+	  <b pos="3"/>
+	  <chunk>
             <clip pos="4" part="lem"/>
             <clip pos="4" part="tags"/>
 	    <clip pos="4" part="chcontent"/>
-	  </chunk>
-	  <b pos="3"/>
- 	      <chunk>
-                <clip pos="5" part="whole"/>
-              </chunk>
-	  <b pos="4"/>
-	  <chunk>
-            <clip pos="6" part="lem"/>
-            <clip pos="6" part="tags"/>
-	    <clip pos="6" part="chcontent"/>
 	  </chunk>
 	</out>
       </action>
@@ -736,75 +682,6 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
       </action>
 </rule>
  
-<rule comment="REGLA: PRO SV SN and SN (EO per l'acusatiu dels SN objecte amb changecase=nom; em va donar el llibre i els fulls :: (la knabino) al mi donis la libron kaj foliojn; el clitic passa a objecte indirecte precedit per al i el SN objecte agafa cas acusatiu)">
-      <pattern>
-	<pattern-item n="SNobj"/>
-	<pattern-item n="SVlex"/>
-	<pattern-item n="SNacc"/>
-	<pattern-item n="cnjcoo"/>
-	<pattern-item n="SNacc"/>
-      </pattern>
-      <action>
-
-	    <let>
-	      <clip pos="3" part="case"/>
-	      <lit-tag v="acc"/>
-	    </let>
-	    <let>
-	      <clip pos="5" part="case"/>
-	      <lit-tag v="acc"/>
-	    </let>
-	    <let>
-	      <clip pos="1" part="tipus_prn"/>
-	      <lit-tag v="subj"/>
-	    </let>
-
-	<out>
-
-	  <chunk>
-	    <get-case-from pos="1">
-	      <lit v="al"/>
-	    </get-case-from>
-	    <lit-tag v="pr"/>
-	    <lit v="{^"/>
-	    <get-case-from pos="1">
-	      <lit v="al"/>
-	    </get-case-from>
-	    <lit-tag v="pr"/>
-	    <lit v="$}"/>
-	  </chunk>
-	  <b/>
-	  <chunk>
-            <clip pos="1" part="lem"/>
-            <clip pos="1" part="tags"/>
-	    <clip pos="1" part="chcontent"/>
-	  </chunk>
-	  <b pos="1"/>
-	  <chunk>
-            <clip pos="2" part="lem"/>
-            <clip pos="2" part="tags"/>
-	    <clip pos="2" part="chcontent"/>
-	  </chunk>
-	  <b pos="2"/>
-	  <chunk>
-            <clip pos="3" part="lem"/>
-            <clip pos="3" part="tags"/>
-	    <clip pos="3" part="chcontent"/>
-	  </chunk>
-          <b pos="3"/>
-              <chunk>
-                <clip pos="4" part="whole"/>
-              </chunk>
-          <b pos="4"/>
-          <chunk>
-            <clip pos="5" part="lem"/>
-            <clip pos="5" part="tags"/>
-            <clip pos="5" part="chcontent"/>
-          </chunk>
-
-	</out>
-      </action>
-</rule>
 
 <rule comment="REGLA: punt_cnjadv PRO SV SNacc (EO per l'acusatiu dels SN objecte amb changecase=nom; em va donar el llibre :: (la knabino) al mi donis la libron; el clitic passa a objecte indirecte precedit per al i el SN objecte agafa cas acusatiu)">
       <pattern>
@@ -867,84 +744,7 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
       </action>
 </rule>
 
-<rule comment="REGLA: punt_cnjadv PRO SV SNacc and SNacc (EO per l'acusatiu dels SN objecte amb changecase=nom; em va donar el llibre i els fulls :: (la knabino) al mi donis la libron kaj la foliojn; el clitic passa a objecte indirecte precedit per al i el SN objecte agafa cas acusatiu)">
-      <pattern>
-	<pattern-item n="punt_cnjadv"/>
-	<pattern-item n="SNobj"/>
-	<pattern-item n="SVlex"/>
-	<pattern-item n="SNacc"/>
-	<pattern-item n="cnjcoo"/>
-	<pattern-item n="SNacc"/>
-      </pattern>
-      <action>
 
-	    <let>
-	      <clip pos="4" part="case"/>
-	      <lit-tag v="acc"/>
-	    </let>
-	    <let>
-	      <clip pos="6" part="case"/>
-	      <lit-tag v="acc"/>
-	    </let>
-	    <let>
-	      <clip pos="2" part="tipus_prn"/>
-	      <lit-tag v="subj"/>
-	    </let>
-        <out>
-          <chunk>
-            <clip pos="1" part="whole"/>
-          </chunk>
-          <b pos="1"/>
-        </out>
-
-
-	<out>
-
-	  <chunk>
-	    <get-case-from pos="3">
-	      <lit v="al"/>
-	    </get-case-from>
-	    <lit-tag v="pr"/>
-	    <lit v="{^"/>
-	    <get-case-from pos="3">
-	      <lit v="al"/>
-	    </get-case-from>
-	    <lit-tag v="pr"/>
-	    <lit v="$}"/>
-	  </chunk>
-	  <b/>
-	  <chunk>
-            <clip pos="2" part="lem"/>
-            <clip pos="2" part="tags"/>
-	    <clip pos="2" part="chcontent"/>
-	  </chunk>
-	  <b pos="2"/>
-	  <chunk>
-            <clip pos="3" part="lem"/>
-            <clip pos="3" part="tags"/>
-	    <clip pos="3" part="chcontent"/>
-	  </chunk>
-	  <b pos="3"/>
-	  <chunk>
-            <clip pos="4" part="lem"/>
-            <clip pos="4" part="tags"/>
-	    <clip pos="4" part="chcontent"/>
-	  </chunk>
-          <b pos="4"/>
-              <chunk>
-                <clip pos="5" part="whole"/>
-              </chunk>
-          <b pos="5"/>
-          <chunk>
-            <clip pos="6" part="lem"/>
-            <clip pos="6" part="tags"/>
-            <clip pos="6" part="chcontent"/>
-          </chunk>
-	</out>
-      </action>
-</rule>
-
- 
 <rule comment="REGLA: SV PRO SN (EO per l'acusatiu dels SN objecte amb changecase=nom); va donar-me el llibre; el clitic passa a objecte indirecte precedit per al i el SN objecte agafa cas acusatiu">
       <pattern>
 	<pattern-item n="SVlex"/>
@@ -994,76 +794,6 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
             <clip pos="3" part="tags"/>
 	    <clip pos="3" part="chcontent"/>
 	  </chunk>
-	</out>
-      </action>
-</rule>
-
-<rule comment="REGLA: SV PRO SN and SNacc (EO per l'acusatiu dels SN objecte amb changecase=nom); va donar-me el llibre; el clitic passa a objecte indirecte precedit per al i el SN objecte agafa cas acusatiu">
-      <pattern>
-	<pattern-item n="SVlex"/>
-	<pattern-item n="SNobj"/>
-	<pattern-item n="SNacc"/>
-	<pattern-item n="cnjcoo"/>
-	<pattern-item n="SNacc"/>
-      </pattern>
-      <action>
-
-	    <let>
-	      <clip pos="3" part="case"/>
-	      <lit-tag v="acc"/>
-	    </let>
-	    <let>
-	      <clip pos="5" part="case"/>
-	      <lit-tag v="acc"/>
-	    </let>
-	    <let>
-	      <clip pos="2" part="tipus_prn"/>
-	      <lit-tag v="subj"/>
-	    </let>
-
-	<out>
-
-	  <chunk>
-	    <get-case-from pos="2">
-	      <lit v="al"/>
-	    </get-case-from>
-	    <lit-tag v="pr"/>
-	    <lit v="{^"/>
-	    <get-case-from pos="2">
-	      <lit v="al"/>
-	    </get-case-from>
-	    <lit-tag v="pr"/>
-	    <lit v="$}"/>
-	  </chunk>
-	  <b/>
-	  <chunk>
-            <clip pos="2" part="lem"/>
-            <clip pos="2" part="tags"/>
-	    <clip pos="2" part="chcontent"/>
-	  </chunk>
-	  <b pos="1"/>
-	  <chunk>
-            <clip pos="1" part="lem"/>
-            <clip pos="1" part="tags"/>
-	    <clip pos="1" part="chcontent"/>
-	  </chunk>
-	  <b pos="2"/>
-	  <chunk>
-            <clip pos="3" part="lem"/>
-            <clip pos="3" part="tags"/>
-	    <clip pos="3" part="chcontent"/>
-	  </chunk>
-          <b pos="3"/>
-              <chunk>
-                <clip pos="4" part="whole"/>
-              </chunk>
-          <b pos="4"/>
-          <chunk>
-            <clip pos="5" part="lem"/>
-            <clip pos="5" part="tags"/>
-            <clip pos="5" part="chcontent"/>
-          </chunk>
-
 	</out>
       </action>
 </rule>
@@ -1201,100 +931,6 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
 	</out>
       </action>
 </rule>
-
-<rule comment="REGLA: SN SV SN and SNacc(EO per l'acusatiu dels SN objecte amb changecase=nom)">
-      <pattern>
-	<pattern-item n="SN"/>
-	<pattern-item n="SVlex"/>
-	<pattern-item n="SNacc"/>
-	<pattern-item n="cnjcoo"/>
-	<pattern-item n="SNacc"/>
-      </pattern>
-      <action>
-
-	    <let>
-	      <clip pos="3" part="case"/>
-	      <lit-tag v="acc"/>
-	    </let>
-	    <let>
-	      <clip pos="5" part="case"/>
-	      <lit-tag v="acc"/>
-	    </let>
-
-	<out>
-	  <chunk>
-            <clip pos="1" part="lem"/>
-            <clip pos="1" part="tags"/>
-	    <clip pos="1" part="chcontent"/>
-	  </chunk>
-	  <b pos="1"/>
-	  <chunk>
-            <clip pos="2" part="lem"/>
-            <clip pos="2" part="tags"/>
-	    <clip pos="2" part="chcontent"/>
-	  </chunk>
-	  <b pos="2"/>
-	  <chunk>
-            <clip pos="3" part="lem"/>
-            <clip pos="3" part="tags"/>
-	    <clip pos="3" part="chcontent"/>
-	  </chunk>
-	  <b pos="3"/>
-	  <chunk>
-            <clip pos="4" part="whole"/>
-	  </chunk>
-	  <b pos="4"/>
-	  <chunk>
-            <clip pos="5" part="lem"/>
-            <clip pos="5" part="tags"/>
-	    <clip pos="5" part="chcontent"/>
-	  </chunk>
-	</out>
-      </action>
-</rule>
-
-<rule comment="REGLA: SN ADV SV SN (EO per l'acusatiu dels SN objecte amb changecase=nom)">
-      <pattern>
-	<pattern-item n="SN"/>
-	<pattern-item n="ADV"/>
-	<pattern-item n="SVlex"/>
-	<pattern-item n="SNacc"/>
-      </pattern>
-      <action>
-
-	    <let>
-	      <clip pos="4" part="case"/>
-	      <lit-tag v="acc"/>
-	    </let>
-
-	<out>
-	  <chunk>
-            <clip pos="1" part="lem"/>
-            <clip pos="1" part="tags"/>
-	    <clip pos="1" part="chcontent"/>
-	  </chunk>
-	  <b pos="1"/>
-	  <chunk>
-            <clip pos="2" part="lem"/>
-            <clip pos="2" part="tags"/>
-	    <clip pos="2" part="chcontent"/>
-	  </chunk>
-	  <b pos="2"/>
-	  <chunk>
-            <clip pos="3" part="lem"/>
-            <clip pos="3" part="tags"/>
-	    <clip pos="3" part="chcontent"/>
-	  </chunk>
-	  <b pos="3"/>
-	  <chunk>
-            <clip pos="4" part="lem"/>
-            <clip pos="4" part="tags"/>
-	    <clip pos="4" part="chcontent"/>
-	  </chunk>
-	</out>
-      </action>
-</rule>
-
 
 <rule comment="REGLA: SV SN and SN (EO per l'acusatiu dels SN objecte amb changecase=nom)">
       <pattern>
@@ -2181,35 +1817,6 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
 
 
 
-<rule comment="REGLA: SV SA inf (és/considera difícil entendre (EO))" >
-      <pattern>
-	<pattern-item n="SV"/>
-	<pattern-item n="SA"/>
-	<pattern-item n="inf"/>
-      </pattern>
-      <action>
-<let>
-              <clip pos="1" part="temps"/>
-              <lit-tag v="imp"/>
-            </let>
-
-	<out>
-	  <chunk>
-            <clip pos="1" part="whole"/>
-	  </chunk>
-	  <b pos="1"/>
-	  <chunk>
-            <clip pos="2" part="whole"/>
-	  </chunk>
-	  <b pos="2"/>
-	  <chunk>
-	    <clip pos="3" part="whole"/>
-	  </chunk>
-	</out>
-  </action>
-</rule>
-
-
 <rule comment="REGLA: punt_cnjadv SVmoviment PREP SN (EO per l'acusatiu dels verbs de moviment amb changecase=nom i afegir pronom subjecte)">
       <pattern>
 	<pattern-item n="punt_cnjadv"/>
@@ -2256,7 +1863,7 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
 <!-- regles de relatiu-->
 
 
-<rule comment="REGLA: SN SNrelatiu SNobj SV (. el nen que em va veure -> la knabo kiu min vidis, relatiu = subjecte, EO))">
+<rule comment="REGLA: SN SNrelatiu SNobj SV (. l'enfant qui me parla -> la knabo kiu min parolis, relatiu = subjecte, EO))">
       <pattern>
 	<pattern-item n="SN"/>
 	<pattern-item n="SNrelatiu"/>
@@ -2264,6 +1871,10 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
 	<pattern-item n="SV"/>
       </pattern>
       <action>
+            <call-macro n="kunordigo_SN_SNrel">
+              <with-param pos="1"/>
+              <with-param pos="2"/>
+            </call-macro>
             <let>
               <clip pos="2" part="case"/>
               <lit-tag v="nom"/>
@@ -2290,7 +1901,55 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
       </action>
 </rule>
 
-<rule comment="REGLA: SN SNrelatiu SNobj SV (. el nen que em va donar el llibre -> la knabo kiu al mi donis la libron, relatiu = subjecte, EO))">
+<!--
+<rule comment="REGLA: SN SNrelatiu SV SNdat SN (. l'enfant qui lui posa une question -> la knabo kiu faris al mi demandon, relatiu = subjecte, EO))">
+      <pattern>
+	<pattern-item n="SN"/>
+	<pattern-item n="SNrelatiu"/>
+	<pattern-item n="SV"/>
+	<pattern-item n="SNdat"/>
+	<pattern-item n="SN"/>
+      </pattern>
+            <call-macro n="kunordigo_SN_SNrel">
+              <with-param pos="1"/>
+              <with-param pos="2"/>
+            </call-macro>
+macro elekti_subj_obj 2, 3, 4
+            <test>
+            <let>
+              <clip pos="5" part="case"/>
+              <lit-tag v="acc"/>
+            </let>
+	<out>
+	  <chunk>
+	    <clip pos="1" part="whole"/>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+	    <clip pos="2" part="chcontent"/>
+	  </chunk>
+	  <b pos="2"/>
+	  <chunk>
+            <clip pos="3" part="whole"/>
+	  </chunk>
+	  <b pos="3"/>
+	  <chunk>
+	    <clip pos="4" part="whole"/>
+	  </chunk>
+	  <b pos="4"/>
+	  <chunk>
+            <clip pos="5" part="lem"/>
+            <clip pos="5" part="tags"/>
+	    <clip pos="5" part="chcontent"/>
+	  </chunk>
+	</out>
+      </action>
+</rule>
+-->
+
+<rule comment="REGLA: SN SNrelatiu SNobj SV SN (. el nen que em va donar el llibre -> la knabo kiu donis al mi la libron, relatiu = subjecte, EO))">
       <pattern>
 	<pattern-item n="SN"/>
 	<pattern-item n="SNrelatiu"/>
@@ -2299,6 +1958,10 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
 	<pattern-item n="SN"/>
       </pattern>
       <action>
+            <call-macro n="kunordigo_SN_SNrel">
+              <with-param pos="1"/>
+              <with-param pos="2"/>
+            </call-macro>
             <let>
               <clip pos="2" part="case"/>
               <lit-tag v="nom"/>
@@ -2323,6 +1986,10 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
 	    <clip pos="2" part="chcontent"/>
 	  </chunk>
 	  <b pos="2"/>
+	  <chunk>
+	    <clip pos="4" part="whole"/>
+	  </chunk>
+	  <b pos="3"/>
           <chunk>
             <get-case-from pos="3">
               <lit v="al"/>
@@ -2341,11 +2008,6 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
             <clip pos="3" part="tags"/>
             <clip pos="3" part="chcontent"/>
           </chunk>
-
-	  <b pos="3"/>
-	  <chunk>
-	    <clip pos="4" part="whole"/>
-	  </chunk>
 	  <b pos="4"/>
 	  <chunk>
 	    <clip pos="5" part="whole"/>
@@ -2362,6 +2024,10 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
 	<pattern-item n="SV"/>
       </pattern>
       <action>
+            <call-macro n="kunordigo_SN_SNrel">
+              <with-param pos="1"/>
+              <with-param pos="2"/>
+            </call-macro>
             <let>
               <clip pos="2" part="case"/>
               <lit-tag v="acc"/>
@@ -2398,6 +2064,13 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
       </pattern>
       <action>
 
+            <call-macro n="kunordigo_SN_SNrel">
+              <with-param pos="1"/>
+              <with-param pos="2"/>
+            </call-macro>
+<!--
+macro elekti_subj_obj 1, 2, 3, 4
+-->
        <choose>
           <when>
             <test>
@@ -2412,7 +2085,6 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
                 </equal>
 		</and>
             </test>
-
             <let>
               <clip pos="2" part="case"/>
               <lit-tag v="nom"/>
@@ -2421,10 +2093,9 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
               <clip pos="4" part="case"/>
               <lit-tag v="acc"/>
             </let>
-
 	</when>
-	<when>
 
+	<when>
             <test>
 		<not>
                 <equal>
@@ -2439,6 +2110,7 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
             </let>
 	</when>
 	</choose>
+
 	<out>
 	  <chunk>
 	    <clip pos="1" part="whole"/>
@@ -2472,6 +2144,10 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
       </pattern>
       <action>
 
+            <call-macro n="kunordigo_SN_SNrel">
+              <with-param pos="1"/>
+              <with-param pos="2"/>
+            </call-macro>
        <choose>
           <when>
             <test>
@@ -2557,6 +2233,10 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
       </pattern>
       <action>
 
+            <call-macro n="kunordigo_SN_SNrel">
+              <with-param pos="1"/>
+              <with-param pos="2"/>
+            </call-macro>
        <choose><!-- relatiu = subjecte-->
           <when>
             <test>
@@ -2668,6 +2348,10 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
 	<pattern-item n="SV"/>
       </pattern>
       <action>
+            <call-macro n="kunordigo_SN_SNrel">
+              <with-param pos="1"/>
+              <with-param pos="3"/>
+            </call-macro>
 	<out>
 	  <chunk>
 	    <clip pos="1" part="whole"/>
@@ -2721,6 +2405,10 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
       </pattern>
       <action>
 
+            <call-macro n="kunordigo_SN_SNrel">
+              <with-param pos="1"/>
+              <with-param pos="3"/>
+            </call-macro>
        <choose>
           <when>
             <test>
@@ -2828,6 +2516,55 @@ Segon paques de regles per a indentificar els SN objectes i possar-los en acusat
       </action>
 </rule>
 
+
+<rule comment="REGLA: SN SNrel ( deux enseignants (dont une femme) )">
+      <pattern>
+	<pattern-item n="SN"/>
+	<pattern-item n="SNrelatiu"/>
+      </pattern>
+      <action>
+        <call-macro n="kunordigo_SN_SNrel">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+	<out>
+	  <chunk>
+	    <clip pos="1" part="whole"/>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk>
+	    <clip pos="2" part="whole"/>
+	  </chunk>
+	</out>
+      </action>
+</rule>
+
+<rule comment="REGLA: SN, SNrel ( deux enseignants (dont une femme) )">
+      <pattern>
+	<pattern-item n="SN"/>
+	<pattern-item n="cm"/>
+	<pattern-item n="SNrelatiu"/>
+      </pattern>
+      <action>
+        <call-macro n="kunordigo_SN_SNrel">
+          <with-param pos="1"/>
+          <with-param pos="3"/>
+        </call-macro>
+	<out>
+	  <chunk>
+	    <clip pos="1" part="whole"/>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk>
+	    <clip pos="2" part="whole"/>
+	  </chunk>
+	  <b pos="2"/>
+	  <chunk>
+	    <clip pos="3" part="whole"/>
+	  </chunk>
+	</out>
+      </action>
+</rule>
 
   </section-rules>
 </interchunk>

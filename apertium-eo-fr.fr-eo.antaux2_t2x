@@ -14,6 +14,9 @@
       <cat-item tags="unknown"/>
       <cat-item tags="SN.*"/>
     </def-cat>
+   <def-cat n="SNrelatiu">
+      <cat-item tags="SNrelatiu.*"/>
+    </def-cat>
     <def-cat n="num">
       <cat-item lemma="num" tags="SN.*"/>
     </def-cat>
@@ -38,8 +41,9 @@
       <cat-item tags="CC.*"/>
       <cat-item tags="and_or.*"/>
     </def-cat>
-    <def-cat n="CM">
+    <def-cat n="cm">
       <cat-item lemma="cm" tags="sent"/>
+      <cat-item lemma="lpar" tags="sent"/>
     </def-cat>
     <def-cat n="and_or">
       <cat-item tags="and_or.*"/>
@@ -76,6 +80,28 @@
     <def-var n="genere"/>
   </section-def-vars>
 
+
+<section-def-macros>
+
+    <def-macro n="kunordigo_SN_SNrel" npar="2">
+       <choose>
+          <when>
+            <test>
+                <equal>
+                  <clip pos="2" part="nbr"/>
+		  <lit-tag v="sp"/>
+                </equal>
+            </test>
+            <let>
+              <clip pos="2" part="nbr"/>
+              <clip pos="1" part="nbr"/>
+            </let>
+	</when>
+      </choose>
+    </def-macro>
+
+
+</section-def-macros>
 
   <section-rules>
 
@@ -171,5 +197,54 @@
       </action>
 </rule>
  
+<rule comment="REGLA: SN SNrel ( deux enseignants (dont une femme) )">
+      <pattern>
+	<pattern-item n="SN"/>
+	<pattern-item n="SNrelatiu"/>
+      </pattern>
+      <action>
+        <call-macro n="kunordigo_SN_SNrel">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+	<out>
+	  <chunk>
+	    <clip pos="1" part="whole"/>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk>
+	    <clip pos="2" part="whole"/>
+	  </chunk>
+	</out>
+      </action>
+</rule>
+
+<rule comment="REGLA: SN, SNrel ( deux enseignants (dont une femme) )">
+      <pattern>
+	<pattern-item n="SN"/>
+	<pattern-item n="cm"/>
+	<pattern-item n="SNrelatiu"/>
+      </pattern>
+      <action>
+        <call-macro n="kunordigo_SN_SNrel">
+          <with-param pos="1"/>
+          <with-param pos="3"/>
+        </call-macro>
+	<out>
+	  <chunk>
+	    <clip pos="1" part="whole"/>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk>
+	    <clip pos="2" part="whole"/>
+	  </chunk>
+	  <b pos="2"/>
+	  <chunk>
+	    <clip pos="3" part="whole"/>
+	  </chunk>
+	</out>
+      </action>
+</rule>
+
   </section-rules>
 </interchunk>

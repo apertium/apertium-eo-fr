@@ -58,6 +58,10 @@
        <cat-item tags="cm"/><!-- provem amb la coma EO, per a poder tractar el pro-drop-->
     </def-cat>
 
+    <def-cat n="sent_lpar">
+       <cat-item tags="lpar"/><!-- provem amb la coma EO, per a poder tractar el pro-drop-->
+    </def-cat>
+
     <def-cat n="guio">
        <cat-item tags="guio"/>
     </def-cat>
@@ -734,9 +738,11 @@
 
      <def-cat n="cnjcoopercorregir"> <!-- EO afegit per a corregir errors del tagger, veure regles-->
       <cat-item lemma="que" tags="cnjcoo"/>
-      <cat-item tags="cnjsub"/>
-      <cat-item tags="prn.itg.*"/>
-      <cat-item tags="prn.rel.*"/>
+      <cat-item lemma="que" tags="cnjsub"/>
+      <cat-item lemma="que" tags="prn.itg.*"/>
+      <cat-item lemma="que" tags="prn.rel.*"/>
+      <cat-item lemma="qui" tags="prn.itg.*"/>
+      <cat-item lemma="qui" tags="prn.rel.*"/>
     </def-cat>
 
      <def-cat n="quepercorregir"> <!-- EO afegit per a corregir errors del tagger, veure regles-->
@@ -1253,7 +1259,6 @@
     <list-item v="proposer"/>
     <list-item v="exiger"/>
     <list-item v="réclamer"/>
-    <list-item v="indiquer"/>
     <list-item v="demander"/>
     <list-item v="suggérer"/>
     <list-item v="falloir"/>
@@ -2036,7 +2041,7 @@
                 </test>
                 <let>
                   <clip pos="1" side="tl" part="temps"/>
-                  <lit-tag v="pres"/> <!-- present -->
+                  <lit-tag v="pres"/>
                 </let>
               </when>
               <when>           <!-- traduccions a passat -->
@@ -2195,7 +2200,7 @@
 
     <def-macro n="set_noimp" npar="1"> <!-- imp -> pres -->
         <choose>
-              <when> 
+              <when>
                 <test>
                     <equal>
                       <clip pos="1" side="sl" part="temps"/>
@@ -2204,7 +2209,7 @@
                 </test>
                 <let>
                   <clip pos="1" side="tl" part="temps"/>
-                  <lit-tag v="pres"/> <!-- present -->
+                  <lit-tag v="pres"/>
                 </let>
               </when>
             </choose>
@@ -4559,19 +4564,19 @@
 	           <tag><var n="changecase"/></tag>
 		</tags>
 	        <lu>
-	          <clip pos="1" side="tl" part="lem"/> 
+	          <clip pos="1" side="tl" part="lem"/>
 	          <clip pos="1" side="tl" part="a_det"/>
 	          <lit-tag v="3"/>
 	          <lit-tag v="4"/>
-	        </lu> 
+	        </lu>
                 <b pos="1"/>
-		<lu>   
-		  <clip pos="2" side="tl" part="lemh"/> 
+		<lu>
+		  <clip pos="2" side="tl" part="lemh"/>
 		  <clip pos="2" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
 	          <lit-tag v="4"/>
-		  <clip pos="2" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="2" side="tl" part="lemq"/>
+		</lu>
 	      </chunk>
 	    </out>
 	<let>
@@ -4579,7 +4584,7 @@
 	  <lit v="aa"/>
 	</let>
       </action>
-    </rule> 
+    </rule>
 
 
 <rule comment="REGLA: LE MEILLEUR DE ('el mayor/menor de - la plej granda/plej malgranda el') (EOes)">
@@ -4626,19 +4631,19 @@
 	           <tag><var n="changecase"/></tag>
 		</tags>
 	        <lu>
-	          <clip pos="1" side="tl" part="lem"/> 
+	          <clip pos="1" side="tl" part="lem"/>
 	          <clip pos="1" side="tl" part="a_det"/>
 	          <lit-tag v="3"/>
 	          <lit-tag v="4"/>
-	        </lu> 
+	        </lu>
                 <b pos="1"/>
-		<lu>   
-		  <clip pos="2" side="tl" part="lemh"/> 
+		<lu>
+		  <clip pos="2" side="tl" part="lemh"/>
 		  <clip pos="2" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
 	          <lit-tag v="4"/>
-		  <clip pos="2" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="2" side="tl" part="lemq"/>
+		</lu>
 	      </chunk>
 	      <b pos="2"/>
 	      <chunk name="el">
@@ -4656,7 +4661,7 @@
 	  <lit v="aa"/>
 	</let>
       </action>
-    </rule> 
+    </rule>
 
 
 <rule comment="REGLA: DET NOM (EO ex. els llibres, les cases -> la libroj, la domoj)">
@@ -4988,30 +4993,30 @@
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	    <lu>
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <clip pos="1" side="tl" part="nbr"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
-	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	    <lu>
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_num"/>
 	      <clip pos="2" side="tl" part="nbr"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="2"/>
 	    <lu>
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <clip pos="3" side="tl" part="nbr"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
+	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
-	    <lu>     
-	      <clip pos="4" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_nom"/>
               <clip pos="4" side="tl" part="gen"/>
 	      <clip pos="4" side="tl" part="nbr"/>
@@ -5019,7 +5024,7 @@
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>	  
+	</out>	
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -5081,38 +5086,38 @@
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	    <lu>
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <clip pos="1" side="tl" part="nbr"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
-	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	    <lu>
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_num"/>
 	      <clip pos="2" side="tl" part="nbr"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="2"/>
 	    <lu>
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <clip pos="3" side="tl" part="nbr"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
+	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
 	    <lu>
-	      <clip pos="5" side="tl" part="lemh"/> 
+	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <clip pos="5" side="tl" part="nbr"/>
 	      <lit-tag v="4"/>
-	      <clip pos="5" side="tl" part="lemq"/> 
+	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>     
-	      <clip pos="4" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_nom"/>
               <clip pos="4" side="tl" part="gen"/>
 	      <clip pos="4" side="tl" part="nbr"/>
@@ -5120,7 +5125,7 @@
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>	  
+	</out>	
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -5182,38 +5187,38 @@
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	    <lu>
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <clip pos="1" side="tl" part="nbr"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
-	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	    <lu>
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_num"/>
 	      <clip pos="2" side="tl" part="nbr"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="2"/>
 	    <lu>
-	      <clip pos="3" side="tl" part="lemh"/> 
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <clip pos="3" side="tl" part="nbr"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
+	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="3"/>
 	    <lu>
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <clip pos="4" side="tl" part="nbr"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
+	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>     
-	      <clip pos="5" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_nom"/>
               <clip pos="5" side="tl" part="gen"/>
 	      <clip pos="5" side="tl" part="nbr"/>
@@ -5221,7 +5226,7 @@
 	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>	  
+	</out>	
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -5281,35 +5286,35 @@
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	    <lu>
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <clip pos="1" side="tl" part="nbr"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
-	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	    <lu>
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_num"/>
 	      <clip pos="2" side="tl" part="nbr"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="2"/>
 	    <lu>
-	      <clip pos="3" side="tl" part="lem"/> 
-	      <clip pos="3" side="tl" part="tags"/> 
+	      <clip pos="3" side="tl" part="lem"/>
+	      <clip pos="3" side="tl" part="tags"/>
 	    </lu>
 	    <b pos="3"/>
 	    <lu>
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <clip pos="4" side="tl" part="nbr"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
+	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="4"/>
-	    <lu>     
-	      <clip pos="5" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_nom"/>
               <clip pos="5" side="tl" part="gen"/>
 	      <clip pos="5" side="tl" part="nbr"/>
@@ -5317,7 +5322,7 @@
 	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>	  
+	</out>	
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -5380,43 +5385,43 @@
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
-	      <clip pos="1" side="tl" part="lem"/> 
+	    <lu>
+	      <clip pos="1" side="tl" part="lem"/>
 	      <clip pos="1" side="tl" part="a_det"/>
 	      <clip pos="1" side="tl" part="nbr"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="1"/>
-	    <lu>   
-	      <clip pos="2" side="tl" part="lem"/> 
+	    <lu>
+	      <clip pos="2" side="tl" part="lem"/>
 	      <clip pos="2" side="tl" part="a_num"/>
 	      <clip pos="2" side="tl" part="nbr"/>
 	      <lit-tag v="4"/>
-	    </lu> 
+	    </lu>
 	    <b pos="2"/>
 	    <lu>
-	      <clip pos="3" side="tl" part="lem"/> 
-	      <clip pos="3" side="tl" part="tags"/> 
+	      <clip pos="3" side="tl" part="lem"/>
+	      <clip pos="3" side="tl" part="tags"/>
 	    </lu>
 	    <b pos="3"/>
 	    <lu>
-	      <clip pos="4" side="tl" part="lemh"/> 
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <clip pos="4" side="tl" part="nbr"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
+	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="4"/>
 	    <lu>
-	      <clip pos="6" side="tl" part="lemh"/> 
+	      <clip pos="6" side="tl" part="lemh"/>
 	      <clip pos="6" side="tl" part="a_adj"/>
 	      <clip pos="6" side="tl" part="nbr"/>
 	      <lit-tag v="4"/>
-	      <clip pos="6" side="tl" part="lemq"/> 
+	      <clip pos="6" side="tl" part="lemq"/>
 	    </lu>
 	    <b pos="5"/>
-	    <lu>     
-	      <clip pos="5" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_nom"/>
               <clip pos="5" side="tl" part="gen"/>
 	      <clip pos="5" side="tl" part="nbr"/>
@@ -5424,7 +5429,7 @@
 	      <clip pos="5" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>	  
+	</out>	
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -5652,8 +5657,8 @@
 	    </lu>
 	    <b pos="1"/>
 	    <lu>
-	      <clip pos="2" side="tl" part="lem"/> 
-	      <clip pos="2" side="tl" part="tags"/> 
+	      <clip pos="2" side="tl" part="lem"/>
+	      <clip pos="2" side="tl" part="tags"/>
 	    </lu>
 	    <b pos="2"/>
 	    <lu>
@@ -5705,13 +5710,13 @@
 	    </lu>
 	    <b pos="1"/>
 	    <lu>
-	      <clip pos="2" side="tl" part="lem"/> 
-	      <clip pos="2" side="tl" part="tags"/> 
+	      <clip pos="2" side="tl" part="lem"/>
+	      <clip pos="2" side="tl" part="tags"/>
 	    </lu>
 	    <b pos="2"/>
 	    <lu>
-	      <clip pos="3" side="tl" part="lem"/> 
-	      <clip pos="3" side="tl" part="tags"/> 
+	      <clip pos="3" side="tl" part="lem"/>
+	      <clip pos="3" side="tl" part="tags"/>
 <!--
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <lit-tag v="np"/>
@@ -5761,7 +5766,7 @@
 	<call-macro n="genro_tl">
 	  <with-param pos="3"/>
 	</call-macro>
-	<out>  
+	<out>
 	  <chunk name="nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -5771,28 +5776,28 @@
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
-	      <clip pos="1" side="tl" part="lem"/> 
-	      <clip pos="1" side="tl" part="tags"/> 
+	      <clip pos="1" side="tl" part="lem"/>
+	      <clip pos="1" side="tl" part="tags"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
-	      <clip pos="2" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
-	    <lu>       
-	      <clip pos="3" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
-	      <clip pos="3" side="tl" part="gen"/> 
+	      <clip pos="3" side="tl" part="gen"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -5832,7 +5837,7 @@
 	<call-macro n="genro_tl">
 	  <with-param pos="3"/>
 	</call-macro>
-	<out>  
+	<out>
 	  <chunk name="nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -5842,36 +5847,36 @@
 	      <tag><var n="changecase"/></tag>
 	    </tags>
 	    <lu>
-	      <clip pos="1" side="tl" part="lem"/> 
-	      <clip pos="1" side="tl" part="tags"/> 
+	      <clip pos="1" side="tl" part="lem"/>
+	      <clip pos="1" side="tl" part="tags"/>
 	    </lu>
 	    <b pos="1"/>
-	    <lu>   
-	      <clip pos="2" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
-	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
-	    <lu>       
-	      <clip pos="3" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
-	      <clip pos="3" side="tl" part="gen"/> 
+	      <clip pos="3" side="tl" part="gen"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -5910,7 +5915,7 @@
 	<call-macro n="genro_tl">
 	  <with-param pos="3"/>
 	</call-macro>
-	<out>  
+	<out>
 	  <chunk name="nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -5919,32 +5924,32 @@
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
-	      <clip pos="1" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="1" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="1" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
-	    <lu>   
-	      <clip pos="2" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
-	    <lu>       
-	      <clip pos="3" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
-	      <clip pos="3" side="tl" part="gen"/> 
+	      <clip pos="3" side="tl" part="gen"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -5986,7 +5991,7 @@
 	<call-macro n="genro_tl">
 	  <with-param pos="3"/>
 	</call-macro>
-	<out>  
+	<out>
 	  <chunk name="nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -5995,40 +6000,40 @@
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
-	      <clip pos="1" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="1" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="1" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
-	    <lu>   
-	      <clip pos="2" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="2" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="2" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="2"/>
-	    <lu>   
-	      <clip pos="4" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="4" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="4" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
-	    <lu>       
-	      <clip pos="3" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_nom"/>
-	      <clip pos="3" side="tl" part="gen"/> 
+	      <clip pos="3" side="tl" part="gen"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -6068,7 +6073,7 @@
 	<call-macro n="genro_tl">
 	  <with-param pos="4"/>
 	</call-macro>
-	<out>  
+	<out>
 	  <chunk name="nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -6077,37 +6082,37 @@
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
-	      <clip pos="1" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="1" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="1" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
 	    <lu>
-	      <clip pos="2" side="tl" part="lem"/> 
-	      <clip pos="2" side="tl" part="tags"/> 
+	      <clip pos="2" side="tl" part="lem"/>
+	      <clip pos="2" side="tl" part="tags"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
-	    <lu>       
-	      <clip pos="4" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_nom"/>
-	      <clip pos="4" side="tl" part="gen"/> 
+	      <clip pos="4" side="tl" part="gen"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -6150,7 +6155,7 @@
 	<call-macro n="genro_tl">
 	  <with-param pos="4"/>
 	</call-macro>
-	<out>  
+	<out>
 	  <chunk name="nom_adj" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
@@ -6159,45 +6164,45 @@
 	      <tag><var n="case"/></tag>
 	      <tag><var n="changecase"/></tag>
 	    </tags>
-	    <lu>   
-	      <clip pos="1" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="1" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="1" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="1"/>
 	    <lu>
-	      <clip pos="2" side="tl" part="lem"/> 
-	      <clip pos="2" side="tl" part="tags"/> 
+	      <clip pos="2" side="tl" part="lem"/>
+	      <clip pos="2" side="tl" part="tags"/>
 	    </lu>
 	    <b pos="2"/>
-	    <lu>   
-	      <clip pos="3" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="3" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="3" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="3"/>
-	    <lu>   
-	      <clip pos="5" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="5" side="tl" part="lemh"/>
 	      <clip pos="5" side="tl" part="a_adj"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
-	      <clip pos="5" side="tl" part="lemq"/> 
-	    </lu> 
+	      <clip pos="5" side="tl" part="lemq"/>
+	    </lu>
 	    <b pos="4"/>
-	    <lu>       
-	      <clip pos="4" side="tl" part="lemh"/> 
+	    <lu>
+	      <clip pos="4" side="tl" part="lemh"/>
 	      <clip pos="4" side="tl" part="a_nom"/>
-	      <clip pos="4" side="tl" part="gen"/> 
+	      <clip pos="4" side="tl" part="gen"/>
 	      <lit-tag v="3"/>
 	      <lit-tag v="4"/>
 	      <clip pos="4" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
-	</out>       
+	</out>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -6376,8 +6381,8 @@
 	    </lu>
 	    <b pos="2"/>
 	    <lu>
-	      <clip pos="3" side="tl" part="lem"/> 
-	      <clip pos="3" side="tl" part="tags"/> 
+	      <clip pos="3" side="tl" part="lem"/>
+	      <clip pos="3" side="tl" part="tags"/>
 	    </lu>
 	    <b pos="3"/>
 	    <lu>
@@ -6417,8 +6422,8 @@
 	    </lu>
 	    <b pos="2"/>
 	    <lu>
-	      <clip pos="3" side="tl" part="lem"/> 
-	      <clip pos="3" side="tl" part="tags"/> 
+	      <clip pos="3" side="tl" part="lem"/>
+	      <clip pos="3" side="tl" part="tags"/>
 	    </lu>
 	    <b pos="3"/>
 	    <lu>
@@ -11867,15 +11872,18 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="1"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiuY"/></tag>
+                        <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="rel"/></tag>
+                        <tag><clip pos="1" side="tl" part="nbr"/></tag>
                         <tag><var n="case"/></tag>
+                        <tag><var n="changecase"/></tag>
                         </tags>
                         <lu>
                         <lit v="kiu"/>
                         <lit-tag v="prn"/>
                         <lit-tag v="rel"/>
-                        <clip pos="1" side="tl" part="nbr"/>
-                        <lit-tag v="2"/>
+                        <lit-tag v="3"/>
+                        <lit-tag v="4"/>
                         </lu>
                         </chunk>
 
@@ -11945,7 +11953,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="1"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu2"/></tag>
+                        <tag><lit-tag v="SNrelatiu"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -12068,7 +12076,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="1"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu3"/></tag>
+                        <tag><lit-tag v="SNrelatiu"/></tag>
 	                <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -12206,7 +12214,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="3"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu4"/></tag>
+                        <tag><lit-tag v="SNrelatiu"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -12336,7 +12344,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="3"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu5"/></tag>
+                        <tag><lit-tag v="SNrelatiu"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -12466,7 +12474,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="3"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu6"/></tag>
+                        <tag><lit-tag v="SNrelatiu"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -12618,7 +12626,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="4"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu7"/></tag>
+                        <tag><lit-tag v="SNrelatiu"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -12784,7 +12792,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="4"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu8"/></tag>
+                        <tag><lit-tag v="SNrelatiu"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -12929,7 +12937,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="4"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu9"/></tag>
+                        <tag><lit-tag v="SNrelatiu"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -13092,7 +13100,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="5"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiuA"/></tag>
+                        <tag><lit-tag v="SNrelatiu"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -13169,8 +13177,8 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 		<lu>
 		  <clip pos="3" side="tl" part="lemh"/>
 		  <clip pos="3" side="tl" part="a_adj"/>
-		  <lit-tag v="4"/>
 	          <lit-tag v="3"/>
+		  <lit-tag v="4"/>
 		  <clip pos="3" side="tl" part="lemq"/>
 		</lu>
 		<b pos="1"/>
@@ -13252,7 +13260,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="5"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiuB"/></tag>
+                        <tag><lit-tag v="SNrelatiu"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -13432,7 +13440,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="6"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiuC"/></tag>
+                        <tag><lit-tag v="SNrelatiu"/></tag>
                         <tag><var n="case"/></tag>
                         </tags>
                         <lu>
@@ -13841,18 +13849,18 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	           <tag><var n="case"/></tag>
 	           <tag><var n="changecase"/></tag>
 		</tags>
-		<lu>   
+		<lu>
                   <clip pos="1" side="tl" part="lem"/>
                   <clip pos="1" side="tl" part="tags"/>
-		</lu> 
+		</lu>
 		<b pos="1"/>
                 <lu>
                   <lit v="da"/>
                   <lit-tag v="pr"/>
                 </lu>
 		<b pos="2"/>
-		<lu>   
-	          <clip pos="3" side="tl" part="lemh"/> 
+		<lu>
+	          <clip pos="3" side="tl" part="lemh"/>
 	          <clip pos="3" side="tl" part="a_nom"/>
                   <clip pos="3" side="tl" part="gen"/>
 	          <lit-tag v="3"/>
@@ -13863,7 +13871,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <lu>
                   <lit v="ol"/>
                   <lit-tag v="cnjcoo"/>
-		</lu>   
+		</lu>
 	      </chunk>
 	    </out>
 	<let>
@@ -13871,7 +13879,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	  <lit v="aa"/>
 	</let>
       </action>
-    </rule> 
+    </rule>
 
 
 <rule comment="REGLA: SI ADJECTIU QUE (si grand que -> tiel granda ke) (EO)">
@@ -13952,18 +13960,18 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	           <tag><var n="case"/></tag>
 	           <tag><var n="changecase"/></tag>
 		</tags>
-		<lu>   
-		  <clip pos="1" side="tl" part="lemh"/> 
+		<lu>
+		  <clip pos="1" side="tl" part="lemh"/>
 		  <clip pos="1" side="tl" part="a_adj"/>
 	          <clip pos="1" side="sl" part="nbr"/>
 	          <lit-tag v="4"/>
-		  <clip pos="1" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="1" side="tl" part="lemq"/>
+		</lu>
 		<b pos="1"/>
                 <lu>
                   <lit v="ol"/>
                   <lit-tag v="cnjcoo"/>
-		</lu>   
+		</lu>
 	      </chunk>
 	    </out>
 	<let>
@@ -13971,7 +13979,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	  <lit v="aa"/>
 	</let>
       </action>
-    </rule> 
+    </rule>
 
 
 <rule comment="REGLA: MEILLEUR NOM QUE ('mayor/menor libertad que - pli granda/pli malgranda libereco ol') (EOes)">
@@ -14011,16 +14019,16 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	           <tag><var n="case"/></tag>
 	           <tag><var n="changecase"/></tag>
 		</tags>
-		<lu>   
-		  <clip pos="1" side="tl" part="lemh"/> 
+		<lu>
+		  <clip pos="1" side="tl" part="lemh"/>
 		  <clip pos="1" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
 	          <lit-tag v="4"/>
-		  <clip pos="1" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="1" side="tl" part="lemq"/>
+		</lu>
 		<b pos="1"/>
-		<lu>   
-	          <clip pos="2" side="tl" part="lemh"/> 
+		<lu>
+	          <clip pos="2" side="tl" part="lemh"/>
 	          <clip pos="2" side="tl" part="a_nom"/>
 	          <lit-tag v="3"/>
 	          <lit-tag v="4"/>
@@ -14030,7 +14038,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <lu>
                   <lit v="ol"/>
                   <lit-tag v="cnjcoo"/>
-		</lu>   
+		</lu>
 	      </chunk>
 	    </out>
 	<let>
@@ -14038,7 +14046,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	  <lit v="aa"/>
 	</let>
       </action>
-    </rule> 
+    </rule>
 
 
 <rule comment="REGLA: MEILLEUR NOM ADJ QUE ('mayor/menor libertad individual que - pli granda/pli malgranda libereco ol') (EOes)">
@@ -14081,24 +14089,24 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	           <tag><var n="case"/></tag>
 	           <tag><var n="changecase"/></tag>
 		</tags>
-		<lu>   
-		  <clip pos="1" side="tl" part="lemh"/> 
+		<lu>
+		  <clip pos="1" side="tl" part="lemh"/>
 		  <clip pos="1" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
 	          <lit-tag v="4"/>
-		  <clip pos="1" side="tl" part="lemq"/> 
-		</lu> 
+		  <clip pos="1" side="tl" part="lemq"/>
+		</lu>
 		<b pos="1"/>
-		<lu>   
-		  <clip pos="3" side="tl" part="lemh"/> 
+		<lu>
+		  <clip pos="3" side="tl" part="lemh"/>
 		  <clip pos="3" side="tl" part="a_adj"/>
 	          <lit-tag v="3"/>
 	          <lit-tag v="4"/>
-		  <clip pos="3" side="tl" part="lemq"/> 
+		  <clip pos="3" side="tl" part="lemq"/>
 		</lu>
 		<b pos="2"/>
-		<lu>   
-	          <clip pos="2" side="tl" part="lemh"/> 
+		<lu>
+	          <clip pos="2" side="tl" part="lemh"/>
 	          <clip pos="2" side="tl" part="a_nom"/>
                   <clip pos="2" side="tl" part="gen"/>
 	          <lit-tag v="3"/>
@@ -14109,7 +14117,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <lu>
                   <lit v="ol"/>
                   <lit-tag v="cnjcoo"/>
-		</lu>   
+		</lu>
 	      </chunk>
 	    </out>
 	<let>
@@ -14117,7 +14125,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	  <lit v="aa"/>
 	</let>
       </action>
-    </rule> 
+    </rule>
 
 
     <rule comment="REGLA: DET:a  - the determiner 'a' should just be deleted. Having this rule makes it possible to avoid handling 'a' in all the other rules">
@@ -14200,7 +14208,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="1" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
 		      <tag><var n="tipus_verb"/></tag>
@@ -14256,7 +14264,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="1" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -14321,7 +14329,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="1" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -14389,7 +14397,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
 		      <tag><var n="tipus_verb"/></tag>
@@ -14456,7 +14464,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
 		      <tag><var n="tipus_verb"/></tag>
@@ -14529,7 +14537,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
 	              <tag><var n="case"/></tag>
@@ -14578,7 +14586,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
                     </tags>
@@ -14648,7 +14656,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
 	              <tag><var n="case"/></tag>
@@ -14715,7 +14723,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
                     </tags>
@@ -14793,7 +14801,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
 	              <tag><var n="case"/></tag>
@@ -14828,7 +14836,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
                     </tags>
@@ -14898,7 +14906,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="4" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
 	              <tag><var n="case"/></tag>
@@ -14951,7 +14959,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="4" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
                     </tags>
@@ -15007,7 +15015,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="1" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -15056,7 +15064,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="1" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -15114,7 +15122,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="1" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -15184,7 +15192,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="1" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -15260,7 +15268,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="1" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -15271,7 +15279,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="1" side="tl" part="lemh"/>
                       <clip pos="1" side="tl" part="a_verb"/>
                       <clip pos="1" side="tl" part="sep"/>
-                      <clip pos="1" side="tl" part="temps"/>
+	              <lit-tag v="3"/>
                       <clip pos="1" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -15305,7 +15313,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
 		      <tag><var n="tipus_verb"/></tag>
@@ -15316,7 +15324,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="1" side="tl" part="lemh"/>
                       <clip pos="1" side="tl" part="a_verb"/>
                       <clip pos="1" side="tl" part="sep"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="1" side="tl" part="lemq"/>
                     </lu>
 		    <b pos="1"/>
@@ -15359,7 +15367,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
 		      <tag><var n="tipus_verb"/></tag>
@@ -15369,7 +15377,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="1" side="tl" part="lemh"/>
                       <clip pos="1" side="tl" part="a_verb"/>
                       <clip pos="1" side="tl" part="sep"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="1" side="tl" part="lemq"/>
                     </lu>
 		    <b pos="1"/>
@@ -15413,7 +15421,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
 		      <tag><var n="tipus_verb"/></tag>
@@ -15423,7 +15431,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="1" side="tl" part="lemh"/>
                       <clip pos="1" side="tl" part="a_verb"/>
                       <clip pos="1" side="tl" part="sep"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="1" side="tl" part="lemq"/>
                     </lu>
 		    <b pos="1"/>
@@ -15478,7 +15486,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
 		      <tag><var n="tipus_verb"/></tag>
@@ -15488,7 +15496,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="1" side="tl" part="lemh"/>
                       <clip pos="1" side="tl" part="a_verb"/>
                       <clip pos="1" side="tl" part="sep"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="1" side="tl" part="lemq"/>
                     </lu>
 	    	<b pos="1"/>
@@ -15549,7 +15557,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="2" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
                   <chunk name="verbcj" case="caseFirstWord">
@@ -15564,7 +15572,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <!-- <clip pos="2" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="past"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
@@ -15588,7 +15595,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -15596,8 +15603,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <!-- <clip pos="2" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="gerpast"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -15623,13 +15629,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="1" side="tl" part="a_verb"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b/>
                     <lu>
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <!-- <clip pos="2" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="1" side="tl" part="nbr"/>
                       <clip pos="2" side="tl" part="lemq"/>
@@ -15679,7 +15684,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="3" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -15697,7 +15702,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="tl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -15705,8 +15710,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="past"/>
+                      <lit-tag v="3"/>
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -15748,7 +15752,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="gerpast"/>
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
@@ -15786,13 +15789,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="1" side="tl" part="a_verb"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="1"/>
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="1" side="tl" part="nbr"/>
                       <clip pos="3" side="tl" part="lemq"/>
@@ -15841,7 +15843,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="2" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
                   <chunk name="verbcj" case="caseFirstWord">
@@ -15882,13 +15884,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="1" side="tl" part="a_verb"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="1"/>
                     <lu>
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <!-- <clip pos="2" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="1" side="tl" part="nbr"/>
                       <clip pos="2" side="tl" part="lemq"/>
@@ -15938,7 +15939,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="3" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -16001,13 +16002,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="1" side="tl" part="a_verb"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="1"/>
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="1" side="tl" part="nbr"/>
                       <clip pos="3" side="tl" part="lemq"/>
@@ -16062,7 +16062,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="1" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
                   <chunk name="verbcj" case="caseFirstWord">
@@ -16077,7 +16077,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="1" side="tl" part="a_verb"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="1"/>
                     <lu>
@@ -16107,7 +16107,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="1" side="tl" part="a_verb"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="1"/>
                     <lu>
@@ -16165,23 +16165,22 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="2" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
                   <chunk name="verbcj_perifD" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="tl" part="temps"/></tag>
-                      <tag><clip pos="1" side="tl" part="pers"/></tag>
-                      <tag><clip pos="1" side="tl" part="nbr"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
                     </tags>
                     <lu>
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <!-- <clip pos="2" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="past"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                     <b pos="1"/>
@@ -16215,13 +16214,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="1" side="tl" part="a_verb"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b/>
                     <lu>
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <!-- <clip pos="2" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="1" side="tl" part="nbr"/>
                       <clip pos="2" side="tl" part="lemq"/>
@@ -16283,7 +16281,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <lu>
                   <clip pos="2" side="tl" part="lemh"/>
                   <clip pos="2" side="tl" part="a_verb"/>
-                  <clip pos="2" side="tl" part="temps"/>
+                  <lit-tag v="3"/>
                   <clip pos="2" side="tl" part="lemq"/>
                 </lu>
               </chunk>
@@ -16322,15 +16320,15 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <tags>
                   <tag><lit-tag v="verbcj_perifH3"/></tag>
                   <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                  <tag><clip pos="3" side="tl" part="temps"/></tag>
-                  <tag><clip pos="1" side="tl" part="pers"/></tag>
-                  <tag><clip pos="1" side="tl" part="nbr"/></tag>
+                  <tag><clip pos="2" side="tl" part="temps"/></tag>
+                  <tag><clip pos="2" side="tl" part="pers"/></tag>
+                  <tag><clip pos="2" side="tl" part="nbr"/></tag>
 		  <tag><var n="tipus_verb"/></tag>
                 </tags>
                 <lu>
 		  <lit v="esti"/>
                   <clip pos="2" side="tl" part="a_verb"/>
-                  <clip pos="2" side="tl" part="temps"/>
+                  <lit-tag v="3"/>
                 </lu>
                 <b pos="2"/>
                 <lu>
@@ -16374,15 +16372,15 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <tags>
                   <tag><lit-tag v="verbcj_perifH2"/></tag>
                   <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                  <tag><clip pos="3" side="tl" part="temps"/></tag>
-                  <tag><clip pos="1" side="tl" part="pers"/></tag>
-                  <tag><clip pos="1" side="tl" part="nbr"/></tag>
+                  <tag><clip pos="2" side="tl" part="temps"/></tag>
+                  <tag><clip pos="2" side="tl" part="pers"/></tag>
+                  <tag><clip pos="2" side="tl" part="nbr"/></tag>
 		  <tag><var n="tipus_verb"/></tag>
                 </tags>
                 <lu>
 		  <lit v="esti"/>
                   <clip pos="2" side="tl" part="a_verb"/>
-                  <clip pos="2" side="tl" part="temps"/>
+                  <lit-tag v="3"/>
                 </lu>
                 <b pos="2"/>
                 <lu>
@@ -16613,195 +16611,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
       </action>
     </rule>
 
-
-
-    <rule comment="INF_IMP + ENCL + INF (haver-los de comprar; poder-los comprar; voler-los comprar; deixa'l llegir. El clític passa al final EO- )">
-      <pattern>
-	<pattern-item n="inf_imp"/>
-	<pattern-item n="enc"/>
-	<pattern-item n="inf"/>
-      </pattern>
-      <action>              	
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
-	</call-macro>
-	<choose>
-              <when>  <!-- mirem si és SE per no fer res-->
-                <test>
-                    <equal>
-                        <clip pos="2" side="sl" part="lem"/>
-                        <lit v="es"/><!--és 'sp' -->
-                      </equal>
-                </test>
-
-	<out>
-	  <chunk name="verb_inf" case="caseFirstWord">
-	    <tags>
-	      <tag><lit-tag v="SV"/></tag>
-	      <tag><clip pos="1" side="tl" part="a_verb"/></tag>
-	      <tag><clip pos="1" side="tl" part="temps"/></tag>
-	      <tag><clip pos="1" side="sl" part="pers"/></tag>
-	      <tag><clip pos="1" side="sl" part="nbr"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="1" side="tl" part="lemh"/>
-	      <clip pos="1" side="tl" part="a_verb"/>
-	      <clip pos="1" side="tl" part="temps" link-to="3"/>
-	      <clip pos="1" side="tl" part="lemq"/>
-	    </lu>	
-            <b pos="1"/>
-             <lu>
-              <clip pos="3" side="tl" part="lemh"/>
-              <clip pos="3" side="tl" part="a_verb"/>
-              <clip pos="3" side="tl" part="sep"/>
-              <clip pos="3" side="tl" part="temps"/>
-              <clip pos="3" side="tl" part="lemq"/>
-             </lu>
-
-	  </chunk>
-	</out>
-             </when>
-<otherwise>
-	<out>
-	  <chunk name="verb_inf_enc" case="caseFirstWord">
-	    <tags>
-	      <tag><lit-tag v="SV"/></tag>
-	      <tag><clip pos="1" side="tl" part="a_verb"/></tag>
-	      <tag><clip pos="1" side="tl" part="temps"/></tag>
-	      <tag><clip pos="1" side="sl" part="pers"/></tag>
-	      <tag><clip pos="1" side="sl" part="nbr"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="1" side="tl" part="lemh"/>
-	      <clip pos="1" side="tl" part="a_verb"/>
-	      <clip pos="1" side="tl" part="temps" link-to="3"/>
-	      <clip pos="1" side="tl" part="lemq"/>
-	    </lu>	
-            <b pos="1"/>
-             <lu>
-              <clip pos="3" side="tl" part="lemh"/>
-              <clip pos="3" side="tl" part="a_verb"/>
-              <clip pos="3" side="tl" part="sep"/>
-              <clip pos="3" side="tl" part="temps"/>
-              <clip pos="3" side="tl" part="lemq"/>
-             </lu>
-	    <b pos="2"/>
-	    <lu>
-              <clip pos="2" side="tl" part="lem"/>
-              <clip pos="2" side="tl" part="tags"/>
-	    </lu>
-	  </chunk>
-	</out>
-	</otherwise>
-	</choose>
-	<let>
-	  <var n="caseFirstWord"/>
-	  <lit v="aa"/>
-	</let>
-      </action>
-    </rule>
-
-
-    <rule comment="INF_IMP + ENCL + ENCL + INF (haver-los de comprar; poder-los comprar; voler-los comprar; deixa'l llegir. El clític passa al final EO- )">
-      <pattern>
-	<pattern-item n="inf_imp"/>
-	<pattern-item n="enc"/>
-	<pattern-item n="enc"/>
-	<pattern-item n="inf"/>
-      </pattern>
-      <action>              	
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
-	</call-macro>
-
-	<out> <!-- primer pintem els vebrs -->
-	  <chunk name="verb_enc_inf" case="caseFirstWord">
-	    <tags>
-	      <tag><lit-tag v="SV"/></tag>
-	      <tag><clip pos="1" side="tl" part="a_verb"/></tag>
-	      <tag><clip pos="1" side="tl" part="temps"/></tag>
-	      <tag><clip pos="1" side="sl" part="pers"/></tag>
-	      <tag><clip pos="1" side="sl" part="nbr"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="1" side="tl" part="lemh"/>
-	      <clip pos="1" side="tl" part="a_verb"/>
-	      <clip pos="1" side="tl" part="temps" link-to="3"/>
-	      <clip pos="1" side="tl" part="lemq"/>
-	    </lu>	
-            <b pos="1"/>
-             <lu>
-              <clip pos="4" side="tl" part="lemh"/>
-              <clip pos="4" side="tl" part="a_verb"/>
-              <clip pos="4" side="tl" part="sep"/>
-              <clip pos="4" side="tl" part="temps"/>
-              <clip pos="4" side="tl" part="lemq"/>
-             </lu>
-
-	  </chunk>
-	 <b/>
-	</out>
-
-                <out>
-                  <chunk name="pro_directe" case="caseFirstWord">
-                    <tags>
-                      <tag><lit-tag v="SN"/></tag>
-                      <tag><clip pos="3" side="tl" part="tipus_prn"/></tag>
-                      <tag><clip pos="3" side="sl" part="pers"/></tag>
-                      <tag><clip pos="3" side="tl" part="gen"/></tag>
-                      <tag><clip pos="3" side="tl" part="nbr"/></tag>
-                    </tags>
-                    <lu>
-                      <clip pos="3" side="tl" part="lem"/>
-                      <clip pos="3" side="tl" part="tags"/>
-                    </lu>
-                  </chunk>
-                </out>
-     <!-- Si el primer clitic és SE: l'eliminem; si no el fem objecte indirecte (eliminem les formes SE ja que estadísticament sembla justificat, la majoria de vegades són benefactius, etc...-->
-
-          <choose>
-              <when>  <!-- mirem si és SE per no fer res-->
-                <test>
-                    <equal>
-                      <clip pos="2" side="sl" part="tipus_prn"/>
-                      <lit-tag v="ref"/>
-                    </equal>
-                </test>
-              </when>
-           <otherwise> <!-- SI NO es SE: objecte indirecte (passa a 'subj' per agafar nominatiu i s'afegeix la prep 'al') -->
-                <let>
-                  <clip pos="2" side="tl" part="tipus_prn"/>
-                  <lit-tag v="subj"/>
-                </let>
-                <out>
-                  <b pos="1"/>
-                  <chunk name="pro_indirecte">
-                    <tags>
-                      <tag><lit-tag v="SN"/></tag>
-                      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
-                      <tag><clip pos="2" side="sl" part="pers"/></tag>
-                      <tag><clip pos="2" side="tl" part="gen"/></tag>
-                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
-                    </tags>
-                    <lu>
-                      <lit v="al"/>
-                      <lit-tag v="pr"/>
-                    </lu>
-                    <b pos="1"/>
-                    <lu>
-                      <clip pos="2" side="tl" part="lem"/>
-                      <clip pos="2" side="tl" part="tags"/>
-                    </lu>
-                  </chunk>
-                </out>
-        </otherwise>
-      </choose>
-	<let>
-	  <var n="caseFirstWord"/>
-	  <lit v="aa"/>
-	</let>
-      </action>
-    </rule>
 
 
     <rule comment="REGLA: PARTICIPI + PAR -> aimé par -> amata de">
@@ -17090,13 +16899,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="1" side="tl" part="a_verb"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="1"/>
                     <lu>
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <!-- <clip pos="2" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="2" side="tl" part="lemq"/>
@@ -17149,13 +16957,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="1" side="tl" part="a_verb"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="3" side="tl" part="nbr"/>
                       <clip pos="3" side="tl" part="lemq"/>
@@ -17188,13 +16995,13 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	    <tags>
 	      <tag><lit-tag v="SV"/></tag>
 	      <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-	      <tag><clip pos="3" side="sl" part="temps"/></tag>
+	      <tag><clip pos="3" side="tl" part="temps"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="3" side="tl" part="lemh"/>
 	      <clip pos="3" side="tl" part="a_verb"/>
 	      <clip pos="3" side="tl" part="sep"/>
-	      <clip pos="3" side="tl" part="temps"/>
+	      <lit-tag v="3"/>
 	      <clip pos="3" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
@@ -17221,13 +17028,13 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	    <tags>
 	      <tag><lit-tag v="SV"/></tag>
 	      <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-	      <tag><clip pos="2" side="sl" part="temps"/></tag>
+	      <tag><clip pos="2" side="tl" part="temps"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="2" side="tl" part="lemh"/>
 	      <clip pos="2" side="tl" part="a_verb"/>
 	      <clip pos="2" side="tl" part="sep"/>
-	      <clip pos="2" side="tl" part="temps"/>
+	      <lit-tag v="3"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
@@ -17256,14 +17063,14 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	    <tags>
 	      <tag><lit-tag v="SV"/></tag>
 	      <tag><clip pos="1" side="tl" part="a_verb"/></tag>
-	      <tag><clip pos="1" side="sl" part="temps"/></tag>
+	      <tag><clip pos="1" side="tl" part="temps"/></tag>
 	      <tag><var n="tipus_verb"/></tag>
 	    </tags>
 	    <lu>
 	      <clip pos="1" side="tl" part="lemh"/>
 	      <clip pos="1" side="tl" part="a_verb"/>
 	      <clip pos="1" side="tl" part="sep"/>
-	      <clip pos="1" side="tl" part="temps"/>
+	      <lit-tag v="3"/>
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
 	  </chunk>
@@ -17306,7 +17113,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -17316,7 +17123,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -17387,7 +17194,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="3" side="tl" part="temps"/>
-                  <lit-tag v="past"/>  - present -
+                  <lit-tag v="past"/>
                 </let>
                 <out>
                   <chunk name="verbcj" case="caseFirstWord">
@@ -17446,13 +17253,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                       - <clip pos="3" side="tl" part="temps"/> -  - per alguna raó falla a vegades amb vbser -
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="3" side="tl" part="lemq"/>
@@ -17568,7 +17374,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -17578,7 +17384,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -17622,7 +17428,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -17632,7 +17438,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -17703,7 +17509,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -17713,7 +17519,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -17786,7 +17592,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="3" side="sl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="temps"/></tag>
                       <tag><clip pos="3" side="tl" part="pers"/></tag>
                       <tag><clip pos="3" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -17796,7 +17602,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
                       <clip pos="3" side="tl" part="sep"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -17841,7 +17647,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -17851,7 +17657,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -17903,7 +17709,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -17913,7 +17719,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -17974,7 +17780,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="2" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
                   <chunk name="verbcj" case="caseFirstWord">
@@ -18033,13 +17839,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="1"/>
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="3" side="tl" part="lemq"/>
@@ -18180,7 +17985,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -18190,7 +17995,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -18234,7 +18039,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="4" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -18297,13 +18102,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
                       <clip pos="4" side="tl" part="lemh"/>
                       <clip pos="4" side="tl" part="a_verb"/>
-                      <!-- <clip pos="4" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="4" side="tl" part="lemq"/>
@@ -18357,7 +18161,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -18367,7 +18171,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -18422,7 +18226,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="5" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -18495,13 +18299,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                      <!-- <clip pos="5" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="5" side="tl" part="lemq"/>
@@ -18608,7 +18411,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
@@ -18669,7 +18472,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="4" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -18731,13 +18534,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
                       <clip pos="4" side="tl" part="lemh"/>
                       <clip pos="4" side="tl" part="a_verb"/>
-                      <!-- <clip pos="4" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="4" side="tl" part="lemq"/>
@@ -18790,7 +18592,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="1" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
                   <chunk name="verbcj" case="caseFirstWord">
@@ -18805,7 +18607,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="1" side="tl" part="a_verb"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="1"/>
                     <lu>
@@ -18835,7 +18637,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="1" side="tl" part="a_verb"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="1"/>
                     <lu>
@@ -18906,7 +18708,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="1" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
                   <chunk name="verbcj" case="caseFirstWord">
@@ -18921,7 +18723,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="1" side="tl" part="a_verb"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="1"/>
                     <lu>
@@ -18951,7 +18753,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="1" side="tl" part="a_verb"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="1"/>
                     <lu>
@@ -19019,7 +18821,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="5" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -19092,13 +18894,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="4"/>
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                      <!-- <clip pos="5" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="5" side="tl" part="lemq"/>
@@ -19204,7 +19005,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
@@ -19277,7 +19078,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="3" side="sl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="temps"/></tag>
                       <tag><clip pos="3" side="tl" part="pers"/></tag>
                       <tag><clip pos="3" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -19287,7 +19088,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
                       <clip pos="3" side="tl" part="sep"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -19352,7 +19153,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="3" side="sl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="temps"/></tag>
                       <tag><clip pos="3" side="tl" part="pers"/></tag>
                       <tag><clip pos="3" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -19362,7 +19163,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
                       <clip pos="3" side="tl" part="sep"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -19425,7 +19226,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="5" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -19506,13 +19307,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="3"/>
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                      <!-- <clip pos="5" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="3" side="tl" part="nbr"/>
                       <clip pos="5" side="tl" part="lemq"/>
@@ -19591,7 +19391,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="6" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -19682,13 +19482,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="4"/>
                     <lu>
                       <clip pos="6" side="tl" part="lemh"/>
                       <clip pos="6" side="tl" part="a_verb"/>
-                      <!-- <clip pos="6" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="3" side="tl" part="nbr"/>
                       <clip pos="6" side="tl" part="lemq"/>
@@ -19766,7 +19565,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="5" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -19847,13 +19646,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="3"/>
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                      <!-- <clip pos="5" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="3" side="tl" part="nbr"/>
                       <clip pos="5" side="tl" part="lemq"/>
@@ -19932,7 +19730,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="6" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -20023,13 +19821,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="5"/>
                     <lu>
                       <clip pos="6" side="tl" part="lemh"/>
                       <clip pos="6" side="tl" part="a_verb"/>
-                      <!-- <clip pos="6" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="3" side="tl" part="nbr"/>
                       <clip pos="6" side="tl" part="lemq"/>
@@ -20104,7 +19901,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
 		      <tag><var n="tipus_verb"/></tag>
@@ -20115,7 +19912,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
 	            <b pos="3"/>
@@ -20174,7 +19971,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
 		      <tag><var n="tipus_verb"/></tag>
@@ -20185,7 +19982,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
 	    <b pos="3"/>
@@ -20233,7 +20030,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="1" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
 		      <tag><var n="tipus_verb"/></tag>
@@ -20244,7 +20041,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="1" side="tl" part="lemh"/>
                       <clip pos="1" side="tl" part="a_verb"/>
                       <clip pos="1" side="tl" part="sep"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="1" side="tl" part="lemq"/>
                     </lu>
 	            <b pos="3"/>
@@ -20312,7 +20109,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="3" side="sl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="temps"/></tag>
                       <tag><clip pos="3" side="tl" part="pers"/></tag>
                       <tag><clip pos="3" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -20322,7 +20119,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
                       <clip pos="3" side="tl" part="sep"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -20388,7 +20185,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -20398,7 +20195,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -20442,7 +20239,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="4" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -20505,13 +20302,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
                       <clip pos="4" side="tl" part="lemh"/>
                       <clip pos="4" side="tl" part="a_verb"/>
-                      <!-- <clip pos="4" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="4" side="tl" part="lemq"/>
@@ -20573,7 +20369,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="3" side="sl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="temps"/></tag>
                       <tag><clip pos="3" side="tl" part="pers"/></tag>
                       <tag><clip pos="3" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -20583,7 +20379,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
                       <clip pos="3" side="tl" part="sep"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -20654,7 +20450,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="5" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -20735,13 +20531,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="4"/>
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                      <!-- <clip pos="5" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="5" side="tl" part="lemq"/>
@@ -20801,7 +20596,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -20811,7 +20606,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -20865,7 +20660,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="4" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
                   <chunk name="verbcj" case="caseFirstWord">
@@ -20916,13 +20711,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
                       <clip pos="4" side="tl" part="lemh"/>
                       <clip pos="4" side="tl" part="a_verb"/>
-                      <!-- <clip pos="4" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="4" side="tl" part="lemq"/>
@@ -20986,7 +20780,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -20996,7 +20790,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -21051,7 +20845,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="5" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -21124,13 +20918,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                      <!-- <clip pos="5" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="5" side="tl" part="lemq"/>
@@ -21183,7 +20976,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -21193,7 +20986,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -21247,7 +21040,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="3" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
                   <chunk name="verbcj" case="caseFirstWord">
@@ -21298,13 +21091,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="3" side="tl" part="lemq"/>
@@ -21365,7 +21157,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="3" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
                   <chunk name="verbcj" case="caseFirstWord">
@@ -21415,13 +21207,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="3" side="tl" part="lemq"/>
@@ -21485,7 +21276,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -21495,7 +21286,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -21539,7 +21330,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="4" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 		  <chunk name="adv" case="caseFirstWord">
@@ -21600,13 +21391,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
                       <clip pos="4" side="tl" part="lemh"/>
                       <clip pos="4" side="tl" part="a_verb"/>
-                      <!-- <clip pos="4" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="4" side="tl" part="lemq"/>
@@ -21657,7 +21447,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="4" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 		  <chunk name="adv" case="caseFirstWord">
@@ -21717,13 +21507,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
                       <clip pos="4" side="tl" part="lemh"/>
                       <clip pos="4" side="tl" part="a_verb"/>
-                      <!-- <clip pos="4" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="4" side="tl" part="lemq"/>
@@ -21862,7 +21651,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="1" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -21872,7 +21661,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="1" side="tl" part="lemh"/>
                       <clip pos="1" side="tl" part="a_verb"/>
                       <clip pos="1" side="tl" part="sep"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="1" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -21906,7 +21695,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="1" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="sl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
                       <tag><clip pos="1" side="tl" part="pers"/></tag>
                       <tag><clip pos="1" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -21916,7 +21705,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="1" side="tl" part="lemh"/>
                       <clip pos="1" side="tl" part="a_verb"/>
                       <clip pos="1" side="tl" part="sep"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="1" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -21969,7 +21758,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="3" side="tl" part="temps"/>
-                  <lit-tag v="past"/>  <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
         <choose>
               <when>   <!-- komenco de frazo -> + ĉu -->
@@ -22133,13 +21922,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="1" side="tl" part="a_verb"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                       <!-- <clip pos="3" side="tl" part="temps"/> -->  <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="1" side="tl" part="nbr"/>
                       <clip pos="3" side="tl" part="lemq"/>
@@ -22183,13 +21971,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="1" side="tl" part="a_verb"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                       <!-- <clip pos="3" side="tl" part="temps"/> -->  <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="1" side="tl" part="nbr"/>
                       <clip pos="3" side="tl" part="lemq"/>
@@ -22249,7 +22036,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="3" side="tl" part="temps"/>
-                  <lit-tag v="past"/>  <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
         <choose>
               <when>   <!-- komenco de frazo -> + ĉu -->
@@ -22413,13 +22200,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="1" side="tl" part="a_verb"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                       <!-- <clip pos="3" side="tl" part="temps"/> -->  <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="1" side="tl" part="nbr"/>
                       <clip pos="3" side="tl" part="lemq"/>
@@ -22463,13 +22249,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="1" side="tl" part="a_verb"/>
-                      <clip pos="1" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                       <!-- <clip pos="3" side="tl" part="temps"/> -->  <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="1" side="tl" part="nbr"/>
                       <clip pos="3" side="tl" part="lemq"/>
@@ -22575,7 +22360,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -22585,7 +22370,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -22630,7 +22415,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -22640,7 +22425,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -22695,7 +22480,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="5" side="tl" part="temps"/>
-                  <lit-tag v="past"/>  <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
         <choose>
               <when>   <!-- komenco de frazo -> + ĉu -->
@@ -22752,7 +22537,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="5" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="5" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -22760,8 +22545,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                       <!-- <clip pos="5" side="tl" part="temps"/> -->  <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="past"/>
+                      <lit-tag v="3"/>
                       <clip pos="5" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -22806,7 +22590,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="5" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="5" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -22814,8 +22598,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                       <!-- <clip pos="5" side="tl" part="temps"/> -->  <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="past"/>
+                      <lit-tag v="3"/>
                       <clip pos="5" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -22892,13 +22675,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="3"/>
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                       <!-- <clip pos="5" side="tl" part="temps"/> -->  <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="5" side="tl" part="lemq"/>
@@ -22953,13 +22735,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="3"/>
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                       <!-- <clip pos="5" side="tl" part="temps"/> -->  <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="5" side="tl" part="lemq"/>
@@ -23021,7 +22802,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="5" side="tl" part="temps"/>
-                  <lit-tag v="past"/>  <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
         <choose>
               <when>   <!-- komenco de frazo -> + ĉu -->
@@ -23078,7 +22859,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="5" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="5" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -23086,8 +22867,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                       <!-- <clip pos="5" side="tl" part="temps"/> -->  <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="past"/>
+                      <lit-tag v="3"/>
                       <clip pos="5" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -23132,7 +22912,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="5" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="5" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -23140,8 +22920,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                       <!-- <clip pos="5" side="tl" part="temps"/> -->  <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="past"/>
+                      <lit-tag v="3"/>
                       <clip pos="5" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -23218,13 +22997,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="3"/>
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                       <!-- <clip pos="5" side="tl" part="temps"/> -->  <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="5" side="tl" part="lemq"/>
@@ -23279,13 +23057,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="3"/>
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                       <!-- <clip pos="5" side="tl" part="temps"/> -->  <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="5" side="tl" part="lemq"/>
@@ -23330,7 +23107,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
 		      <tag><var n="tipus_verb"/></tag>
@@ -23340,7 +23117,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -23383,14 +23160,14 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="3" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
                   <chunk name="verbcj" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -23398,8 +23175,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="past"/>
+                      <lit-tag v="3"/>
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -23430,8 +23206,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="gerpast"/>
+                      <lit-tag v="3"/>
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -23457,13 +23232,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b/>
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="3" side="tl" part="lemq"/>
@@ -23514,7 +23288,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="4" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -23540,8 +23314,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="4" side="tl" part="lemh"/>
                       <clip pos="4" side="tl" part="a_verb"/>
-                      <!-- <clip pos="4" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="past"/>
+                      <lit-tag v="3"/>
                       <clip pos="4" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -23575,7 +23348,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="4" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="3" side="tl" part="temps"/></tag>
+                      <tag><clip pos="4" side="tl" part="temps"/></tag>
                       <tag><clip pos="3" side="tl" part="pers"/></tag>
                       <tag><clip pos="3" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -23583,8 +23356,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="4" side="tl" part="lemh"/>
                       <clip pos="4" side="tl" part="a_verb"/>
-                      <!-- <clip pos="4" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="gerpast"/>
+                      <lit-tag v="3"/>
                       <clip pos="4" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -23621,13 +23393,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
                       <clip pos="4" side="tl" part="lemh"/>
                       <clip pos="4" side="tl" part="a_verb"/>
-                      <!-- <clip pos="4" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="4" side="tl" part="lemq"/>
@@ -23670,7 +23441,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
 		      <tag><var n="tipus_verb"/></tag>
@@ -23679,7 +23450,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
 		    <b pos="2"/>
@@ -23735,7 +23506,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="3" side="sl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="temps"/></tag>
                       <tag><clip pos="3" side="tl" part="pers"/></tag>
                       <tag><clip pos="3" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -23745,7 +23516,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
                       <clip pos="3" side="tl" part="sep"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -23790,7 +23561,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="5" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -23808,7 +23579,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="5" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="3" side="tl" part="temps"/></tag>
+                      <tag><clip pos="5" side="tl" part="temps"/></tag>
                       <tag><clip pos="3" side="tl" part="pers"/></tag>
                       <tag><clip pos="3" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -23816,8 +23587,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                      <!-- <clip pos="5" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="past"/>
+                      <lit-tag v="3"/>
                       <clip pos="5" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -23853,13 +23623,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="3"/>
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                      <!-- <clip pos="5" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="3" side="tl" part="nbr"/>
                       <clip pos="5" side="tl" part="lemq"/>
@@ -23912,7 +23681,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="6" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -23935,7 +23704,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="6" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="3" side="tl" part="temps"/></tag>
+                      <tag><clip pos="6" side="tl" part="temps"/></tag>
                       <tag><clip pos="3" side="tl" part="pers"/></tag>
                       <tag><clip pos="3" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -23943,8 +23712,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="6" side="tl" part="lemh"/>
                       <clip pos="6" side="tl" part="a_verb"/>
-                      <!-- <clip pos="6" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="past"/>
+                      <lit-tag v="3"/>
                       <clip pos="6" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -23985,13 +23753,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="5"/>
                     <lu>
                       <clip pos="6" side="tl" part="lemh"/>
                       <clip pos="6" side="tl" part="a_verb"/>
-                      <!-- <clip pos="6" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="3" side="tl" part="nbr"/>
                       <clip pos="6" side="tl" part="lemq"/>
@@ -24032,7 +23799,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
 		      <tag><var n="tipus_verb"/></tag>
@@ -24042,7 +23809,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -24096,14 +23863,14 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="3" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
                   <chunk name="verbcj" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -24111,8 +23878,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="past"/>
+                      <lit-tag v="3"/>
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -24135,7 +23901,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -24143,8 +23909,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="gerpast"/>
+                      <lit-tag v="3"/>
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -24170,13 +23935,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b/>
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="3" side="tl" part="lemq"/>
@@ -24243,7 +24007,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="3" side="sl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="temps"/></tag>
                       <tag><clip pos="3" side="tl" part="pers"/></tag>
                       <tag><clip pos="3" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -24253,7 +24017,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
                       <clip pos="3" side="tl" part="sep"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -24309,7 +24073,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="5" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -24327,7 +24091,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="5" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="3" side="tl" part="temps"/></tag>
+                      <tag><clip pos="5" side="tl" part="temps"/></tag>
                       <tag><clip pos="3" side="tl" part="pers"/></tag>
                       <tag><clip pos="3" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -24335,8 +24099,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                      <!-- <clip pos="5" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="past"/>
+                      <lit-tag v="3"/>
                       <clip pos="5" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -24372,13 +24135,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="3"/>
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                      <!-- <clip pos="5" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="3" side="tl" part="nbr"/>
                       <clip pos="5" side="tl" part="lemq"/>
@@ -24433,7 +24195,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
 		      <tag><var n="tipus_verb"/></tag>
@@ -24443,7 +24205,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -24513,7 +24275,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="3" side="sl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="temps"/></tag>
                       <tag><clip pos="3" side="tl" part="pers"/></tag>
                       <tag><clip pos="3" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -24523,7 +24285,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
                       <clip pos="3" side="tl" part="sep"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
@@ -24581,7 +24343,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="2" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="sl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
 		      <tag><var n="tipus_verb"/></tag>
@@ -24591,7 +24353,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
                       <clip pos="2" side="tl" part="sep"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                     <b pos="2"/>
@@ -24643,14 +24405,14 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="3" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
                   <chunk name="verbcj" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -24658,8 +24420,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="past"/>
+                      <lit-tag v="3"/>
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                     <b pos="3"/>
@@ -24689,7 +24450,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -24697,8 +24458,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="gerpast"/>
+                      <lit-tag v="3"/>
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                     <b pos="3"/>
@@ -24731,13 +24491,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b/>
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="2" side="tl" part="nbr"/>
                       <clip pos="3" side="tl" part="lemq"/>
@@ -24796,7 +24555,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="3" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -24814,7 +24573,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -24822,8 +24581,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="past"/>
+                      <lit-tag v="3"/>
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                     <b pos="3"/>
@@ -24864,7 +24622,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="temps"/></tag>
                       <tag><clip pos="2" side="tl" part="pers"/></tag>
                       <tag><clip pos="2" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -24872,8 +24630,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="gerpast"/>
+                      <lit-tag v="3"/>
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                     <b pos="3"/>
@@ -24917,13 +24674,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <clip pos="2" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="2"/>
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <!-- <clip pos="3" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="3" side="tl" part="nbr"/>
                       <clip pos="3" side="tl" part="lemq"/>
@@ -24985,7 +24741,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="3" side="sl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="temps"/></tag>
                       <tag><clip pos="3" side="tl" part="pers"/></tag>
                       <tag><clip pos="3" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -24995,7 +24751,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
                       <clip pos="3" side="tl" part="sep"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                     <b pos="4"/>
@@ -25048,7 +24804,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="5" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -25066,7 +24822,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="5" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="3" side="tl" part="temps"/></tag>
+                      <tag><clip pos="5" side="tl" part="temps"/></tag>
                       <tag><clip pos="3" side="tl" part="pers"/></tag>
                       <tag><clip pos="3" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -25074,8 +24830,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                      <!-- <clip pos="5" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="past"/>
+                      <lit-tag v="3"/>
                       <clip pos="5" side="tl" part="lemq"/>
                     </lu>
                     <b pos="5"/>
@@ -25118,13 +24873,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="3"/>
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                      <!-- <clip pos="5" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="3" side="tl" part="nbr"/>
                       <clip pos="5" side="tl" part="lemq"/>
@@ -25185,7 +24939,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </test>
                 <let>
                   <clip pos="5" side="tl" part="temps"/>
-                  <lit-tag v="past"/> <!-- present -->
+                  <lit-tag v="past"/>
                 </let>
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
@@ -25208,7 +24962,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="5" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="3" side="tl" part="temps"/></tag>
+                      <tag><clip pos="5" side="tl" part="temps"/></tag>
                       <tag><clip pos="3" side="tl" part="pers"/></tag>
                       <tag><clip pos="3" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
@@ -25216,8 +24970,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                      <!-- <clip pos="5" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
-                      <lit-tag v="past"/>
+                      <lit-tag v="3"/>
                       <clip pos="5" side="tl" part="lemq"/>
                     </lu>
                     <b pos="6"/>
@@ -25265,13 +25018,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
 		      <lit v="esti"/>
                       <clip pos="3" side="tl" part="a_verb"/>
-                      <clip pos="3" side="tl" part="temps"/>
+                      <lit-tag v="3"/>
                     </lu>
 		    <b pos="4"/>
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
-                      <!-- <clip pos="5" side="tl" part="temps"/> --> <!-- per alguna raó falla a vegades amb vbser -->
                       <lit-tag v="pp3"/>
                       <clip pos="5" side="tl" part="nbr"/>
                       <clip pos="5" side="tl" part="lemq"/>
@@ -25508,12 +25260,14 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<call-macro n="nombro1">
 	  <with-param pos="1"/>
 	</call-macro>
+<!-- ni ne atribuas defaŭltan nombron, ĉar ni decidos ĝin poste, surbaze de la SN
 	<call-macro n="default_nombro">
 	</call-macro>
+-->
 	<out>
 	  <chunk name="prn" case="caseFirstWord">
 	    <tags>
-	      <tag><lit-tag v="SNrelatiu1"/></tag>
+	      <tag><lit-tag v="SNrelatiu"/></tag>
 	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
@@ -25567,7 +25321,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	  <b pos="1"/>
 	  <chunk name="relatiu">
 	    <tags>
-	      <tag><lit-tag v="SNrelatiuZ"/></tag>
+	      <tag><lit-tag v="SNrelatiu"/></tag>
               <tag><lit-tag v="rel"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
@@ -25973,6 +25727,25 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
       <action>
 	<out>
 	  <chunk name="cm">
+	    <tags>
+	      <tag><lit-tag v="sent"/></tag>
+	    </tags>
+	    <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+	    </lu>
+	  </chunk>
+	</out>
+      </action>
+    </rule>
+
+    <rule> <!-- REGLA: sent_lpar -->
+      <pattern>
+	<pattern-item n="sent_lpar"/>
+      </pattern>
+      <action>
+	<out>
+	  <chunk name="lpar">
 	    <tags>
 	      <tag><lit-tag v="sent"/></tag>
 	    </tags>
