@@ -656,10 +656,15 @@
       <cat-item tags="n.acr.*"/>
     </def-cat>
 
-
     <def-cat n="adv_preadv">
       <cat-item tags="adv"/>
       <cat-item tags="preadv"/>
+    </def-cat>
+
+    <def-cat n="adv_cnj">
+      <cat-item tags="adv"/>
+      <cat-item tags="preadv"/>
+      <cat-item tags="cnjadv"/>
     </def-cat>
 
     <def-cat n="adv">
@@ -1065,6 +1070,14 @@
       <attr-item tags="rel.adv"/>
     </def-attr>
 
+    <def-attr n="a_adv_cnj">
+      <attr-item tags="adv"/>
+      <attr-item tags="preadv"/>
+      <attr-item tags="cnjadv"/>
+      <attr-item tags="adv.itg"/>
+      <attr-item tags="rel.adv"/>
+    </def-attr>
+
     <def-attr n="a_pp">
       <attr-item tags="vblex.pp"/>
       <attr-item tags="vblex.pron.pp"/>
@@ -1181,6 +1194,7 @@
     <def-var n="tipus_verb2"/>
     <def-var n="vegada"/>
     <def-var n="nprep"/>
+    <def-var n="ncnj"/>
     <def-var n="test"/>
   </section-def-vars>
 
@@ -11954,14 +11968,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                  <chunk name="relatiu" >
                         <tags>
                         <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="rel"/></tag>
+                        <tag><var n="nombre"/></tag>
                         <tag><var n="case"/></tag>
+                        <tag><var n="changecase"/></tag>
                         </tags>
                         <lu>
                         <clip pos="2" side="tl" part="lem"/>
                         <lit-tag v="prn"/>
                         <lit-tag v="rel"/>
-                        <var n="nombre"/>
-                        <lit-tag v="2"/>
+                        <lit-tag v="3"/>
+                        <lit-tag v="4"/>
                         </lu>
                         </chunk>
 
@@ -12077,14 +12094,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                  <chunk name="relatiu" >
                         <tags>
                         <tag><lit-tag v="SNrelatiu"/></tag>
-	                <tag><var n="case"/></tag>
+                        <tag><lit-tag v="rel"/></tag>
+                        <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                        <tag><var n="case"/></tag>
+                        <tag><var n="changecase"/></tag>
                         </tags>
                         <lu>
                         <lit v="kiu"/>
                         <lit-tag v="prn"/>
                         <lit-tag v="rel"/>
-              		<clip pos="2" side="tl" part="nbr"/>
-              		<lit-tag v="2"/>
+                        <lit-tag v="3"/>
+                        <lit-tag v="4"/>
                         </lu>
                         </chunk>
 
@@ -12215,14 +12235,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                  <chunk name="relatiu" >
                         <tags>
                         <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="rel"/></tag>
+                        <tag><clip pos="3" side="tl" part="nbr"/></tag>
                         <tag><var n="case"/></tag>
+                        <tag><var n="changecase"/></tag>
                         </tags>
                         <lu>
                         <lit v="kiu"/>
                         <lit-tag v="prn"/>
                         <lit-tag v="rel"/>
-                        <clip pos="3" side="tl" part="nbr"/>
-              		<lit-tag v="2"/>
+                        <lit-tag v="3"/>
+                        <lit-tag v="4"/>
                         </lu>
                         </chunk>
 
@@ -12345,14 +12368,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                  <chunk name="relatiu" >
                         <tags>
                         <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="rel"/></tag>
+                        <tag><clip pos="3" side="tl" part="nbr"/></tag>
                         <tag><var n="case"/></tag>
+                        <tag><var n="changecase"/></tag>
                         </tags>
                         <lu>
                         <lit v="kiu"/>
                         <lit-tag v="prn"/>
                         <lit-tag v="rel"/>
-                        <clip pos="3" side="tl" part="nbr"/>
-              		<lit-tag v="2"/>
+                        <lit-tag v="3"/>
+                        <lit-tag v="4"/>
                         </lu>
                         </chunk>
 	</out>	
@@ -12475,14 +12501,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                  <chunk name="relatiu" >
                         <tags>
                         <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="rel"/></tag>
+                        <tag><clip pos="2" side="tl" part="nbr"/></tag>
                         <tag><var n="case"/></tag>
+                        <tag><var n="changecase"/></tag>
                         </tags>
                         <lu>
                         <lit v="kiu"/>
                         <lit-tag v="prn"/>
                         <lit-tag v="rel"/>
-                        <clip pos="2" side="tl" part="nbr"/>
-              		<lit-tag v="2"/>
+                        <lit-tag v="3"/>
+                        <lit-tag v="4"/>
                         </lu>
                         </chunk>
 	</out>
@@ -12627,14 +12656,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                  <chunk name="relatiu" >
                         <tags>
                         <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="rel"/></tag>
+                        <tag><clip pos="3" side="tl" part="nbr"/></tag>
                         <tag><var n="case"/></tag>
+                        <tag><var n="changecase"/></tag>
                         </tags>
                         <lu>
                         <lit v="kiu"/>
                         <lit-tag v="prn"/>
                         <lit-tag v="rel"/>
-                        <clip pos="3" side="tl" part="nbr"/>
-              		<lit-tag v="2"/>
+                        <lit-tag v="3"/>
+                        <lit-tag v="4"/>
                         </lu>
                         </chunk>
 	</out>	
@@ -12793,14 +12825,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                  <chunk name="relatiu" >
                         <tags>
                         <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="rel"/></tag>
+                        <tag><clip pos="3" side="tl" part="nbr"/></tag>
                         <tag><var n="case"/></tag>
+                        <tag><var n="changecase"/></tag>
                         </tags>
                         <lu>
                         <lit v="kiu"/>
                         <lit-tag v="prn"/>
                         <lit-tag v="rel"/>
-                        <clip pos="3" side="tl" part="nbr"/>
-              		<lit-tag v="2"/>
+                        <lit-tag v="3"/>
+                        <lit-tag v="4"/>
                         </lu>
                         </chunk>
 	</out>	
@@ -12938,14 +12973,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                  <chunk name="relatiu" >
                         <tags>
                         <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="rel"/></tag>
+                        <tag><clip pos="2" side="tl" part="nbr"/></tag>
                         <tag><var n="case"/></tag>
+                        <tag><var n="changecase"/></tag>
                         </tags>
                         <lu>
                         <lit v="kiu"/>
                         <lit-tag v="prn"/>
                         <lit-tag v="rel"/>
-                        <clip pos="2" side="tl" part="nbr"/>
-              		<lit-tag v="2"/>
+                        <lit-tag v="3"/>
+                        <lit-tag v="4"/>
                         </lu>
                         </chunk>
 	</out>
@@ -13101,14 +13139,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                  <chunk name="relatiu" >
                         <tags>
                         <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="rel"/></tag>
+                        <tag><clip pos="3" side="tl" part="nbr"/></tag>
                         <tag><var n="case"/></tag>
+                        <tag><var n="changecase"/></tag>
                         </tags>
                         <lu>
                         <lit v="kiu"/>
                         <lit-tag v="prn"/>
                         <lit-tag v="rel"/>
-                        <clip pos="3" side="tl" part="nbr"/>
-              		<lit-tag v="2"/>
+                        <lit-tag v="3"/>
+                        <lit-tag v="4"/>
                         </lu>
                         </chunk>
 	</out>	
@@ -13261,14 +13302,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                  <chunk name="relatiu" >
                         <tags>
                         <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="rel"/></tag>
+                        <tag><clip pos="2" side="tl" part="nbr"/></tag>
                         <tag><var n="case"/></tag>
+                        <tag><var n="changecase"/></tag>
                         </tags>
                         <lu>
                         <lit v="kiu"/>
                         <lit-tag v="prn"/>
                         <lit-tag v="rel"/>
-                        <clip pos="2" side="tl" part="nbr"/>
-              		<lit-tag v="2"/>
+                        <lit-tag v="3"/>
+                        <lit-tag v="4"/>
                         </lu>
                         </chunk>
 	    </out>
@@ -13441,14 +13485,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                  <chunk name="relatiu" >
                         <tags>
                         <tag><lit-tag v="SNrelatiu"/></tag>
+                        <tag><lit-tag v="rel"/></tag>
+                        <tag><clip pos="2" side="tl" part="nbr"/></tag>
                         <tag><var n="case"/></tag>
+                        <tag><var n="changecase"/></tag>
                         </tags>
                         <lu>
                         <lit v="kiu"/>
                         <lit-tag v="prn"/>
                         <lit-tag v="rel"/>
-                        <clip pos="2" side="tl" part="nbr"/>
-              		<lit-tag v="2"/>
+                        <lit-tag v="3"/>
+                        <lit-tag v="4"/>
                         </lu>
                         </chunk>
 	    </out>
@@ -18194,12 +18241,145 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     </rule>
 
 
+    <rule comment="NE VERBconj ADV PAS ( ne concerne néanmoins pas -> tamen ne koncernas )">
+      <pattern>
+	<pattern-item n="ne"/>
+	<pattern-item n="verbcj"/>
+	<pattern-item n="adv_cnj"/>
+	<pattern-item n="pas"/>
+      </pattern>
+      <action>    	
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+        <call-macro n="tipus_verbs">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="set_temps">
+          <with-param pos="2"/>
+        </call-macro>
+
+                <out>
+	          <chunk name="adv" case="caseFirstWord">
+	            <tags>
+                      <tag><lit-tag v="adv"/></tag>
+	            </tags>
+	            <lu>
+	              <clip pos="3" side="tl" part="lem"/>
+	              <clip pos="3" side="tl" part="a_adv_cnj"/>
+	            </lu>
+	            <b pos="1"/>
+	            <lu>
+	              <clip pos="1" side="tl" part="lem"/>
+	              <clip pos="1" side="tl" part="a_adv_cnj"/>
+	            </lu>
+	          </chunk>
+		  <b pos="2"/>
+                  <chunk name="verbcj">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="2" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                      <tag><var n="tipus_verb2"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="2" side="tl" part="lemh"/>
+                      <clip pos="2" side="tl" part="a_verb"/>
+                      <clip pos="2" side="tl" part="sep"/>
+                      <lit-tag v="3"/>
+                      <clip pos="2" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+        <let>
+          <var n="caseFirstWord"/>
+          <lit v="aa"/>
+        </let>
+      </action>
+    </rule>
+
+
+    <rule comment="NE VERBconj ADV PAS QUE ( ne veut néanmoins pas que -> tamen ne volas ke )">
+      <pattern>
+	<pattern-item n="ne"/>
+	<pattern-item n="verbcj"/>
+	<pattern-item n="adv_cnj"/>
+	<pattern-item n="pas"/>
+	<pattern-item n="quepercorregir"/>
+      </pattern>
+      <action>    	
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+        <call-macro n="tipus_verbs">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="set_temps">
+          <with-param pos="2"/>
+        </call-macro>
+
+                <out>
+	          <chunk name="adv" case="caseFirstWord">
+	            <tags>
+                      <tag><lit-tag v="adv"/></tag>
+	            </tags>
+	            <lu>
+	              <clip pos="3" side="tl" part="lem"/>
+	              <clip pos="3" side="tl" part="a_adv_cnj"/>
+	            </lu>
+	            <b pos="1"/>
+	            <lu>
+	              <clip pos="1" side="tl" part="lem"/>
+	              <clip pos="1" side="tl" part="a_adv_cnj"/>
+	            </lu>
+	          </chunk>
+		  <b pos="2"/>
+                  <chunk name="verbcj">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="2" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                      <tag><var n="tipus_verb2"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="2" side="tl" part="lemh"/>
+                      <clip pos="2" side="tl" part="a_verb"/>
+                      <clip pos="2" side="tl" part="sep"/>
+                      <lit-tag v="3"/>
+                      <clip pos="2" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+		<b pos="3"/>
+		 <chunk name="cnjsub">
+            		<tags>
+            	  	<tag><lit-tag v="cnjsub"/></tag>
+            		</tags>
+		<lu>
+	          <lit v="ke"/>
+                  <lit-tag v="cnjsub"/>
+		</lu>
+	      </chunk>
+                </out>
+        <let>
+          <var n="caseFirstWord"/>
+          <lit v="aa"/>
+        </let>
+      </action>
+    </rule>
+
+
     <rule comment="NE VERBhaver PAS + ADV + PP (n'a pas beaucoup lu - ne multe legis ; es tradueix per passat) (EO)">
       <pattern>
 	<pattern-item n="ne"/>
 	<pattern-item n="haver"/>
 	<pattern-item n="pas"/>
-	<pattern-item n="adv_preadv"/>
+	<pattern-item n="adv_cnj"/>
 	<pattern-item n="pp"/>
       </pattern>
       <action>
@@ -18231,17 +18411,16 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
 	            <tags>
-	              <tag><clip pos="1" side="tl" part="a_adv"/></tag>
-	              <tag><clip pos="1" side="tl" part="neg"/></tag>
+                      <tag><lit-tag v="adv"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv"/>
+	              <clip pos="1" side="tl" part="a_adv_cnj"/>
 	            </lu>
 		  <b pos="1"/>
 	            <lu>
 	              <clip pos="4" side="tl" part="lem"/>
-	              <clip pos="4" side="tl" part="a_adv"/>
+	              <clip pos="4" side="tl" part="a_adv_cnj"/>
 	            </lu>
 	          </chunk>
 		  <b pos="2"/>
@@ -18273,17 +18452,16 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
 	            <tags>
-	              <tag><clip pos="1" side="tl" part="a_adv"/></tag>
-	              <tag><clip pos="1" side="tl" part="neg"/></tag>
+                      <tag><lit-tag v="adv"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv"/>
+	              <clip pos="1" side="tl" part="a_adv_cnj"/>
 	            </lu>
 		  <b pos="1"/>
 	            <lu>
 	              <clip pos="4" side="tl" part="lem"/>
-	              <clip pos="4" side="tl" part="a_adv"/>
+	              <clip pos="4" side="tl" part="a_adv_cnj"/>
 	            </lu>
 	          </chunk>
 		  <b pos="2"/>
@@ -18328,7 +18506,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
       <pattern>
 	<pattern-item n="ne"/>
 	<pattern-item n="haver"/>
-	<pattern-item n="adv_preadv"/>
+	<pattern-item n="adv_cnj"/>
 	<pattern-item n="pas"/>
 	<pattern-item n="pp"/>
       </pattern>
@@ -18370,7 +18548,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv"/>
+	              <clip pos="1" side="tl" part="a_adv_cnj"/>
 	            </lu>
 		    <b pos="1"/>
                     <lu>
@@ -18382,7 +18560,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 		    <b pos="2"/>
 	            <lu>
 	              <clip pos="3" side="tl" part="lem"/>
-	              <clip pos="3" side="tl" part="a_adv"/>
+	              <clip pos="3" side="tl" part="a_adv_cnj"/>
 	            </lu>
                   </chunk>
                 </out>
@@ -18405,7 +18583,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv"/>
+	              <clip pos="1" side="tl" part="a_adv_cnj"/>
 	            </lu>
 		    <b pos="1"/>
                     <lu>
@@ -18424,7 +18602,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 		    <b pos="3"/>
 	            <lu>
 	              <clip pos="3" side="tl" part="lem"/>
-	              <clip pos="3" side="tl" part="a_adv"/>
+	              <clip pos="3" side="tl" part="a_adv_cnj"/>
 	            </lu>
                   </chunk>
                 </out>
@@ -18477,8 +18655,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
 	            <tags>
-	              <tag><clip pos="1" side="tl" part="a_adv"/></tag>
-	              <tag><clip pos="1" side="tl" part="neg"/></tag>
+                      <tag><lit-tag v="adv"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
@@ -18513,8 +18690,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
 	            <tags>
-	              <tag><clip pos="1" side="tl" part="a_adv"/></tag>
-	              <tag><clip pos="1" side="tl" part="neg"/></tag>
+                      <tag><lit-tag v="adv"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
@@ -18794,7 +18970,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<pattern-item n="ne"/>
 	<pattern-item n="ser"/>
 	<pattern-item n="pas"/>
-	<pattern-item n="adv_preadv"/>
+	<pattern-item n="adv_cnj"/>
 	<pattern-item n="vbser-pp"/>
       </pattern>
       <action>
@@ -18826,17 +19002,16 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
 	            <tags>
-	              <tag><clip pos="1" side="tl" part="a_adv"/></tag>
-	              <tag><clip pos="1" side="tl" part="neg"/></tag>
+                      <tag><lit-tag v="adv"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv"/>
+	              <clip pos="1" side="tl" part="a_adv_cnj"/>
 	            </lu>
 		  <b pos="1"/>
 	            <lu>
 	              <clip pos="4" side="tl" part="lem"/>
-	              <clip pos="4" side="tl" part="a_adv"/>
+	              <clip pos="4" side="tl" part="a_adv_cnj"/>
 	            </lu>
 	          </chunk>
 		  <b pos="2"/>
@@ -18868,17 +19043,16 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
 	            <tags>
-	              <tag><clip pos="1" side="tl" part="a_adv"/></tag>
-	              <tag><clip pos="1" side="tl" part="neg"/></tag>
+                      <tag><lit-tag v="adv"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv"/>
+	              <clip pos="1" side="tl" part="a_adv_cnj"/>
 	            </lu>
 		  <b pos="1"/>
 	            <lu>
 	              <clip pos="4" side="tl" part="lem"/>
-	              <clip pos="4" side="tl" part="a_adv"/>
+	              <clip pos="4" side="tl" part="a_adv_cnj"/>
 	            </lu>
 	          </chunk>
 		  <b pos="3"/>
@@ -18922,7 +19096,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
       <pattern>
 	<pattern-item n="ne"/>
 	<pattern-item n="ser"/>
-	<pattern-item n="adv_preadv"/>
+	<pattern-item n="adv_cnj"/>
 	<pattern-item n="pas"/>
 	<pattern-item n="vbser-pp"/>
       </pattern>
@@ -18964,7 +19138,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv"/>
+	              <clip pos="1" side="tl" part="a_adv_cnj"/>
 	            </lu>
 		    <b pos="1"/>
                     <lu>
@@ -18976,7 +19150,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 		    <b pos="2"/>
 	            <lu>
 	              <clip pos="3" side="tl" part="lem"/>
-	              <clip pos="3" side="tl" part="a_adv"/>
+	              <clip pos="3" side="tl" part="a_adv_cnj"/>
 	            </lu>
                   </chunk>
                 </out>
@@ -18999,7 +19173,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv"/>
+	              <clip pos="1" side="tl" part="a_adv_cnj"/>
 	            </lu>
 		    <b pos="1"/>
                     <lu>
@@ -19018,7 +19192,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 		    <b pos="3"/>
 	            <lu>
 	              <clip pos="3" side="tl" part="lem"/>
-	              <clip pos="3" side="tl" part="a_adv"/>
+	              <clip pos="3" side="tl" part="a_adv_cnj"/>
 	            </lu>
                   </chunk>
                 </out>
@@ -19065,8 +19239,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
 	            <tags>
-	              <tag><clip pos="1" side="tl" part="a_adv"/></tag>
-	              <tag><clip pos="1" side="tl" part="neg"/></tag>
+                      <tag><lit-tag v="adv"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
@@ -19140,8 +19313,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
 	            <tags>
-	              <tag><clip pos="1" side="tl" part="a_adv"/></tag>
-	              <tag><clip pos="1" side="tl" part="neg"/></tag>
+                      <tag><lit-tag v="adv"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
@@ -19231,8 +19403,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
 	            <tags>
-	              <tag><clip pos="1" side="tl" part="a_adv"/></tag>
-	              <tag><clip pos="1" side="tl" part="neg"/></tag>
+                      <tag><lit-tag v="adv"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
@@ -19286,8 +19457,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
 	            <tags>
-	              <tag><clip pos="1" side="tl" part="a_adv"/></tag>
-	              <tag><clip pos="1" side="tl" part="neg"/></tag>
+                      <tag><lit-tag v="adv"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
@@ -19356,7 +19526,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<pattern-item n="pro"/>
 	<pattern-item n="haver"/>
 	<pattern-item n="pas"/>
-	<pattern-item n="adv_preadv"/>
+	<pattern-item n="adv_cnj"/>
 	<pattern-item n="pp"/>
       </pattern>
       <action>
@@ -19396,17 +19566,16 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
 	            <tags>
-	              <tag><clip pos="1" side="tl" part="a_adv"/></tag>
-	              <tag><clip pos="1" side="tl" part="neg"/></tag>
+                      <tag><lit-tag v="adv"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv"/>
+	              <clip pos="1" side="tl" part="a_adv_cnj"/>
 	            </lu>
 		  <b pos="2"/>
 	            <lu>
 	              <clip pos="5" side="tl" part="lem"/>
-	              <clip pos="5" side="tl" part="a_adv"/>
+	              <clip pos="5" side="tl" part="a_adv_cnj"/>
 	            </lu>
 	          </chunk>
 		  <b pos="3"/>
@@ -19456,17 +19625,16 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <out>
 	          <chunk name="adv" case="caseFirstWord">
 	            <tags>
-	              <tag><clip pos="1" side="tl" part="a_adv"/></tag>
-	              <tag><clip pos="1" side="tl" part="neg"/></tag>
+                      <tag><lit-tag v="adv"/></tag>
 	            </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv"/>
+	              <clip pos="1" side="tl" part="a_adv_cnj"/>
 	            </lu>
 		  <b pos="2"/>
 	            <lu>
 	              <clip pos="5" side="tl" part="lem"/>
-	              <clip pos="5" side="tl" part="a_adv"/>
+	              <clip pos="5" side="tl" part="a_adv_cnj"/>
 	            </lu>
 	          </chunk>
 		  <b pos="3"/>
@@ -19695,7 +19863,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<pattern-item n="pro"/>
 	<pattern-item n="ser"/>
 	<pattern-item n="pas"/>
-	<pattern-item n="adv_preadv"/>
+	<pattern-item n="adv_cnj"/>
 	<pattern-item n="vbser-pp"/>
       </pattern>
       <action>
@@ -19740,12 +19908,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	            </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv"/>
+	              <clip pos="1" side="tl" part="a_adv_cnj"/>
 	            </lu>
 		  <b pos="2"/>
 	            <lu>
 	              <clip pos="5" side="tl" part="lem"/>
-	              <clip pos="5" side="tl" part="a_adv"/>
+	              <clip pos="5" side="tl" part="a_adv_cnj"/>
 	            </lu>
 	          </chunk>
 		  <b pos="3"/>
@@ -19800,12 +19968,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	            </tags>
 	            <lu>
 	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv"/>
+	              <clip pos="1" side="tl" part="a_adv_cnj"/>
 	            </lu>
 		  <b pos="2"/>
 	            <lu>
 	              <clip pos="5" side="tl" part="lem"/>
-	              <clip pos="5" side="tl" part="a_adv"/>
+	              <clip pos="5" side="tl" part="a_adv_cnj"/>
 	            </lu>
 	          </chunk>
 		  <b pos="3"/>
@@ -25441,8 +25609,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
+	<let><var n="ncnj"/><clip pos="1" side="tl" part="lem"/></let>
 	<out>
-	  <chunk name="cnj" case="caseFirstWord">
+	  <chunk namefrom="ncnj" case="caseFirstWord">
 	    <tags>
 	      <tag><clip pos="1" side="tl" part="tags"/></tag>
 	    </tags>

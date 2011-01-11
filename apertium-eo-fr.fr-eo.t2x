@@ -134,6 +134,10 @@
       <cat-item tags="cnjadv"/>
     </def-cat>
 
+    <def-cat n="porke">
+      <cat-item lemma="por ke" tags="cnjadv"/>
+    </def-cat>
+
     <def-cat n="SA">
       <cat-item tags="SA.*"/>
     </def-cat>
@@ -285,6 +289,47 @@
       </choose>
     </def-macro>
 
+    <def-macro n="elekti_subj_obj" npar="3"> <!-- SN_rel SV SN: decidas, ĉu akuzativigi SN_rel aŭ SN -->
+       <choose>
+          <when>
+            <test>
+		<and>
+                <equal>
+                  <clip pos="1" part="nbr"/>
+                  <clip pos="2" part="nbr"/>
+                </equal>
+                <equal>
+                  <clip pos="2" part="pers"/>
+		  <lit-tag v="p3"/>
+                </equal>
+		</and>
+            </test>
+            <let>
+              <clip pos="1" part="case"/>
+              <lit-tag v="nom"/>
+            </let>
+            <let>
+              <clip pos="3" part="case"/>
+              <lit-tag v="acc"/>
+            </let>
+	</when>
+
+	<when>
+            <test>
+		<not>
+                <equal>
+                  <clip pos="1" part="nbr"/>
+                  <clip pos="2" part="nbr"/>
+                </equal>
+		</not>
+            </test>
+            <let>
+              <clip pos="1" part="case"/>
+              <lit-tag v="acc"/>
+            </let>
+	</when>
+	</choose>
+    </def-macro>
 
   <def-macro n="f_bcond" npar="1"><!--Per mirar si el blanc conté o no format. Cal posar aquesta funció en les regles en què desaparegui alguna paraula, per tal de decidir si el blanc de la paraula eliminada s'ha d'eliminar o conservar. Si conté format cal conservar-la, si no en conté cal eliminar-la perquè no apareguin dos espais seguits. -->
      	<choose>
@@ -308,6 +353,35 @@
 
   <section-rules>
 
+
+<rule comment="REGLA: porke SN SV ( pour que tu viennes - por ke vi venu (verb subordinat en volitiu)">
+      <pattern>
+	<pattern-item n="porke"/>
+	<pattern-item n="SN"/>
+	<pattern-item n="SV"/>
+      </pattern>
+      <action>
+            <let>
+              <clip pos="3" part="temps"/>
+              <lit-tag v="imp"/>
+            </let>
+	<out>
+	  <chunk>
+	    <clip pos="1" part="whole"/>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk>
+	    <clip pos="2" part="whole"/>
+	  </chunk>
+	  <b pos="2"/>
+	  <chunk>
+            <clip pos="3" part="lem"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+          </chunk>
+	</out>
+      </action>
+</rule>
 
 <rule comment="REGLA: SVvolition cnjsub SN SV ( je veux que tu viennes - mi volas ke vi venu (verb subordinat en volitiu)">
       <pattern>
@@ -1901,8 +1975,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
       </action>
 </rule>
 
-<!--
-<rule comment="REGLA: SN SNrelatiu SV SNdat SN (. l'enfant qui lui posa une question -> la knabo kiu faris al mi demandon, relatiu = subjecte, EO))">
+<rule comment="REGLA: SN SNrelatiu SV SNdat SN (. l'enfant qui lui posa une question -> la knabo kiu faris al mi demandon, relatiu = subjecte)">
       <pattern>
 	<pattern-item n="SN"/>
 	<pattern-item n="SNrelatiu"/>
@@ -1910,16 +1983,16 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	<pattern-item n="SNdat"/>
 	<pattern-item n="SN"/>
       </pattern>
+      <action>
             <call-macro n="kunordigo_SN_SNrel">
               <with-param pos="1"/>
               <with-param pos="2"/>
             </call-macro>
-macro elekti_subj_obj 2, 3, 4
-            <test>
-            <let>
-              <clip pos="5" part="case"/>
-              <lit-tag v="acc"/>
-            </let>
+            <call-macro n="elekti_subj_obj">
+              <with-param pos="2"/>
+              <with-param pos="3"/>
+              <with-param pos="5"/>
+            </call-macro>
 	<out>
 	  <chunk>
 	    <clip pos="1" part="whole"/>
@@ -1947,7 +2020,6 @@ macro elekti_subj_obj 2, 3, 4
 	</out>
       </action>
 </rule>
--->
 
 <rule comment="REGLA: SN SNrelatiu SNobj SV SN (. el nen que em va donar el llibre -> la knabo kiu donis al mi la libron, relatiu = subjecte, EO))">
       <pattern>
@@ -2063,54 +2135,15 @@ macro elekti_subj_obj 2, 3, 4
 	<pattern-item n="SNacc"/>
       </pattern>
       <action>
-
             <call-macro n="kunordigo_SN_SNrel">
               <with-param pos="1"/>
               <with-param pos="2"/>
             </call-macro>
-<!--
-macro elekti_subj_obj 1, 2, 3, 4
--->
-       <choose>
-          <when>
-            <test>
-		<and>
-                <equal>
-                  <clip pos="1" part="nbr"/>
-                  <clip pos="3" part="nbr"/>
-                </equal>
-                <equal>
-                  <clip pos="3" part="pers"/>
-		  <lit-tag v="p3"/>
-                </equal>
-		</and>
-            </test>
-            <let>
-              <clip pos="2" part="case"/>
-              <lit-tag v="nom"/>
-            </let>
-            <let>
-              <clip pos="4" part="case"/>
-              <lit-tag v="acc"/>
-            </let>
-	</when>
-
-	<when>
-            <test>
-		<not>
-                <equal>
-                  <clip pos="1" part="nbr"/>
-                  <clip pos="3" part="nbr"/>
-                </equal>
-		</not>
-            </test>
-            <let>
-              <clip pos="2" part="case"/>
-              <lit-tag v="acc"/>
-            </let>
-	</when>
-	</choose>
-
+            <call-macro n="elekti_subj_obj">
+              <with-param pos="2"/>
+              <with-param pos="3"/>
+              <with-param pos="4"/>
+            </call-macro>
 	<out>
 	  <chunk>
 	    <clip pos="1" part="whole"/>
@@ -2143,7 +2176,6 @@ macro elekti_subj_obj 1, 2, 3, 4
 	<pattern-item n="SN"/>
       </pattern>
       <action>
-
             <call-macro n="kunordigo_SN_SNrel">
               <with-param pos="1"/>
               <with-param pos="2"/>
@@ -2221,298 +2253,6 @@ macro elekti_subj_obj 1, 2, 3, 4
             <clip pos="6" part="chcontent"/>
           </chunk>
 	</out>
-      </action>
-</rule>
-
-
-<rule comment="REGLA: SN SNrelatiu SV (. el nen que va marxar; el nen que vaig veure, relatiu = subjecte quan SN1 concorda amb verb, relatiu = objecte quan SN1 no concorda amb verb, en aquest cas es genera subjecte de la subordinada EO))">
-      <pattern>
-	<pattern-item n="SN"/>
-	<pattern-item n="SNrelatiu"/>
-	<pattern-item n="SV_pers"/>
-      </pattern>
-      <action>
-
-            <call-macro n="kunordigo_SN_SNrel">
-              <with-param pos="1"/>
-              <with-param pos="2"/>
-            </call-macro>
-       <choose><!-- relatiu = subjecte-->
-          <when>
-            <test>
-		<and>
-                <equal>
-                  <clip pos="1" part="nbr"/>
-                  <clip pos="3" part="nbr"/>
-                </equal>
-                <equal>
-                  <clip pos="3" part="pers"/>
-		  <lit-tag v="p3"/>
-                </equal>
-		</and>
-            </test>
-
-            <let>
-              <clip pos="2" part="case"/>
-              <lit-tag v="nom"/>
-            </let>
-
-	<out>
-	  <chunk>
-	    <clip pos="1" part="whole"/>
-	  </chunk>
-	  <b pos="1"/>
-	  <chunk>
-            <clip pos="2" part="lem"/>
-            <clip pos="2" part="tags"/>
-	    <clip pos="2" part="chcontent"/>
-	  </chunk>
-	  <b pos="2"/>
-	  <chunk>
-            <clip pos="3" part="whole"/>
-	  </chunk>
-	</out>
-	</when>
-
-
-	<when>
-            <test>
-		<not>
-		<and>
-                <equal>
-                  <clip pos="1" part="nbr"/>
-                  <clip pos="3" part="nbr"/>
-                </equal>
-                <equal>
-                  <clip pos="3" part="pers"/>
-		  <lit-tag v="p3"/>
-                </equal>
-		</and>
-		</not>
-            </test>
-            <let>
-              <clip pos="2" part="case"/>
-              <lit-tag v="acc"/>
-            </let>
-
-	<out>
-	  <chunk>
-	    <clip pos="1" part="whole"/>
-	  </chunk>
-	  <b pos="1"/>
-	  <chunk>
-            <clip pos="2" part="lem"/>
-            <clip pos="2" part="tags"/>
-	    <clip pos="2" part="chcontent"/>
-	  </chunk>
-          <b pos="1"/> <!-- afegim el pronom subjecte -->
-
-              <chunk>
-                <get-case-from pos="3">
-                  <lit v="subj"/>
-                </get-case-from>
-                <lit-tag v="prn.subj"/>
-                <clip pos="3" part="pers"/>
-                <lit-tag v="GD"/>
-                <clip pos="3" part="nbr"/>
-                <lit v="{^"/>
-                <get-case-from pos="3">
-                  <lit v="prpers"/>
-                </get-case-from>
-                <lit-tag v="prn.subj.3.4.5"/>
-                <lit v="$}"/>
-              </chunk>
-              <b/>
-
-	  <b pos="3"/>
-	  <chunk>
-            <clip pos="3" part="whole"/>
-	  </chunk>
-	</out>
-	</when>
-	</choose>
-
-
-      </action>
-</rule>
-
-<!-- regles de relatiu precedit per preposicio; el relatiu mai és subjecte, per tant s'ha de generar -->
-
-
-<rule comment="REGLA: SN PREP SNrelatiu SNobj SV (. el nen del que em vas parlar -> la knabo de kiu min vi parolis, es genera el pronom subjecte EO))">
-      <pattern>
-	<pattern-item n="SN"/>
-	<pattern-item n="PREP"/>
-	<pattern-item n="SNrelatiu"/>
-	<pattern-item n="SNobj"/>
-	<pattern-item n="SV"/>
-      </pattern>
-      <action>
-            <call-macro n="kunordigo_SN_SNrel">
-              <with-param pos="1"/>
-              <with-param pos="3"/>
-            </call-macro>
-	<out>
-	  <chunk>
-	    <clip pos="1" part="whole"/>
-	  </chunk>
-	  <b pos="1"/>
-	  <chunk>
-            <clip pos="2" part="lem"/>
-            <clip pos="2" part="tags"/>
-	    <clip pos="2" part="chcontent"/>
-	  </chunk>
-	  <b pos="2"/>
-	  <chunk>
-            <clip pos="3" part="whole"/>
-	  </chunk>
-	  <b pos="3"/>
-	  <chunk>
-	    <clip pos="4" part="whole"/>
-	  </chunk>
-	  <b pos="4"/> <!-- afegim el pronom subjecte -->
-              <chunk>
-                <get-case-from pos="3">
-                  <lit v="subj"/>
-                </get-case-from>
-                <lit-tag v="prn.subj"/>
-                <clip pos="5" part="pers"/>
-                <lit-tag v="GD"/>
-                <clip pos="5" part="nbr"/>
-                <lit v="{^"/>
-                <get-case-from pos="3">
-                  <lit v="prpers"/>
-                </get-case-from>
-                <lit-tag v="prn.subj.3.4.5"/>
-                <lit v="$}"/>
-              </chunk>
-              <b/>
-	  <chunk>
-	    <clip pos="5" part="whole"/>
-	  </chunk>
-	</out>
-      </action>
-</rule>
-
-
-<rule comment="REGLA: SN PREP SNrelatiu SV SN (. els nens als que va veure la nena; els nens als que vaig donar el llibre, SN2 = subjecte quan concorda amb verb, SN2 = objecte quan no concorda amb verb, EO))">
-      <pattern>
-	<pattern-item n="SN"/>
-	<pattern-item n="PREP"/>
-	<pattern-item n="SNrelatiu"/>
-	<pattern-item n="SV"/>
-	<pattern-item n="SNacc"/>
-      </pattern>
-      <action>
-
-            <call-macro n="kunordigo_SN_SNrel">
-              <with-param pos="1"/>
-              <with-param pos="3"/>
-            </call-macro>
-       <choose>
-          <when>
-            <test>
-		<and>
-                <equal>
-                  <clip pos="4" part="nbr"/>
-                  <clip pos="5" part="nbr"/>
-                </equal>
-                <equal>
-                  <clip pos="4" part="pers"/>
-		  <lit-tag v="p3"/>
-                </equal>
-		</and>
-            </test>
-
-            <let>
-              <clip pos="2" part="case"/>
-              <lit-tag v="nom"/>
-            </let>
-            <let>
-              <clip pos="5" part="case"/>
-              <lit-tag v="nom"/>
-            </let>
-
-	<out>
-	  <chunk>
-	    <clip pos="1" part="whole"/>
-	  </chunk>
-	  <b pos="1"/>
-	  <chunk>
-            <clip pos="2" part="lem"/>
-            <clip pos="2" part="tags"/>
-	    <clip pos="2" part="chcontent"/>
-	  </chunk>
-	  <b pos="2"/>
-	  <chunk>
-            <clip pos="3" part="whole"/>
-	  </chunk>
-	  <b pos="3"/>
-	  <chunk>
-	    <clip pos="4" part="whole"/>
-	  </chunk>
-	  <b pos="4"/>
-	  <chunk>
-	    <clip pos="5" part="whole"/>
-	  </chunk>
-	</out>
-	</when>
-
-	<when>
-            <test>
-		<not>
-                <equal>
-                  <clip pos="4" part="pers"/>
-		  <lit-tag v="p3"/>
-                </equal>
-		</not>
-            </test>
-            <let>
-              <clip pos="5" part="case"/>
-              <lit-tag v="acc"/>
-            </let>
-	<out>
-	  <chunk>
-	    <clip pos="1" part="whole"/>
-	  </chunk>
-	  <b pos="1"/>
-	  <chunk>
-            <clip pos="2" part="lem"/>
-            <clip pos="2" part="tags"/>
-	    <clip pos="2" part="chcontent"/>
-	  </chunk>
-	  <b pos="2"/>
-	  <chunk>
-            <clip pos="3" part="whole"/>
-	  </chunk>
-          <b pos="3"/> <!-- afegim el pronom subjecte -->
-
-              <chunk>
-                <get-case-from pos="3">
-                  <lit v="subj"/>
-                </get-case-from>
-                <lit-tag v="prn.subj"/>
-                <clip pos="4" part="pers"/>
-                <lit-tag v="GD"/>
-                <clip pos="4" part="nbr"/>
-                <lit v="{^"/>
-                <get-case-from pos="3">
-                  <lit v="prpers"/>
-                </get-case-from>
-                <lit-tag v="prn.subj.3.4.5"/>
-                <lit v="$}"/>
-              </chunk>
-	  <b />
-	  <chunk>
-	    <clip pos="4" part="whole"/>
-	  </chunk>
-	  <b pos="3"/>
-	  <chunk>
-	    <clip pos="5" part="whole"/>
-	  </chunk>
-	</out>
-	</when>
-	</choose>
       </action>
 </rule>
 

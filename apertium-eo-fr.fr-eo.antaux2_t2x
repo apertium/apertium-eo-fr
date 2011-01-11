@@ -67,10 +67,10 @@
       <attr-item tags="acc"/>
     </def-attr>
 
-    <def-attr n="a_nbr">
-      <attr-item tags="sp"/>
+    <def-attr n="nbr">
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
+      <attr-item tags="sp"/>
       <attr-item tags="ND"/>
     </def-attr>
   </section-def-attrs>
@@ -92,10 +92,32 @@
 		  <lit-tag v="sp"/>
                 </equal>
             </test>
-            <let>
-              <clip pos="2" part="nbr"/>
-              <clip pos="1" part="nbr"/>
-            </let>
+            <choose>
+               <when>
+                 <test>
+                   <or>
+                     <equal>
+                       <clip pos="1" part="nbr"/>
+		       <lit-tag v="sg"/>
+                     </equal>
+                     <equal>
+                       <clip pos="1" part="nbr"/>
+		       <lit-tag v="pl"/>
+                     </equal>
+                   </or>
+                 </test>
+                 <let>
+                   <clip pos="2" part="nbr"/>
+                   <clip pos="1" part="nbr"/>
+                 </let>
+               </when>
+               <otherwise>
+                 <let>
+                   <clip pos="2" part="nbr"/>
+		   <lit-tag v="sg"/>  <!-- default -->
+                 </let>
+               </otherwise>
+           </choose>
 	</when>
       </choose>
     </def-macro>

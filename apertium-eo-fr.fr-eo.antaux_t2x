@@ -716,9 +716,37 @@
     </rule>
 -->
 
+    <rule comment="REGLA: SN PRN_INT   -   SN KIU ">
+      <pattern>
+        <pattern-item n="SN"/>
+        <pattern-item n="que"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+	  <chunk>
+	    <get-case-from pos="1">
+	      <lit v="prn"/>
+	    </get-case-from>
+	    <lit-tag v="SNrelatiu.rel.sp.nom.nom"/>
+	    <lit v="{^"/>
+	    <get-case-from pos="1">
+	      <lit v="kiu"/>
+	    </get-case-from>
+	    <lit-tag v="prn.rel.3.4"/>
+	    <lit v="$}"/>
+	  </chunk>
+        </out>
+      </action>
+    </rule>
+
+
 <!-- Reguloj de SV -->
 
-    <rule comment="REGLA: SV ADV   -   SV ">
+    <rule comment="REGLA: SV PRN_INT   -   SV KE">
       <pattern>
         <pattern-item n="SV"/>
         <pattern-item n="que"/>
