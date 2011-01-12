@@ -289,6 +289,23 @@
       </choose>
     </def-macro>
 
+    <def-macro n="forigi_imp" npar="1">
+       <choose>
+          <when>
+            <test>
+                <equal>
+                  <clip pos="1" part="temps"/>
+		  <lit-tag v="imp"/>
+                </equal>
+            </test>
+            <let>
+              <clip pos="1" part="temps"/>
+              <lit-tag v="pres"/>
+            </let>
+	</when>
+      </choose>
+    </def-macro>
+
     <def-macro n="elekti_subj_obj" npar="3"> <!-- SN_rel SV SN: decidas, ĉu akuzativigi SN_rel aŭ SN -->
        <choose>
           <when>
@@ -435,6 +452,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	      <clip pos="1" part="case"/>
 	      <lit-tag v="acc"/>
 	    </let>
+
 
 	<out>
 	  <chunk>

@@ -16315,6 +16315,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <clip pos="2" side="tl" part="temps"/>
           <lit-tag v="inf"/>
         </let>
+        <call-macro n="f_bcond">
+          <with-param pos="1"/>
+        </call-macro>
             <out>
               <chunk name="verbcj" case="caseFirstWord">
                 <tags>
@@ -16333,9 +16336,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </lu>
               </chunk>
             </out>
-        <call-macro n="f_bcond">
-          <with-param pos="1"/>
-        </call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -21754,9 +21754,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<pattern-item n="prosubjenc"/>
       </pattern>
       <action>    	
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
-	</call-macro>
         <call-macro n="tipus_verbs">
           <with-param pos="1"/>
         </call-macro>
@@ -21895,9 +21892,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<pattern-item n="pp"/>
       </pattern>
       <action>
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
-	</call-macro>
         <call-macro n="tipus_verbs">
           <with-param pos="3"/>
         </call-macro>
@@ -22173,9 +22167,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<pattern-item n="vbser-pp"/>
       </pattern>
       <action>
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
-	</call-macro>
         <call-macro n="tipus_verbs">
           <with-param pos="3"/>
         </call-macro>
@@ -22452,9 +22443,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<pattern-item n="pas"/>
       </pattern>
       <action>    	
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
-	</call-macro>
         <call-macro n="tipus_verbs">
           <with-param pos="2"/>
         </call-macro>
@@ -22617,9 +22605,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<pattern-item n="pp"/>
       </pattern>
       <action>
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
-	</call-macro>
         <call-macro n="tipus_verbs">
           <with-param pos="5"/>
         </call-macro>
@@ -22939,9 +22924,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<pattern-item n="vbser-pp"/>
       </pattern>
       <action>
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
-	</call-macro>
         <call-macro n="tipus_verbs">
           <with-param pos="5"/>
         </call-macro>
