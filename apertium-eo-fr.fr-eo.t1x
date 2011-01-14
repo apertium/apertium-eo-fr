@@ -55,11 +55,19 @@
     </def-cat>
 
     <def-cat n="sent_coma">
-       <cat-item tags="cm"/><!-- provem amb la coma EO, per a poder tractar el pro-drop-->
+       <cat-item tags="cm"/>
     </def-cat>
 
     <def-cat n="sent_lpar">
-       <cat-item tags="lpar"/><!-- provem amb la coma EO, per a poder tractar el pro-drop-->
+       <cat-item tags="lpar"/>
+    </def-cat>
+
+    <def-cat n="sent_lcit">
+       <cat-item tags="lcit"/>
+    </def-cat>
+
+    <def-cat n="sent_rcit">
+       <cat-item tags="rcit"/>
     </def-cat>
 
     <def-cat n="guio">
@@ -360,8 +368,9 @@
       <cat-item lemma="venir" tags="vblex.*"/>
     </def-cat>
 
-    <def-cat n="continuer">
+    <def-cat n="continuer_sempresser">
       <cat-item lemma="continuer" tags="vblex.*"/>
+      <cat-item lemma="s'empresser" tags="vblex.*"/>
     </def-cat>
 
     <def-cat n="verb">
@@ -878,7 +887,7 @@
 
     <def-cat n="monato">
       <cat-item lemma="janvier" tags="n.*"/>
-      <cat-item lemma="fevrier" tags="n.*"/>
+      <cat-item lemma="février" tags="n.*"/>
       <cat-item lemma="mars" tags="n.*"/>
       <cat-item lemma="avril" tags="n.*"/>
       <cat-item lemma="mai" tags="n.*"/>
@@ -1181,7 +1190,6 @@
     <def-var n="lemapos"/>
     <def-var n="nombre"/>
     <def-var n="genere"/>
- <def-var n="xxx"/>
     <def-var n="concDet"/>
     <def-var n="concAdj"/>
     <def-var n="concPrimero"/>
@@ -1201,6 +1209,7 @@
     <def-var n="npron"/>
     <def-var n="ncnj"/>
     <def-var n="test"/>
+ <def-var n="xxx"/>
   </section-def-vars>
 
   <section-def-lists>
@@ -2105,7 +2114,7 @@
                 <test>
                     <equal>
                       <clip pos="1" side="sl" part="temps"/>
-                      <lit-tag v="cni"/><!-- -->
+                      <lit-tag v="cni"/>
                     </equal>
                 </test>
                 <let>
@@ -2118,7 +2127,7 @@
                 <test>
                     <equal>
                       <clip pos="1" side="sl" part="temps"/>
-                      <lit-tag v="ger"/><!-- -->
+                      <lit-tag v="ger"/>
                     </equal>
                 </test>
                 <let>
@@ -14570,7 +14579,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <test>
                     <equal>
                       <clip pos="1" side="sl" part="temps"/>
-                      <lit-tag v="pp"/><!-- -->
+                      <lit-tag v="pp"/>
                     </equal>
                 </test>
                 <let>
@@ -14689,7 +14698,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <test>
                     <equal>
                       <clip pos="1" side="sl" part="temps"/>
-                      <lit-tag v="pp"/><!-- -->
+                      <lit-tag v="pp"/>
                     </equal>
                 </test>
                 <let>
@@ -14819,7 +14828,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 
 <rule comment="VERBcontinueràde + INF (je continue à faire -> mi daŭre faras)">
       <pattern>
-	<pattern-item n="continuer"/>
+	<pattern-item n="continuer_sempresser"/>
 	<pattern-item n="de_a"/>
 	<pattern-item n="inf"/>
       </pattern>
@@ -14829,12 +14838,32 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	</call-macro>
 
 	<choose>
+          <when>
+            <test>
+              <equal>
+                <clip pos="1" side="sl" part="lem"/>
+                <lit v="s'empresser"/>
+              </equal>
+            </test>
+            <let>
+              <var n="lema"/>
+              <lit v="tuj"/>
+            </let>
+          </when>
+          <otherwise>
+            <let>
+              <var n="lema"/>
+              <lit v="daŭre"/>
+            </let>
+          </otherwise>
+	</choose>
 
+	<choose>
               <when>           <!-- traduccions a participi -->
                 <test>
                     <equal>
                       <clip pos="1" side="sl" part="temps"/>
-                      <lit-tag v="pp"/><!-- -->
+                      <lit-tag v="pp"/>
                     </equal>
                 </test>
                 <let>
@@ -14848,7 +14877,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <tag><lit-tag v="adv"/></tag>
                     </tags>
 		    <lu>
-                      <lit v="daŭre"/>
+                      <var n="lema"/>
                       <lit-tag v="adv"/>
                     </lu>
 		</chunk>
@@ -14883,7 +14912,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <tag><lit-tag v="adv"/></tag>
                     </tags>
 		    <lu>
-                      <lit v="daŭre"/>
+                      <var n="lema"/>
                       <lit-tag v="adv"/>
                     </lu>
 		</chunk>
@@ -14915,7 +14944,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 
 <rule comment="VERBcontinueràde + PRON + INF (je continue à le faire -> mi daŭre faras lin)">
       <pattern>
-	<pattern-item n="continuer"/>
+	<pattern-item n="continuer_sempresser"/>
 	<pattern-item n="de_a"/>
 	<pattern-item n="pro"/>
 	<pattern-item n="inf"/>
@@ -14934,12 +14963,32 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	</call-macro>
 
 	<choose>
+          <when>
+            <test>
+              <equal>
+                <clip pos="1" side="sl" part="lem"/>
+                <lit v="s'empresser"/>
+              </equal>
+            </test>
+            <let>
+              <var n="lema"/>
+              <lit v="tuj"/>
+            </let>
+          </when>
+          <otherwise>
+            <let>
+              <var n="lema"/>
+              <lit v="daŭre"/>
+            </let>
+          </otherwise>
+	</choose>
 
+	<choose>
               <when>           <!-- traduccions a participi -->
                 <test>
                     <equal>
                       <clip pos="1" side="sl" part="temps"/>
-                      <lit-tag v="pp"/><!-- -->
+                      <lit-tag v="pp"/>
                     </equal>
                 </test>
                 <let>
@@ -14953,7 +15002,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <tag><lit-tag v="adv"/></tag>
                     </tags>
 		    <lu>
-                      <lit v="daŭre"/>
+                      <var n="lema"/>
                       <lit-tag v="adv"/>
                     </lu>
 		</chunk>
@@ -15006,7 +15055,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <tag><lit-tag v="adv"/></tag>
                     </tags>
 		    <lu>
-                      <lit v="daŭre"/>
+                      <var n="lema"/>
                       <lit-tag v="adv"/>
                     </lu>
 		</chunk>
@@ -26447,6 +26496,44 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
       <action>
 	<out>
 	  <chunk name="lpar">
+	    <tags>
+	      <tag><lit-tag v="sent"/></tag>
+	    </tags>
+	    <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+	    </lu>
+	  </chunk>
+	</out>
+      </action>
+    </rule>
+
+    <rule> <!-- REGLA: sent_lcit -->
+      <pattern>
+	<pattern-item n="sent_lcit"/>
+      </pattern>
+      <action>
+	<out>
+	  <chunk name="lcit">
+	    <tags>
+	      <tag><lit-tag v="sent"/></tag>
+	    </tags>
+	    <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+	    </lu>
+	  </chunk>
+	</out>
+      </action>
+    </rule>
+
+    <rule> <!-- REGLA: sent_rcit -->
+      <pattern>
+	<pattern-item n="sent_rcit"/>
+      </pattern>
+      <action>
+	<out>
+	  <chunk name="rcit">
 	    <tags>
 	      <tag><lit-tag v="sent"/></tag>
 	    </tags>

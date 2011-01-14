@@ -83,45 +83,34 @@
 
 <section-def-macros>
 
-    <def-macro n="kunordigo_SN_SNrel" npar="2">
+    <def-macro n="kunordigo_nbr" npar="2">
        <choose>
           <when>
             <test>
+              <and>
                 <equal>
                   <clip pos="2" part="nbr"/>
 		  <lit-tag v="sp"/>
                 </equal>
+                <or>
+                  <equal>
+                    <clip pos="1" part="nbr"/>
+		    <lit-tag v="sg"/>
+                  </equal>
+                  <equal>
+                    <clip pos="1" part="nbr"/>
+		    <lit-tag v="pl"/>
+                  </equal>
+                </or>
+              </and>
             </test>
-            <choose>
-               <when>
-                 <test>
-                   <or>
-                     <equal>
-                       <clip pos="1" part="nbr"/>
-		       <lit-tag v="sg"/>
-                     </equal>
-                     <equal>
-                       <clip pos="1" part="nbr"/>
-		       <lit-tag v="pl"/>
-                     </equal>
-                   </or>
-                 </test>
-                 <let>
-                   <clip pos="2" part="nbr"/>
-                   <clip pos="1" part="nbr"/>
-                 </let>
-               </when>
-               <otherwise>
-                 <let>
-                   <clip pos="2" part="nbr"/>
-		   <lit-tag v="sg"/>  <!-- default -->
-                 </let>
-               </otherwise>
-           </choose>
+            <let>
+              <clip pos="2" part="nbr"/>
+              <clip pos="1" part="nbr"/>
+            </let>
 	</when>
       </choose>
     </def-macro>
-
 
 </section-def-macros>
 
@@ -225,7 +214,7 @@
 	<pattern-item n="SNrelatiu"/>
       </pattern>
       <action>
-        <call-macro n="kunordigo_SN_SNrel">
+        <call-macro n="kunordigo_nbr">
           <with-param pos="1"/>
           <with-param pos="2"/>
         </call-macro>
@@ -248,7 +237,7 @@
 	<pattern-item n="SNrelatiu"/>
       </pattern>
       <action>
-        <call-macro n="kunordigo_SN_SNrel">
+        <call-macro n="kunordigo_nbr">
           <with-param pos="1"/>
           <with-param pos="3"/>
         </call-macro>

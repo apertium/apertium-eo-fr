@@ -6,47 +6,83 @@
       <cat-item tags="unknown"/>
       <cat-item tags="SN.*"/>
     </def-cat>
+
     <def-cat n="SNnotunk">
       <cat-item tags="SN.*"/>
     </def-cat>
+
     <def-cat n="SNSA_nopron"> <!-- sen pronomoj -->
       <cat-item tags="SN.m.*"/>
       <cat-item tags="SN.f.*"/>
       <cat-item tags="SA.*"/>
     </def-cat>
+
     <def-cat n="num">
       <cat-item lemma="num" tags="SN.*"/>
     </def-cat>
+
     <def-cat n="det">
       <cat-item tags="DET.*"/>
     </def-cat>
+
     <def-cat n="SAdj"> <!-- adjektiva sintagmo -->
       <cat-item tags="SA.*"/>
     </def-cat>
+
     <def-cat n="adv">
       <cat-item tags="preadv"/>
       <cat-item tags="adv"/>
     </def-cat>
+
     <def-cat n="SV">
       <cat-item tags="SV"/>
       <cat-item tags="SV.*"/>
     </def-cat>
-    <def-cat n="unknown">
-       <cat-item lemma="unknown" tags=""/>
-    </def-cat>
-    <def-cat n="CM">
-      <cat-item lemma="cm" tags="sent"/>
-    </def-cat>
+
     <def-cat n="le_prn">
       <cat-item lemma="le" tags="SN.obj.*"/>
     </def-cat>
+
     <def-cat n="and_or">
       <cat-item tags="and_or.*"/>
       <cat-item tags="cnjcoo.*"/>
       <cat-item tags="cnjcoo"/>
     </def-cat>
+
     <def-cat n="que">
       <cat-item tags="SN.itg.*"/>
+    </def-cat>
+
+    <def-cat n="CM">
+      <cat-item lemma="cm" tags="sent"/>
+    </def-cat>
+
+    <def-cat n="lcit">
+      <cat-item lemma="lcit" tags="sent"/>
+    </def-cat>
+
+    <def-cat n="rcit">
+      <cat-item lemma="rcit" tags="sent"/>
+    </def-cat>
+
+    <def-cat n="unknown">
+       <cat-item lemma="unknown" tags=""/>
+    </def-cat>
+
+
+    <def-cat n="any"> <!-- sen pronomoj -->
+      <cat-item tags="SN.*"/>
+      <cat-item tags="SA.*"/>
+      <cat-item tags="SV.*"/>
+      <cat-item tags="SN.*"/>
+      <cat-item tags="adv"/>
+      <cat-item tags="preadv"/>
+      <cat-item tags="num.*"/>
+      <cat-item tags="det.*"/>
+      <cat-item tags="cnjadv"/>
+      <cat-item tags="cnjcoo"/>
+      <cat-item tags="cnjsub"/>
+      <cat-item tags="unknown"/>
     </def-cat>
   </section-def-cats>
 
@@ -61,12 +97,13 @@
       <attr-item tags="acc"/>
     </def-attr>
 
-    <def-attr n="a_nbr">
+    <def-attr n="nbr">
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
       <attr-item tags="sp"/>
       <attr-item tags="ND"/>
     </def-attr>
+
   </section-def-attrs>
 
   <section-def-vars>
@@ -74,8 +111,184 @@
     <def-var n="genere"/>
   </section-def-vars>
 
+<section-def-macros>
+
+    <def-macro n="kunordigo_nbr" npar="2">
+       <choose>
+          <when>
+            <test>
+              <and>
+                <equal>
+                  <clip pos="2" part="nbr"/>
+		  <lit-tag v="sp"/>
+                </equal>
+                <or>
+                  <equal>
+                    <clip pos="1" part="nbr"/>
+		    <lit-tag v="sg"/>
+                  </equal>
+                  <equal>
+                    <clip pos="1" part="nbr"/>
+		    <lit-tag v="pl"/>
+                  </equal>
+                </or>
+              </and>
+            </test>
+            <let>
+              <clip pos="2" part="nbr"/>
+              <clip pos="1" part="nbr"/>
+            </let>
+	</when>
+      </choose>
+    </def-macro>
+
+  <def-macro n="f_bcond" npar="1"><!--Per mirar si el blanc conté o no format. Cal posar aquesta funció en les regles en què desaparegui alguna paraula, per tal de decidir si el blanc de la paraula eliminada s'ha d'eliminar o conservar. Si conté format cal conservar-la, si no en conté cal eliminar-la perquè no apareguin dos espais seguits. -->
+     	<choose>
+     	  <when>
+     	    <test>
+     	      <not>
+     	        <equal>
+     	          <b pos="1"/>
+     	          <lit v=" "/>
+     	        </equal>
+              </not>
+     	    </test>
+            <out>
+              <b pos="1"/>
+            </out>
+          </when>     	    
+     	</choose>
+     </def-macro>
+
+<!--
+  <def-macro n="f_bcond2" npar="1">
+     	<choose>
+     	  <when>
+     	    <test>
+     	      <equal>
+     	        <b pos="1"/>
+     	        <lit v=" "/>
+              </equal>
+     	    </test>
+            <out>
+     	      <let>
+     	        <b pos="1"/>
+     	        <lit v=""/>
+              </let>
+            </out>
+          </when>     	    
+     	</choose>
+     </def-macro>
+-->
+
+</section-def-macros>
 
   <section-rules>
+
+<!-- CITILOJ --> 
+
+    <rule comment="REGLA: « any »  -   any ">
+      <pattern>
+        <pattern-item n="lcit"/>
+        <pattern-item n="any"/>
+        <pattern-item n="rcit"/>
+      </pattern>
+      <action>
+<!--
+        <call-macro n="f_bcond2"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond2"><with-param pos="2"/></call-macro>
+-->
+        <out>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+            <lit v="{"/>
+            <clip pos="1" part="content"/>
+            <b pos="1"/>
+            <clip pos="2" part="content"/>
+            <b pos="2"/>
+            <clip pos="3" part="content"/>
+             <lit v="}"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: DET « SN »  -   SN (kunigas misanalizitan artikolon kiel pronomon">
+      <pattern>
+        <pattern-item n="det"/>
+        <pattern-item n="lcit"/>
+        <pattern-item n="SNSA_nopron"/>
+        <pattern-item n="rcit"/>
+      </pattern>
+      <action>
+
+        <!-- se la nombro ne estas konata en la SN (kio ne maloftas), ni povas uzi tiun de la pronomo/artikolo -->
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="1"/>
+          <with-param pos="3"/>
+        </call-macro>
+
+        <out>
+          <chunk>
+            <get-case-from pos="1"><clip pos="3" part="lem"/></get-case-from>
+            <clip pos="3" part="tags"/>
+            <lit v="{"/>
+	    <get-case-from pos="1">
+            <clip pos="1" part="content"/>
+	    </get-case-from>
+            <b pos="1"/>
+            <clip pos="2" part="content"/>
+            <b pos="2"/>
+            <clip pos="3" part="content"/>
+            <b pos="3"/>
+            <clip pos="4" part="content"/>
+             <lit v="}"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: LE « SN »  -   SN (kunigas misanalizitan artikolon kiel pronomon">
+      <pattern>
+        <pattern-item n="le_prn"/>
+        <pattern-item n="lcit"/>
+        <pattern-item n="SNSA_nopron"/>
+        <pattern-item n="rcit"/>
+      </pattern>
+      <action>
+
+        <!-- se la nombro ne estas konata en la SN (kio ne maloftas), ni povas uzi tiun de la pronomo/artikolo -->
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="1"/>
+          <with-param pos="3"/>
+        </call-macro>
+
+        <out>
+          <chunk>
+            <get-case-from pos="1"><clip pos="3" part="lem"/></get-case-from>
+            <clip pos="3" part="tags"/>
+            <lit v="{^"/>
+	    <get-case-from pos="1">
+	      <lit v="la"/>
+	    </get-case-from>
+	    <lit-tag v="det.def.sg.nom"/>
+	    <lit v="$"/>
+            <b pos="1"/>
+            <clip pos="2" part="content"/>
+            <b pos="2"/>
+            <clip pos="3" part="content"/>
+            <b pos="3"/>
+            <clip pos="4" part="content"/>
+             <lit v="}"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
 
 <!-- Reguloj de SAdj -->
 
@@ -455,13 +668,16 @@
 
 <!--
 - Tio ŝajnas sensecaĵo, ĉar SN povas esti determinita (3 la domoj)
-- Krome estas problemo, ĉar SN povas esti unknown; tiam oni kopias la ĉapon de unk kaj okazas bordelo
     <rule comment="REGLA: NUM SN   -   SN ">
       <pattern>
         <pattern-item n="num"/>
-        <pattern-item n="SN"/>
+        <pattern-item n="SNnotunk"/>
       </pattern>
       <action>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
         <out>
           <chunk>
             <get-case-from pos="1"><clip pos="2" part="lem"/></get-case-from>
@@ -478,27 +694,18 @@
 -->
 
 
-    <rule comment="REGLA: LE SN   -   SN (kunigas misanalizan artikolon kiel pronomon">
+    <rule comment="REGLA: LE SN   -   SN (kunigas misanalizitan artikolon kiel pronomon">
       <pattern>
         <pattern-item n="le_prn"/>
         <pattern-item n="SNSA_nopron"/>
       </pattern>
       <action>
 
-    <choose> <!-- se la nombro ne estas konata en la SN (kio ne maloftas), ni povas uzi tiun de la pronomo/artikolo -->
-      <when>
-        <test>
-           <and>
-             <equal><clip pos="2" part="a_nbr"/><lit-tag v="sp"/></equal>
-             <or>
-               <equal><clip pos="1" part="a_nbr"/><lit-tag v="sg"/></equal>
-               <equal><clip pos="1" part="a_nbr"/><lit-tag v="pl"/></equal>
-             </or>
-           </and>
-        </test>
-          <let><clip pos="2" part="a_nbr"/> <clip pos="1" part="a_nbr"/></let>
-      </when>
-    </choose>
+        <!-- se la nombro ne estas konata en la SN (kio ne maloftas), ni povas uzi tiun de la pronomo/artikolo -->
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
 
         <out>
           <chunk>
@@ -519,7 +726,6 @@
     </rule>
 
 
-
     <rule comment="REGLA: SN1 and/or SN2   -   SN ">
       <pattern>
         <pattern-item n="SNnotunk"/>
@@ -533,7 +739,7 @@
       <when>
         <test>
           <and>
-            <equal><clip pos="1" part="a_nbr"/><clip pos="3" part="a_nbr"/></equal>
+            <equal><clip pos="1" part="nbr"/><clip pos="3" part="nbr"/></equal>
             <or>
               <and>
                 <equal><clip pos="1" part="lem"/><lit v="prpers"/></equal>
@@ -548,8 +754,7 @@
         </test>
         <out>
           <chunk>
-            <!-- <clip pos="1" part="lem"/> -->
-            <lit v="nom_conj_nom"/>
+            <get-case-from pos="1"><lit v="nom_conj_nom"/></get-case-from>
             <clip pos="1" part="tags"/>
             <lit v="{"/>
             <clip pos="1" part="content"/>
@@ -597,7 +802,7 @@
       <when>
         <test>
           <and>
-            <equal><clip pos="1" part="a_nbr"/><clip pos="5" part="a_nbr"/></equal>
+            <equal><clip pos="1" part="nbr"/><clip pos="5" part="nbr"/></equal>
             <or>
               <and>
                 <equal><clip pos="1" part="lem"/><lit v="prpers"/></equal>
@@ -612,8 +817,7 @@
         </test>
         <out>
           <chunk>
-            <!-- <clip pos="1" part="lem"/> -->
-            <lit v="nom_conj_nom_conj_nom"/>
+            <get-case-from pos="1"><lit v="nom_conj_nom"/></get-case-from>
             <clip pos="1" part="tags"/>
             <lit v="{"/>
             <clip pos="1" part="content"/>
@@ -675,7 +879,7 @@
       <when>
         <test>
           <and>
-            <equal><clip pos="1" part="a_nbr"/><clip pos="6" part="a_nbr"/></equal>
+            <equal><clip pos="1" part="nbr"/><clip pos="6" part="nbr"/></equal>
             <or>
               <and>
                 <equal><clip pos="1" part="lem"/><lit v="prpers"/></equal>
@@ -690,8 +894,7 @@
         </test>
         <out>
           <chunk>
-            <!--  <clip pos="1" part="lem"/> <lit v="^nom_conj_nom_conj_nom"/> -->
-            <lit v="nom_conj_nom_conj_nom"/>
+            <get-case-from pos="1"><lit v="nom_conj_nom"/></get-case-from>
             <clip pos="1" part="tags"/>
             <lit v="{"/>
             <clip pos="1" part="content"/>
@@ -779,7 +982,7 @@
 	    </get-case-from>
 	    <lit-tag v="SNrelatiu.rel.sp.nom.nom"/>
 	    <lit v="{^"/>
-	    <get-case-from pos="1">
+	    <get-case-from pos="2">
 	      <lit v="kiu"/>
 	    </get-case-from>
 	    <lit-tag v="prn.rel.3.4"/>
@@ -804,7 +1007,7 @@
           </chunk>
           <b pos="1"/>
 	  <chunk>
-	    <get-case-from pos="1">
+	    <get-case-from pos="2">
 	      <lit v="ke"/>
 	    </get-case-from>
 	    <lit-tag v="cnjsub"/>
@@ -842,7 +1045,7 @@
 	    </get-case-from>
 	    <lit-tag v="cnjsub"/>
 	    <lit v="{^"/>
-	    <get-case-from pos="1">
+	    <get-case-from pos="3">
 	      <lit v="ke"/>
 	    </get-case-from>
 	    <lit-tag v="cnjsub"/>
