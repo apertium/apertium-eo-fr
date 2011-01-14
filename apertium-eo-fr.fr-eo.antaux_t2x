@@ -9,6 +9,11 @@
     <def-cat n="SNnotunk">
       <cat-item tags="SN.*"/>
     </def-cat>
+    <def-cat n="SNSA_nopron"> <!-- sen pronomoj -->
+      <cat-item tags="SN.m.*"/>
+      <cat-item tags="SN.f.*"/>
+      <cat-item tags="SA.*"/>
+    </def-cat>
     <def-cat n="num">
       <cat-item lemma="num" tags="SN.*"/>
     </def-cat>
@@ -31,6 +36,9 @@
     </def-cat>
     <def-cat n="CM">
       <cat-item lemma="cm" tags="sent"/>
+    </def-cat>
+    <def-cat n="le_prn">
+      <cat-item lemma="le" tags="SN.obj.*"/>
     </def-cat>
     <def-cat n="and_or">
       <cat-item tags="and_or.*"/>
@@ -470,7 +478,45 @@
 -->
 
 
+    <rule comment="REGLA: LE SN   -   SN (kunigas misanalizan artikolon kiel pronomon">
+      <pattern>
+        <pattern-item n="le_prn"/>
+        <pattern-item n="SNSA_nopron"/>
+      </pattern>
+      <action>
 
+    <choose> <!-- se la nombro ne estas konata en la SN (kio ne maloftas), ni povas uzi tiun de la pronomo/artikolo -->
+      <when>
+        <test>
+           <and>
+             <equal><clip pos="2" part="a_nbr"/><lit-tag v="sp"/></equal>
+             <or>
+               <equal><clip pos="1" part="a_nbr"/><lit-tag v="sg"/></equal>
+               <equal><clip pos="1" part="a_nbr"/><lit-tag v="pl"/></equal>
+             </or>
+           </and>
+        </test>
+          <let><clip pos="2" part="a_nbr"/> <clip pos="1" part="a_nbr"/></let>
+      </when>
+    </choose>
+
+        <out>
+          <chunk>
+            <get-case-from pos="1"><clip pos="2" part="lem"/></get-case-from>
+            <clip pos="2" part="tags"/>
+            <lit v="{^"/>
+	    <get-case-from pos="1">
+	      <lit v="la"/>
+	    </get-case-from>
+	    <lit-tag v="det.def.sg.nom"/>
+	    <lit v="$"/>
+            <b pos="1"/>
+            <clip pos="2" part="content"/>
+             <lit v="}"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
 
 
@@ -728,7 +774,7 @@
           </chunk>
           <b pos="1"/>
 	  <chunk>
-	    <get-case-from pos="1">
+	    <get-case-from pos="2">
 	      <lit v="prn"/>
 	    </get-case-from>
 	    <lit-tag v="SNrelatiu.rel.sp.nom.nom"/>
@@ -759,6 +805,39 @@
           <b pos="1"/>
 	  <chunk>
 	    <get-case-from pos="1">
+	      <lit v="ke"/>
+	    </get-case-from>
+	    <lit-tag v="cnjsub"/>
+	    <lit v="{^"/>
+	    <get-case-from pos="2">
+	      <lit v="ke"/>
+	    </get-case-from>
+	    <lit-tag v="cnjsub"/>
+	    <lit v="$}"/>
+	  </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: SV ADV PRN_INT   -   SV KE">
+      <pattern>
+        <pattern-item n="SV"/>
+        <pattern-item n="adv"/>
+        <pattern-item n="que"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="2"/>
+	  <chunk>
+	    <get-case-from pos="3">
 	      <lit v="ke"/>
 	    </get-case-from>
 	    <lit-tag v="cnjsub"/>

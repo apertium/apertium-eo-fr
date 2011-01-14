@@ -272,14 +272,26 @@
     </def-macro>
 
 
-    <def-macro n="kunordigo_SN_SNrel" npar="2">
+    <def-macro n="kunordigo_nbr" npar="2">
        <choose>
           <when>
             <test>
+              <and>
                 <equal>
                   <clip pos="2" part="nbr"/>
 		  <lit-tag v="sp"/>
                 </equal>
+                <or>
+                  <equal>
+                    <clip pos="1" part="nbr"/>
+		    <lit-tag v="sg"/>
+                  </equal>
+                  <equal>
+                    <clip pos="1" part="nbr"/>
+		    <lit-tag v="pl"/>
+                  </equal>
+                </or>
+              </and>
             </test>
             <let>
               <clip pos="2" part="nbr"/>
@@ -1376,208 +1388,52 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
       </action>
 </rule>
 -->
-    <rule comment="REGLA: SN SVser SA (- viuen feliços (BCN s'ha modificat) EO">
+    <rule comment="REGLA: SN SVser SA (ils sont heureux - ili estas feliĉaj)">
       <pattern>
         <pattern-item n="SN"/>
         <pattern-item n="ser"/>
         <pattern-item n="SA"/>
       </pattern>
       <action>
-        <choose>
-          <when>
-            <test>
-              <equal caseless="yes">
-                <clip pos="2" part="lem"/>
-                <lit v="inf"/>
-              </equal>
-            </test>
-            <let>
-              <clip pos="2" part="temps"/>
-              <lit-tag v="pri"/>
-            </let>
-          </when>
-        </choose>
-        <choose>
-          <when>
-            <test>
-              <equal caseless="yes">
-                <clip pos="1" part="lem"/>
-                <lit v="prnsubj"/>
-              </equal>
-            </test>
-            <choose>
-              <when>
-                <test>
-                  <equal>
-                    <clip pos="2" part="pers"/>
-                    <lit-tag v="PD"/>
-                  </equal>
-                </test>
-                <let>
-                  <clip pos="2" part="pers"/>
-                  <clip pos="1" part="pers"/>
-                </let>
-              </when>
-            </choose>
-            <choose>
-              <when>
-                <test>
-                  <equal>
-                    <clip pos="2" part="nbr"/>
-                    <lit-tag v="ND"/>
-                  </equal>
-                </test>
-                <let>
-                  <clip pos="2" part="nbr"/>
-                  <clip pos="1" part="nbr"/>
-                </let>
-              </when>
-            </choose>
-            <call-macro n="f_bcond">
-              <with-param pos="1"/>
-            </call-macro>
+        <call-macro n="forigi_imp">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="2"/>
+          <with-param pos="3"/>
+        </call-macro>
+
             <out>
-              <chunk><!--el pronom no l'envio, només el 2n chunk -->
-                <get-case-from pos="1">
-                  <clip pos="2" part="lem"/>
-                </get-case-from>
+              <chunk>
+                <clip pos="1" part="lem"/>
+                <clip pos="1" part="tags"/>
+                <clip pos="1" part="chcontent"/>
+              </chunk>
+              <b pos="1"/>
+              <chunk>
+                <clip pos="2" part="lem"/>
                 <clip pos="2" part="tags"/>
                 <clip pos="2" part="chcontent"/>
               </chunk>
+              <b pos="2"/>
+              <chunk>
+                <clip pos="3" part="whole"/>
+              </chunk>
             </out>
-          </when>
-          <otherwise><!--Quan SN no és pronom subjecte, per tant, quan és qualsevol altre SN -->
-            <choose>
-              <when>
-                <test>
-                  <equal>
-                    <clip pos="1" part="gen"/>
-                    <lit-tag v="GD"/>
-                  </equal>
-                </test>
-                <let>
-                  <clip pos="1" part="gen"/>
-                  <lit-tag v="m"/>
-                </let>
-              </when>
-            </choose>
-            <choose>
-              <when>
-                <test>
-                  <equal>
-                    <clip pos="1" part="nbr"/>
-                    <lit-tag v="ND"/>
-                  </equal>
-                </test>
-                <choose>
-                  <when>
-                    <test>
-                      <and>
-                        <equal>
-                          <clip pos="2" part="temps"/>
-                          <lit-tag v="pri"/>
-                        </equal>
-                        <equal>
-                          <clip pos="2" part="nbr"/>
-                          <lit-tag v="ND"/>
-                        </equal>
-                      </and>
-                    </test>
-                    <let>
-                      <clip pos="1" part="nbr"/>
-                      <lit-tag v="pl"/>
-                    </let>
-                  </when>
-                  <when>
-                    <test>
-                      <equal>
-                        <clip pos="2" part="temps"/>
-                        <lit-tag v="pri"/>
-                      </equal>
-                    </test>
-                    <let>
-                      <clip pos="1" part="nbr"/>
-                      <lit-tag v="sg"/>
-                    </let>
-                  </when>
-                  <when>
-                    <test>
-                      <and>
-                        <equal>
-                          <clip pos="2" part="temps"/>
-                          <lit-tag v="ifip"/>
-                        </equal>
-                        <equal caseless="yes">
-                          <clip pos="2" part="lem"/>
-                          <lit v="be"/>
-                        </equal>
-                        <equal>
-                          <clip pos="2" part="nbr"/>
-                          <lit-tag v="ND"/>
-                        </equal>
-                      </and>
-                    </test>
-                    <let>
-                      <clip pos="1" part="nbr"/>
-                      <lit-tag v="pl"/>
-                    </let>
-                  </when>
-                  <otherwise>
-                    <let>
-                      <clip pos="1" part="nbr"/>
-                      <lit-tag v="sg"/>
-                    </let>
-                  </otherwise>
-                </choose>
-              </when>
-            </choose>
+      </action>
+    </rule>
 
-            <choose>
-              <when>
-                <test>
-                  <equal>
-                    <clip pos="2" part="pers"/>
-                    <lit-tag v="PD"/>
-                  </equal>
-                </test>
-                <let>
-                  <clip pos="2" part="pers"/>
-                  <lit-tag v="p3"/>
-                </let>
-              </when>
-            </choose>
-            <choose>
-              <when>
-                <test>
-                  <equal>
-                    <clip pos="2" part="nbr"/>
-                    <lit-tag v="ND"/>
-                  </equal>
-                </test>
-                <choose>
-                  <when>
-                    <test>
-                      <not>
-                        <equal>
-                          <clip pos="1" part="nbr"/>
-                          <lit-tag v="sp"/>
-                        </equal>
-                      </not>
-                    </test>
-                    <let>
-                      <clip pos="2" part="nbr"/>
-                      <clip pos="1" part="nbr"/>
-                    </let>
-                  </when>
-                  <otherwise>
-                    <let>
-                      <clip pos="2" part="nbr"/>
-                      <lit-tag v="sg"/>
-                    </let>
-                  </otherwise>
-                </choose>
-              </when>
-            </choose>
+    <rule comment="REGLA: SVser SA (sont heureux - estas feliĉaj)">
+      <pattern>
+        <pattern-item n="ser"/>
+        <pattern-item n="SA"/>
+      </pattern>
+      <action>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+
             <out>
               <chunk>
                 <clip pos="1" part="lem"/>
@@ -1591,51 +1447,6 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
                 <clip pos="2" part="chcontent"/>
               </chunk>
             </out>
-          </otherwise>
-        </choose>
-        <choose>
-          <when>
-            <test>
-                <or>
-                  <equal>
-                    <clip pos="1" part="gen"/>
-                    <lit-tag v="m"/>
-                  </equal>
-                  <equal>
-                    <clip pos="1" part="gen"/>
-                    <lit-tag v="f"/>
-                  </equal>
-                </or>
-            </test>
-            <let>
-              <clip pos="3" part="gen"/>
-              <clip pos="1" part="gen"/>
-            </let>
-          </when>
-          <otherwise>
-            <let>
-              <clip pos="3" part="gen"/>
-              <lit-tag v="m"/>
-            </let>
-          </otherwise>
-        </choose>
-        <!--<call-macro n="nombre_SN">
-          <with-param pos="1"/>
-        </call-macro>
-        <let>
-          <clip pos="3" part="nbr"/>
-          <var n="nombre"/>
-        </let>-->
-            <let>
-              <clip pos="3" part="gen"/>
-              <lit-tag v="m"/>
-            </let>
-        <out>
-          <b pos="2"/>
-          <chunk>
-            <clip pos="3" part="whole"/>
-          </chunk>
-        </out>
       </action>
     </rule>
 
@@ -1651,201 +1462,6 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	      <lit-tag v="acc"/>
 	    </let>
 
-        <choose>
-          <when>
-            <test>
-              <equal caseless="yes">
-                <clip pos="2" part="lem"/>
-                <lit v="inf"/>
-              </equal>
-            </test>
-            <let>
-              <clip pos="2" part="temps"/>
-              <lit-tag v="pri"/>
-            </let>
-          </when>
-        </choose>
-        <choose>
-          <when>
-            <test>
-              <equal caseless="yes">
-                <clip pos="1" part="lem"/>
-                <lit v="prnsubj"/>
-              </equal>
-            </test>
-            <choose>
-              <when>
-                <test>
-                  <equal>
-                    <clip pos="2" part="pers"/>
-                    <lit-tag v="PD"/>
-                  </equal>
-                </test>
-                <let>
-                  <clip pos="2" part="pers"/>
-                  <clip pos="1" part="pers"/>
-                </let>
-              </when>
-            </choose>
-            <choose>
-              <when>
-                <test>
-                  <equal>
-                    <clip pos="2" part="nbr"/>
-                    <lit-tag v="ND"/>
-                  </equal>
-                </test>
-                <let>
-                  <clip pos="2" part="nbr"/>
-                  <clip pos="1" part="nbr"/>
-                </let>
-              </when>
-            </choose>
-            <call-macro n="f_bcond">
-              <with-param pos="1"/>
-            </call-macro>
-            <out>
-              <chunk><!--el pronom no l'envio, només el 2n chunk -->
-                <get-case-from pos="1">
-                  <clip pos="2" part="lem"/>
-                </get-case-from>
-                <clip pos="2" part="tags"/>
-                <clip pos="2" part="chcontent"/>
-              </chunk>
-            </out>
-          </when>
-          <otherwise><!--Quan SN no és pronom subjecte, per tant, quan és qualsevol altre SN -->
-            <choose>
-              <when>
-                <test>
-                  <equal>
-                    <clip pos="1" part="gen"/>
-                    <lit-tag v="GD"/>
-                  </equal>
-                </test>
-                <let>
-                  <clip pos="1" part="gen"/>
-                  <lit-tag v="m"/>
-                </let>
-              </when>
-            </choose>
-            <choose>
-              <when>
-                <test>
-                  <equal>
-                    <clip pos="1" part="nbr"/>
-                    <lit-tag v="ND"/>
-                  </equal>
-                </test>
-                <choose>
-                  <when>
-                    <test>
-                      <and>
-                        <equal>
-                          <clip pos="2" part="temps"/>
-                          <lit-tag v="pri"/>
-                        </equal>
-                        <equal>
-                          <clip pos="2" part="nbr"/>
-                          <lit-tag v="ND"/>
-                        </equal>
-                      </and>
-                    </test>
-                    <let>
-                      <clip pos="1" part="nbr"/>
-                      <lit-tag v="pl"/>
-                    </let>
-                  </when>
-                  <when>
-                    <test>
-                      <equal>
-                        <clip pos="2" part="temps"/>
-                        <lit-tag v="pri"/>
-                      </equal>
-                    </test>
-                    <let>
-                      <clip pos="1" part="nbr"/>
-                      <lit-tag v="sg"/>
-                    </let>
-                  </when>
-                  <when>
-                    <test>
-                      <and>
-                        <equal>
-                          <clip pos="2" part="temps"/>
-                          <lit-tag v="ifip"/>
-                        </equal>
-                        <equal caseless="yes">
-                          <clip pos="2" part="lem"/>
-                          <lit v="be"/>
-                        </equal>
-                        <equal>
-                          <clip pos="2" part="nbr"/>
-                          <lit-tag v="ND"/>
-                        </equal>
-                      </and>
-                    </test>
-                    <let>
-                      <clip pos="1" part="nbr"/>
-                      <lit-tag v="pl"/>
-                    </let>
-                  </when>
-                  <otherwise>
-                    <let>
-                      <clip pos="1" part="nbr"/>
-                      <lit-tag v="sg"/>
-                    </let>
-                  </otherwise>
-                </choose>
-              </when>
-            </choose>
-
-            <choose>
-              <when>
-                <test>
-                  <equal>
-                    <clip pos="2" part="pers"/>
-                    <lit-tag v="PD"/>
-                  </equal>
-                </test>
-                <let>
-                  <clip pos="2" part="pers"/>
-                  <lit-tag v="p3"/>
-                </let>
-              </when>
-            </choose>
-            <choose>
-              <when>
-                <test>
-                  <equal>
-                    <clip pos="2" part="nbr"/>
-                    <lit-tag v="ND"/>
-                  </equal>
-                </test>
-                <choose>
-                  <when>
-                    <test>
-                      <not>
-                        <equal>
-                          <clip pos="1" part="nbr"/>
-                          <lit-tag v="sp"/>
-                        </equal>
-                      </not>
-                    </test>
-                    <let>
-                      <clip pos="2" part="nbr"/>
-                      <clip pos="1" part="nbr"/>
-                    </let>
-                  </when>
-                  <otherwise>
-                    <let>
-                      <clip pos="2" part="nbr"/>
-                      <lit-tag v="sg"/>
-                    </let>
-                  </otherwise>
-                </choose>
-              </when>
-            </choose>
             <out>
               <chunk>
                 <clip pos="1" part="lem"/>
@@ -1858,52 +1474,11 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
                 <clip pos="2" part="tags"/>
                 <clip pos="2" part="chcontent"/>
               </chunk>
+              <b pos="2"/>
+              <chunk>
+                <clip pos="3" part="whole"/>
+              </chunk>
             </out>
-          </otherwise>
-        </choose>
-        <choose>
-          <when>
-            <test>
-                <or>
-                  <equal>
-                    <clip pos="1" part="gen"/>
-                    <lit-tag v="m"/>
-                  </equal>
-                  <equal>
-                    <clip pos="1" part="gen"/>
-                    <lit-tag v="f"/>
-                  </equal>
-                </or>
-            </test>
-            <let>
-              <clip pos="3" part="gen"/>
-              <clip pos="1" part="gen"/>
-            </let>
-          </when>
-          <otherwise>
-            <let>
-              <clip pos="3" part="gen"/>
-              <lit-tag v="m"/>
-            </let>
-          </otherwise>
-        </choose>
-        <!--<call-macro n="nombre_SN">
-          <with-param pos="1"/>
-        </call-macro>
-        <let>
-          <clip pos="3" part="nbr"/>
-          <var n="nombre"/>
-        </let>-->
-            <let>
-              <clip pos="3" part="gen"/>
-              <lit-tag v="m"/>
-            </let>
-        <out>
-          <b pos="2"/>
-          <chunk>
-            <clip pos="3" part="whole"/>
-          </chunk>
-        </out>
       </action>
     </rule>
 
@@ -1963,7 +1538,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	<pattern-item n="SV"/>
       </pattern>
       <action>
-            <call-macro n="kunordigo_SN_SNrel">
+            <call-macro n="kunordigo_nbr">
               <with-param pos="1"/>
               <with-param pos="2"/>
             </call-macro>
@@ -2002,7 +1577,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	<pattern-item n="SN"/>
       </pattern>
       <action>
-            <call-macro n="kunordigo_SN_SNrel">
+            <call-macro n="kunordigo_nbr">
               <with-param pos="1"/>
               <with-param pos="2"/>
             </call-macro>
@@ -2048,7 +1623,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	<pattern-item n="SN"/>
       </pattern>
       <action>
-            <call-macro n="kunordigo_SN_SNrel">
+            <call-macro n="kunordigo_nbr">
               <with-param pos="1"/>
               <with-param pos="2"/>
             </call-macro>
@@ -2114,7 +1689,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	<pattern-item n="SV"/>
       </pattern>
       <action>
-            <call-macro n="kunordigo_SN_SNrel">
+            <call-macro n="kunordigo_nbr">
               <with-param pos="1"/>
               <with-param pos="2"/>
             </call-macro>
@@ -2153,7 +1728,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	<pattern-item n="SNacc"/>
       </pattern>
       <action>
-            <call-macro n="kunordigo_SN_SNrel">
+            <call-macro n="kunordigo_nbr">
               <with-param pos="1"/>
               <with-param pos="2"/>
             </call-macro>
@@ -2194,7 +1769,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	<pattern-item n="SN"/>
       </pattern>
       <action>
-            <call-macro n="kunordigo_SN_SNrel">
+            <call-macro n="kunordigo_nbr">
               <with-param pos="1"/>
               <with-param pos="2"/>
             </call-macro>
@@ -2281,7 +1856,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	<pattern-item n="SNrelatiu"/>
       </pattern>
       <action>
-        <call-macro n="kunordigo_SN_SNrel">
+        <call-macro n="kunordigo_nbr">
           <with-param pos="1"/>
           <with-param pos="2"/>
         </call-macro>
@@ -2304,7 +1879,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	<pattern-item n="SNrelatiu"/>
       </pattern>
       <action>
-        <call-macro n="kunordigo_SN_SNrel">
+        <call-macro n="kunordigo_nbr">
           <with-param pos="1"/>
           <with-param pos="3"/>
         </call-macro>
