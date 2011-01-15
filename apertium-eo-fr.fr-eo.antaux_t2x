@@ -11,6 +11,11 @@
       <cat-item tags="SN.*"/>
     </def-cat>
 
+    <def-cat n="SN_nopron"> <!-- sen pronomoj -->
+      <cat-item tags="SN.m.*"/>
+      <cat-item tags="SN.f.*"/>
+    </def-cat>
+
     <def-cat n="SNSA_nopron"> <!-- sen pronomoj -->
       <cat-item tags="SN.m.*"/>
       <cat-item tags="SN.f.*"/>
@@ -109,6 +114,10 @@
   <section-def-vars>
     <def-var n="nombre"/>
     <def-var n="genere"/>
+    <def-var n="b1"/>
+    <def-var n="b2"/>
+    <def-var n="b3"/>
+    <def-var n="b4"/>
   </section-def-vars>
 
 <section-def-macros>
@@ -145,41 +154,53 @@
   <def-macro n="f_bcond" npar="1"><!--Per mirar si el blanc conté o no format. Cal posar aquesta funció en les regles en què desaparegui alguna paraula, per tal de decidir si el blanc de la paraula eliminada s'ha d'eliminar o conservar. Si conté format cal conservar-la, si no en conté cal eliminar-la perquè no apareguin dos espais seguits. -->
      	<choose>
      	  <when>
-     	    <test>
-     	      <not>
-     	        <equal>
-     	          <b pos="1"/>
-     	          <lit v=" "/>
-     	        </equal>
-              </not>
-     	    </test>
+     	    <test><not><equal><b pos="1"/><lit v=" "/></equal></not></test>
             <out>
               <b pos="1"/>
             </out>
           </when>     	    
      	</choose>
-     </def-macro>
+  </def-macro>
 
-<!--
-  <def-macro n="f_bcond2" npar="1">
+  <def-macro n="f_b1" npar="1"> <!-- simile al la antaŭa, tamen, ĉar ne eblas atribui valoron al <b> ni uzas variablon b1 -->
      	<choose>
      	  <when>
-     	    <test>
-     	      <equal>
-     	        <b pos="1"/>
-     	        <lit v=" "/>
-              </equal>
-     	    </test>
-            <out>
-     	      <let>
-     	        <b pos="1"/>
-     	        <lit v=""/>
-              </let>
-            </out>
+     	    <test><equal><b pos="1"/><lit v=" "/></equal></test>
+     	      <let><var n="b1"/><lit v=""/></let>
           </when>     	    
+     	  <otherwise><let><var n="b1"/><b pos="1"/></let></otherwise>
      	</choose>
-     </def-macro>
--->
+  </def-macro>
+
+  <def-macro n="f_b2" npar="1"> <!-- simile al la antaŭa, tamen, ĉar ne eblas atribui valoron al <b> ni uzas variablon b2 -->
+     	<choose>
+     	  <when>
+     	    <test><equal><b pos="1"/><lit v=" "/></equal></test>
+     	      <let><var n="b2"/><lit v=""/></let>
+          </when>     	    
+     	  <otherwise><let><var n="b2"/><b pos="1"/></let></otherwise>
+     	</choose>
+  </def-macro>
+
+  <def-macro n="f_b3" npar="1"> <!-- simile al la antaŭa, tamen, ĉar ne eblas atribui valoron al <b> ni uzas variablon b3 -->
+     	<choose>
+     	  <when>
+     	    <test><equal><b pos="1"/><lit v=" "/></equal></test>
+     	      <let><var n="b3"/><lit v=""/></let>
+          </when>     	    
+     	  <otherwise><let><var n="b3"/><b pos="1"/></let></otherwise>
+     	</choose>
+  </def-macro>
+
+  <def-macro n="f_b4" npar="1"> <!-- simile al la antaŭa, tamen, ĉar ne eblas atribui valoron al <b> ni uzas variablon b4 -->
+     	<choose>
+     	  <when>
+     	    <test><equal><b pos="1"/><lit v=" "/></equal></test>
+     	      <let><var n="b4"/><lit v=""/></let>
+          </when>     	    
+     	  <otherwise><let><var n="b4"/><b pos="1"/></let></otherwise>
+     	</choose>
+  </def-macro>
 
 </section-def-macros>
 
@@ -285,6 +306,110 @@
              <lit v="}"/>
           </chunk>
         </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: SN « SAdj »  -   « SAdj » SN ">
+      <pattern>
+        <pattern-item n="SN_nopron"/>
+        <pattern-item n="lcit"/>
+        <pattern-item n="SAdj"/>
+        <pattern-item n="rcit"/>
+      </pattern>
+      <action>
+        <choose>
+          <when> <!-- ni kontrolas, ĉu la SN kaj la SAdj interakordas -->
+            <test>
+              <or>
+                <and>
+     	          <equal><clip pos="1" part="nbr"/><lit-tag v="sg"/></equal>
+                  <or>
+     	            <equal><clip pos="3" part="nbr"/><lit-tag v="sg"/></equal>
+     	            <equal><clip pos="3" part="nbr"/><lit-tag v="sp"/></equal>
+                  </or>
+                </and>
+                <and>
+     	          <equal><clip pos="1" part="nbr"/><lit-tag v="pl"/></equal>
+                  <or>
+     	            <equal><clip pos="3" part="nbr"/><lit-tag v="pl"/></equal>
+     	            <equal><clip pos="3" part="nbr"/><lit-tag v="sp"/></equal>
+                  </or>
+                </and>
+              </or>
+            </test>
+            <choose>
+              <when> <!-- ni kontrolas, ĉu la SN estas sendeterminanta kaj ĉu ni havas "kanonan blankaron" -->
+                <test>
+                <and>
+                    <or>
+     	              <equal><clip pos="1" part="lem"/><lit v="nom"/></equal>
+     	              <equal><clip pos="1" part="lem"/><lit v="nom_adj"/></equal>
+                    </or>
+     	            <equal><b pos="1"/><lit v=" "/></equal>
+                    <or>
+     	              <equal><b pos="2"/><lit v=" "/></equal>
+     	              <equal><b pos="2"/><lit v=""/></equal>
+                    </or>
+                    <or>
+     	              <equal><b pos="3"/><lit v=" "/></equal>
+     	              <equal><b pos="3"/><lit v=""/></equal>
+                    </or>
+                  </and>
+                </test>
+                <out> <!-- ni ŝanĝas la vortordon kaj eventuale forigas blankojn -->
+                  <chunk>
+                    <clip pos="1" part="lem"/>
+                    <clip pos="1" part="tags"/>
+                    <lit v="{"/>
+                    <clip pos="2" part="content"/>
+                    <clip pos="3" part="content"/>
+                    <clip pos="4" part="content"/>
+                    <b/>
+                    <clip pos="1" part="content"/>
+                     <lit v="}"/>
+                  </chunk>
+                </out>
+              </when>
+              <otherwise>
+                <out> <!-- ni ĉion kunigas unugrupen, sed ne ŝanĝas la vortordon por eviti spaco-problemojn -->
+                  <chunk>
+                    <clip pos="1" part="lem"/>
+                    <clip pos="1" part="tags"/>
+                    <lit v="{"/>
+                    <clip pos="1" part="content"/>
+                    <b pos="1"/>
+                    <clip pos="2" part="content"/>
+                    <b pos="2"/>
+                    <clip pos="3" part="content"/>
+                    <b pos="3"/>
+                    <clip pos="4" part="content"/>
+                     <lit v="}"/>
+                  </chunk>
+                </out>
+              </otherwise>
+            </choose>
+          </when>
+          <otherwise>
+            <out> <!-- ni ne povas ĉion kunigi unugrupen, sed ja la SAdj-n kun siaj citiloj -->
+              <chunk>
+                <clip pos="1" part="whole"/>
+              </chunk>
+              <b pos="1"/>
+              <chunk>
+                <clip pos="3" part="lem"/>
+                <clip pos="3" part="tags"/>
+                <lit v="{"/>
+                <clip pos="2" part="content"/>
+                <b pos="2"/>
+                <clip pos="3" part="content"/>
+                <b pos="3"/>
+                <clip pos="4" part="content"/>
+                 <lit v="}"/>
+              </chunk>
+            </out>
+          </otherwise>
+        </choose>
       </action>
     </rule>
 

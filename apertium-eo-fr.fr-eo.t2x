@@ -9,7 +9,6 @@
 
     <def-cat n="SNSA">
       <cat-item tags="SN.*"/>
-      <cat-item tags="SNrelatiu.*"/>
       <cat-item tags="SA.*"/>
     </def-cat>
 
@@ -1532,7 +1531,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 
 <rule comment="REGLA: SN SNrelatiu SNobj SV (. l'enfant qui me parla -> la knabo kiu min parolis, relatiu = subjecte, EO))">
       <pattern>
-	<pattern-item n="SN"/>
+	<pattern-item n="SNSA"/>
 	<pattern-item n="SNrelatiu"/>
 	<pattern-item n="SNobj"/>
 	<pattern-item n="SV"/>
@@ -1570,7 +1569,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 
 <rule comment="REGLA: SN SNrelatiu SV SNdat SN (. l'enfant qui lui posa une question -> la knabo kiu faris al mi demandon, relatiu = subjecte)">
       <pattern>
-	<pattern-item n="SN"/>
+	<pattern-item n="SNSA"/>
 	<pattern-item n="SNrelatiu"/>
 	<pattern-item n="SV"/>
 	<pattern-item n="SNdat"/>
@@ -1616,7 +1615,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 
 <rule comment="REGLA: SN SNrelatiu SNobj SV SN (. el nen que em va donar el llibre -> la knabo kiu donis al mi la libron, relatiu = subjecte, EO))">
       <pattern>
-	<pattern-item n="SN"/>
+	<pattern-item n="SNSA"/>
 	<pattern-item n="SNrelatiu"/>
 	<pattern-item n="SNobj"/>
 	<pattern-item n="SV"/>
@@ -1683,7 +1682,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 
 <rule comment="REGLA: SN SNrelatiu SN SV (. el nen que ella va veure -> el kiu passa a acusatiu, relatiu = objecte, EO))">
       <pattern>
-	<pattern-item n="SN"/>
+	<pattern-item n="SNSA"/>
 	<pattern-item n="SNrelatiu"/>
 	<pattern-item n="SN"/>
 	<pattern-item n="SV"/>
@@ -1722,7 +1721,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 
 <rule comment="REGLA: SN SNrelatiu SV SN (. el nen que va veure la casa; els nens que va veure la nena, relatiu = subjecte quan SN1 concorda amb verb, relatiu = objecte quan SN1 no concorda amb verb, EO))">
       <pattern>
-	<pattern-item n="SN"/>
+	<pattern-item n="SNSA"/>
 	<pattern-item n="SNrelatiu"/>
 	<pattern-item n="SV"/>
 	<pattern-item n="SNacc"/>
@@ -1761,7 +1760,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 
 <rule comment="REGLA: SN SNrelatiu SV SN and SN (. el nen que va veure la casa; els nens que va veure la nena -> EO))">
       <pattern>
-	<pattern-item n="SN"/>
+	<pattern-item n="SNSA"/>
 	<pattern-item n="SNrelatiu"/>
 	<pattern-item n="SV"/>
 	<pattern-item n="SN"/>
@@ -1852,7 +1851,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 
 <rule comment="REGLA: SN SNrel ( deux enseignants (dont une femme) )">
       <pattern>
-	<pattern-item n="SN"/>
+	<pattern-item n="SNSA"/>
 	<pattern-item n="SNrelatiu"/>
       </pattern>
       <action>
@@ -1874,7 +1873,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 
 <rule comment="REGLA: SN, SNrel ( deux enseignants (dont une femme) )">
       <pattern>
-	<pattern-item n="SN"/>
+	<pattern-item n="SNSA"/>
 	<pattern-item n="cm"/>
 	<pattern-item n="SNrelatiu"/>
       </pattern>
