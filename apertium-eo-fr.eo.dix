@@ -256,6 +256,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 
 <pardef n="separa">
   <e>       <re>[.\?;:!]</re><p><l></l><r><s n="sent"/></r></p></e>
+  <e>       <p><l>...</l><r>...<s n="sent"/></r></p></e> <!-- por eviti aŭtomatan majuskligon post tripunkto -->
 </pardef>
 
 <pardef n="separ">
@@ -888,6 +889,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Abate">           <i>Abate</i><par n="Smith__np"/></e>
 <e lm="abatejo">         <i>abatej</i><par n="o__n"/></e>
 <e lm="ABB">             <i>ABB</i><par n="Wikipedia__np"/></e>
+<e lm="Crédit Lyonnais">             <i>Crédit Lyonnais</i><par n="Wikipedia__np"/></e>
 <e lm="Abbas">           <i>Abbas</i><par n="Mark__np"/></e>
 <e lm="Abbas">           <i>Abbas</i><par n="Smith__np"/></e>
 <e lm="Abbeville">       <i>Abbeville</i><par n="Barcelona__np"/></e>
@@ -2047,6 +2049,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Alide">           <i>Alide</i><par n="Marie__np"/></e>
 <e lm="Alidia">          <i>Alidia</i><par n="Marie__np"/></e>
 <e lm="alie">            <i>alie</i><par n="after__cnjadv"/></e>
+<e lm="kio ajn">            <i>kio<b/>ajn</i><par n="after__cnjadv"/></e>
+<e lm="ĉiel ajn">            <i>ĉiel<b/>ajn</i><par n="after__cnjadv"/></e>
 <e lm="Alie">            <i>Alie</i><par n="Smith__np"/></e>
 <e lm="aliflanke">       <i>aliflank</i><par n="e__adv"/></e>
 <e lm="aliformi">        <i>aliform</i><par n="i__vblex"/></e>
@@ -7244,8 +7248,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Christelle">      <i>Christelle</i><par n="Marie__np"/></e>
 <e lm="Christensen">     <i>Christensen</i><par n="Smith__np"/></e>
 <e lm="Christian">       <i>Christian</i><par n="Mark__np"/></e>
-<!--    <e lm="Christian"><i>Christian</i><par n="Marie__np"/></e> -->
-<e lm="Christian">       <i>Christian</i><par n="Marie__np"/></e>
+<e lm="Christiane">       <i>Christiane</i><par n="Marie__np"/></e>
 <e lm="Christian Dior">  <i>Christian<b/>Dior</i><par n="Wikipedia__np"/></e>
 <e lm="Christiana">      <i>Christiana</i><par n="Marie__np"/></e>
 <e lm="Christie">        <i>Christie</i><par n="Smith__np"/></e>
@@ -31648,11 +31651,13 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Pierino">         <i>Pierino</i><par n="Mark__np"/></e>
 <e lm="Piero">           <i>Piero</i><par n="Mark__np"/></e>
 <e lm="Pierre">          <i>Pierre</i><par n="Mark__np"/></e>
+<e r="RL" lm="A">          <i>A</i><par n="Mark__np"/></e>
 <e lm="Pierre">          <i>Pierre</i><par n="Smith__np"/></e>
 <e lm="Pierre-Olivier" a="sans accents"><i>Pierre-Olivier</i><par n="Mark__np"/></e>
 <e lm="Pierre De Boissieu"><i>Pierre<b/>De<b/>Boissieu</i><par n="Mark__np"/></e>
 <e lm="Pierrefitte-sur-Seine"><i>Pierrefitte-sur-Seine</i><par n="Barcelona__np"/></e>
 <e lm="Pierrelouis">     <i>Pierrelouis</i><par n="Smith__np"/></e>
+<e lm="Réveillé">     <i>Réveillé</i><par n="Smith__np"/></e>
 <e lm="Piers">           <i>Piers</i><par n="Mark__np"/></e>
 <e lm="Pietracupa">      <i>Pietracupa</i><par n="Smith__np"/></e>
 <e lm="Pietrantonio">    <i>Pietrantonio</i><par n="Smith__np"/></e>
@@ -32687,6 +32692,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Precious">        <i>Precious</i><par n="Marie__np"/></e>
 <e lm="precipa">         <i>precip</i><par n="a__adj"/></e>
 <e lm="precipe">         <i>precip</i><par n="e__adv"/></e>
+<e lm="precipe ne">         <i>precipe<b/>ne</i><par n="jam__adv"/></e>
 <e lm="preciza">         <i>preciz</i><par n="a__adj"/></e>
 <e lm="precize">         <i>preciz</i><par n="e__adv"/></e>
 <e lm="precizeco">       <i>precizec</i><par n="o__n"/></e>
@@ -39883,6 +39889,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Tideo">           <i>Tideo</i><par n="Mark__np"/></e>
 <e r="RL" lm="tie">      <p><l>tie</l>       <r>tie<s n="adv"/><s n="nom"/></r></p></e>
 <e r="RL" lm="tie">      <p><l>tie</l>       <r>tie<s n="adv"/><s n="acc"/></r></p></e>
+<e r="RL" lm="tie">      <p><l>tie</l>       <r>tie<s n="adv"/><s n="sg"/></r></p></e> <!-- strangaĵo ligita al franca 'y' -->
+<e r="RL" lm="tie">      <p><l>tie</l>       <r>tie<s n="adv"/><s n="pl"/></r></p></e> <!-- strangaĵo ligita al franca 'y' -->
 <e lm="tiea">            <i>tie</i><par n="a__adj"/></e>
 <e lm="tie">             <i>tie</i><par n="jam__adv"/></e>
 <e lm="tie ĉi">          <i>tie<b/>ĉi</i><par n="jam__adv"/></e>

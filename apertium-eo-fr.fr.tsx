@@ -238,6 +238,11 @@
   <def-label name="PUNCT" closed="true"><tags-item tags="sent"/></def-label>
   <def-label name="GUIO" closed="true"><tags-item tags="guio"/></def-label>
   <def-label name="COMA" closed="true"><tags-item tags="cm"/></def-label>
+  <def-label name="PARESQ" closed="true"><tags-item tags="lpar"/></def-label>
+  <def-label name="PARDRET" closed="true"><tags-item tags="rpar"/></def-label>
+  <def-label name="COMESQ" closed="true"><tags-item tags="lcit"/></def-label>
+  <def-label name="COMDRET" closed="true"><tags-item tags="rcit"/></def-label>
+  <def-label name="PREGESQ" closed="true"><tags-item tags="lquest"/></def-label>
 
   <def-mult name="PREPDET" closed="true">
     <sequence>
