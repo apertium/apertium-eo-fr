@@ -518,7 +518,6 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	    <clip pos="1" part="chcontent"/>
 	  </chunk>
 	  <b pos="1"/>
-
 	  <chunk>
 	    <get-case-from pos="2">
 	      <lit v="al"/>
@@ -588,7 +587,6 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	    <clip pos="1" part="chcontent"/>
 	  </chunk>
 	  <b pos="1"/>
-
 	  <chunk>
 	    <get-case-from pos="2">
 	      <lit v="al"/>
@@ -607,13 +605,13 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
             <clip pos="2" part="tags"/>
 	    <clip pos="2" part="chcontent"/>
 	  </chunk>
-	  <b pos="1"/>
+	  <b pos="2"/>
 	  <chunk>
             <clip pos="3" part="lem"/>
             <clip pos="3" part="tags"/>
 	    <clip pos="3" part="chcontent"/>
 	  </chunk>
-	  <b pos="2"/>
+	  <b pos="3"/>
 	  <chunk>
             <clip pos="4" part="lem"/>
             <clip pos="4" part="tags"/>
@@ -649,7 +647,12 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	    <clip pos="1" part="chcontent"/>
 	  </chunk>
 	  <b pos="1"/>
-
+	  <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+	    <clip pos="2" part="chcontent"/>
+	  </chunk>
+	  <b pos="2"/>
 	  <chunk>
 	    <get-case-from pos="3">
 	      <lit v="al"/>
@@ -668,13 +671,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
             <clip pos="3" part="tags"/>
 	    <clip pos="3" part="chcontent"/>
 	  </chunk>
-	  <b pos="1"/>
-	  <chunk>
-            <clip pos="2" part="lem"/>
-            <clip pos="2" part="tags"/>
-	    <clip pos="2" part="chcontent"/>
-	  </chunk>
-	  <b pos="2"/>
+	  <b pos="3"/>
 	  <chunk>
             <clip pos="4" part="lem"/>
             <clip pos="4" part="tags"/>
@@ -750,7 +747,6 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	    </let>
 
 	<out>
-
 	  <chunk>
 	    <get-case-from pos="1">
 	      <lit v="al"/>
@@ -808,18 +804,13 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
             <clip pos="1" part="whole"/>
           </chunk>
           <b pos="1"/>
-        </out>
-
-
-	<out>
-
 	  <chunk>
-	    <get-case-from pos="3">
+	    <get-case-from pos="2">
 	      <lit v="al"/>
 	    </get-case-from>
 	    <lit-tag v="pr"/>
 	    <lit v="{^"/>
-	    <get-case-from pos="3">
+	    <get-case-from pos="2">
 	      <lit v="al"/>
 	    </get-case-from>
 	    <lit-tag v="pr"/>
@@ -866,7 +857,12 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	    </let>
 
 	<out>
-
+	  <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="tags"/>
+	    <clip pos="1" part="chcontent"/>
+	  </chunk>
+	  <b pos="1"/>
 	  <chunk>
 	    <get-case-from pos="2">
 	      <lit v="al"/>
@@ -884,12 +880,6 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
             <clip pos="2" part="lem"/>
             <clip pos="2" part="tags"/>
 	    <clip pos="2" part="chcontent"/>
-	  </chunk>
-	  <b pos="1"/>
-	  <chunk>
-            <clip pos="1" part="lem"/>
-            <clip pos="1" part="tags"/>
-	    <clip pos="1" part="chcontent"/>
 	  </chunk>
 	  <b pos="2"/>
 	  <chunk>
@@ -923,18 +913,19 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
             <clip pos="1" part="whole"/>
           </chunk>
           <b pos="1"/>
-        </out>
-
-
-	<out>
-
 	  <chunk>
-	    <get-case-from pos="2">
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+	    <clip pos="2" part="chcontent"/>
+	  </chunk>
+	  <b pos="2"/>
+	  <chunk>
+	    <get-case-from pos="3">
 	      <lit v="al"/>
 	    </get-case-from>
 	    <lit-tag v="pr"/>
 	    <lit v="{^"/>
-	    <get-case-from pos="2">
+	    <get-case-from pos="3">
 	      <lit v="al"/>
 	    </get-case-from>
 	    <lit-tag v="pr"/>
@@ -945,12 +936,6 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
             <clip pos="3" part="lem"/>
             <clip pos="3" part="tags"/>
 	    <clip pos="3" part="chcontent"/>
-	  </chunk>
-	  <b pos="2"/>
-	  <chunk>
-            <clip pos="2" part="lem"/>
-            <clip pos="2" part="tags"/>
-	    <clip pos="2" part="chcontent"/>
 	  </chunk>
 	  <b pos="3"/>
 	  <chunk>
@@ -990,13 +975,14 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
             <clip pos="1" part="whole"/>
           </chunk>
           <b pos="1"/>
-        </out>
-
-
-	<out>
-
 	  <chunk>
-	    <get-case-from pos="2">
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+	    <clip pos="2" part="chcontent"/>
+	  </chunk>
+	  <b pos="2"/>
+	  <chunk>
+	    <get-case-from pos="3">
 	      <lit v="al"/>
 	    </get-case-from>
 	    <lit-tag v="pr"/>
@@ -1007,12 +993,6 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
             <clip pos="3" part="lem"/>
             <clip pos="3" part="tags"/>
 	    <clip pos="3" part="chcontent"/>
-	  </chunk>
-	  <b pos="2"/>
-	  <chunk>
-            <clip pos="2" part="lem"/>
-            <clip pos="2" part="tags"/>
-	    <clip pos="2" part="chcontent"/>
 	  </chunk>
 	  <b pos="3"/>
 	  <chunk>
@@ -1030,10 +1010,10 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
             <clip pos="6" part="tags"/>
             <clip pos="6" part="chcontent"/>
           </chunk>
-
 	</out>
       </action>
 </rule>
+
 
 <rule comment="REGLA: SV SN and SN (EO per l'acusatiu dels SN objecte amb changecase=nom)">
       <pattern>
@@ -1069,7 +1049,6 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	  <chunk>
             <clip pos="3" part="whole"/>
 	  </chunk>
-
 	  <b pos="3"/>
 	  <chunk>
             <clip pos="4" part="lem"/>
@@ -1502,9 +1481,6 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
             <clip pos="1" part="whole"/>
           </chunk>
           <b pos="1"/>
-        </out>
-
-	<out>
 	  <chunk>
             <clip pos="2" part="lem"/>
             <clip pos="2" part="tags"/>

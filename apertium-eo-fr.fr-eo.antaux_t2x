@@ -26,12 +26,20 @@
       <cat-item lemma="num" tags="SN.*"/>
     </def-cat>
 
+    <def-cat n="prn_obj">
+      <cat-item tags="SN.obj.*"/>
+    </def-cat>
+
     <def-cat n="det">
       <cat-item tags="DET.*"/>
     </def-cat>
 
     <def-cat n="SAdj"> <!-- adjektiva sintagmo -->
       <cat-item tags="SA.*"/>
+    </def-cat>
+
+    <def-cat n="pr">
+      <cat-item tags="pr"/>
     </def-cat>
 
     <def-cat n="adv">
@@ -42,6 +50,10 @@
     <def-cat n="SV">
       <cat-item tags="SV"/>
       <cat-item tags="SV.*"/>
+    </def-cat>
+
+    <def-cat n="inf">
+      <cat-item tags="SV.vblex.inf"/>
     </def-cat>
 
     <def-cat n="le_prn">
@@ -103,11 +115,6 @@
   </section-def-cats>
 
   <section-def-attrs>
-    <def-attr n="a_chunk">
-      <attr-item tags="SN"/>
-      <attr-item tags="SV"/>
-    </def-attr>
-
     <def-attr n="a_cas">
       <attr-item tags="nom"/>
       <attr-item tags="acc"/>
@@ -118,6 +125,16 @@
       <attr-item tags="pl"/>
       <attr-item tags="sp"/>
       <attr-item tags="ND"/>
+    </def-attr>
+
+    <def-attr n="tipus_prn">
+      <attr-item tags="subj"/>
+      <attr-item tags="obj"/>
+      <attr-item tags="dat"/>
+      <attr-item tags="tn"/>
+      <attr-item tags="itg"/>
+      <attr-item tags="pos"/>
+      <attr-item tags="ref"/>
     </def-attr>
 
   </section-def-attrs>
@@ -886,6 +903,16 @@
                 <not><equal><clip pos="3" part="lem"/><lit v="prpers"/></equal></not>
               </and>
             </or>
+            <or>
+              <and>
+                <equal><clip pos="1" part="lem"/><lit v="prn_nosubj"/></equal>
+                <equal><clip pos="3" part="lem"/><lit v="prn_nosubj"/></equal>
+              </and>
+              <and>
+                <not><equal><clip pos="1" part="lem"/><lit v="prn_nosubj"/></equal></not>
+                <not><equal><clip pos="3" part="lem"/><lit v="prn_nosubj"/></equal></not>
+              </and>
+            </or>
           </and>
         </test>
         <out>
@@ -947,6 +974,16 @@
               <and>
                 <not><equal><clip pos="1" part="lem"/><lit v="prpers"/></equal></not>
                 <not><equal><clip pos="5" part="lem"/><lit v="prpers"/></equal></not>
+              </and>
+            </or>
+            <or>
+              <and>
+                <equal><clip pos="1" part="lem"/><lit v="prn_nosubj"/></equal>
+                <equal><clip pos="3" part="lem"/><lit v="prn_nosubj"/></equal>
+              </and>
+              <and>
+                <not><equal><clip pos="1" part="lem"/><lit v="prn_nosubj"/></equal></not>
+                <not><equal><clip pos="3" part="lem"/><lit v="prn_nosubj"/></equal></not>
               </and>
             </or>
           </and>
@@ -1024,6 +1061,16 @@
               <and>
                 <not><equal><clip pos="1" part="lem"/><lit v="prpers"/></equal></not>
                 <not><equal><clip pos="6" part="lem"/><lit v="prpers"/></equal></not>
+              </and>
+            </or>
+            <or>
+              <and>
+                <equal><clip pos="1" part="lem"/><lit v="prn_nosubj"/></equal>
+                <equal><clip pos="3" part="lem"/><lit v="prn_nosubj"/></equal>
+              </and>
+              <and>
+                <not><equal><clip pos="1" part="lem"/><lit v="prn_nosubj"/></equal></not>
+                <not><equal><clip pos="3" part="lem"/><lit v="prn_nosubj"/></equal></not>
               </and>
             </or>
           </and>
@@ -1427,6 +1474,53 @@
                 <b pos="4"/>
             <clip pos="5" part="content"/>
              <lit v="}"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: PREP PRNobj -  PREP PRNsubj: nominativo post prepozicio">
+      <pattern>
+        <pattern-item n="pr"/>
+        <pattern-item n="prn_obj"/>
+      </pattern>
+      <action>
+        <let>
+          <clip pos="2" part="tipus_prn"/>
+          <lit-tag v="subj"/>
+        </let>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: PREP PRNobj INF -   senŝanĝe (por eviti ŝanĝojn en aliaj reguloj) ">
+      <pattern>
+        <pattern-item n="pr"/>
+        <pattern-item n="prn_obj"/>
+        <pattern-item n="inf"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="2"/>
+          <chunk>
+            <clip pos="3" part="whole"/>
           </chunk>
         </out>
       </action>

@@ -73,6 +73,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
     <sdef n="ger" /> 
     <sdef n="gerpast" /> 
     <sdef n="pp" /> 
+    <sdef n="ppres" /> 
     <sdef n="pp2" /> 
     <sdef n="pp3" /> 
     <sdef n="pri" /> 
@@ -432,6 +433,12 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e>       <p><l>itajn</l>     <r>i<s n="vblex"/><s n="pp"/><s n="pl"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>ita</l>       <r>i<s n="vblex"/><s n="pp"/><s n="sp"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>itan</l>      <r>i<s n="vblex"/><s n="pp"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e>       <p><l>ata</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e>       <p><l>ataj</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="pl"/><s n="nom"/></r></p></e>
+  <e>       <p><l>atan</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e>       <p><l>atajn</l>     <r>i<s n="vblex"/><s n="ppres"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>ata</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>atan</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="sp"/><s n="acc"/></r></p></e>
   <e>       <p><l>onta</l>      <r>i<s n="vblex"/><s n="pp2"/><s n="sg"/></r></p></e>
   <e>       <p><l>ontaj</l>     <r>i<s n="vblex"/><s n="pp2"/><s n="pl"/></r></p></e>
   <e>       <p><l>inta</l>      <r>i<s n="vblex"/><s n="pp3"/></r></p></e>
@@ -443,6 +450,9 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e r="RL"><p><l>ita</l>       <r>i<s n="vblex"/><s n="pp"/><s n="sg"/></r></p></e>
   <e r="RL"><p><l>itaj</l>      <r>i<s n="vblex"/><s n="pp"/><s n="pl"/></r></p></e>
   <e r="RL"><p><l>ita</l>       <r>i<s n="vblex"/><s n="pp"/><s n="sp"/></r></p></e>
+  <e r="RL"><p><l>ata</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l>ataj</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="pl"/></r></p></e>
+  <e r="RL"><p><l>ata</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sp"/></r></p></e>
   <e r="RL"><p><l>ite</l>       <r>i<s n="adv"/></r></p></e>
 </pardef>
 
@@ -2049,12 +2059,16 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Alide">           <i>Alide</i><par n="Marie__np"/></e>
 <e lm="Alidia">          <i>Alidia</i><par n="Marie__np"/></e>
 <e lm="alie">            <i>alie</i><par n="after__cnjadv"/></e>
+<e lm="se necese">            <i>se<b/>necese</i><par n="after__cnjadv"/></e>
 <e lm="kio ajn">            <i>kio<b/>ajn</i><par n="after__cnjadv"/></e>
 <e lm="ĉiel ajn">            <i>ĉiel<b/>ajn</i><par n="after__cnjadv"/></e>
 <e lm="Alie">            <i>Alie</i><par n="Smith__np"/></e>
 <e lm="aliflanke">       <i>aliflank</i><par n="e__adv"/></e>
 <e lm="aliformi">        <i>aliform</i><par n="i__vblex"/></e>
 <e lm="aligatoro">       <i>aligator</i><par n="o__n"/></e>
+<e lm="boksisto">       <i>boksist</i><par n="o__n"/></e>
+<e lm="FNAC">       <i>FNAC</i><par n="Wikipedia__np"/></e>
+<e lm="Décathlon">       <i>Décathlon</i><par n="Wikipedia__np"/></e>
 <e lm="aligatoredo">     <i>aligatored</i><par n="o__n"/></e>
 <e lm="aliigi">          <i>aliig</i><par n="i__vblex"/></e>
 <e lm="Alijah">          <i>Alijah</i><par n="Mark__np"/></e>
@@ -18543,6 +18557,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Jasper">          <i>Jasper</i><par n="Mark__np"/></e>
 <e lm="Jaume">           <i>Jaume</i><par n="Mark__np"/></e>
 <e lm="Jaurès">          <i>Jaurès</i><par n="Smith__np"/></e>
+<e lm="Joffre">          <i>Joffre</i><par n="Smith__np"/></e>
 <e lm="Jauvin">          <i>Jauvin</i><par n="Smith__np"/></e>
 <e lm="java">            <i>jav</i><par n="a__adj"/></e>
 <e lm="Javo">            <i>Jav</i><par n="Barcelon/o__np"/></e>
@@ -44406,6 +44421,54 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="tajlori">            <i>tajlor</i><par n="i__vblex"/></e>
 <e lm="Zurich">            <i>Zurich</i><par n="Wikipedia__np"/></e>
 
+<e lm="danciga">            <i>dancig</i><par n="a__adj"/></e>
+<e lm="deĵora">            <i>deĵor</i><par n="a__adj"/></e>
+<e lm="dekatlono">            <i>dekatlon</i><par n="o__n"/></e>
+<e lm="engaĝiga">            <i>engaĝig</i><par n="a__adj"/></e>
+<e lm="franĉ-kontea">            <i>franĉ-konte</i><par n="a__adj"/></e>
+<e lm="franĉ-konteano">            <i>franĉ-kontean</i><par n="ino__n"/></e>
+<e lm="gvatejo">            <i>gvatej</i><par n="o__n"/></e>
+<e lm="heptatlono">            <i>heptatlon</i><par n="o__n"/></e>
+<e lm="horizontaleco">            <i>horizontalec</i><par n="o__n"/></e>
+<e lm="kampa">            <i>kamp</i><par n="a__adj"/></e>
+<e lm="konkerinto">            <i>konkerint</i><par n="ino__n"/></e>
+<e lm="kontrabasisto">            <i>kontrabasist</i><par n="ino__n"/></e>
+<e lm="konvinkito">            <i>konvinkit</i><par n="ino__n"/></e>
+<e lm="kronometrado">            <i>kronometrad</i><par n="o__n"/></e>
+<e lm="kronometri">            <i>kronometr</i><par n="i__vblex"/></e>
+<e lm="laborpartiano">            <i>laborpartian</i><par n="ino__n"/></e>
+<e lm="malblokado">            <i>malblokad</i><par n="o__n"/></e>
+<e lm="malbloki">            <i>malblok</i><par n="i__vblex"/></e>
+<e lm="malharmonio">            <i>malharmoni</i><par n="o__n"/></e>
+<e lm="malpuro">            <i>malpur</i><par n="o__n"/></e>
+<e lm="monaĥismo">            <i>monaĥism</i><par n="o__n"/></e>
+<e lm="nekapablo">            <i>nekapabl</i><par n="o__n"/></e>
+<e lm="nesufiĉo">            <i>nesufiĉ</i><par n="o__n"/></e>
+<e lm="nevenkito">            <i>nevenkit</i><par n="ino__n"/></e>
+<e lm="postmorte">            <i>postmort</i><par n="e__adv"/></e>
+<e lm="profesiigi">            <i>profesiig</i><par n="i__vblex"/></e>
+<e lm="profesiiĝo">            <i>profesiiĝ</i><par n="o__n"/></e>
+<e lm="reĝustigo">            <i>reĝustig</i><par n="o__n"/></e>
+<e lm="rekomenco">            <i>rekomenc</i><par n="o__n"/></e>
+<e lm="rekomerci">            <i>rekomerc</i><par n="i__vblex"/></e>
+<e lm="reloĝigi">            <i>reloĝig</i><par n="i__vblex"/></e>
+<e lm="satana">            <i>satan</i><par n="a__adj"/></e>
+<e lm="sentime">            <i>sentim</i><par n="e__adv"/></e>
+<e lm="sentimeco">            <i>sentimec</i><par n="o__n"/></e>
+<e lm="sentimulo">            <i>sentimul</i><par n="ino__n"/></e>
+<e lm="Seulo">            <i>Seul</i><par n="Barcelon/o__np"/></e>
+<e lm="strasburga">            <i>strasburg</i><par n="a__adj"/></e>
+<e lm="strasburgano">            <i>strasburgan</i><par n="ino__n"/></e>
+<e lm="sufiĉeco">            <i>sufiĉec</i><par n="o__n"/></e>
+<e lm="supersateco">            <i>supersatec</i><par n="o__n"/></e>
+<e lm="tutamplekse">            <i>tutampleks</i><par n="e__adv"/></e>
+<e lm="vaporiĝo">            <i>vaporiĝ</i><par n="o__n"/></e>
+<e lm="venkita">            <i>venkit</i><par n="a__adj"/></e>
+<e lm="venkito">            <i>venkit</i><par n="ino__n"/></e>
+<e lm="vertikaleco">            <i>vertikalec</i><par n="o__n"/></e>
+<e lm="vigliga">            <i>viglig</i><par n="a__adj"/></e>
+<e lm="violonĉelisto">            <i>violonĉelist</i><par n="ino__n"/></e>
+<e lm="violonisto">            <i>violonist</i><par n="ino__n"/></e>
 
 <e lm="mia tuta"><p><l>mia<b/>tuta</l><r>mia<b/>tuta<s n="det"/><s n="pos"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="mia tuta"><p><l>mian<b/>tutan</l><r>mia<b/>tuta<s n="det"/><s n="pos"/><s n="sg"/><s n="acc"/></r></p></e>
