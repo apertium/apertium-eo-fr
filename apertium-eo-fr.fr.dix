@@ -175,10 +175,24 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
   <e r="LR"><p><l>2ndes</l>     <r>2e<s n="num"/><s n="ord"/><s n="f"/><s n="pl"/></r></p></e>
 </pardef>
 <pardef n="urls">
+    <e>
+      <re>(((www.)|(http://))[a-z0-9\-]+([.][a-z]+)+(/[a-z0-9_]+)*([.][a-z]+)*)</re>
+      <p>
+        <l/>
+        <r><s n="num"/></r>
+      </p>
+    </e>
+<!--
   <e>       <re>(((www.)|(http://))[a-z0-9\-]+([.][a-z]+)+(/[a-z0-9_]+)*([.][a-z]+)*)</re><p><l></l><r><s n="np"/><s n="loc"/><s n="mf"/><s n="sg"/></r></p></e>
+<e>       <re>(((www.)|(http://))[a-z0-9\-]+([.][a-z]+)+(/[a-z0-9_]+)*([.][a-z]+)*)</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
+-->
+<!--
+  <e>       <re>(((www.)|(http://)|(https://))[a-z0-9\-]+([.][a-z]+)+(/[a-z0-9_]+)*([.][a-z]+)*)</re><p><l></l><r><s n="np"/><s n="loc"/><s n="mf"/><s n="sg"/></r></p></e>
+  <e>       <re>(((www.)|(http:\\\\)|(https:\\\\))[a-z0-9\-]+([.][a-z]+)+(\\[a-z0-9_]+)*([.][a-z]+)*)</re><p><l></l><r><s n="np"/><s n="loc"/><s n="mf"/><s n="sg"/></r></p></e>
+-->
 </pardef>
 <pardef n="emails">
-  <e>       <re>[a-zA-Z0-9._\-]+@[a-zA-Z0-9._\-]+</re><p><l></l><r><s n="np"/><s n="loc"/><s n="mf"/><s n="sg"/></r></p></e>
+  <e>       <re>[a-z0-9._\-]+@[a-z0-9._\-]+</re><p><l></l><r><s n="np"/><s n="loc"/><s n="mf"/><s n="sg"/></r></p></e>
 </pardef>
 <pardef n="det2loc__np">
   <e r="LR"><p><l></l>          <r></r></p></e>
@@ -8599,9 +8613,13 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="Alès">            <i>Alès</i><par n="Andorre__np"/></e>
 <e lm="aléa">            <i>aléa</i><par n="accessoire__n"/></e>
 <e lm="aléatoire">       <i>aléatoire</i><par n="académique__adjadv"/></e>
-<e lm="alémanique">      <i>alémanique</i><par n="abaissant__adj"/></e>
+<e lm="alémanique">      <i>alémanique</i><par n="académique__adj"/></e>
+<e r="LR" lm="alémanique">     <p><l>alamanique</l>      <r>alémanique</r></p><par n="académique__adj"/></e>
+<e lm="Alémanique">      <i>Alémanique</i><par n="artiste__n"/></e>
+<e r="LR" lm="Alémanique">     <p><l>Alamanique</l>      <r>Alémanique</r></p><par n="artiste__n"/></e>
 <e lm="Aléoute">         <i>Aléoute</i><par n="artiste__n"/></e>
 <e lm="aléoute">         <i>aléoute</i><par n="académique__adj"/></e>
+<e lm="fiançalles">         <i>fiançalles</i><par n="vacances__n"/></e>
 <e lm="aléoutien">       <i>aléoutien</i><par n="ancien__adj"/></e>
 <e lm="Aléoutien">       <i>Aléoutien</i><par n="ancien__n"/></e>
 <e lm="alépine" a="revo"><i>alépine</i><par n="abeille__n"/></e>
@@ -39141,6 +39159,14 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="romanche">        <i>romanche</i><par n="accessoire__n"/></e>
 <e lm="romancier">       <i>romanci</i><par n="bouch/er__n"/></e>
 <e lm="romand">          <i>romand</i><par n="abaissant__adj"/></e>
+<e lm="Romand">          <i>Romand</i><par n="africain__n"/></e>
+<e lm="aléman">      <i>aléman</i><par n="abaissant__adj"/></e>
+<e r="LR" lm="aléman">     <p><l>alaman</l>      <r>aléman</r></p><par n="abaissant__adj"/></e>
+<e lm="Aléman">      <i>Aléman</i><par n="abaissant__adj"/></e>
+<e r="LR" lm="Aléman">     <p><l>Alaman</l>      <r>Aléman</r></p><par n="africain__n"/></e>
+<e lm="Alaman">          <i>Alaman</i><par n="africain__n"/></e>
+<e lm="Romandie">          <i>Romandie</i><par n="Andorre__np"/></e>
+<e lm="Alémanie">          <i>Alémanie</i><par n="Andorre__np"/></e>
 <e lm="Romane" a="sans accents"><i>Romane</i><par n="Marie__np"/></e>
 <e lm="Romanela">        <i>Romanela</i><par n="Marie__np"/></e>
 <e lm="Romanella">       <i>Romanella</i><par n="Marie__np"/></e>
@@ -44835,6 +44861,8 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="venimeux">        <i>venimeu</i><par n="affectueu/x__adjadv"/></e>
 <e lm="venin">           <i>venin</i><par n="accessoire__n"/></e>
 <e lm="Venise">          <i>Venise</i><par n="Andorre__np"/></e>
+<e lm="Vénétie">          <i>Vénétie</i><par n="Andorre__np"/></e>
+<e lm="Frioul">          <i>Frioul</i><par n="Andorre__np"/></e>
 <e lm="Venne">           <i>Venne</i><par n="Smith__np"/></e>
 <e lm="vent">            <i>vent</i><par n="accessoire__n"/></e>
 <e lm="vent de tempête" a="webform"><i>vent</i><par n="accessoire__n"/><p><l><b/>de<b/>tempête</l><r><g><b/>de<b/>tempête</g></r></p></e>
@@ -45490,6 +45518,8 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="vélodrome" a="webform"><i>vélodrome</i><par n="accessoire__n"/></e>
 <e lm="vénérer">         <i>vén</i><par n="accél/é[R]er__vblex__r"/></e>
 <e lm="Vénissieux">      <i>Vénissieux</i><par n="Andorre__np"/></e>
+<e lm="frioulan">        <i>frioulan</i><par n="abaissant__adj"/></e>
+<e lm="Frioulan">        <i>Frioulan</i><par n="africain__n"/></e>
 <e lm="vénitien">        <i>vénitien</i><par n="ancien__adj"/></e>
 <e lm="Vénitien">        <i>Vénitien</i><par n="ancien__n"/></e>
 <e lm="Vénus">           <i>Vénus</i><par n="Andorre__np"/></e>
@@ -46845,6 +46875,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="équarrir">        <i>équarr</i><par n="about/[]ir__vblex"/></e>
 <e lm="Équateur">        <i>Équateur</i><par n="Andorre__np"/></e>
 <e lm="équateur" a="eleka"><i>équateur</i><par n="accessoire__n"/></e>
+<e lm="épuisement"><i>épuisement</i><par n="accessoire__n"/></e>
 <e lm="équation" a="webform"><i>équation</i><par n="abeille__n"/></e>
 <e lm="équation différentielle"><p><l>équation<b/>différentielle</l><r>équation<b/>différentielle<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
 <e lm="équation intégrale"><p><l>équation<b/>intégrale</l><r>équation<b/>intégrale<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
@@ -48140,6 +48171,7 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e r="LR" lm="équanimité" a="revo"><p><l>Equanimité</l><r>Équanimité</r></p><par n="abeille__n"/></e>
 <e r="LR" lm="équarrir"> <p><l>Equarr</l>    <r>Équarr</r></p><par n="about/[]ir__vblex"/></e>
 <e r="LR" lm="équateur"> <p><l>Equateur</l>  <r>Équateur</r></p><par n="accessoire__n"/></e>
+<e r="LR" lm="épuisement"> <p><l>Epuisement</l>  <r>Épuisement</r></p><par n="accessoire__n"/></e>
 <e r="LR" lm="équation"> <p><l>Equation</l>  <r>Équation</r></p><par n="abeille__n"/></e>
 <e r="LR" lm="équation différentielle"><p><l>Equation<b/>différentielle</l><r>Équation<b/>différentielle<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
 <e r="LR" lm="équation intégrale"><p><l>Equation<b/>intégrale</l><r>Équation<b/>intégrale<s n="n"/><s n="f"/><s n="sg"/></r></p></e>

@@ -800,10 +800,17 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e r="LR"><p><l>al<b/>oni</l> <r>prpers<s n="prn"/><s n="dat"/><s n="p3"/><s n="mf"/><s n="sg"/></r></p></e>
 </pardef>
 <pardef n="urls">
+    <e>
+      <re>(((www.)|(http://))[a-z0-9\-]+([.][a-z]+)+(/[a-z0-9_]+)*([.][a-z]+)*)</re>
+      <p>
+        <l/>
+        <r><s n="num"/></r>
+      </p>
+    </e>
   <e>       <re>(((www.)|(http://))[a-z0-9\-]+([.][a-z]+)+(/[a-z0-9_]+)*([.][a-z]+)*)</re><p><l></l><r><s n="np"/><s n="loc"/><s n="sg"/></r></p></e>
 </pardef>
 <pardef n="emails">
-  <e>       <re>[a-zA-Z0-9._\-]+@[a-zA-Z0-9._\-]+</re><p><l></l><r><s n="np"/><s n="loc"/><s n="mf"/><s n="sg"/></r></p></e>
+  <e>       <re>[a-z0-9._\-]+@[a-z0-9._\-]+</re><p><l></l><r><s n="np"/><s n="loc"/><s n="mf"/><s n="sg"/></r></p></e>
 </pardef>
   </pardefs>
 

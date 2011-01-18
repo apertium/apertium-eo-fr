@@ -217,9 +217,14 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <re>[0-9]+([.,][0-9]+)*%</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
 <e>       <re>[0-9]+([.,][0-9]+)*</re><p><l><b/>fojojn<s n="adv"/></l><r><b/>fois<s n="adv"/></r></p></e>
 <!--
-<e>       <re>[a-zA-Z0-9._\-]+@[a-zA-Z0-9._\-]+</re><p><l><s n="np"/></l><r><s n="np"/></r></p></e>
+<e>       <re>[a-z0-9._\-]+@[a-z0-9._\-]+</re><p><l><s n="np"/></l><r><s n="np"/></r></p></e>
 -->
+<e>       <re>(((www.)|(http://))[a-z0-9\-]+([.][a-z]+)+(/[a-z0-9_]+)*([.][a-z]+)*)</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
 <e>       <re>(((www.)|(http://))[a-z0-9\-]+([.][a-z]+)+(/[a-z0-9_]+)*([.][a-z]+)*)</re><p><l><s n="np"/><s n="loc"/></l><r><s n="np"/><s n="loc"/><s n="mf"/></r></p></e>
+<!--
+<e>       <re>(((www.)|(http://)|(https://))[a-z0-9\-]+([.][a-z]+)+(/[a-z0-9_]+)*([.][a-z]+)*)</re><p><l><s n="np"/><s n="loc"/></l><r><s n="np"/><s n="loc"/><s n="mf"/></r></p></e>
+<e>       <re>(((www.)|(http:\\\\)|(https:\\\\))[a-z0-9\-]+([.][a-z]+)+(\\[a-z0-9_]+)*([.][a-z]+)*)</re><p><l><s n="np"/><s n="loc"/></l><r><s n="np"/><s n="loc"/><s n="mf"/></r></p></e>
+-->
 <e r="RL"><p><l>ŝlosila<b/><s n="adj"/></l>            <r>-clef<s n="adj"/></r></p></e>
 <e>       <p><l>ŝlosila<b/><s n="adj"/></l>            <r>-clé<s n="adj"/></r></p></e>
 <e r="LR"><p><l>klea<b/><s n="adj"/></l>               <r>-clé<s n="adj"/></r></p></e>
@@ -1598,7 +1603,9 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>loteca<s n="adj"/></l>                 <r>aléatoire<s n="adj"/></r></p></e>
 <e>       <p><l>lotece<s n="adv"/></l>                 <r>aléatoirement<s n="adv"/></r></p></e>
 <e>       <p><l>alemana<s n="adj"/></l>                <r>alémanique<s n="adj"/></r></p></e>
-<e>       <p><l>alemano<s n="n"/></l>                  <r>alémanique<s n="n"/></r></p></e>
+<e r="RL"><p><l>alemano<s n="n"/></l>                  <r>Aléman<s n="n"/></r></p></e>
+<e r="RL"><p><l>alemana<s n="adj"/></l>                <r>aléman<s n="adj"/></r></p></e>
+<e>       <p><l>alemano<s n="n"/></l>                  <r>Alémanique<s n="n"/></r></p><par n="_genra_mf"/></e>
 <e>       <p><l>aleuto<s n="n"/></l>                   <r>Aléoute<s n="n"/></r></p><par n="_genra_mf"/></e>
 <e>       <p><l>aleuta<s n="adj"/></l>                 <r>aléoute<s n="adj"/></r></p></e>
 <e r="RL"><p><l>aleuto<s n="n"/></l>                   <r>Aléoutien<s n="n"/></r></p></e>
@@ -16075,6 +16082,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e r="LR"><p><l>konfideble<s n="adv"/></l>             <r>fiablement<s n="adv"/></r></p></e>
 <e r="LR"><p><l>konfidinde<s n="adv"/></l>             <r>fiablement<s n="adv"/></r></p></e>
 <e>       <p><l>fiakro<s n="n"/></l>                   <r>fiacre<s n="n"/><s n="m"/></r></p></e>
+<e>       <p><l>fianĉigo<s n="n"/></l>                   <r>fiançalles<s n="n"/><s n="m"/></r></p><par n="_sgpl_pl"/></e>
 <e>       <p><l>fianĉigi<s n="vblex"/></l>             <r>fiancer<s n="vblex"/></r></p></e>
 <e r="LR"><p><l>fianĉiniĝi<s n="vblex"/></l>           <r>fiancer<s n="vblex"/></r></p></e>
 <e>       <p><l>fianĉo<s n="n"/></l>                   <r>fiancé<s n="n"/></r></p></e>
@@ -32811,6 +32819,7 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>romanĉa<b/>lingvo<s n="n"/></l>        <r>romanche<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>romanisto<s n="n"/></l>                <r>romancier<s n="n"/></r></p></e>
 <e>       <p><l>romanda<s n="adj"/></l>                <r>romand<s n="adj"/></r></p></e>
+<e>       <p><l>romando<s n="n"/></l>                <r>Romand<s n="n"/></r></p></e>
 <e>       <p><l>romaneca<s n="adj"/></l>               <r>romanesque<s n="adj"/></r></p></e>
 <e>       <p><l>romao<s n="n"/></l>                    <r>romanichel<s n="n"/></r></p></e>
 <e>       <p><l>Romans-sur-Isère<s n="np"/><s n="loc"/></l><r>Romans-sur-Isère<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
@@ -38821,6 +38830,8 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>vendredo<s n="n"/></l>                 <r>vendredi<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>Vendée<s n="np"/><s n="loc"/></l>      <r>Vendée<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e>       <p><l>Venezuelo<s n="np"/><s n="loc"/></l>   <r>Venezuela<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
+<e>       <p><l>Romandio<s n="np"/><s n="loc"/></l>   <r>Romandie<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
+<e>       <p><l>Alemanio<s n="np"/><s n="loc"/></l>   <r>Alémanie<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e>       <p><l>venĝo<s n="n"/></l>                    <r>vengeance<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>venĝi<s n="vblex"/></l>                <r>venger<s n="vblex"/></r></p></e>
 <e>       <p><l>venene<s n="adv"/></l>                 <r>venimeusement<s n="adv"/></r></p></e>
@@ -38831,6 +38842,10 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>veni<g><b/>el</g><s n="vblex"/></l>    <r>venir<g><b/>de</g><s n="vblex"/></r></p></e>
 <e>       <p><l>subkomprenigi<s n="vblex"/></l>        <r>venir<g><b/>dire</g><s n="vblex"/></r></p></e>
 <e>       <p><l>Venecio<s n="np"/><s n="loc"/></l>     <r>Venise<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
+<e>       <p><l>Friulo<s n="np"/><s n="loc"/></l>     <r>Friuol<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>Veneto<s n="np"/><s n="loc"/></l>     <r>Vénétie<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
+<e r="LR"><p><l>Venetio<s n="np"/><s n="loc"/></l>     <r>Vénétie<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
+<e>       <p><l>Venecilano<s n="np"/><s n="loc"/></l>     <r>Vénétie<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e>       <p><l>vento<s n="n"/></l>                    <r>vent<s n="n"/><s n="m"/></r></p></e>
 <e r="LR"><p><l>blovinstrumento<s n="n"/></l>          <r>vent<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>ventego<s n="n"/></l>                  <r>vent<g><b/>de<b/>tempête</g><s n="n"/><s n="m"/></r></p></e>
@@ -39627,6 +39642,8 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>rapido<s n="n"/></l>                   <r>vélocité<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>ciklodromo<s n="n"/></l>               <r>vélodrome<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>Vénissieux<s n="np"/><s n="loc"/></l>  <r>Vénissieux<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
+<e>       <p><l>friulano<s n="n"/></l>                <r>Frioulan<s n="n"/></r></p></e>
+<e>       <p><l>friula<s n="adj"/></l>                <r>frioulan<s n="adj"/></r></p></e>
 <e>       <p><l>veneciano<s n="n"/></l>                <r>Vénitien<s n="n"/></r></p></e>
 <e>       <p><l>venecia<s n="adj"/></l>                <r>vénitien<s n="adj"/></r></p></e>
 <e>       <p><l>Venuso<s n="np"/><s n="loc"/></l>      <r>Vénus<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
@@ -40925,6 +40942,8 @@ apertium-dixtools fix apertium-eo-fr.eo-fr.dix.new2 apertium-eo-fr.eo-fr.dix.new
 <e>       <p><l>egalanimeco<s n="n"/></l>              <r>équanimité<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>kvadratigi<s n="vblex"/></l>           <r>équarrir<s n="vblex"/></r></p></e>
 <e>       <p><l>ekvatoro<s n="n"/></l>                 <r>équateur<s n="n"/><s n="m"/></r></p></e>
+<e r="LR"><p><l>elĉerpo<s n="n"/></l>                 <r>épuisement<s n="n"/><s n="m"/></r></p></e>
+<e>       <p><l>elĉerpiĝo<s n="n"/></l>                 <r>épuisement<s n="n"/><s n="m"/></r></p></e>
 <e>       <p><l>Ekvadoro<s n="np"/><s n="loc"/></l>    <r>Équateur<s n="np"/><s n="loc"/><s n="f"/></r></p></e>
 <e>       <p><l>ekvacio<s n="n"/></l>                  <r>équation<s n="n"/><s n="f"/></r></p></e>
 <e>       <p><l>diferenciala<b/>ekvacio<s n="n"/></l>  <r>équation<b/>différentielle<s n="n"/><s n="f"/></r></p></e>
