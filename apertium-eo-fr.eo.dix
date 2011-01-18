@@ -15,7 +15,7 @@ apertium-dixtools format apertium-eo-fr.eo.dix apertium-eo-fr.eo.dix.new
 apertium-dixtools sort -ignorecase -alignMonodix -stripEmptyLines -group adj,n,adv,np,vblex,vb,pr,cnjadv,cnjcoo,n_symbol,adj_symbol,np_symbol,adv_symbol,prn_symbol,det,preadv,rel,itg,det_symbol,num,ij,cnjsub apertium-eo-fr.eo.dix.new apertium-eo-fr.eo.dix.new2
 apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 -->
-  <alphabet>·ÀÁÂÄÇÈÉÊËÌÍÎÏÑÒÓÔÖÙÚÛÜàáâäçèéêëìíîïñòóôöùúûüABCDEFGHIJKLMNOPQRSTUVWXYZĈĜĤĴŜŬabcdefghijklmnopqrstuvwxyzĉĝĥĵŝŭ</alphabet>
+  <alphabet>·ÀÁÂÄÇÈÉÊËÌÍÎÏÑÒÓÔÖŒÙÚÛÜàáâäçèéêëìíîïñòóôöœùúûüABCDEFGHIJKLMNOPQRSTUVWXYZĈĜĤĴŜŬabcdefghijklmnopqrstuvwxyzĉĝĥĵŝŭ</alphabet>
   <sdefs>
     <sdef n="acc" /> 
     <sdef n="alt" /> 
@@ -887,6 +887,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Internacia Labor-Organizaĵo"><p><l>>Internacian<b/>Labor-Organizaĵon</l><r>Internacia<b/>Labor-Organizaĵo<s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="Nord-Atlantika Traktat-Organizaĵo"><p><l>>Nord-Atlantikan<b/>Traktat-Organizaĵon</l><r>Nord-Atlantika<b/>Traktat-Organizaĵo<s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="a.K.">            <i>a.K.</i><par n="BBC__n"/></e>
+<e lm="SOS">               <i>SOS</i><par n="BBC__n"/></e>
 <e lm="A.P. Møller-Mærsk Group"><i>A.P.<b/>Møller-Mærsk<b/>Group</i><par n="Wikipedia__np"/></e>
 <e lm="Aablina">         <i>Aablina</i><par n="Marie__np"/></e>
 <e lm="Aaden" a="sans accents"><i>Aaden</i><par n="Mark__np"/></e>
@@ -1598,6 +1599,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="akcepti">         <i>akcept</i><par n="i__vblex"/></e>
 <e lm="akcepto">         <i>akcept</i><par n="o__n"/></e>
 <e lm="akceptante kiel fakton"><i>akceptante<b/>kiel<b/>fakton</i><par n="after__cnjadv"/></e>
+<e lm="des pli ke"><i>des<b/>pli<b/>ke</i><par n="after__cnjadv"/></e>
+<e lm="des malpli ke"><i>des<b/>malpli<b/>ke</i><par n="after__cnjadv"/></e>
 <e lm="akceptebla">      <i>akceptebl</i><par n="a__adj"/></e>
 <e lm="akcepteblo">      <i>akceptebl</i><par n="o__n"/></e>
 <e lm="akcepteble">      <i>akceptebl</i><par n="e__adv"/></e>
@@ -7245,6 +7248,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Chiovitti">       <i>Chiovitti</i><par n="Smith__np"/></e>
 <e lm="Chiquette">       <i>Chiquette</i><par n="Smith__np"/></e>
 <e lm="Chirac">          <i>Chirac</i><par n="Smith__np"/></e>
+<e lm="Delors">          <i>Delors</i><par n="Smith__np"/></e>
+<e lm="Jospin">          <i>Jospin</i><par n="Smith__np"/></e>
 <e lm="Chisholm">        <i>Chisholm</i><par n="Smith__np"/></e>
 <e lm="Chiskamish">      <i>Chiskamish</i><par n="Smith__np"/></e>
 <e lm="Chistian">        <i>Chistian</i><par n="Mark__np"/></e>
@@ -20987,7 +20992,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="kompromisi">      <i>kompromis</i><par n="i__vblex"/></e>
 <e lm="kompromiso">      <i>kompromis</i><par n="o__n"/></e>
 <e lm="kompromiti">      <i>kompromit</i><par n="i__vblex"/></e>
-<e lm="kompromito">      <i>kompromit</i><par n="ino__n"/></e>
+<e lm="kompromito">      <i>kompromit</i><par n="o__n"/></e>
 <e lm="kompromitiĝi">    <i>kompromitiĝ</i><par n="i__vblex"/></e>
 <e lm="komputa">         <i>komput</i><par n="a__adj"/></e>
 <e lm="komputi">         <i>komput</i><par n="i__vblex"/></e>
@@ -38508,6 +38513,12 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="subiro">          <i>subir</i><par n="o__n"/></e>
 <e lm="subita">          <i>subit</i><par n="a__adj"/></e>
 <e lm="subite">          <i>subit</i><par n="e__adv"/></e>
+<e lm="Thérèse">         <i>Thérèse</i><par n="Marie__np"/></e>
+<e lm="Marie-Thérèse">         <i>Marie-Thérèse</i><par n="Marie__np"/></e>
+<e lm="kontraŭhorloĝa kuro"><p><l>kontraŭhorloĝa<b/>kuro</l><r>kontraŭhorloĝa<b/>kuro<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="kontraŭhorloĝa kuro"><p><l>kontraŭhorloĝan<b/>kuron</l><r>kontraŭhorloĝa<b/>kuro<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="kontraŭhorloĝa kuro"><p><l>kontraŭhorloĝaj<b/>kuroj</l><r>kontraŭhorloĝa<b/>kuro<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="kontraŭhorloĝa kuro"><p><l>kontraŭhorloĝajn<b/>kurojn</l><r>kontraŭhorloĝa<b/>kuro<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
 <e lm="subjekto">        <i>subjekt</i><par n="o__n"/></e>
 <e lm="subjektiva">      <i>subjektiv</i><par n="a__adj"/></e>
 <e lm="subjektive">      <i>subjektiv</i><par n="e__adv"/></e>
@@ -43942,6 +43953,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="ŝlimo">           <i>ŝlim</i><par n="o__n"/></e>
 <e lm="ŝlosi">           <i>ŝlos</i><par n="i__vblex"/></e>
 <e lm="ŝlosila">         <i>ŝlosil</i><par n="a__adj"/></e>
+<e lm="egalrange">         <i>egalrang</i><par n="e__adv"/></e>
 <e lm="ŝlosilo">         <i>ŝlosil</i><par n="o__n"/></e>
 <e lm="ŝlosilringo">     <i>ŝlosilring</i><par n="o__n"/></e>
 <e lm="ŝminki">          <i>ŝmink</i><par n="i__vblex"/></e>
