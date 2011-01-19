@@ -59,13 +59,21 @@
     </def-cat>
 
     <def-cat n="SVvolition">
-      <cat-item tags="SV.*.*.*.*.volition"/>
+      <cat-item tags="SV.*.volition"/>
     </def-cat>
 
     <def-cat n="SVlex">
       <cat-item tags="SV.vblex.*"/>
       <cat-item tags="SVneg.vblex.*"/>
     </def-cat>
+
+<!--
+    <def-cat n="SVtrans">
+      <cat-item tags="SV.*.trans"/>
+      <cat-item tags="SV.*.trans-netrans"/>
+      <cat-item tags="SV.*.volition"/>
+    </def-cat>
+-->
 
     <def-cat n="SV_pers"><!--Formes personals. Exclou inf i ger (i alguns imperatius per ara) -->
       <cat-item lemma="verbcj" tags="SV.vblex.*"/>
@@ -149,12 +157,12 @@
       <cat-item tags="sent"/>
     </def-cat>
 
-    <def-cat n="punt_cnjadv"> <!-- tractament d'inici de frase per al pro-drop-->
+    <def-cat n="punt_cnjadv">
       <cat-item tags="sent"/>
       <cat-item tags="sent_coma"/>
-      <cat-item tags="cm"/><!-- OJO provem amb la coma EO-->
+      <cat-item tags="cm"/>
       <cat-item tags="cnjadv"/>
-      <cat-item tags="cnjcoo"/> <!-- també amb i/o -->
+      <cat-item tags="cnjcoo"/>
     </def-cat>
 
     <def-cat n="cm">
@@ -891,7 +899,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
       </action>
 </rule>
 
-<rule comment="REGLA: punt_cnjadv SV PRO SN (EO pro-drop; per l'acusatiu dels SN objecte amb changecase=nom); va donar-me el llibre; el clitic passa a objecte indirecte precedit per al i el SN objecte agafa cas acusatiu">
+<rule comment="REGLA: punt_cnjadv SV PRO SN (per l'acusatiu dels SN objecte amb changecase=nom); va donar-me el llibre; el clitic passa a objecte indirecte precedit per al i el SN objecte agafa cas acusatiu">
       <pattern>
 	<pattern-item n="punt_cnjadv"/>
 	<pattern-item n="SVlex"/>
@@ -947,7 +955,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
       </action>
 </rule>
 
-<rule comment="REGLA: punt_cnjadv SV PRO SN and SN (EO pro-drop; per l'acusatiu dels SN objecte amb changecase=nom); va donar-me el llibre i els fulls; el clitic passa a objecte indirecte precedit per al i el SN objecte agafa cas acusatiu">
+<rule comment="REGLA: punt_cnjadv SV PRO SN and SN (per l'acusatiu dels SN objecte amb changecase=nom); va donar-me el llibre i els fulls; el clitic passa a objecte indirecte precedit per al i el SN objecte agafa cas acusatiu">
       <pattern>
 	<pattern-item n="punt_cnjadv"/>
 	<pattern-item n="SVlex"/>
