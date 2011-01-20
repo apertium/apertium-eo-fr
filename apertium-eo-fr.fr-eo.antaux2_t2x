@@ -153,7 +153,10 @@
           <when>
             <test>
               <and>
-                <equal><clip pos="2" part="nbr"/><lit-tag v="sp"/></equal>
+                <or>
+                  <equal><clip pos="2" part="nbr"/><lit-tag v="sp"/></equal>
+                  <equal><clip pos="2" part="nbr"/><lit-tag v="ND"/></equal>
+                </or>
                 <or>
                   <equal><clip pos="1" part="nbr"/><lit-tag v="sg"/></equal>
                   <equal><clip pos="1" part="nbr"/><lit-tag v="pl"/></equal>

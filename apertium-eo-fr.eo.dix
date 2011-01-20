@@ -12,7 +12,7 @@
 <!--
         Ordigita per:
 apertium-dixtools format apertium-eo-fr.eo.dix apertium-eo-fr.eo.dix.new
-apertium-dixtools sort -ignorecase -alignMonodix -stripEmptyLines -group adj,n,adv,np,vblex,vb,pr,cnjadv,cnjcoo,n_symbol,adj_symbol,np_symbol,adv_symbol,prn_symbol,det,preadv,rel,itg,det_symbol,num,ij,cnjsub apertium-eo-fr.eo.dix.new apertium-eo-fr.eo.dix.new2
+apertium-dixtools sort -ignorecase -alignMonodix -stripEmptyLines -group adj,n,adv,np,vblex,vbtr,vbntr,vbtr_ntr,pr,cnjadv,cnjcoo,n_symbol,adj_symbol,np_symbol,adv_symbol,prn_symbol,det,preadv,rel,itg,det_symbol,num,ij,cnjsub apertium-eo-fr.eo.dix.new apertium-eo-fr.eo.dix.new2
 apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 -->
   <alphabet>·ÀÁÂÄÇÈÉÊËÌÍÎÏÑÒÓÔÖŒÙÚÛÜàáâäçèéêëìíîïñòóôöœùúûüABCDEFGHIJKLMNOPQRSTUVWXYZĈĜĤĴŜŬabcdefghijklmnopqrstuvwxyzĉĝĥĵŝŭ</alphabet>
@@ -68,6 +68,9 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
     <sdef n="vbser" /> 
     <sdef n="vbhaver" /> 
     <sdef n="vblex" /> 
+    <sdef n="vbtr" /> 
+    <sdef n="vbntr" /> 
+    <sdef n="vbtr_ntr" /> 
     <sdef n="vbmod" /> 
     <sdef n="inf" /> 
     <sdef n="ger" /> 
@@ -456,113 +459,113 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 </pardef>
 
 <pardef n="igi__vblex">
-  <e>       <p><l>i</l>         <r>i<s n="vblex"/><s n="inf"/></r></p></e>
-  <e>       <p><l>as</l>        <r>i<s n="vblex"/><s n="pres"/></r></p></e>
-  <e>       <p><l>is</l>        <r>i<s n="vblex"/><s n="past"/></r></p></e>
-  <e>       <p><l>os</l>        <r>i<s n="vblex"/><s n="fti"/></r></p></e>
-  <e>       <p><l>us</l>        <r>i<s n="vblex"/><s n="cni"/></r></p></e>
-  <e r="RL"><p><l>us</l>        <r>i<s n="vblex"/><s n="fts"/></r></p></e>
-  <e r="RL"><p><l>ita</l>       <r>i<s n="vblex"/><s n="pp"/></r></p></e>
-  <e>       <p><l>ita</l>       <r>i<s n="vblex"/><s n="pp"/><s n="sg"/><s n="nom"/></r></p></e>
-  <e>       <p><l>itaj</l>      <r>i<s n="vblex"/><s n="pp"/><s n="pl"/><s n="nom"/></r></p></e>
-  <e>       <p><l>itan</l>      <r>i<s n="vblex"/><s n="pp"/><s n="sg"/><s n="acc"/></r></p></e>
-  <e>       <p><l>itajn</l>     <r>i<s n="vblex"/><s n="pp"/><s n="pl"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l>ita</l>       <r>i<s n="vblex"/><s n="pp"/><s n="sp"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>itan</l>      <r>i<s n="vblex"/><s n="pp"/><s n="sp"/><s n="acc"/></r></p></e>
-  <e>       <p><l>ata</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sg"/><s n="nom"/></r></p></e>
-  <e>       <p><l>ataj</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="pl"/><s n="nom"/></r></p></e>
-  <e>       <p><l>atan</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="sg"/><s n="acc"/></r></p></e>
-  <e>       <p><l>atajn</l>     <r>i<s n="vblex"/><s n="ppres"/><s n="pl"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l>ata</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sp"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>atan</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="sp"/><s n="acc"/></r></p></e>
-  <e>       <p><l>onta</l>      <r>i<s n="vblex"/><s n="pp2"/><s n="sg"/></r></p></e>
-  <e>       <p><l>ontaj</l>     <r>i<s n="vblex"/><s n="pp2"/><s n="pl"/></r></p></e>
-  <e>       <p><l>inta</l>      <r>i<s n="vblex"/><s n="pp3"/></r></p></e>
-  <e>       <p><l>inta</l>      <r>i<s n="vblex"/><s n="pp3"/><s n="sg"/></r></p></e>
-  <e>       <p><l>intaj</l>     <r>i<s n="vblex"/><s n="pp3"/><s n="pl"/></r></p></e>
-  <e>       <p><l>ante</l>      <r>i<s n="vblex"/><s n="ger"/></r></p></e>
-  <e>       <p><l>inte</l>      <r>i<s n="vblex"/><s n="gerpast"/></r></p></e>
-  <e>       <p><l>u</l>         <r>i<s n="vblex"/><s n="imp"/></r></p></e>
-  <e r="RL"><p><l>ita</l>       <r>i<s n="vblex"/><s n="pp"/><s n="sg"/></r></p></e>
-  <e r="RL"><p><l>itaj</l>      <r>i<s n="vblex"/><s n="pp"/><s n="pl"/></r></p></e>
-  <e r="RL"><p><l>ita</l>       <r>i<s n="vblex"/><s n="pp"/><s n="sp"/></r></p></e>
-  <e r="RL"><p><l>ata</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sg"/></r></p></e>
-  <e r="RL"><p><l>ataj</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="pl"/></r></p></e>
-  <e r="RL"><p><l>ata</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sp"/></r></p></e>
+  <e>       <p><l>i</l>         <r>i<s n="vbtr"/><s n="inf"/></r></p></e>
+  <e>       <p><l>as</l>        <r>i<s n="vbtr"/><s n="pres"/></r></p></e>
+  <e>       <p><l>is</l>        <r>i<s n="vbtr"/><s n="past"/></r></p></e>
+  <e>       <p><l>os</l>        <r>i<s n="vbtr"/><s n="fti"/></r></p></e>
+  <e>       <p><l>us</l>        <r>i<s n="vbtr"/><s n="cni"/></r></p></e>
+  <e r="RL"><p><l>us</l>        <r>i<s n="vbtr"/><s n="fts"/></r></p></e>
+  <e r="RL"><p><l>ita</l>       <r>i<s n="vbtr"/><s n="pp"/></r></p></e>
+  <e>       <p><l>ita</l>       <r>i<s n="vbtr"/><s n="pp"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e>       <p><l>itaj</l>      <r>i<s n="vbtr"/><s n="pp"/><s n="pl"/><s n="nom"/></r></p></e>
+  <e>       <p><l>itan</l>      <r>i<s n="vbtr"/><s n="pp"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e>       <p><l>itajn</l>     <r>i<s n="vbtr"/><s n="pp"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>ita</l>       <r>i<s n="vbtr"/><s n="pp"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>itan</l>      <r>i<s n="vbtr"/><s n="pp"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e>       <p><l>ata</l>       <r>i<s n="vbtr"/><s n="ppres"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e>       <p><l>ataj</l>      <r>i<s n="vbtr"/><s n="ppres"/><s n="pl"/><s n="nom"/></r></p></e>
+  <e>       <p><l>atan</l>      <r>i<s n="vbtr"/><s n="ppres"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e>       <p><l>atajn</l>     <r>i<s n="vbtr"/><s n="ppres"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>ata</l>       <r>i<s n="vbtr"/><s n="ppres"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>atan</l>      <r>i<s n="vbtr"/><s n="ppres"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e>       <p><l>onta</l>      <r>i<s n="vbtr"/><s n="pp2"/><s n="sg"/></r></p></e>
+  <e>       <p><l>ontaj</l>     <r>i<s n="vbtr"/><s n="pp2"/><s n="pl"/></r></p></e>
+  <e>       <p><l>inta</l>      <r>i<s n="vbtr"/><s n="pp3"/></r></p></e>
+  <e>       <p><l>inta</l>      <r>i<s n="vbtr"/><s n="pp3"/><s n="sg"/></r></p></e>
+  <e>       <p><l>intaj</l>     <r>i<s n="vbtr"/><s n="pp3"/><s n="pl"/></r></p></e>
+  <e>       <p><l>ante</l>      <r>i<s n="vbtr"/><s n="ger"/></r></p></e>
+  <e>       <p><l>inte</l>      <r>i<s n="vbtr"/><s n="gerpast"/></r></p></e>
+  <e>       <p><l>u</l>         <r>i<s n="vbtr"/><s n="imp"/></r></p></e>
+  <e r="RL"><p><l>ita</l>       <r>i<s n="vbtr"/><s n="pp"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l>itaj</l>      <r>i<s n="vbtr"/><s n="pp"/><s n="pl"/></r></p></e>
+  <e r="RL"><p><l>ita</l>       <r>i<s n="vbtr"/><s n="pp"/><s n="sp"/></r></p></e>
+  <e r="RL"><p><l>ata</l>       <r>i<s n="vbtr"/><s n="ppres"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l>ataj</l>      <r>i<s n="vbtr"/><s n="ppres"/><s n="pl"/></r></p></e>
+  <e r="RL"><p><l>ata</l>       <r>i<s n="vbtr"/><s n="ppres"/><s n="sp"/></r></p></e>
   <e r="RL"><p><l>ite</l>       <r>i<s n="adv"/></r></p></e>
 </pardef>
 
 <pardef n="iĝi__vblex">
-  <e>       <p><l>i</l>         <r>i<s n="vblex"/><s n="inf"/></r></p></e>
-  <e>       <p><l>as</l>        <r>i<s n="vblex"/><s n="pres"/></r></p></e>
-  <e>       <p><l>is</l>        <r>i<s n="vblex"/><s n="past"/></r></p></e>
-  <e>       <p><l>os</l>        <r>i<s n="vblex"/><s n="fti"/></r></p></e>
-  <e>       <p><l>us</l>        <r>i<s n="vblex"/><s n="cni"/></r></p></e>
-  <e r="RL"><p><l>us</l>        <r>i<s n="vblex"/><s n="fts"/></r></p></e>
-  <e r="RL"><p><l>inta</l>       <r>i<s n="vblex"/><s n="pp"/></r></p></e>
-  <e>       <p><l>inta</l>       <r>i<s n="vblex"/><s n="pp"/><s n="sg"/><s n="nom"/></r></p></e>
-  <e>       <p><l>intaj</l>      <r>i<s n="vblex"/><s n="pp"/><s n="pl"/><s n="nom"/></r></p></e>
-  <e>       <p><l>intan</l>      <r>i<s n="vblex"/><s n="pp"/><s n="sg"/><s n="acc"/></r></p></e>
-  <e>       <p><l>intajn</l>     <r>i<s n="vblex"/><s n="pp"/><s n="pl"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l>inta</l>       <r>i<s n="vblex"/><s n="pp"/><s n="sp"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>intan</l>      <r>i<s n="vblex"/><s n="pp"/><s n="sp"/><s n="acc"/></r></p></e>
-  <e>       <p><l>anta</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sg"/><s n="nom"/></r></p></e>
-  <e>       <p><l>antaj</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="pl"/><s n="nom"/></r></p></e>
-  <e>       <p><l>antan</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="sg"/><s n="acc"/></r></p></e>
-  <e>       <p><l>antajn</l>     <r>i<s n="vblex"/><s n="ppres"/><s n="pl"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l>anta</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sp"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>antan</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="sp"/><s n="acc"/></r></p></e>
-  <e>       <p><l>onta</l>      <r>i<s n="vblex"/><s n="pp2"/><s n="sg"/></r></p></e>
-  <e>       <p><l>ontaj</l>     <r>i<s n="vblex"/><s n="pp2"/><s n="pl"/></r></p></e>
-  <e>       <p><l>inta</l>      <r>i<s n="vblex"/><s n="pp3"/></r></p></e>
-  <e>       <p><l>inta</l>      <r>i<s n="vblex"/><s n="pp3"/><s n="sg"/></r></p></e>
-  <e>       <p><l>intaj</l>     <r>i<s n="vblex"/><s n="pp3"/><s n="pl"/></r></p></e>
-  <e>       <p><l>ante</l>      <r>i<s n="vblex"/><s n="ger"/></r></p></e>
-  <e>       <p><l>inte</l>      <r>i<s n="vblex"/><s n="gerpast"/></r></p></e>
-  <e>       <p><l>u</l>         <r>i<s n="vblex"/><s n="imp"/></r></p></e>
-  <e r="RL"><p><l>inta</l>       <r>i<s n="vblex"/><s n="pp"/><s n="sg"/></r></p></e>
-  <e r="RL"><p><l>intaj</l>      <r>i<s n="vblex"/><s n="pp"/><s n="pl"/></r></p></e>
-  <e r="RL"><p><l>inta</l>       <r>i<s n="vblex"/><s n="pp"/><s n="sp"/></r></p></e>
-  <e r="RL"><p><l>anta</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sg"/></r></p></e>
-  <e r="RL"><p><l>antaj</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="pl"/></r></p></e>
-  <e r="RL"><p><l>anta</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sp"/></r></p></e>
+  <e>       <p><l>i</l>         <r>i<s n="vbntr"/><s n="inf"/></r></p></e>
+  <e>       <p><l>as</l>        <r>i<s n="vbntr"/><s n="pres"/></r></p></e>
+  <e>       <p><l>is</l>        <r>i<s n="vbntr"/><s n="past"/></r></p></e>
+  <e>       <p><l>os</l>        <r>i<s n="vbntr"/><s n="fti"/></r></p></e>
+  <e>       <p><l>us</l>        <r>i<s n="vbntr"/><s n="cni"/></r></p></e>
+  <e r="RL"><p><l>us</l>        <r>i<s n="vbntr"/><s n="fts"/></r></p></e>
+  <e r="RL"><p><l>inta</l>       <r>i<s n="vbntr"/><s n="pp"/></r></p></e>
+  <e>       <p><l>inta</l>       <r>i<s n="vbntr"/><s n="pp"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e>       <p><l>intaj</l>      <r>i<s n="vbntr"/><s n="pp"/><s n="pl"/><s n="nom"/></r></p></e>
+  <e>       <p><l>intan</l>      <r>i<s n="vbntr"/><s n="pp"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e>       <p><l>intajn</l>     <r>i<s n="vbntr"/><s n="pp"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>inta</l>       <r>i<s n="vbntr"/><s n="pp"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>intan</l>      <r>i<s n="vbntr"/><s n="pp"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e>       <p><l>anta</l>       <r>i<s n="vbntr"/><s n="ppres"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e>       <p><l>antaj</l>      <r>i<s n="vbntr"/><s n="ppres"/><s n="pl"/><s n="nom"/></r></p></e>
+  <e>       <p><l>antan</l>      <r>i<s n="vbntr"/><s n="ppres"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e>       <p><l>antajn</l>     <r>i<s n="vbntr"/><s n="ppres"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>anta</l>       <r>i<s n="vbntr"/><s n="ppres"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>antan</l>      <r>i<s n="vbntr"/><s n="ppres"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e>       <p><l>onta</l>      <r>i<s n="vbntr"/><s n="pp2"/><s n="sg"/></r></p></e>
+  <e>       <p><l>ontaj</l>     <r>i<s n="vbntr"/><s n="pp2"/><s n="pl"/></r></p></e>
+  <e>       <p><l>inta</l>      <r>i<s n="vbntr"/><s n="pp3"/></r></p></e>
+  <e>       <p><l>inta</l>      <r>i<s n="vbntr"/><s n="pp3"/><s n="sg"/></r></p></e>
+  <e>       <p><l>intaj</l>     <r>i<s n="vbntr"/><s n="pp3"/><s n="pl"/></r></p></e>
+  <e>       <p><l>ante</l>      <r>i<s n="vbntr"/><s n="ger"/></r></p></e>
+  <e>       <p><l>inte</l>      <r>i<s n="vbntr"/><s n="gerpast"/></r></p></e>
+  <e>       <p><l>u</l>         <r>i<s n="vbntr"/><s n="imp"/></r></p></e>
+  <e r="RL"><p><l>inta</l>       <r>i<s n="vbntr"/><s n="pp"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l>intaj</l>      <r>i<s n="vbntr"/><s n="pp"/><s n="pl"/></r></p></e>
+  <e r="RL"><p><l>inta</l>       <r>i<s n="vbntr"/><s n="pp"/><s n="sp"/></r></p></e>
+  <e r="RL"><p><l>anta</l>       <r>i<s n="vbntr"/><s n="ppres"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l>antaj</l>      <r>i<s n="vbntr"/><s n="ppres"/><s n="pl"/></r></p></e>
+  <e r="RL"><p><l>anta</l>       <r>i<s n="vbntr"/><s n="ppres"/><s n="sp"/></r></p></e>
   <e r="RL"><p><l>inte</l>       <r>i<s n="adv"/></r></p></e>
 </pardef>
 
 <pardef n="igĝi__vblex">
-  <e>       <p><l>i</l>         <r>i<s n="vblex"/><s n="inf"/></r></p></e>
-  <e>       <p><l>as</l>        <r>i<s n="vblex"/><s n="pres"/></r></p></e>
-  <e>       <p><l>is</l>        <r>i<s n="vblex"/><s n="past"/></r></p></e>
-  <e>       <p><l>os</l>        <r>i<s n="vblex"/><s n="fti"/></r></p></e>
-  <e>       <p><l>us</l>        <r>i<s n="vblex"/><s n="cni"/></r></p></e>
-  <e r="RL"><p><l>us</l>        <r>i<s n="vblex"/><s n="fts"/></r></p></e>
-  <e r="RL"><p><l>ita</l>       <r>i<s n="vblex"/><s n="pp"/></r></p></e>
-  <e>       <p><l>ita</l>       <r>i<s n="vblex"/><s n="pp"/><s n="sg"/><s n="nom"/></r></p></e>
-  <e>       <p><l>itaj</l>      <r>i<s n="vblex"/><s n="pp"/><s n="pl"/><s n="nom"/></r></p></e>
-  <e>       <p><l>itan</l>      <r>i<s n="vblex"/><s n="pp"/><s n="sg"/><s n="acc"/></r></p></e>
-  <e>       <p><l>itajn</l>     <r>i<s n="vblex"/><s n="pp"/><s n="pl"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l>ita</l>       <r>i<s n="vblex"/><s n="pp"/><s n="sp"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>itan</l>      <r>i<s n="vblex"/><s n="pp"/><s n="sp"/><s n="acc"/></r></p></e>
-  <e>       <p><l>ata</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sg"/><s n="nom"/></r></p></e>
-  <e>       <p><l>ataj</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="pl"/><s n="nom"/></r></p></e>
-  <e>       <p><l>atan</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="sg"/><s n="acc"/></r></p></e>
-  <e>       <p><l>atajn</l>     <r>i<s n="vblex"/><s n="ppres"/><s n="pl"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l>ata</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sp"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>atan</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="sp"/><s n="acc"/></r></p></e>
-  <e>       <p><l>onta</l>      <r>i<s n="vblex"/><s n="pp2"/><s n="sg"/></r></p></e>
-  <e>       <p><l>ontaj</l>     <r>i<s n="vblex"/><s n="pp2"/><s n="pl"/></r></p></e>
-  <e>       <p><l>inta</l>      <r>i<s n="vblex"/><s n="pp3"/></r></p></e>
-  <e>       <p><l>inta</l>      <r>i<s n="vblex"/><s n="pp3"/><s n="sg"/></r></p></e>
-  <e>       <p><l>intaj</l>     <r>i<s n="vblex"/><s n="pp3"/><s n="pl"/></r></p></e>
-  <e>       <p><l>ante</l>      <r>i<s n="vblex"/><s n="ger"/></r></p></e>
-  <e>       <p><l>inte</l>      <r>i<s n="vblex"/><s n="gerpast"/></r></p></e>
-  <e>       <p><l>u</l>         <r>i<s n="vblex"/><s n="imp"/></r></p></e>
-  <e r="RL"><p><l>ita</l>       <r>i<s n="vblex"/><s n="pp"/><s n="sg"/></r></p></e>
-  <e r="RL"><p><l>itaj</l>      <r>i<s n="vblex"/><s n="pp"/><s n="pl"/></r></p></e>
-  <e r="RL"><p><l>ita</l>       <r>i<s n="vblex"/><s n="pp"/><s n="sp"/></r></p></e>
-  <e r="RL"><p><l>ata</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sg"/></r></p></e>
-  <e r="RL"><p><l>ataj</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="pl"/></r></p></e>
-  <e r="RL"><p><l>ata</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sp"/></r></p></e>
+  <e>       <p><l>i</l>         <r>i<s n="vbtr_ntr"/><s n="inf"/></r></p></e>
+  <e>       <p><l>as</l>        <r>i<s n="vbtr_ntr"/><s n="pres"/></r></p></e>
+  <e>       <p><l>is</l>        <r>i<s n="vbtr_ntr"/><s n="past"/></r></p></e>
+  <e>       <p><l>os</l>        <r>i<s n="vbtr_ntr"/><s n="fti"/></r></p></e>
+  <e>       <p><l>us</l>        <r>i<s n="vbtr_ntr"/><s n="cni"/></r></p></e>
+  <e r="RL"><p><l>us</l>        <r>i<s n="vbtr_ntr"/><s n="fts"/></r></p></e>
+  <e r="RL"><p><l>ita</l>       <r>i<s n="vbtr_ntr"/><s n="pp"/></r></p></e>
+  <e>       <p><l>ita</l>       <r>i<s n="vbtr_ntr"/><s n="pp"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e>       <p><l>itaj</l>      <r>i<s n="vbtr_ntr"/><s n="pp"/><s n="pl"/><s n="nom"/></r></p></e>
+  <e>       <p><l>itan</l>      <r>i<s n="vbtr_ntr"/><s n="pp"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e>       <p><l>itajn</l>     <r>i<s n="vbtr_ntr"/><s n="pp"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>ita</l>       <r>i<s n="vbtr_ntr"/><s n="pp"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>itan</l>      <r>i<s n="vbtr_ntr"/><s n="pp"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e>       <p><l>ata</l>       <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e>       <p><l>ataj</l>      <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="pl"/><s n="nom"/></r></p></e>
+  <e>       <p><l>atan</l>      <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e>       <p><l>atajn</l>     <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>ata</l>       <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>atan</l>      <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e>       <p><l>onta</l>      <r>i<s n="vbtr_ntr"/><s n="pp2"/><s n="sg"/></r></p></e>
+  <e>       <p><l>ontaj</l>     <r>i<s n="vbtr_ntr"/><s n="pp2"/><s n="pl"/></r></p></e>
+  <e>       <p><l>inta</l>      <r>i<s n="vbtr_ntr"/><s n="pp3"/></r></p></e>
+  <e>       <p><l>inta</l>      <r>i<s n="vbtr_ntr"/><s n="pp3"/><s n="sg"/></r></p></e>
+  <e>       <p><l>intaj</l>     <r>i<s n="vbtr_ntr"/><s n="pp3"/><s n="pl"/></r></p></e>
+  <e>       <p><l>ante</l>      <r>i<s n="vbtr_ntr"/><s n="ger"/></r></p></e>
+  <e>       <p><l>inte</l>      <r>i<s n="vbtr_ntr"/><s n="gerpast"/></r></p></e>
+  <e>       <p><l>u</l>         <r>i<s n="vbtr_ntr"/><s n="imp"/></r></p></e>
+  <e r="RL"><p><l>ita</l>       <r>i<s n="vbtr_ntr"/><s n="pp"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l>itaj</l>      <r>i<s n="vbtr_ntr"/><s n="pp"/><s n="pl"/></r></p></e>
+  <e r="RL"><p><l>ita</l>       <r>i<s n="vbtr_ntr"/><s n="pp"/><s n="sp"/></r></p></e>
+  <e r="RL"><p><l>ata</l>       <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l>ataj</l>      <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="pl"/></r></p></e>
+  <e r="RL"><p><l>ata</l>       <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="sp"/></r></p></e>
   <e r="RL"><p><l>ite</l>       <r>i<s n="adv"/></r></p></e>
 </pardef>
 
@@ -576,6 +579,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e r="RL"><p><l>intaj</l>     <r>i<s n="vbser"/><s n="pp"/><s n="pl"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>intan</l>     <r>i<s n="vbser"/><s n="pp"/><s n="sg"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>intajn</l>    <r>i<s n="vbser"/><s n="pp"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>inta</l>      <r>i<s n="vbser"/><s n="pp"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>intan</l>     <r>i<s n="vbser"/><s n="pp"/><s n="sp"/><s n="acc"/></r></p></e>
   <e>       <p><l>onta</l>      <r>i<s n="vbser"/><s n="pp2"/><s n="sg"/></r></p></e>
   <e>       <p><l>ontaj</l>     <r>i<s n="vbser"/><s n="pp2"/><s n="pl"/></r></p></e>
   <e>       <p><l>inta</l>      <r>i<s n="vbser"/><s n="pp3"/><s n="sg"/></r></p></e>
@@ -953,9 +958,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="via">             <i>v</i><par n="la_m/ia__prn"/></e>
 <e lm="ĝia">             <i>ĝ</i><par n="la_m/ia__prn"/></e>
 <e lm="ŝia">             <i>ŝ</i><par n="la_m/ia__prn"/></e>
-    <!-- ******************************
-          group adj,n,adv,np,vblex,vb,pr,cnjadv,cnjcoo,n_symbol,adj_symbol,np_symbol,adv_symbol,prn_symbol,det,preadv,rel,itg,det_symbol,num,ij,cnjsub
-      ****************************** -->
 <e>                      <re>A[0-9]+</re><p><l></l><r><s n="n"/><s n="acr"/><s n="sg"/><s n="nom"/></r></p></e> <!-- autoroutes FR -->
 <e>                      <re>A[0-9]+</re><p><l></l><r><s n="n"/><s n="acr"/><s n="sg"/><s n="acc"/></r></p></e> <!-- autoroutes FR -->
 <e>                      <re>I\-[0-9]+</re><p><l></l><r><s n="n"/><s n="acr"/><s n="sg"/><s n="nom"/></r></p></e> <!-- autoroutes USA -->
@@ -16325,7 +16327,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="interfera">       <i>interfer</i><par n="a__adj"/></e>
 <e lm="interfero">       <i>interfer</i><par n="o__n"/></e>
 <e lm="interferaj franĝoj"><i>interferaj<b/>franĝ</i><par n="oj__n"/></e>
-<e lm="interfingrigi la"><i>interfingrigi<b/>l</i><par n="a__adj"/></e>
 <e lm="interfono">       <i>interfon</i><par n="o__n"/></e>
 <e lm="interjekcio">     <i>interjekci</i><par n="o__n"/></e>
 <e lm="interkompreno">   <i>interkompren</i><par n="o__n"/></e>
@@ -37647,7 +37648,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Valonio">         <i>Valon</i><par n="Alban/io__np"/></e>
 <e lm="valoro">          <i>valor</i><par n="o__n"/></e>
 <e lm="valoraĵo">        <i>valoraĵ</i><par n="o__n"/></e>
-<e lm="valori la">       <i>valori<b/>l</i><par n="a__adj"/></e>
+<e lm="valori la penon"><i>valor</i><par n="iĝi__vblex"/><p><l><b/>la<b/>penon</l><r><g><b/>la<b/>penon</g></r></p></e>
 <e lm="valorizo">        <i>valoriz</i><par n="o__n"/></e>
 <e lm="valoriĝo">        <i>valoriĝ</i><par n="o__n"/></e>
 <e lm="Valquiria">       <i>Valquiria</i><par n="Marie__np"/></e>
@@ -40453,6 +40454,74 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="José">            <i>José</i><par n="Mark__np"/></e>
 
 
+<e lm="akuzado">            <i>akuzad</i><par n="o__n"/></e>
+<e lm="Antananarivo">            <i>Antananariv</i><par n="Barcelon/o__np"/></e>
+<e lm="aprobe">            <i>aprob</i><par n="e__adv"/></e>
+<e lm="arondismento">            <i>arondisment</i><par n="o__n"/></e>
+<e lm="arteria">            <i>arteri</i><par n="a__adj"/></e>
+<e lm="artlernejo">            <i>artlernej</i><par n="o__n"/></e>
+<e lm="bazaristo">            <i>bazarist</i><par n="ino__n"/></e>
+<e lm="bekerelo">            <i>bekerel</i><par n="o__n"/></e>
+<e lm="bremsado">            <i>bremsad</i><par n="o__n"/></e>
+<e lm="cereala">            <i>cereal</i><par n="a__adj"/></e>
+<e lm="demandanto">            <i>demandant</i><par n="ino__n"/></e>
+<e lm="Dipatrino">            <i>Dipatrin</i><par n="Barcelon/o__np"/></e>
+<e lm="diverse">            <i>divers</i><par n="e__adv"/></e>
+<e lm="dormejo">            <i>dormej</i><par n="o__n"/></e>
+<e lm="duonsekundo">            <i>duonsekund</i><par n="o__n"/></e>
+<e lm="eksterigo">            <i>eksterig</i><par n="o__n"/></e>
+<e lm="elĉerpiĝo">            <i>elĉerpiĝ</i><par n="o__n"/></e>
+<e lm="entombigo">            <i>entombig</i><par n="o__n"/></e>
+<e lm="fianĉigo">            <i>fianĉig</i><par n="o__n"/></e>
+<e lm="foira">            <i>foir</i><par n="a__adj"/></e>
+<e lm="formaligo">            <i>formalig</i><par n="o__n"/></e>
+<e lm="formalismema">            <i>formalismem</i><par n="a__adj"/></e>
+<e lm="formalismemulo">            <i>formalismemul</i><par n="ino__n"/></e>
+<e lm="Friulo">            <i>Friul</i><par n="Barcelon/o__np"/></e>
+<e lm="friula">            <i>friul</i><par n="a__adj"/></e>
+<e lm="honorindeco">            <i>honorindec</i><par n="o__n"/></e>
+<e lm="infanĝardeno">            <i>infanĝarden</i><par n="o__n"/></e>
+<e lm="Infanĝardeno">            <i>Infanĝarden</i><par n="o__n"/></e>
+<e lm="internigo">            <i>internig</i><par n="o__n"/></e>
+<e lm="interprofesia">            <i>interprofesi</i><par n="a__adj"/></e>
+<e lm="interregado">            <i>interregad</i><par n="o__n"/></e>
+<e lm="interregistara">            <i>interregistar</i><par n="a__adj"/></e>
+<e lm="kaŝpenso">            <i>kaŝpens</i><par n="o__n"/></e>
+<e lm="konfidenca">            <i>konfidenc</i><par n="a__adj"/></e>
+<e lm="konfidence">            <i>konfidenc</i><par n="e__adv"/></e>
+<e lm="konfidenceco">            <i>konfidencec</i><par n="o__n"/></e>
+<e lm="konkuranto">            <i>konkurant</i><par n="ino__n"/></e>
+<e lm="konuse">            <i>konus</i><par n="e__adv"/></e>
+<e lm="korekte">            <i>korekt</i><par n="e__adv"/></e>
+<e lm="korkolapso">            <i>korkolaps</i><par n="o__n"/></e>
+<e lm="kormalsanulo">            <i>kormalsanul</i><par n="ino__n"/></e>
+<e lm="krimeco">            <i>krimec</i><par n="o__n"/></e>
+<e lm="kuncelebri">            <i>kuncelebr</i><par n="igi__vblex"/></e>
+<e lm="kuncelebro">            <i>kuncelebr</i><par n="o__n"/></e>
+<e lm="malsovaĝigo">            <i>malsovaĝig</i><par n="o__n"/></e>
+<e lm="memdecido">            <i>memdecid</i><par n="o__n"/></e>
+<e lm="memdetruo">            <i>memdetru</i><par n="o__n"/></e>
+<e lm="memdisciplino">            <i>memdisciplin</i><par n="o__n"/></e>
+<e lm="mobiliza">            <i>mobiliz</i><par n="a__adj"/></e>
+<e lm="moki">            <i>mok</i><par n="igi__vblex"/></e>
+<e lm="pafarmo">            <i>pafarm</i><par n="o__n"/></e>
+<e lm="paroĥa">            <i>paroĥ</i><par n="a__adj"/></e>
+<e lm="pligraviga">            <i>pligravig</i><par n="a__adj"/></e>
+<e lm="pligraviĝo">            <i>pligraviĝ</i><par n="o__n"/></e>
+<e lm="postulado">            <i>postulad</i><par n="o__n"/></e>
+<e lm="postulanto">            <i>postulant</i><par n="ino__n"/></e>
+<e lm="postvivanto">            <i>postvivant</i><par n="ino__n"/></e>
+<e lm="postvivinta">            <i>postvivint</i><par n="a__adj"/></e>
+<e lm="reelekto">            <i>reelekt</i><par n="o__n"/></e>
+<e lm="restarti">            <i>restart</i><par n="iĝi__vblex"/></e>
+<e lm="restarto">            <i>restart</i><par n="o__n"/></e>
+<e lm="romando">            <i>romand</i><par n="o__n"/></e>
+<e lm="solide">            <i>solid</i><par n="e__adv"/></e>
+<e lm="starpunkto">            <i>starpunkt</i><par n="o__n"/></e>
+<e lm="ŝuldigi">            <i>ŝuldig</i><par n="igi__vblex"/></e>
+<e lm="ŝuldiĝo">            <i>ŝuldiĝ</i><par n="o__n"/></e>
+<e lm="Venecilando">            <i>Veneciland</i><par n="Barcelon/o__np"/></e>
+<e lm="veno">            <i>ven</i><par n="o__n"/></e>
 
 
 
@@ -40895,7 +40964,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="buĝeti">            <i>buĝet</i><par n="i__vblex"/></e>
 <e lm="cedi">            <i>ced</i><par n="igi__vblex"/></e>
 <e lm="celi">            <i>cel</i><par n="igi__vblex"/></e>
-<e lm="celebri">            <i>celebr</i><par n="i__vblex"/></e>
+<e lm="celebri">            <i>celebr</i><par n="igi__vblex"/></e>
 <e lm="celumi">            <i>celum</i><par n="igi__vblex"/></e>
 <e lm="cementi">            <i>cement</i><par n="igi__vblex"/></e>
 <e lm="censi">            <i>cens</i><par n="i__vblex"/></e>
@@ -40987,7 +41056,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="delogi">            <i>delog</i><par n="igi__vblex"/></e>
 <e lm="deloki">            <i>delok</i><par n="igi__vblex"/></e>
 <e lm="demamigi">            <i>demamig</i><par n="igi__vblex"/></e>
-<e lm="demandi al si"><i>demand</i><par n="iĝi__vblex"/><p><l><b/>al<b/>si</l><r><g><b/>al<b/>si</g></r></p></e>
+<e lm="demandi al si"><i>demand</i><par n="igi__vblex"/><p><l><b/>al<b/>si</l><r><g><b/>al<b/>si</g></r></p></e>
+<e lm="helpi al si"><i>helpi</i><par n="iĝi__vblex"/><p><l><b/>al<b/>si</l><r><g><b/>al<b/>si</g></r></p></e>
 <e lm="demandi">            <i>demand</i><par n="igi__vblex"/></e>
 <e lm="demandi sin"><i>demand</i><par n="iĝi__vblex"/><p><l><b/>sin</l><r><g><b/>sin</g></r></p></e>
 <e lm="demenci">            <i>demenc</i><par n="i__vblex"/></e>
@@ -41771,6 +41841,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="forofendi">            <i>forofend</i><par n="i__vblex"/></e>
 <e lm="foroferi">            <i>forofer</i><par n="i__vblex"/></e>
 <e lm="forpafi sin"><i>forpaf</i><par n="iĝi__vblex"/><p><l><b/>sin</l><r><g><b/>sin</g></r></p></e>
+<e lm="havi konfidon"><i>hav</i><par n="iĝi__vblex"/><p><l><b/>konfidon</l><r><g><b/>konfidon</g></r></p></e>
+<e lm="pafi sin for"><i>paf</i><par n="iĝi__vblex"/><p><l><b/>sin<b/>for</l><r><g><b/>sin<b/>for</g></r></p></e>
 <e lm="esti akceptita"><i>est</i><par n="ser__vb"/><p><l><b/>akceptita</l><r><g><b/>akceptita</g></r></p></e>
 <e lm="forpafi">            <i>forpaf</i><par n="igi__vblex"/></e>
 <e lm="forpafiĝi">            <i>forpafiĝ</i><par n="iĝi__vblex"/></e>
@@ -41863,9 +41935,9 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="fuzi">            <i>fuz</i><par n="i__vblex"/></e>
 <e lm="fuĝi">            <i>fuĝ</i><par n="i__vblex"/></e>
 <e lm="fuŝi">            <i>fuŝ</i><par n="igi__vblex"/></e>
-<e lm="fuŝformi">            <i>fuŝform</i><par n="i__vblex"/></e>
+<e lm="fuŝformi">            <i>fuŝform</i><par n="igi__vblex"/></e>
 <e lm="fuŝpalpi">            <i>fuŝpalp</i><par n="igi__vblex"/></e>
-<e lm="fuŝuzi">            <i>fuŝuz</i><par n="i__vblex"/></e>
+<e lm="fuŝuzi">            <i>fuŝuz</i><par n="igi__vblex"/></e>
 <e lm="gaji">            <i>gaj</i><par n="iĝi__vblex"/></e>
 <e lm="gajigi">            <i>gajig</i><par n="igi__vblex"/></e>
 <e lm="gajni">            <i>gajn</i><par n="igi__vblex"/></e>
@@ -42116,6 +42188,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="intensigi">            <i>intensig</i><par n="igi__vblex"/></e>
 <e lm="interedziĝi">            <i>interedziĝ</i><par n="iĝi__vblex"/></e>
 <e lm="interesi sin"><i>interes</i><par n="iĝi__vblex"/><p><l><b/>sin</l><r><g><b/>sin</g></r></p></e>
+<e lm="interfingrigi la manojn"><i>interfingrig</i><par n="iĝi__vblex"/><p><l><b/>la<b/>manojn</l><r><g><b/>la<b/>manojn</g></r></p></e>
 <e lm="interesi">            <i>interes</i><par n="igi__vblex"/></e>
 <e lm="interesegi">            <i>intereseg</i><par n="igi__vblex"/></e>
 <e lm="interesigi">            <i>interesig</i><par n="igi__vblex"/></e>
@@ -42415,7 +42488,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="konstipi">            <i>konstip</i><par n="i__vblex"/></e>
 <e lm="konstitui">            <i>konstitu</i><par n="i__vblex"/></e>
 <e lm="konstrui">            <i>konstru</i><par n="igi__vblex"/></e>
-<e lm="konsulti">            <i>konsult</i><par n="i__vblex"/></e>
+<e lm="konsulti">            <i>konsult</i><par n="igi__vblex"/></e>
 <e lm="konsumi">            <i>konsum</i><par n="igi__vblex"/></e>
 <e lm="konsumiĝi">            <i>konsumiĝ</i><par n="iĝi__vblex"/></e>
 <e lm="kontakti">            <i>kontakt</i><par n="i__vblex"/></e>
@@ -44045,7 +44118,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="stari">            <i>star</i><par n="iĝi__vblex"/></e>
 <e lm="starigi">            <i>starig</i><par n="igi__vblex"/></e>
 <e lm="stariĝi">            <i>stariĝ</i><par n="iĝi__vblex"/></e>
-<e lm="starti">            <i>start</i><par n="i__vblex"/></e>
+<e lm="starti">            <i>start</i><par n="iĝi__vblex"/></e>
 <e lm="startigi">            <i>startig</i><par n="igi__vblex"/></e>
 <e lm="staĝi">            <i>staĝ</i><par n="i__vblex"/></e>
 <e lm="stebi">            <i>steb</i><par n="igi__vblex"/></e>
@@ -44415,6 +44488,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="veldi">            <i>veld</i><par n="i__vblex"/></e>
 <e lm="velki">            <i>velk</i><par n="iĝi__vblex"/></e>
 <e lm="veni en akordon"><i>ven</i><par n="iĝi__vblex"/><p><l><b/>en<b/>akordon</l><r><g><b/>en<b/>akordon</g></r></p></e>
+<e lm="veni en konflikton"><i>ven</i><par n="iĝi__vblex"/><p><l><b/>en<b/>konflikton</l><r><g><b/>en<b/>konflikton</g></r></p></e>
 <e lm="veni el"><i>ven</i><par n="iĝi__vblex"/><p><l><b/>el</l><r><g><b/>el</g></r></p></e>
 <e lm="veni">            <i>ven</i><par n="iĝi__vblex"/></e>
 <e lm="vendi">            <i>vend</i><par n="igi__vblex"/></e>
@@ -44550,6 +44624,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="ĝemeligi">            <i>ĝemelig</i><par n="igi__vblex"/></e>
 <e lm="ĝemplori">            <i>ĝemplor</i><par n="i__vblex"/></e>
 <e lm="ĝeni sin"><i>ĝen</i><par n="iĝi__vblex"/><p><l><b/>sin</l><r><g><b/>sin</g></r></p></e>
+<e lm="koncentri sin"><i>koncentr</i><par n="iĝi__vblex"/><p><l><b/>sin</l><r><g><b/>sin</g></r></p></e>
 <e lm="ĝeni">            <i>ĝen</i><par n="igi__vblex"/></e>
 <e lm="ĝeneraligi">            <i>ĝeneralig</i><par n="igi__vblex"/></e>
 <e lm="ĝermi">            <i>ĝerm</i><par n="iĝi__vblex"/></e>

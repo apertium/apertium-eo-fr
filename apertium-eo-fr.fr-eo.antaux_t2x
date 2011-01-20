@@ -56,6 +56,9 @@
 
     <def-cat n="inf">
       <cat-item tags="SV.vblex.inf"/>
+      <cat-item tags="SV.vbtr.inf"/>
+      <cat-item tags="SV.vbntr.inf"/>
+      <cat-item tags="SV.vbtr_ntr.inf"/>
     </def-cat>
 
     <def-cat n="le_prn">
@@ -157,26 +160,17 @@
           <when>
             <test>
               <and>
-                <equal>
-                  <clip pos="2" part="nbr"/>
-		  <lit-tag v="sp"/>
-                </equal>
                 <or>
-                  <equal>
-                    <clip pos="1" part="nbr"/>
-		    <lit-tag v="sg"/>
-                  </equal>
-                  <equal>
-                    <clip pos="1" part="nbr"/>
-		    <lit-tag v="pl"/>
-                  </equal>
+                  <equal><clip pos="2" part="nbr"/><lit-tag v="sp"/></equal>
+                  <equal><clip pos="2" part="nbr"/><lit-tag v="ND"/></equal>
+                </or>
+                <or>
+                  <equal><clip pos="1" part="nbr"/><lit-tag v="sg"/></equal>
+                  <equal><clip pos="1" part="nbr"/><lit-tag v="pl"/></equal>
                 </or>
               </and>
             </test>
-            <let>
-              <clip pos="2" part="nbr"/>
-              <clip pos="1" part="nbr"/>
-            </let>
+            <let><clip pos="2" part="nbr"/><clip pos="1" part="nbr"/></let>
 	</when>
       </choose>
     </def-macro>
@@ -895,6 +889,7 @@
         <test>
           <and>
             <equal><clip pos="1" part="nbr"/><clip pos="3" part="nbr"/></equal>
+            <equal><clip pos="1" part="tipus_prn"/><clip pos="3" part="tipus_prn"/></equal>
             <or>
               <and>
                 <equal><clip pos="1" part="lem"/><lit v="prpers"/></equal>
@@ -968,6 +963,7 @@
         <test>
           <and>
             <equal><clip pos="1" part="nbr"/><clip pos="5" part="nbr"/></equal>
+            <equal><clip pos="1" part="tipus_prn"/><clip pos="5" part="tipus_prn"/></equal>
             <or>
               <and>
                 <equal><clip pos="1" part="lem"/><lit v="prpers"/></equal>
@@ -1055,6 +1051,7 @@
         <test>
           <and>
             <equal><clip pos="1" part="nbr"/><clip pos="6" part="nbr"/></equal>
+            <equal><clip pos="1" part="tipus_prn"/><clip pos="6" part="tipus_prn"/></equal>
             <or>
               <and>
                 <equal><clip pos="1" part="lem"/><lit v="prpers"/></equal>
@@ -1129,7 +1126,7 @@
     </rule>
 
 
-<!-- Ne eblas kunigi: kutime tio disigas du subfrazojn kaj tio permesas ke la subejkto de la dua subfrazo analiziĝas kiel parto de la objekto de la unua (kaj ricevu akuzativon)
+<!-- Ne eblas kunigi: kutime tio disigas du subfrazojn kaj tio permesas ke la subjekto de la dua subfrazo analiziĝas kiel parto de la objekto de la unua (kaj ricevu akuzativon)
     <rule comment="REGLA: , and/or    -   and/or ">
       <pattern>
         <pattern-item n="CM"/>

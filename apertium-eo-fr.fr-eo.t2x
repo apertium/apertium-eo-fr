@@ -64,19 +64,27 @@
 
     <def-cat n="SVlex">
       <cat-item tags="SV.vblex.*"/>
+      <cat-item tags="SV.vbtr.*"/>
+      <cat-item tags="SV.vbntr.*"/>
+      <cat-item tags="SV.vbtr_ntr.*"/>
       <cat-item tags="SVneg.vblex.*"/>
+      <cat-item tags="SVneg.vbtr.*"/>
+      <cat-item tags="SVneg.vbntr.*"/>
+      <cat-item tags="SVneg.vbtr_ntr.*"/>
     </def-cat>
 
-<!--
     <def-cat n="SVtrans">
-      <cat-item tags="SV.*.trans"/>
-      <cat-item tags="SV.*.trans-netrans"/>
+      <cat-item tags="SV.vbtr.*"/>
+      <cat-item tags="SV.vbtr_ntr.*"/>
       <cat-item tags="SV.*.volition"/>
+      <cat-item tags="SV.vblex.*"/> <!-- ni aldonas la neklasifikitajn verbojn -->
     </def-cat>
--->
 
     <def-cat n="SV_pers"><!--Formes personals. Exclou inf i ger (i alguns imperatius per ara) -->
       <cat-item lemma="verbcj" tags="SV.vblex.*"/>
+      <cat-item lemma="verbcj" tags="SV.vbtr.*"/>
+      <cat-item lemma="verbcj" tags="SV.vbntr.*"/>
+      <cat-item lemma="verbcj" tags="SV.vbtr_ntr.*"/>
       <cat-item lemma="verbcj" tags="SVneg.*"/>
       <cat-item lemma="verbcj_perif" tags="SV.*"/>
       <cat-item lemma="verbcj_perif" tags="SVneg.*"/>
@@ -97,7 +105,13 @@
 
      <def-cat n="inf">
       <cat-item tags="SV.vblex.inf"/>
+      <cat-item tags="SV.vbtr.inf"/>
+      <cat-item tags="SV.vbntr.inf"/>
+      <cat-item tags="SV.vbtr_ntr.inf"/>
       <cat-item tags="SVneg.vblex.inf"/>
+      <cat-item tags="SVneg.vbtr.inf"/>
+      <cat-item tags="SVneg.vbntr.inf"/>
+      <cat-item tags="SVneg.vbtr_ntr.inf"/>
       <cat-item tags="SV.vbhaver.inf"/>
       <cat-item tags="SVneg.vbhaver.inf"/>
       <cat-item tags="SV.vbser.inf"/>
@@ -107,8 +121,10 @@
     </def-cat>
 
     <def-cat n="SVmoviment"> <!-- per l'acusatiu dels verbs de moviment-->
-      <cat-item tags="SV.vblex.*.*.*.moviment"/>
       <cat-item tags="SV.vblex.*.moviment"/>
+      <cat-item tags="SV.vbtr.*.moviment"/>
+      <cat-item tags="SV.vbntr.*.moviment"/>
+      <cat-item tags="SV.vbtr.*.moviment"/>
     </def-cat>
 
     <def-cat n="PREP">
@@ -232,6 +248,9 @@
 
     <def-attr n="a_verb">
       <attr-item tags="vblex"/>
+      <attr-item tags="vbtr"/>
+      <attr-item tags="vbntr"/>
+      <attr-item tags="vbtr_ntr"/>
       <attr-item tags="vblex.pron"/>
       <attr-item tags="vbser"/>
       <attr-item tags="vbhaver"/>
@@ -284,26 +303,17 @@
           <when>
             <test>
               <and>
-                <equal>
-                  <clip pos="2" part="nbr"/>
-		  <lit-tag v="sp"/>
-                </equal>
                 <or>
-                  <equal>
-                    <clip pos="1" part="nbr"/>
-		    <lit-tag v="sg"/>
-                  </equal>
-                  <equal>
-                    <clip pos="1" part="nbr"/>
-		    <lit-tag v="pl"/>
-                  </equal>
+                  <equal><clip pos="2" part="nbr"/><lit-tag v="sp"/></equal>
+                  <equal><clip pos="2" part="nbr"/><lit-tag v="ND"/></equal>
+                </or>
+                <or>
+                  <equal><clip pos="1" part="nbr"/><lit-tag v="sg"/></equal>
+                  <equal><clip pos="1" part="nbr"/><lit-tag v="pl"/></equal>
                 </or>
               </and>
             </test>
-            <let>
-              <clip pos="2" part="nbr"/>
-              <clip pos="1" part="nbr"/>
-            </let>
+            <let><clip pos="2" part="nbr"/><clip pos="1" part="nbr"/></let>
 	</when>
       </choose>
     </def-macro>
