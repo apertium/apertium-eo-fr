@@ -21264,6 +21264,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="exiler" a="revo"> <i>exil</i><par n="abaiss/er__vblex"/></e>
 <e lm="Exincourt">       <i>Exincourt</i><par n="Andorre__np"/></e>
 <e lm="exister">         <i>exist</i><par n="abaiss/er__vblex"/></e>
+<e lm="en exister">         <i>en<b/>exist</i><par n="abaiss/er__vblex"/></e>
 <e lm="existant" a="webform"><i>existant</i><par n="abaissant__adj"/></e>
 <e lm="existence">       <i>existence</i><par n="abeille__n"/></e>
 <e lm="existencialiste"> <i>existencialiste</i><par n="académique__adj"/></e>
@@ -23243,7 +23244,8 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="Gagné">           <i>Gagné</i><par n="Smith__np"/></e>
 <e lm="Gahyana">         <i>Gahyana</i><par n="Marie__np"/></e>
 <e lm="gai" a="webform"> <i>gai</i><par n="abaissant__adj"/></e>
-<e r="LR" lm="gaieté">   <i>gaieté</i><par n="abeille__n"/></e>
+<e lm="gaieté">   <i>gaieté</i><par n="abeille__n"/></e>
+<e r="LR" lm="gaieté">     <p><l>gaîté</l>      <r>gaieté</r></p><par n="abeille__n"/></e>
 <e lm="Gaige">           <i>Gaige</i><par n="Abraham__np"/></e>
 <e lm="Gaignard">        <i>Gaignard</i><par n="Smith__np"/></e>
 <e lm="gaillard">        <i>gaillard</i><par n="africain__n"/></e>
@@ -26023,10 +26025,10 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="illusoire">       <i>illusoire</i><par n="académique__adj"/></e>
 <e lm="illustrer">       <i>illustr</i><par n="abaiss/er__vblex"/></e>
 <e lm="illustration" a="webform"><i>illustration</i><par n="abeille__n"/></e>
+<e lm="illustrateur" a="webform"><i>illustrat</i><par n="administrat/eur__n"/></e>
 <e lm="illustre">        <i>illustre</i><par n="académique__adj"/></e>
-<e lm="illégal" a="webform"><i>illéga</i><par n="amica/l__adj"/></e>
-<e lm="illégalement" a="webform"><i>illégalement</i><par n="hier__adv"/></e>
-<e lm="illégitime">      <i>illégitime</i><par n="académique__adj"/></e>
+<e lm="illégal"><i>illéga</i><par n="amica/l__adjadv"/></e>
+<e lm="illégitime">      <i>illégitime</i><par n="académique__adjadv"/></e>
 <e lm="ilot">            <i>ilot</i><par n="accessoire__n"/></e>
 <e lm="Ilsa">            <i>Ilsa</i><par n="Marie__np"/></e>
 <e lm="Ilva">            <i>Ilva</i><par n="Marie__np"/></e>
@@ -30000,9 +30002,11 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="luminescent">     <i>luminescent</i><par n="abaissant__adj"/></e>
 <e lm="lumineux" a="webform"><i>lumineu</i><par n="affectueu/x__adjadv"/></e>
 <e lm="luminophore">     <i>luminophore</i><par n="accessoire__n"/></e>
+<e lm="alter ego">     <i>alter<b/>ego</i><par n="mois__n"/></e>
 <e lm="luminosité">      <i>luminosité</i><par n="abeille__n"/></e>
 <e lm="lumière">         <i>lumière</i><par n="abeille__n"/></e>
-<e lm="Lumières">        <p><l>Lumières</l>  <r>Lumières</r></p><par n="vacances__n"/></e>
+<e lm="Lumières">         <i>Lumières</i><par n="vacances__n"/></e>
+<e lm="Lumières">        <p><l>les<b/>Lumières</l>  <r>Lumières</r></p><par n="vacances__n"/></e>
 <e lm="Luna">            <i>Luna</i><par n="Smith__np"/></e>
 <e lm="Luna" a="sans accents"><i>Luna</i><par n="Marie__np"/></e>
 <e lm="lunaire">         <i>lunaire</i><par n="académique__adj"/></e>
@@ -40947,6 +40951,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="Serena">          <i>Serena</i><par n="Marie__np"/></e>
 <e lm="Serenity">        <i>Serenity</i><par n="Marie__np"/></e>
 <e lm="Serge">           <i>Serge</i><par n="Abraham__np"/></e>
+<e lm="Sergeï">           <i>Sergeï</i><par n="Abraham__np"/></e>
 <e lm="serge" a="revo">  <i>serge</i><par n="abeille__n"/></e>
 <e lm="sergent">         <i>sergent</i><par n="accessoire__n"/></e>
 <e lm="sergent-chef">    <p><l>sergent-chef</l><r>sergent-chef</r></p><par n="personnel__n"/></e>
@@ -45939,8 +45944,8 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="Xénophon">        <i>Xénophon</i><par n="Abraham__np"/></e>
 <e lm="xérès">           <i>xérès</i><par n="mois__n"/></e>
 <e lm="y">               <i>y</i><par n="en__prn"/></e>
-<e lm="y avoir">         <par n="/y_avoir__vblex"/></e>
-<!-- <e lm="y avoir">                                  <i></i><par n="/y_avoir__vblex"/></e> -->
+<!-- <e lm="y avoir">         <i></i><par n="/y_avoir__vblex"/></e> ne marche pas, p.ex. dans de frases négatives -->
+<e lm="y avoir">           <i>y<b/></i><par n="/avoir__vblex"/></e>
 <e lm="y compris" a="revo"><i>y<b/>compris</i><par n="hier__adv"/></e>
 <e lm="yacht">           <i>yacht</i><par n="accessoire__n"/></e>
 <e lm="Yacine" a="sans accents"><i>Yacine</i><par n="Abraham__np"/></e>
