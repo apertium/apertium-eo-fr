@@ -324,6 +324,145 @@
       </action>
     </rule>
 
+    <!-- samaj tri reguloj, sed por neoj -->
+    <rule comment="REGLA: SN ADV SNencl   -   SN ADV: les hommes ne peuvent-ils -> la homoj ne ili povas -> la homoj ne povas ">
+      <pattern>
+        <pattern-item n="SN"/>
+        <pattern-item n="adv"/>
+        <pattern-item n="prn_subjenc"/>
+      </pattern>
+      <action>
+        <out>
+	  <chunk>
+	    <clip pos="1" part="whole"/>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk>
+	    <clip pos="2" part="whole"/>
+	  </chunk>
+        </out>
+        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: . SN ADV SNencl   -   ĉu SN ADV: . Les hommes ne peuvent-ils -> la homoj ne ili povas -> ĉu la homoj ne povas ">
+      <pattern>
+        <pattern-item n="sent_frazofina"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="adv"/>
+        <pattern-item n="prn_subjenc"/>
+      </pattern>
+      <action>
+        <out>
+	  <chunk>
+	    <clip pos="1" part="whole"/>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk>
+	    <get-case-from pos="2">
+	      <lit v="cnj"/>
+	    </get-case-from>
+	    <lit-tag v="cnjadv"/>
+	    <lit v="{^"/>
+	    <get-case-from pos="2">
+	      <lit v="ĉu"/>
+	    </get-case-from>
+	    <lit-tag v="cnjadv"/>
+	    <lit v="$}"/>
+	  </chunk>
+	  <b pos="2"/>
+	</out>
+
+        <choose>
+          <when>
+            <test>
+              <equal>
+                <case-of pos="2" part="lem"/>
+                <lit v="Aa"/>
+              </equal>
+            </test>
+            <modify-case>
+              <clip pos="2" part="lem"/>
+              <lit v="aa"/>
+            </modify-case>
+          </when>
+        </choose>
+
+	<out>
+	  <chunk>
+	    <clip pos="2" part="whole"/>
+	  </chunk>
+	  <b pos="3"/>
+	  <chunk>
+	    <clip pos="3" part="whole"/>
+	  </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <!-- ni devas aldoni tiun regulon por eviti la nepritrakton de la ĝenerala (supra) regulo -->
+    <rule comment="REGLA: . SN ADV SNencl   -   ĉu SN ADV: . Les hommes ne peuvent-ils -> la homoj ne ili povas -> ĉu la homoj ne povas ">
+      <pattern>
+        <pattern-item n="any"/>
+        <pattern-item n="sent_preblank"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="adv"/>
+        <pattern-item n="prn_subjenc"/>
+      </pattern>
+      <action>
+        <out>
+	  <chunk>
+	    <clip pos="1" part="whole"/>
+	  </chunk>
+        </out>
+        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <out>
+	  <chunk>
+	    <clip pos="2" part="whole"/>
+	  </chunk>
+	  <b pos="2"/>
+	  <chunk>
+	    <get-case-from pos="3">
+	      <lit v="cnj"/>
+	    </get-case-from>
+	    <lit-tag v="cnjadv"/>
+	    <lit v="{^"/>
+	    <get-case-from pos="3">
+	      <lit v="ĉu"/>
+	    </get-case-from>
+	    <lit-tag v="cnjadv"/>
+	    <lit v="$}"/>
+	  </chunk>
+	  <b pos="3"/>
+	</out>
+
+        <choose>
+          <when>
+            <test>
+              <equal>
+                <case-of pos="3" part="lem"/>
+                <lit v="Aa"/>
+              </equal>
+            </test>
+            <modify-case>
+              <clip pos="3" part="lem"/>
+              <lit v="aa"/>
+            </modify-case>
+          </when>
+        </choose>
+
+	<out>
+	  <chunk>
+	    <clip pos="3" part="whole"/>
+	  </chunk>
+	  <b pos="3"/>
+	  <chunk>
+	    <clip pos="3" part="whole"/>
+	  </chunk>
+        </out>
+      </action>
+    </rule>
+
   <!-- fino DEMANDOJ -->
 
     <rule comment="REGLA: ADV SV   -   SV ">
