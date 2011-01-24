@@ -137,6 +137,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e>       <p><l>ojn</l>       <r>o<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>o</l>         <r>o<s n="n"/><s n="sp"/><s n="nom"/></r></p></e> <!-- iam aperas en okazaj kunmetaĵoj: TGV-Est -->
   <e r="RL"><p><l>on</l>        <r>o<s n="n"/><s n="sp"/><s n="acc"/></r></p></e> <!-- iam aperas en okazaj kunmetaĵoj: TGV-Est -->
+  <e r="RL"><p><l>o</l>         <r>o<s n="n"/><s n="ND"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>on</l>        <r>o<s n="n"/><s n="ND"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>e</l>         <r>o<s n="adv"/></r></p></e>
 </pardef>
 
@@ -148,11 +150,13 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 
 <pardef n="a__adj">
   <e>       <p><l>a</l>         <r>a<s n="adj"/><s n="sg"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>a</l>         <r>a<s n="adj"/><s n="sp"/><s n="nom"/></r></p></e>
   <e>       <p><l>aj</l>        <r>a<s n="adj"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l>an</l>        <r>a<s n="adj"/><s n="sg"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l>an</l>        <r>a<s n="adj"/><s n="sp"/><s n="acc"/></r></p></e>
   <e>       <p><l>ajn</l>       <r>a<s n="adj"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>a</l>         <r>a<s n="adj"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>an</l>        <r>a<s n="adj"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>a</l>         <r>a<s n="adj"/><s n="ND"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>an</l>        <r>a<s n="adj"/><s n="ND"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>e</l>         <r>a<s n="adv"/></r></p></e>
 </pardef>
 
@@ -164,11 +168,13 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 
 <pardef n="eks__adj"> <!-- prefiksoj -->
   <e r="RL"><p><l></l>          <r><s n="adj"/><s n="sg"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l></l>          <r><s n="adj"/><s n="sp"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l></l>          <r><s n="adj"/><s n="pl"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l></l>          <r><s n="adj"/><s n="sg"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l></l>          <r><s n="adj"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l></l>          <r><s n="adj"/><s n="pl"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l></l>          <r><s n="adj"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l></l>          <r><s n="adj"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l></l>          <r><s n="adj"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l></l>          <r><s n="adj"/><s n="ND"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l></l>          <r><s n="adj"/><s n="ND"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l></l>          <r><s n="adv"/></r></p></e>
 </pardef>
 
@@ -203,12 +209,15 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <pardef n="BBC__n">
   <e>       <p><l></l>          <r><s n="n"/><s n="acr"/><s n="sg"/></r></p><par n="nomacc0"/></e>
   <e r="RL"><p><l></l>          <r><s n="n"/><s n="acr"/><s n="pl"/></r></p><par n="nomacc0"/></e>
+  <e r="RL"><p><l></l>          <r><s n="n"/><s n="acr"/><s n="sp"/></r></p><par n="nomacc0"/></e>
 </pardef>
 
 <pardef n="n-r/o__n">
   <e>       <p><l>o</l>         <r>o<s n="n"/><s n="acr"/><s n="sg"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>oj</l>        <r>o<s n="n"/><s n="acr"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l>on</l>        <r>o<s n="n"/><s n="acr"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>o</l>         <r>o<s n="n"/><s n="acr"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>on</l>        <r>o<s n="n"/><s n="acr"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>oj</l>        <r>o<s n="n"/><s n="acr"/><s n="pl"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>ojn</l>       <r>o<s n="n"/><s n="acr"/><s n="pl"/><s n="acc"/></r></p></e>
 </pardef>
 
@@ -343,19 +352,13 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e>       <p><l>inojn</l>     <r>o<s n="n"/><s n="f"/><s n="pl"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>o</l>         <r>o<s n="n"/><s n="sg"/><s n="nom"/></r></p></e> <!-- tiel strange alvenas kelketaj vortoj (kiuj havas specife difinitan pluralan formon, ekz. per ge-) -->
 <!-- pro la sufiĉe multaj dubagenraj francaj nomoj, ekz. "membre" -->
-  <e r="RL"><p><l>o</l>         <r>o<s n="n"/><s n="ND"/><s n="sg"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>oj</l>        <r>o<s n="n"/><s n="ND"/><s n="pl"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>on</l>        <r>o<s n="n"/><s n="ND"/><s n="sg"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l>ojn</l>       <r>o<s n="n"/><s n="ND"/><s n="pl"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>o</l>         <r>o<s n="n"/><s n="mf"/><s n="sg"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>oj</l>        <r>o<s n="n"/><s n="mf"/><s n="pl"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>on</l>        <r>o<s n="n"/><s n="mf"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>o</l>         <r>o<s n="n"/><s n="mf"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>on</l>        <r>o<s n="n"/><s n="mf"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>oj</l>        <r>o<s n="n"/><s n="mf"/><s n="pl"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>ojn</l>       <r>o<s n="n"/><s n="mf"/><s n="pl"/><s n="acc"/></r></p></e>
 <!-- pro la sufiĉe multaj dubanombraj francaj nomoj, ekz. "admis" -->
-  <e r="RL"><p><l>o</l>         <r>o<s n="n"/><s n="m"/><s n="ND"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>on</l>        <r>o<s n="n"/><s n="m"/><s n="ND"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l>ino</l>       <r>o<s n="n"/><s n="f"/><s n="ND"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>inon</l>      <r>o<s n="n"/><s n="f"/><s n="ND"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>o</l>         <r>o<s n="n"/><s n="m"/><s n="sp"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>on</l>        <r>o<s n="n"/><s n="m"/><s n="sp"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>ino</l>       <r>o<s n="n"/><s n="f"/><s n="sp"/><s n="nom"/></r></p></e>
@@ -368,9 +371,11 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <pardef n="la__det">
   <e r="LR"><p><l></l>          <r><s n="det"/><s n="def"/><s n="sp"/></r></p></e>
   <e r="RL"><p><l></l>          <r><s n="det"/><s n="def"/><s n="sg"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l></l>          <r><s n="det"/><s n="def"/><s n="pl"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l></l>          <r><s n="det"/><s n="def"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l></l>          <r><s n="det"/><s n="def"/><s n="pl"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l></l>          <r><s n="det"/><s n="def"/><s n="pl"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l></l>          <r><s n="det"/><s n="def"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l></l>          <r><s n="det"/><s n="def"/><s n="sp"/><s n="acc"/></r></p></e>
 </pardef>
 
 
@@ -435,12 +440,16 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e>       <p><l>itajn</l>     <r>i<s n="vblex"/><s n="pp"/><s n="pl"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>ita</l>       <r>i<s n="vblex"/><s n="pp"/><s n="sp"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>itan</l>      <r>i<s n="vblex"/><s n="pp"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>ita</l>       <r>i<s n="vblex"/><s n="pp"/><s n="ND"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>itan</l>      <r>i<s n="vblex"/><s n="pp"/><s n="ND"/><s n="acc"/></r></p></e>
   <e>       <p><l>ata</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sg"/><s n="nom"/></r></p></e>
   <e>       <p><l>ataj</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l>atan</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="sg"/><s n="acc"/></r></p></e>
   <e>       <p><l>atajn</l>     <r>i<s n="vblex"/><s n="ppres"/><s n="pl"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>ata</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sp"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>atan</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>ata</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="ND"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>atan</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="ND"/><s n="acc"/></r></p></e>
   <e>       <p><l>onta</l>      <r>i<s n="vblex"/><s n="pp2"/><s n="sg"/></r></p></e>
   <e>       <p><l>ontaj</l>     <r>i<s n="vblex"/><s n="pp2"/><s n="pl"/></r></p></e>
   <e>       <p><l>inta</l>      <r>i<s n="vblex"/><s n="pp3"/></r></p></e>
@@ -452,9 +461,11 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e r="RL"><p><l>ita</l>       <r>i<s n="vblex"/><s n="pp"/><s n="sg"/></r></p></e>
   <e r="RL"><p><l>itaj</l>      <r>i<s n="vblex"/><s n="pp"/><s n="pl"/></r></p></e>
   <e r="RL"><p><l>ita</l>       <r>i<s n="vblex"/><s n="pp"/><s n="sp"/></r></p></e>
+  <e r="RL"><p><l>ita</l>       <r>i<s n="vblex"/><s n="pp"/><s n="ND"/></r></p></e>
   <e r="RL"><p><l>ata</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sg"/></r></p></e>
   <e r="RL"><p><l>ataj</l>      <r>i<s n="vblex"/><s n="ppres"/><s n="pl"/></r></p></e>
   <e r="RL"><p><l>ata</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="sp"/></r></p></e>
+  <e r="RL"><p><l>ata</l>       <r>i<s n="vblex"/><s n="ppres"/><s n="ND"/></r></p></e>
   <e r="RL"><p><l>ite</l>       <r>i<s n="adv"/></r></p></e>
 </pardef>
 
@@ -472,12 +483,16 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e>       <p><l>itajn</l>     <r>i<s n="vbtr"/><s n="pp"/><s n="pl"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>ita</l>       <r>i<s n="vbtr"/><s n="pp"/><s n="sp"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>itan</l>      <r>i<s n="vbtr"/><s n="pp"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>ita</l>       <r>i<s n="vbtr"/><s n="pp"/><s n="ND"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>itan</l>      <r>i<s n="vbtr"/><s n="pp"/><s n="ND"/><s n="acc"/></r></p></e>
   <e>       <p><l>ata</l>       <r>i<s n="vbtr"/><s n="ppres"/><s n="sg"/><s n="nom"/></r></p></e>
   <e>       <p><l>ataj</l>      <r>i<s n="vbtr"/><s n="ppres"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l>atan</l>      <r>i<s n="vbtr"/><s n="ppres"/><s n="sg"/><s n="acc"/></r></p></e>
   <e>       <p><l>atajn</l>     <r>i<s n="vbtr"/><s n="ppres"/><s n="pl"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>ata</l>       <r>i<s n="vbtr"/><s n="ppres"/><s n="sp"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>atan</l>      <r>i<s n="vbtr"/><s n="ppres"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>ata</l>       <r>i<s n="vbtr"/><s n="ppres"/><s n="ND"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>atan</l>      <r>i<s n="vbtr"/><s n="ppres"/><s n="ND"/><s n="acc"/></r></p></e>
   <e>       <p><l>onta</l>      <r>i<s n="vbtr"/><s n="pp2"/><s n="sg"/></r></p></e>
   <e>       <p><l>ontaj</l>     <r>i<s n="vbtr"/><s n="pp2"/><s n="pl"/></r></p></e>
   <e>       <p><l>inta</l>      <r>i<s n="vbtr"/><s n="pp3"/></r></p></e>
@@ -489,9 +504,11 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e r="RL"><p><l>ita</l>       <r>i<s n="vbtr"/><s n="pp"/><s n="sg"/></r></p></e>
   <e r="RL"><p><l>itaj</l>      <r>i<s n="vbtr"/><s n="pp"/><s n="pl"/></r></p></e>
   <e r="RL"><p><l>ita</l>       <r>i<s n="vbtr"/><s n="pp"/><s n="sp"/></r></p></e>
+  <e r="RL"><p><l>ita</l>       <r>i<s n="vbtr"/><s n="pp"/><s n="ND"/></r></p></e>
   <e r="RL"><p><l>ata</l>       <r>i<s n="vbtr"/><s n="ppres"/><s n="sg"/></r></p></e>
   <e r="RL"><p><l>ataj</l>      <r>i<s n="vbtr"/><s n="ppres"/><s n="pl"/></r></p></e>
   <e r="RL"><p><l>ata</l>       <r>i<s n="vbtr"/><s n="ppres"/><s n="sp"/></r></p></e>
+  <e r="RL"><p><l>ata</l>       <r>i<s n="vbtr"/><s n="ppres"/><s n="ND"/></r></p></e>
   <e r="RL"><p><l>ite</l>       <r>i<s n="adv"/></r></p></e>
 </pardef>
 
@@ -509,12 +526,16 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e>       <p><l>intajn</l>     <r>i<s n="vbntr"/><s n="pp"/><s n="pl"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>inta</l>       <r>i<s n="vbntr"/><s n="pp"/><s n="sp"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>intan</l>      <r>i<s n="vbntr"/><s n="pp"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>inta</l>       <r>i<s n="vbntr"/><s n="pp"/><s n="ND"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>intan</l>      <r>i<s n="vbntr"/><s n="pp"/><s n="ND"/><s n="acc"/></r></p></e>
   <e>       <p><l>anta</l>       <r>i<s n="vbntr"/><s n="ppres"/><s n="sg"/><s n="nom"/></r></p></e>
   <e>       <p><l>antaj</l>      <r>i<s n="vbntr"/><s n="ppres"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l>antan</l>      <r>i<s n="vbntr"/><s n="ppres"/><s n="sg"/><s n="acc"/></r></p></e>
   <e>       <p><l>antajn</l>     <r>i<s n="vbntr"/><s n="ppres"/><s n="pl"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>anta</l>       <r>i<s n="vbntr"/><s n="ppres"/><s n="sp"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>antan</l>      <r>i<s n="vbntr"/><s n="ppres"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>anta</l>       <r>i<s n="vbntr"/><s n="ppres"/><s n="ND"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>antan</l>      <r>i<s n="vbntr"/><s n="ppres"/><s n="ND"/><s n="acc"/></r></p></e>
   <e>       <p><l>onta</l>      <r>i<s n="vbntr"/><s n="pp2"/><s n="sg"/></r></p></e>
   <e>       <p><l>ontaj</l>     <r>i<s n="vbntr"/><s n="pp2"/><s n="pl"/></r></p></e>
   <e>       <p><l>inta</l>      <r>i<s n="vbntr"/><s n="pp3"/></r></p></e>
@@ -526,9 +547,11 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e r="RL"><p><l>inta</l>       <r>i<s n="vbntr"/><s n="pp"/><s n="sg"/></r></p></e>
   <e r="RL"><p><l>intaj</l>      <r>i<s n="vbntr"/><s n="pp"/><s n="pl"/></r></p></e>
   <e r="RL"><p><l>inta</l>       <r>i<s n="vbntr"/><s n="pp"/><s n="sp"/></r></p></e>
+  <e r="RL"><p><l>inta</l>       <r>i<s n="vbntr"/><s n="pp"/><s n="ND"/></r></p></e>
   <e r="RL"><p><l>anta</l>       <r>i<s n="vbntr"/><s n="ppres"/><s n="sg"/></r></p></e>
   <e r="RL"><p><l>antaj</l>      <r>i<s n="vbntr"/><s n="ppres"/><s n="pl"/></r></p></e>
   <e r="RL"><p><l>anta</l>       <r>i<s n="vbntr"/><s n="ppres"/><s n="sp"/></r></p></e>
+  <e r="RL"><p><l>anta</l>       <r>i<s n="vbntr"/><s n="ppres"/><s n="ND"/></r></p></e>
   <e r="RL"><p><l>inte</l>       <r>i<s n="adv"/></r></p></e>
 </pardef>
 
@@ -546,12 +569,16 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e>       <p><l>itajn</l>     <r>i<s n="vbtr_ntr"/><s n="pp"/><s n="pl"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>ita</l>       <r>i<s n="vbtr_ntr"/><s n="pp"/><s n="sp"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>itan</l>      <r>i<s n="vbtr_ntr"/><s n="pp"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>ita</l>       <r>i<s n="vbtr_ntr"/><s n="pp"/><s n="ND"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>itan</l>      <r>i<s n="vbtr_ntr"/><s n="pp"/><s n="ND"/><s n="acc"/></r></p></e>
   <e>       <p><l>ata</l>       <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="sg"/><s n="nom"/></r></p></e>
   <e>       <p><l>ataj</l>      <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l>atan</l>      <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="sg"/><s n="acc"/></r></p></e>
   <e>       <p><l>atajn</l>     <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="pl"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>ata</l>       <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="sp"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>atan</l>      <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>ata</l>       <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="ND"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>atan</l>      <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="ND"/><s n="acc"/></r></p></e>
   <e>       <p><l>onta</l>      <r>i<s n="vbtr_ntr"/><s n="pp2"/><s n="sg"/></r></p></e>
   <e>       <p><l>ontaj</l>     <r>i<s n="vbtr_ntr"/><s n="pp2"/><s n="pl"/></r></p></e>
   <e>       <p><l>inta</l>      <r>i<s n="vbtr_ntr"/><s n="pp3"/></r></p></e>
@@ -563,9 +590,11 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e r="RL"><p><l>ita</l>       <r>i<s n="vbtr_ntr"/><s n="pp"/><s n="sg"/></r></p></e>
   <e r="RL"><p><l>itaj</l>      <r>i<s n="vbtr_ntr"/><s n="pp"/><s n="pl"/></r></p></e>
   <e r="RL"><p><l>ita</l>       <r>i<s n="vbtr_ntr"/><s n="pp"/><s n="sp"/></r></p></e>
+  <e r="RL"><p><l>ita</l>       <r>i<s n="vbtr_ntr"/><s n="pp"/><s n="ND"/></r></p></e>
   <e r="RL"><p><l>ata</l>       <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="sg"/></r></p></e>
   <e r="RL"><p><l>ataj</l>      <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="pl"/></r></p></e>
   <e r="RL"><p><l>ata</l>       <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="sp"/></r></p></e>
+  <e r="RL"><p><l>ata</l>       <r>i<s n="vbtr_ntr"/><s n="ppres"/><s n="ND"/></r></p></e>
   <e r="RL"><p><l>ite</l>       <r>i<s n="adv"/></r></p></e>
 </pardef>
 
@@ -581,6 +610,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e r="RL"><p><l>intajn</l>    <r>i<s n="vbser"/><s n="pp"/><s n="pl"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>inta</l>      <r>i<s n="vbser"/><s n="pp"/><s n="sp"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>intan</l>     <r>i<s n="vbser"/><s n="pp"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>inta</l>      <r>i<s n="vbser"/><s n="pp"/><s n="ND"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>intan</l>     <r>i<s n="vbser"/><s n="pp"/><s n="ND"/><s n="acc"/></r></p></e>
   <e>       <p><l>onta</l>      <r>i<s n="vbser"/><s n="pp2"/><s n="sg"/></r></p></e>
   <e>       <p><l>ontaj</l>     <r>i<s n="vbser"/><s n="pp2"/><s n="pl"/></r></p></e>
   <e>       <p><l>inta</l>      <r>i<s n="vbser"/><s n="pp3"/><s n="sg"/></r></p></e>
@@ -934,9 +965,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
     <!-- ******************************
           group prn
       ****************************** -->
-    <!-- ******************************
-          group prn
-      ****************************** -->
 <e lm="personaj pronomoj de subjekto"><i></i><par n="prsubj__prn"/></e>
 <e lm="personaj pronomoj de rekta objekto"><i></i><par n="probj__prn"/></e>
 <e lm="personaj pronomoj de nerekta objekto"><i></i><par n="prdat__prn"/></e>
@@ -995,6 +1023,11 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="7a">              <i>7</i><par n="a__adj"/></e>
 <e lm="8a">              <i>8</i><par n="a__adj"/></e>
 <e lm="9a">              <i>9</i><par n="a__adj"/></e>
+<e lm="Ruĝa Kruco"> <p><l>Ruĝa<b/>Kruco</l><r>Ruĝa<b/>Kruco<s n="np"/><s n="al"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Ruĝa Kruco"> <p><l>>Ruĝan<b/>Krucon</l><r>Ruĝa<b/>Kruco<s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Ruĝa Krescento"> <p><l>Ruĝa<b/>Krescento</l><r>Ruĝa<b/>Krescento<s n="np"/><s n="al"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Ruĝa Krescento"> <p><l>>Ruĝan<b/>Krescenton</l><r>Ruĝa<b/>Krescento<s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Cindra Merkredo"> <p><l>Cindra<b/>Merkredo</l><r>Cindra<b/>Merkredo<s n="np"/><s n="al"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="Cindra Merkredo"> <p><l>>Cindran<b/>Merkredon</l><r>Cindra<b/>Merkredo<s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="Internacia Labor-Organizaĵo"><p><l>>Internacian<b/>Labor-Organizaĵon</l><r>Internacia<b/>Labor-Organizaĵo<s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="Nord-Atlantika Traktat-Organizaĵo"><p><l>>Nord-Atlantikan<b/>Traktat-Organizaĵon</l><r>Nord-Atlantika<b/>Traktat-Organizaĵo<s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
@@ -1002,6 +1035,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="SOS">               <i>SOS</i><par n="BBC__n"/></e>
 <e lm="A.P. Møller-Mærsk Group"><i>A.P.<b/>Møller-Mærsk<b/>Group</i><par n="Wikipedia__np"/></e>
 <e lm="Aablina">         <i>Aablina</i><par n="Marie__np"/></e>
+<e lm="Andréa">         <i>Andréa</i><par n="Marie__np"/></e>
 <e lm="Aaden" a="sans accents"><i>Aaden</i><par n="Mark__np"/></e>
 <e lm="Aaliyah">         <i>Aaliyah</i><par n="Marie__np"/></e>
 <e lm="Aaron">           <i>Aaron</i><par n="Mark__np"/></e>
@@ -1009,8 +1043,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Abaco">           <i>Abaco</i><par n="Mark__np"/></e>
 <e lm="Abagail">         <i>Abagail</i><par n="Marie__np"/></e>
 <e lm="abako">           <i>abak</i><par n="o__n"/></e>
-<e lm="flagetoportanto">           <i>flagetoportanto</i><par n="o__n"/></e>
-<e lm="standardisto">           <i>standardisto</i><par n="o__n"/></e>
+<e lm="flagetoportanto">           <i>flagetoportant</i><par n="o__n"/></e>
+<e lm="standardisto">           <i>standardist</i><par n="o__n"/></e>
 <e lm="abandono">        <i>abandon</i><par n="o__n"/></e>
 <e lm="Abaso">           <i>Abas</i><par n="Mark/o__np"/></e>
 <e lm="abasido">         <i>abasid</i><par n="o__n"/></e>
@@ -1073,7 +1107,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Abigayle">        <i>Abigayle</i><par n="Marie__np"/></e>
 <e lm="Abilio">          <i>Abilio</i><par n="Mark__np"/></e>
 <e lm="Abinahil">        <i>Abinahil</i><par n="Marie__np"/></e>
-<e lm="Abisenio">        <i>Abiseni</i><par n="Barcelon/o__np"/></e>
+<e lm="Abisenio">        <i>Abisen</i><par n="Alban/io__np"/></e>
 <e lm="abisma">          <i>abism</i><par n="a__adj"/></e>
 <e lm="abismo">          <i>abism</i><par n="o__n"/></e>
 <e lm="abisme">          <i>abism</i><par n="e__adv"/></e>
@@ -1135,6 +1169,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="absurde">         <i>absurd</i><par n="e__adv"/></e>
 <e lm="Abud">            <i>Abud</i><par n="Mark__np"/></e>
 <e lm="Abudabio">        <i>Abudabi</i><par n="Barcelon/o__np"/></e>
+<e lm="Makenzio">        <i>Makenzi</i><par n="Barcelon/o__np"/></e>
 <e lm="abunda">          <i>abund</i><par n="a__adj"/></e>
 <e lm="abunde">          <i>abund</i><par n="e__adv"/></e>
 <e lm="abundo">          <i>abund</i><par n="o__n"/></e>
@@ -2675,9 +2710,27 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="andora">          <i>andor</i><par n="a__adj"/></e>
 <e lm="andor">           <i>andor</i><par n="eks__adj"/></e>
 <e lm="Andoro">          <i>Andor</i><par n="Barcelon/o__np"/></e>
+<e lm="Sankt-Laŭrenco">          <i>Sankt-Laŭrenc</i><par n="Barcelon/o__np"/></e>
 <e lm="andorano">        <i>andoran</i><par n="ino__n"/></e>
+<e lm="Prerioj">        <i>Preri</i><par n="oj__n"/></e>
 <e lm="Sankta Koro"><p><l>Sankta<b/>Koro</l><r>Sankta<b/>Koro<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="Sankta Koro"><p><l>Sanktan<b/>Koron</l><r>Sankta<b/>Koro<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Grandaj Lagoj"><p><l>Grandaj<b/>Lagoj</l><r>Grandaj<b/>Lagoj<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="Grandaj Lagoj"><p><l>Grandajn<b/>Lagojn</l><r>Grandaj<b/>Lagoj<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="Grandaj Ebenaĵoj"><p><l>Grandaj<b/>Ebenaĵoj</l><r>Grandaj<b/>Ebenaĵoj<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="Grandaj Ebenaĵoj"><p><l>Grandajn<b/>Ebenaĵojn</l><r>Grandaj<b/>Ebenaĵoj<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="Supra Lago"><p><l>Supra<b/>Lago</l><r>Supra<b/>Lago<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Supra Lago"><p><l>Supran<b/>Lagon</l><r>Supra<b/>Lago<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Hurona Lago"><p><l>Hurona<b/>Lago</l><r>Hurona<b/>Lago<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Hurona Lago"><p><l>Huronan<b/>Lagon</l><r>Hurona<b/>Lago<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Ontaria Lago"><p><l>Ontaria<b/>Lago</l><r>Ontaria<b/>Lago<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Ontaria Lago"><p><l>Ontarian<b/>Lagon</l><r>Ontaria<b/>Lago<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Eria Lago"><p><l>Eria<b/>Lago</l><r>Eria<b/>Lago<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Eria Lago"><p><l>Erian<b/>Lagon</l><r>Eria<b/>Lago<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Miĉigana Lago"><p><l>Miĉigana<b/>Lago</l><r>Miĉigana<b/>Lago<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Miĉigana Lago"><p><l>Miĉiganan<b/>Lagon</l><r>Miĉigana<b/>Lago<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="lingvaj faciligoj"><p><l>lingvaj<b/>faciligoj</l><r>lingvaj<b/>faciligoj<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="lingvaj faciligoj"><p><l>lingvajn<b/>faciligojn</l><r>lingvaj<b/>faciligoj<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="Andorra">         <i>Andorra</i><par n="Barcelona__np"/></e>
 <e lm="Andrade">         <i>Andrade</i><par n="Smith__np"/></e>
 <e lm="Andraos">         <i>Andraos</i><par n="Smith__np"/></e>
@@ -7058,7 +7111,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Cinda">           <i>Cinda</i><par n="Marie__np"/></e>
 <e lm="Cindra">          <i>Cindr</i><par n="a__adj"/></e>
 <e lm="cindro">          <i>cindr</i><par n="o__n"/></e>
-<e lm="Cindra Merkredo"> <p><l>Cindra<b/>Merkredo</l><r>Cindra<b/>Merkredo<s n="np"/><s n="al"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="cindrigo">        <i>cindrig</i><par n="o__n"/></e>
 <e lm="cindrogriza">     <i>cindrogriz</i><par n="a__adj"/></e>
 <e lm="Cindromerkredo">  <i>Cindromerkred</i><par n="Vikipedi/o__np"/></e>
@@ -16391,6 +16443,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="internaĵo">       <i>internaĵ</i><par n="o__n"/></e>
 <e lm="interne de">      <i>interne<b/>de</i><par n="al__pr"/></e>
 <e lm="Internet">        <i>Internet</i><par n="Barcelona__np"/></e>
+<e lm="Jukonio">        <i>Jukoni</i><par n="Barcelon/o__np"/></e>
 <e lm="internlando">     <i>internland</i><par n="o__n"/></e>
 <e lm="internulo">       <i>internul</i><par n="ino__n"/></e>
 <e lm="internulejo">     <i>internulej</i><par n="o__n"/></e>
@@ -18202,6 +18255,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="katalpo">         <i>katalp</i><par n="o__n"/></e>
 <e lm="kataluna">        <i>katalun</i><par n="a__adj"/></e>
 <e lm="kataluno">        <i>katalun</i><par n="ino__n"/></e>
+<e lm="algonkeno">        <i>algonken</i><par n="ino__n"/></e>
 <e lm="Katalunio">       <i>Katalun</i><par n="Alban/io__np"/></e>
 <e lm="katalunismo">     <i>katalunism</i><par n="o__n"/></e>
 <e lm="katalunlingva">   <i>katalunlingv</i><par n="a__adj"/></e>
@@ -18610,6 +18664,13 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="kilogramo de kuba metro"><i>kilogram</i><par n="o__n"/><p><l><b/>de<b/>kuba<b/>metro</l><r><g><b/>de<b/>kuba<b/>metro</g></r></p></e>
 <e lm="kilogramo">       <i>kilogram</i><par n="o__n"/></e>
 <e lm="kilogramo en kuba metro"><i>kilogram</i><par n="o__n"/><p><l><b/>en<b/>kuba<b/>metro</l><r><g><b/>en<b/>kuba<b/>metro</g></r></p></e>
+<e lm="Insulo de Princo Eduardo"><i>Insul</i><par n="Barcelon/o__np"/><p><l><b/>de<b/>Princo<b/>Eduardo</l><r><g><b/>de<b/>Princo<b/>Eduardo</g></r></p></e>
+<e lm="Brita Kolumbio"><p><l>Brita<b/>Kolumbio</l><r>Brita<b/>Kolumbio<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Brita Kolumbio"><p><l>Britan<b/>Kolumbion</l><r>Brita<b/>Kolumbio<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Novlando kaj Labradoro"><p><l>Novlando<b/>kaj<b/>Labradoro</l><r>Novlando<b/>kaj<b/>Labradoro<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Novlando kaj Labradoro"><p><l>Novlandon<b/>kaj<b/>Labradoron</l><r>Novlando<b/>kaj<b/>Labradoro<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Nord-Okcidentaj Teritorioj"><p><l>Nord-Okcidentaj<b/>Teritorioj</l><r>Nord-Okcidentaj<b/>Teritorioj<s n="np"/><s n="loc"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="Nord-Okcidentaj Teritorioj"><p><l>Nord-Okcidentajn<b/>Teritoriojn</l><r>Nord-Okcidentaj<b/>Teritorioj<s n="np"/><s n="loc"/><s n="pl"/><s n="acc"/></r></p></e>
 <e lm="kilogramforto">   <i>kilogramfort</i><par n="o__n"/></e>
 <e lm="kilogrammetro">   <i>kilogrammetr</i><par n="o__n"/></e>
 <e lm="kiloherco">       <i>kiloherc</i><par n="o__n"/></e>
@@ -27333,6 +27394,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="ofto">            <i>oft</i><par n="o__n"/></e>
 <e lm="oftalmito">       <i>oftalmit</i><par n="o__n"/></e>
 <e lm="oftalmologio">    <i>oftalmologi</i><par n="o__n"/></e>
+<e lm="oftalmologo">    <i>oftalmolog</i><par n="o__n"/></e>
 <e lm="ofteco">          <i>oftec</i><par n="o__n"/></e>
 <e lm="ogro">            <i>ogr</i><par n="ino__n"/></e>
 <e lm="Ogrady">          <i>Ogrady</i><par n="Smith__np"/></e>
@@ -31330,7 +31392,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Remy" a="sans accents"><i>Remy</i><par n="Mark__np"/></e>
 <e lm="rena">            <i>ren</i><par n="a__adj"/></e>
 <e lm="reno">            <i>ren</i><par n="o__n"/></e>
-<e lm="Renaskiĝo">       <i>Renaskiĝ</i><par n="o__n"/></e>
 <e lm="renaskiĝo">       <i>renaskiĝ</i><par n="o__n"/></e>
 <e lm="Renato">          <i>Renat</i><par n="Mark/o__np"/></e>
 <e lm="Renata">          <i>Renata</i><par n="Marie__np"/></e>
@@ -40368,7 +40429,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="beneficulo">            <i>beneficul</i><par n="ino__n"/></e>
 <e lm="monkompensebla">            <i>monkompensebl</i><par n="a__adj"/></e>
 <e lm="profitanta">            <i>profitant</i><par n="a__adj"/></e>
-<e lm="standardisto">            <i>standardist</i><par n="ino__n"/></e>
 <e lm="Zurich">            <i>Zurich</i><par n="Wikipedia__np"/></e>
 
 <e lm="danciga">            <i>dancig</i><par n="a__adj"/></e>
@@ -40523,7 +40583,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="reelekto">            <i>reelekt</i><par n="o__n"/></e>
 <e lm="restarti">            <i>restart</i><par n="iĝi__vblex"/></e>
 <e lm="restarto">            <i>restart</i><par n="o__n"/></e>
-<e lm="romando">            <i>romand</i><par n="o__n"/></e>
+<e lm="romando">            <i>romand</i><par n="ino__n"/></e>
 <e lm="solide">            <i>solid</i><par n="e__adv"/></e>
 <e lm="starpunkto">            <i>starpunkt</i><par n="o__n"/></e>
 <e lm="ŝuldigi">            <i>ŝuldig</i><par n="igi__vblex"/></e>
@@ -44739,11 +44799,415 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="reloĝigi">            <i>reloĝig</i><par n="igi__vblex"/></e>
 
 
+<e lm="Okcidenta Flandrio"><p><l>Okcidenta<b/>Flandrio</l><r>Okcidenta<b/>Flandrio<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Okcidenta Flandrio"><p><l>Okcidentan<b/>Flandrion</l><r>Okcidenta<b/>Flandrio<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Orienta Flandrio"><p><l>Orienta<b/>Flandrio</l><r>Orienta<b/>Flandrio<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Orienta Flandrio"><p><l>Orientan<b/>Flandrion</l><r>Orienta<b/>Flandrio<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Frandra Brabanto"><p><l>Frandra<b/>Brabanto</l><r>Frandra<b/>Brabanto<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Frandra Brabanto"><p><l>Frandran<b/>Brabanton</l><r>Frandra<b/>Brabanto<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Valona Brabanto"><p><l>Valona<b/>Brabanto</l><r>Valona<b/>Brabanto<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Valona Brabanto"><p><l>Valonan<b/>Brabanton</l><r>Valona<b/>Brabanto<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
 
 
+<e lm="Cramponne">         <i>Cramponne</i><par n="Smith__np"/></e>
+<e lm="Maire">         <i>Maire</i><par n="Smith__np"/></e>
+<e lm="Vit">         <i>Vit</i><par n="Barcelono__np"/></e>
 
 
+<e lm="minimuma salajro"><p><l>minimuma<b/>salajro</l><r>minimuma<b/>salajro<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="minimuma salajro"><p><l>minimuman<b/>salajron</l><r>minimuma<b/>salajro<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="minimuma salajro"><p><l>minimumaj<b/>salajroj</l><r>minimuma<b/>salajro<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="minimuma salajro"><p><l>minimumajn<b/>salajrojn</l><r>minimuma<b/>salajro<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
 
+
+<e lm="Aarschot">            <i>Aarschot</i><par n="Barcelona__np"/></e>
+<e lm="Alost">            <i>Alost</i><par n="Barcelona__np"/></e>
+<e lm="Aalst">            <i>Aalst</i><par n="Barcelona__np"/></e>
+<e lm="Andenne">            <i>Andenne</i><par n="Barcelona__np"/></e>
+<e lm="Antoing">            <i>Antoing</i><par n="Barcelona__np"/></e>
+<e lm="Arlon">            <i>Arlon</i><par n="Barcelona__np"/></e>
+<e lm="Ath">            <i>Ath</i><par n="Barcelona__np"/></e>
+<e lm="Audenarde">            <i>Audenarde</i><par n="Barcelona__np"/></e>
+<e lm="Oudenaarde">            <i>Oudenaarde</i><par n="Barcelona__np"/></e>
+<e lm="Bastogne">            <i>Bastogne</i><par n="Barcelona__np"/></e>
+<e lm="Beaumont">            <i>Beaumont</i><par n="Barcelona__np"/></e>
+<e lm="Beauraing">            <i>Beauraing</i><par n="Barcelona__np"/></e>
+<e lm="Beringen">            <i>Beringen</i><par n="Barcelona__np"/></e>
+<e lm="Bilzen">            <i>Bilzen</i><par n="Barcelona__np"/></e>
+<e lm="Binche">            <i>Binche</i><par n="Barcelona__np"/></e>
+<e lm="Blankenberge">            <i>Blankenberge</i><par n="Barcelona__np"/></e>
+<e lm="Bouillon">            <i>Bouillon</i><par n="Barcelona__np"/></e>
+<e lm="Braine-le-Comte">            <i>Braine-le-Comte</i><par n="Barcelona__np"/></e>
+<e lm="Bree">            <i>Bree</i><par n="Barcelona__np"/></e>
+<e lm="Châtelet">            <i>Châtelet</i><par n="Barcelona__np"/></e>
+<e lm="Chièvres">            <i>Chièvres</i><par n="Barcelona__np"/></e>
+<e lm="Chimay">            <i>Chimay</i><par n="Barcelona__np"/></e>
+<e lm="Chiny">            <i>Chiny</i><par n="Barcelona__np"/></e>
+<e lm="Ciney">            <i>Ciney</i><par n="Barcelona__np"/></e>
+<e lm="Comines-Warneton">            <i>Comines-Warneton</i><par n="Barcelona__np"/></e>
+<e lm="Courtrai">            <i>Courtrai</i><par n="Barcelona__np"/></e>
+<e lm="Kortrijk">            <i>Kortrijk</i><par n="Barcelona__np"/></e>
+<e lm="Couvin">            <i>Couvin</i><par n="Barcelona__np"/></e>
+<e lm="Damme">            <i>Damme</i><par n="Barcelona__np"/></e>
+<e lm="Deinze">            <i>Deinze</i><par n="Barcelona__np"/></e>
+<e lm="Diest">            <i>Diest</i><par n="Barcelona__np"/></e>
+<e lm="Dilsen-Stokkem">            <i>Dilsen-Stokkem</i><par n="Barcelona__np"/></e>
+<e lm="Dinant">            <i>Dinant</i><par n="Barcelona__np"/></e>
+<e lm="Dixmude">            <i>Dixmude</i><par n="Barcelona__np"/></e>
+<e lm="Diksmuide">            <i>Diksmuide</i><par n="Barcelona__np"/></e>
+<e lm="Durbuy">            <i>Durbuy</i><par n="Barcelona__np"/></e>
+<e lm="Eeklo">            <i>Eeklo</i><par n="Barcelona__np"/></e>
+<e lm="Enghien">            <i>Enghien</i><par n="Barcelona__np"/></e>
+<e lm="Eupen">            <i>Eupen</i><par n="Barcelona__np"/></e>
+<e lm="Fleurus">            <i>Fleurus</i><par n="Barcelona__np"/></e>
+<e lm="Florenville">            <i>Florenville</i><par n="Barcelona__np"/></e>
+<e lm="Fontaine-l'Évêque">            <i>Fontaine-l'Évêque</i><par n="Barcelona__np"/></e>
+<e lm="Fosses-la-Ville">            <i>Fosses-la-Ville</i><par n="Barcelona__np"/></e>
+<e lm="Furnes">            <i>Furnes</i><par n="Barcelona__np"/></e>
+<e lm="Veurne">            <i>Veurne</i><par n="Barcelona__np"/></e>
+<e lm="Geel">            <i>Geel</i><par n="Barcelona__np"/></e>
+<e lm="Gembloux">            <i>Gembloux</i><par n="Barcelona__np"/></e>
+<e lm="Genappe">            <i>Genappe</i><par n="Barcelona__np"/></e>
+<e lm="Genk">            <i>Genk</i><par n="Barcelona__np"/></e>
+<e lm="Gistel">            <i>Gistel</i><par n="Barcelona__np"/></e>
+<e lm="Grammont">            <i>Grammont</i><par n="Barcelona__np"/></e>
+<e lm="Geraardsbergen">            <i>Geraardsbergen</i><par n="Barcelona__np"/></e>
+<e lm="Hal">            <i>Hal</i><par n="Barcelona__np"/></e>
+<e lm="Halle">            <i>Halle</i><par n="Barcelona__np"/></e>
+<e lm="Halen">            <i>Halen</i><par n="Barcelona__np"/></e>
+<e lm="Hamont-Achel">            <i>Hamont-Achel</i><par n="Barcelona__np"/></e>
+<e lm="Hannut">            <i>Hannut</i><par n="Barcelona__np"/></e>
+<e lm="Harelbeke">            <i>Harelbeke</i><par n="Barcelona__np"/></e>
+<e lm="Hasselt">            <i>Hasselt</i><par n="Barcelona__np"/></e>
+<e lm="Herck-la-Ville">            <i>Herck-la-Ville</i><par n="Barcelona__np"/></e>
+<e lm="Herk-de-Stad">            <i>Herk-de-Stad</i><par n="Barcelona__np"/></e>
+<e lm="Herentals">            <i>Herentals</i><par n="Barcelona__np"/></e>
+<e lm="Herstal">            <i>Herstal</i><par n="Barcelona__np"/></e>
+<e lm="Herve">            <i>Herve</i><par n="Barcelona__np"/></e>
+<e lm="Hoogstraten">            <i>Hoogstraten</i><par n="Barcelona__np"/></e>
+<e lm="Houffalize">            <i>Houffalize</i><par n="Barcelona__np"/></e>
+<e lm="Huy">            <i>Huy</i><par n="Barcelona__np"/></e>
+<e lm="Izegem">            <i>Izegem</i><par n="Barcelona__np"/></e>
+<e lm="Jodoigne">            <i>Jodoigne</i><par n="Barcelona__np"/></e>
+<e lm="La Louvière">            <i>La Louvière</i><par n="Barcelona__np"/></e>
+<e lm="La Roche-en-Ardenne">            <i>La Roche-en-Ardenne</i><par n="Barcelona__np"/></e>
+<e lm="Landen">            <i>Landen</i><par n="Barcelona__np"/></e>
+<e lm="Léau">            <i>Léau</i><par n="Barcelona__np"/></e>
+<e lm="Zoutleeuw">            <i>Zoutleeuw</i><par n="Barcelona__np"/></e>
+<e lm="Le Rœulx">            <i>Le Rœulx</i><par n="Barcelona__np"/></e>
+<e lm="Lessines">            <i>Lessines</i><par n="Barcelona__np"/></e>
+<e lm="Leuze-en-Hainaut">            <i>Leuze-en-Hainaut</i><par n="Barcelona__np"/></e>
+<e lm="Lierre">            <i>Lierre</i><par n="Barcelona__np"/></e>
+<e lm="Limbourg">            <i>Limbourg</i><par n="Barcelona__np"/></e>
+<e lm="Lokeren">            <i>Lokeren</i><par n="Barcelona__np"/></e>
+<e lm="Lommel">            <i>Lommel</i><par n="Barcelona__np"/></e>
+<e lm="Looz">            <i>Looz</i><par n="Barcelona__np"/></e>
+<e lm="Borgloon">            <i>Borgloon</i><par n="Barcelona__np"/></e>
+<e lm="Lo-Reninge">            <i>Lo-Reninge</i><par n="Barcelona__np"/></e>
+<e lm="Maaseik">            <i>Maaseik</i><par n="Barcelona__np"/></e>
+<e lm="Mechelen">            <i>Mechelen</i><par n="Barcelona__np"/></e>
+<e lm="Malmedy">            <i>Malmedy</i><par n="Barcelona__np"/></e>
+<e lm="Marche-en-Famenne">            <i>Marche-en-Famenne</i><par n="Barcelona__np"/></e>
+<e lm="Menin">            <i>Menin</i><par n="Barcelona__np"/></e>
+<e lm="Menen">            <i>Menen</i><par n="Barcelona__np"/></e>
+<e lm="Messines">            <i>Messines</i><par n="Barcelona__np"/></e>
+<e lm="Mesen">            <i>Mesen</i><par n="Barcelona__np"/></e>
+<e lm="Mons">            <i>Mons</i><par n="Barcelona__np"/></e>
+<e lm="Montaigu-Zichem">            <i>Montaigu-Zichem</i><par n="Barcelona__np"/></e>
+<e lm="Scherpenheuvel-Zichem">            <i>Scherpenheuvel-Zichem</i><par n="Barcelona__np"/></e>
+<e lm="Mortsel">            <i>Mortsel</i><par n="Barcelona__np"/></e>
+<e lm="Mouscron">            <i>Mouscron</i><par n="Barcelona__np"/></e>
+<e lm="Neufchâteau">            <i>Neufchâteau</i><par n="Barcelona__np"/></e>
+<e lm="Nieuport">            <i>Nieuport</i><par n="Barcelona__np"/></e>
+<e lm="Nieuwpoort">            <i>Nieuwpoort</i><par n="Barcelona__np"/></e>
+<e lm="Ninove">            <i>Ninove</i><par n="Barcelona__np"/></e>
+<e lm="Nivelles">            <i>Nivelles</i><par n="Barcelona__np"/></e>
+<e lm="Ottignies-Louvain-la-Neuve">            <i>Ottignies-Louvain-la-Neuve</i><par n="Barcelona__np"/></e>
+<e lm="Oudenburg">            <i>Oudenburg</i><par n="Barcelona__np"/></e>
+<e lm="Peer">            <i>Peer</i><par n="Barcelona__np"/></e>
+<e lm="Péruwelz">            <i>Péruwelz</i><par n="Barcelona__np"/></e>
+<e lm="Philippeville">            <i>Philippeville</i><par n="Barcelona__np"/></e>
+<e lm="Poperinge">            <i>Poperinge</i><par n="Barcelona__np"/></e>
+<e lm="Renaix">            <i>Renaix</i><par n="Barcelona__np"/></e>
+<e lm="Ronse">            <i>Ronse</i><par n="Barcelona__np"/></e>
+<e lm="Rochefort">            <i>Rochefort</i><par n="Barcelona__np"/></e>
+<e lm="Roulers">            <i>Roulers</i><par n="Barcelona__np"/></e>
+<e lm="Roeselare">            <i>Roeselare</i><par n="Barcelona__np"/></e>
+<e lm="Saint-Ghislain">            <i>Saint-Ghislain</i><par n="Barcelona__np"/></e>
+<e lm="Saint-Hubert">            <i>Saint-Hubert</i><par n="Barcelona__np"/></e>
+<e lm="Saint-Nicolas">            <i>Saint-Nicolas</i><par n="Barcelona__np"/></e>
+<e lm="Sint-Niklaas">            <i>Sint-Niklaas</i><par n="Barcelona__np"/></e>
+<e lm="Saint-Trond">            <i>Saint-Trond</i><par n="Barcelona__np"/></e>
+<e lm="Sint-Truiden">            <i>Sint-Truiden</i><par n="Barcelona__np"/></e>
+<e lm="Saint-Vith">            <i>Saint-Vith</i><par n="Barcelona__np"/></e>
+<e lm="Sankt Vith">            <i>Sankt Vith</i><par n="Barcelona__np"/></e>
+<e lm="Seraing">            <i>Seraing</i><par n="Barcelona__np"/></e>
+<e lm="Soignies">            <i>Soignies</i><par n="Barcelona__np"/></e>
+<e lm="Spa">            <i>Spa</i><par n="Barcelona__np"/></e>
+<e lm="Stavelot">            <i>Stavelot</i><par n="Barcelona__np"/></e>
+<e lm="Termonde">            <i>Termonde</i><par n="Barcelona__np"/></e>
+<e lm="Dendermonde">            <i>Dendermonde</i><par n="Barcelona__np"/></e>
+<e lm="Thuin">            <i>Thuin</i><par n="Barcelona__np"/></e>
+<e lm="Tielt">            <i>Tielt</i><par n="Barcelona__np"/></e>
+<e lm="Tirlemont">            <i>Tirlemont</i><par n="Barcelona__np"/></e>
+<e lm="Tienen">            <i>Tienen</i><par n="Barcelona__np"/></e>
+<e lm="Tongres">            <i>Tongres</i><par n="Barcelona__np"/></e>
+<e lm="Tongeren">            <i>Tongeren</i><par n="Barcelona__np"/></e>
+<e lm="Torhout">            <i>Torhout</i><par n="Barcelona__np"/></e>
+<e lm="Tournai">            <i>Tournai</i><par n="Barcelona__np"/></e>
+<e lm="Turnhout">            <i>Turnhout</i><par n="Barcelona__np"/></e>
+<e lm="Verviers">            <i>Verviers</i><par n="Barcelona__np"/></e>
+<e lm="Vilvorde">            <i>Vilvorde</i><par n="Barcelona__np"/></e>
+<e lm="Vilvoorde">            <i>Vilvoorde</i><par n="Barcelona__np"/></e>
+<e lm="Virton">            <i>Virton</i><par n="Barcelona__np"/></e>
+<e lm="Visé">            <i>Visé</i><par n="Barcelona__np"/></e>
+<e lm="Walcourt">            <i>Walcourt</i><par n="Barcelona__np"/></e>
+<e lm="Waregem">            <i>Waregem</i><par n="Barcelona__np"/></e>
+<e lm="Waremme">            <i>Waremme</i><par n="Barcelona__np"/></e>
+<e lm="Wavre">            <i>Wavre</i><par n="Barcelona__np"/></e>
+<e lm="Wervik">            <i>Wervik</i><par n="Barcelona__np"/></e>
+<e lm="Ypres">            <i>Ypres</i><par n="Barcelona__np"/></e>
+<e lm="Ieper">            <i>Ieper</i><par n="Barcelona__np"/></e>
+<e lm="Zottegem">            <i>Zottegem</i><par n="Barcelona__np"/></e>
+<e lm="Alost">            <i>Alost</i><par n="Barcelona__np"/></e>
+<e lm="Arlon">            <i>Arlon</i><par n="Barcelona__np"/></e>
+<e lm="Ath">            <i>Ath</i><par n="Barcelona__np"/></e>
+<e lm="Audenarde">            <i>Audenarde</i><par n="Barcelona__np"/></e>
+<e lm="Bastogne">            <i>Bastogne</i><par n="Barcelona__np"/></e>
+<e lm="Courtrai">            <i>Courtrai</i><par n="Barcelona__np"/></e>
+<e lm="Dinant">            <i>Dinant</i><par n="Barcelona__np"/></e>
+<e lm="Dixmude">            <i>Dixmude</i><par n="Barcelona__np"/></e>
+<e lm="Eeklo">            <i>Eeklo</i><par n="Barcelona__np"/></e>
+<e lm="Furnes">            <i>Furnes</i><par n="Barcelona__np"/></e>
+<e lm="Hal-Vilvorde">            <i>Hal-Vilvorde</i><par n="Barcelona__np"/></e>
+<e lm="Hasselt">            <i>Hasselt</i><par n="Barcelona__np"/></e>
+<e lm="Huy">            <i>Huy</i><par n="Barcelona__np"/></e>
+<e lm="Maaseik">            <i>Maaseik</i><par n="Barcelona__np"/></e>
+<e lm="Marche-en-Famenne">            <i>Marche-en-Famenne</i><par n="Barcelona__np"/></e>
+<e lm="Mons">            <i>Mons</i><par n="Barcelona__np"/></e>
+<e lm="Mouscron">            <i>Mouscron</i><par n="Barcelona__np"/></e>
+<e lm="Neufchâteau">            <i>Neufchâteau</i><par n="Barcelona__np"/></e>
+<e lm="Nivelles">            <i>Nivelles</i><par n="Barcelona__np"/></e>
+<e lm="Philippeville">            <i>Philippeville</i><par n="Barcelona__np"/></e>
+<e lm="Roulers">            <i>Roulers</i><par n="Barcelona__np"/></e>
+<e lm="Saint-Nicolas">            <i>Saint-Nicolas</i><par n="Barcelona__np"/></e>
+<e lm="Soignies">            <i>Soignies</i><par n="Barcelona__np"/></e>
+<e lm="Termonde">            <i>Termonde</i><par n="Barcelona__np"/></e>
+<e lm="Thuin">            <i>Thuin</i><par n="Barcelona__np"/></e>
+<e lm="Tielt">            <i>Tielt</i><par n="Barcelona__np"/></e>
+<e lm="Tongres">            <i>Tongres</i><par n="Barcelona__np"/></e>
+<e lm="Tournai">            <i>Tournai</i><par n="Barcelona__np"/></e>
+<e lm="Turnhout">            <i>Turnhout</i><par n="Barcelona__np"/></e>
+<e lm="Verviers">            <i>Verviers</i><par n="Barcelona__np"/></e>
+<e lm="Virton">            <i>Virton</i><par n="Barcelona__np"/></e>
+<e lm="Waremme">            <i>Waremme</i><par n="Barcelona__np"/></e>
+<e lm="Ypres">            <i>Ypres</i><par n="Barcelona__np"/></e>
+<e lm="Calgary">            <i>Calgary</i><par n="Barcelona__np"/></e>
+<e lm="Edmonton">            <i>Edmonton</i><par n="Barcelona__np"/></e>
+<e lm="Mississauga">            <i>Mississauga</i><par n="Barcelona__np"/></e>
+<e lm="Hamilton">            <i>Hamilton</i><par n="Barcelona__np"/></e>
+<e lm="Brampton">            <i>Brampton</i><par n="Barcelona__np"/></e>
+<e lm="Surrey">            <i>Surrey</i><par n="Barcelona__np"/></e>
+<e lm="Halifax">            <i>Halifax</i><par n="Barcelona__np"/></e>
+<e lm="Laval">            <i>Laval</i><par n="Barcelona__np"/></e>
+<e lm="London">            <i>London</i><par n="Barcelona__np"/></e>
+<e lm="Markham">            <i>Markham</i><par n="Barcelona__np"/></e>
+<e lm="Gatineau">            <i>Gatineau</i><par n="Barcelona__np"/></e>
+<e lm="Vaughan">            <i>Vaughan</i><par n="Barcelona__np"/></e>
+<e lm="Longueuil">            <i>Longueuil</i><par n="Barcelona__np"/></e>
+<e lm="Windsor">            <i>Windsor</i><par n="Barcelona__np"/></e>
+<e lm="Kitchener">            <i>Kitchener</i><par n="Barcelona__np"/></e>
+<e lm="Burnaby">            <i>Burnaby</i><par n="Barcelona__np"/></e>
+<e lm="Saskatoon">            <i>Saskatoon</i><par n="Barcelona__np"/></e>
+<e lm="Richmond">            <i>Richmond</i><par n="Barcelona__np"/></e>
+<e lm="Oakville">            <i>Oakville</i><par n="Barcelona__np"/></e>
+<e lm="Burlington">            <i>Burlington</i><par n="Barcelona__np"/></e>
+<e lm="Richmond Hill">            <i>Richmond Hill</i><par n="Barcelona__np"/></e>
+<e lm="Grand Sudbury">            <i>Grand Sudbury</i><par n="Barcelona__np"/></e>
+<e lm="Sherbrooke">            <i>Sherbrooke</i><par n="Barcelona__np"/></e>
+<e lm="Saguenay">            <i>Saguenay</i><par n="Barcelona__np"/></e>
+<e lm="Oshawa">            <i>Oshawa</i><par n="Barcelona__np"/></e>
+<e lm="St. Catharines">            <i>St. Catharines</i><par n="Barcelona__np"/></e>
+<e lm="Lévis">            <i>Lévis</i><par n="Barcelona__np"/></e>
+<e lm="Barrie">            <i>Barrie</i><par n="Barcelona__np"/></e>
+<e lm="Trois-Rivières">            <i>Trois-Rivières</i><par n="Barcelona__np"/></e>
+<e lm="Abottsford">            <i>Abottsford</i><par n="Barcelona__np"/></e>
+<e lm="Kingston">            <i>Kingston</i><par n="Barcelona__np"/></e>
+<e lm="Guelph">            <i>Guelph</i><par n="Barcelona__np"/></e>
+<e lm="Coquitlam">            <i>Coquitlam</i><par n="Barcelona__np"/></e>
+<e lm="Whitby">            <i>Whitby</i><par n="Barcelona__np"/></e>
+<e lm="Thunder Bay">            <i>Thunder Bay</i><par n="Barcelona__np"/></e>
+<e lm="Saanich">            <i>Saanich</i><par n="Barcelona__np"/></e>
+<e lm="Chatham-Kent">            <i>Chatham-Kent</i><par n="Barcelona__np"/></e>
+<e lm="Kelowna">            <i>Kelowna</i><par n="Barcelona__np"/></e>
+<e lm="Cape Breton">            <i>Cape Breton</i><par n="Barcelona__np"/></e>
+<e lm="Waterloo">            <i>Waterloo</i><par n="Barcelona__np"/></e>
+<e lm="Delta">            <i>Delta</i><par n="Barcelona__np"/></e>
+<e lm="Terrebonne">            <i>Terrebonne</i><par n="Barcelona__np"/></e>
+<e lm="Langley">            <i>Langley</i><par n="Barcelona__np"/></e>
+<e lm="Brantford">            <i>Brantford</i><par n="Barcelona__np"/></e>
+<e lm="Ajax">            <i>Ajax</i><par n="Barcelona__np"/></e>
+<e lm="Pickering">            <i>Pickering</i><par n="Barcelona__np"/></e>
+<e lm="Saint-Jean-sur-Richelieu">            <i>Saint-Jean-sur-Richelieu</i><par n="Barcelona__np"/></e>
+<e lm="Red Deer">            <i>Red Deer</i><par n="Barcelona__np"/></e>
+<e lm="North Vancouver">            <i>North Vancouver</i><par n="Barcelona__np"/></e>
+<e lm="Comté de Strathcona">            <i>Comté de Strathcona</i><par n="Barcelona__np"/></e>
+<e lm="Niagara Falls">            <i>Niagara Falls</i><par n="Barcelona__np"/></e>
+<e lm="Kamloops">            <i>Kamloops</i><par n="Barcelona__np"/></e>
+<e lm="Nanaimo">            <i>Nanaimo</i><par n="Barcelona__np"/></e>
+<e lm="Clarington">            <i>Clarington</i><par n="Barcelona__np"/></e>
+<e lm="Repentigny">            <i>Repentigny</i><par n="Barcelona__np"/></e>
+<e lm="Sault-Sainte-Marie">            <i>Sault-Sainte-Marie</i><par n="Barcelona__np"/></e>
+<e lm="Peterborough">            <i>Peterborough</i><par n="Barcelona__np"/></e>
+<e lm="Lethbridge">            <i>Lethbridge</i><par n="Barcelona__np"/></e>
+<e lm="Kawartha Lakes">            <i>Kawartha Lakes</i><par n="Barcelona__np"/></e>
+<e lm="Newmarket">            <i>Newmarket</i><par n="Barcelona__np"/></e>
+<e lm="Sarnia">            <i>Sarnia</i><par n="Barcelona__np"/></e>
+<e lm="Brossard">            <i>Brossard</i><par n="Barcelona__np"/></e>
+<e lm="Prince George">            <i>Prince George</i><par n="Barcelona__np"/></e>
+<e lm="Chilliwack">            <i>Chilliwack</i><par n="Barcelona__np"/></e>
+<e lm="Maple Ridge">            <i>Maple Ridge</i><par n="Barcelona__np"/></e>
+<e lm="Drummondville">            <i>Drummondville</i><par n="Barcelona__np"/></e>
+<e lm="Moncton">            <i>Moncton</i><par n="Barcelona__np"/></e>
+<e lm="Saint-Jérôme">            <i>Saint-Jérôme</i><par n="Barcelona__np"/></e>
+<e lm="Norfolk">            <i>Norfolk</i><par n="Barcelona__np"/></e>
+<e lm="Granby">            <i>Granby</i><par n="Barcelona__np"/></e>
+<e lm="New Westminster">            <i>New Westminster</i><par n="Barcelona__np"/></e>
+<e lm="Saint Albert">            <i>Saint Albert</i><par n="Barcelona__np"/></e>
+<e lm="Caledon">            <i>Caledon</i><par n="Barcelona__np"/></e>
+<e lm="Medicine Hat">            <i>Medicine Hat</i><par n="Barcelona__np"/></e>
+<e lm="Halton Hills">            <i>Halton Hills</i><par n="Barcelona__np"/></e>
+<e lm="North Bay">            <i>North Bay</i><par n="Barcelona__np"/></e>
+<e lm="Milton">            <i>Milton</i><par n="Barcelona__np"/></e>
+<e lm="Port Coquitlam">            <i>Port Coquitlam</i><par n="Barcelona__np"/></e>
+<e lm="Shawinigan">            <i>Shawinigan</i><par n="Barcelona__np"/></e>
+<e lm="Saint-Hyacinthe">            <i>Saint-Hyacinthe</i><par n="Barcelona__np"/></e>
+<e lm="Wood Buffalo">            <i>Wood Buffalo</i><par n="Barcelona__np"/></e>
+<e lm="Fredericton">            <i>Fredericton</i><par n="Barcelona__np"/></e>
+<e lm="Welland">            <i>Welland</i><par n="Barcelona__np"/></e>
+<e lm="Dollard-Des Ormeaux">            <i>Dollard-Des Ormeaux</i><par n="Barcelona__np"/></e>
+<e lm="Belleville">            <i>Belleville</i><par n="Barcelona__np"/></e>
+<e lm="Aurora">            <i>Aurora</i><par n="Barcelona__np"/></e>
+<e lm="Grande Prairie">            <i>Grande Prairie</i><par n="Barcelona__np"/></e>
+<e lm="Blainville">            <i>Blainville</i><par n="Barcelona__np"/></e>
+<e lm="Cornwall">            <i>Cornwall</i><par n="Barcelona__np"/></e>
+<e lm="Charlottetown">            <i>Charlottetown</i><par n="Barcelona__np"/></e>
+<e lm="Yellowknife">            <i>Yellowknife</i><par n="Barcelona__np"/></e>
+<e lm="Whitehorse">            <i>Whitehorse</i><par n="Barcelona__np"/></e>
+<e lm="Winterthour">            <i>Winterthour</i><par n="Barcelona__np"/></e>
+<e lm="Saint-Gall">            <i>Saint-Gall</i><par n="Barcelona__np"/></e>
+<e lm="Lugano">            <i>Lugano</i><par n="Barcelona__np"/></e>
+<e lm="Thoune">            <i>Thoune</i><par n="Barcelona__np"/></e>
+<e lm="La Chaux-de-Fonds">            <i>La Chaux-de-Fonds</i><par n="Barcelona__np"/></e>
+<e lm="Köniz">            <i>Köniz</i><par n="Barcelona__np"/></e>
+<e lm="Schaffhouse">            <i>Schaffhouse</i><par n="Barcelona__np"/></e>
+<e lm="Vernier">            <i>Vernier</i><par n="Barcelona__np"/></e>
+<e lm="Uster">            <i>Uster</i><par n="Barcelona__np"/></e>
+<e lm="Sion">            <i>Sion</i><par n="Barcelona__np"/></e>
+
+
+<e lm="Alberto">            <i>Albert</i><par n="Barcelon/o__np"/></e>
+<e lm="algonkena">            <i>algonken</i><par n="a__adj"/></e>
+<e lm="alteregoo">            <i>alterego</i><par n="o__n"/></e>
+<e lm="atabaska">            <i>atabask</i><par n="a__adj"/></e>
+<e lm="banka">            <i>bank</i><par n="a__adj"/></e>
+<e lm="banke">            <i>bank</i><par n="e__adv"/></e>
+<e lm="Brugge">            <i>Brugge</i><par n="Barcelona__np"/></e>
+<e lm="Bruselo-Ĉefurbo">            <i>Bruselo-Ĉefurb</i><par n="Barcelon/o__np"/></e>
+<e lm="celebri">            <i>celebr</i><par n="i__vblex"/></e>
+<e lm="ĉipevajana">            <i>ĉipevajan</i><par n="a__adj"/></e>
+<e lm="ĉipevajano">            <i>ĉipevajan</i><par n="ino__n"/></e>
+<e lm="civilinĝenierarto">            <i>civilinĝenierart</i><par n="o__n"/></e>
+<e lm="dialektoparolanta">            <i>dialektoparolant</i><par n="a__adj"/></e>
+<e lm="dialektoparolanto">            <i>dialektoparolant</i><par n="ino__n"/></e>
+<e lm="dioceza">            <i>diocez</i><par n="a__adj"/></e>
+<e lm="duoncirklo">            <i>duoncirkl</i><par n="o__n"/></e>
+<e lm="eskim-aleuta">            <i>eskim-aleut</i><par n="a__adj"/></e>
+<e lm="filmado">            <i>filmad</i><par n="o__n"/></e>
+<e lm="flagetoportanto">            <i>flagetoportant</i><par n="ino__n"/></e>
+<e lm="Flandre-Occidentale">            <i>Flandre-Occidentale</i><par n="Barcelona__np"/></e>
+<e lm="Flandre-Orientale">            <i>Flandre-Orientale</i><par n="Barcelona__np"/></e>
+<e lm="flega">            <i>fleg</i><par n="a__adj"/></e>
+<e lm="gesta">            <i>gest</i><par n="a__adj"/></e>
+<e lm="geste">            <i>gest</i><par n="e__adv"/></e>
+<e lm="gronlanda">            <i>gronland</i><par n="a__adj"/></e>
+<e lm="gronlandano">            <i>gronlandan</i><par n="ino__n"/></e>
+<e lm="Gviĉino">            <i>Gviĉin</i><par n="Vikipedi/o__np"/></e>
+<e lm="honorinde">            <i>honorind</i><par n="e__adv"/></e>
+<e lm="Ikaluito">            <i>Ikaluit</i><par n="Barcelon/o__np"/></e>
+<e lm="ilustristo">            <i>ilustrist</i><par n="ino__n"/></e>
+<e lm="ilustro">            <i>ilustr</i><par n="o__n"/></e>
+<e lm="Inuinaktuno">            <i>Inuinaktun</i><par n="Vikipedi/o__np"/></e>
+<e lm="Inukpiako">            <i>Inukpiak</i><par n="Vikipedi/o__np"/></e>
+<e lm="Inuktituto">            <i>Inuktitut</i><par n="Vikipedi/o__np"/></e>
+<e lm="Inuvialuktuno">            <i>Inuvialuktun</i><par n="Vikipedi/o__np"/></e>
+<e lm="kejnsisma">            <i>kejnsism</i><par n="a__adj"/></e>
+<e lm="kejnsismo">            <i>kejnsism</i><par n="o__n"/></e>
+<e lm="kejnsisto">            <i>kejnsist</i><par n="ino__n"/></e>
+<e lm="Koiro">            <i>Koir</i><par n="Barcelon/o__np"/></e>
+<e lm="komizo">            <i>komiz</i><par n="o__n"/></e>
+<e lm="konduktilo">            <i>konduktil</i><par n="o__n"/></e>
+<e lm="konvena">            <i>konven</i><par n="a__adj"/></e>
+<e lm="kosova">            <i>kosov</i><par n="a__adj"/></e>
+<e lm="kosovano">            <i>kosovan</i><par n="ino__n"/></e>
+<e lm="Kosovo">            <i>Kosov</i><par n="Barcelon/o__np"/></e>
+<e lm="kriminale">            <i>kriminal</i><par n="e__adv"/></e>
+<e lm="kriplo">            <i>kripl</i><par n="o__n"/></e>
+<e lm="kromsigno">            <i>kromsign</i><par n="o__n"/></e>
+<e lm="kuracbanejo">            <i>kuracbanej</i><par n="o__n"/></e>
+<e lm="Labrador">            <i>Labrador</i><par n="Barcelona__np"/></e>
+<e lm="laŭtega">            <i>laŭteg</i><par n="a__adj"/></e>
+<e lm="Lucerno">            <i>Lucern</i><par n="Barcelon/o__np"/></e>
+<e lm="malinkline">            <i>malinklin</i><par n="e__adv"/></e>
+<e lm="Manitoba">            <i>Manitoba</i><par n="Barcelona__np"/></e>
+<e lm="Miĉigano">            <i>Miĉigan</i><par n="Barcelon/o__np"/></e>
+<e lm="mulata">            <i>mulat</i><par n="a__adj"/></e>
+<e lm="muteco">            <i>mutec</i><par n="o__n"/></e>
+<e lm="mutualeco">            <i>mutualec</i><par n="o__n"/></e>
+<e lm="mutualisma">            <i>mutualism</i><par n="a__adj"/></e>
+<e lm="mutualismo">            <i>mutualism</i><par n="o__n"/></e>
+<e lm="mutualisto">            <i>mutualist</i><par n="ino__n"/></e>
+<e lm="na-denea">            <i>na-dene</i><par n="a__adj"/></e>
+<e lm="Nord-slavio">            <i>Nord-slavi</i><par n="Vikipedi/o__np"/></e>
+<e lm="novkejnsisma">            <i>novkejnsism</i><par n="a__adj"/></e>
+<e lm="novkejnsismo">            <i>novkejnsism</i><par n="o__n"/></e>
+<e lm="novkejnsisto">            <i>novkejnsist</i><par n="ino__n"/></e>
+<e lm="Novlando">            <i>Novland</i><par n="Barcelon/o__np"/></e>
+<e lm="Nunavuto">            <i>Nunavut</i><par n="Barcelon/o__np"/></e>
+<e lm="oftalmologo">            <i>oftalmolog</i><par n="ino__n"/></e>
+<e lm="OS">            <i>OS</i><par n="BBC__n"/></e>
+<e lm="pionirarto">            <i>pionirart</i><par n="o__n"/></e>
+<e lm="plibonigebla">            <i>plibonigebl</i><par n="a__adj"/></e>
+<e lm="postkejnsisma">            <i>postkejnsism</i><par n="a__adj"/></e>
+<e lm="postkejnsismo">            <i>postkejnsism</i><par n="o__n"/></e>
+<e lm="postkejnsisto">            <i>postkejnsist</i><par n="ino__n"/></e>
+<e lm="Prerioj">            <i>Preri</i><par n="And/oj__np"/></e>
+<e lm="priskribe">            <i>priskrib</i><par n="e__adv"/></e>
+<e lm="pufigita">            <i>pufigit</i><par n="a__adj"/></e>
+<e lm="reklasigo">            <i>reklasig</i><par n="o__n"/></e>
+<e lm="Saskaĉevano">            <i>Saskaĉevan</i><par n="Barcelon/o__np"/></e>
+<e lm="savbrigada">            <i>savbrigad</i><par n="a__adj"/></e>
+<e lm="savbrigadano">            <i>savbrigadan</i><par n="ino__n"/></e>
+<e lm="savismo">            <i>savism</i><par n="o__n"/></e>
+<e lm="senpageco">            <i>senpagec</i><par n="o__n"/></e>
+<e lm="ŝirmejo">            <i>ŝirmej</i><par n="o__n"/></e>
+<e lm="Slavio">            <i>Slavi</i><par n="Vikipedi/o__np"/></e>
+<e lm="sprintisto">            <i>sprintist</i><par n="ino__n"/></e>
+<e lm="sprinti">            <i>sprint</i><par n="i__vblex"/></e>
+<e lm="sprinto">            <i>sprint</i><par n="o__n"/></e>
+<e lm="standardisto">            <i>standardist</i><par n="ino__n"/></e>
+<e lm="Sud-slavio">            <i>Sud-slavi</i><par n="Vikipedi/o__np"/></e>
+<e lm="sufleo">            <i>sufle</i><par n="o__n"/></e>
+<e lm="suncentra">            <i>suncentr</i><par n="a__adj"/></e>
+<e lm="suncentre">            <i>suncentr</i><par n="e__adv"/></e>
+<e lm="suncentrismo">            <i>suncentrism</i><par n="o__n"/></e>
+<e lm="tercentra">            <i>tercentr</i><par n="a__adj"/></e>
+<e lm="tercentre">            <i>tercentr</i><par n="e__adv"/></e>
+<e lm="tercentrismo">            <i>tercentrism</i><par n="o__n"/></e>
+<e lm="tliĉoa">            <i>tliĉo</i><par n="a__adj"/></e>
+<e lm="tliĉoo">            <i>tliĉo</i><par n="ino__n"/></e>
+<e lm="Vankuvero">            <i>Vankuver</i><par n="Barcelon/o__np"/></e>
+<e lm="Vinipego">            <i>Vinipeg</i><par n="Barcelon/o__np"/></e>
 
   </section>
   <section id="final" type="inconditional">

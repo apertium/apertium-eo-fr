@@ -31,7 +31,7 @@
     </def-cat>
 
     <def-cat n="det">
-      <cat-item tags="DET.*"/>
+      <cat-item tags="det.*"/>
     </def-cat>
 
     <def-cat n="SAdj"> <!-- adjektiva sintagmo -->
@@ -67,7 +67,7 @@
     </def-cat>
 
     <def-cat n="unknown">
-       <cat-item lemma="unknown" tags=""/>
+       <cat-item lemma="unknown" tags="unknown"/>
     </def-cat>
 
     <def-cat n="CC">
@@ -79,12 +79,20 @@
       <cat-item tags="and_or.*"/>
     </def-cat>
 
+    <def-cat n="al">
+      <cat-item lemma="al" tags="pr"/>
+    </def-cat>
+
     <def-cat n="da">
       <cat-item lemma="da" tags="pr"/>
     </def-cat>
 
     <def-cat n="loc">
       <cat-item lemma="loc" tags="SN.*"/>
+    </def-cat>
+
+    <def-cat n="que">
+      <cat-item tags="SN.itg.*"/>
     </def-cat>
 
     <def-cat n="sent">
@@ -120,7 +128,7 @@
       <cat-item tags="adv.*"/>
       <cat-item tags="num.*"/>
       <cat-item tags="predet.*"/>
-      <cat-item tags="DET.*"/>
+      <cat-item tags="det.*"/>
       <cat-item tags="cnjadv"/>
       <cat-item tags="cnjcoo"/>
       <cat-item tags="cnjsub"/>
@@ -840,6 +848,98 @@ bedaŭrinde ne eblas (en kelkaj okazoj) meti ĉion sub unu solan SN; pro tio, se
 </rule>
 -->
 
+  <!-- QUE -->
+
+    <rule comment="REGLA: SN PRN_INT   -   SN KIU ">
+      <pattern>
+        <pattern-item n="SN"/>
+        <pattern-item n="que"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+	  <chunk>
+	    <get-case-from pos="2">
+	      <lit v="prn"/>
+	    </get-case-from>
+	    <lit-tag v="SNrelatiu.rel.sp.nom.nom"/>
+	    <lit v="{^"/>
+	    <get-case-from pos="2">
+	      <lit v="kiu"/>
+	    </get-case-from>
+	    <lit-tag v="prn.rel.3.4"/>
+	    <lit v="$}"/>
+	  </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: SV PRN_INT   -   SV KE">
+      <pattern>
+        <pattern-item n="SV"/>
+        <pattern-item n="que"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+	  <chunk>
+	    <get-case-from pos="2">
+	      <lit v="ke"/>
+	    </get-case-from>
+	    <lit-tag v="cnjsub"/>
+	    <lit v="{^"/>
+	    <get-case-from pos="2">
+	      <lit v="ke"/>
+	    </get-case-from>
+	    <lit-tag v="cnjsub"/>
+	    <lit v="$}"/>
+	  </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: SV ADV PRN_INT   -   SV KE">
+      <pattern>
+        <pattern-item n="SV"/>
+        <pattern-item n="adv"/>
+        <pattern-item n="que"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="2"/>
+	  <chunk>
+	    <get-case-from pos="3">
+	      <lit v="ke"/>
+	    </get-case-from>
+	    <lit-tag v="cnjsub"/>
+	    <lit v="{^"/>
+	    <get-case-from pos="3">
+	      <lit v="ke"/>
+	    </get-case-from>
+	    <lit-tag v="cnjsub"/>
+	    <lit v="$}"/>
+	  </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+  <!-- BLANKOJ -->
 
     <rule comment="REGLA: forigo de blankoj antaŭ fermaj interpunkciiloj ">
       <pattern>
@@ -887,7 +987,6 @@ bedaŭrinde ne eblas (en kelkaj okazoj) meti ĉion sub unu solan SN; pro tio, se
         </out>
       </action>
     </rule>
-
 
   </section-rules>
 </interchunk>

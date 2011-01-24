@@ -275,19 +275,13 @@
                   not used again in this rule -->
         <when>
           <test>
-            <equal>
-              <clip pos="1" part="nbr"/>
-              <lit-tag v="sg"/>
-            </equal>
+            <equal><clip pos="1" part="nbr"/><lit-tag v="sg"/></equal>
           </test>
           <let><var n="nombre"/><lit-tag v="sg"/></let>
         </when>
         <when>
           <test>
-            <equal>
-              <clip pos="1" part="nbr"/>
-              <lit-tag v="pl"/>
-            </equal>
+            <equal><clip pos="1" part="nbr"/><lit-tag v="pl"/></equal>
           </test>
           <let><var n="nombre"/><lit-tag v="pl"/></let>
         </when>
@@ -314,7 +308,31 @@
               </and>
             </test>
             <let><clip pos="2" part="nbr"/><clip pos="1" part="nbr"/></let>
-	</when>
+	  </when>
+          <otherwise>
+            <choose>
+                <when>
+                  <test>
+                    <or>
+                      <equal><clip pos="1" part="nbr"/><lit-tag v="sp"/></equal>
+                      <equal><clip pos="1" part="nbr"/><lit-tag v="ND"/></equal>
+                    </or>
+                  </test>
+                  <let><clip pos="1" part="nbr"/><lit-tag v="sg"/></let>
+	        </when>
+            </choose>
+            <choose>
+                <when>
+                  <test>
+                    <or>
+                      <equal><clip pos="2" part="nbr"/><lit-tag v="sp"/></equal>
+                      <equal><clip pos="2" part="nbr"/><lit-tag v="ND"/></equal>
+                    </or>
+                  </test>
+                  <let><clip pos="2" part="nbr"/><lit-tag v="sg"/></let>
+	        </when>
+            </choose>
+          </otherwise>
       </choose>
     </def-macro>
 

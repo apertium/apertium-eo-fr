@@ -3,51 +3,51 @@
 
 <section-def-cats>
 
-	<def-cat n="SUBJ">
-      <cat-item name="subj"/>
- 	</def-cat>
+  <def-cat n="NOM">
+      <cat-item name="nomXXXXXXXXXX"/>
+  </def-cat>
 
+  <def-cat n="ADJ">
+      <cat-item name="adj"/>
+  </def-cat>
 
 </section-def-cats>
 
 <section-def-attrs>
 
-
-
-
-<def-attr n="pers">
+   <def-attr n="pers">
           <attr-item tags="p1"/>
           <attr-item tags="p2"/>
           <attr-item tags="p3"/>
           <attr-item tags="PD"/>
-</def-attr>
+   </def-attr>
 
-      <def-attr n="gen">
+   <def-attr n="gen">
           <attr-item tags="m"/>
           <attr-item tags="f"/>
           <attr-item tags="mf"/>
           <attr-item tags="GD"/>
           <attr-item tags="nt"/>
-      </def-attr>
+   </def-attr>
 
    <def-attr n="nbr">
           <attr-item tags="sg"/>
           <attr-item tags="pl"/>
           <attr-item tags="sp"/>
           <attr-item tags="ND"/>
-      </def-attr>
+   </def-attr>
 
 
-<def-attr n="a_verb">
+   <def-attr n="a_verb">
 	  <attr-item tags="vblex"/>
 	  <attr-item tags="vbser"/>
 	  <attr-item tags="vbhaver"/>
 	  <attr-item tags="vbmod"/>
 	  <attr-item tags="vaux"/>
-</def-attr>
+   </def-attr>
 
 
-      <def-attr n="temps">
+   <def-attr n="temps">
           <attr-item tags="inf"/>
           <attr-item tags="pres"/>
           <attr-item tags="past"/>
@@ -64,13 +64,12 @@
           <attr-item tags="subs"/>
           <attr-item tags="fti"/>
           <attr-item tags="fts"/>
-      </def-attr>
+   </def-attr>
 
- <def-attr n="a_SV">
+   <def-attr n="a_SV">
           <attr-item tags="SVneg"/>
           <attr-item tags="SV"/>
-</def-attr>     
-
+   </def-attr>     
 
   </section-def-attrs>
 
@@ -83,52 +82,21 @@
 
   <section-rules>
 
-<rule comment="CHUNK: SUBJ">
+    <rule comment="CHUNK: NOM">
       <pattern>
-        <pattern-item n="SUBJ"/>
+        <pattern-item n="NOM"/>
       </pattern>
       <action>
 	<choose>
 	  <when>
 	    <test>
-	      <and>
-		<equal>
-		  <clip pos="1" part="pers"/>
-		  <lit-tag v="p3"/>
-		</equal>
-		<equal>
-		  <clip pos="1" part="nbr"/>
-		  <lit-tag v="sg"/>
-		</equal>
-	      </and>
+	      <or>
+		<equal><clip pos="1" part="nbr"/><lit-tag v="ND"/></equal>
+		<equal><clip pos="1" part="nbr"/><lit-tag v="sp"/></equal>
+	      </or>
 	    </test>
-	    <let>
-	      <clip pos="1" part="gen"/>
-	      <lit-tag v="nt"/>
-	    </let>
+	    <let><clip pos="1" part="nbr"/><lit-tag v="sg"/></let>
 	  </when>
-	  <when>
-	    <test>
-	      <equal>
-		<clip pos="1" part="pers"/>
-		<lit-tag v="p2"/>
-	      </equal>
-	    </test>
-	    <let>
-	      <clip pos="1" part="nbr"/>
-	      <lit-tag v="sp"/>
-	    </let>
-	    <let>
-	      <clip pos="1" part="gen"/>
-	      <lit-tag v="mf"/>
-	    </let>
-	  </when>
-	  <otherwise>
-	    <let>
-	      <clip pos="1" part="gen"/>
-	      <lit-tag v="mf"/>
-	    </let>
-	  </otherwise>
 	</choose>
 	<out>
 	  <lu>
@@ -136,6 +104,33 @@
 	  </lu>
 	</out>
       </action>
-</rule>
+    </rule>
+
+<!--
+    <rule comment="CHUNK: ADJ">
+      <pattern>
+        <pattern-item n="ADJ"/>
+      </pattern>
+      <action>
+	<choose>
+	  <when>
+	    <test>
+	      <or>
+		<equal><clip pos="1" part="nbr"/><lit-tag v="ND"/></equal>
+		<equal><clip pos="1" part="nbr"/><lit-tag v="sp"/></equal>
+	      </or>
+	    </test>
+	    <let><clip pos="1" part="nbr"/><lit-tag v="sg"/></let>
+	  </when>
+	</choose>
+	<out>
+	  <lu>
+	    <clip pos="1" part="whole"/>
+	  </lu>
+	</out>
+      </action>
+    </rule>
+-->
+
   </section-rules>
 </postchunk>
