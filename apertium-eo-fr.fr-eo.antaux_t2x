@@ -89,6 +89,11 @@
       <cat-item tags="SN.itg.*"/>
     </def-cat>
 
+    <def-cat n="que_cnj">
+      <cat-item lemma="ke" tags="cnjsub"/>
+      <cat-item tags="SN.itg.*"/>
+    </def-cat>
+
     <def-cat n="CM">
       <cat-item lemma="cm" tags="sent"/>
     </def-cat>
@@ -806,6 +811,220 @@
     </rule>
 
 
+   <!-- que -->
+
+    <rule comment="REGLA: SN QUE   -   SN KIU ">
+      <pattern>
+        <pattern-item n="SN"/>
+        <pattern-item n="que_cnj"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+	  <chunk>
+	    <get-case-from pos="2">
+	      <lit v="prn"/>
+	    </get-case-from>
+	    <lit-tag v="SNrelatiu.rel.sp.nom.nom"/>
+	    <lit v="{^"/>
+	    <get-case-from pos="2">
+	      <lit v="kiu"/>
+	    </get-case-from>
+	    <lit-tag v="prn.rel.3.4"/>
+	    <lit v="$}"/>
+	  </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: DET SN QUE  -   SN KIU ">
+      <pattern>
+        <pattern-item n="det"/>
+        <pattern-item n="SNnodet"/>
+        <pattern-item n="que_cnj"/>
+      </pattern>
+      <action>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="kunordigo_gen">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <choose>
+          <when>
+            <test>
+              <equal caseless="yes"><clip pos="1" part="lem"/><lit v="un"/></equal>
+            </test>
+            <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+            <out>
+              <chunk>
+                <get-case-from pos="1"><lit v="det_nom1"/></get-case-from>
+                <clip pos="2" part="tags"/>
+                <lit v="{"/>
+                <clip pos="2" part="content"/>
+                <lit v="}"/>
+              </chunk>
+            </out>
+          </when>
+          <otherwise>
+            <out>
+              <chunk>
+                <get-case-from pos="1"><lit v="det_nom2"/></get-case-from>
+                <clip pos="2" part="tags"/>
+                <lit v="{"/>
+                <clip pos="1" part="content"/>
+                    <b pos="1"/>
+                <clip pos="2" part="content"/>
+                 <lit v="}"/>
+              </chunk>
+            </out>
+          </otherwise>
+        </choose>
+        <out>
+          <b pos="2"/>
+	  <chunk>
+	    <get-case-from pos="3">
+	      <lit v="prn"/>
+	    </get-case-from>
+	    <lit-tag v="SNrelatiu.rel.sp.nom.nom"/>
+	    <lit v="{^"/>
+	    <get-case-from pos="3">
+	      <lit v="kiu"/>
+	    </get-case-from>
+	    <lit-tag v="prn.rel.3.4"/>
+	    <lit v="$}"/>
+	  </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: DET SA SN QUE  -   SN KIU ">
+      <pattern>
+        <pattern-item n="det"/>
+        <pattern-item n="SAnodet"/>
+        <pattern-item n="SNnodet"/>
+        <pattern-item n="que_cnj"/>
+      </pattern>
+      <action>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="1"/>
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="kunordigo_gen">
+          <with-param pos="1"/>
+          <with-param pos="3"/>
+        </call-macro>
+        <choose>
+          <when>
+            <test>
+              <equal caseless="yes"><clip pos="1" part="lem"/><lit v="un"/></equal>
+            </test>
+            <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+            <out>
+              <chunk>
+                <get-case-from pos="1"><lit v="det_nom1"/></get-case-from>
+                <clip pos="2" part="tags"/>
+                <lit v="{"/>
+                <clip pos="2" part="content"/>
+                    <b pos="2"/>
+                <clip pos="3" part="content"/>
+                <lit v="}"/>
+              </chunk>
+            </out>
+          </when>
+          <otherwise>
+            <out>
+              <chunk>
+                <get-case-from pos="1"><lit v="det_nom2"/></get-case-from>
+                <clip pos="2" part="tags"/>
+                <lit v="{"/>
+                <clip pos="1" part="content"/>
+                    <b pos="1"/>
+                <clip pos="2" part="content"/>
+                    <b pos="2"/>
+                <clip pos="3" part="content"/>
+                 <lit v="}"/>
+              </chunk>
+            </out>
+          </otherwise>
+        </choose>
+        <out>
+          <b pos="3"/>
+	  <chunk>
+	    <get-case-from pos="4">
+	      <lit v="prn"/>
+	    </get-case-from>
+	    <lit-tag v="SNrelatiu.rel.sp.nom.nom"/>
+	    <lit v="{^"/>
+	    <get-case-from pos="4">
+	      <lit v="kiu"/>
+	    </get-case-from>
+	    <lit-tag v="prn.rel.3.4"/>
+	    <lit v="$}"/>
+	  </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: LE SN QUE  -   SN KIU (kunigas misanalizitan artikolon kiel pronomon">
+      <pattern>
+        <pattern-item n="le_prn"/>
+        <pattern-item n="SNSA_nopron"/>
+        <pattern-item n="que_cnj"/>
+      </pattern>
+      <action>
+
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="kunordigo_gen">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+
+        <out>
+          <chunk>
+            <get-case-from pos="1"><clip pos="2" part="lem"/></get-case-from>
+            <clip pos="2" part="tags"/>
+            <lit v="{^"/>
+	    <get-case-from pos="1">
+	      <lit v="la"/>
+	    </get-case-from>
+	    <lit-tag v="det.def.sg.nom"/>
+	    <lit v="$"/>
+            <b pos="1"/>
+            <clip pos="2" part="content"/>
+             <lit v="}"/>
+          </chunk>
+          <b pos="2"/>
+	  <chunk>
+	    <get-case-from pos="3">
+	      <lit v="prn"/>
+	    </get-case-from>
+	    <lit-tag v="SNrelatiu.rel.sp.nom.nom"/>
+	    <lit v="{^"/>
+	    <get-case-from pos="3">
+	      <lit v="kiu"/>
+	    </get-case-from>
+	    <lit-tag v="prn.rel.3.4"/>
+	    <lit v="$}"/>
+	  </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <!-- kunordigo -->
+
     <rule comment="REGLA: SN1 and/or SN2   -   SN ">
       <pattern>
         <pattern-item n="SNnotunk"/>
@@ -1077,34 +1296,6 @@
       </action>
     </rule>
 -->
-
-    <rule comment="REGLA: SN PRN_INT   -   SN KIU ">
-      <pattern>
-        <pattern-item n="SN"/>
-        <pattern-item n="que"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk>
-            <clip pos="1" part="whole"/>
-          </chunk>
-          <b pos="1"/>
-	  <chunk>
-	    <get-case-from pos="2">
-	      <lit v="prn"/>
-	    </get-case-from>
-	    <lit-tag v="SNrelatiu.rel.sp.nom.nom"/>
-	    <lit v="{^"/>
-	    <get-case-from pos="2">
-	      <lit v="kiu"/>
-	    </get-case-from>
-	    <lit-tag v="prn.rel.3.4"/>
-	    <lit v="$}"/>
-	  </chunk>
-        </out>
-      </action>
-    </rule>
-
 
 <!-- Reguloj de SV -->
 

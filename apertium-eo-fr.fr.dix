@@ -25428,7 +25428,6 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="hautain">         <i>hautain</i><par n="abaissant__adj"/></e>
 <e lm="hautbois">        <i>hautbois</i><par n="accessoire__n"/></e>
 <e lm="Hautcoeur">       <i>Hautcoeur</i><par n="Smith__np"/></e>
-<e lm="haute" a="revo">  <i>haute</i><par n="académique__adj"/></e>
 <e lm="Haute-Corse">     <i>Haute-Corse</i><par n="Andorre__np"/></e>
 <e lm="Haute-Garonne">   <i>Haute-Garonne</i><par n="Andorre__np"/></e>
 <e lm="Haute-Loire">     <i>Haute-Loire</i><par n="Andorre__np"/></e>
@@ -38505,6 +38504,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="roi des rois">    <i>r</i><par n="r/oi__n"/><p><l><b/>des<b/>rois</l><r><g><b/>des<b/>rois</g></r></p></e>
 <e lm="rire">            <i>r</i><par n="r/i[]re__vblex"/></e>
 <e lm="régler">          <i>r</i><par n="accél/é[R]er__vblex__gl"/></e>
+<e lm="dérégler">          <i>dér</i><par n="accél/é[R]er__vblex__gl"/></e>
 <e lm="régler d'avance"> <i>r</i><par n="accél/é[R]er__vblex__gl"/><p><l><b/>d'avance</l><r><g><b/>d'avance</g></r></p></e>
 <e lm="régner">          <i>r</i><par n="accél/é[R]er__vblex__gn"/></e>
 <e lm="rire à gorge déployée"><p><l>r</l>    <r>r</r></p><par n="r/i[]re__vblex__"/><p><l><b/>à gorge déployée</l><r><g><b/>à gorge déployée</g></r></p></e>
@@ -40082,6 +40082,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="râteau" a="webform"><i>râteau</i><par n="bateau__n"/></e>
 <e lm="règle">           <i>règle</i><par n="abeille__n"/></e>
 <e lm="règlement">       <i>règlement</i><par n="accessoire__n"/></e>
+<e lm="dérèglement">       <i>dérèglement</i><par n="accessoire__n"/></e>
 <e lm="règne">           <i>règne</i><par n="accessoire__n"/></e>
 <e lm="règne animal">    <p><l>règne<b/>animal</l><r>règne<b/>animal<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
 <e lm="règne végétal">   <p><l>règne<b/>végétal</l><r>règne<b/>végétal<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
@@ -40238,12 +40239,13 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="régisseur">       <i>régisseu</i><par n="causeu/r__n"/></e>
 <e lm="réglage" a="revo"><i>réglage</i><par n="accessoire__n"/></e>
 <e lm="réglementer">     <i>réglement</i><par n="abaiss/er__vblex"/></e>
-<e lm="réglement" a="revo"><i>réglement</i><par n="accessoire__n"/></e>
+<e lm="déréglementer">     <i>déréglement</i><par n="abaiss/er__vblex"/></e>
 <e lm="réglementaire">   <i>réglementaire</i><par n="académique__adj"/></e>
 <e lm="réglementairement"><i>réglementairement</i><par n="hier__adv"/></e>
 <e lm="réglementation">  <i>réglementation</i><par n="abeille__n"/></e>
 <e lm="réglisse" a="revo"><i>réglisse</i><par n="abeille__n"/></e>
-<e lm="réglée" a="revo"> <i>réglée</i><par n="académique__adj"/></e>
+<e lm="réglé"> <i>réglé</i><par n="académique__adj"/></e>
+<e lm="déréglé"> <i>déréglé</i><par n="académique__adj"/></e>
 <e lm="Régnier">         <i>Régnier</i><par n="Smith__np"/></e>
 <e lm="régresser" a="revo"><i>régress</i><par n="abaiss/er__vblex"/></e>
 <e lm="réguler" a="revo"><i>régul</i><par n="abaiss/er__vblex"/></e>
@@ -45850,13 +45852,14 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="visuel" a="webform"><i>visuel</i><par n="annuel__adj"/></e>
 <e lm="visé" a="revo">   <i>visé</i><par n="abaissant__adj"/></e>
 <e lm="visée">           <i>visée</i><par n="abeille__n"/></e>
-<e lm="vit">             <i>vit</i><par n="accessoire__n"/></e>
+<e r="RL" lm="vit">             <i>vit</i><par n="accessoire__n"/></e> <!-- très rare et cause des problèmes -->
 <e lm="vital">           <i>vita</i><par n="amica/l__adj"/></e>
 <e lm="Vita">            <i>Vita</i><par n="Marie__np"/></e>
 <e lm="Vital">           <i>Vital</i><par n="Marie__np"/></e>
 <e lm="Vital">           <i>Vital</i><par n="Abraham__np"/></e>
 <e lm="Vital">           <i>Vital</i><par n="Smith__np"/></e>
 <e lm="Vitale">          <i>Vitale</i><par n="Smith__np"/></e>
+<e lm="Caille">          <i>Caille</i><par n="Smith__np"/></e>
 <e lm="Vitalia">         <i>Vitalia</i><par n="Marie__np"/></e>
 <e lm="vitamine" a="webform"><i>vitamine</i><par n="abeille__n"/></e>
 <e lm="vite">            <i>vite</i><par n="hier__adv"/></e>
@@ -47211,6 +47214,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="éloigné" a="eleka"><i>éloigné</i><par n="abaissant__adj"/></e>
 <e lm="éloquent" a="webform"><i>éloquent</i><par n="abaissant__adj"/></e>
 <e lm="élu">             <i>élu</i><par n="abaissant__adj"/></e>
+<e lm="élu">             <i>élu</i><par n="africain__n"/></e>
 <e lm="éluder" a="eleka"><i>élud</i><par n="abaiss/er__vblex"/></e>
 <e lm="élymus" a="revo"> <i>élymus</i><par n="mois__n"/></e>
 <e lm="Élysée">          <i>Élysée</i><par n="Andorre__np"/></e>
@@ -48519,6 +48523,7 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e r="LR" lm="éloigné">  <p><l>Eloigné</l>   <r>Éloigné</r></p><par n="abaissant__adj"/></e>
 <e r="LR" lm="éloquent"> <p><l>Eloquent</l>  <r>Éloquent</r></p><par n="abaissant__adj"/></e>
 <e r="LR" lm="élu">      <p><l>Elu</l>       <r>Élu</r></p><par n="abaissant__adj"/></e>
+<e r="LR" lm="élu">      <p><l>Elu</l>       <r>Élu</r></p><par n="africain__n"/></e>
 <e r="LR" lm="éluder">   <p><l>Elud</l>      <r>Élud</r></p><par n="abaiss/er__vblex"/></e>
 <e r="LR" lm="élymus" a="revo"><p><l>Elymus</l><r>Élymus</r></p><par n="mois__n"/></e>
 <e r="LR" lm="élytre">   <p><l>Elytre</l>    <r>Élytre</r></p><par n="accessoire__n"/></e>

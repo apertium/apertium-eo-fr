@@ -112,6 +112,12 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       <cat-item tags="adj.pos.*"/>
     </def-cat>
 
+    <def-cat n="adj_adv">
+      <cat-item tags="adj.*"/>
+      <cat-item tags="vblex.pp.*"/>
+      <cat-item tags="adv"/>
+    </def-cat>
+
     <def-cat n="meilleur">
       <cat-item lemma="meilleur" tags="adj.*"/>
       <cat-item lemma="pire" tags="adj.*"/>
@@ -929,6 +935,11 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </def-cat>
 
     <def-cat n="en">
+      <cat-item lemma="en" tags="prn.pro.adv"/>
+      <cat-item lemma="en" tags="pr"/>
+    </def-cat>
+
+    <def-cat n="en_pr">
       <cat-item lemma="en" tags="pr"/>
     </def-cat>
 
@@ -8822,7 +8833,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       <pattern>
 	<pattern-item n="de"/>
 	<pattern-item n="loc"/>
-	<pattern-item n="en"/>
+	<pattern-item n="en_pr"/>
 	<pattern-item n="loc"/>
       </pattern>
       <action>
@@ -27688,7 +27699,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
       <pattern>
 	<pattern-item n="il"/>
 	<pattern-item n="copula"/>
-	<pattern-item n="adj"/>
+	<pattern-item n="adj_adv"/>
 	<pattern-item n="quepercorregir"/>
       </pattern>
       <action>    	
@@ -27760,7 +27771,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<pattern-item n="ne"/>
 	<pattern-item n="copula"/>
 	<pattern-item n="pas"/>
-	<pattern-item n="adj"/>
+	<pattern-item n="adj_adv"/>
 	<pattern-item n="quepercorregir"/>
       </pattern>
       <action>    	
@@ -29083,7 +29094,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 <rule comment="REGLA: SENT A (EO, ex. . A -> en (manko de supersigno; eraro en senambiguilo))">
       <pattern>
 	<pattern-item n="sent_esp"/>
-	<pattern-item n="a-erara"/>
+	<pattern-item n="a-all"/>
       </pattern>
       <action>
 	<let><var n="nsent"/><clip pos="1" side="tl" part="lem"/></let>
@@ -29103,7 +29114,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
 	    <lu>
-	      <lit v="En"/>
+	      <get-case-from pos="2"><lit v="en"/></get-case-from>
 	      <lit-tag v="pr"/>
 	    </lu>
 	  </chunk>
