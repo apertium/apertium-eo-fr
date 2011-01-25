@@ -868,8 +868,14 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 </pardef>
 
 <pardef n="si__prn">
-  <e>       <p><l>si</l>        <r>si<s n="prn"/><s n="ref"/><s n="p3"/><s n="mf"/><s n="sp"/></r></p></e>
-  <e>       <p><l>sin</l>       <r>prpers<s n="prn"/><s n="ref"/><s n="p3"/><s n="mf"/><s n="sp"/></r></p></e>
+  <e r="RL"><p><l>si</l>        <r>si<s n="prn"/><s n="ref"/><s n="p3"/><s n="mf"/><s n="sp"/></r></p></e>
+  <e>       <p><l>si</l>        <r>si<s n="prn"/><s n="subj"/><s n="p3"/><s n="mf"/><s n="sp"/></r></p></e>
+  <e>       <p><l>sin</l>        <r>si<s n="prn"/><s n="obj"/><s n="p3"/><s n="mf"/><s n="sp"/></r></p></e>
+  <e r="RL"><p><l>si</l>        <r>si<s n="prn"/><s n="subj"/><s n="p3"/><s n="mf"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l>sin</l>        <r>si<s n="prn"/><s n="obj"/><s n="p3"/><s n="mf"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l>si</l>        <r>si<s n="prn"/><s n="subj"/><s n="p3"/><s n="mf"/><s n="pl"/></r></p></e>
+  <e r="RL"><p><l>sin</l>        <r>si<s n="prn"/><s n="obj"/><s n="p3"/><s n="mf"/><s n="pl"/></r></p></e>
+  <e r="RL"><p><l>sin</l>       <r>prpers<s n="prn"/><s n="ref"/><s n="p3"/><s n="mf"/><s n="sp"/></r></p></e>
   <e r="RL"><p><l>sin</l>       <r>prpers<s n="prn"/><s n="ref"/><s n="p3"/><s n="mf"/><s n="sg"/></r></p></e>
   <e r="RL"><p><l>sin</l>       <r>prpers<s n="prn"/><s n="ref"/><s n="p3"/><s n="mf"/><s n="pl"/></r></p></e>
 </pardef>
@@ -962,6 +968,15 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 
   <section id="main" type="standard">
                        
+<!--
+<e>       <re>Saint\-[A-Za-zÀÁÂÄÇÈÉÊËÌÍÎÏÑÒÓÔÖŒÙÚÛÜàáâäçèéêëìíîïñòóôöœùúûü]+</re><i></i><par n="Barcelona__np"/></e>
+<e>       <re>Sainte\-[A-Za-zÀÁÂÄÇÈÉÊËÌÍÎÏÑÒÓÔÖŒÙÚÛÜàáâäçèéêëìíîïñòóôöœùúûü]+</re><i></i><par n="Barcelona__np"/></e>
+<e>       <re>Saint\-[A-ZÂÈÉÊŒ][a-zâçèéêëîïôöœûü]+</re><i></i><par n="Barcelona__np"/></e>
+<e>       <re>Sainte\-[A-ZÂÈÉÊŒ][a-zâçèéêëîïôöœûü]+</re><i></i><par n="Barcelona__np"/></e>
+<e>       <re>Saint\-[A-Z][a-z]+</re><i></i><par n="Barcelona__np"/></e>
+<e>       <re>Sainte\-[A-Z][a-z]+</re><i></i><par n="Barcelona__np"/></e>
+-->
+
     <!-- ******************************
           group prn
       ****************************** -->
@@ -1090,6 +1105,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="abelejo">         <i>abelej</i><par n="o__n"/></e>
 <e lm="abelino">         <i>abelin</i><par n="o__n"/></e>
 <e lm="abelisto">        <i>abelist</i><par n="ino__n"/></e>
+<e lm="savisto">        <i>savist</i><par n="ino__n"/></e>
+<e lm="sukuristo">        <i>sukurist</i><par n="ino__n"/></e>
 <e lm="Abellard">        <i>Abellard</i><par n="Smith__np"/></e>
 <e lm="abelmanĝulo">     <i>abelmanĝul</i><par n="ino__n"/></e>
 <e lm="abelujo">         <i>abeluj</i><par n="o__n"/></e>
@@ -1363,6 +1380,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="AEON">            <i>AEON</i><par n="Wikipedia__np"/></e>
 <e lm="aera">            <i>aer</i><par n="a__adj"/></e>
 <e lm="aero">            <i>aer</i><par n="o__n"/></e>
+<e lm="Saint">            <i>Saint</i><par n="Barcelona__np"/></e>
+<e lm="Sainte">            <i>Sainte</i><par n="Barcelona__np"/></e>
 <e lm="aerarmeo">        <i>aerarme</i><par n="o__n"/></e>
 <e lm="aerkondukilo">    <i>aerkondukil</i><par n="o__n"/></e>
 <e lm="aerkuseno">       <i>aerkusen</i><par n="o__n"/></e>
@@ -2463,6 +2482,9 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="ambasadorejo">    <i>ambasadorej</i><par n="o__n"/></e>
 <e r="RL" lm="pri tio">           <p><l>pri<b/>tio</l>     <r>pri<b/>tio<s n="prn"/><s n="tn"/><s n="sg"/></r></p></e>
 <e r="RL" lm="pri tio">           <p><l>pri<b/>tio</l>     <r>pri<b/>tio<s n="prn"/><s n="tn"/><s n="pl"/></r></p></e>
+<e r="RL" lm="pri tio">           <p><l>pri<b/>tio</l>     <r>pri<b/>tio<s n="prn"/><s n="tn"/></r></p></e>
+<e lm="Federer">          <i>Federer</i><par n="Smith__np"/></e>
+<e lm="Wawrinka">          <i>Wawrinka</i><par n="Smith__np"/></e>
 <e lm="ambaŭ">           <p><l>ambaŭ</l>     <r>ambaŭ<s n="prn"/><s n="tn"/><s n="pl"/><s n="nom"/></r></p></e>
 <e lm="ambaŭ">           <p><l>ambaŭ</l>     <r>ambaŭ<s n="prn"/><s n="tn"/><s n="pl"/><s n="acc"/></r></p></e>
 <e lm="ambaŭ">           <i>ambaŭ</i><par n="jam__adv"/></e>
@@ -22657,6 +22679,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Magina">          <i>Magina</i><par n="Marie__np"/></e>
 <e lm="magistro">        <i>magistr</i><par n="ino__n"/></e>
 <e lm="magistrato">      <i>magistrat</i><par n="o__n"/></e>
+<e lm="ŝtatkonsilio">      <i>ŝtatkonsili</i><par n="o__n"/></e>
 <e lm="magistratano">    <i>magistratan</i><par n="ino__n"/></e>
 <e lm="magistratejo">    <i>magistratej</i><par n="o__n"/></e>
 <e lm="magmo">           <i>magm</i><par n="o__n"/></e>
@@ -25426,11 +25449,39 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="morgaŭ">          <i>morgaŭ</i><par n="jam__adv"/></e>
 <e lm="morgaŭo">         <i>morgaŭ</i><par n="o__n"/></e>
 <e lm="morgaŭ je tioma horo"><i>morgaŭ<b/>je<b/>tioma<b/>horo</i><par n="jam__adv"/></e>
-<e lm="morgaŭ matene">   <i>morgaŭ<b/>maten</i><par n="e__adv"/></e>
-<e lm="morgaŭ nokte">    <i>morgaŭ<b/>nokt</i><par n="e__adv"/></e>
-<e lm="morgaŭ posttagmeze"><i>morgaŭ<b/>posttagmez</i><par n="e__adv"/></e>
-<e lm="morgaŭ tagmeze">  <i>morgaŭ<b/>tagmez</i><par n="e__adv"/></e>
-<e lm="morgaŭ vespere">  <i>morgaŭ<b/>vesper</i><par n="e__adv"/></e>
+<e lm="morgaŭ matene">   <i>morgaŭ<b/>matene</i><par n="jam__adv"/></e>
+<e lm="morgaŭ nokte">    <i>morgaŭ<b/>nokte</i><par n="jam__adv"/></e>
+<e lm="morgaŭ posttagmeze"><i>morgaŭ<b/>posttagmeze</i><par n="jam__adv"/></e>
+<e lm="morgaŭ tagmeze">  <i>morgaŭ<b/>tagmeze</i><par n="jam__adv"/></e>
+<e lm="morgaŭ vespere">  <i>morgaŭ<b/>vespere</i><par n="jam__adv"/></e>
+<e lm="lunde matene">  <i>lunde<b/>matene</i><par n="jam__adv"/></e>
+<e lm="marde matene">   <i>marde<b/>matene</i><par n="jam__adv"/></e>
+<e lm="merkrede matene">   <i>merkrede<b/>matene</i><par n="jam__adv"/></e>
+<e lm="ĵaŭde matene">   <i>ĵaŭde<b/>matene</i><par n="jam__adv"/></e>
+<e lm="vendrede matene">   <i>vendrede<b/>matene</i><par n="jam__adv"/></e>
+<e lm="sabate matene">   <i>sabate<b/>matene</i><par n="jam__adv"/></e>
+<e lm="dimanĉe matene">   <i>dimanĉe<b/>matene</i><par n="jam__adv"/></e>
+<e lm="lunde posttagmeze"><i>lunde<b/>posttagmeze</i><par n="jam__adv"/></e>
+<e lm="lunde tagmeze">  <i>lunde<b/>tagmeze</i><par n="jam__adv"/></e>
+<e lm="lunde vespere">  <i>lunde<b/>vespere</i><par n="jam__adv"/></e>
+<e lm="marde posttagmeze"><i>marde<b/>posttagmeze</i><par n="jam__adv"/></e>
+<e lm="marde tagmeze">  <i>marde<b/>tagmeze</i><par n="jam__adv"/></e>
+<e lm="marde vespere">  <i>marde<b/>vespere</i><par n="jam__adv"/></e>
+<e lm="merkrede posttagmeze"><i>merkrede<b/>posttagmeze</i><par n="jam__adv"/></e>
+<e lm="merkrede tagmeze">  <i>merkrede<b/>tagmeze</i><par n="jam__adv"/></e>
+<e lm="merkrede vespere">  <i>merkrede<b/>vespere</i><par n="jam__adv"/></e>
+<e lm="ĵaŭde posttagmeze"><i>ĵaŭde<b/>posttagmeze</i><par n="jam__adv"/></e>
+<e lm="ĵaŭde tagmeze">  <i>ĵaŭde<b/>tagmeze</i><par n="jam__adv"/></e>
+<e lm="ĵaŭde vespere">  <i>ĵaŭde<b/>vespere</i><par n="jam__adv"/></e>
+<e lm="vendrede posttagmeze"><i>vendrede<b/>posttagmeze</i><par n="jam__adv"/></e>
+<e lm="vendrede tagmeze">  <i>vendrede<b/>tagmeze</i><par n="jam__adv"/></e>
+<e lm="vendrede vespere">  <i>vendrede<b/>vespere</i><par n="jam__adv"/></e>
+<e lm="sabate posttagmeze"><i>sabate<b/>posttagmeze</i><par n="jam__adv"/></e>
+<e lm="sabate tagmeze">  <i>sabate<b/>tagmeze</i><par n="jam__adv"/></e>
+<e lm="sabate vespere">  <i>sabate<b/>vespere</i><par n="jam__adv"/></e>
+<e lm="dimanĉe posttagmeze"><i>dimanĉe<b/>posttagmeze</i><par n="jam__adv"/></e>
+<e lm="dimanĉe tagmeze">  <i>dimanĉe<b/>tagmeze</i><par n="jam__adv"/></e>
+<e lm="dimanĉe vespere">  <i>dimanĉe<b/>vespere</i><par n="jam__adv"/></e>
 <e lm="Moriah">          <i>Moriah</i><par n="Marie__np"/></e>
 <e lm="Morier">          <i>Morier</i><par n="Smith__np"/></e>
 <e lm="Morin">           <i>Morin</i><par n="Smith__np"/></e>
@@ -31408,7 +31459,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Renee">           <i>Renee</i><par n="Marie__np"/></e>
 <e lm="renegato">        <i>renegat</i><par n="ino__n"/></e>
 <e lm="renesanco">       <i>renesanc</i><par n="o__n"/></e>
-<e lm="Reneé">           <i>Reneé</i><par n="Marie__np"/></e>
+<e lm="Renée">           <i>Renée</i><par n="Marie__np"/></e>
+<e lm="René">           <i>René</i><par n="Mark__np"/></e>
 <e lm="renio">           <i>reni</i><par n="o__n"/></e>
 <e lm="Renire">          <i>Renire</i><par n="Smith__np"/></e>
 <e lm="renkonto">        <i>renkont</i><par n="o__n"/></e>
@@ -32407,9 +32459,9 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Saini">           <i>Saini</i><par n="Smith__np"/></e>
 <e lm="Sainsbury">       <i>Sainsbury</i><par n="Wikipedia__np"/></e>
 <e r="RL" lm="Saint">    <p><l>Saint</l>     <r>Saint<s n="adj"/><s n="m"/><s n="sg"/></r></p></e>
-<e r="RL" lm="Saint">    <p><l>Saint</l>     <r>Saint<s n="adj"/><s n="f"/><s n="sg"/></r></p></e>
-<e r="RL" lm="Saint">    <p><l>Saint</l>     <r>Saint<s n="adj"/><s n="m"/><s n="pl"/></r></p></e>
-<e r="RL" lm="Saint">    <p><l>Saint</l>     <r>Saint<s n="adj"/><s n="f"/><s n="pl"/></r></p></e>
+<e r="RL" lm="Saint">    <p><l>Sainte</l>     <r>Saint<s n="adj"/><s n="f"/><s n="sg"/></r></p></e>
+<e r="RL" lm="Saint">    <p><l>Saints</l>     <r>Saint<s n="adj"/><s n="m"/><s n="pl"/></r></p></e>
+<e r="RL" lm="Saint">    <p><l>Saintes</l>     <r>Saint<s n="adj"/><s n="f"/><s n="pl"/></r></p></e>
 <e lm="Saint-André">     <i>Saint-André</i><par n="Barcelona__np"/></e>
 <e lm="Saint-Barthélemy"><i>Saint-Barthélemy</i><par n="Wikipedia__np"/></e>
 <e lm="Saint-Benoît">    <i>Saint-Benoît</i><par n="Barcelona__np"/></e>
@@ -35063,10 +35115,10 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="subite">          <i>subit</i><par n="e__adv"/></e>
 <e lm="Thérèse">         <i>Thérèse</i><par n="Marie__np"/></e>
 <e lm="Marie-Thérèse">         <i>Marie-Thérèse</i><par n="Marie__np"/></e>
-<e lm="kontraŭhorloĝa kuro"><p><l>kontraŭhorloĝa<b/>kuro</l><r>kontraŭhorloĝa<b/>kuro<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
-<e lm="kontraŭhorloĝa kuro"><p><l>kontraŭhorloĝan<b/>kuron</l><r>kontraŭhorloĝa<b/>kuro<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
-<e lm="kontraŭhorloĝa kuro"><p><l>kontraŭhorloĝaj<b/>kuroj</l><r>kontraŭhorloĝa<b/>kuro<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
-<e lm="kontraŭhorloĝa kuro"><p><l>kontraŭhorloĝajn<b/>kurojn</l><r>kontraŭhorloĝa<b/>kuro<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="kontraŭhorloĝa kurado"><p><l>kontraŭhorloĝa<b/>kurado</l><r>kontraŭhorloĝa<b/>kurado<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="kontraŭhorloĝa kurado"><p><l>kontraŭhorloĝan<b/>kuradon</l><r>kontraŭhorloĝa<b/>kurado<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="kontraŭhorloĝa kurado"><p><l>kontraŭhorloĝaj<b/>kuradoj</l><r>kontraŭhorloĝa<b/>kurado<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="kontraŭhorloĝa kurado"><p><l>kontraŭhorloĝajn<b/>kuradojn</l><r>kontraŭhorloĝa<b/>kurado<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
 <e lm="subjekto">        <i>subjekt</i><par n="o__n"/></e>
 <e lm="subjektiva">      <i>subjektiv</i><par n="a__adj"/></e>
 <e lm="subjektive">      <i>subjektiv</i><par n="e__adv"/></e>
@@ -38619,7 +38671,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="vojaĝema">        <i>vojaĝem</i><par n="a__adj"/></e>
 <e lm="vojaĝemulo">      <i>vojaĝemul</i><par n="ino__n"/></e>
 <e lm="vojbordero">      <i>vojborder</i><par n="o__n"/></e>
-<e lm="vojelspezo">      <i>vojelspez</i><par n="o__n"/></e>
+<e lm="vojelspezoj">      <i>vojelspez</i><par n="oj__n"/></e>
 <e lm="vojeto">          <i>vojet</i><par n="o__n"/></e>
 <e lm="vojevodo">        <i>vojevod</i><par n="o__n"/></e>
 <e lm="vojevodio">       <i>vojevodi</i><par n="o__n"/></e>
@@ -45214,6 +45266,9 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Vankuvero">            <i>Vankuver</i><par n="Barcelon/o__np"/></e>
 <e lm="Vinipego">            <i>Vinipeg</i><par n="Barcelon/o__np"/></e>
 
+<!--
+<e>   <re>\*[A-ZÀÁÂÄÇÈÉÊËÌÍÎÏÑÒÓÔÖŒÙÚÛÜ]{0,1}[a-zàáâäçèéêëìíîïñòóôöœùúûü]+</re><p><l></l><r><s n="np"/><s n="loc"/><s n="sg"/></r></p></e>
+-->
   </section>
   <section id="final" type="inconditional">
 <e>                      <par n="separa"/></e>

@@ -43,6 +43,7 @@
 
    <def-cat n="SNobj"><!-- EO: identifica objecte directe (únicament ho porten els pronoms)-->
       <cat-item tags="SN.obj.*.*.*"/>
+      <cat-item tags="SN.ref.*.*.*"/>
     </def-cat>
 
    <def-cat n="SNdat"><!-- EO: identifica objecte directe (únicament ho porten els pronoms)-->
@@ -142,6 +143,7 @@
       <cat-item lemma="sub" tags="pr"/>
       <cat-item lemma="trans" tags="pr"/>
       <cat-item lemma="preter" tags="pr"/>
+      <cat-item lemma="ĉe" tags="pr"/>
     </def-cat>
 
     <def-cat n="ser">
@@ -556,7 +558,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	  <b pos="1"/>
 	  <chunk>
 	    <get-case-from pos="2">
-	      <lit v="al"/>
+	      <lit v="al1"/>
 	    </get-case-from>
 	    <lit-tag v="pr"/>
 	    <lit v="{^"/>
@@ -625,7 +627,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	  <b pos="1"/>
 	  <chunk>
 	    <get-case-from pos="2">
-	      <lit v="al"/>
+	      <lit v="al2"/>
 	    </get-case-from>
 	    <lit-tag v="pr"/>
 	    <lit v="{^"/>
@@ -691,7 +693,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	  <b pos="2"/>
 	  <chunk>
 	    <get-case-from pos="3">
-	      <lit v="al"/>
+	      <lit v="al3"/>
 	    </get-case-from>
 	    <lit-tag v="pr"/>
 	    <lit v="{^"/>
@@ -785,7 +787,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	<out>
 	  <chunk>
 	    <get-case-from pos="1">
-	      <lit v="al"/>
+	      <lit v="al4"/>
 	    </get-case-from>
 	    <lit-tag v="pr"/>
 	    <lit v="{^"/>
@@ -797,7 +799,9 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	  </chunk>
 	  <b/>
 	  <chunk>
-            <clip pos="1" part="lem"/>
+	    <get-case-from pos="2">
+              <clip pos="1" part="lem"/>
+	    </get-case-from>
             <clip pos="1" part="tags"/>
 	    <clip pos="1" part="chcontent"/>
 	  </chunk>
@@ -842,7 +846,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
           <b pos="1"/>
 	  <chunk>
 	    <get-case-from pos="2">
-	      <lit v="al"/>
+	      <lit v="al5"/>
 	    </get-case-from>
 	    <lit-tag v="pr"/>
 	    <lit v="{^"/>
@@ -854,7 +858,9 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	  </chunk>
 	  <b/>
 	  <chunk>
-            <clip pos="2" part="lem"/>
+	    <get-case-from pos="3">
+              <clip pos="2" part="lem"/>
+	    </get-case-from>
             <clip pos="2" part="tags"/>
 	    <clip pos="2" part="chcontent"/>
 	  </chunk>
@@ -901,7 +907,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	  <b pos="1"/>
 	  <chunk>
 	    <get-case-from pos="2">
-	      <lit v="al"/>
+	      <lit v="al6"/>
 	    </get-case-from>
 	    <lit-tag v="pr"/>
 	    <lit v="{^"/>
@@ -957,7 +963,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	  <b pos="2"/>
 	  <chunk>
 	    <get-case-from pos="3">
-	      <lit v="al"/>
+	      <lit v="al7"/>
 	    </get-case-from>
 	    <lit-tag v="pr"/>
 	    <lit v="{^"/>
@@ -1019,7 +1025,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	  <b pos="2"/>
 	  <chunk>
 	    <get-case-from pos="3">
-	      <lit v="al"/>
+	      <lit v="al8"/>
 	    </get-case-from>
 	    <lit-tag v="pr"/>
 	    <lit v="$}"/>
@@ -1668,7 +1674,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	  <b pos="3"/>
           <chunk>
             <get-case-from pos="3">
-              <lit v="al"/>
+              <lit v="al9"/>
             </get-case-from>
             <lit-tag v="pr"/>
             <lit v="{^"/>

@@ -22,6 +22,8 @@
 
      <def-cat n="Saint">
       <cat-item lemma="saint" tags="adj.*"/>
+      <cat-item lemma="Saint" tags="np.loc.*"/>
+      <cat-item lemma="Sainte" tags="np.loc.*"/>
       <cat-item lemma="St" tags=""/>
     </def-cat>
 
@@ -30,6 +32,12 @@
       <cat-item tags="np.ant.*"/>
       <cat-item tags="np.loc"/>
       <cat-item tags="np.loc.*"/>
+      <cat-item tags=""/>
+    </def-cat>
+
+     <def-cat n="any">
+      <cat-item tags="prep"/>
+      <cat-item tags="det.*"/>
       <cat-item tags=""/>
     </def-cat>
 
@@ -321,6 +329,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       <cat-item tags="prn.pro.p2.*"/>
       <cat-item tags="prn.pro.p3.*"/>
       <cat-item tags="prn.pro.adv"/>
+    </def-cat>
+
+    <def-cat n="ij">
+      <cat-item tags="ij"/>
     </def-cat>
 
     <def-cat n="verbnm_inf_ger"><!--verb no modal, infinitiu i gerundi -->
@@ -1402,6 +1414,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     <def-var n="ncnj"/>
     <def-var n="ndet"/>
     <def-var n="nsent"/>
+    <def-var n="saint"/>
     <def-var n="test"/>
  <def-var n="xxx"/>
  <def-var n="a1"/>
@@ -7160,6 +7173,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       </action>
     </rule>
 
+
 <rule comment="REGLA: À NUM HEURES (à 14 heures -> je la 14a)">
       <pattern>
         <pattern-item n="a-all"/>
@@ -7198,7 +7212,57 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       </action>
     </rule>
 
-<rule comment="REGLA: VERS NUM HEURES (à 14 heures -> je la 14a)">
+<rule comment="REGLA: À NUM HEURES (à 14 heures -> je la 14a)">
+      <pattern>
+	<pattern-item n="sent_esp"/>
+        <pattern-item n="a-all"/>
+        <pattern-item n="num"/>
+        <pattern-item n="heure"/>
+      </pattern>
+      <action>
+        <call-macro n="firstWord"><with-param pos="2"/></call-macro>
+	<let><var n="nsent"/><clip pos="1" side="tl" part="lem"/></let>
+        <out>
+	  <chunk namefrom="nsent">
+	    <tags>
+	      <tag><lit-tag v="sent"/></tag>
+	    </tags>
+	    <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+	    </lu>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk name="adv" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="adv"/></tag>
+	    </tags>
+	    <lu>
+	      <lit v="je"/>
+	      <lit-tag v="pr"/>
+	    </lu>
+            <b pos="2"/>
+	    <lu>
+	      <lit v="la"/>
+	      <lit-tag v="det.def.sg.nom"/>
+	    </lu>
+            <b pos="3"/>
+            <lu>
+              <clip pos="3" side="tl" part="lem"/><lit v="a"/>
+              <lit-tag v="adj"/>
+              <lit-tag v="sg"/>
+              <lit-tag v="nom"/>
+            </lu>
+	  </chunk>
+        </out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+<rule comment="REGLA: VERS NUM HEURES (vers 14 heures -> ĉirkaŭ la 14a)">
       <pattern>
         <pattern-item n="vers_pr"/>
         <pattern-item n="num"/>
@@ -7712,18 +7776,136 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><lit-tag v="sg.nom"/></tag>
 	    </tags>
             <lu>
-              <clip pos="1" side="sl" part="lem"/> <!-- ni konservas la lemon de la originalo -->
+              <clip pos="1" side="sl" part="lem"/>
               <clip pos="1" side="tl" part="tags"/>
             </lu>
 	    <b pos="1"/>
 	    <lu>
-              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="sl" part="lem"/>
               <clip pos="2" side="tl" part="tags"/>
 	    </lu>
 	    <b pos="2"/>
 	    <lu>
-              <clip pos="3" side="tl" part="lem"/>
+              <clip pos="3" side="sl" part="lem"/>
               <clip pos="3" side="tl" part="tags"/>
+	    </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: NP-Saint-NP (Lay-Saint-Pierre)">
+      <pattern>
+	<pattern-item n="npunk"/>
+	<pattern-item n="guio"/>
+	<pattern-item n="Saint"/>
+	<pattern-item n="guio"/>
+	<pattern-item n="npunk"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<out>
+	  <chunk name="loc" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="1" side="sl" part="gen"/></tag>
+	      <tag><lit-tag v="sg.nom"/></tag>
+	    </tags>
+            <lu>
+              <clip pos="1" side="sl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+            </lu>
+	    <b pos="1"/>
+	    <lu>
+              <clip pos="2" side="sl" part="lem"/>
+              <clip pos="2" side="tl" part="tags"/>
+	    </lu>
+	    <b pos="2"/>
+	    <lu>
+              <clip pos="3" side="sl" part="lem"/>
+              <clip pos="3" side="tl" part="tags"/>
+	    </lu>
+	    <b pos="3"/>
+	    <lu>
+              <clip pos="4" side="sl" part="lem"/>
+              <clip pos="4" side="tl" part="tags"/>
+	    </lu>
+	    <b pos="4"/>
+	    <lu>
+              <clip pos="5" side="sl" part="lem"/>
+              <clip pos="5" side="tl" part="tags"/>
+	    </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: Saint-NP-any-NP (Saint-Etienne-les-Remiremont)">
+      <pattern>
+	<pattern-item n="Saint"/>
+	<pattern-item n="guio"/>
+	<pattern-item n="npunk"/>
+	<pattern-item n="guio"/>
+	<pattern-item n="any"/>
+	<pattern-item n="guio"/>
+	<pattern-item n="npunk"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<out>
+	  <chunk name="loc" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="1" side="sl" part="gen"/></tag>
+	      <tag><lit-tag v="sg.nom"/></tag>
+	    </tags>
+            <lu>
+              <clip pos="1" side="sl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
+            </lu>
+	    <b pos="1"/>
+	    <lu>
+              <clip pos="2" side="sl" part="lem"/>
+              <clip pos="2" side="tl" part="tags"/>
+	    </lu>
+	    <b pos="2"/>
+	    <lu>
+              <clip pos="3" side="sl" part="lem"/>
+              <clip pos="3" side="tl" part="tags"/>
+	    </lu>
+	    <b pos="3"/>
+	    <lu>
+              <clip pos="4" side="sl" part="lem"/>
+              <clip pos="4" side="tl" part="tags"/>
+	    </lu>
+	    <b pos="4"/>
+	    <lu>
+              <clip pos="5" side="sl" part="lem"/>
+              <clip pos="5" side="tl" part="tags"/>
+	    </lu>
+	    <b pos="5"/>
+	    <lu>
+              <clip pos="6" side="sl" part="lem"/>
+              <clip pos="6" side="tl" part="tags"/>
+	    </lu>
+	    <b pos="6"/>
+	    <lu>
+              <clip pos="7" side="sl" part="lem"/>
+              <clip pos="7" side="tl" part="tags"/>
 	    </lu>
 	  </chunk>
 	</out>
@@ -7744,7 +7926,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       </pattern>
       <action>
 	<call-macro n="firstWord">
-	  <with-param pos="2"/>
+	  <with-param pos="1"/>
 	</call-macro>
 	<out>
 	  <chunk name="en" case="caseFirstWord">
@@ -7757,25 +7939,165 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	    </lu>
 	  </chunk>
  	  <b pos="1"/>
-	  <chunk name="loc" case="caseFirstWord">
+	  <chunk name="loc">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="2" side="sl" part="gen"/></tag>
 	      <tag><lit-tag v="sg.nom"/></tag>
 	    </tags>
             <lu>
-              <clip pos="2" side="sl" part="lem"/> <!-- ni konservas la lemon de la originalo -->
+              <clip pos="2" side="sl" part="lem"/>
               <clip pos="2" side="tl" part="tags"/>
             </lu>
 	    <b pos="2"/>
 	    <lu>
-              <clip pos="3" side="tl" part="lem"/>
+              <clip pos="3" side="sl" part="lem"/>
               <clip pos="3" side="tl" part="tags"/>
 	    </lu>
 	    <b pos="3"/>
 	    <lu>
-              <clip pos="4" side="tl" part="lem"/>
+              <clip pos="4" side="sl" part="lem"/>
               <clip pos="4" side="tl" part="tags"/>
+	    </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: À NP-Saint-NP (à Lay-Saint-Pierre -> en)">
+      <pattern>
+	<pattern-item n="a_pr"/>
+	<pattern-item n="npunk"/>
+	<pattern-item n="guio"/>
+	<pattern-item n="Saint"/>
+	<pattern-item n="guio"/>
+	<pattern-item n="npunk"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<out>
+	  <chunk name="en" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="pr"/></tag>
+	    </tags>
+	    <lu>
+	      <lit v="en"/>
+	      <lit-tag v="pr"/>
+	    </lu>
+	  </chunk>
+ 	  <b pos="1"/>
+	  <chunk name="loc">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="2" side="sl" part="gen"/></tag>
+	      <tag><lit-tag v="sg.nom"/></tag>
+	    </tags>
+            <lu>
+              <clip pos="2" side="sl" part="lem"/>
+              <clip pos="2" side="tl" part="tags"/>
+            </lu>
+	    <b pos="2"/>
+	    <lu>
+              <clip pos="3" side="sl" part="lem"/>
+              <clip pos="3" side="tl" part="tags"/>
+	    </lu>
+	    <b pos="3"/>
+	    <lu>
+              <clip pos="4" side="sl" part="lem"/>
+              <clip pos="4" side="tl" part="tags"/>
+	    </lu>
+	    <b pos="4"/>
+	    <lu>
+              <clip pos="5" side="sl" part="lem"/>
+              <clip pos="5" side="tl" part="tags"/>
+	    </lu>
+	    <b pos="5"/>
+	    <lu>
+              <clip pos="6" side="sl" part="lem"/>
+              <clip pos="6" side="tl" part="tags"/>
+	    </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+<rule comment="REGLA: À Saint-NP-any-NP (à Saint-Etienne-les-Remiremont -> en)">
+      <pattern>
+	<pattern-item n="a_pr"/>
+	<pattern-item n="Saint"/>
+	<pattern-item n="guio"/>
+	<pattern-item n="npunk"/>
+	<pattern-item n="guio"/>
+	<pattern-item n="any"/>
+	<pattern-item n="guio"/>
+	<pattern-item n="npunk"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<out>
+	  <chunk name="en" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="pr"/></tag>
+	    </tags>
+	    <lu>
+	      <lit v="en"/>
+	      <lit-tag v="pr"/>
+	    </lu>
+	  </chunk>
+ 	  <b pos="1"/>
+	  <chunk name="loc">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="2" side="sl" part="gen"/></tag>
+	      <tag><lit-tag v="sg.nom"/></tag>
+	    </tags>
+            <lu>
+              <clip pos="2" side="sl" part="lem"/>
+              <clip pos="2" side="tl" part="tags"/>
+            </lu>
+	    <b pos="2"/>
+	    <lu>
+              <clip pos="3" side="sl" part="lem"/>
+              <clip pos="3" side="tl" part="tags"/>
+	    </lu>
+	    <b pos="3"/>
+	    <lu>
+              <clip pos="4" side="sl" part="lem"/>
+              <clip pos="4" side="tl" part="tags"/>
+	    </lu>
+	    <b pos="4"/>
+	    <lu>
+              <clip pos="5" side="sl" part="lem"/>
+              <clip pos="5" side="tl" part="tags"/>
+	    </lu>
+	    <b pos="5"/>
+	    <lu>
+              <clip pos="6" side="sl" part="lem"/>
+              <clip pos="6" side="tl" part="tags"/>
+	    </lu>
+	    <b pos="6"/>
+	    <lu>
+              <clip pos="7" side="sl" part="lem"/>
+              <clip pos="7" side="tl" part="tags"/>
+	    </lu>
+	    <b pos="7"/>
+	    <lu>
+              <clip pos="8" side="sl" part="lem"/>
+              <clip pos="8" side="tl" part="tags"/>
 	    </lu>
 	  </chunk>
 	</out>
@@ -7814,18 +8136,18 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="changecase"/></tag>
 	    </tags>
             <lu>
-              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="sl" part="lem"/>
               <clip pos="1" side="tl" part="tags"/>
               <lit-tag v="4"/>
             </lu>
 	    <b pos="1"/>
 	    <lu>
-              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="sl" part="lem"/>
               <clip pos="2" side="tl" part="tags"/>
 	    </lu>
 	    <b pos="2"/>
 	    <lu>
-              <clip pos="3" side="tl" part="lem"/>
+              <clip pos="3" side="sl" part="lem"/>
               <clip pos="3" side="tl" part="tags"/>
 	    </lu>
 	  </chunk>
@@ -7863,18 +8185,18 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><var n="nombre"/></tag>
 	    </tags>
 	    <lu>
-              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="sl" part="lem"/>
               <clip pos="1" side="tl" part="tags"/>
               <lit-tag v="4"/>
 	    </lu>
 	    <b pos="1"/>
 	    <lu>
-              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="sl" part="lem"/>
               <clip pos="2" side="tl" part="tags"/>
 	    </lu>
 	    <b pos="2"/>
             <lu>
-              <clip pos="3" side="tl" part="lem"/>
+              <clip pos="3" side="sl" part="lem"/>
               <clip pos="3" side="tl" part="tags"/>
               <lit-tag v="4"/>
             </lu>
@@ -7913,12 +8235,12 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
             </lu>
 	    <b pos="1"/>
 	    <lu>
-              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="sl" part="lem"/>
               <clip pos="2" side="tl" part="tags"/>
 	    </lu>
 	    <b pos="2"/>
 	    <lu>
-              <clip pos="3" side="tl" part="lem"/>
+              <clip pos="3" side="sl" part="lem"/>
               <clip pos="3" side="tl" part="tags"/>
 	    </lu>
 	  </chunk>
@@ -7951,12 +8273,12 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	      <tag><lit-tag v="SN.f.sg.nom"/></tag>
 	    </tags>
 	    <lu>
-              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="sl" part="lem"/>
               <clip pos="1" side="tl" part="tags"/>
 	    </lu>
 	    <b pos="1"/>
 	    <lu>
-              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="sl" part="lem"/>
               <clip pos="2" side="tl" part="tags"/>
 	    </lu>
 	    <b pos="2"/>
@@ -7998,7 +8320,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
             </lu>
 	    <b pos="1"/>
 	    <lu>
-              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="sl" part="lem"/>
               <clip pos="2" side="tl" part="tags"/>
 	    </lu>
 	  </chunk>
@@ -28747,6 +29069,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
         </call-macro>
 
         <let><var n="npron"/><clip pos="1" side="sl" part="lem"/></let>
+        <modify-case><var n="npron"/><lit v="aa"/></modify-case>
         <out>
           <chunk namefrom="npron" case="caseFirstWord">
 	    <tags>
@@ -28783,6 +29106,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	</call-macro>
 
         <let><var n="npron"/><clip pos="1" side="sl" part="lem"/></let>
+        <modify-case><var n="npron"/><lit v="aa"/></modify-case>
         <out>
           <chunk namefrom="npron" case="caseFirstWord">
 	    <tags>
@@ -29097,6 +29421,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<pattern-item n="a-all"/>
       </pattern>
       <action>
+        <call-macro n="firstWord"><with-param pos="2"/></call-macro>
 	<let><var n="nsent"/><clip pos="1" side="tl" part="lem"/></let>
 	<out>
 	  <chunk namefrom="nsent">
@@ -29109,7 +29434,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	    </lu>
 	  </chunk>
 	  <b pos="1"/>
-	  <chunk name="en">
+	  <chunk name="en" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
@@ -29342,6 +29667,32 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	    <lu>
               <lit v="kio"/>
 	      <lit-tag v="prn.rel.3.4"/>
+	    </lu>
+	  </chunk>
+	</out>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+    <rule comment="IJ">
+      <pattern>
+	<pattern-item n="ij"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<out>
+	  <chunk name="ij" case="caseFirstWord">
+	    <tags>
+	      <tag><lit-tag v="ij"/></tag>
+	    </tags>
+	    <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="tags"/>
 	    </lu>
 	  </chunk>
 	</out>
