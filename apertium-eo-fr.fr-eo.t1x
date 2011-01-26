@@ -24,7 +24,6 @@
       <cat-item lemma="saint" tags="adj.*"/>
       <cat-item lemma="Saint" tags="np.loc.*"/>
       <cat-item lemma="Sainte" tags="np.loc.*"/>
-      <cat-item lemma="St" tags=""/>
     </def-cat>
 
      <def-cat n="npunk">
@@ -5166,6 +5165,49 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     </def-macro>
 -->
 
+  <def-macro n="prn_nosubj" npar="1"> 
+      <choose>
+        <when>
+          <test>
+            <equal><clip pos="1" side="tl" part="tipus_prn"/><lit-tag v="adv"/></equal>
+          </test>
+          <out>
+            <chunk name="adv" case="caseFirstWord">
+              <tags>
+                <tag><lit-tag v="adv"/></tag>
+              </tags>
+              <lu>
+	        <clip pos="1" side="tl" part="lem"/>
+	        <clip pos="1" side="tl" part="a_adv"/>
+              </lu>
+            </chunk>
+          </out>
+        </when>
+        <otherwise>
+	  <call-macro n="nom_cas"><with-param pos="1"/></call-macro>
+          <out>
+	  <chunk name="prn_nosubj">
+	    <tags>
+	      <tag><lit-tag v="SN"/></tag>
+	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
+	      <tag><var n="nombre"/></tag>
+	      <tag><var n="case"/></tag>
+	      <tag><var n="changecase"/></tag>
+	    </tags>
+	    <lu>
+	      <clip pos="1" side="tl" part="lem"/>
+	      <clip pos="1" side="tl" part="a_prn"/>
+	      <lit-tag v="2"/>
+	      <clip pos="1" side="tl" part="pers"/>
+	      <clip pos="1" side="tl" part="gen"/>
+	      <lit-tag v="3"/>
+	    </lu>
+	  </chunk>
+          </out>
+        </otherwise>
+      </choose>
+  </def-macro>
+
 <!-- nombro -->
 
     <def-macro n="default_nombro" npar="0"> <!-- ŝanĝas nombre al sg, se ĝi estas ND aŭ sp -->
@@ -7867,7 +7909,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 	  <with-param pos="1"/>
 	</call-macro>
 	<out>
-	  <chunk name="loc" case="caseFirstWord">
+	  <chunk name="loc333" case="caseFirstWord">
 	    <tags>
 	      <tag><lit-tag v="SN"/></tag>
 	      <tag><clip pos="1" side="sl" part="gen"/></tag>
@@ -13149,7 +13191,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                 <b pos="1"/>
                  <chunk name="relatiu" >
                         <tags>
-                        <tag><lit-tag v="SNrelatiu1"/></tag>
+                        <tag><lit-tag v="SNrelatiu"/></tag>
                         <tag><lit-tag v="rel"/></tag>
                         <tag><var n="nombre"/></tag>
                         <tag><var n="case"/></tag>
@@ -14683,9 +14725,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	</call-macro>
 	<call-macro n="default_nombro">
 	</call-macro>
-	<call-macro n="nom_cas">
-	  <with-param pos="3"/>
-	</call-macro>
 
 	<choose>
 
@@ -14701,7 +14740,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   <lit-tag v="pp"/>
                 </let>
             <out>
-
 		 <chunk name="adv" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="adv"/></tag>
@@ -14730,23 +14768,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                   <b pos="2"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="3" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="3" side="tl" part="lem"/>
-	      <clip pos="3" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="3" side="tl" part="pers"/>
-	      <clip pos="3" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
             </out>
               </when>
 
@@ -14793,26 +14814,13 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="1" side="tl" part="temps"/>
                     </lu>
                   </chunk>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="3" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="3" side="tl" part="lem"/>
-	      <clip pos="3" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="3" side="tl" part="pers"/>
-	      <clip pos="3" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
+		<b pos="2"/>
                 </out>
         </otherwise>
         </choose>
+	<call-macro n="prn_nosubj">
+	  <with-param pos="3"/>
+	</call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -14984,23 +14992,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                   <b pos="2"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="3" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="3" side="tl" part="lem"/>
-	      <clip pos="3" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="3" side="tl" part="pers"/>
-	      <clip pos="3" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
             </out>
               </when>
 
@@ -15034,26 +15025,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                   <b pos="2"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="3" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="3" side="tl" part="lem"/>
-	      <clip pos="3" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="3" side="tl" part="pers"/>
-	      <clip pos="3" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
                 </out>
-        </otherwise>
+          </otherwise>
         </choose>
+	<call-macro n="prn_nosubj">
+	  <with-param pos="3"/>
+	</call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -15651,24 +15628,10 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           </call-macro>
           <out>
 	  <b pos="3"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="3" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="3" side="tl" part="lem"/>
-	      <clip pos="3" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="3" side="tl" part="pers"/>
-	      <clip pos="3" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
         </out>
+	<call-macro n="prn_nosubj">
+	  <with-param pos="3"/>
+	</call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -15743,24 +15706,10 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           </call-macro>
           <out>
 	  <b pos="4"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="3" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="3" side="tl" part="lem"/>
-	      <clip pos="3" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="3" side="tl" part="pers"/>
-	      <clip pos="3" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
         </out>
+	<call-macro n="prn_nosubj">
+	  <with-param pos="3"/>
+	</call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -17331,7 +17280,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="1"/>
         </call-macro>
                 <out>
-                  <chunk name="verbcj_perifP1" case="caseFirstWord">
+                  <chunk name="verbcj_perif" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><lit-tag v="vbser"/></tag>	<!-- pasivo -->
@@ -17777,24 +17726,10 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
         </call-macro>
         <out>
 	  <b pos="4"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="4" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="4" side="tl" part="lem"/>
-	      <clip pos="4" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="4" side="tl" part="pers"/>
-	      <clip pos="4" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
 	</out>
+	<call-macro n="prn_nosubj">
+	  <with-param pos="4"/>
+	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -18136,24 +18071,10 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
         </call-macro>
         <out>
 	  <b pos="5"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="4" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="4" side="tl" part="lem"/>
-	      <clip pos="4" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="4" side="tl" part="pers"/>
-	      <clip pos="4" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
 	</out>
+	<call-macro n="prn_nosubj">
+	  <with-param pos="4"/>
+	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -18230,7 +18151,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             <out>
               <chunk name="verbcj" case="caseFirstWord">
                 <tags>
-                  <tag><lit-tag v="verbcj_perifH3"/></tag>
+                  <tag><lit-tag v="verbcj_perif"/></tag>
                   <tag><clip pos="3" side="tl" part="a_verb"/></tag>
                   <tag><clip pos="2" side="tl" part="temps"/></tag>
                   <tag><clip pos="2" side="tl" part="pers"/></tag>
@@ -18281,7 +18202,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <lit-tag v="inf"/>
         </let>
             <out>
-              <chunk name="verbcj_perifH2" case="caseFirstWord">
+              <chunk name="verbcj_perif" case="caseFirstWord">
                 <tags>
                   <tag><lit-tag v="SV"/></tag>
                   <tag><clip pos="3" side="tl" part="a_verb"/></tag>
@@ -18555,7 +18476,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	      <lit-tag v="4"/>
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
-            <b pos="1"/> <!-- ŝanĝo al DE-->
+	  </chunk>
+          <b pos="1"/> <!-- ŝanĝo al DE-->
+	  <chunk name="de_par"> <!-- por eviti postan forigon per la reguloj forpelantaj de-artikolojn -->
+	    <tags>
+	      <tag><lit-tag v="pr"/></tag>
+	    </tags>
             <lu>
               <lit v="de"/>
               <lit-tag v="pr"/>
@@ -18601,7 +18527,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	      <lit-tag v="4"/>
 	      <clip pos="1" side="tl" part="lemq"/>
 	    </lu>
-            <b pos="1"/> <!-- ŝanĝo al DE-->
+	  </chunk>
+          <b pos="1"/> <!-- ŝanĝo al DE-->
+	  <chunk name="de_par"> <!-- por eviti postan forigon per la reguloj forpelantaj de-artikolojn -->
+	    <tags>
+	      <tag><lit-tag v="pr"/></tag>
+	    </tags>
             <lu>
               <lit v="de"/>
               <lit-tag v="pr"/>
@@ -18651,7 +18582,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
-            <b pos="2"/> <!-- ŝanĝo al DE-->
+	  </chunk>
+          <b pos="2"/> <!-- ŝanĝo al DE-->
+	  <chunk name="de_par"> <!-- por eviti postan forigon per la reguloj forpelantaj de-artikolojn -->
+	    <tags>
+	      <tag><lit-tag v="pr"/></tag>
+	    </tags>
             <lu>
               <lit v="de"/>
               <lit-tag v="pr"/>
@@ -18703,7 +18639,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	      <lit-tag v="4"/>
 	      <clip pos="2" side="tl" part="lemq"/>
 	    </lu>
-            <b pos="2"/> <!-- ŝanĝo al DE-->
+	  </chunk>
+          <b pos="2"/> <!-- ŝanĝo al DE-->
+	  <chunk name="de_par"> <!-- por eviti postan forigon per la reguloj forpelantaj de-artikolojn -->
+	    <tags>
+	      <tag><lit-tag v="pr"/></tag>
+	    </tags>
             <lu>
               <lit v="de"/>
               <lit-tag v="pr"/>
@@ -19014,24 +18955,10 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	    </lu>
 	  </chunk>
 	  <b pos="2"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="2" side="tl" part="lem"/>
-	      <clip pos="2" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="2" side="tl" part="pers"/>
-	      <clip pos="2" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
 	</out>
+	<call-macro n="prn_nosubj">
+	  <with-param pos="2"/>
+	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -19154,24 +19081,10 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b pos="1"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="1" side="tl" part="lem"/>
-	      <clip pos="1" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="1" side="tl" part="pers"/>
-	      <clip pos="1" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
                 </out>
+	<call-macro n="prn_nosubj">
+	  <with-param pos="1"/>
+	</call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -19240,23 +19153,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b pos="1"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="1" side="tl" part="lem"/>
-	      <clip pos="1" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="1" side="tl" part="pers"/>
-	      <clip pos="1" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
                 </out>
           </when>
 	    <otherwise>
@@ -19290,27 +19186,10 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b pos="1"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="1" side="tl" part="lem"/>
-	      <clip pos="1" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="1" side="tl" part="pers"/>
-	      <clip pos="1" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
                 </out>
             </otherwise>
 	</choose>
-	<call-macro n="firstWord">
+	<call-macro n="prn_nosubj">
 	  <with-param pos="1"/>
 	</call-macro>
 	<let>
@@ -19741,24 +19620,10 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b pos="1"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="1" side="tl" part="lem"/>
-	      <clip pos="1" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="1" side="tl" part="pers"/>
-	      <clip pos="1" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
                 </out>
+	<call-macro n="prn_nosubj">
+	  <with-param pos="1"/>
+	</call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -19879,23 +19744,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b pos="1"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="1" side="tl" part="lem"/>
-	      <clip pos="1" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="1" side="tl" part="pers"/>
-	      <clip pos="1" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
                 </out>
           </when>
 	    <otherwise>
@@ -19929,27 +19777,10 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b pos="1"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="1" side="tl" part="lem"/>
-	      <clip pos="1" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="1" side="tl" part="pers"/>
-	      <clip pos="1" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
                 </out>
             </otherwise>
 	</choose>
-	<call-macro n="firstWord">
+	<call-macro n="prn_nosubj">
 	  <with-param pos="1"/>
 	</call-macro>
 	<let>
@@ -21252,7 +21083,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="1"/>
         </call-macro>
                 <out>
-                  <chunk name="verbcj_perifP1" case="caseFirstWord">
+                  <chunk name="verbcj_perif" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><lit-tag v="vbser"/></tag>	<!-- pasivo -->
@@ -21280,7 +21111,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	</choose>
         <out>
           <b pos="3"/> <!-- ŝanĝo al DE-->
-	  <chunk name="de" case="caseFirstWord">
+	  <chunk name="de_par"> <!-- por eviti postan forigon per la reguloj forpelantaj de-artikolojn -->
 	    <tags>
 	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
@@ -21363,7 +21194,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="1"/>
         </call-macro>
                 <out>
-                  <chunk name="verbcj_perifP1" case="caseFirstWord">
+                  <chunk name="verbcj_perif" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><lit-tag v="vbser"/></tag>	<!-- pasivo -->
@@ -21391,7 +21222,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	</choose>
         <out>
           <b pos="3"/> <!-- ŝanĝo al DE-->
-	  <chunk name="de" case="caseFirstWord">
+	  <chunk name="de_par"> <!-- por eviti postan forigon per la reguloj forpelantaj de-artikolojn -->
 	    <tags>
 	      <tag><lit-tag v="pr"/></tag>
 	    </tags>
@@ -21711,24 +21542,10 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b pos="1"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="2" side="tl" part="lem"/>
-	      <clip pos="2" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="2" side="tl" part="pers"/>
-	      <clip pos="2" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
                 </out>
+	<call-macro n="prn_nosubj">
+	  <with-param pos="2"/>
+	</call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -21873,23 +21690,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b pos="1"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="2" side="tl" part="lem"/>
-	      <clip pos="2" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="2" side="tl" part="pers"/>
-	      <clip pos="2" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
                 </out>
           </when>
 	    <otherwise>
@@ -21933,28 +21733,11 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b pos="1"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="2" side="tl" part="lem"/>
-	      <clip pos="2" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="2" side="tl" part="pers"/>
-	      <clip pos="2" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
                 </out>
             </otherwise>
 	</choose>
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
+	<call-macro n="prn_nosubj">
+	  <with-param pos="2"/>
 	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
@@ -22040,23 +21823,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b pos="1"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="2" side="tl" part="lem"/>
-	      <clip pos="2" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="2" side="tl" part="pers"/>
-	      <clip pos="2" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
                 </out>
           </when>
 	    <otherwise>
@@ -22105,28 +21871,11 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b pos="1"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="2" side="tl" part="lem"/>
-	      <clip pos="2" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="2" side="tl" part="pers"/>
-	      <clip pos="2" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
                 </out>
             </otherwise>
 	</choose>
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
+	<call-macro n="prn_nosubj">
+	  <with-param pos="2"/>
 	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
@@ -22207,23 +21956,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b pos="1"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="2" side="tl" part="lem"/>
-	      <clip pos="2" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="2" side="tl" part="pers"/>
-	      <clip pos="2" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
                 </out>
           </when>
 	    <otherwise>
@@ -22268,28 +22000,11 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b pos="1"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="2" side="tl" part="lem"/>
-	      <clip pos="2" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="2" side="tl" part="pers"/>
-	      <clip pos="2" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
                 </out>
             </otherwise>
 	</choose>
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
+	<call-macro n="prn_nosubj">
+	  <with-param pos="2"/>
 	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
@@ -22376,23 +22091,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b pos="1"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="2" side="tl" part="lem"/>
-	      <clip pos="2" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="2" side="tl" part="pers"/>
-	      <clip pos="2" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
                 </out>
           </when>
 	    <otherwise>
@@ -22442,28 +22140,11 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b pos="1"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="2" side="tl" part="lem"/>
-	      <clip pos="2" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="2" side="tl" part="pers"/>
-	      <clip pos="2" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
                 </out>
             </otherwise>
 	</choose>
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
+	<call-macro n="prn_nosubj">
+	  <with-param pos="2"/>
 	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
@@ -22716,7 +22397,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	              <clip pos="1" side="tl" part="a_adv"/>
 	            </lu>
 	          </chunk>
-		  <b pos="2"/>
+		  <b pos="1"/>
                   <chunk name="verbcj">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
@@ -22735,25 +22416,11 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <clip pos="3" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
-		  <b pos="1"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="2" side="tl" part="lem"/>
-	      <clip pos="2" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="2" side="tl" part="pers"/>
-	      <clip pos="2" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
+		  <b pos="2"/>
                 </out>
+	<call-macro n="prn_nosubj">
+	  <with-param pos="2"/>
+	</call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -23318,24 +22985,10 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b pos="1"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="2" side="tl" part="lem"/>
-	      <clip pos="2" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="2" side="tl" part="pers"/>
-	      <clip pos="2" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
                 </out>
+	<call-macro n="prn_nosubj">
+	  <with-param pos="2"/>
+	</call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -23415,23 +23068,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		    <b pos="1"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="2" side="tl" part="lem"/>
-	      <clip pos="2" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="2" side="tl" part="pers"/>
-	      <clip pos="2" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
                 </out>
           </when>
 	    <otherwise>
@@ -23476,28 +23112,11 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		    <b pos="1"/>
-	  <chunk name="prn_nosubj">
-	    <tags>
-	      <tag><lit-tag v="SN"/></tag>
-	      <tag><clip pos="2" side="tl" part="tipus_prn"/></tag>
-	      <tag><var n="nombre"/></tag>
-	      <tag><var n="case"/></tag>
-	      <tag><var n="changecase"/></tag>
-	    </tags>
-	    <lu>
-	      <clip pos="2" side="tl" part="lem"/>
-	      <clip pos="2" side="tl" part="a_prn"/>
-	      <lit-tag v="2"/>
-	      <clip pos="2" side="tl" part="pers"/>
-	      <clip pos="2" side="tl" part="gen"/>
-	      <lit-tag v="3"/>
-	    </lu>
-	  </chunk>
                 </out>
             </otherwise>
 	</choose>
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
+	<call-macro n="prn_nosubj">
+	  <with-param pos="2"/>
 	</call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
@@ -29195,7 +28814,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<out>
 	  <chunk name="prn" case="caseFirstWord">
 	    <tags>
-	      <tag><lit-tag v="SNrelatiu2"/></tag>
+	      <tag><lit-tag v="SNrelatiu"/></tag>
 	      <tag><clip pos="1" side="tl" part="tipus_prn"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>
@@ -29249,7 +28868,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	  <b pos="1"/>
 	  <chunk name="relatiu">
 	    <tags>
-	      <tag><lit-tag v="SNrelatiu3"/></tag>
+	      <tag><lit-tag v="SNrelatiu"/></tag>
               <tag><lit-tag v="rel"/></tag>
 	      <tag><var n="nombre"/></tag>
 	      <tag><var n="case"/></tag>

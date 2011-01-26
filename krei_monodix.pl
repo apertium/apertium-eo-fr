@@ -88,10 +88,40 @@ sub skribi {
 	} elsif ($paradigmo eq "ij") {
 			printf "<e lm=\"%s\">            <i>%s</i><par n=\"%s\"/></e>\n", $lemo, $lemo, 'adiós__ij';
 	} elsif ($paradigmo eq "vblex") {
-		if ($lemo =~ /i$/o) {
+		if ($lemo =~ /igi$/o) {
+			print STDERR "Eraro 5a: Erara paradigmo en linio $.: [$paradigmo] (devas esti 'vbtr')\n";
+		} elsif ($lemo =~ /iĝi$/o) {
+			print STDERR "Eraro 5b: Erara paradigmo en linio $.: [$paradigmo] (devas esti 'vbntr')\n";
+		} elsif ($lemo =~ /i$/o) {
 			printf "<e lm=\"%s\">            <i>%s</i><par n=\"%s\"/></e>\n", $lemo, $`, 'i__vblex';
 		} else {
-			print STDERR "Eraro 4: Ne konata paradigmo en linio $.: [$paradigmo]\n";
+			print STDERR "Eraro 4a: Ne konata paradigmo en linio $.: [$paradigmo]\n";
+		}
+	} elsif ($paradigmo eq "vbtr") {
+		if ($lemo =~ /iĝi$/o) {
+			print STDERR "Eraro 6a: Erara paradigmo en linio $.: [$paradigmo] (devas esti 'vbntr')\n";
+		} elsif ($lemo =~ /i$/o) {
+			printf "<e lm=\"%s\">            <i>%s</i><par n=\"%s\"/></e>\n", $lemo, $`, 'igi__vblex';
+		} else {
+			print STDERR "Eraro 4b: Ne konata paradigmo en linio $.: [$paradigmo]\n";
+		}
+	} elsif ($paradigmo eq "vbntr") {
+		if ($lemo =~ /igi$/o) {
+			print STDERR "Eraro 6a: Erara paradigmo en linio $.: [$paradigmo] (devas esti 'vbtr')\n";
+		} elsif ($lemo =~ /i$/o) {
+			printf "<e lm=\"%s\">            <i>%s</i><par n=\"%s\"/></e>\n", $lemo, $`, 'iĝi__vblex';
+		} else {
+			print STDERR "Eraro 4c: Ne konata paradigmo en linio $.: [$paradigmo]\n";
+		}
+	} elsif ($paradigmo eq "vbtr_ntr") {
+		if ($lemo =~ /igi$/o) {
+			print STDERR "Eraro 7a: Erara paradigmo en linio $.: [$paradigmo] (devas esti 'vbtr')\n";
+		} elsif ($lemo =~ /iĝi$/o) {
+			print STDERR "Eraro 7b: Erara paradigmo en linio $.: [$paradigmo] (devas esti 'vbntr')\n";
+		} elsif ($lemo =~ /i$/o) {
+			printf "<e lm=\"%s\">            <i>%s</i><par n=\"%s\"/></e>\n", $lemo, $`, 'igĝi__vblex';
+		} else {
+			print STDERR "Eraro 4d: Ne konata paradigmo en linio $.: [$paradigmo]\n";
 		}
 	} elsif ($paradigmo eq "np><loc") {
 		if ($lemo =~ /io$/o) {

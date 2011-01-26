@@ -8,8 +8,16 @@
 
   <section-def-cats>
     <def-cat n="SN">
-      <cat-item tags="unknown"/>
       <cat-item tags="SN.*"/>
+      <cat-item tags="unknown"/>
+    </def-cat>
+
+    <def-cat n="SNnotunk">
+      <cat-item tags="SN.*"/>
+    </def-cat>
+
+    <def-cat n="SNand_or">
+      <cat-item lemma="nom_conj_nom" tags="SN.*"/>
     </def-cat>
 
     <def-cat n="SNrelatiu">
@@ -70,13 +78,10 @@
        <cat-item lemma="unknown" tags="unknown"/>
     </def-cat>
 
-    <def-cat n="CC">
-      <cat-item tags="CC.*"/>
-      <cat-item tags="and_or.*"/>
-    </def-cat>
-
     <def-cat n="and_or">
       <cat-item tags="and_or.*"/>
+      <cat-item tags="cnjcoo.*"/>
+      <cat-item tags="cnjcoo"/>
     </def-cat>
 
     <def-cat n="al">
@@ -108,6 +113,10 @@
     </def-cat>
 
     <def-cat n="cm">
+      <cat-item lemma="cm" tags="sent"/>
+    </def-cat>
+
+    <def-cat n="cm_lpar">
       <cat-item lemma="cm" tags="sent"/>
       <cat-item lemma="lpar" tags="sent"/>
     </def-cat>
@@ -162,7 +171,19 @@
       <attr-item tags="pl"/>
       <attr-item tags="sp"/>
     </def-attr>
+
+    <def-attr n="tipus_prn">
+      <attr-item tags="subj"/>
+      <attr-item tags="obj"/>
+      <attr-item tags="dat"/>
+      <attr-item tags="tn"/>
+      <attr-item tags="itg"/>
+      <attr-item tags="pos"/>
+      <attr-item tags="ref"/>
+    </def-attr>
+
   </section-def-attrs>
+
 
   <section-def-vars>
     <def-var n="nombre"/>
@@ -590,7 +611,7 @@
 <rule comment="REGLA: SN, SNrel ( deux enseignants (dont une femme) )">
       <pattern>
 	<pattern-item n="SN"/>
-	<pattern-item n="cm"/>
+	<pattern-item n="cm_lpar"/>
 	<pattern-item n="SNrelatiu"/>
       </pattern>
       <action>
@@ -847,6 +868,150 @@ bedaŭrinde ne eblas (en kelkaj okazoj) meti ĉion sub unu solan SN; pro tio, se
     </action>
 </rule>
 -->
+
+    <!-- kunordigo -->
+
+    <rule comment="REGLA: SN1 and/or SN2   -   SN ">
+      <pattern>
+        <pattern-item n="SNnotunk"/>
+        <pattern-item n="and_or"/>
+        <pattern-item n="SN"/>
+      </pattern>
+      <action>
+<!-- Ni kunigas nur se SN1 kaj SN2 estas samnombraj; aliokaze unu el la du ŝanĝus sian nombron -->
+<!-- Ni kunigas nur se SN1 kaj SN2 estas ambaŭ pronomoj aŭ malpronomoj; aliokaze la sintagmo-ĉapo malsamas kaj estiĝas bordelo -->
+    <choose>
+      <when>
+        <test>
+          <and>
+            <equal><clip pos="1" part="nbr"/><clip pos="3" part="nbr"/></equal>
+            <equal><clip pos="1" part="tipus_prn"/><clip pos="3" part="tipus_prn"/></equal>
+            <or>
+              <and>
+                <equal><clip pos="1" part="lem"/><lit v="prpers"/></equal>
+                <equal><clip pos="3" part="lem"/><lit v="prpers"/></equal>
+              </and>
+              <and>
+                <not><equal><clip pos="1" part="lem"/><lit v="prpers"/></equal></not>
+                <not><equal><clip pos="3" part="lem"/><lit v="prpers"/></equal></not>
+              </and>
+            </or>
+            <or>
+              <and>
+                <equal><clip pos="1" part="lem"/><lit v="prn_nosubj"/></equal>
+                <equal><clip pos="3" part="lem"/><lit v="prn_nosubj"/></equal>
+              </and>
+              <and>
+                <not><equal><clip pos="1" part="lem"/><lit v="prn_nosubj"/></equal></not>
+                <not><equal><clip pos="3" part="lem"/><lit v="prn_nosubj"/></equal></not>
+              </and>
+            </or>
+          </and>
+        </test>
+        <out>
+          <chunk>
+            <get-case-from pos="1"><lit v="nom_conj_nom"/></get-case-from>
+            <clip pos="1" part="tags"/>
+            <lit v="{"/>
+            <clip pos="1" part="content"/>
+                <b pos="1"/>
+            <clip pos="2" part="content"/>
+                <b pos="2"/>
+            <clip pos="3" part="content"/>
+             <lit v="}"/>
+          </chunk>
+        </out>
+      </when>
+      <otherwise>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+                <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+                <b pos="2"/>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+        </out>
+      </otherwise>
+    </choose>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: SN1, SN2and_or   -   SN ">
+      <pattern>
+        <pattern-item n="SNnotunk"/>
+        <pattern-item n="cm"/>
+        <pattern-item n="SNand_or"/>
+      </pattern>
+      <action>
+<!-- Ni kunigas nur se SN1 kaj SN2 estas samnombraj; aliokaze unu el la du ŝanĝus sian nombron -->
+<!-- Ni kunigas nur se SN1 kaj SN2 estas ambaŭ pronomoj aŭ malpronomoj; aliokaze la sintagmo-ĉapo malsamas kaj estiĝas bordelo -->
+    <choose>
+      <when>
+        <test>
+          <and>
+            <equal><clip pos="1" part="nbr"/><clip pos="3" part="nbr"/></equal>
+            <equal><clip pos="1" part="tipus_prn"/><clip pos="3" part="tipus_prn"/></equal>
+            <or>
+              <and>
+                <equal><clip pos="1" part="lem"/><lit v="prpers"/></equal>
+                <equal><clip pos="3" part="lem"/><lit v="prpers"/></equal>
+              </and>
+              <and>
+                <not><equal><clip pos="1" part="lem"/><lit v="prpers"/></equal></not>
+                <not><equal><clip pos="3" part="lem"/><lit v="prpers"/></equal></not>
+              </and>
+            </or>
+            <or>
+              <and>
+                <equal><clip pos="1" part="lem"/><lit v="prn_nosubj"/></equal>
+                <equal><clip pos="3" part="lem"/><lit v="prn_nosubj"/></equal>
+              </and>
+              <and>
+                <not><equal><clip pos="1" part="lem"/><lit v="prn_nosubj"/></equal></not>
+                <not><equal><clip pos="3" part="lem"/><lit v="prn_nosubj"/></equal></not>
+              </and>
+            </or>
+          </and>
+        </test>
+        <out>
+          <chunk>
+            <get-case-from pos="1"><lit v="nom_conj_nom"/></get-case-from>
+            <clip pos="1" part="tags"/>
+            <lit v="{"/>
+            <clip pos="1" part="content"/>
+                <b pos="1"/>
+            <clip pos="2" part="content"/>
+                <b pos="2"/>
+            <clip pos="3" part="content"/>
+             <lit v="}"/>
+          </chunk>
+        </out>
+      </when>
+      <otherwise>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+                <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+                <b pos="2"/>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+        </out>
+      </otherwise>
+    </choose>
+      </action>
+    </rule>
+
 
   <!-- QUE -->
 
