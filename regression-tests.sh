@@ -1,78 +1,46 @@
 #!/bin/bash
 
-TESTNAME=Regression_tests
+SRCLIST=`mktemp`;
+TRGLIST=`mktemp`;
+TSTLIST=`mktemp`;
 
-NODOWNLOAD=$1
-#TEMPDIR=/tmp/testcache # `mktemp -d`;
-TEMPDIR=testcache
-DATADIR=`pwd`;
+basedir=`pwd`;
+mode=fr-eo-bytecode
 
-cp *.mode modes/
+wget -O - -q http://wiki.apertium.org/wiki/French_and_Esperanto/Regression_tests | grep '<li>' | sed 's/<.*li>//g' | sed 's/ /_/g' | cut -f2 -d')' | sed 's/<i>//g' | sed 's/<\/i>//g' | cut -f2 -d'*' | sed 's/→/!/g' | cut -f1 -d'!' | sed 's/(note:/!/g' | sed 's/_/ /g' | sed 's/$/./g' > $SRCLIST;
+wget -O - -q http://wiki.apertium.org/wiki/French_and_Esperanto/Regression_tests | grep '<li>' | sed 's/<.*li>//g' | sed 's/ /_/g' | sed 's/(\w\w)//g' | sed 's/<i>//g' | cut -f2 -d'*' | sed 's/<\/i>_→/!/g' | cut -f2 -d'!' | sed 's/_/ /g' | sed 's/^ *//g' | sed 's/ *$//g' | sed 's/$/./g' > $TRGLIST;
 
-#[ $NODOWNLOAD =="" ] || echo "Downloading test set $TESTNAME"
-#[ $NODOWNLOAD =="" ] && echo "NOT Downloading test set $TESTNAME"
+apertium -d . $mode < $SRCLIST > $TSTLIST;
 
-unset LC_ALL
-mkdir -p $TEMPDIR
-cd $TEMPDIR;
+cat $SRCLIST | sed 's/\.$//g' > $SRCLIST.n; mv $SRCLIST.n $SRCLIST;
+cat $TRGLIST | sed 's/\.$//g' > $TRGLIST.n; mv $TRGLIST.n $TRGLIST;
+cat $TSTLIST | sed 's/\.$//g' | sed 's/\t/ /g' > $TSTLIST.n; mv $TSTLIST.n $TSTLIST;
 
-REGEN=1
+TOTAL=0
+CORRECT=0
+for LINE in `paste $SRCLIST $TRGLIST $TSTLIST | sed 's/ /%_%/g' | sed 's/\t/!/g'`; do
+#	echo $LINE;
 
-if [ "$NODOWNLOAD" == "" ]; then
-	REGEN=1
-	LANG=fr wget -N http://wiki.apertium.org/wiki/French_and_Esperanto/$TESTNAME 2>&1 | cat > wgetlog.txt
-        grep "Saving to:" wgetlog.txt || REGEN=0 && echo $TESTNAME not changed on webserver
-else
-	echo "NOT Downloading test set $TESTNAME"
-fi
+	SRC=`echo $LINE | sed 's/%_%/ /g' | cut -f1 -d'!' | sed 's/^ *//g' | sed 's/ *$//g' | sed 's/  / /g'`;
+	TRG=`echo $LINE | sed 's/%_%/ /g' | cut -f2 -d'!' | sed 's/^ *//g' | sed 's/ *$//g' | sed 's/  / /g'`;
+	TST=`echo $LINE | sed 's/%_%/ /g' | cut -f3 -d'!' | sed 's/^ *//g' | sed 's/ *$//g' | sed 's/  / /g'`;
 
-
-DIRS=`grep '<li>' $TESTNAME | cut -f2 -d'(' | cut -f1 -d')' | uniq`
-
-if [ "$REGEN" == "1" ]; then
-	rm -f test_*
-	echo "Preparing (shouldn't be necessary if $TESTNAME not changed on webserver)"
-
-LIST=`grep '<li>' $TESTNAME | sed 's/<.*li>//g' | sed -r 's/\s+/_/g'`;
-
-for LINE in $LIST; do
-	dir=`echo $LINE | cut -f2 -d'(' | cut -f1 -d')'`;
-
-	#echo $LINE;
-	#echo $dir;
-
-	SL=`echo $LINE | cut -f2 -d')' | sed 's/<i>//g' | sed 's/<\/i>//g' | sed 's/→/@/g' | cut -f1 -d'@' | sed 's/(note:/@/g' | sed 's/_/ /g'`;
-	TL=`echo $LINE | sed 's/(\w\w)//g' | sed 's/<i>//g' | sed 's/<\/i>_→/@/g' | cut -f2 -d'@' | sed 's/_/ /g'`;
-
-	echo $SL >> test_SL_$dir
-	echo $TL >> test_TL_$dir
-done
-fi
-
-
-
-for dir in $DIRS; do
-	if [ $dir = "fr" ]; then
-		mode="fr-eo";
-	else 
-		mode="eo-fr";
+	
+	echo $TRG | grep "^$TST$" > /dev/null;	
+	if [ $? -eq 1 ]; then
+		echo -e $mode"\t  "$SRC"\n\t- $TRG\n\t+ "$TST"\n";
+	else
+		echo -e $mode"\t  "$SRC"\nWORKS\t  $TST\n";
+		CORRECT=`expr $CORRECT + 1`;
 	fi
-
-	echo "Translating using  apertium -d $DATADIR $mode"
-
- 	cat test_SL_$dir | nl -s ' : ' > testtmp
-	cat testtmp | apertium -d $DATADIR $mode > testres
-
-	cat test_TL_$dir | nl -s ' : ' | diff -wi - testres | grep -r '[<>]' >> testtmp
-
-	FAIL=`grep "^<" testtmp |  cut -c2-8`; 
-#	if [[ "$FAIL"!="" ]]; then
-#		echo "< correct      > actual"
-#	else
-#		echo "All tests passed."
-#	fi
-	for i in $FAIL; do grep " $i : " testtmp; done
-
+	TOTAL=`expr $TOTAL + 1`;
 done
 
+echo $CORRECT" / "$TOTAL ;
+if [ -x /usr/bin/calc ]; then
+	WORKING=`calc $CORRECT" / "$TOTAL" * 100" | head -c 7`;
 
+	echo $WORKING"%";
+fi
+
+rm $SRCLIST $TRGLIST $TSTLIST;

@@ -1008,6 +1008,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="-e">              <i>-</i><par n="e__adv"/></e>
 <e lm="1a">              <i>1</i><par n="a__adj"/></e>
 <e r="RL" lm="1a">       <p><l>1</l>         <r>1a</r></p><par n="a__adj"/></e> <!-- porkaĵo por simpligo la pritrakto de 1r mai en t1x -->
+<e lm="50a">             <i>50</i><par n="a__adj"/></e>
 <e lm="10a">             <i>10</i><par n="a__adj"/></e>
 <e lm="11a">             <i>11</i><par n="a__adj"/></e>
 <e lm="12a">             <i>12</i><par n="a__adj"/></e>
@@ -1044,7 +1045,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Ruĝa Krescento"> <p><l>>Ruĝan<b/>Krescenton</l><r>Ruĝa<b/>Krescento<s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="Cindra Merkredo"> <p><l>Cindra<b/>Merkredo</l><r>Cindra<b/>Merkredo<s n="np"/><s n="al"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="Cindra Merkredo"> <p><l>>Cindran<b/>Merkredon</l><r>Cindra<b/>Merkredo<s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
-<e lm="Internacia Labor-Organizaĵo"><p><l>>Internacian<b/>Labor-Organizaĵon</l><r>Internacia<b/>Labor-Organizaĵo<s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Internacia Labor-Organizaĵo"><p><l>>Internacian<b/>Labor-Organizaĵon</l><r>Internacia<b/>Labor-Organizaĵo<s n="np"/><s n="al"/><s n="sp"/><s n="acc"/></r></p></e>
 <e lm="Nord-Atlantika Traktat-Organizaĵo"><p><l>>Nord-Atlantikan<b/>Traktat-Organizaĵon</l><r>Nord-Atlantika<b/>Traktat-Organizaĵo<s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="a.K.">            <i>a.K.</i><par n="BBC__n"/></e>
 <e lm="SOS">               <i>SOS</i><par n="BBC__n"/></e>
@@ -1072,6 +1073,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Abbas">           <i>Abbas</i><par n="Mark__np"/></e>
 <e lm="Abbas">           <i>Abbas</i><par n="Smith__np"/></e>
 <e lm="Abbeville">       <i>Abbeville</i><par n="Barcelona__np"/></e>
+<e lm="Sankt-Johano">       <i>Sankt-Johan</i><par n="Barcelon/o__np"/></e>
 <e lm="Abbey">           <i>Abbey</i><par n="Marie__np"/></e>
 <e lm="Abbi">            <i>Abbi</i><par n="Marie__np"/></e>
 <e lm="Abbie">           <i>Abbie</i><par n="Marie__np"/></e>
@@ -1502,6 +1504,36 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="z">       <p><l>z</l>        <r>z</r></p></e>
 -->
 
+<e lm="jakobia determinanto"><p><l>jakobia<b/>determinanto</l><r>jakobia<b/>determinanto<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="jakobia determinanto"><p><l>jakobian<b/>determinanton</l><r>jakobia<b/>determinanto<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="jakobia determinanto"><p><l>jakobiaj<b/>determinantoj</l><r>jakobia<b/>determinanto<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="jakobia determinanto"><p><l>jakobiajn<b/>determinantojn</l><r>jakobia<b/>determinanto<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="ekstrema dekstro"><p><l>ekstrema<b/>dekstro</l><r>ekstrema<b/>dekstro<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="ekstrema dekstro"><p><l>ekstreman<b/>dekstron</l><r>ekstrema<b/>dekstro<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="ekstrema dekstro"><p><l>ekstremaj<b/>dekstroj</l><r>ekstrema<b/>dekstro<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="ekstrema dekstro"><p><l>ekstremajn<b/>dekstrojn</l><r>ekstrema<b/>dekstro<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="ekstrema maldekstro"><p><l>ekstrema<b/>maldekstro</l><r>ekstrema<b/>maldekstro<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="ekstrema maldekstro"><p><l>ekstreman<b/>maldekstron</l><r>ekstrema<b/>maldekstro<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="ekstrema maldekstro"><p><l>ekstremaj<b/>maldekstroj</l><r>ekstrema<b/>maldekstro<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="ekstrema maldekstro"><p><l>ekstremajn<b/>maldekstrojn</l><r>ekstrema<b/>maldekstro<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="interfera franĝo"><p><l>interfera<b/>franĝo</l><r>interfera<b/>franĝo<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="interfera franĝo"><p><l>interferan<b/>franĝon</l><r>interfera<b/>franĝo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="interfera franĝo"><p><l>interferaj<b/>franĝoj</l><r>interfera<b/>franĝo<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="interfera franĝo"><p><l>interferajn<b/>franĝojn</l><r>interfera<b/>franĝo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="fiksa ideo"><p><l>fiksa<b/>ideo</l><r>fiksa<b/>ideo<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="fiksa ideo"><p><l>fiksan<b/>ideon</l><r>fiksa<b/>ideo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="fiksa ideo"><p><l>fiksaj<b/>ideoj</l><r>fiksa<b/>ideo<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="fiksa ideo"><p><l>fiksajn<b/>ideojn</l><r>fiksa<b/>ideo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="kora stimulatoro"><p><l>kora<b/>stimulatoro</l><r>kora<b/>stimulatoro<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="kora stimulatoro"><p><l>koran<b/>stimulatoron</l><r>kora<b/>stimulatoro<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="kora stimulatoro"><p><l>koraj<b/>stimulatoroj</l><r>kora<b/>stimulatoro<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="kora stimulatoro"><p><l>korajn<b/>stimulatorojn</l><r>kora<b/>stimulatoro<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="aldonvalora imposto"><p><l>aldonvalora<b/>imposto</l><r>aldonvalora<b/>imposto<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="aldonvalora imposto"><p><l>aldonvaloran<b/>imposton</l><r>aldonvalora<b/>imposto<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="aldonvalora imposto"><p><l>aldonvaloraj<b/>impostoj</l><r>aldonvalora<b/>imposto<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="aldonvalora imposto"><p><l>aldonvalorajn<b/>impostojn</l><r>aldonvalora<b/>imposto<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="ĉiuj detaloj"><p><l>ĉiuj<b/>detaloj</l><r>ĉiuj<b/>detaloj<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="ĉiuj detaloj"><p><l>ĉiujn<b/>detalojn</l><r>ĉiuj<b/>detaloj<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
 <e lm="afliktiĝema">     <i>afliktiĝem</i><par n="a__adj"/></e>
 <e lm="afonia">          <i>afoni</i><par n="a__adj"/></e>
 <e lm="afonio">          <i>afoni</i><par n="o__n"/></e>
@@ -15219,11 +15251,21 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="hieraŭ">          <i>hieraŭ</i><par n="jam__adv"/></e>
 <e lm="hieraŭo">         <i>hieraŭ</i><par n="o__n"/></e>
 <e lm="hieraŭ je la nuna horo"><i>hieraŭ<b/>je<b/>la<b/>nuna<b/>horo</i><par n="jam__adv"/></e>
-<e lm="hieraŭ matene">   <i>hieraŭ<b/>maten</i><par n="e__adv"/></e>
-<e lm="hieraŭ nokte">    <i>hieraŭ<b/>nokt</i><par n="e__adv"/></e>
-<e lm="hieraŭ posttagmeze"><i>hieraŭ<b/>posttagmez</i><par n="e__adv"/></e>
-<e lm="hieraŭ tagmeze">  <i>hieraŭ<b/>tagmez</i><par n="e__adv"/></e>
-<e lm="hieraŭ vespere">  <i>hieraŭ<b/>vesper</i><par n="e__adv"/></e>
+<e lm="hodiaŭ matene">   <i>hodiaŭ<b/>matene</i><par n="jam__adv"/></e>
+<e lm="hodiaŭ nokte">    <i>hodiaŭ<b/>nokte</i><par n="jam__adv"/></e>
+<e lm="hodiaŭ posttagmeze"><i>hodiaŭ<b/>posttagmeze</i><par n="jam__adv"/></e>
+<e lm="hodiaŭ tagmeze">  <i>hodiaŭ<b/>tagmeze</i><par n="jam__adv"/></e>
+<e lm="hodiaŭ vespere">  <i>hodiaŭ<b/>vespere</i><par n="jam__adv"/></e>
+<e lm="antaŭhieraŭ matene">   <i>antaŭhieraŭ<b/>matene</i><par n="jam__adv"/></e>
+<e lm="antaŭhieraŭ nokte">    <i>antaŭhieraŭ<b/>nokte</i><par n="jam__adv"/></e>
+<e lm="antaŭhieraŭ posttagmeze"><i>antaŭhieraŭ<b/>posttagmeze</i><par n="jam__adv"/></e>
+<e lm="antaŭhieraŭ tagmeze">  <i>antaŭhieraŭ<b/>tagmeze</i><par n="jam__adv"/></e>
+<e lm="antaŭhieraŭ vespere">  <i>antaŭhieraŭ<b/>vespere</i><par n="jam__adv"/></e>
+<e lm="hieraŭ matene">   <i>hieraŭ<b/>matene</i><par n="jam__adv"/></e>
+<e lm="hieraŭ nokte">    <i>hieraŭ<b/>nokte</i><par n="jam__adv"/></e>
+<e lm="hieraŭ posttagmeze"><i>hieraŭ<b/>posttagmeze</i><par n="jam__adv"/></e>
+<e lm="hieraŭ tagmeze">  <i>hieraŭ<b/>tagmeze</i><par n="jam__adv"/></e>
+<e lm="hieraŭ vespere">  <i>hieraŭ<b/>vespere</i><par n="jam__adv"/></e>
 <e lm="hierodulo">       <i>hierodul</i><par n="ino__n"/></e>
 <e lm="hieroglifa">      <i>hieroglif</i><par n="a__adj"/></e>
 <e lm="hieroglifo">      <i>hieroglif</i><par n="o__n"/></e>
@@ -16462,8 +16504,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="internacia">      <i>internaci</i><par n="a__adj"/></e>
 <e lm="internacie">      <i>internaci</i><par n="e__adv"/></e>
 <e lm="internacio">      <i>internaci</i><par n="o__n"/></e>
-<e lm="Internacia Labor-Organizaĵo"><p><l>Internacia<b/>Labor-Organizaĵo</l><r>Internacia<b/>Labor-Organizaĵo<s n="np"/><s n="al"/><s n="sg"/><s n="nom"/></r></p></e>
-<e lm="Internacia Mona Fonduso"><p><l>Internacia<b/>Mona<b/>Fonduso</l><r>Internacia<b/>Mona<b/>Fonduso<s n="np"/><s n="al"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Internacia Labor-Organizaĵo"><p><l>Internacia<b/>Labor-Organizaĵo</l><r>Internacia<b/>Labor-Organizaĵo<s n="np"/><s n="al"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="Internacia Mona Fonduso"><p><l>Internacia<b/>Mona<b/>Fonduso</l><r>Internacia<b/>Mona<b/>Fonduso<s n="np"/><s n="al"/><s n="sp"/><s n="nom"/></r></p></e>
 <e lm="internacia respondkupono"><p><l>internacia<b/>respondkupono</l><r>internacia<b/>respondkupono<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="internacia respondkupono"><p><l>internaciaj<b/>respondkuponoj</l><r>internacia<b/>respondkupono<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
 <e lm="internacia respondkupono"><p><l>internaciajn<b/>respondkuponojn</l><r>internacia<b/>respondkupono<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
@@ -16970,8 +17012,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="jakobia matrico"> <p><l>jakobia<b/>matrico</l><r>jakobia<b/>matrico<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="jakobia matrico"> <p><l>jakobiaj<b/>matricoj</l><r>jakobia<b/>matrico<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
 <e lm="jakobia matrico"> <p><l>jakobiajn<b/>matricojn</l><r>jakobia<b/>matrico<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
-<e lm="jakobiano">       <i>jakobian</i><par n="ino__n"/></e>
 <e lm="jakobia matrico"> <p><l>jakobian<b/>matricon</l><r>jakobia<b/>matrico<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="jakobiano">       <i>jakobian</i><par n="ino__n"/></e>
 <e lm="jakto">           <i>jakt</i><par n="o__n"/></e>
 <e lm="Jakys">           <i>Jakys</i><par n="Mark__np"/></e>
 <e lm="jalapo">          <i>jalap</i><par n="o__n"/></e>
@@ -18675,6 +18717,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="kiel">            <i>kiel</i><par n="jam__adv"/></e>
 <e lm="kiel">            <i>kiel</i><par n="after__cnjadv"/></e>
 <e lm="kiel">            <i>kiel</i><par n="kie__rel"/></e>
+<e lm="samkiel">            <i>samkiel</i><par n="kie__rel"/></e>
+<e lm="tutsame">            <i>tutsame</i><par n="kie__rel"/></e>
 <e lm="kiel">            <i>kiel</i><par n="kie__itg"/></e>
 <e lm="kiel antaŭvidite"><i>kiel<b/>antaŭvidit</i><par n="e__adv"/></e>
 <e lm="kiel antaŭzorgo"> <i>kiel<b/>antaŭzorgo</i><par n="jam__adv"/></e>
@@ -25259,12 +25303,12 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Moncion">         <i>Moncion</i><par n="Smith__np"/></e>
 <e lm="monda">           <i>mond</i><par n="a__adj"/></e>
 <e lm="mondo">           <i>mond</i><par n="o__n"/></e>
-<e lm="Monda Organizaĵo pri Meteologio"><p><l>Monda<b/>Organizaĵo<b/>pri<b/>Meteologio</l><r>Monda<b/>Organizaĵo<b/>pri<b/>Meteologio<s n="np"/><s n="al"/><s n="sg"/><s n="nom"/></r></p></e>
-<e lm="Monda Organizaĵo pri Sano"><p><l>Monda<b/>Organizaĵo<b/>pri<b/>Sano</l><r>Monda<b/>Organizaĵo<b/>pri<b/>Sano<s n="np"/><s n="al"/><s n="sg"/><s n="nom"/></r></p></e>
-<e lm="Monda Organizaĵo pri Turismo"><p><l>Monda<b/>Organizaĵo<b/>pri<b/>Turismo</l><r>Monda<b/>Organizaĵo<b/>pri<b/>Turismo<s n="np"/><s n="al"/><s n="sg"/><s n="nom"/></r></p></e>
-<e lm="Monda Organizaĵo pri Meteologio"><p><l>Mondan<b/>Organizaĵon<b/>pri<b/>Meteologio</l><r>Monda<b/>Organizaĵo<b/>pri<b/>Meteologio<s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
-<e lm="Monda Organizaĵo pri Sano"><p><l>Mondan<b/>Organizaĵon<b/>pri<b/>Sano</l><r>Monda<b/>Organizaĵo<b/>pri<b/>Sano<s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
-<e lm="Monda Organizaĵo pri Turismo"><p><l>Mondan<b/>Organizaĵon<b/>pri<b/>Turismo</l><r>Monda<b/>Organizaĵo<b/>pri<b/>Turismo<s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Monda Organizaĵo pri Meteologio"><p><l>Monda<b/>Organizaĵo<b/>pri<b/>Meteologio</l><r>Monda<b/>Organizaĵo<b/>pri<b/>Meteologio<s n="np"/><s n="al"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="Monda Organizaĵo pri Sano"><p><l>Monda<b/>Organizaĵo<b/>pri<b/>Sano</l><r>Monda<b/>Organizaĵo<b/>pri<b/>Sano<s n="np"/><s n="al"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="Monda Organizaĵo pri Turismo"><p><l>Monda<b/>Organizaĵo<b/>pri<b/>Turismo</l><r>Monda<b/>Organizaĵo<b/>pri<b/>Turismo<s n="np"/><s n="al"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="Monda Organizaĵo pri Meteologio"><p><l>Mondan<b/>Organizaĵon<b/>pri<b/>Meteologio</l><r>Monda<b/>Organizaĵo<b/>pri<b/>Meteologio<s n="np"/><s n="al"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="Monda Organizaĵo pri Sano"><p><l>Mondan<b/>Organizaĵon<b/>pri<b/>Sano</l><r>Monda<b/>Organizaĵo<b/>pri<b/>Sano<s n="np"/><s n="al"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="Monda Organizaĵo pri Turismo"><p><l>Mondan<b/>Organizaĵon<b/>pri<b/>Turismo</l><r>Monda<b/>Organizaĵo<b/>pri<b/>Turismo<s n="np"/><s n="al"/><s n="sp"/><s n="acc"/></r></p></e>
 <e lm="mondcivitano">    <i>mondcivitan</i><par n="ino__n"/></e>
 <e lm="mondcivitaneco">  <i>mondcivitanec</i><par n="o__n"/></e>
 <e lm="mondfama">        <i>mondfam</i><par n="a__adj"/></e>
@@ -25469,6 +25513,11 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="morgaŭ">          <i>morgaŭ</i><par n="jam__adv"/></e>
 <e lm="morgaŭo">         <i>morgaŭ</i><par n="o__n"/></e>
 <e lm="morgaŭ je tioma horo"><i>morgaŭ<b/>je<b/>tioma<b/>horo</i><par n="jam__adv"/></e>
+<e lm="postmorgaŭ matene">   <i>postmorgaŭ<b/>matene</i><par n="jam__adv"/></e>
+<e lm="postmorgaŭ nokte">    <i>postmorgaŭ<b/>nokte</i><par n="jam__adv"/></e>
+<e lm="postmorgaŭ posttagmeze"><i>postmorgaŭ<b/>posttagmeze</i><par n="jam__adv"/></e>
+<e lm="postmorgaŭ tagmeze">  <i>postmorgaŭ<b/>tagmeze</i><par n="jam__adv"/></e>
+<e lm="postmorgaŭ vespere">  <i>postmorgaŭ<b/>vespere</i><par n="jam__adv"/></e>
 <e lm="morgaŭ matene">   <i>morgaŭ<b/>matene</i><par n="jam__adv"/></e>
 <e lm="morgaŭ nokte">    <i>morgaŭ<b/>nokte</i><par n="jam__adv"/></e>
 <e lm="morgaŭ posttagmeze"><i>morgaŭ<b/>posttagmeze</i><par n="jam__adv"/></e>
@@ -27060,7 +27109,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="konstato">           <i>konstat</i><par n="o__n"/></e>
 <e lm="Nord-Afriko">    <i>Nord-Afrik</i><par n="Barcelon/o__np"/></e>
 <e lm="Nord-Ameriko">    <i>Nord-Amerik</i><par n="Barcelon/o__np"/></e>
-<e lm="Nord-Atlantika Traktat-Organizaĵo"><p><l>Nord-Atlantika<b/>Traktat-Organizaĵo</l><r>Nord-Atlantika<b/>Traktat-Organizaĵo<s n="np"/><s n="al"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Nord-Atlantika Traktat-Organizaĵo"><p><l>Nord-Atlantika<b/>Traktat-Organizaĵo</l><r>Nord-Atlantika<b/>Traktat-Organizaĵo<s n="np"/><s n="al"/><s n="sp"/><s n="nom"/></r></p></e>
 <e lm="Nord-Dakoto">     <i>Nord-Dakot</i><par n="Barcelon/o__np"/></e>
 <e lm="Nord-Georgio">    <i>Nord-Georgi</i><par n="Barcelon/o__np"/></e>
 <e lm="Nord-Holando">    <i>Nord-Holand</i><par n="Barcelon/o__np"/></e>
@@ -35099,7 +35148,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="sube">            <i>sub</i><par n="e__adv"/></e>
 <e lm="sub">             <i>sub</i><par n="al__pr"/></e>
 <e lm="sub la gvido de"> <i>sub<b/>la<b/>gvido<b/>de</i><par n="al__pr"/></e>
-<e lm="sub la libera ĉielo"><i>sub<b/>la<b/>libera<b/>ĉiel</i><par n="jam__adv"/></e>
+<e lm="sub la libera ĉielo"><i>sub<b/>la<b/>libera<b/>ĉielo</i><par n="jam__adv"/></e>
 <e lm="sub la puno de">  <i>sub<b/>la<b/>puno<b/>de</i><par n="al__pr"/></e>
 <e lm="sub la zorgado">  <i>sub<b/>la<b/>zorgado</i><par n="jam__adv"/></e>
 <e lm="sub suspekto">    <i>sub<b/>suspekto</i><par n="jam__adv"/></e>
@@ -37468,15 +37517,9 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="universo">        <i>univers</i><par n="o__n"/></e>
 <e lm="universala">      <i>universal</i><par n="a__adj"/></e>
 <e lm="universale">      <i>universal</i><par n="e__adv"/></e>
-<e lm="Universala Kongreso"><p><l>Universala<b/>Kongreso</l><r>Universala<b/>Kongreso<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
-<e lm="Universala Kongreso"><p><l>Universala<b/>Kongreso</l><r>Universala<b/>Kongreso<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="universala kvantizanto"><p><l>universala<b/>kvantizanto</l><r>universala<b/>kvantizanto<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
-<e lm="Universala Kongreso"><p><l>Universalaj<b/>Kongresoj</l><r>Universala<b/>Kongreso<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
 <e lm="universala kvantizanto"><p><l>universalaj<b/>kvantizantoj</l><r>universala<b/>kvantizanto<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
-<e lm="Universala Kongreso"><p><l>Universalajn<b/>Kongresojn</l><r>Universala<b/>Kongreso<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
 <e lm="universala kvantizanto"><p><l>universalajn<b/>kvantizantojn</l><r>universala<b/>kvantizanto<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
-<e lm="Universala Kongreso"><p><l>Universalan<b/>Kongreson</l><r>Universala<b/>Kongreso<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
-<e lm="Universala Kongreso"><p><l>Universalan<b/>Kongreson</l><r>Universala<b/>Kongreso<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="universala kvantizanto"><p><l>universalan<b/>kvantizanton</l><r>universala<b/>kvantizanto<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="universaleco">    <i>universalec</i><par n="o__n"/></e>
 <e lm="universitata">    <i>universitat</i><par n="a__adj"/></e>
@@ -37533,6 +37576,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="unuigo">          <i>unuig</i><par n="o__n"/></e>
 <e lm="unuiĝo">          <i>unuiĝ</i><par n="o__n"/></e>
 <e lm="unuiĝinta">       <i>unuiĝint</i><par n="a__adj"/></e>
+<e lm="Universala Kongreso"><p><l>Universala<b/>Kongreso</l><r>Universala<b/>Kongreso<s n="np"/><s n="al"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="Universala Kongreso"><p><l>Universalan<b/>Kongreson</l><r>Universala<b/>Kongreso<s n="np"/><s n="al"/><s n="sp"/><s n="acc"/></r></p></e>
 <e lm="Unuiĝintaj Nacioj"><p><l>Unuiĝintaj<b/>Nacioj</l><r>Unuiĝintaj<b/>Nacioj<s n="np"/><s n="al"/><s n="pl"/><s n="nom"/></r></p></e>
 <e lm="Unuiĝintaj Provincoj"><p><l>Unuiĝintaj<b/>Provincoj</l><r>Unuiĝintaj<b/>Provincoj<s n="np"/><s n="loc"/><s n="pl"/><s n="nom"/></r></p></e>
 <e lm="Unuiĝintaj Nacioj"><p><l>Unuiĝintajn<b/>Naciojn</l><r>Unuiĝintaj<b/>Nacioj<s n="np"/><s n="al"/><s n="pl"/><s n="acc"/></r></p></e>
@@ -40213,6 +40258,17 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="ŝvitbano">        <i>ŝvitban</i><par n="o__n"/></e>
 <e lm="ŝvitiga">         <i>ŝvitig</i><par n="a__adj"/></e>
 
+<e lm="asistado">            <i>asistad</i><par n="o__n"/></e>
+<e lm="delikta">            <i>delikt</i><par n="a__adj"/></e>
+<e lm="delikte">            <i>delikt</i><par n="e__adv"/></e>
+<e lm="ekstero">            <i>ekster</i><par n="o__n"/></e>
+<e lm="favordoni">            <i>favordon</i><par n="igi__vblex"/></e>
+<e lm="interno">            <i>intern</i><par n="o__n"/></e>
+<e lm="kulpigo">            <i>kulpig</i><par n="o__n"/></e>
+<e lm="nordisma">            <i>nordism</i><par n="a__adj"/></e>
+<e lm="nordisto">            <i>nordist</i><par n="ino__n"/></e>
+<e lm="sudisma">            <i>sudism</i><par n="a__adj"/></e>
+<e lm="sudisto">            <i>sudist</i><par n="ino__n"/></e>
 
 <e lm="duontempa laboristo"><p><l>duontempa<b/>laboristo</l><r>duontempa<b/>laboristo<s n="n"/><s n="m"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="duontempa laboristo"><p><l>duontempan<b/>laboriston</l><r>duontempa<b/>laboristo<s n="n"/><s n="m"/><s n="sg"/><s n="acc"/></r></p></e>
@@ -40661,6 +40717,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="postulanto">            <i>postulant</i><par n="ino__n"/></e>
 <e lm="postvivanto">            <i>postvivant</i><par n="ino__n"/></e>
 <e lm="postvivinta">            <i>postvivint</i><par n="a__adj"/></e>
+<e lm="ne malimplikebla">            <i>ne<b/>malimplikebl</i><par n="a__adj"/></e>
+<e lm="ne malimplikebla">            <i>ne<b/>malimplikebl</i><par n="e__adv"/></e>
 <e lm="reelekto">            <i>reelekt</i><par n="o__n"/></e>
 <e lm="restarti">            <i>restart</i><par n="iĝi__vblex"/></e>
 <e lm="restarto">            <i>restart</i><par n="o__n"/></e>
@@ -45093,6 +45151,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Brampton">            <i>Brampton</i><par n="Barcelona__np"/></e>
 <e lm="Surrey">            <i>Surrey</i><par n="Barcelona__np"/></e>
 <e lm="Halifax">            <i>Halifax</i><par n="Barcelona__np"/></e>
+<e lm="Halifakso">            <i>Halifaks</i><par n="Barcelon/o__np"/></e>
+<e lm="Viktorio">            <i>Viktori</i><par n="Barcelon/o__np"/></e>
 <e lm="Laval">            <i>Laval</i><par n="Barcelona__np"/></e>
 <e lm="London">            <i>London</i><par n="Barcelona__np"/></e>
 <e lm="Markham">            <i>Markham</i><par n="Barcelona__np"/></e>
@@ -45291,6 +45351,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="tliĉoo">            <i>tliĉo</i><par n="ino__n"/></e>
 <e lm="Vankuvero">            <i>Vankuver</i><par n="Barcelon/o__np"/></e>
 <e lm="Vinipego">            <i>Vinipeg</i><par n="Barcelon/o__np"/></e>
+<e lm="Reĝino">            <i>Reĝin</i><par n="Barcelon/o__np"/></e>
 
 <e lm="absida koridoro"><p><l>absida<b/>koridoro</l><r>absida<b/>koridoro<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="absida koridoro"><p><l>absidan<b/>koridoron</l><r>absida<b/>koridoro<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
@@ -45330,6 +45391,1270 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="rekorda">            <i>rekord</i><par n="a__adj"/></e>
 <e lm="savado">            <i>savad</i><par n="o__n"/></e>
 <e lm="transloĝiĝo">            <i>transloĝiĝ</i><par n="o__n"/></e>
+
+<e lm="absoluta valoro"> <p><l>absoluta<b/>valoro</l><r>absoluta<b/>valoro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="absoluta valoro"> <p><l>absolutan<b/>valoron</l><r>absoluta<b/>valoro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="adhera pansaĵeto"><p><l>adhera<b/>pansaĵeto</l><r>adhera<b/>pansaĵeto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="adhera pansaĵeto"><p><l>adheran<b/>pansaĵeton</l><r>adhera<b/>pansaĵeto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="afina ebeno">     <p><l>afina<b/>ebeno</l><r>afina<b/>ebeno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="afina hiperebeno"><p><l>afina<b/>hiperebeno</l><r>afina<b/>hiperebeno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="afina rekto">     <p><l>afina<b/>rekto</l><r>afina<b/>rekto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="afina rotacio">   <p><l>afina<b/>rotacio</l><r>afina<b/>rotacio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="afina spaco">     <p><l>afina<b/>spaco</l><r>afina<b/>spaco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="afina subspaco">  <p><l>afina<b/>subspaco</l><r>afina<b/>subspaco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="afina ebeno">     <p><l>afinan<b/>ebenon</l><r>afina<b/>ebeno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="afina hiperebeno"><p><l>afinan<b/>hiperebenon</l><r>afina<b/>hiperebeno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="afina rekto">     <p><l>afinan<b/>rekton</l><r>afina<b/>rekto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="afina rotacio">   <p><l>afinan<b/>rotacion</l><r>afina<b/>rotacio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="afina spaco">     <p><l>afinan<b/>spacon</l><r>afina<b/>spaco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="afina subspaco">  <p><l>afinan<b/>subspacon</l><r>afina<b/>subspaco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="akcia societo">   <p><l>akcia<b/>societo</l><r>akcia<b/>societo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="akcia societo">   <p><l>akcian<b/>societon</l><r>akcia<b/>societo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="akrega kapsiko">  <p><l>akrega<b/>kapsiko</l><r>akrega<b/>kapsiko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="akrega kapsiko">  <p><l>akregan<b/>kapsikon</l><r>akrega<b/>kapsiko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="alfluo kaj forfluo"><p><l>alfluo<b/>kaj<b/>forfluo</l><r>alfluo<b/>kaj<b/>forfluo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="alfluo kaj forfluo"><p><l>alfluon<b/>kajn<b/>forfluon</l><r>alfluo<b/>kaj<b/>forfluo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="algebra dualo">   <p><l>algebra<b/>dualo</l><r>algebra<b/>dualo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="algebra frakcio"> <p><l>algebra<b/>frakcio</l><r>algebra<b/>frakcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="algebra strukturo"><p><l>algebra<b/>strukturo</l><r>algebra<b/>strukturo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="algebra dualo">   <p><l>algebran<b/>dualon</l><r>algebra<b/>dualo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="algebra frakcio"> <p><l>algebran<b/>frakcion</l><r>algebra<b/>frakcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="algebra strukturo"><p><l>algebran<b/>strukturon</l><r>algebra<b/>strukturo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="alta frekvenco">  <p><l>alta<b/>frekvenco</l><r>alta<b/>frekvenco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="alta protektado"> <p><l>alta<b/>protektado</l><r>alta<b/>protektado<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="alta tajdo">      <p><l>alta<b/>tajdo</l><r>alta<b/>tajdo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="altaja lingvo">   <p><l>altaja<b/>lingvo</l><r>altaja<b/>lingvo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="Altaja lingvofamilio"><p><l>Altaja<b/>lingvofamilio</l><r>Altaja<b/>lingvofamilio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="Altaja lingvofamilio"><p><l>Altajan<b/>lingvofamilion</l><r>Altaja<b/>lingvofamilio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="altaja lingvo">   <p><l>altajan<b/>lingvon</l><r>altaja<b/>lingvo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="alta frekvenco">  <p><l>altan<b/>frekvencon</l><r>alta<b/>frekvenco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="alta protektado"> <p><l>altan<b/>protektadon</l><r>alta<b/>protektado<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="alta tajdo">      <p><l>altan<b/>tajdon</l><r>alta<b/>tajdo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="alterna grupo">   <p><l>alterna<b/>grupo</l><r>alterna<b/>grupo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="alterna kurento"> <p><l>alterna<b/>kurento</l><r>alterna<b/>kurento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="alterna grupo">   <p><l>alternan<b/>grupon</l><r>alterna<b/>grupo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="alterna kurento"> <p><l>alternan<b/>kurenton</l><r>alterna<b/>kurento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ambaŭdirekta implikacio"><p><l>ambaŭdirekta<b/>implikacio</l><r>ambaŭdirekta<b/>implikacio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ambaŭdirekta implikacio"><p><l>ambaŭdirektan<b/>implikacion</l><r>ambaŭdirekta<b/>implikacio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="analitika funkcio"><p><l>analitika<b/>funkcio</l><r>analitika<b/>funkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="analitika geometrio"><p><l>analitika<b/>geometrio</l><r>analitika<b/>geometrio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="analitika funkcio"><p><l>analitikan<b/>funkcion</l><r>analitika<b/>funkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="analitika geometrio"><p><l>analitikan<b/>geometrion</l><r>analitika<b/>geometrio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="Supra Lago"><p><l>Supra<b/>Lago</l><r>Supra<b/>Lago<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="Supra Lago"><p><l>Supran<b/>Lagon</l><r>Supra<b/>Lago<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="Hurona Lago"><p><l>Hurona<b/>Lago</l><r>Hurona<b/>Lago<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="Hurona Lago"><p><l>Huronan<b/>Lagon</l><r>Hurona<b/>Lago<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="Ontaria Lago"><p><l>Ontaria<b/>Lago</l><r>Ontaria<b/>Lago<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="Ontaria Lago"><p><l>Ontarian<b/>Lagon</l><r>Ontaria<b/>Lago<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="Eria Lago"><p><l>Eria<b/>Lago</l><r>Eria<b/>Lago<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="Eria Lago"><p><l>Erian<b/>Lagon</l><r>Eria<b/>Lago<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="Miĉigana Lago"><p><l>Miĉigana<b/>Lago</l><r>Miĉigana<b/>Lago<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="Miĉigana Lago"><p><l>Miĉiganan<b/>Lagon</l><r>Miĉigana<b/>Lago<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="lingvaj faciligoj"><p><l>lingvaj<b/>faciligoj</l><r>lingvaj<b/>faciligoj<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="lingvaj faciligoj"><p><l>lingvajn<b/>faciligojn</l><r>lingvaj<b/>faciligoj<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="angula distanco"> <p><l>angula<b/>distanco</l><r>angula<b/>distanco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="angula koeficiento"><p><l>angula<b/>koeficiento</l><r>angula<b/>koeficiento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="angula distanco"> <p><l>angulan<b/>distancon</l><r>angula<b/>distanco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="angula koeficiento"><p><l>angulan<b/>koeficienton</l><r>angula<b/>koeficiento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="animala regno">   <p><l>animala<b/>regno</l><r>animala<b/>regno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="animala regno">   <p><l>animalan<b/>regnon</l><r>animala<b/>regno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="antarkta aŭroro"> <p><l>antarkta<b/>aŭroro</l><r>antarkta<b/>aŭroro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="antarkta aŭroro"> <p><l>antarktan<b/>aŭroron</l><r>antarkta<b/>aŭroro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="antaŭa steveno">  <p><l>antaŭa<b/>steveno</l><r>antaŭa<b/>steveno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="antaŭa tago">     <p><l>antaŭa<b/>tago</l><r>antaŭa<b/>tago<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="antaŭa steveno">  <p><l>antaŭan<b/>stevenon</l><r>antaŭa<b/>steveno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="antaŭa tago">     <p><l>antaŭan<b/>tagon</l><r>antaŭa<b/>tago<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="anticipa partopago"><p><l>anticipa partopago</l><r>anticipa partopago<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="anticipa partopago"><p><l>anticipan partopagon</l><r>anticipa partopago<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="antikva tempo">   <p><l>antikva<b/>tempo</l><r>antikva<b/>tempo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="antikva tempo">   <p><l>antikvan<b/>tempon</l><r>antikva<b/>tempo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="apelacia kortumo"><p><l>apelacia<b/>kortumo</l><r>apelacia<b/>kortumo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="apelacia kortumo"><p><l>apelacian<b/>kortumon</l><r>apelacia<b/>kortumo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="aritmetika progresio"><p><l>aritmetika<b/>progresio</l><r>aritmetika<b/>progresio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="aritmetika vico"> <p><l>aritmetika<b/>vico</l><r>aritmetika<b/>vico<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="aritmetika progresio"><p><l>aritmetikan<b/>progresion</l><r>aritmetika<b/>progresio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="aritmetika vico"> <p><l>aritmetikan<b/>vicon</l><r>aritmetika<b/>vico<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="arkta aŭroro">    <p><l>arkta<b/>aŭroro</l><r>arkta<b/>aŭroro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="arkta aŭroro">    <p><l>arktan<b/>aŭroron</l><r>arkta<b/>aŭroro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="armita betono">   <p><l>armita<b/>betono</l><r>armita<b/>betono<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="armita betono">   <p><l>armitan<b/>betonon</l><r>armita<b/>betono<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="arta rezino">     <p><l>arta<b/>rezino</l><r>arta<b/>rezino<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="arta rezino">     <p><l>artan<b/>rezinon</l><r>arta<b/>rezino<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="artefarita intelekto"><p><l>artefarita<b/>intelekto</l><r>artefarita<b/>intelekto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="artefarita intelekto"><p><l>artefaritan<b/>intelekton</l><r>artefarita<b/>intelekto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="artikiga punkto"> <p><l>artikiga<b/>punkto</l><r>artikiga<b/>punkto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="artikiga punkto"> <p><l>artikigan<b/>punkton</l><r>artikiga<b/>punkto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="arĥimeda spiralo"><p><l>arĥimeda<b/>spiralo</l><r>arĥimeda<b/>spiralo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="arĥimeda spiralo"><p><l>arĥimedan<b/>spiralon</l><r>arĥimeda<b/>spiralo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="asembla lingvo">  <p><l>asembla<b/>lingvo</l><r>asembla<b/>lingvo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="asembla lingvo">  <p><l>asemblan<b/>lingvon</l><r>asembla<b/>lingvo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="asiza kortumo">   <p><l>asiza<b/>kortumo</l><r>asiza<b/>kortumo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="asiza kortumo">   <p><l>asizan<b/>kortumon</l><r>asiza<b/>kortumo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="atoma horloĝo">   <p><l>atoma<b/>horloĝo</l><r>atoma<b/>horloĝo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="atoma horloĝo">   <p><l>atoman<b/>horloĝon</l><r>atoma<b/>horloĝo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="aĉa trinkaĵo">    <p><l>aĉa<b/>trinkaĵo</l><r>aĉa<b/>trinkaĵo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="aĉa trinkaĵo">    <p><l>aĉan<b/>trinkaĵon</l><r>aĉa<b/>trinkaĵo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="balotrajtiga karto"><p><l>balotrajtiga<b/>karto</l><r>balotrajtiga<b/>karto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="balotrajtiga karto"><p><l>balotrajtigan<b/>karton</l><r>balotrajtiga<b/>karto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="banaĥa algebro">  <p><l>banaĥa<b/>algebro</l><r>banaĥa<b/>algebro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="banaĥa spaco">    <p><l>banaĥa<b/>spaco</l><r>banaĥa<b/>spaco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="banaĥa algebro">  <p><l>banaĥan<b/>algebron</l><r>banaĥa<b/>algebro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="banaĥa spaco">    <p><l>banaĥan<b/>spacon</l><r>banaĥa<b/>spaco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="bela literaturo"> <p><l>bela<b/>literaturo</l><r>bela<b/>literaturo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="bela literaturo"> <p><l>belan<b/>literaturon</l><r>bela<b/>literaturo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="blanka libro">    <p><l>blanka<b/>libro</l><r>blanka<b/>libro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="blanka magio">    <p><l>blanka<b/>magio</l><r>blanka<b/>magio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="blanka materio">  <p><l>blanka<b/>materio</l><r>blanka<b/>materio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="blanka moruso">   <p><l>blanka<b/>moruso</l><r>blanka<b/>moruso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="blanka nimfeo">   <p><l>blanka<b/>nimfeo</l><r>blanka<b/>nimfeo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="blanka substanco"><p><l>blanka<b/>substanco</l><r>blanka<b/>substanco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="blanka libro">    <p><l>blankan<b/>libron</l><r>blanka<b/>libro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="blanka magio">    <p><l>blankan<b/>magion</l><r>blanka<b/>magio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="blanka materio">  <p><l>blankan<b/>materion</l><r>blanka<b/>materio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="blanka moruso">   <p><l>blankan<b/>moruson</l><r>blanka<b/>moruso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="blanka nimfeo">   <p><l>blankan<b/>nimfeon</l><r>blanka<b/>nimfeo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="blanka substanco"><p><l>blankan<b/>substancon</l><r>blanka<b/>substanco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="bona ordo">       <p><l>bona<b/>ordo</l><r>bona<b/>ordo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="bona ordo">       <p><l>bonan<b/>ordon</l><r>bona<b/>ordo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="borela sigma-algebro"><p><l>borela<b/>sigma-algebro</l><r>borela<b/>sigma-algebro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="borela sigma-algebro"><p><l>borelan<b/>sigma-algebron</l><r>borela<b/>sigma-algebro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="botanika ĝardeno"><p><l>botanika<b/>ĝardeno</l><r>botanika<b/>ĝardeno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="botanika ĝardeno"><p><l>botanikan<b/>ĝardenon</l><r>botanika<b/>ĝardeno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="brana integraĵo"> <p><l>brana<b/>integraĵo</l><r>brana<b/>integraĵo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="brana integraĵo"> <p><l>branan<b/>integraĵon</l><r>brana<b/>integraĵo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="brazila nuksarbo"><p><l>brazila<b/>nuksarbo</l><r>brazila<b/>nuksarbo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="brazila nukso">   <p><l>brazila<b/>nukso</l><r>brazila<b/>nukso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="brazila nuksarbo"><p><l>brazilan<b/>nuksarbon</l><r>brazila<b/>nuksarbo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="brazila nukso">   <p><l>brazilan<b/>nukson</l><r>brazila<b/>nukso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="bulea algebro">   <p><l>bulea<b/>algebro</l><r>bulea<b/>algebro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="bulea algebro">   <p><l>bulean<b/>algebron</l><r>bulea<b/>algebro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="cela aro">        <p><l>cela<b/>aro</l><r>cela<b/>aro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="cela aro">        <p><l>celan<b/>aron</l><r>cela<b/>aro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="centra angulo">   <p><l>centra<b/>angulo</l><r>centra<b/>angulo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="centra projekcio"><p><l>centra<b/>projekcio</l><r>centra<b/>projekcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="centra angulo">   <p><l>centran<b/>angulon</l><r>centra<b/>angulo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="centra projekcio"><p><l>centran<b/>projekcion</l><r>centra<b/>projekcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="cilindra koordinato"><p><l>cilindra<b/>koordinato</l><r>cilindra<b/>koordinato<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="cilindra koordinato"><p><l>cilindran<b/>koordinaton</l><r>cilindra<b/>koordinato<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="cirkonferenca angulo"><p><l>cirkonferenca<b/>angulo</l><r>cirkonferenca<b/>angulo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="cirkonferenca angulo"><p><l>cirkonferencan<b/>angulon</l><r>cirkonferenca<b/>angulo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="cirkonstanca komplemento"><p><l>cirkonstanca<b/>komplemento</l><r>cirkonstanca<b/>komplemento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="cirkonstanca komplemento"><p><l>cirkonstancan<b/>komplementon</l><r>cirkonstanca<b/>komplemento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="dedekinda tranĉo"><p><l>dedekinda<b/>tranĉo</l><r>dedekinda<b/>tranĉo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="dedekinda tranĉo"><p><l>dedekindan<b/>tranĉon</l><r>dedekinda<b/>tranĉo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="dekstra klaso">   <p><l>dekstra<b/>klaso</l><r>dekstra<b/>klaso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="dekstra klaso">   <p><l>dekstran<b/>klason</l><r>dekstra<b/>klaso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="dekuma logaritmo"><p><l>dekuma<b/>logaritmo</l><r>dekuma<b/>logaritmo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="dekuma logaritmo"><p><l>dekuman<b/>logaritmon</l><r>dekuma<b/>logaritmo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="devanagara skribo"><p><l>devanagara<b/>skribo</l><r>devanagara<b/>skribo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="devanagara skribo"><p><l>devanagaran<b/>skribon</l><r>devanagara<b/>skribo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="dezerta ebenaĵo"> <p><l>dezerta<b/>ebenaĵo</l><r>dezerta<b/>ebenaĵo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="dezerta ebenaĵo"> <p><l>dezertan<b/>ebenaĵon</l><r>dezerta<b/>ebenaĵo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="diferenciala ekvacio"><p><l>diferenciala<b/>ekvacio</l><r>diferenciala<b/>ekvacio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="diferenciala formo"><p><l>diferenciala<b/>formo</l><r>diferenciala<b/>formo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="diferenciala kalkulo"><p><l>diferenciala<b/>kalkulo</l><r>diferenciala<b/>kalkulo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="diferenciala ekvacio"><p><l>diferencialan<b/>ekvacion</l><r>diferenciala<b/>ekvacio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="diferenciala formo"><p><l>diferencialan<b/>formon</l><r>diferenciala<b/>formo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="diferenciala kalkulo"><p><l>diferencialan<b/>kalkulon</l><r>diferenciala<b/>kalkulo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="difina artikolo"> <p><l>difina<b/>artikolo</l><r>difina<b/>artikolo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="difina artikolo"> <p><l>difinan<b/>artikolon</l><r>difina<b/>artikolo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="difinita integralo"><p><l>difinita<b/>integralo</l><r>difinita<b/>integralo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="difinita integralo"><p><l>difinitan<b/>integralon</l><r>difinita<b/>integralo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="diplomatia noto"> <p><l>diplomatia<b/>noto</l><r>diplomatia<b/>noto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="diplomatia noto"> <p><l>diplomatian<b/>noton</l><r>diplomatia<b/>noto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="diraka distribucio"><p><l>diraka<b/>distribucio</l><r>diraka<b/>distribucio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="diraka kombilo">  <p><l>diraka<b/>kombilo</l><r>diraka<b/>kombilo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="diraka mezuro">   <p><l>diraka<b/>mezuro</l><r>diraka<b/>mezuro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="diraka distribucio"><p><l>dirakan<b/>distribucion</l><r>diraka<b/>distribucio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="diraka kombilo">  <p><l>dirakan<b/>kombilon</l><r>diraka<b/>kombilo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="diraka mezuro">   <p><l>dirakan<b/>mezuron</l><r>diraka<b/>mezuro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="dispersa angulo"> <p><l>dispersa<b/>angulo</l><r>dispersa<b/>angulo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="dispersa angulo"> <p><l>dispersan<b/>angulon</l><r>dispersa<b/>angulo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="disponebla mono"> <p><l>disponebla<b/>mono</l><r>disponebla<b/>mono<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="disponebla mono"> <p><l>disponeblan<b/>monon</l><r>disponebla<b/>mono<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="distribua funkcio"><p><l>distribua<b/>funkcio</l><r>distribua<b/>funkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="distribua funkcio"><p><l>distribuan<b/>funkcion</l><r>distribua<b/>funkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="divido kun resto"><p><l>divido<b/>kun<b/>resto</l><r>divido<b/>kun<b/>resto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="divido kun resto"><p><l>dividon<b/>kunn<b/>reston</l><r>divido<b/>kun<b/>resto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="dokumenta filmo"> <p><l>dokumenta<b/>filmo</l><r>dokumenta<b/>filmo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="dokumenta filmo"> <p><l>dokumentan<b/>filmon</l><r>dokumenta<b/>filmo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="dua mondmilito">  <p><l>dua<b/>mondmilito</l><r>dua<b/>mondmilito<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="duaklasa soldato"><p><l>duaklasa<b/>soldato</l><r>duaklasa<b/>soldato<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="duaklasa soldato"><p><l>duaklasan<b/>soldaton</l><r>duaklasa<b/>soldato<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="duala bazo">      <p><l>duala<b/>bazo</l><r>duala<b/>bazo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="duala bazo">      <p><l>dualan<b/>bazon</l><r>duala<b/>bazo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="dua mondmilito">  <p><l>duan<b/>mondmiliton</l><r>dua<b/>mondmilito<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="duetaĝa apartamento"><p><l>duetaĝa<b/>apartamento</l><r>duetaĝa<b/>apartamento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="duetaĝa apartamento"><p><l>duetaĝan<b/>apartamenton</l><r>duetaĝa<b/>apartamento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="duobla dualo">    <p><l>duobla<b/>dualo</l><r>duobla<b/>dualo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="duobla implico">  <p><l>duobla<b/>implico</l><r>duobla<b/>implico<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="duobla dualo">    <p><l>duoblan<b/>dualon</l><r>duobla<b/>dualo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="duobla implico">  <p><l>duoblan<b/>implicon</l><r>duobla<b/>implico<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ebena angulo">    <p><l>ebena<b/>angulo</l><r>ebena<b/>angulo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ebena angulo">    <p><l>ebenan<b/>angulon</l><r>ebena<b/>angulo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ebura turo">      <p><l>ebura<b/>turo</l><r>ebura<b/>turo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ebura turo">      <p><l>eburan<b/>turon</l><r>ebura<b/>turo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="efika kaŭzo">     <p><l>efika<b/>kaŭzo</l><r>efika<b/>kaŭzo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="efika kaŭzo">     <p><l>efikan<b/>kaŭzon</l><r>efika<b/>kaŭzo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ekskluziva disjunkcio"><p><l>ekskluziva<b/>disjunkcio</l><r>ekskluziva<b/>disjunkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ekskluziva disjunkcio"><p><l>ekskluzivan<b/>disjunkcion</l><r>ekskluziva<b/>disjunkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ekstera operacio"><p><l>ekstera<b/>operacio</l><r>ekstera<b/>operacio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ekstera operacio"><p><l>eksteran<b/>operacion</l><r>ekstera<b/>operacio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ekumena koncilio"><p><l>ekumena<b/>koncilio</l><r>ekumena<b/>koncilio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ekumena koncilio"><p><l>ekumenan<b/>koncilion</l><r>ekumena<b/>koncilio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ekvinoksa punkto"><p><l>ekvinoksa<b/>punkto</l><r>ekvinoksa<b/>punkto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ekvinoksa punkto"><p><l>ekvinoksan<b/>punkton</l><r>ekvinoksa<b/>punkto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ekzista kvantizanto"><p><l>ekzista<b/>kvantizanto</l><r>ekzista<b/>kvantizanto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ekzista kvantizanto"><p><l>ekzistan<b/>kvantizanton</l><r>ekzista<b/>kvantizanto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="elekta kampanjo"> <p><l>elekta<b/>kampanjo</l><r>elekta<b/>kampanjo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="elekta kampanjo"> <p><l>elektan<b/>kampanjon</l><r>elekta<b/>kampanjo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="elektra fluo">    <p><l>elektra<b/>fluo</l><r>elektra<b/>fluo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="elektra fornelo"> <p><l>elektra<b/>fornelo</l><r>elektra<b/>fornelo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="elektra hejmilo"> <p><l>elektra<b/>hejmilo</l><r>elektra<b/>hejmilo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="elektra kampintenso"><p><l>elektra<b/>kampintenso</l><r>elektra<b/>kampintenso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="elektra kampo">   <p><l>elektra<b/>kampo</l><r>elektra<b/>kampo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="elektra stacio">  <p><l>elektra<b/>stacio</l><r>elektra<b/>stacio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="elektra streĉo">  <p><l>elektra<b/>streĉo</l><r>elektra<b/>streĉo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="elektra fluo">    <p><l>elektran<b/>fluon</l><r>elektra<b/>fluo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="elektra fornelo"> <p><l>elektran<b/>fornelon</l><r>elektra<b/>fornelo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="elektra hejmilo"> <p><l>elektran<b/>hejmilon</l><r>elektra<b/>hejmilo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="elektra kampintenso"><p><l>elektran<b/>kampintenson</l><r>elektra<b/>kampintenso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="elektra kampo">   <p><l>elektran<b/>kampon</l><r>elektra<b/>kampo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="elektra stacio">  <p><l>elektran<b/>stacion</l><r>elektra<b/>stacio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="elektra streĉo">  <p><l>elektran<b/>streĉon</l><r>elektra<b/>streĉo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="elektromagneta kampo"><p><l>elektromagneta<b/>kampo</l><r>elektromagneta<b/>kampo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="elektromagneta kampo"><p><l>elektromagnetan<b/>kampon</l><r>elektromagneta<b/>kampo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="elektromova forto"><p><l>elektromova<b/>forto</l><r>elektromova<b/>forto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="elektromova forto"><p><l>elektromovan<b/>forton</l><r>elektromova<b/>forto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="elementa funkcio"><p><l>elementa<b/>funkcio</l><r>elementa<b/>funkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="elementa okazo">  <p><l>elementa<b/>okazo</l><r>elementa<b/>okazo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="elementa funkcio"><p><l>elementan<b/>funkcion</l><r>elementa<b/>funkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="elementa okazo">  <p><l>elementan<b/>okazon</l><r>elementa<b/>okazo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="elira duongrado"> <p><l>elira<b/>duongrado</l><r>elira<b/>duongrado<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="elira duongrado"> <p><l>eliran<b/>duongradon</l><r>elira<b/>duongrado<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ena operacio">    <p><l>ena<b/>operacio</l><r>ena<b/>operacio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ena operacio">    <p><l>enan<b/>operacion</l><r>ena<b/>operacio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="enira duongrado"> <p><l>enira<b/>duongrado</l><r>enira<b/>duongrado<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="enira duongrado"> <p><l>eniran<b/>duongradon</l><r>enira<b/>duongrado<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="entjera parto">   <p><l>entjera<b/>parto</l><r>entjera<b/>parto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="entjera parto">   <p><l>entjeran<b/>parton</l><r>entjera<b/>parto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="eta ĉimpanzo">    <p><l>eta<b/>ĉimpanzo</l><r>eta<b/>ĉimpanzo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="eta ĉimpanzo">    <p><l>etan<b/>ĉimpanzon</l><r>eta<b/>ĉimpanzo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="eterna neĝo">     <p><l>eterna<b/>neĝo</l><r>eterna<b/>neĝo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="eterna neĝo">     <p><l>eternan<b/>neĝon</l><r>eterna<b/>neĝo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="eŭklida algoritmo"><p><l>eŭklida<b/>algoritmo</l><r>eŭklida<b/>algoritmo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="eŭklida divido">  <p><l>eŭklida<b/>divido</l><r>eŭklida<b/>divido<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="eŭklida ringo">   <p><l>eŭklida<b/>ringo</l><r>eŭklida<b/>ringo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="eŭklida spaco">   <p><l>eŭklida<b/>spaco</l><r>eŭklida<b/>spaco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="eŭklida algoritmo"><p><l>eŭklidan<b/>algoritmon</l><r>eŭklida<b/>algoritmo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="eŭklida divido">  <p><l>eŭklidan<b/>dividon</l><r>eŭklida<b/>divido<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="eŭklida ringo">   <p><l>eŭklidan<b/>ringon</l><r>eŭklida<b/>ringo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="eŭklida spaco">   <p><l>eŭklidan<b/>spacon</l><r>eŭklida<b/>spaco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="Eŭlera cirklo">   <p><l>Eŭlera<b/>cirklo</l><r>Eŭlera<b/>cirklo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="eŭlera rekto">    <p><l>eŭlera<b/>rekto</l><r>eŭlera<b/>rekto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="Eŭlera cirklo">   <p><l>Eŭleran<b/>cirklon</l><r>Eŭlera<b/>cirklo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="eŭlera rekto">    <p><l>eŭleran<b/>rekton</l><r>eŭlera<b/>rekto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="eŭska lingvo">    <p><l>eŭska lingvo</l><r>eŭska lingvo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="Eŭska Naciisma Partio"><p><l>Eŭska<b/>Naciisma<b/>Partio</l><r>Eŭska<b/>Naciisma<b/>Partio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="eŭska lingvo">    <p><l>eŭskan lingvon</l><r>eŭska lingvo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="Eŭska Naciisma Partio"><p><l>Eŭskan<b/>Naciisman<b/>Partion</l><r>Eŭska<b/>Naciisma<b/>Partio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="faksalta ludo">   <p><l>faksalta<b/>ludo</l><r>faksalta<b/>ludo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="faksalta ludo">   <p><l>faksaltan<b/>ludon</l><r>faksalta<b/>ludo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="falsa amiko">     <p><l>falsa<b/>amiko</l><r>falsa<b/>amiko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="falsa amiko">     <p><l>falsan<b/>amikon</l><r>falsa<b/>amiko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="fera draŝilo">    <p><l>fera<b/>draŝilo</l><r>fera<b/>draŝilo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="fera draŝilo">    <p><l>feran<b/>draŝilon</l><r>fera<b/>draŝilo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="fermita vojo">    <p><l>fermita<b/>vojo</l><r>fermita<b/>vojo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="fermita vojo">    <p><l>fermitan<b/>vojon</l><r>fermita<b/>vojo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="fiksa punkto">    <p><l>fiksa<b/>punkto</l><r>fiksa<b/>punkto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="fiksa punkto">    <p><l>fiksan<b/>punkton</l><r>fiksa<b/>punkto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="fiksita disko">   <p><l>fiksita<b/>disko</l><r>fiksita<b/>disko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="fiksita disko">   <p><l>fiksitan<b/>diskon</l><r>fiksita<b/>disko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="filozofia ŝtono"> <p><l>filozofia<b/>ŝtono</l><r>filozofia<b/>ŝtono<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="filozofia ŝtono"> <p><l>filozofian<b/>ŝtonon</l><r>filozofia<b/>ŝtono<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="fina stacio">     <p><l>fina<b/>stacio</l><r>fina<b/>stacio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="fina stacio">     <p><l>finan<b/>stacion</l><r>fina<b/>stacio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="finia vico">      <p><l>finia<b/>vico</l><r>finia<b/>vico<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="finia vico">      <p><l>finian<b/>vicon</l><r>finia<b/>vico<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="finilonga vico">  <p><l>finilonga<b/>vico</l><r>finilonga<b/>vico<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="finilonga vico">  <p><l>finilongan<b/>vicon</l><r>finilonga<b/>vico<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="fizika geografio"><p><l>fizika<b/>geografio</l><r>fizika<b/>geografio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="fizika grando">   <p><l>fizika<b/>grando</l><r>fizika<b/>grando<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="fizika geografio"><p><l>fizikan<b/>geografion</l><r>fizika<b/>geografio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="fizika grando">   <p><l>fizikan<b/>grandon</l><r>fizika<b/>grando<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="flanka klaso">    <p><l>flanka<b/>klaso</l><r>flanka<b/>klaso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="flanka klaso">    <p><l>flankan<b/>klason</l><r>flanka<b/>klaso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="flava kupro">     <p><l>flava<b/>kupro</l><r>flava<b/>kupro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="flava kupro">     <p><l>flavan<b/>kupron</l><r>flava<b/>kupro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="fona reĝimo">     <p><l>fona<b/>reĝimo</l><r>fona<b/>reĝimo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="fona reĝimo">     <p><l>fonan<b/>reĝimon</l><r>fona<b/>reĝimo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="fonta aro">       <p><l>fonta<b/>aro</l><r>fonta<b/>aro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="fonta aro">       <p><l>fontan<b/>aron</l><r>fonta<b/>aro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="forceja efiko">   <p><l>forceja<b/>efiko</l><r>forceja<b/>efiko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="forceja efiko">   <p><l>forcejan<b/>efikon</l><r>forceja<b/>efiko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="formala polinomo"><p><l>formala<b/>polinomo</l><r>formala<b/>polinomo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="formala serio">   <p><l>formala<b/>serio</l><r>formala<b/>serio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="formala polinomo"><p><l>formalan<b/>polinomon</l><r>formala<b/>polinomo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="formala serio">   <p><l>formalan<b/>serion</l><r>formala<b/>serio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="fosfata acido">   <p><l>fosfata<b/>acido</l><r>fosfata<b/>acido<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="fosfata acido">   <p><l>fosfatan<b/>acidon</l><r>fosfata<b/>acido<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="fosfita acido">   <p><l>fosfita<b/>acido</l><r>fosfita<b/>acido<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="fosfita acido">   <p><l>fosfitan<b/>acidon</l><r>fosfita<b/>acido<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="frakcia parto">   <p><l>frakcia<b/>parto</l><r>frakcia<b/>parto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="frakcia parto">   <p><l>frakcian<b/>parton</l><r>frakcia<b/>parto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="frange d'interférence"><p><l>frange<b/>d'interférence</l><r>frange<b/>d'interférence<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="frange d'interférence"><p><l>frangen<b/>d'interférencen</l><r>frange<b/>d'interférence<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="frua figo">       <p><l>frua<b/>figo</l><r>frua<b/>figo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="frua figo">       <p><l>fruan<b/>figon</l><r>frua<b/>figo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="fruktodona ebenaĵo"><p><l>fruktodona<b/>ebenaĵo</l><r>fruktodona<b/>ebenaĵo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="fruktodona ebenaĵo"><p><l>fruktodonan<b/>ebenaĵon</l><r>fruktodona<b/>ebenaĵo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="fumaĵita eglefino"><p><l>fumaĵita<b/>eglefino</l><r>fumaĵita<b/>eglefino<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="fumaĵita eglefino"><p><l>fumaĵitan<b/>eglefinon</l><r>fumaĵita<b/>eglefino<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="fundamenta grupo"><p><l>fundamenta<b/>grupo</l><r>fundamenta<b/>grupo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="fundamenta grupo"><p><l>fundamentan<b/>grupon</l><r>fundamenta<b/>grupo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="funebra ceremonio"><p><l>funebra<b/>ceremonio</l><r>funebra<b/>ceremonio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="funebra ceremonio"><p><l>funebran<b/>ceremonion</l><r>funebra<b/>ceremonio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="galeza grupo">    <p><l>galeza<b/>grupo</l><r>galeza<b/>grupo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="galeza korpo">    <p><l>galeza<b/>korpo</l><r>galeza<b/>korpo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="galeza superkorpo"><p><l>galeza<b/>superkorpo</l><r>galeza<b/>superkorpo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="galeza grupo">    <p><l>galezan<b/>grupon</l><r>galeza<b/>grupo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="galeza korpo">    <p><l>galezan<b/>korpon</l><r>galeza<b/>korpo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="galeza superkorpo"><p><l>galezan<b/>superkorpon</l><r>galeza<b/>superkorpo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="galŝtona malsano"><p><l>galŝtona<b/>malsano</l><r>galŝtona<b/>malsano<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="galŝtona malsano"><p><l>galŝtonan<b/>malsanon</l><r>galŝtona<b/>malsano<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="gasa fornelo">    <p><l>gasa<b/>fornelo</l><r>gasa<b/>fornelo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="gasa fornelo">    <p><l>gasan<b/>fornelon</l><r>gasa<b/>fornelo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="gazetara konferenco"><p><l>gazetara<b/>konferenco</l><r>gazetara<b/>konferenco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="gazetara konferenco"><p><l>gazetaran<b/>konferencon</l><r>gazetara<b/>konferenco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="gaŭsa entjero">   <p><l>gaŭsa<b/>entjero</l><r>gaŭsa<b/>entjero<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="gaŭsa kurbo">     <p><l>gaŭsa<b/>kurbo</l><r>gaŭsa<b/>kurbo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="gaŭsa entjero">   <p><l>gaŭsan<b/>entjeron</l><r>gaŭsa<b/>entjero<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="gaŭsa kurbo">     <p><l>gaŭsan<b/>kurbon</l><r>gaŭsa<b/>kurbo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="geedza paro">     <p><l>geedza<b/>paro</l><r>geedza<b/>paro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="geedza paro">     <p><l>geedzan<b/>paron</l><r>geedza<b/>paro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="geometria figuro"><p><l>geometria<b/>figuro</l><r>geometria<b/>figuro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="geometria progresio"><p><l>geometria<b/>progresio</l><r>geometria<b/>progresio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="geometria vico">  <p><l>geometria<b/>vico</l><r>geometria<b/>vico<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="geometria figuro"><p><l>geometrian<b/>figuron</l><r>geometria<b/>figuro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="geometria progresio"><p><l>geometrian<b/>progresion</l><r>geometria<b/>progresio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="geometria vico">  <p><l>geometrian<b/>vicon</l><r>geometria<b/>vico<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="gimnazia diplomito"><p><l>gimnazia<b/>diplomitino</l><r>gimnazia<b/>diplomito<s n="n"/><s n="f"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="gimnazia diplomito"><p><l>gimnazia<b/>diplomito</l><r>gimnazia<b/>diplomito<s n="n"/><s n="m"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="gimnazia diplomito"><p><l>gimnazian<b/>diplomitinon</l><r>gimnazia<b/>diplomito<s n="n"/><s n="f"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="gimnazia diplomito"><p><l>gimnazian<b/>diplomiton</l><r>gimnazia<b/>diplomito<s n="n"/><s n="m"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="glacia epoko">    <p><l>glacia<b/>epoko</l><r>glacia<b/>epoko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="glacia epoko">    <p><l>glacian<b/>epokon</l><r>glacia<b/>epoko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="glota plosivo">   <p><l>glota<b/>plosivo</l><r>glota<b/>plosivo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="glota plosivo">   <p><l>glotan<b/>plosivon</l><r>glota<b/>plosivo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="glua rizo">       <p><l>glua<b/>rizo</l><r>glua<b/>rizo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="glua rizo">       <p><l>gluan<b/>rizon</l><r>glua<b/>rizo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="grafika prezento"><p><l>grafika<b/>prezento</l><r>grafika<b/>prezento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="grafika prezento"><p><l>grafikan<b/>prezenton</l><r>grafika<b/>prezento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="granda cikuto">   <p><l>granda cikuto</l><r>granda cikuto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="granda korvo">    <p><l>granda korvo</l><r>granda korvo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="granda duonakso"> <p><l>granda<b/>duonakso</l><r>granda<b/>duonakso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="granda pando">    <p><l>granda<b/>pando</l><r>granda<b/>pando<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="granda premio">   <p><l>granda<b/>premio</l><r>granda<b/>premio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="granda cikuto">   <p><l>grandan cikuton</l><r>granda cikuto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="granda korvo">    <p><l>grandan korvon</l><r>granda korvo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="granda duonakso"> <p><l>grandan<b/>duonakson</l><r>granda<b/>duonakso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="granda pando">    <p><l>grandan<b/>pandon</l><r>granda<b/>pando<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="granda premio">   <p><l>grandan<b/>premion</l><r>granda<b/>premio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="greka kruco">     <p><l>greka<b/>kruco</l><r>greka<b/>kruco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="greka kruco">     <p><l>grekan<b/>krucon</l><r>greka<b/>kruco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="gria faruno">     <p><l>gria faruno</l><r>gria faruno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="gria faruno">     <p><l>grian farunon</l><r>gria faruno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="griza haro">      <p><l>griza<b/>haro</l><r>griza<b/>haro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="griza literaturo"><p><l>griza<b/>literaturo</l><r>griza<b/>literaturo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="griza materio">   <p><l>griza<b/>materio</l><r>griza<b/>materio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="griza substanco"> <p><l>griza<b/>substanco</l><r>griza<b/>substanco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="griza haro">      <p><l>grizan<b/>haron</l><r>griza<b/>haro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="griza literaturo"><p><l>grizan<b/>literaturon</l><r>griza<b/>literaturo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="griza materio">   <p><l>grizan<b/>materion</l><r>griza<b/>materio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="griza substanco"> <p><l>grizan<b/>substancon</l><r>griza<b/>substanco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="harmona progresio"><p><l>harmona<b/>progresio</l><r>harmona<b/>progresio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="harmona vico">    <p><l>harmona<b/>vico</l><r>harmona<b/>vico<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="harmona progresio"><p><l>harmonan<b/>progresion</l><r>harmona<b/>progresio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="harmona vico">    <p><l>harmonan<b/>vicon</l><r>harmona<b/>vico<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="hazarda variablo"><p><l>hazarda<b/>variablo</l><r>hazarda<b/>variablo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="hazarda variablo"><p><l>hazardan<b/>variablon</l><r>hazarda<b/>variablo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="hebrea lingvo">   <p><l>hebrea<b/>lingvo</l><r>hebrea<b/>lingvo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="hebrea lingvo">   <p><l>hebrean<b/>lingvon</l><r>hebrea<b/>lingvo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="hejma preĝejo">   <p><l>hejma<b/>preĝejo</l><r>hejma<b/>preĝejo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="hejma preĝejo">   <p><l>hejman<b/>preĝejon</l><r>hejma<b/>preĝejo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="hejvisida funkcio"><p><l>hejvisida<b/>funkcio</l><r>hejvisida<b/>funkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="hejvisida funkcio"><p><l>hejvisidan<b/>funkcion</l><r>hejvisida<b/>funkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="hermita formo">   <p><l>hermita<b/>formo</l><r>hermita<b/>formo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="hermita produto"> <p><l>hermita<b/>produto</l><r>hermita<b/>produto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="hermita skalara produto"><p><l>hermita<b/>skalara<b/>produto</l><r>hermita<b/>skalara<b/>produto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="hermita spaco">   <p><l>hermita<b/>spaco</l><r>hermita<b/>spaco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="hermita formo">   <p><l>hermitan<b/>formon</l><r>hermita<b/>formo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="hermita produto"> <p><l>hermitan<b/>produton</l><r>hermita<b/>produto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="hermita skalara produto"><p><l>hermitan<b/>skalaran<b/>produton</l><r>hermita<b/>skalara<b/>produto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="hermita spaco">   <p><l>hermitan<b/>spacon</l><r>hermita<b/>spaco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="hevisida funkcio"><p><l>hevisida<b/>funkcio</l><r>hevisida<b/>funkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="hevisida funkcio"><p><l>hevisidan<b/>funkcion</l><r>hevisida<b/>funkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="hilberta spaco">  <p><l>hilberta<b/>spaco</l><r>hilberta<b/>spaco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="hilberta spaco">  <p><l>hilbertan<b/>spacon</l><r>hilberta<b/>spaco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="hindia kobro">    <p><l>hindia<b/>kobro</l><r>hindia<b/>kobro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="hindia lingvo">   <p><l>hindia<b/>lingvo</l><r>hindia<b/>lingvo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="hindia kobro">    <p><l>hindian<b/>kobron</l><r>hindia<b/>kobro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="hindia lingvo">   <p><l>hindian<b/>lingvon</l><r>hindia<b/>lingvo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="hindustana lingvo"><p><l>hindustana<b/>lingvo</l><r>hindustana<b/>lingvo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="hindustana lingvo"><p><l>hindustanan<b/>lingvon</l><r>hindustana<b/>lingvo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="hiperbola funkcio"><p><l>hiperbola<b/>funkcio</l><r>hiperbola<b/>funkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="hiperbola kosinuso"><p><l>hiperbola<b/>kosinuso</l><r>hiperbola<b/>kosinuso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="hiperbola kotangento"><p><l>hiperbola<b/>kotangento</l><r>hiperbola<b/>kotangento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="hiperbola sinuso"><p><l>hiperbola<b/>sinuso</l><r>hiperbola<b/>sinuso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="hiperbola spiralo"><p><l>hiperbola<b/>spiralo</l><r>hiperbola<b/>spiralo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="hiperbola tangento"><p><l>hiperbola<b/>tangento</l><r>hiperbola<b/>tangento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="hiperbola funkcio"><p><l>hiperbolan<b/>funkcion</l><r>hiperbola<b/>funkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="hiperbola kosinuso"><p><l>hiperbolan<b/>kosinuson</l><r>hiperbola<b/>kosinuso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="hiperbola kotangento"><p><l>hiperbolan<b/>kotangenton</l><r>hiperbola<b/>kotangento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="hiperbola sinuso"><p><l>hiperbolan<b/>sinuson</l><r>hiperbola<b/>sinuso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="hiperbola spiralo"><p><l>hiperbolan<b/>spiralon</l><r>hiperbola<b/>spiralo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="hiperbola tangento"><p><l>hiperbolan<b/>tangenton</l><r>hiperbola<b/>tangento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="Hispana Laborista Socialista Partio"><p><l>Hispana<b/>Laborista<b/>Socialista<b/>Partio</l><r>Hispana<b/>Laborista<b/>Socialista<b/>Partio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="Hispana Laborista Socialista Partio"><p><l>Hispanan<b/>Laboristan<b/>Socialistan<b/>Partion</l><r>Hispana<b/>Laborista<b/>Socialista<b/>Partio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="historia gramatiko"><p><l>historia<b/>gramatiko</l><r>historia<b/>gramatiko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="historia materiismo"><p><l>historia<b/>materiismo</l><r>historia<b/>materiismo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="historia gramatiko"><p><l>historian<b/>gramatikon</l><r>historia<b/>gramatiko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="historia materiismo"><p><l>historian<b/>materiismon</l><r>historia<b/>materiismo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="homa rajto">      <p><l>homa<b/>rajto</l><r>homa<b/>rajto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="homa rajto">      <p><l>homan<b/>rajton</l><r>homa<b/>rajto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="honora legio">    <p><l>honora<b/>legio</l><r>honora<b/>legio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="honora legio">    <p><l>honoran<b/>legion</l><r>honora<b/>legio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="imaginara parto"> <p><l>imaginara<b/>parto</l><r>imaginara<b/>parto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="imaginara unuo">  <p><l>imaginara<b/>unuo</l><r>imaginara<b/>unuo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="imaginara parto"> <p><l>imaginaran<b/>parton</l><r>imaginara<b/>parto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="imaginara unuo">  <p><l>imaginaran<b/>unuon</l><r>imaginara<b/>unuo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="imuna sistemo">   <p><l>imuna<b/>sistemo</l><r>imuna<b/>sistemo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="imuna sistemo">   <p><l>imunan<b/>sistemon</l><r>imuna<b/>sistemo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ina genro">       <p><l>ina<b/>genro</l><r>ina<b/>genro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ina genro">       <p><l>inan<b/>genron</l><r>ina<b/>genro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="industria revolucio"><p><l>industria<b/>revolucio</l><r>industria<b/>revolucio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="industria revolucio"><p><l>industrian<b/>revolucion</l><r>industria<b/>revolucio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="infinitezima kalkulo"><p><l>infinitezima<b/>kalkulo</l><r>infinitezima<b/>kalkulo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="infinitezima kalkulo"><p><l>infiniteziman<b/>kalkulon</l><r>infinitezima<b/>kalkulo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="integra cirkvito"><p><l>integra<b/>cirkvito</l><r>integra<b/>cirkvito<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="integra parto">   <p><l>integra<b/>parto</l><r>integra<b/>parto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="integrala ekvacio"><p><l>integrala<b/>ekvacio</l><r>integrala<b/>ekvacio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="integrala kalkulo"><p><l>integrala<b/>kalkulo</l><r>integrala<b/>kalkulo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="integrala ekvacio"><p><l>integralan<b/>ekvacion</l><r>integrala<b/>ekvacio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="integrala kalkulo"><p><l>integralan<b/>kalkulon</l><r>integrala<b/>kalkulo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="integra cirkvito"><p><l>integran<b/>cirkviton</l><r>integra<b/>cirkvito<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="integra parto">   <p><l>integran<b/>parton</l><r>integra<b/>parto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="intereza procento"><p><l>intereza<b/>procento</l><r>intereza<b/>procento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="intereza procento"><p><l>interezan<b/>procenton</l><r>intereza<b/>procento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="interna aŭtomorfio"><p><l>interna<b/>aŭtomorfio</l><r>interna<b/>aŭtomorfio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="interna operacio"><p><l>interna<b/>operacio</l><r>interna<b/>operacio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="interna rilato">  <p><l>interna<b/>rilato</l><r>interna<b/>rilato<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="internacia respondkupono"><p><l>internacia<b/>respondkupono</l><r>internacia<b/>respondkupono<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="internacia respondkupono"><p><l>internacian<b/>respondkuponon</l><r>internacia<b/>respondkupono<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="interna aŭtomorfio"><p><l>internan<b/>aŭtomorfion</l><r>interna<b/>aŭtomorfio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="interna operacio"><p><l>internan<b/>operacion</l><r>interna<b/>operacio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="interna rilato">  <p><l>internan<b/>rilaton</l><r>interna<b/>rilato<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="inversa bildigo"> <p><l>inversa<b/>bildigo</l><r>inversa<b/>bildigo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="inversa bildo">   <p><l>inversa<b/>bildo</l><r>inversa<b/>bildo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="inversa elemento"><p><l>inversa<b/>elemento</l><r>inversa<b/>elemento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="inversa hiperbola funkcio"><p><l>inversa<b/>hiperbola<b/>funkcio</l><r>inversa<b/>hiperbola<b/>funkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="inversa hiperbola kosinuso"><p><l>inversa<b/>hiperbola<b/>kosinuso</l><r>inversa<b/>hiperbola<b/>kosinuso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="inversa hiperbola kotangento"><p><l>inversa<b/>hiperbola<b/>kotangento</l><r>inversa<b/>hiperbola<b/>kotangento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="inversa hiperbola sinuso"><p><l>inversa<b/>hiperbola<b/>sinuso</l><r>inversa<b/>hiperbola<b/>sinuso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="inversa hiperbola tangento"><p><l>inversa<b/>hiperbola<b/>tangento</l><r>inversa<b/>hiperbola<b/>tangento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="inversa paro">    <p><l>inversa<b/>paro</l><r>inversa<b/>paro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="inversa rilato">  <p><l>inversa<b/>rilato</l><r>inversa<b/>rilato<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="inversa trigonometria funkcio"><p><l>inversa<b/>trigonometria<b/>funkcio</l><r>inversa<b/>trigonometria<b/>funkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="inversa bildigo"> <p><l>inversan<b/>bildigon</l><r>inversa<b/>bildigo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="inversa bildo">   <p><l>inversan<b/>bildon</l><r>inversa<b/>bildo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="inversa elemento"><p><l>inversan<b/>elementon</l><r>inversa<b/>elemento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="inversa hiperbola funkcio"><p><l>inversan<b/>hiperbolan<b/>funkcion</l><r>inversa<b/>hiperbola<b/>funkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="inversa hiperbola kosinuso"><p><l>inversan<b/>hiperbolan<b/>kosinuson</l><r>inversa<b/>hiperbola<b/>kosinuso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="inversa hiperbola kotangento"><p><l>inversan<b/>hiperbolan<b/>kotangenton</l><r>inversa<b/>hiperbola<b/>kotangento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="inversa hiperbola sinuso"><p><l>inversan<b/>hiperbolan<b/>sinuson</l><r>inversa<b/>hiperbola<b/>sinuso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="inversa hiperbola tangento"><p><l>inversan<b/>hiperbolan<b/>tangenton</l><r>inversa<b/>hiperbola<b/>tangento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="inversa paro">    <p><l>inversan<b/>paron</l><r>inversa<b/>paro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="inversa rilato">  <p><l>inversan<b/>rilaton</l><r>inversa<b/>rilato<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="inversa trigonometria funkcio"><p><l>inversan<b/>trigonometrian<b/>funkcion</l><r>inversa<b/>trigonometria<b/>funkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ioma misfarto">   <p><l>ioma<b/>misfarto</l><r>ioma<b/>misfarto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ioma misfarto">   <p><l>ioman<b/>misfarton</l><r>ioma<b/>misfarto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="irigacia kanalo"> <p><l>irigacia kanalo</l><r>irigacia kanalo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="irigacia kanalo"> <p><l>irigacian kanalon</l><r>irigacia kanalo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="jakobia matrico"> <p><l>jakobia<b/>matrico</l><r>jakobia<b/>matrico<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="jakobia matrico"> <p><l>jakobian<b/>matricon</l><r>jakobia<b/>matrico<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="jeriĥa rozo">     <p><l>jeriĥa<b/>rozo</l><r>jeriĥa<b/>rozo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="jeriĥa rozo">     <p><l>jeriĥan<b/>rozon</l><r>jeriĥa<b/>rozo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="judgermana lingvo"><p><l>judgermana<b/>lingvo</l><r>judgermana<b/>lingvo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="judgermana lingvo"><p><l>judgermanan<b/>lingvon</l><r>judgermana<b/>lingvo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="jura persono">    <p><l>jura<b/>persono</l><r>jura<b/>persono<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="jura persono">    <p><l>juran<b/>personon</l><r>jura<b/>persono<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="juĝa decido">     <p><l>juĝa decido</l><r>juĝa decido<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="juĝa afero">      <p><l>juĝa<b/>afero</l><r>juĝa<b/>afero<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="juĝa decido">     <p><l>juĝan decidon</l><r>juĝa decido<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="juĝa afero">      <p><l>juĝan<b/>aferon</l><r>juĝa<b/>afero<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kabla televido">  <p><l>kabla<b/>televido</l><r>kabla<b/>televido<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kabla televido">  <p><l>kablan<b/>televidon</l><r>kabla<b/>televido<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kalika folio">    <p><l>kalika<b/>folio</l><r>kalika<b/>folio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kalika folio">    <p><l>kalikan<b/>folion</l><r>kalika<b/>folio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kalko estingita"> <p><l>kalko<b/>estingita</l><r>kalko<b/>estingita<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kalko kaŭstika">  <p><l>kalko<b/>kaŭstika</l><r>kalko<b/>kaŭstika<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kalko estingita"> <p><l>kalkon<b/>estingitan</l><r>kalko<b/>estingita<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kalko kaŭstika">  <p><l>kalkon<b/>kaŭstikan</l><r>kalko<b/>kaŭstika<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kalvaria vojo">   <p><l>kalvaria<b/>vojo</l><r>kalvaria<b/>vojo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kalvaria vojo">   <p><l>kalvarian<b/>vojon</l><r>kalvaria<b/>vojo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kanona bazo">     <p><l>kanona<b/>bazo</l><r>kanona<b/>bazo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kanona projekcio"><p><l>kanona<b/>projekcio</l><r>kanona<b/>projekcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kanona bazo">     <p><l>kanonan<b/>bazon</l><r>kanona<b/>bazo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kanona projekcio"><p><l>kanonan<b/>projekcion</l><r>kanona<b/>projekcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="karakteriza funkcio"><p><l>karakteriza<b/>funkcio</l><r>karakteriza<b/>funkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="karakteriza polinomo"><p><l>karakteriza<b/>polinomo</l><r>karakteriza<b/>polinomo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="karakteriza funkcio"><p><l>karakterizan<b/>funkcion</l><r>karakteriza<b/>funkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="karakteriza polinomo"><p><l>karakterizan<b/>polinomon</l><r>karakteriza<b/>polinomo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="karba fornelo">   <p><l>karba<b/>fornelo</l><r>karba<b/>fornelo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="karba fornelo">   <p><l>karban<b/>fornelon</l><r>karba<b/>fornelo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kardinala moŝto"> <p><l>kardinala<b/>moŝto</l><r>kardinala<b/>moŝto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kardinala moŝto"> <p><l>kardinalan<b/>moŝton</l><r>kardinala<b/>moŝto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kartezia folio">  <p><l>kartezia<b/>folio</l><r>kartezia<b/>folio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kartezia koordinato"><p><l>kartezia<b/>koordinato</l><r>kartezia<b/>koordinato<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kartezia ovalo">  <p><l>kartezia<b/>ovalo</l><r>kartezia<b/>ovalo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kartezia produto"><p><l>kartezia<b/>produto</l><r>kartezia<b/>produto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kartezia folio">  <p><l>kartezian<b/>folion</l><r>kartezia<b/>folio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kartezia koordinato"><p><l>kartezian<b/>koordinaton</l><r>kartezia<b/>koordinato<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kartezia ovalo">  <p><l>kartezian<b/>ovalon</l><r>kartezia<b/>ovalo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kartezia produto"><p><l>kartezian<b/>produton</l><r>kartezia<b/>produto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kasacia kortumo"> <p><l>kasacia<b/>kortumo</l><r>kasacia<b/>kortumo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kasacia kortumo"> <p><l>kasacian<b/>kortumon</l><r>kasacia<b/>kortumo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kaŭstika potaso"> <p><l>kaŭstika<b/>potaso</l><r>kaŭstika<b/>potaso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kaŭstika potaso"> <p><l>kaŭstikan<b/>potason</l><r>kaŭstika<b/>potaso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kelta kruco">     <p><l>kelta<b/>kruco</l><r>kelta<b/>kruco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kelta lingvo">    <p><l>kelta<b/>lingvo</l><r>kelta<b/>lingvo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kelta kruco">     <p><l>keltan<b/>krucon</l><r>kelta<b/>kruco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kelta lingvo">    <p><l>keltan<b/>lingvon</l><r>kelta<b/>lingvo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kineta energio">  <p><l>kineta<b/>energio</l><r>kineta<b/>energio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kineta energio">  <p><l>kinetan<b/>energion</l><r>kineta<b/>energio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="klonika spasmo">  <p><l>klonika<b/>spasmo</l><r>klonika<b/>spasmo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="klonika spasmo">  <p><l>klonikan<b/>spasmon</l><r>klonika<b/>spasmo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kloŝforma kurbo"> <p><l>kloŝforma<b/>kurbo</l><r>kloŝforma<b/>kurbo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kloŝforma kurbo"> <p><l>kloŝforman<b/>kurbon</l><r>kloŝforma<b/>kurbo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kojna dento">     <p><l>kojna<b/>dento</l><r>kojna<b/>dento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kojna dento">     <p><l>kojnan<b/>denton</l><r>kojna<b/>dento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kojnforma skribo"><p><l>kojnforma<b/>skribo</l><r>kojnforma<b/>skribo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kojnforma skribo"><p><l>kojnforman<b/>skribon</l><r>kojnforma<b/>skribo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="komerca ŝipo">    <p><l>komerca<b/>ŝipo</l><r>komerca<b/>ŝipo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="komerca ŝipo">    <p><l>komercan<b/>ŝipon</l><r>komerca<b/>ŝipo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kompara gramatiko"><p><l>kompara<b/>gramatiko</l><r>kompara<b/>gramatiko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kompara gramatiko"><p><l>komparan<b/>gramatikon</l><r>kompara<b/>gramatiko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="komputa sistemo"> <p><l>komputa<b/>sistemo</l><r>komputa<b/>sistemo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="komputa sistemo"> <p><l>komputan<b/>sistemon</l><r>komputa<b/>sistemo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="komputila reto">  <p><l>komputila<b/>reto</l><r>komputila<b/>reto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="komputila reto">  <p><l>komputilan<b/>reton</l><r>komputila<b/>reto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kondiĉa probablo"><p><l>kondiĉa<b/>probablo</l><r>kondiĉa<b/>probablo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kondiĉa probablo"><p><l>kondiĉan<b/>probablon</l><r>kondiĉa<b/>probablo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="koneksa komponanto"><p><l>koneksa<b/>komponanto</l><r>koneksa<b/>komponanto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="koneksa komponanto"><p><l>koneksan<b/>komponanton</l><r>koneksa<b/>komponanto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="konstanta kurento"><p><l>konstanta<b/>kurento</l><r>konstanta<b/>kurento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="konstanta tensio"><p><l>konstanta<b/>tensio</l><r>konstanta<b/>tensio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="konstanta kurento"><p><l>konstantan<b/>kurenton</l><r>konstanta<b/>kurento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="konstanta tensio"><p><l>konstantan<b/>tension</l><r>konstanta<b/>tensio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kontinenta drivo"><p><l>kontinenta<b/>drivo</l><r>kontinenta<b/>drivo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kontinenta drivo"><p><l>kontinentan<b/>drivon</l><r>kontinenta<b/>drivo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kontinua tensio"> <p><l>kontinua<b/>tensio</l><r>kontinua<b/>tensio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kontinua tensio"> <p><l>kontinuan<b/>tension</l><r>kontinua<b/>tensio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kooperativa magazeno"><p><l>kooperativa<b/>magazeno</l><r>kooperativa<b/>magazeno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kooperativa magazeno"><p><l>kooperativan<b/>magazenon</l><r>kooperativa<b/>magazeno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="koordinata akso"> <p><l>koordinata<b/>akso</l><r>koordinata<b/>akso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="koordinata akso"> <p><l>koordinatan<b/>akson</l><r>koordinata<b/>akso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="koŝia vico">      <p><l>koŝia<b/>vico</l><r>koŝia<b/>vico<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="koŝia vico">      <p><l>koŝian<b/>vicon</l><r>koŝia<b/>vico<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kreola lingvo">   <p><l>kreola<b/>lingvo</l><r>kreola<b/>lingvo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kreola lingvo">   <p><l>kreolan<b/>lingvon</l><r>kreola<b/>lingvo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="krevinta pneŭmatiko"><p><l>krevinta pneŭmatiko</l><r>krevinta pneŭmatiko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="krevinta pneŭmatiko"><p><l>krevintan pneŭmatikon</l><r>krevinta pneŭmatiko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kriminala kortumo"><p><l>kriminala<b/>kortumo</l><r>kriminala<b/>kortumo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kriminala kortumo"><p><l>kriminalan<b/>kortumon</l><r>kriminala<b/>kortumo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kristnaska kanto"><p><l>kristnaska<b/>kanto</l><r>kristnaska<b/>kanto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kristnaska kanto"><p><l>kristnaskan<b/>kanton</l><r>kristnaska<b/>kanto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kruta roko">      <p><l>kruta<b/>roko</l><r>kruta<b/>roko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kruta roko">      <p><l>krutan<b/>rokon</l><r>kruta<b/>roko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kuba metro">      <p><l>kuba<b/>metro</l><r>kuba<b/>metro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kuba metro">      <p><l>kuban<b/>metron</l><r>kuba<b/>metro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kultura heredaĵo"><p><l>kultura<b/>heredaĵo</l><r>kultura<b/>heredaĵo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kultura heredaĵo"><p><l>kulturan<b/>heredaĵon</l><r>kultura<b/>heredaĵo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kunfandema lingvo"><p><l>kunfandema<b/>lingvo</l><r>kunfandema<b/>lingvo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kunfandema lingvo"><p><l>kunfandeman<b/>lingvon</l><r>kunfandema<b/>lingvo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kunvibra kordo">  <p><l>kunvibra<b/>kordo</l><r>kunvibra<b/>kordo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kunvibra kordo">  <p><l>kunvibran<b/>kordon</l><r>kunvibra<b/>kordo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kvadrata metro">  <p><l>kvadrata<b/>metro</l><r>kvadrata<b/>metro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kvadrata velo">   <p><l>kvadrata<b/>velo</l><r>kvadrata<b/>velo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kvadrata metro">  <p><l>kvadratan<b/>metron</l><r>kvadrata<b/>metro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kvadrata velo">   <p><l>kvadratan<b/>velon</l><r>kvadrata<b/>velo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kvocienta aro">   <p><l>kvocienta<b/>aro</l><r>kvocienta<b/>aro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kvocienta frakcio"><p><l>kvocienta<b/>frakcio</l><r>kvocienta<b/>frakcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kvocienta grupo"> <p><l>kvocienta<b/>grupo</l><r>kvocienta<b/>grupo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kvocienta ringo"> <p><l>kvocienta<b/>ringo</l><r>kvocienta<b/>ringo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kvocienta aro">   <p><l>kvocientan<b/>aron</l><r>kvocienta<b/>aro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kvocienta frakcio"><p><l>kvocientan<b/>frakcion</l><r>kvocienta<b/>frakcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kvocienta grupo"> <p><l>kvocientan<b/>grupon</l><r>kvocienta<b/>grupo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kvocienta ringo"> <p><l>kvocientan<b/>ringon</l><r>kvocienta<b/>ringo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ladana cisto">    <p><l>ladana<b/>cisto</l><r>ladana<b/>cisto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ladana cisto">    <p><l>ladanan<b/>ciston</l><r>ladana<b/>cisto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="lakmusa papero">  <p><l>lakmusa<b/>papero</l><r>lakmusa<b/>papero<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="lakmusa papero">  <p><l>lakmusan<b/>paperon</l><r>lakmusa<b/>papero<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="laplaca operatoro"><p><l>laplaca<b/>operatoro</l><r>laplaca<b/>operatoro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="laplaca operatoro"><p><l>laplacan<b/>operatoron</l><r>laplaca<b/>operatoro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="laringa frikativo"><p><l>laringa<b/>frikativo</l><r>laringa<b/>frikativo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="laringa frikativo"><p><l>laringan<b/>frikativon</l><r>laringa<b/>frikativo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="larmiga gaso">    <p><l>larmiga<b/>gaso</l><r>larmiga<b/>gaso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="larmiga gaso">    <p><l>larmigan<b/>gason</l><r>larmiga<b/>gaso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="latina kruco">    <p><l>latina<b/>kruco</l><r>latina<b/>kruco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="latina kruco">    <p><l>latinan<b/>krucon</l><r>latina<b/>kruco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="latinida lingvo"> <p><l>latinida<b/>lingvo</l><r>latinida<b/>lingvo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="latinida lingvo"> <p><l>latinidan<b/>lingvon</l><r>latinida<b/>lingvo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="laŭpeca laboristo"><p><l>laŭpeca<b/>laboristino</l><r>laŭpeca<b/>laboristo<s n="n"/><s n="f"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="laŭpeca laboristo"><p><l>laŭpeca<b/>laboristo</l><r>laŭpeca<b/>laboristo<s n="n"/><s n="m"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="laŭpeca laboristo"><p><l>laŭpecan<b/>laboristinon</l><r>laŭpeca<b/>laboristo<s n="n"/><s n="f"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="laŭpeca laboristo"><p><l>laŭpecan<b/>laboriston</l><r>laŭpeca<b/>laboristo<s n="n"/><s n="m"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="lebega integralo"><p><l>lebega<b/>integralo</l><r>lebega<b/>integralo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="lebega mezuro">   <p><l>lebega<b/>mezuro</l><r>lebega<b/>mezuro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="lebega integralo"><p><l>lebegan<b/>integralon</l><r>lebega<b/>integralo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="lebega mezuro">   <p><l>lebegan<b/>mezuron</l><r>lebega<b/>mezuro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="leĝdona povo">    <p><l>leĝdona povo</l><r>leĝdona povo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="leĝdona povo">    <p><l>leĝdonan povon</l><r>leĝdona povo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="libera profesio"> <p><l>libera<b/>profesio</l><r>libera<b/>profesio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="libera volo">     <p><l>libera<b/>volo</l><r>libera<b/>volo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="libera profesio"> <p><l>liberan<b/>profesion</l><r>libera<b/>profesio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="libera volo">     <p><l>liberan<b/>volon</l><r>libera<b/>volo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ligna ŝuo">       <p><l>ligna<b/>ŝuo</l><r>ligna<b/>ŝuo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ligna ŝuo">       <p><l>lignan<b/>ŝuon</l><r>ligna<b/>ŝuo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="limfa angio">     <p><l>limfa<b/>angio</l><r>limfa<b/>angio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="limfa angio">     <p><l>limfan<b/>angion</l><r>limfa<b/>angio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="limigita tereno"> <p><l>limigita<b/>tereno</l><r>limigita<b/>tereno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="limigita tereno"> <p><l>limigitan<b/>terenon</l><r>limigita<b/>tereno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="lineara algebro"> <p><l>lineara<b/>algebro</l><r>lineara<b/>algebro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="lineara kombinaĵo"><p><l>lineara<b/>kombinaĵo</l><r>lineara<b/>kombinaĵo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="lineara algebro"> <p><l>linearan<b/>algebron</l><r>lineara<b/>algebro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="lineara kombinaĵo"><p><l>linearan<b/>kombinaĵon</l><r>lineara<b/>kombinaĵo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="linolea tolo">    <p><l>linolea<b/>tolo</l><r>linolea<b/>tolo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="linolea tolo">    <p><l>linolean<b/>tolon</l><r>linolea<b/>tolo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="literatura premio"><p><l>literatura<b/>premio</l><r>literatura<b/>premio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="literatura premio"><p><l>literaturan<b/>premion</l><r>literatura<b/>premio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="logaritma dekremento"><p><l>logaritma<b/>dekremento</l><r>logaritma<b/>dekremento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="logaritma derivaĵo"><p><l>logaritma<b/>derivaĵo</l><r>logaritma<b/>derivaĵo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="logaritma spiralo"><p><l>logaritma<b/>spiralo</l><r>logaritma<b/>spiralo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="logaritma dekremento"><p><l>logaritman<b/>dekrementon</l><r>logaritma<b/>dekremento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="logaritma derivaĵo"><p><l>logaritman<b/>derivaĵon</l><r>logaritma<b/>derivaĵo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="logaritma spiralo"><p><l>logaritman<b/>spiralon</l><r>logaritma<b/>spiralo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="logika operacio"> <p><l>logika<b/>operacio</l><r>logika<b/>operacio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="logika operacio"> <p><l>logikan<b/>operacion</l><r>logika<b/>operacio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="loka reto">       <p><l>loka<b/>reto</l><r>loka<b/>reto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="loka reto">       <p><l>lokan<b/>reton</l><r>loka<b/>reto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="longa fingro">    <p><l>longa<b/>fingro</l><r>longa<b/>fingro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="longa hararo">    <p><l>longa<b/>hararo</l><r>longa<b/>hararo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="longa fingro">    <p><l>longan<b/>fingron</l><r>longa<b/>fingro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="longa hararo">    <p><l>longan<b/>hararon</l><r>longa<b/>hararo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="longigita cikloido"><p><l>longigita<b/>cikloido</l><r>longigita<b/>cikloido<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="longigita epicikloido"><p><l>longigita<b/>epicikloido</l><r>longigita<b/>epicikloido<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="longigita hipocikloido"><p><l>longigita<b/>hipocikloido</l><r>longigita<b/>hipocikloido<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="longigita cikloido"><p><l>longigitan<b/>cikloidon</l><r>longigita<b/>cikloido<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="longigita epicikloido"><p><l>longigitan<b/>epicikloidon</l><r>longigita<b/>epicikloido<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="longigita hipocikloido"><p><l>longigitan<b/>hipocikloidon</l><r>longigita<b/>hipocikloido<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="loteca variablo"> <p><l>loteca<b/>variablo</l><r>loteca<b/>variablo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="loteca variablo"> <p><l>lotecan<b/>variablon</l><r>loteca<b/>variablo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="luna kalendaro">  <p><l>luna<b/>kalendaro</l><r>luna<b/>kalendaro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="luna kalendaro">  <p><l>lunan<b/>kalendaron</l><r>luna<b/>kalendaro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="magia lanterno">  <p><l>magia<b/>lanterno</l><r>magia<b/>lanterno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="magia lanterno">  <p><l>magian<b/>lanternon</l><r>magia<b/>lanterno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="magneta disko">   <p><l>magneta<b/>disko</l><r>magneta<b/>disko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="magneta disko">   <p><l>magnetan<b/>diskon</l><r>magneta<b/>disko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="malalta tajdo">   <p><l>malalta<b/>tajdo</l><r>malalta<b/>tajdo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="malalta tajdo">   <p><l>malaltan<b/>tajdon</l><r>malalta<b/>tajdo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="maldekstra klaso"><p><l>maldekstra<b/>klaso</l><r>maldekstra<b/>klaso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="maldekstra klaso"><p><l>maldekstran<b/>klason</l><r>maldekstra<b/>klaso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="malfacila horo">  <p><l>malfacila<b/>horo</l><r>malfacila<b/>horo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="malfacila horo">  <p><l>malfacilan<b/>horon</l><r>malfacila<b/>horo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="malforta topologio"><p><l>malforta<b/>topologio</l><r>malforta<b/>topologio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="malforta topologio"><p><l>malfortan<b/>topologion</l><r>malforta<b/>topologio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="malgranda duonakso"><p><l>malgranda<b/>duonakso</l><r>malgranda<b/>duonakso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="malgranda fingro"><p><l>malgranda<b/>fingro</l><r>malgranda<b/>fingro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="malgranda kalorio"><p><l>malgranda<b/>kalorio</l><r>malgranda<b/>kalorio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="malgranda pando"> <p><l>malgranda<b/>pando</l><r>malgranda<b/>pando<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="malgranda ĉimpanzo"><p><l>malgranda<b/>ĉimpanzo</l><r>malgranda<b/>ĉimpanzo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="malgranda duonakso"><p><l>malgrandan<b/>duonakson</l><r>malgranda<b/>duonakso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="malgranda fingro"><p><l>malgrandan<b/>fingron</l><r>malgranda<b/>fingro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="malgranda kalorio"><p><l>malgrandan<b/>kalorion</l><r>malgranda<b/>kalorio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="malgranda pando"> <p><l>malgrandan<b/>pandon</l><r>malgranda<b/>pando<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="malgranda ĉimpanzo"><p><l>malgrandan<b/>ĉimpanzon</l><r>malgranda<b/>ĉimpanzo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="maligna tumoro">  <p><l>maligna<b/>tumoro</l><r>maligna<b/>tumoro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="maligna tumoro">  <p><l>malignan<b/>tumoron</l><r>maligna<b/>tumoro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="mallibereja gardisto"><p><l>mallibereja<b/>gardistino</l><r>mallibereja<b/>gardisto<s n="n"/><s n="f"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="mallibereja gardisto"><p><l>mallibereja<b/>gardisto</l><r>mallibereja<b/>gardisto<s n="n"/><s n="m"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="mallibereja gardisto"><p><l>malliberejan<b/>gardistinon</l><r>mallibereja<b/>gardisto<s n="n"/><s n="f"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="mallibereja gardisto"><p><l>malliberejan<b/>gardiston</l><r>mallibereja<b/>gardisto<s n="n"/><s n="m"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="malloka reto">    <p><l>malloka<b/>reto</l><r>malloka<b/>reto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="malloka reto">    <p><l>mallokan<b/>reton</l><r>malloka<b/>reto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="mallongigita cikloido"><p><l>mallongigita<b/>cikloido</l><r>mallongigita<b/>cikloido<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="mallongigita epicikloido"><p><l>mallongigita<b/>epicikloido</l><r>mallongigita<b/>epicikloido<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="mallongigita hipocikloido"><p><l>mallongigita<b/>hipocikloido</l><r>mallongigita<b/>hipocikloido<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="mallongigita cikloido"><p><l>mallongigitan<b/>cikloidon</l><r>mallongigita<b/>cikloido<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="mallongigita epicikloido"><p><l>mallongigitan<b/>epicikloidon</l><r>mallongigita<b/>epicikloido<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="mallongigita hipocikloido"><p><l>mallongigitan<b/>hipocikloidon</l><r>mallongigita<b/>hipocikloido<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="malneta nacia produkto"><p><l>malneta<b/>nacia<b/>produkto</l><r>malneta<b/>nacia<b/>produkto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="malneta nacia produkto"><p><l>malnetan<b/>nacian<b/>produkton</l><r>malneta<b/>nacia<b/>produkto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="malplena aro">    <p><l>malplena<b/>aro</l><r>malplena<b/>aro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="malplena aro">    <p><l>malplenan<b/>aron</l><r>malplena<b/>aro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="malta kruco">     <p><l>malta<b/>kruco</l><r>malta<b/>kruco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="malta kruco">     <p><l>maltan<b/>krucon</l><r>malta<b/>kruco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="malvarma milito"> <p><l>malvarma<b/>milito</l><r>malvarma<b/>milito<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="malvarma milito"> <p><l>malvarman<b/>militon</l><r>malvarma<b/>milito<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="malvarmeta trinkaĵo"><p><l>malvarmeta<b/>trinkaĵo</l><r>malvarmeta<b/>trinkaĵo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="malvarmeta trinkaĵo"><p><l>malvarmetan<b/>trinkaĵon</l><r>malvarmeta<b/>trinkaĵo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="malvera famo">    <p><l>malvera<b/>famo</l><r>malvera<b/>famo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="malvera famo">    <p><l>malveran<b/>famon</l><r>malvera<b/>famo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="mastruma sistemo"><p><l>mastruma<b/>sistemo</l><r>mastruma<b/>sistemo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="mastruma sistemo"><p><l>mastruman<b/>sistemon</l><r>mastruma<b/>sistemo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="matematika logiko"><p><l>matematika<b/>logiko</l><r>matematika<b/>logiko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="matematika logiko"><p><l>matematikan<b/>logikon</l><r>matematika<b/>logiko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="matrica adicio">  <p><l>matrica<b/>adicio</l><r>matrica<b/>adicio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="matrica multipliko"><p><l>matrica<b/>multipliko</l><r>matrica<b/>multipliko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="matrica nulo">    <p><l>matrica<b/>nulo</l><r>matrica<b/>nulo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="matrica unuo">    <p><l>matrica<b/>unuo</l><r>matrica<b/>unuo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="matrica adicio">  <p><l>matrican<b/>adicion</l><r>matrica<b/>adicio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="matrica multipliko"><p><l>matrican<b/>multiplikon</l><r>matrica<b/>multipliko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="matrica nulo">    <p><l>matrican<b/>nulon</l><r>matrica<b/>nulo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="matrica unuo">    <p><l>matrican<b/>unuon</l><r>matrica<b/>unuo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="mensa malsano">   <p><l>mensa<b/>malsano</l><r>mensa<b/>malsano<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="mensa malsano">   <p><l>mensan<b/>malsanon</l><r>mensa<b/>malsano<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="metiista laboro"> <p><l>metiista<b/>laboro</l><r>metiista<b/>laboro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="metiista laboro"> <p><l>metiistan<b/>laboron</l><r>metiista<b/>laboro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="metrika spaco">   <p><l>metrika<b/>spaco</l><r>metrika<b/>spaco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="metrika spaco">   <p><l>metrikan<b/>spacon</l><r>metrika<b/>spaco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="metroa stacio">   <p><l>metroa<b/>stacio</l><r>metroa<b/>stacio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="metroa stacio">   <p><l>metroan<b/>stacion</l><r>metroa<b/>stacio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="meza masto">      <p><l>meza<b/>masto</l><r>meza<b/>masto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="meza stelario">   <p><l>meza<b/>stelario</l><r>meza<b/>stelario<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="meza masto">      <p><l>mezan<b/>maston</l><r>meza<b/>masto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="meza stelario">   <p><l>mezan<b/>stelarion</l><r>meza<b/>stelario<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="mezurhava spaco"> <p><l>mezurhava<b/>spaco</l><r>mezurhava<b/>spaco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="mezurhava spaco"> <p><l>mezurhavan<b/>spacon</l><r>mezurhava<b/>spaco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="migra komizo">    <p><l>migra<b/>komizino</l><r>migra<b/>komizo<s n="n"/><s n="f"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="migra komizo">    <p><l>migra<b/>komizo</l><r>migra<b/>komizo<s n="n"/><s n="m"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="migra komizo">    <p><l>migran<b/>komizinon</l><r>migra<b/>komizo<s n="n"/><s n="f"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="migra komizo">    <p><l>migran<b/>komizon</l><r>migra<b/>komizo<s n="n"/><s n="m"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="milita aviadilaro"><p><l>milita<b/>aviadilaro</l><r>milita<b/>aviadilaro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="milita aviadilo"> <p><l>milita<b/>aviadilo</l><r>milita<b/>aviadilo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="milita servado">  <p><l>milita<b/>servado</l><r>milita<b/>servado<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="milita aviadilaro"><p><l>militan<b/>aviadilaron</l><r>milita<b/>aviadilaro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="milita aviadilo"> <p><l>militan<b/>aviadilon</l><r>milita<b/>aviadilo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="milita servado">  <p><l>militan<b/>servadon</l><r>milita<b/>servado<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="mona subunuo">    <p><l>mona<b/>subunuo</l><r>mona<b/>subunuo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="mona subunuo">    <p><l>monan<b/>subunuon</l><r>mona<b/>subunuo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="montra fingro">   <p><l>montra<b/>fingro</l><r>montra<b/>fingro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="montra fingro">   <p><l>montran<b/>fingron</l><r>montra<b/>fingro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="morsa kodo">      <p><l>morsa<b/>kodo</l><r>morsa<b/>kodo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="morsa kodo">      <p><l>morsan<b/>kodon</l><r>morsa<b/>kodo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="muela dento">     <p><l>muela<b/>dento</l><r>muela<b/>dento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="muela dento">     <p><l>muelan<b/>denton</l><r>muela<b/>dento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="mutuala kuracoservo"><p><l>mutuala<b/>kuracoservo</l><r>mutuala<b/>kuracoservo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="mutuala societo"> <p><l>mutuala<b/>societo</l><r>mutuala<b/>societo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="mutuala kuracoservo"><p><l>mutualan<b/>kuracoservon</l><r>mutuala<b/>kuracoservo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="mutuala societo"> <p><l>mutualan<b/>societon</l><r>mutuala<b/>societo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="n-a momanto">     <p><l>n-a<b/>momanto</l><r>n-a<b/>momanto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="n-a radiko">      <p><l>n-a<b/>radiko</l><r>n-a<b/>radiko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="n-a momanto">     <p><l>n-an<b/>momanton</l><r>n-a<b/>momanto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="n-a radiko">      <p><l>n-an<b/>radikon</l><r>n-a<b/>radiko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="n-argumenta funkcio"><p><l>n-argumenta<b/>funkcio</l><r>n-argumenta<b/>funkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="n-argumenta rilato"><p><l>n-argumenta<b/>rilato</l><r>n-argumenta<b/>rilato<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="n-argumenta funkcio"><p><l>n-argumentan<b/>funkcion</l><r>n-argumenta<b/>funkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="n-argumenta rilato"><p><l>n-argumentan<b/>rilaton</l><r>n-argumenta<b/>rilato<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="n-modula restoklaso"><p><l>n-modula<b/>restoklaso</l><r>n-modula<b/>restoklaso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="n-modula restoklaso"><p><l>n-modulan<b/>restoklason</l><r>n-modula<b/>restoklaso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="natura entjero">  <p><l>natura<b/>entjero</l><r>natura<b/>entjero<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="natura logaritmo"><p><l>natura<b/>logaritmo</l><r>natura<b/>logaritmo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="natura nombro">   <p><l>natura<b/>nombro</l><r>natura<b/>nombro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="natura entjero">  <p><l>naturan<b/>entjeron</l><r>natura<b/>entjero<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="natura logaritmo"><p><l>naturan<b/>logaritmon</l><r>natura<b/>logaritmo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="natura nombro">   <p><l>naturan<b/>nombron</l><r>natura<b/>nombro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="neandertala homo"><p><l>neandertala<b/>homo</l><r>neandertala<b/>homo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="neandertala homo"><p><l>neandertalan<b/>homon</l><r>neandertala<b/>homo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="necesa kondiĉo">  <p><l>necesa<b/>kondiĉo</l><r>necesa<b/>kondiĉo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="necesa kondiĉo">  <p><l>necesan<b/>kondiĉon</l><r>necesa<b/>kondiĉo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="neceseja papero"> <p><l>neceseja<b/>papero</l><r>neceseja<b/>papero<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="neceseja papero"> <p><l>necesejan<b/>paperon</l><r>neceseja<b/>papero<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nederlanda lingvo"><p><l>nederlanda<b/>lingvo</l><r>nederlanda<b/>lingvo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="nederlanda lingvo"><p><l>nederlandan<b/>lingvon</l><r>nederlanda<b/>lingvo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nefermita letero"><p><l>nefermita<b/>letero</l><r>nefermita<b/>letero<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="nefermita letero"><p><l>nefermitan<b/>leteron</l><r>nefermita<b/>letero<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="negliĝa robo">    <p><l>negliĝa<b/>robo</l><r>negliĝa<b/>robo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="negliĝa robo">    <p><l>negliĝan<b/>robon</l><r>negliĝa<b/>robo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="neorientita grafeo"><p><l>neorientita<b/>grafeo</l><r>neorientita<b/>grafeo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="neorientita grafeo"><p><l>neorientitan<b/>grafeon</l><r>neorientita<b/>grafeo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nepera logaritmo"><p><l>nepera<b/>logaritmo</l><r>nepera<b/>logaritmo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="nepera logaritmo"><p><l>neperan<b/>logaritmon</l><r>nepera<b/>logaritmo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nerva impulso">   <p><l>nerva<b/>impulso</l><r>nerva<b/>impulso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="nerva impulso">   <p><l>nervan<b/>impulson</l><r>nerva<b/>impulso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="neŭtra elemento"> <p><l>neŭtra<b/>elemento</l><r>neŭtra<b/>elemento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="neŭtra genro">    <p><l>neŭtra<b/>genro</l><r>neŭtra<b/>genro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="neŭtra elemento"> <p><l>neŭtran<b/>elementon</l><r>neŭtra<b/>elemento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="neŭtra genro">    <p><l>neŭtran<b/>genron</l><r>neŭtra<b/>genro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="neŭtriga elemento"><p><l>neŭtriga<b/>elemento</l><r>neŭtriga<b/>elemento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="neŭtriga elemento"><p><l>neŭtrigan<b/>elementon</l><r>neŭtriga<b/>elemento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nigra heleboro">  <p><l>nigra<b/>heleboro</l><r>nigra<b/>heleboro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="nigra humuro">    <p><l>nigra<b/>humuro</l><r>nigra<b/>humuro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="nigra kesto">     <p><l>nigra<b/>kesto</l><r>nigra<b/>kesto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="nigra magio">     <p><l>nigra<b/>magio</l><r>nigra<b/>magio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="nigra merkato">   <p><l>nigra<b/>merkato</l><r>nigra<b/>merkato<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="nigra poplo">     <p><l>nigra<b/>poplo</l><r>nigra<b/>poplo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="nigra skatolo">   <p><l>nigra<b/>skatolo</l><r>nigra<b/>skatolo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="nigra tabulo">    <p><l>nigra<b/>tabulo</l><r>nigra<b/>tabulo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="nigra truo">      <p><l>nigra<b/>truo</l><r>nigra<b/>truo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="nigra heleboro">  <p><l>nigran<b/>heleboron</l><r>nigra<b/>heleboro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nigra humuro">    <p><l>nigran<b/>humuron</l><r>nigra<b/>humuro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nigra kesto">     <p><l>nigran<b/>keston</l><r>nigra<b/>kesto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nigra magio">     <p><l>nigran<b/>magion</l><r>nigra<b/>magio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nigra merkato">   <p><l>nigran<b/>merkaton</l><r>nigra<b/>merkato<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nigra poplo">     <p><l>nigran<b/>poplon</l><r>nigra<b/>poplo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nigra skatolo">   <p><l>nigran<b/>skatolon</l><r>nigra<b/>skatolo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nigra tabulo">    <p><l>nigran<b/>tabulon</l><r>nigra<b/>tabulo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nigra truo">      <p><l>nigran<b/>truon</l><r>nigra<b/>truo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nitrata acido">   <p><l>nitrata<b/>acido</l><r>nitrata<b/>acido<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="nitrata acido">   <p><l>nitratan<b/>acidon</l><r>nitrata<b/>acido<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nitrita acido">   <p><l>nitrita<b/>acido</l><r>nitrita<b/>acido<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="nitrita acido">   <p><l>nitritan<b/>acidon</l><r>nitrita<b/>acido<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nobla gaso">      <p><l>nobla<b/>gaso</l><r>nobla<b/>gaso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="nobla gaso">      <p><l>noblan<b/>gason</l><r>nobla<b/>gaso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nokta trinkejo">  <p><l>nokta<b/>trinkejo</l><r>nokta<b/>trinkejo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="nokta trinkejo">  <p><l>noktan<b/>trinkejon</l><r>nokta<b/>trinkejo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nominala valoro"> <p><l>nominala<b/>valoro</l><r>nominala<b/>valoro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="nominala valoro"> <p><l>nominalan<b/>valoron</l><r>nominala<b/>valoro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nomo kaj adreso de sendinto"><p><l>nomoj<b/>kaj<b/>adresoj<b/>de<b/>sendinto</l><r>nomo<b/>kaj<b/>adreso<b/>de<b/>sendinto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="norda cervo">     <p><l>norda<b/>cervo</l><r>norda<b/>cervo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="norda poluso">    <p><l>norda<b/>poluso</l><r>norda<b/>poluso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="norda cervo">     <p><l>nordan<b/>cervon</l><r>norda<b/>cervo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="norda poluso">    <p><l>nordan<b/>poluson</l><r>norda<b/>poluso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="normita spaco">   <p><l>normita<b/>spaco</l><r>normita<b/>spaco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="normita spaco">   <p><l>normitan<b/>spacon</l><r>normita<b/>spaco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="normohava spaco"> <p><l>normohava<b/>spaco</l><r>normohava<b/>spaco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="normohava spaco"> <p><l>normohavan<b/>spacon</l><r>normohava<b/>spaco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nov-orleana ĵazo"><p><l>nov-orleana<b/>ĵazo</l><r>nov-orleana<b/>ĵazo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="nov-orleana ĵazo"><p><l>nov-orleanan<b/>ĵazon</l><r>nov-orleana<b/>ĵazo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="nova mondo">      <p><l>novan<b/>Mondon</l><r>nova<b/>Mondo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="Nova testamento"> <p><l>Novan<b/>testamenton</l><r>Nova<b/>testamento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="objekta komplemento"><p><l>objekta<b/>komplemento</l><r>objekta<b/>komplemento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="objekta komplemento"><p><l>objektan<b/>komplementon</l><r>objekta<b/>komplemento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="oblikva projekcio"><p><l>oblikva<b/>projekcio</l><r>oblikva<b/>projekcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="oblikva simetrio"><p><l>oblikva<b/>simetrio</l><r>oblikva<b/>simetrio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="oblikva velo">    <p><l>oblikva<b/>velo</l><r>oblikva<b/>velo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="oblikva projekcio"><p><l>oblikvan<b/>projekcion</l><r>oblikva<b/>projekcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="oblikva simetrio"><p><l>oblikvan<b/>simetrion</l><r>oblikva<b/>simetrio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="oblikva velo">    <p><l>oblikvan<b/>velon</l><r>oblikva<b/>velo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="okcidenta kristanismo"><p><l>okcidenta<b/>kristanismo</l><r>okcidenta<b/>kristanismo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="okcidenta kristanismo"><p><l>okcidentan<b/>kristanismon</l><r>okcidenta<b/>kristanismo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="onda lado">       <p><l>onda<b/>lado</l><r>onda<b/>lado<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="onda lado">       <p><l>ondan<b/>ladon</l><r>onda<b/>lado<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="optika fibro">    <p><l>optika<b/>fibro</l><r>optika<b/>fibro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="optika fibro">    <p><l>optikan<b/>fibron</l><r>optika<b/>fibro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ora dispartigo">  <p><l>ora<b/>dispartigo</l><r>ora<b/>dispartigo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ora sparo">       <p><l>ora<b/>sparo</l><r>ora<b/>sparo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ora dispartigo">  <p><l>oran<b/>dispartigon</l><r>ora<b/>dispartigo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ora sparo">       <p><l>oran<b/>sparon</l><r>ora<b/>sparo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="orda aro">        <p><l>orda<b/>aro</l><r>orda<b/>aro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="orda aro">        <p><l>ordan<b/>aron</l><r>orda<b/>aro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ordinara logaritmo"><p><l>ordinara<b/>logaritmo</l><r>ordinara<b/>logaritmo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ordinara popolo"> <p><l>ordinara<b/>popolo</l><r>ordinara<b/>popolo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ordinara logaritmo"><p><l>ordinaran<b/>logaritmon</l><r>ordinara<b/>logaritmo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ordinara popolo"> <p><l>ordinaran<b/>popolon</l><r>ordinara<b/>popolo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="orienta kristanismo"><p><l>orienta<b/>kristanismo</l><r>orienta<b/>kristanismo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="orienta kristanismo"><p><l>orientan<b/>kristanismon</l><r>orienta<b/>kristanismo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="orientita grafeo"><p><l>orientita<b/>grafeo</l><r>orientita<b/>grafeo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="orientita grafeo"><p><l>orientitan<b/>grafeon</l><r>orientita<b/>grafeo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="orta projekcio">  <p><l>orta<b/>projekcio</l><r>orta<b/>projekcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="orta simetrio">   <p><l>orta<b/>simetrio</l><r>orta<b/>simetrio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="orta projekcio">  <p><l>ortan<b/>projekcion</l><r>orta<b/>projekcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="orta simetrio">   <p><l>ortan<b/>simetrion</l><r>orta<b/>simetrio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="paralela projekcio"><p><l>paralela<b/>projekcio</l><r>paralela<b/>projekcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="paralela projekcio"><p><l>paralelan<b/>projekcion</l><r>paralela<b/>projekcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="parlamenta benko"><p><l>parlamenta benko</l><r>parlamenta benko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="parlamenta periodo"><p><l>parlamenta<b/>periodo</l><r>parlamenta<b/>periodo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="parlamenta benko"><p><l>parlamentan benkon</l><r>parlamenta benko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="parlamenta periodo"><p><l>parlamentan<b/>periodon</l><r>parlamenta<b/>periodo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="parta derivaĵo">  <p><l>parta<b/>derivaĵo</l><r>parta<b/>derivaĵo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="parta sumo">      <p><l>parta<b/>sumo</l><r>parta<b/>sumo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="parta derivaĵo">  <p><l>partan<b/>derivaĵon</l><r>parta<b/>derivaĵo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="parta sumo">      <p><l>partan<b/>sumon</l><r>parta<b/>sumo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="Paska semajno">   <p><l>Paska<b/>semajno</l><r>Paska<b/>semajno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="paskala limako">  <p><l>paskala<b/>limako</l><r>paskala<b/>limako<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="paskala triangulo"><p><l>paskala<b/>triangulo</l><r>paskala<b/>triangulo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="paskala limako">  <p><l>paskalan<b/>limakon</l><r>paskala<b/>limako<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="paskala triangulo"><p><l>paskalan<b/>triangulon</l><r>paskala<b/>triangulo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="Paska semajno">   <p><l>Paskan<b/>semajnon</l><r>Paska<b/>semajno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="pekofera kapro">  <p><l>pekofera<b/>kapro</l><r>pekofera<b/>kapro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="pekofera kapro">  <p><l>pekoferan<b/>kapron</l><r>pekofera<b/>kapro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="pekporta kapro">  <p><l>pekporta<b/>kapro</l><r>pekporta<b/>kapro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="pekporta kapro">  <p><l>pekportan<b/>kapron</l><r>pekporta<b/>kapro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="pera komplemento"><p><l>pera<b/>komplemento</l><r>pera<b/>komplemento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="pera komplemento"><p><l>peran<b/>komplementon</l><r>pera<b/>komplemento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="persona komputilo"><p><l>persona<b/>komputilo</l><r>persona<b/>komputilo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="persona komputilo"><p><l>personan<b/>komputilon</l><r>persona<b/>komputilo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="peza laboro">     <p><l>peza<b/>laboro</l><r>peza<b/>laboro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="peza laboro">     <p><l>pezan<b/>laboron</l><r>peza<b/>laboro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="pezocentra koordinato"><p><l>pezocentra<b/>koordinato</l><r>pezocentra<b/>koordinato<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="pezocentra koordinato"><p><l>pezocentran<b/>koordinaton</l><r>pezocentra<b/>koordinato<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="platona solido">  <p><l>platona<b/>solido</l><r>platona<b/>solido<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="platona solido">  <p><l>platonan<b/>solidon</l><r>platona<b/>solido<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="plej granda komuna divizoro"><p><l>plej<b/>granda<b/>komuna<b/>divizoro</l><r>plej<b/>granda<b/>komuna<b/>divizoro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="plej granda komuna divizoro"><p><l>plej<b/>grandan<b/>komunan<b/>divizoron</l><r>plej<b/>granda<b/>komuna<b/>divizoro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="plej malgranda komuna oblo"><p><l>plej<b/>malgranda<b/>komuna<b/>oblo</l><r>plej<b/>malgranda<b/>komuna<b/>oblo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="plej malgranda komuna oblo"><p><l>plej<b/>malgrandan<b/>komunan<b/>oblon</l><r>plej<b/>malgranda<b/>komuna<b/>oblo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="plurnacia konzerno"><p><l>plurnacia<b/>konzerno</l><r>plurnacia<b/>konzerno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="plurnacia konzerno"><p><l>plurnacian<b/>konzernon</l><r>plurnacia<b/>konzerno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="plursenca funkcio"><p><l>plursenca<b/>funkcio</l><r>plursenca<b/>funkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="plursenca funkcio"><p><l>plursencan<b/>funkcion</l><r>plursenca<b/>funkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="polinoma adicio"> <p><l>polinoma<b/>adicio</l><r>polinoma<b/>adicio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="polinoma funkcio"><p><l>polinoma<b/>funkcio</l><r>polinoma<b/>funkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="polinoma multipliko"><p><l>polinoma<b/>multipliko</l><r>polinoma<b/>multipliko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="polinoma nulo">   <p><l>polinoma<b/>nulo</l><r>polinoma<b/>nulo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="polinoma unuo">   <p><l>polinoma<b/>unuo</l><r>polinoma<b/>unuo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="polinoma adicio"> <p><l>polinoman<b/>adicion</l><r>polinoma<b/>adicio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="polinoma funkcio"><p><l>polinoman<b/>funkcion</l><r>polinoma<b/>funkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="polinoma multipliko"><p><l>polinoman<b/>multiplikon</l><r>polinoma<b/>multipliko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="polinoma nulo">   <p><l>polinoman<b/>nulon</l><r>polinoma<b/>nulo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="polinoma unuo">   <p><l>polinoman<b/>unuon</l><r>polinoma<b/>unuo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="politika sistemo"><p><l>politika<b/>sistemo</l><r>politika<b/>sistemo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="politika sistemo"><p><l>politikan<b/>sistemon</l><r>politika<b/>sistemo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="polusa akso">     <p><l>polusa<b/>akso</l><r>polusa<b/>akso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="polusa angulo">   <p><l>polusa<b/>angulo</l><r>polusa<b/>angulo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="polusa aŭroro">   <p><l>polusa<b/>aŭroro</l><r>polusa<b/>aŭroro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="polusa distanco"> <p><l>polusa<b/>distanco</l><r>polusa<b/>distanco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="polusa koordinato"><p><l>polusa<b/>koordinato</l><r>polusa<b/>koordinato<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="polusa lumo">     <p><l>polusa<b/>lumo</l><r>polusa<b/>lumo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="polusa akso">     <p><l>polusan<b/>akson</l><r>polusa<b/>akso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="polusa angulo">   <p><l>polusan<b/>angulon</l><r>polusa<b/>angulo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="polusa aŭroro">   <p><l>polusan<b/>aŭroron</l><r>polusa<b/>aŭroro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="polusa distanco"> <p><l>polusan<b/>distancon</l><r>polusa<b/>distanco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="polusa koordinato"><p><l>polusan<b/>koordinaton</l><r>polusa<b/>koordinato<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="polusa lumo">     <p><l>polusan<b/>lumon</l><r>polusa<b/>lumo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="portebla afiŝo">  <p><l>portebla afiŝo</l><r>portebla afiŝo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="portebla afiŝo">  <p><l>porteblan afiŝon</l><r>portebla afiŝo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="posta steveno">   <p><l>posta<b/>steveno</l><r>posta<b/>steveno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="posta tago">      <p><l>posta<b/>tago</l><r>posta<b/>tago<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="posta steveno">   <p><l>postan<b/>stevenon</l><r>posta<b/>steveno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="posta tago">      <p><l>postan<b/>tagon</l><r>posta<b/>tago<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="postdiploma kurso"><p><l>postdiploma<b/>kurso</l><r>postdiploma<b/>kurso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="postdiploma kurso"><p><l>postdiploman<b/>kurson</l><r>postdiploma<b/>kurso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="pozicia frakcio"> <p><l>pozicia<b/>frakcio</l><r>pozicia<b/>frakcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="pozicia frakcio"> <p><l>pozician<b/>frakcion</l><r>pozicia<b/>frakcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="prezidanto-ĝenerala direktoro"><p><l>prezidanto-ĝenerala<b/>direktoro</l><r>prezidanto-ĝenerala<b/>direktoro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="prezidanto-ĝenerala direktoro"><p><l>prezidanton-ĝeneralan<b/>direktoron</l><r>prezidanto-ĝenerala<b/>direktoro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="priskriba gramatiko"><p><l>priskriba<b/>gramatiko</l><r>priskriba<b/>gramatiko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="priskriba gramatiko"><p><l>priskriban<b/>gramatikon</l><r>priskriba<b/>gramatiko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="profesia moralo"> <p><l>profesia<b/>moralo</l><r>profesia<b/>moralo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="profesia moralo"> <p><l>profesian<b/>moralon</l><r>profesia<b/>moralo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="propeka kapro">   <p><l>propeka<b/>kapro</l><r>propeka<b/>kapro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="propeka kapro">   <p><l>propekan<b/>kapron</l><r>propeka<b/>kapro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="propra divizoro"> <p><l>propra<b/>divizoro</l><r>propra<b/>divizoro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="propra divizoro"> <p><l>propran<b/>divizoron</l><r>propra<b/>divizoro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="propravola helpado"><p><l>propravola<b/>helpado</l><r>propravola<b/>helpado<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="propravola helpado"><p><l>propravolan<b/>helpadon</l><r>propravola<b/>helpado<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="psika traŭmato">  <p><l>psika<b/>traŭmato</l><r>psika<b/>traŭmato<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="psika traŭmato">  <p><l>psikan<b/>traŭmaton</l><r>psika<b/>traŭmato<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="publika letero">  <p><l>publika<b/>letero</l><r>publika<b/>letero<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="publika opinio">  <p><l>publika<b/>opinio</l><r>publika<b/>opinio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="publika sekreto"> <p><l>publika<b/>sekreto</l><r>publika<b/>sekreto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="publika ĝardeno"> <p><l>publika<b/>ĝardeno</l><r>publika<b/>ĝardeno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="publika letero">  <p><l>publikan<b/>leteron</l><r>publika<b/>letero<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="publika opinio">  <p><l>publikan<b/>opinion</l><r>publika<b/>opinio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="publika sekreto"> <p><l>publikan<b/>sekreton</l><r>publika<b/>sekreto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="publika ĝardeno"> <p><l>publikan<b/>ĝardenon</l><r>publika<b/>ĝardeno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="pulĉinela sekreto"><p><l>pulĉinela<b/>sekreto</l><r>pulĉinela<b/>sekreto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="pulĉinela sekreto"><p><l>pulĉinelan<b/>sekreton</l><r>pulĉinela<b/>sekreto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="racionala frakcio"><p><l>racionala<b/>frakcio</l><r>racionala<b/>frakcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="racionala funkcio"><p><l>racionala<b/>funkcio</l><r>racionala<b/>funkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="racionala frakcio"><p><l>racionalan<b/>frakcion</l><r>racionala<b/>frakcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="racionala funkcio"><p><l>racionalan<b/>funkcion</l><r>racionala<b/>funkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="radika korpo">    <p><l>radika<b/>korpo</l><r>radika<b/>korpo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="radika korpo">    <p><l>radikan<b/>korpon</l><r>radika<b/>korpo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="rapida sonorado"> <p><l>rapida<b/>sonorado</l><r>rapida<b/>sonorado<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="rapida ŝoseo">    <p><l>rapida<b/>ŝoseo</l><r>rapida<b/>ŝoseo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="rapida sonorado"> <p><l>rapidan<b/>sonoradon</l><r>rapida<b/>sonorado<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="rapida ŝoseo">    <p><l>rapidan<b/>ŝoseon</l><r>rapida<b/>ŝoseo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="reakcia aviadilo"><p><l>reakcia<b/>aviadilo</l><r>reakcia<b/>aviadilo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="reakcia aviadilo"><p><l>reakcian<b/>aviadilon</l><r>reakcia<b/>aviadilo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="reela parto">     <p><l>reela<b/>parto</l><r>reela<b/>parto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="reela parto">     <p><l>reelan<b/>parton</l><r>reela<b/>parto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="registara sidejo"><p><l>registara<b/>sidejo</l><r>registara<b/>sidejo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="registara sidejo"><p><l>registaran<b/>sidejon</l><r>registara<b/>sidejo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="regula kruco">    <p><l>regula<b/>kruco</l><r>regula<b/>kruco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="regula kruco">    <p><l>regulan<b/>krucon</l><r>regula<b/>kruco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="rekta velo">      <p><l>rekta<b/>velo</l><r>rekta<b/>velo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="rekta velo">      <p><l>rektan<b/>velon</l><r>rekta<b/>velo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="reta ligo">       <p><l>reta<b/>ligo</l><r>reta<b/>ligo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="reta ligo">       <p><l>retan<b/>ligon</l><r>reta<b/>ligo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="rimana integralo"><p><l>rimana<b/>integralo</l><r>rimana<b/>integralo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="rimana integralo"><p><l>rimanan<b/>integralon</l><r>rimana<b/>integralo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ringa kuko">      <p><l>ringa<b/>kuko</l><r>ringa<b/>kuko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ringa kuko">      <p><l>ringan<b/>kukon</l><r>ringa<b/>kuko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="romanĉa lingvo">  <p><l>romanĉa<b/>lingvo</l><r>romanĉa<b/>lingvo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="romanĉa lingvo">  <p><l>romanĉan<b/>lingvon</l><r>romanĉa<b/>lingvo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="rompita linio">   <p><l>rompita<b/>linio</l><r>rompita<b/>linio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="rompita linio">   <p><l>rompitan<b/>linion</l><r>rompita<b/>linio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ronda kanao">     <p><l>ronda<b/>kanao</l><r>ronda<b/>kanao<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ronda tablo">     <p><l>ronda<b/>tablo</l><r>ronda<b/>tablo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ronda kanao">     <p><l>rondan<b/>kanaon</l><r>ronda<b/>kanao<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ronda tablo">     <p><l>rondan<b/>tablon</l><r>ronda<b/>tablo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="rotacia akso">    <p><l>rotacia<b/>akso</l><r>rotacia<b/>akso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="rotacia centro">  <p><l>rotacia<b/>centro</l><r>rotacia<b/>centro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="rotacia akso">    <p><l>rotacian<b/>akson</l><r>rotacia<b/>akso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="rotacia centro">  <p><l>rotacian<b/>centron</l><r>rotacia<b/>centro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ruĝa beto">       <p><l>ruĝa<b/>beto</l><r>ruĝa<b/>beto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ruĝa brasiko">    <p><l>ruĝa<b/>brasiko</l><r>ruĝa<b/>brasiko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ruĝa cervo">      <p><l>ruĝa<b/>cervo</l><r>ruĝa<b/>cervo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ruĝa ribo">       <p><l>ruĝa<b/>ribo</l><r>ruĝa<b/>ribo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ruĝa beto">       <p><l>ruĝan<b/>beton</l><r>ruĝa<b/>beto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ruĝa brasiko">    <p><l>ruĝan<b/>brasikon</l><r>ruĝa<b/>brasiko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ruĝa cervo">      <p><l>ruĝan<b/>cervon</l><r>ruĝa<b/>cervo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ruĝa ribo">       <p><l>ruĝan<b/>ribon</l><r>ruĝa<b/>ribo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="sabla horloĝo">   <p><l>sabla<b/>horloĝo</l><r>sabla<b/>horloĝo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="sabla horloĝo">   <p><l>sablan<b/>horloĝon</l><r>sabla<b/>horloĝo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="salivŝtona malsano"><p><l>salivŝtona<b/>malsano</l><r>salivŝtona<b/>malsano<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="salivŝtona malsano"><p><l>salivŝtonan<b/>malsanon</l><r>salivŝtona<b/>malsano<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="sarkasma tono">   <p><l>sarkasma<b/>tono</l><r>sarkasma<b/>tono<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="sarkasma tono">   <p><l>sarkasman<b/>tonon</l><r>sarkasma<b/>tono<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="saturna festo">   <p><l>saturna<b/>festo</l><r>saturna<b/>festo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="saturna festo">   <p><l>saturnan<b/>feston</l><r>saturna<b/>festo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="semajna gazeto">  <p><l>semajna<b/>gazeto</l><r>semajna<b/>gazeto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="semajna gazeto">  <p><l>semajnan<b/>gazeton</l><r>semajna<b/>gazeto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="sendanĝera pinglo"><p><l>sendanĝera pinglo</l><r>sendanĝera pinglo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="sendanĝera pinglo"><p><l>sendanĝeran pinglon</l><r>sendanĝera pinglo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="sendifina modo">  <p><l>sendifina<b/>modo</l><r>sendifina<b/>modo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="sendifina modo">  <p><l>sendifinan<b/>modon</l><r>sendifina<b/>modo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="senkapa brasiko"> <p><l>senkapa brasiko</l><r>senkapa brasiko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="senkapa brasiko"> <p><l>senkapan brasikon</l><r>senkapa brasiko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="senpaŝa klavo">   <p><l>senpaŝa<b/>klavo</l><r>senpaŝa<b/>klavo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="senpaŝa klavo">   <p><l>senpaŝan<b/>klavon</l><r>senpaŝa<b/>klavo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="senpera komplemento"><p><l>senpera<b/>komplemento</l><r>senpera<b/>komplemento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="senpera komplemento"><p><l>senperan<b/>komplementon</l><r>senpera<b/>komplemento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="seĝa telfero">    <p><l>seĝa<b/>telfero</l><r>seĝa<b/>telfero<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="seĝa telfero">    <p><l>seĝan<b/>telferon</l><r>seĝa<b/>telfero<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="sfera koordinato"><p><l>sfera<b/>koordinato</l><r>sfera<b/>koordinato<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="sfera koordinato"><p><l>sferan<b/>koordinaton</l><r>sfera<b/>koordinato<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="simetria grupo">  <p><l>simetria<b/>grupo</l><r>simetria<b/>grupo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="simetria grupo">  <p><l>simetrian<b/>grupon</l><r>simetria<b/>grupo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="simpla funkcio">  <p><l>simpla<b/>funkcio</l><r>simpla<b/>funkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="simpla grafeo">   <p><l>simpla<b/>grafeo</l><r>simpla<b/>grafeo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="simpla soldato">  <p><l>simpla<b/>soldato</l><r>simpla<b/>soldato<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="simpla funkcio">  <p><l>simplan<b/>funkcion</l><r>simpla<b/>funkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="simpla grafeo">   <p><l>simplan<b/>grafeon</l><r>simpla<b/>grafeo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="simpla soldato">  <p><l>simplan<b/>soldaton</l><r>simpla<b/>soldato<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="sinoptika tabelo"><p><l>sinoptika<b/>tabelo</l><r>sinoptika<b/>tabelo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="sinoptika tabelo"><p><l>sinoptikan<b/>tabelon</l><r>sinoptika<b/>tabelo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="sinteza rezino">  <p><l>sinteza<b/>rezino</l><r>sinteza<b/>rezino<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="sinteza rezino">  <p><l>sintezan<b/>rezinon</l><r>sinteza<b/>rezino<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="skalara potencialo"><p><l>skalara<b/>potencialo</l><r>skalara<b/>potencialo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="skalara produto"> <p><l>skalara<b/>produto</l><r>skalara<b/>produto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="skalara potencialo"><p><l>skalaran<b/>potencialon</l><r>skalara<b/>potencialo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="skalara produto"> <p><l>skalaran<b/>produton</l><r>skalara<b/>produto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="skolta movado">   <p><l>skolta<b/>movado</l><r>skolta<b/>movado<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="skolta movado">   <p><l>skoltan<b/>movadon</l><r>skolta<b/>movado<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="smirga papero">   <p><l>smirga<b/>papero</l><r>smirga<b/>papero<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="smirga papero">   <p><l>smirgan<b/>paperon</l><r>smirga<b/>papero<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="socia kontrakto"> <p><l>socia<b/>kontrakto</l><r>socia<b/>kontrakto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="socia kontrakto"> <p><l>socian<b/>kontrakton</l><r>socia<b/>kontrakto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="solida angulo">   <p><l>solida<b/>angulo</l><r>solida<b/>angulo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="solida angulo">   <p><l>solidan<b/>angulon</l><r>solida<b/>angulo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="Somera Olimpiko"> <p><l>Somera<b/>Olimpiko</l><r>Somera<b/>Olimpiko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="somera tempo">    <p><l>somera<b/>tempo</l><r>somera<b/>tempo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="Somera Olimpiko"> <p><l>Someran<b/>Olimpikon</l><r>Somera<b/>Olimpiko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="somera tempo">    <p><l>someran<b/>tempon</l><r>somera<b/>tempo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="specifa maso">    <p><l>specifa<b/>maso</l><r>specifa<b/>maso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="specifa maso">    <p><l>specifan<b/>mason</l><r>specifa<b/>maso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="sterlinga funto"> <p><l>sterlinga<b/>funto</l><r>sterlinga<b/>funto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="sterlinga funto"> <p><l>sterlingan<b/>funton</l><r>sterlinga<b/>funto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="stokasta variablo"><p><l>stokasta<b/>variablo</l><r>stokasta<b/>variablo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="stokasta variablo"><p><l>stokastan<b/>variablon</l><r>stokasta<b/>variablo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="strata lanterno"> <p><l>strata<b/>lanterno</l><r>strata<b/>lanterno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="strata lanterno"> <p><l>stratan<b/>lanternon</l><r>strata<b/>lanterno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="streka kanao">    <p><l>streka<b/>kanao</l><r>streka<b/>kanao<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="streka kanao">    <p><l>strekan<b/>kanaon</l><r>streka<b/>kanao<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="suba baro">       <p><l>suba<b/>baro</l><r>suba<b/>baro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="suba baro">       <p><l>suban<b/>baron</l><r>suba<b/>baro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="subferigita betono"><p><l>subferigita<b/>betono</l><r>subferigita<b/>betono<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="subferigita betono"><p><l>subferigitan<b/>betonon</l><r>subferigita<b/>betono<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kontraŭhorloĝa kurado"><p><l>kontraŭhorloĝa<b/>kurado</l><r>kontraŭhorloĝa<b/>kurado<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kontraŭhorloĝa kurado"><p><l>kontraŭhorloĝan<b/>kuradon</l><r>kontraŭhorloĝa<b/>kurado<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="submara arkeologio"><p><l>submara<b/>arkeologio</l><r>submara<b/>arkeologio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="submara arkeologio"><p><l>submaran<b/>arkeologion</l><r>submara<b/>arkeologio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="submergebla ŝipo"><p><l>submergebla<b/>ŝipo</l><r>submergebla<b/>ŝipo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="submergebla ŝipo"><p><l>submergeblan<b/>ŝipon</l><r>submergebla<b/>ŝipo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="subĉiela teatro"> <p><l>subĉiela<b/>teatro</l><r>subĉiela<b/>teatro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="subĉiela teatro"> <p><l>subĉielan<b/>teatron</l><r>subĉiela<b/>teatro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="suda poluso">     <p><l>suda<b/>poluso</l><r>suda<b/>poluso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="suda poluso">     <p><l>sudan<b/>poluson</l><r>suda<b/>poluso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="sufiĉa kondiĉo">  <p><l>sufiĉa<b/>kondiĉo</l><r>sufiĉa<b/>kondiĉo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="sufiĉa kondiĉo">  <p><l>sufiĉan<b/>kondiĉon</l><r>sufiĉa<b/>kondiĉo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="suna kalendaro">  <p><l>suna<b/>kalendaro</l><r>suna<b/>kalendaro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="suna kalendaro">  <p><l>sunan<b/>kalendaron</l><r>suna<b/>kalendaro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="supera baro">     <p><l>supera<b/>baro</l><r>supera<b/>baro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="supera korpo">    <p><l>supera<b/>korpo</l><r>supera<b/>korpo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="supera baro">     <p><l>superan<b/>baron</l><r>supera<b/>baro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="supera korpo">    <p><l>superan<b/>korpon</l><r>supera<b/>korpo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="surmona portreto"><p><l>surmona<b/>portreto</l><r>surmona<b/>portreto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="surmona portreto"><p><l>surmonan<b/>portreton</l><r>surmona<b/>portreto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="surrena glando">  <p><l>surrena<b/>glando</l><r>surrena<b/>glando<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="surrena glando">  <p><l>surrenan<b/>glandon</l><r>surrena<b/>glando<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="surtabla komputilo"><p><l>surtabla<b/>komputilo</l><r>surtabla<b/>komputilo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="surtabla komputilo"><p><l>surtablan<b/>komputilon</l><r>surtabla<b/>komputilo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="tagaloga lingvo"> <p><l>tagaloga<b/>lingvo</l><r>tagaloga<b/>lingvo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="tagaloga lingvo"> <p><l>tagalogan<b/>lingvon</l><r>tagaloga<b/>lingvo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="tagsalajra laboristo"><p><l>tagsalajra<b/>laboristo</l><r>tagsalajra<b/>laboristo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="tagsalajra laboristo"><p><l>tagsalajran<b/>laboriston</l><r>tagsalajra<b/>laboristo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="tasmania lupo">   <p><l>tasmania<b/>lupo</l><r>tasmania<b/>lupo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="tasmania lupo">   <p><l>tasmanian<b/>lupon</l><r>tasmania<b/>lupo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="teknika desegnisto"><p><l>teknika<b/>desegnisto</l><r>teknika<b/>desegnisto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="teknika desegnisto"><p><l>teknikan<b/>desegniston</l><r>teknika<b/>desegnisto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="testa funkcio">   <p><l>testa<b/>funkcio</l><r>testa<b/>funkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="testa funkcio">   <p><l>testan<b/>funkcion</l><r>testa<b/>funkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="tomba monumento"> <p><l>tomba<b/>monumento</l><r>tomba<b/>monumento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="tomba monumento"> <p><l>tomban<b/>monumenton</l><r>tomba<b/>monumento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="topologia dualo"> <p><l>topologia<b/>dualo</l><r>topologia<b/>dualo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="topologia dudualo"><p><l>topologia<b/>dudualo</l><r>topologia<b/>dudualo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="topologia spaco"> <p><l>topologia<b/>spaco</l><r>topologia<b/>spaco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="topologia strukturo"><p><l>topologia<b/>strukturo</l><r>topologia<b/>strukturo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="topologia subspaco"><p><l>topologia<b/>subspaco</l><r>topologia<b/>subspaco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="topologia dualo"> <p><l>topologian<b/>dualon</l><r>topologia<b/>dualo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="topologia dudualo"><p><l>topologian<b/>dudualon</l><r>topologia<b/>dudualo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="topologia spaco"> <p><l>topologian<b/>spacon</l><r>topologia<b/>spaco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="topologia strukturo"><p><l>topologian<b/>strukturon</l><r>topologia<b/>strukturo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="topologia subspaco"><p><l>topologian<b/>subspacon</l><r>topologia<b/>subspaco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="trakampa kurado"> <p><l>trakampa<b/>kurado</l><r>trakampa<b/>kurado<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="trakampa kurado"> <p><l>trakampan<b/>kuradon</l><r>trakampa<b/>kurado<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="transversa fluto"><p><l>transversa<b/>fluto</l><r>transversa<b/>fluto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="transversa fluto"><p><l>transversan<b/>fluton</l><r>transversa<b/>fluto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="tranĉa dento">    <p><l>tranĉa<b/>dento</l><r>tranĉa<b/>dento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="tranĉa dento">    <p><l>tranĉan<b/>denton</l><r>tranĉa<b/>dento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="tria mondo">      <p><l>tria<b/>mondo</l><r>tria<b/>mondo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="tria stato">      <p><l>tria<b/>stato</l><r>tria<b/>stato<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="tria mondo">      <p><l>trian<b/>mondon</l><r>tria<b/>mondo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="tria stato">      <p><l>trian<b/>staton</l><r>tria<b/>stato<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="trigonometria cirklo"><p><l>trigonometria<b/>cirklo</l><r>trigonometria<b/>cirklo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="trigonometria funkcio"><p><l>trigonometria<b/>funkcio</l><r>trigonometria<b/>funkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="trigonometria cirklo"><p><l>trigonometrian<b/>cirklon</l><r>trigonometria<b/>cirklo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="trigonometria funkcio"><p><l>trigonometrian<b/>funkcion</l><r>trigonometria<b/>funkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="troja ĉevalo">    <p><l>troja<b/>ĉevalo</l><r>troja<b/>ĉevalo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="troja ĉevalo">    <p><l>trojan<b/>ĉevalon</l><r>troja<b/>ĉevalo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="tubera helianto"> <p><l>tubera<b/>helianto</l><r>tubera<b/>helianto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="tubera helianto"> <p><l>tuberan<b/>helianton</l><r>tubera<b/>helianto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="turniĝanta ponto"><p><l>turniĝanta<b/>ponto</l><r>turniĝanta<b/>ponto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="turniĝanta ponto"><p><l>turniĝantan<b/>ponton</l><r>turniĝanta<b/>ponto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="umbilika ŝnuro">  <p><l>umbilika<b/>ŝnuro</l><r>umbilika<b/>ŝnuro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="umbilika ŝnuro">  <p><l>umbilikan<b/>ŝnuron</l><r>umbilika<b/>ŝnuro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="universala kvantizanto"><p><l>universala<b/>kvantizanto</l><r>universala<b/>kvantizanto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="universala kvantizanto"><p><l>universalan<b/>kvantizanton</l><r>universala<b/>kvantizanto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="unua mondmilito"> <p><l>unua<b/>mondmilito</l><r>unua<b/>mondmilito<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="unuaklasa soldato"><p><l>unuaklasa<b/>soldato</l><r>unuaklasa<b/>soldato<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="unuaklasa soldato"><p><l>unuaklasan<b/>soldaton</l><r>unuaklasa<b/>soldato<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="unua mondmilito"> <p><l>unuan<b/>mondmiliton</l><r>unua<b/>mondmilito<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="unusenca funkcio"><p><l>unusenca<b/>funkcio</l><r>unusenca<b/>funkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="unusenca funkcio"><p><l>unusencan<b/>funkcion</l><r>unusenca<b/>funkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="urba akcizo">     <p><l>urba<b/>akcizo</l><r>urba<b/>akcizo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="urba akcizo">     <p><l>urban<b/>akcizon</l><r>urba<b/>akcizo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="urdua lingvo">    <p><l>urdua<b/>lingvo</l><r>urdua<b/>lingvo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="urdua lingvo">    <p><l>urduan<b/>lingvon</l><r>urdua<b/>lingvo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="urinŝtona malsano"><p><l>urinŝtona<b/>malsano</l><r>urinŝtona<b/>malsano<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="urinŝtona malsano"><p><l>urinŝtonan<b/>malsanon</l><r>urinŝtona<b/>malsano<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="urĝa prifosado">  <p><l>urĝa<b/>prifosado</l><r>urĝa<b/>prifosado<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="urĝa prifosado">  <p><l>urĝan<b/>prifosadon</l><r>urĝa<b/>prifosado<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="varianca devio">  <p><l>varianca<b/>devio</l><r>varianca<b/>devio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="varianca devio">  <p><l>variancan<b/>devion</l><r>varianca<b/>devio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="varietea teatro"> <p><l>varietea<b/>teatro</l><r>varietea<b/>teatro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="varietea teatro"> <p><l>varietean<b/>teatron</l><r>varietea<b/>teatro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="varmaera aerostato"><p><l>varmaera<b/>aerostato</l><r>varmaera<b/>aerostato<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="varmaera aerostato"><p><l>varmaeran<b/>aerostaton</l><r>varmaera<b/>aerostato<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="vegetala regno">  <p><l>vegetala<b/>regno</l><r>vegetala<b/>regno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="vegetala regno">  <p><l>vegetalan<b/>regnon</l><r>vegetala<b/>regno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="vektora ebeno">   <p><l>vektora<b/>ebeno</l><r>vektora<b/>ebeno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="vektora hiperebeno"><p><l>vektora<b/>hiperebeno</l><r>vektora<b/>hiperebeno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="vektora potencialo"><p><l>vektora<b/>potencialo</l><r>vektora<b/>potencialo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="vektora produto"> <p><l>vektora<b/>produto</l><r>vektora<b/>produto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="vektora projekcio"><p><l>vektora<b/>projekcio</l><r>vektora<b/>projekcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="vektora rekto">   <p><l>vektora<b/>rekto</l><r>vektora<b/>rekto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="vektora rotacio"> <p><l>vektora<b/>rotacio</l><r>vektora<b/>rotacio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="vektora simetrio"><p><l>vektora<b/>simetrio</l><r>vektora<b/>simetrio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="vektora spaco">   <p><l>vektora<b/>spaco</l><r>vektora<b/>spaco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="vektora subspaco"><p><l>vektora<b/>subspaco</l><r>vektora<b/>subspaco<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="vektora ebeno">   <p><l>vektoran<b/>ebenon</l><r>vektora<b/>ebeno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="vektora hiperebeno"><p><l>vektoran<b/>hiperebenon</l><r>vektora<b/>hiperebeno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="vektora potencialo"><p><l>vektoran<b/>potencialon</l><r>vektora<b/>potencialo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="vektora produto"> <p><l>vektoran<b/>produton</l><r>vektora<b/>produto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="vektora projekcio"><p><l>vektoran<b/>projekcion</l><r>vektora<b/>projekcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="vektora rekto">   <p><l>vektoran<b/>rekton</l><r>vektora<b/>rekto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="vektora rotacio"> <p><l>vektoran<b/>rotacion</l><r>vektora<b/>rotacio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="vektora simetrio"><p><l>vektoran<b/>simetrion</l><r>vektora<b/>simetrio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="vektora spaco">   <p><l>vektoran<b/>spacon</l><r>vektora<b/>spaco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="vektora subspaco"><p><l>vektoran<b/>subspacon</l><r>vektora<b/>subspaco<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="verda martestudo"><p><l>verda<b/>martestudo</l><r>verda<b/>martestudo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="verda martestudo"><p><l>verdan<b/>martestudon</l><r>verda<b/>martestudo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="verktora projekcio"><p><l>verktora<b/>projekcio</l><r>verktora<b/>projekcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="verktora projekcio"><p><l>verktoran<b/>projekcion</l><r>verktora<b/>projekcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="Vintra Olimpiko"> <p><l>Vintra<b/>Olimpiko</l><r>Vintra<b/>Olimpiko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="vintra tempo">    <p><l>vintra<b/>tempo</l><r>vintra<b/>tempo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="vintra ĝardeno">  <p><l>vintra<b/>ĝardeno</l><r>vintra<b/>ĝardeno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="Vintra Olimpiko"> <p><l>Vintran<b/>Olimpikon</l><r>Vintra<b/>Olimpiko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="vintra tempo">    <p><l>vintran<b/>tempon</l><r>vintra<b/>tempo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="vintra ĝardeno">  <p><l>vintran<b/>ĝardenon</l><r>vintra<b/>ĝardeno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="vira genro">      <p><l>vira<b/>genro</l><r>vira<b/>genro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="vira genro">      <p><l>viran<b/>genron</l><r>vira<b/>genro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="viva arĝento">    <p><l>viva<b/>arĝento</l><r>viva<b/>arĝento<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="viva arĝento">    <p><l>vivan<b/>arĝenton</l><r>viva<b/>arĝento<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="vojaĝa komizo">   <p><l>vojaĝa<b/>komizino</l><r>vojaĝa<b/>komizo<s n="n"/><s n="f"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="vojaĝa komizo">   <p><l>vojaĝa<b/>komizo</l><r>vojaĝa<b/>komizo<s n="n"/><s n="m"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="vojaĝa komizo">   <p><l>vojaĝan<b/>komizinon</l><r>vojaĝa<b/>komizo<s n="n"/><s n="f"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="vojaĝa komizo">   <p><l>vojaĝan<b/>komizon</l><r>vojaĝa<b/>komizo<s n="n"/><s n="m"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="vojaĝanta komizo"><p><l>vojaĝanta<b/>komizino</l><r>vojaĝanta<b/>komizo<s n="n"/><s n="f"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="vojaĝanta komizo"><p><l>vojaĝanta<b/>komizo</l><r>vojaĝanta<b/>komizo<s n="n"/><s n="m"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="vojaĝanta komizo"><p><l>vojaĝantan<b/>komizinon</l><r>vojaĝanta<b/>komizo<s n="n"/><s n="f"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="vojaĝanta komizo"><p><l>vojaĝantan<b/>komizon</l><r>vojaĝanta<b/>komizo<s n="n"/><s n="m"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="volto je metro">  <p><l>volto<b/>je<b/>metro</l><r>volto<b/>je<b/>metro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="volto je metro">  <p><l>volton<b/>jen<b/>metron</l><r>volto<b/>je<b/>metro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="volumena maso">   <p><l>volumena<b/>maso</l><r>volumena<b/>maso<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="volumena maso">   <p><l>volumenan<b/>mason</l><r>volumena<b/>maso<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ĉefpunkto geografia"><p><l>ĉefpunkto<b/>geografia</l><r>ĉefpunkto<b/>geografia<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ĉefpunkto geografia"><p><l>ĉefpunkton<b/>geografian</l><r>ĉefpunkto<b/>geografia<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ĉena frakcio">    <p><l>ĉena<b/>frakcio</l><r>ĉena<b/>frakcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ĉena frakcio">    <p><l>ĉenan<b/>frakcion</l><r>ĉena<b/>frakcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ĉiaterena veturilo"><p><l>ĉiaterena<b/>veturilo</l><r>ĉiaterena<b/>veturilo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ĉiaterena veturilo"><p><l>ĉiaterenan<b/>veturilon</l><r>ĉiaterena<b/>veturilo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ĉina inko">       <p><l>ĉina<b/>inko</l><r>ĉina<b/>inko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ĉina inko">       <p><l>ĉinan<b/>inkon</l><r>ĉina<b/>inko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ĝenerala gramatiko"><p><l>ĝenerala<b/>gramatiko</l><r>ĝenerala<b/>gramatiko<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ĝenerala gramatiko"><p><l>ĝeneralan<b/>gramatikon</l><r>ĝenerala<b/>gramatiko<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ĝeneraligita funkcio"><p><l>ĝeneraligita<b/>funkcio</l><r>ĝeneraligita<b/>funkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ĝeneraligita funkcio"><p><l>ĝeneraligitan<b/>funkcion</l><r>ĝeneraligita<b/>funkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ĝentila akcipitro"><p><l>ĝentila<b/>akcipitro</l><r>ĝentila<b/>akcipitro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ĝentila akcipitro"><p><l>ĝentilan<b/>akcipitron</l><r>ĝentila<b/>akcipitro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ĝiba baleno">     <p><l>ĝiba<b/>baleno</l><r>ĝiba<b/>baleno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ĝiba baleno">     <p><l>ĝiban<b/>balenon</l><r>ĝiba<b/>baleno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ĝibdorsa baleno"> <p><l>ĝibdorsa<b/>baleno</l><r>ĝibdorsa<b/>baleno<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ĝibdorsa baleno"> <p><l>ĝibdorsan<b/>balenon</l><r>ĝibdorsa<b/>baleno<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ŝirfolia kalendaro"><p><l>ŝirfolia<b/>kalendaro</l><r>ŝirfolia<b/>kalendaro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ŝirfolia kalendaro"><p><l>ŝirfolian<b/>kalendaron</l><r>ŝirfolia<b/>kalendaro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ŝtata hotelo">    <p><l>ŝtata<b/>hotelo</l><r>ŝtata<b/>hotelo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ŝtata hotelo">    <p><l>ŝtatan<b/>hotelon</l><r>ŝtata<b/>hotelo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ŝtupara funkcio"> <p><l>ŝtupara<b/>funkcio</l><r>ŝtupara<b/>funkcio<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ŝtupara funkcio"> <p><l>ŝtuparan<b/>funkcion</l><r>ŝtupara<b/>funkcio<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="ŝuŝa konsonanto"> <p><l>ŝuŝa<b/>konsonanto</l><r>ŝuŝa<b/>konsonanto<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="ŝuŝa konsonanto"> <p><l>ŝuŝan<b/>konsonanton</l><r>ŝuŝa<b/>konsonanto<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="duontempa laboristo"><p><l>duontempa<b/>laboristo</l><r>duontempa<b/>laboristo<s n="n"/><s n="m"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="duontempa laboristo"><p><l>duontempan<b/>laboriston</l><r>duontempa<b/>laboristo<s n="n"/><s n="m"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="duontempa laboristo"><p><l>duontempa<b/>laboristino</l><r>duontempa<b/>laboristo<s n="n"/><s n="f"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="duontempa laboristo"><p><l>duontempan<b/>laboristinon</l><r>duontempa<b/>laboristo<s n="n"/><s n="f"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="kontraŭhorloĝa kuro"><p><l>kontraŭhorloĝa<b/>kuro</l><r>kontraŭhorloĝa<b/>kuro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="kontraŭhorloĝa kuro"><p><l>kontraŭhorloĝan<b/>kuron</l><r>kontraŭhorloĝa<b/>kuro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="portebla bebseĝo"><p><l>portebla<b/>bebseĝo</l><r>portebla<b/>bebseĝo<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="portebla bebseĝo"><p><l>porteblan<b/>bebseĝon</l><r>portebla<b/>bebseĝo<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="minimuma salajro"><p><l>minimuma<b/>salajro</l><r>minimuma<b/>salajro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="minimuma salajro"><p><l>minimuman<b/>salajron</l><r>minimuma<b/>salajro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
+<e lm="absida koridoro"><p><l>absida<b/>koridoro</l><r>absida<b/>koridoro<s n="n"/><s n="sp"/><s n="nom"/></r></p></e>
+<e lm="absida koridoro"><p><l>absidan<b/>koridoron</l><r>absida<b/>koridoro<s n="n"/><s n="sp"/><s n="acc"/></r></p></e>
   </section>
   <section id="final" type="inconditional">
 <e>                      <par n="separa"/></e>
