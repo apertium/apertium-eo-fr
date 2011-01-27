@@ -5,11 +5,13 @@
     <def-cat n="SN">
       <cat-item tags="SN.*"/>
       <cat-item tags="SNrelatiu.*"/>
+      <cat-item lemma="un autre" tags="det.*"/>
     </def-cat>
 
     <def-cat n="SNSA">
       <cat-item tags="SN.*"/>
       <cat-item tags="SA.*"/>
+      <cat-item lemma="un autre" tags="det.*"/>
     </def-cat>
 
     <def-cat n="SNitg"> <!-- EO per als interrogatius, què (el qui porta sense, per tant no entra)...-->
@@ -19,10 +21,16 @@
     
    <def-cat n="SNacc"><!-- EO: tots el que no porten changecase=sense-->
       <cat-item tags="SN.*.*.*.nom"/>
+      <cat-item lemma="un autre" tags="det.*.nom"/>
     </def-cat>
 
    <def-cat n="SNSAacc"><!-- EO: tots el que no porten changecase=sense-->
       <cat-item tags="SN.*.*.*.nom"/>
+      <cat-item tags="SA.*.*.*.nom"/>
+      <cat-item lemma="un autre" tags="det.*.nom"/>
+    </def-cat>
+
+   <def-cat n="SAacc"><!-- EO: tots el que no porten changecase=sense-->
       <cat-item tags="SA.*.*.*.nom"/>
     </def-cat>
 
@@ -160,7 +168,7 @@
     </def-cat>
 
     <def-cat n="porke">
-      <cat-item lemma="por ke" tags="cnjadv"/>
+      <cat-item lemma="por ke" tags="cnjsub"/>
     </def-cat>
 
     <def-cat n="SA">
@@ -185,7 +193,15 @@
 
     <def-cat n="cm">
       <cat-item lemma="cm" tags="sent"/>
+    </def-cat>
+
+    <def-cat n="cm_lpar">
+      <cat-item lemma="cm" tags="sent"/>
       <cat-item lemma="lpar" tags="sent"/>
+    </def-cat>
+
+    <def-cat n="rcit">
+      <cat-item lemma="rcit" tags="sent"/>
     </def-cat>
 
   </section-def-cats>
@@ -1129,6 +1145,219 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
       </action>
 </rule>
 
+
+<rule comment="REGLA: SVtrans SA (EO per l'acusatiu dels SN objecte amb changecase=nom)">
+      <pattern>
+	<pattern-item n="SVtrans"/>
+	<pattern-item n="SAacc"/>
+      </pattern>
+      <action>
+
+	    <let>
+	      <clip pos="2" part="case"/>
+	      <lit-tag v="acc"/>
+	    </let>
+
+	<out>
+	  <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="tags"/>
+	    <clip pos="1" part="chcontent"/>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+	    <clip pos="2" part="chcontent"/>
+	  </chunk>
+	</out>
+      </action>
+</rule>
+
+
+<rule comment="REGLA: SVtrans PREP SN SN (EO per l'acusatiu dels SN objecte amb changecase=nom)">
+      <pattern>
+	<pattern-item n="SVtrans"/>
+	<pattern-item n="PREP"/>
+	<pattern-item n="SN"/>
+	<pattern-item n="SNacc"/>
+      </pattern>
+      <action>
+
+	    <let>
+	      <clip pos="4" part="case"/>
+	      <lit-tag v="acc"/>
+	    </let>
+
+	<out>
+	  <chunk>
+            <clip pos="1" part="whole"/>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk>
+            <clip pos="2" part="whole"/>
+	  </chunk>
+	  <b pos="2"/>
+	  <chunk>
+            <clip pos="3" part="whole"/>
+	  </chunk>
+	  <b pos="3"/>
+	  <chunk>
+            <clip pos="4" part="whole"/>
+	  </chunk>
+	</out>
+      </action>
+</rule>
+
+
+<rule comment="REGLA: SVtrans PREP SN PREP SN SN (EO per l'acusatiu dels SN objecte amb changecase=nom)">
+      <pattern>
+	<pattern-item n="SVtrans"/>
+	<pattern-item n="PREP"/>
+	<pattern-item n="SN"/>
+	<pattern-item n="PREP"/>
+	<pattern-item n="SN"/>
+	<pattern-item n="SNacc"/>
+      </pattern>
+      <action>
+
+	    <let>
+	      <clip pos="6" part="case"/>
+	      <lit-tag v="acc"/>
+	    </let>
+
+	<out>
+	  <chunk>
+            <clip pos="1" part="whole"/>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk>
+            <clip pos="2" part="whole"/>
+	  </chunk>
+	  <b pos="2"/>
+	  <chunk>
+            <clip pos="3" part="whole"/>
+	  </chunk>
+	  <b pos="3"/>
+	  <chunk>
+            <clip pos="4" part="whole"/>
+	  </chunk>
+	  <b pos="4"/>
+	  <chunk>
+            <clip pos="5" part="whole"/>
+	  </chunk>
+	  <b pos="5"/>
+	  <chunk>
+            <clip pos="6" part="whole"/>
+	  </chunk>
+	</out>
+      </action>
+</rule>
+
+
+<rule comment="REGLA: SVtrans, PREP SN, SN (EO per l'acusatiu dels SN objecte amb changecase=nom)">
+      <pattern>
+	<pattern-item n="SVtrans"/>
+	<pattern-item n="cm"/>
+	<pattern-item n="PREP"/>
+	<pattern-item n="SN"/>
+	<pattern-item n="cm"/>
+	<pattern-item n="SNacc"/>
+      </pattern>
+      <action>
+
+	    <let>
+	      <clip pos="6" part="case"/>
+	      <lit-tag v="acc"/>
+	    </let>
+
+	<out>
+	  <chunk>
+            <clip pos="1" part="whole"/>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk>
+            <clip pos="2" part="whole"/>
+	  </chunk>
+	  <b pos="2"/>
+	  <chunk>
+            <clip pos="3" part="whole"/>
+	  </chunk>
+	  <b pos="3"/>
+	  <chunk>
+            <clip pos="4" part="whole"/>
+	  </chunk>
+	  <b pos="4"/>
+	  <chunk>
+            <clip pos="5" part="whole"/>
+	  </chunk>
+	  <b pos="5"/>
+	  <chunk>
+            <clip pos="6" part="whole"/>
+	  </chunk>
+	</out>
+      </action>
+</rule>
+
+
+   <!-- CITAĴOJ -->
+
+<rule comment="REGLA: rcit SV SN (por eviti la generon de akuzativo en frazoj de la tipo 'XXX' diras Johano)">
+      <pattern>
+	<pattern-item n="rcit"/>
+	<pattern-item n="SVlex"/>
+	<pattern-item n="SNacc"/>
+      </pattern>
+      <action>
+	<out>
+	  <chunk>
+            <clip pos="1" part="whole"/>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk>
+            <clip pos="2" part="whole"/>
+	  </chunk>
+	  <b pos="2"/>
+	  <chunk>
+            <clip pos="3" part="whole"/>
+	  </chunk>
+	</out>
+      </action>
+</rule>
+
+<rule comment="REGLA: rcit, SV SN (por eviti la generon de akuzativo en frazoj de la tipo 'XXX', diras Johano)">
+      <pattern>
+	<pattern-item n="rcit"/>
+	<pattern-item n="cm"/>
+	<pattern-item n="SVlex"/>
+	<pattern-item n="SNacc"/>
+      </pattern>
+      <action>
+	<out>
+	  <chunk>
+            <clip pos="1" part="whole"/>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk>
+            <clip pos="2" part="whole"/>
+	  </chunk>
+	  <b pos="2"/>
+	  <chunk>
+            <clip pos="3" part="whole"/>
+	  </chunk>
+	  <b pos="3"/>
+	  <chunk>
+            <clip pos="4" part="whole"/>
+	  </chunk>
+	</out>
+      </action>
+</rule>
+
+
+   <!-- CITAĴOJ -->
+
+
+   <!-- MOVO -->
 <rule comment="REGLA: SN SVmoviment PREP SN (EO per l'acusatiu dels verbs de moviment amb changecase=nom)">
       <pattern>
 	<pattern-item n="SN"/>
@@ -1892,7 +2121,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 <rule comment="REGLA: SN, SNrel ( deux enseignants (dont une femme) )">
       <pattern>
 	<pattern-item n="SNSA"/>
-	<pattern-item n="cm"/>
+	<pattern-item n="cm_lpar"/>
 	<pattern-item n="SNrelatiu"/>
       </pattern>
       <action>

@@ -71,6 +71,12 @@
       <cat-item tags="adv"/>
     </def-cat>
 
+    <def-cat n="adv_cnj">
+      <cat-item tags="adv"/>
+      <cat-item tags="preadv"/>
+      <cat-item tags="cnjadv"/>
+    </def-cat>
+
     <def-cat n="SV">
       <cat-item tags="SV"/>
       <cat-item tags="SV.*"/>
@@ -1253,7 +1259,7 @@
     <rule comment="REGLA: SVtrser ADV de le SN   -   SVtrser SN ">
       <pattern>
         <pattern-item n="SVtrser"/>
-        <pattern-item n="adv"/>
+        <pattern-item n="adv_cnj"/>
         <pattern-item n="de"/>
         <pattern-item n="le_det"/>
         <pattern-item n="SNnodet"/>
@@ -1297,7 +1303,7 @@
     <rule comment="REGLA: SVtrser ADV de le SA SN   -   SVtrser SN ">
       <pattern>
         <pattern-item n="SVtrser"/>
-        <pattern-item n="adv"/>
+        <pattern-item n="adv_cnj"/>
         <pattern-item n="de"/>
         <pattern-item n="le_det"/>
         <pattern-item n="SAnodet"/>
@@ -1344,7 +1350,7 @@
     <rule comment="REGLA: SVtrser ADV ADV de le SN   -   SVtrser SN ">
       <pattern>
         <pattern-item n="SVtrser"/>
-        <pattern-item n="adv"/>
+        <pattern-item n="adv_cnj"/>
         <pattern-item n="adv"/>
         <pattern-item n="de"/>
         <pattern-item n="le_det"/>
@@ -1391,7 +1397,7 @@
     <rule comment="REGLA: SVtrser ADV ADV de le SA SN   -   SVtrser SN ">
       <pattern>
         <pattern-item n="SVtrser"/>
-        <pattern-item n="adv"/>
+        <pattern-item n="adv_cnj"/>
         <pattern-item n="adv"/>
         <pattern-item n="de"/>
         <pattern-item n="le_det"/>
@@ -1434,6 +1440,53 @@
              <lit v="}"/>
           </chunk>
         </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: SVtrser PR ADV de le SN   -   SVtrser SN: il mangera jusqu'à demain des pommes ">
+      <pattern>
+        <pattern-item n="SVtrser"/>
+        <pattern-item n="pr"/>
+        <pattern-item n="adv"/>
+        <pattern-item n="de"/>
+        <pattern-item n="le_det"/>
+        <pattern-item n="SNnodet"/>
+      </pattern>
+      <action>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="5"/>
+          <with-param pos="6"/>
+        </call-macro>
+        <call-macro n="kunordigo_gen">
+          <with-param pos="5"/>
+          <with-param pos="6"/>
+        </call-macro>
+          <out>
+            <chunk>
+              <clip pos="1" part="lem"/>
+              <clip pos="1" part="tags"/>
+              <lit v="{"/>
+              <clip pos="1" part="content"/>
+              <b pos="1"/>
+              <clip pos="2" part="content"/>
+              <b pos="2"/>
+              <clip pos="3" part="content"/>
+               <lit v="}"/>
+            </chunk>
+            <b pos="3"/>
+          </out>
+          <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="5"/></call-macro>
+          <out>
+            <chunk>
+              <lit v="det_nom"/>
+              <clip pos="6" part="tags"/>
+              <lit v="{"/>
+              <clip pos="6" part="content"/>
+               <lit v="}"/>
+            </chunk>
+          </out>
       </action>
     </rule>
 
@@ -1921,7 +1974,7 @@
     <rule comment="REGLA: SV ADV   -   SV ">
       <pattern>
         <pattern-item n="SV"/>
-        <pattern-item n="adv"/>
+        <pattern-item n="adv_cnj"/>
       </pattern>
       <action>
         <out>
@@ -1932,6 +1985,33 @@
             <clip pos="1" part="content"/>
                 <b pos="1"/>
             <clip pos="2" part="content"/>
+             <lit v="}"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: SV, ADVCNJ,   -   SV ">
+      <pattern>
+        <pattern-item n="SV"/>
+        <pattern-item n="CM"/>
+        <pattern-item n="adv_cnj"/>
+        <pattern-item n="CM"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <get-case-from pos="1"><clip pos="1" part="lem"/></get-case-from>
+            <clip pos="1" part="tags"/>
+            <lit v="{"/>
+            <clip pos="1" part="content"/>
+                <b pos="1"/>
+            <clip pos="2" part="content"/>
+                <b pos="2"/>
+            <clip pos="3" part="content"/>
+                <b pos="3"/>
+            <clip pos="4" part="content"/>
              <lit v="}"/>
           </chunk>
         </out>
