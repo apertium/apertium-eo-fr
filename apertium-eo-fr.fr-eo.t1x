@@ -1433,6 +1433,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     <def-var n="vegada"/>
     <def-var n="nprep"/>
     <def-var n="npron"/>
+    <def-var n="nadv"/>
     <def-var n="ncnj"/>
     <def-var n="ndet"/>
     <def-var n="nsent"/>
@@ -1510,6 +1511,9 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     <list-item v="jeter"/>
     <list-item v="transformer"/>
     <list-item v="métamorphoser"/>
+    <list-item v="konduki"/>
+    <list-item v="veturigi"/>
+    <list-item v="forsendi"/>
 <!--    <list-item v="remettre"/> -->
     </def-list>
 
@@ -16279,6 +16283,19 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
+        <out>
+          <chunk name="adv" case="caseFirstWord">
+            <tags>
+              <tag><clip pos="2" side="tl" part="a_adv"/></tag>
+              <tag><clip pos="2" side="tl" part="neg"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="a_adv"/>
+            </lu>
+          </chunk>
+	  <b pos="1"/>
+        </out>
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
                 <test>
@@ -16298,17 +16315,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   <lit-tag v="past"/>
                 </let>
                 <out>
-	          <chunk name="adv" case="caseFirstWord">
-	            <tags>
-	              <tag><clip pos="2" side="tl" part="a_adv"/></tag>
-	              <tag><clip pos="2" side="tl" part="neg"/></tag>
-	            </tags>
-	            <lu>
-	              <clip pos="2" side="tl" part="lem"/>
-	              <clip pos="2" side="tl" part="a_adv"/>
-	            </lu>
-	          </chunk>
-		  <b pos="2"/>
                   <chunk name="verbcj">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
@@ -16326,6 +16332,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
+	        <call-macro n="f_bcond">
+	          <with-param pos="2"/>
+	        </call-macro>
           </when>
 
               <when>  <!-- traduccions des de gerundi -> inte -->
@@ -16340,24 +16349,13 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   <lit-tag v="gerpast"/> <!-- inte -->
                 </let>
                 <out>
-	          <chunk name="adv" case="caseFirstWord">
-	            <tags>
-	              <tag><clip pos="2" side="tl" part="a_adv"/></tag>
-	              <tag><clip pos="2" side="tl" part="neg"/></tag>
-	            </tags>
-	            <lu>
-	              <clip pos="2" side="tl" part="lem"/>
-	              <clip pos="2" side="tl" part="a_adv"/>
-	            </lu>
-	          </chunk>
-		  <b pos="2"/>
                   <chunk name="verbger" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="3" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="2" side="tl" part="temps"/></tag>
-                      <tag><clip pos="2" side="tl" part="pers"/></tag>
-                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="pers"/></tag>
+                      <tag><clip pos="1" side="tl" part="nbr"/></tag>
                       <tag><var n="tipus_verb"/></tag>
                     </tags>
                     <lu>
@@ -16368,6 +16366,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
+	        <call-macro n="f_bcond">
+	          <with-param pos="2"/>
+	        </call-macro>
               </when>
 
 	    <otherwise>
@@ -16377,17 +16378,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
         </call-macro>
 
                 <out>
-	          <chunk name="adv" case="caseFirstWord">
-	            <tags>
-	              <tag><clip pos="2" side="tl" part="a_adv"/></tag>
-	              <tag><clip pos="2" side="tl" part="neg"/></tag>
-	            </tags>
-	            <lu>
-	              <clip pos="2" side="tl" part="lem"/>
-	              <clip pos="2" side="tl" part="a_adv"/>
-	            </lu>
-	          </chunk>
-		  <b pos="2"/>
                   <chunk name="verbcj_perif">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
@@ -16402,7 +16392,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <lit-tag v="vbser"/>
                       <lit-tag v="3"/>
                     </lu>
-		    <b pos="1"/>
+		    <b pos="2"/>
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
@@ -16414,6 +16404,162 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
 	</choose>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+    <rule comment="VERBhaver +,  ADV,  + PP (a, donc, lu - legis, do, ; es tradueix per passat) (EO)">
+      <pattern>
+	<pattern-item n="haver"/>
+	<pattern-item n="sent_coma"/>
+	<pattern-item n="adv_cnj"/>
+	<pattern-item n="sent_coma"/>
+	<pattern-item n="pp"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+        <call-macro n="tipus_verbs">
+          <with-param pos="5"/>
+        </call-macro>
+
+        <choose>
+              <when>  <!-- traduccions des de present -> passat (1)-->
+                <test>
+                  <or>
+                    <equal>
+                      <clip pos="1" side="sl" part="temps"/>
+                      <lit-tag v="pri"/><!--present indicatiu dic -->
+                    </equal>
+                    <equal>
+                      <clip pos="1" side="sl" part="temps"/>
+                      <lit-tag v="prs"/><!--present subjunctiu digui -->
+                    </equal>
+                  </or>
+                </test>
+                <let>
+                  <clip pos="5" side="tl" part="temps"/>
+                  <lit-tag v="past"/>
+                </let>
+                <out>
+                  <chunk name="verbcj">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="5" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="5" side="tl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="pers"/></tag>
+                      <tag><clip pos="1" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="5" side="tl" part="lemh"/>
+                      <clip pos="5" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="5" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="1" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="5" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="5" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="pers"/></tag>
+                      <tag><clip pos="1" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="5" side="tl" part="lemh"/>
+                      <clip pos="5" side="tl" part="a_verb"/>
+                      <lit-tag v="gerpast"/>
+                      <clip pos="5" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+
+	    <otherwise>
+        <call-macro n="set_temps2">
+          <with-param pos="1"/>
+          <with-param pos="5"/>
+        </call-macro>
+
+                <out>
+                  <chunk name="verbcj_perif">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="5" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="pers"/></tag>
+                      <tag><clip pos="1" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+		      <lit v="esti"/>
+                      <lit-tag v="vbser"/>
+                      <lit-tag v="3"/>
+                    </lu>
+		    <b/>
+                    <lu>
+                      <clip pos="5" side="tl" part="lemh"/>
+                      <clip pos="5" side="tl" part="a_verb"/>
+                      <lit-tag v="pp3"/>
+                      <clip pos="1" side="tl" part="nbr"/>
+                      <clip pos="5" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+            </otherwise>
+	</choose>
+        <call-macro n="f_bcond">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="adv" case="caseFirstWord">
+            <tags>
+              <tag><clip pos="3" side="tl" part="a_adv"/></tag>
+              <tag><clip pos="3" side="tl" part="neg"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <lit-tag v="cm"/>
+            </lu>
+	    <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="lem"/>
+              <clip pos="3" side="tl" part="a_adv"/>
+            </lu>
+            <lu>
+              <clip pos="4" side="tl" part="lem"/>
+              <lit-tag v="cm"/>
+            </lu>
+          </chunk>
+        </out>
+        <call-macro n="f_bcond">
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="f_bcond">
+          <with-param pos="4"/>
+        </call-macro>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
@@ -17348,6 +17494,38 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   </chunk>
                 </out>
           </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="1" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="2" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="2" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="pers"/></tag>
+                      <tag><clip pos="1" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="2" side="tl" part="lemh"/>
+                      <clip pos="2" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="2" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+
 	    <otherwise>
         <call-macro n="set_temps2">
           <with-param pos="1"/>
@@ -17451,6 +17629,49 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   </chunk>
                 </out>
           </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="1" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="3" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+	          <chunk name="adv" case="caseFirstWord">
+	            <tags>
+	              <tag><clip pos="2" side="tl" part="a_adv"/></tag>
+	              <tag><clip pos="2" side="tl" part="neg"/></tag>
+	            </tags>
+	            <lu>
+	              <clip pos="2" side="tl" part="lem"/>
+	              <clip pos="2" side="tl" part="a_adv"/>
+	            </lu>
+	          </chunk>
+		  <b pos="1"/>
+                  <chunk name="verbger" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="3" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="3" side="tl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="pers"/></tag>
+                      <tag><clip pos="1" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="3" side="tl" part="lemh"/>
+                      <clip pos="3" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="3" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+
 	    <otherwise>
         <call-macro n="set_temps2">
           <with-param pos="1"/>
@@ -17468,7 +17689,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	              <clip pos="2" side="tl" part="a_adv"/>
 	            </lu>
 	          </chunk>
-		  <b pos="2"/>
+		  <b pos="1"/>
                   <chunk name="verbcj_perif">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
@@ -17483,7 +17704,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <lit-tag v="vbser"/>
                       <lit-tag v="3"/>
                     </lu>
-		    <b pos="1"/>
+		    <b pos="2"/>
                     <lu>
                       <clip pos="3" side="tl" part="lemh"/>
                       <clip pos="3" side="tl" part="a_verb"/>
@@ -17495,6 +17716,165 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
 	</choose>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+    <rule comment="VERBser +,  ADV,  + PP-ser (a, donc, lu - legis, do, ; es tradueix per passat) (EO)">
+      <pattern>
+	<pattern-item n="ser"/>
+	<pattern-item n="sent_coma"/>
+	<pattern-item n="adv_cnj"/>
+	<pattern-item n="sent_coma"/>
+	<pattern-item n="vbser-pp"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+        <call-macro n="tipus_verbs">
+          <with-param pos="5"/>
+        </call-macro>
+
+        <choose>
+              <when>  <!-- traduccions des de present -> passat (1)-->
+                <test>
+                  <or>
+                    <equal>
+                      <clip pos="1" side="sl" part="temps"/>
+                      <lit-tag v="pri"/><!--present indicatiu dic -->
+                    </equal>
+                    <equal>
+                      <clip pos="1" side="sl" part="temps"/>
+                      <lit-tag v="prs"/><!--present subjunctiu digui -->
+                    </equal>
+                  </or>
+                </test>
+                <let>
+                  <clip pos="5" side="tl" part="temps"/>
+                  <lit-tag v="past"/>
+                </let>
+                <out>
+                  <chunk name="verbcj">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="5" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="5" side="tl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="pers"/></tag>
+                      <tag><clip pos="1" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="5" side="tl" part="lemh"/>
+                      <clip pos="5" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="5" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="1" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="5" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="5" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="pers"/></tag>
+                      <tag><clip pos="1" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="5" side="tl" part="lemh"/>
+                      <clip pos="5" side="tl" part="a_verb"/>
+                      <lit-tag v="gerpast"/>
+                      <clip pos="5" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+
+	    <otherwise>
+        <call-macro n="set_temps2">
+          <with-param pos="1"/>
+          <with-param pos="5"/>
+        </call-macro>
+
+                <out>
+                  <chunk name="verbcj_perif">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="5" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="pers"/></tag>
+                      <tag><clip pos="1" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+		      <lit v="esti"/>
+                      <lit-tag v="vbser"/>
+                      <lit-tag v="3"/>
+                    </lu>
+		    <b/>
+                    <lu>
+                      <clip pos="5" side="tl" part="lemh"/>
+                      <clip pos="5" side="tl" part="a_verb"/>
+                      <lit-tag v="pp3"/>
+                      <clip pos="1" side="tl" part="nbr"/>
+                      <clip pos="5" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+            </otherwise>
+	</choose>
+        <call-macro n="f_bcond">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="adv" case="caseFirstWord">
+            <tags>
+              <tag><clip pos="3" side="tl" part="a_adv"/></tag>
+              <tag><clip pos="3" side="tl" part="neg"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <lit-tag v="cm"/>
+            </lu>
+	    <b pos="2"/>
+            <lu>
+              <clip pos="3" side="tl" part="lem"/>
+              <clip pos="3" side="tl" part="a_adv"/>
+            </lu>
+            <lu>
+              <clip pos="4" side="tl" part="lem"/>
+              <lit-tag v="cm"/>
+            </lu>
+          </chunk>
+        </out>
+        <call-macro n="f_bcond">
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="f_bcond">
+          <with-param pos="4"/>
+        </call-macro>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
@@ -20227,6 +20607,19 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="4"/>
         </call-macro>
 
+        <out>
+	  <chunk name="adv" case="caseFirstWord">
+	    <tags>
+	      <tag><clip pos="1" side="tl" part="a_adv"/></tag>
+	      <tag><clip pos="1" side="tl" part="neg"/></tag>
+	    </tags>
+	    <lu>
+	      <clip pos="1" side="tl" part="lem"/>
+	      <clip pos="1" side="tl" part="a_adv"/>
+	    </lu>
+	  </chunk>
+	  <b pos="1"/>
+        </out>
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
                 <test>
@@ -20246,17 +20639,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   <lit-tag v="past"/>
                 </let>
                 <out>
-	          <chunk name="adv" case="caseFirstWord">
-	            <tags>
-	              <tag><clip pos="1" side="tl" part="a_adv"/></tag>
-	              <tag><clip pos="1" side="tl" part="neg"/></tag>
-	            </tags>
-	            <lu>
-	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv"/>
-	            </lu>
-	          </chunk>
-		  <b pos="1"/>
                   <chunk name="verbcj">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
@@ -20278,6 +20660,41 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   <with-param pos="2"/>
                 </call-macro>
           </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="2" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="4" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="4" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="4" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="4" side="tl" part="lemh"/>
+                      <clip pos="4" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="4" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+                <call-macro n="f_bcond">
+                  <with-param pos="3"/>
+                </call-macro>
+              </when>
+
 	    <otherwise>
         <call-macro n="set_temps2">
           <with-param pos="2"/>
@@ -20285,17 +20702,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
         </call-macro>
 
                 <out>
-	          <chunk name="adv" case="caseFirstWord">
-	            <tags>
-	              <tag><clip pos="1" side="tl" part="a_adv"/></tag>
-	              <tag><clip pos="1" side="tl" part="neg"/></tag>
-	            </tags>
-	            <lu>
-	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv"/>
-	            </lu>
-	          </chunk>
-		  <b pos="1"/>
                   <chunk name="verbcj_perif">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
@@ -20958,6 +21364,23 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="5"/>
         </call-macro>
 
+        <out>
+          <chunk name="adv" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="adv"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_adv_cnj"/>
+            </lu>
+	  <b pos="1"/>
+            <lu>
+              <clip pos="4" side="tl" part="lem"/>
+              <clip pos="4" side="tl" part="a_adv_cnj"/>
+            </lu>
+          </chunk>
+	  <b pos="2"/>
+        </out>
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
                 <test>
@@ -20977,21 +21400,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   <lit-tag v="past"/>
                 </let>
                 <out>
-	          <chunk name="adv" case="caseFirstWord">
-	            <tags>
-                      <tag><lit-tag v="adv"/></tag>
-	            </tags>
-	            <lu>
-	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv_cnj"/>
-	            </lu>
-		  <b pos="1"/>
-	            <lu>
-	              <clip pos="4" side="tl" part="lem"/>
-	              <clip pos="4" side="tl" part="a_adv_cnj"/>
-	            </lu>
-	          </chunk>
-		  <b pos="2"/>
                   <chunk name="verbcj">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
@@ -21014,27 +21422,46 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </call-macro>
           </when>
 
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="2" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="5" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="5" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="5" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="5" side="tl" part="lemh"/>
+                      <clip pos="5" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="5" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+                <call-macro n="f_bcond">
+                  <with-param pos="3"/>
+                </call-macro>
+              </when>
+
 	    <otherwise>
         <call-macro n="set_temps2">
           <with-param pos="2"/>
           <with-param pos="5"/>
         </call-macro>
                 <out>
-	          <chunk name="adv" case="caseFirstWord">
-	            <tags>
-                      <tag><lit-tag v="adv"/></tag>
-	            </tags>
-	            <lu>
-	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv_cnj"/>
-	            </lu>
-		  <b pos="1"/>
-	            <lu>
-	              <clip pos="4" side="tl" part="lem"/>
-	              <clip pos="4" side="tl" part="a_adv_cnj"/>
-	            </lu>
-	          </chunk>
-		  <b pos="2"/>
                   <chunk name="verbcj_perif">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
@@ -21072,7 +21499,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     </rule>
 
 
-    <rule comment="NE VERBhaver ADV PAS  + PP (n'a en revanche pas lu - ne multe legis ; es tradueix per passat) (EO)">
+    <rule comment="NE VERBhaver ADV PAS  + PP (n'a donc pas lu - ne do legis ; es tradueix per passat) (EO)">
       <pattern>
 	<pattern-item n="ne"/>
 	<pattern-item n="haver"/>
@@ -21192,6 +21619,364 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     </rule>
 
 
+    <rule comment="NE VERBhaver PAS +,  ADV,  + PP (n'a pas, donc, lu - ne legis, do, ; es tradueix per passat) (EO)">
+      <pattern>
+	<pattern-item n="ne"/>
+	<pattern-item n="haver"/>
+	<pattern-item n="pas"/>
+	<pattern-item n="sent_coma"/>
+	<pattern-item n="adv_cnj"/>
+	<pattern-item n="sent_coma"/>
+	<pattern-item n="pp"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+        <call-macro n="tipus_verbs">
+          <with-param pos="7"/>
+        </call-macro>
+
+        <out>
+          <chunk name="adv" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="adv"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_adv"/>
+            </lu>
+          </chunk>
+	  <b pos="1"/>
+        </out>
+        <choose>
+              <when>  <!-- traduccions des de present -> passat (1)-->
+                <test>
+                  <or>
+                    <equal>
+                      <clip pos="2" side="sl" part="temps"/>
+                      <lit-tag v="pri"/><!--present indicatiu dic -->
+                    </equal>
+                    <equal>
+                      <clip pos="2" side="sl" part="temps"/>
+                      <lit-tag v="prs"/><!--present subjunctiu digui -->
+                    </equal>
+                  </or>
+                </test>
+                <let>
+                  <clip pos="7" side="tl" part="temps"/>
+                  <lit-tag v="past"/>
+                </let>
+                <out>
+                  <chunk name="verbcj">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="7" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="7" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="7" side="tl" part="lemh"/>
+                      <clip pos="7" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="7" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="2" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="7" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="7" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="7" side="tl" part="lemh"/>
+                      <clip pos="7" side="tl" part="a_verb"/>
+                      <lit-tag v="gerpast"/>
+                      <clip pos="7" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+
+	    <otherwise>
+        <call-macro n="set_temps2">
+          <with-param pos="2"/>
+          <with-param pos="7"/>
+        </call-macro>
+
+                <out>
+                  <chunk name="verbcj_perif">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="7" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+		      <lit v="esti"/>
+                      <lit-tag v="vbser"/>
+                      <lit-tag v="3"/>
+                    </lu>
+		    <b/>
+                    <lu>
+                      <clip pos="7" side="tl" part="lemh"/>
+                      <clip pos="7" side="tl" part="a_verb"/>
+                      <lit-tag v="pp3"/>
+                      <clip pos="2" side="tl" part="nbr"/>
+                      <clip pos="7" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+            </otherwise>
+	</choose>
+        <call-macro n="f_bcond">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="f_bcond">
+          <with-param pos="3"/>
+        </call-macro>
+        <out>
+          <chunk name="adv" case="caseFirstWord">
+            <tags>
+              <tag><clip pos="5" side="tl" part="a_adv"/></tag>
+              <tag><clip pos="5" side="tl" part="neg"/></tag>
+            </tags>
+            <lu>
+              <clip pos="4" side="tl" part="lem"/>
+              <lit-tag v="cm"/>
+            </lu>
+	    <b pos="4"/>
+            <lu>
+              <clip pos="5" side="tl" part="lem"/>
+              <clip pos="5" side="tl" part="a_adv"/>
+            </lu>
+            <lu>
+              <clip pos="6" side="tl" part="lem"/>
+              <lit-tag v="cm"/>
+            </lu>
+          </chunk>
+        </out>
+        <call-macro n="f_bcond">
+          <with-param pos="5"/>
+        </call-macro>
+        <call-macro n="f_bcond">
+          <with-param pos="6"/>
+        </call-macro>
+        <call-macro n="f_bcond">
+          <with-param pos="7"/>
+        </call-macro>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+    <rule comment="NE VERBhaver +,  ADV,  + PAS + PP (n'a, en revanche, pas lu - ne legis, kontraŭe, ; es tradueix per passat) (EO)">
+      <pattern>
+	<pattern-item n="ne"/>
+	<pattern-item n="haver"/>
+	<pattern-item n="sent_coma"/>
+	<pattern-item n="adv_cnj"/>
+	<pattern-item n="sent_coma"/>
+	<pattern-item n="pas"/>
+	<pattern-item n="pp"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+        <call-macro n="tipus_verbs">
+          <with-param pos="7"/>
+        </call-macro>
+
+        <out>
+          <chunk name="adv" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="adv"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_adv"/>
+            </lu>
+          </chunk>
+	  <b pos="1"/>
+        </out>
+        <choose>
+              <when>  <!-- traduccions des de present -> passat (1)-->
+                <test>
+                  <or>
+                    <equal>
+                      <clip pos="2" side="sl" part="temps"/>
+                      <lit-tag v="pri"/><!--present indicatiu dic -->
+                    </equal>
+                    <equal>
+                      <clip pos="2" side="sl" part="temps"/>
+                      <lit-tag v="prs"/><!--present subjunctiu digui -->
+                    </equal>
+                  </or>
+                </test>
+                <let>
+                  <clip pos="7" side="tl" part="temps"/>
+                  <lit-tag v="past"/>
+                </let>
+                <out>
+                  <chunk name="verbcj">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="7" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="7" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="7" side="tl" part="lemh"/>
+                      <clip pos="7" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="7" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="2" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="7" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="7" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="7" side="tl" part="lemh"/>
+                      <clip pos="7" side="tl" part="a_verb"/>
+                      <lit-tag v="gerpast"/>
+                      <clip pos="7" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+
+	    <otherwise>
+        <call-macro n="set_temps2">
+          <with-param pos="2"/>
+          <with-param pos="7"/>
+        </call-macro>
+
+                <out>
+                  <chunk name="verbcj_perif">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="7" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+		      <lit v="esti"/>
+                      <lit-tag v="vbser"/>
+                      <lit-tag v="3"/>
+                    </lu>
+		    <b/>
+                    <lu>
+                      <clip pos="7" side="tl" part="lemh"/>
+                      <clip pos="7" side="tl" part="a_verb"/>
+                      <lit-tag v="pp3"/>
+                      <clip pos="2" side="tl" part="nbr"/>
+                      <clip pos="7" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+            </otherwise>
+	</choose>
+        <call-macro n="f_bcond">
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="adv" case="caseFirstWord">
+            <tags>
+              <tag><clip pos="4" side="tl" part="a_adv"/></tag>
+              <tag><clip pos="4" side="tl" part="neg"/></tag>
+            </tags>
+            <lu>
+              <clip pos="3" side="tl" part="lem"/>
+              <lit-tag v="cm"/>
+            </lu>
+	    <b pos="3"/>
+            <lu>
+              <clip pos="4" side="tl" part="lem"/>
+              <clip pos="4" side="tl" part="a_adv"/>
+            </lu>
+            <lu>
+              <clip pos="5" side="tl" part="lem"/>
+              <lit-tag v="cm"/>
+            </lu>
+          </chunk>
+        </out>
+        <call-macro n="f_bcond">
+          <with-param pos="4"/>
+        </call-macro>
+        <call-macro n="f_bcond">
+          <with-param pos="5"/>
+        </call-macro>
+        <call-macro n="f_bcond">
+          <with-param pos="6"/>
+        </call-macro>
+        <call-macro n="f_bcond">
+          <with-param pos="7"/>
+        </call-macro>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
     <rule comment="NE VERBser PAS + PP-ser (n'est pas venu - ne venis ; es tradueix per passat) (EO)">
       <pattern>
 	<pattern-item n="ne"/>
@@ -21207,6 +21992,18 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="4"/>
         </call-macro>
 
+        <out>
+          <chunk name="adv" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="adv"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_adv"/>
+            </lu>
+          </chunk>
+	  <b pos="1"/>
+        </out>
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
                 <test>
@@ -21226,16 +22023,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   <lit-tag v="past"/>
                 </let>
                 <out>
-	          <chunk name="adv" case="caseFirstWord">
-	            <tags>
-                      <tag><lit-tag v="adv"/></tag>
-	            </tags>
-	            <lu>
-	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv"/>
-	            </lu>
-	          </chunk>
-		  <b pos="1"/>
                   <chunk name="verbcj">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
@@ -21258,22 +22045,46 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </call-macro>
           </when>
 
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="2" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="4" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="4" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="4" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="4" side="tl" part="lemh"/>
+                      <clip pos="4" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="4" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+                <call-macro n="f_bcond">
+                  <with-param pos="2"/>
+                </call-macro>
+              </when>
+
 	    <otherwise>
         <call-macro n="set_temps2">
           <with-param pos="2"/>
           <with-param pos="4"/>
         </call-macro>
                 <out>
-	          <chunk name="adv" case="caseFirstWord">
-	            <tags>
-                      <tag><lit-tag v="adv"/></tag>
-	            </tags>
-	            <lu>
-	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv"/>
-	            </lu>
-	          </chunk>
-		  <b pos="1"/>
                   <chunk name="verbcj_perif">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
@@ -21366,7 +22177,8 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-          </when>
+              </when>
+
 	    <otherwise>
         <call-macro n="set_temps">
           <with-param pos="1"/>
@@ -21547,6 +22359,24 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="5"/>
         </call-macro>
 
+        <out>
+          <chunk name="adv" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="adv"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_adv_cnj"/>
+            </lu>
+	  <b pos="1"/>
+            <lu>
+              <clip pos="4" side="tl" part="lem"/>
+              <clip pos="4" side="tl" part="a_adv_cnj"/>
+            </lu>
+          </chunk>
+	  <b pos="2"/>
+        </out>
+
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
                 <test>
@@ -21566,21 +22396,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   <lit-tag v="past"/>
                 </let>
                 <out>
-	          <chunk name="adv" case="caseFirstWord">
-	            <tags>
-                      <tag><lit-tag v="adv"/></tag>
-	            </tags>
-	            <lu>
-	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv_cnj"/>
-	            </lu>
-		  <b pos="1"/>
-	            <lu>
-	              <clip pos="4" side="tl" part="lem"/>
-	              <clip pos="4" side="tl" part="a_adv_cnj"/>
-	            </lu>
-	          </chunk>
-		  <b pos="2"/>
                   <chunk name="verbcj">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
@@ -21598,7 +22413,45 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
+                <call-macro n="f_bcond">
+                  <with-param pos="3"/>
+                </call-macro>
           </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="2" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="5" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="5" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="5" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="5" side="tl" part="lemh"/>
+                      <clip pos="5" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="5" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+                <call-macro n="f_bcond">
+                  <with-param pos="3"/>
+                </call-macro>
+              </when>
+
 	    <otherwise>
         <call-macro n="set_temps2">
           <with-param pos="2"/>
@@ -21606,21 +22459,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
         </call-macro>
 
                 <out>
-	          <chunk name="adv" case="caseFirstWord">
-	            <tags>
-                      <tag><lit-tag v="adv"/></tag>
-	            </tags>
-	            <lu>
-	              <clip pos="1" side="tl" part="lem"/>
-	              <clip pos="1" side="tl" part="a_adv_cnj"/>
-	            </lu>
-		  <b pos="1"/>
-	            <lu>
-	              <clip pos="4" side="tl" part="lem"/>
-	              <clip pos="4" side="tl" part="a_adv_cnj"/>
-	            </lu>
-	          </chunk>
-		  <b pos="3"/>
                   <chunk name="verbcj_perif">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
@@ -21635,7 +22473,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                       <lit-tag v="vbser"/>
                       <lit-tag v="3"/>
                     </lu>
-		    <b pos="4"/>
+		    <b pos="3"/>
                     <lu>
                       <clip pos="5" side="tl" part="lemh"/>
                       <clip pos="5" side="tl" part="a_verb"/>
@@ -21647,9 +22485,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
 	</choose>
-	<call-macro n="firstWord">
-	  <with-param pos="1"/>
-	</call-macro>
+        <call-macro n="f_bcond">
+          <with-param pos="4"/>
+        </call-macro>
 	<let>
 	  <var n="caseFirstWord"/>
 	  <lit v="aa"/>
@@ -21719,7 +22557,55 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	            </lu>
                   </chunk>
                 </out>
+                <call-macro n="f_bcond">
+                  <with-param pos="3"/>
+                </call-macro>
           </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="2" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="5" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="5" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="5" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+	            <lu>
+	              <clip pos="1" side="tl" part="lem"/>
+	              <clip pos="1" side="tl" part="a_adv_cnj"/>
+	            </lu>
+		    <b pos="1"/>
+                    <lu>
+                      <clip pos="5" side="tl" part="lemh"/>
+                      <clip pos="5" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="5" side="tl" part="lemq"/>
+                    </lu>
+		    <b pos="2"/>
+	            <lu>
+	              <clip pos="3" side="tl" part="lem"/>
+	              <clip pos="3" side="tl" part="a_adv_cnj"/>
+	            </lu>
+                  </chunk>
+                </out>
+                <call-macro n="f_bcond">
+                  <with-param pos="3"/>
+                </call-macro>
+              </when>
+
 	    <otherwise>
         <call-macro n="set_temps2">
           <with-param pos="2"/>
@@ -21763,6 +22649,364 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
 	</choose>
+        <call-macro n="f_bcond">
+          <with-param pos="4"/>
+        </call-macro>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+    <rule comment="NE VERBser PAS +,  ADV,  + PP-ser (n'est pas, donc, venuu - ne venis, do, ; es tradueix per passat) (EO)">
+      <pattern>
+	<pattern-item n="ne"/>
+	<pattern-item n="ser"/>
+	<pattern-item n="pas"/>
+	<pattern-item n="sent_coma"/>
+	<pattern-item n="adv_cnj"/>
+	<pattern-item n="sent_coma"/>
+	<pattern-item n="vbser-pp"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+        <call-macro n="tipus_verbs">
+          <with-param pos="7"/>
+        </call-macro>
+
+        <out>
+          <chunk name="adv" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="adv"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_adv"/>
+            </lu>
+          </chunk>
+	  <b pos="1"/>
+        </out>
+        <choose>
+              <when>  <!-- traduccions des de present -> passat (1)-->
+                <test>
+                  <or>
+                    <equal>
+                      <clip pos="2" side="sl" part="temps"/>
+                      <lit-tag v="pri"/><!--present indicatiu dic -->
+                    </equal>
+                    <equal>
+                      <clip pos="2" side="sl" part="temps"/>
+                      <lit-tag v="prs"/><!--present subjunctiu digui -->
+                    </equal>
+                  </or>
+                </test>
+                <let>
+                  <clip pos="7" side="tl" part="temps"/>
+                  <lit-tag v="past"/>
+                </let>
+                <out>
+                  <chunk name="verbcj">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="7" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="7" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="7" side="tl" part="lemh"/>
+                      <clip pos="7" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="7" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="2" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="7" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="7" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="7" side="tl" part="lemh"/>
+                      <clip pos="7" side="tl" part="a_verb"/>
+                      <lit-tag v="gerpast"/>
+                      <clip pos="7" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+
+	    <otherwise>
+        <call-macro n="set_temps2">
+          <with-param pos="2"/>
+          <with-param pos="7"/>
+        </call-macro>
+
+                <out>
+                  <chunk name="verbcj_perif">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="7" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+		      <lit v="esti"/>
+                      <lit-tag v="vbser"/>
+                      <lit-tag v="3"/>
+                    </lu>
+		    <b/>
+                    <lu>
+                      <clip pos="7" side="tl" part="lemh"/>
+                      <clip pos="7" side="tl" part="a_verb"/>
+                      <lit-tag v="pp3"/>
+                      <clip pos="2" side="tl" part="nbr"/>
+                      <clip pos="7" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+            </otherwise>
+	</choose>
+        <call-macro n="f_bcond">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="f_bcond">
+          <with-param pos="3"/>
+        </call-macro>
+        <out>
+          <chunk name="adv" case="caseFirstWord">
+            <tags>
+              <tag><clip pos="5" side="tl" part="a_adv"/></tag>
+              <tag><clip pos="5" side="tl" part="neg"/></tag>
+            </tags>
+            <lu>
+              <clip pos="4" side="tl" part="lem"/>
+              <lit-tag v="cm"/>
+            </lu>
+	    <b pos="4"/>
+            <lu>
+              <clip pos="5" side="tl" part="lem"/>
+              <clip pos="5" side="tl" part="a_adv"/>
+            </lu>
+            <lu>
+              <clip pos="6" side="tl" part="lem"/>
+              <lit-tag v="cm"/>
+            </lu>
+          </chunk>
+        </out>
+        <call-macro n="f_bcond">
+          <with-param pos="5"/>
+        </call-macro>
+        <call-macro n="f_bcond">
+          <with-param pos="6"/>
+        </call-macro>
+        <call-macro n="f_bcond">
+          <with-param pos="7"/>
+        </call-macro>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+	<let>
+	  <var n="caseFirstWord"/>
+	  <lit v="aa"/>
+	</let>
+      </action>
+    </rule>
+
+
+    <rule comment="NE VERBser +,  ADV,  + PAS + PP-ser (n'est, en revanche, pas venu - ne venis, kontraŭe, ; es tradueix per passat) (EO)">
+      <pattern>
+	<pattern-item n="ne"/>
+	<pattern-item n="ser"/>
+	<pattern-item n="sent_coma"/>
+	<pattern-item n="adv_cnj"/>
+	<pattern-item n="sent_coma"/>
+	<pattern-item n="pas"/>
+	<pattern-item n="vbser-pp"/>
+      </pattern>
+      <action>
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+        <call-macro n="tipus_verbs">
+          <with-param pos="7"/>
+        </call-macro>
+
+        <out>
+          <chunk name="ne" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="adv"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="a_adv"/>
+            </lu>
+          </chunk>
+	  <b pos="1"/>
+        </out>
+        <choose>
+              <when>  <!-- traduccions des de present -> passat (1)-->
+                <test>
+                  <or>
+                    <equal>
+                      <clip pos="2" side="sl" part="temps"/>
+                      <lit-tag v="pri"/><!--present indicatiu dic -->
+                    </equal>
+                    <equal>
+                      <clip pos="2" side="sl" part="temps"/>
+                      <lit-tag v="prs"/><!--present subjunctiu digui -->
+                    </equal>
+                  </or>
+                </test>
+                <let>
+                  <clip pos="7" side="tl" part="temps"/>
+                  <lit-tag v="past"/>
+                </let>
+                <out>
+                  <chunk name="verbcj">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="7" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="7" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="7" side="tl" part="lemh"/>
+                      <clip pos="7" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="7" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="2" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="7" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="7" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="7" side="tl" part="lemh"/>
+                      <clip pos="7" side="tl" part="a_verb"/>
+                      <lit-tag v="gerpast"/>
+                      <clip pos="7" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+
+	    <otherwise>
+        <call-macro n="set_temps2">
+          <with-param pos="2"/>
+          <with-param pos="7"/>
+        </call-macro>
+
+                <out>
+                  <chunk name="verbcj_perif">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="7" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="2" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+		      <lit v="esti"/>
+                      <lit-tag v="vbser"/>
+                      <lit-tag v="3"/>
+                    </lu>
+		    <b/>
+                    <lu>
+                      <clip pos="7" side="tl" part="lemh"/>
+                      <clip pos="7" side="tl" part="a_verb"/>
+                      <lit-tag v="pp3"/>
+                      <clip pos="2" side="tl" part="nbr"/>
+                      <clip pos="7" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+            </otherwise>
+	</choose>
+        <call-macro n="f_bcond">
+          <with-param pos="2"/>
+        </call-macro>
+        <out>
+          <chunk name="adv" case="caseFirstWord">
+            <tags>
+              <tag><clip pos="4" side="tl" part="a_adv"/></tag>
+              <tag><clip pos="4" side="tl" part="neg"/></tag>
+            </tags>
+            <lu>
+              <clip pos="3" side="tl" part="lem"/>
+              <lit-tag v="cm"/>
+            </lu>
+	    <b pos="3"/>
+            <lu>
+              <clip pos="4" side="tl" part="lem"/>
+              <clip pos="4" side="tl" part="a_adv"/>
+            </lu>
+            <lu>
+              <clip pos="5" side="tl" part="lem"/>
+              <lit-tag v="cm"/>
+            </lu>
+          </chunk>
+        </out>
+        <call-macro n="f_bcond">
+          <with-param pos="4"/>
+        </call-macro>
+        <call-macro n="f_bcond">
+          <with-param pos="5"/>
+        </call-macro>
+        <call-macro n="f_bcond">
+          <with-param pos="6"/>
+        </call-macro>
+        <call-macro n="f_bcond">
+          <with-param pos="7"/>
+        </call-macro>
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
@@ -29269,7 +30513,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     </rule>
 
 
-    <rule comment="ADV">
+    <rule comment="ADVERB">
       <pattern>
 	<pattern-item n="adv_preadv"/>
       </pattern>
@@ -29277,8 +30521,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<call-macro n="firstWord">
 	  <with-param pos="1"/>
 	</call-macro>
+	<let><var n="nadv"/><clip pos="1" side="tl" part="lem"/></let>
 	<out>
-	  <chunk name="adv" case="caseFirstWord">
+	  <chunk namefrom="nadv" case="caseFirstWord">
 	    <tags>
 	      <tag><clip pos="1" side="tl" part="a_adv"/></tag>
 	      <tag><clip pos="1" side="tl" part="neg"/></tag>

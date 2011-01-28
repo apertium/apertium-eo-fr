@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-
-<!-- aldoni "SN" -> SN, "SAdj" -> SAdj ktp -->
-<!-- celà signife "ça" -->
-
 <interchunk>
 
   <section-def-cats>
@@ -28,6 +23,17 @@
       <cat-item tags="SN.m.*"/>
       <cat-item tags="SN.f.*"/>
       <cat-item tags="SN.mf.*"/>
+    </def-cat>
+
+    <def-cat n="SN_noitg"> <!-- sen demandopronomoj -->
+      <cat-item tags="SN.m.*"/>
+      <cat-item tags="SN.f.*"/>
+      <cat-item tags="SN.mf.*"/>
+      <cat-item tags="SN.tn.*"/>
+      <cat-item tags="SN.subj.*"/>
+      <cat-item tags="SN.obj.*"/>
+      <cat-item tags="SN.dat.*"/>
+      <cat-item tags="unknown"/>
     </def-cat>
 
     <def-cat n="prn_subjenc">
@@ -59,6 +65,14 @@
     <def-cat n="adv">
       <cat-item tags="adv"/>
       <cat-item tags="preadv"/>
+    </def-cat>
+
+    <def-cat n="ne">
+      <cat-item lemma="ne" tags="adv"/>
+    </def-cat>
+
+    <def-cat n="nek">
+      <cat-item lemma="nek" tags="cnjcoo"/>
     </def-cat>
 
     <def-cat n="adv_cnj">
@@ -238,7 +252,7 @@
 
     <rule comment="REGLA: SN SNencl   -   SN: les hommes peuvent-ils -> la homoj ili povas -> la homoj povas ">
       <pattern>
-        <pattern-item n="SN"/>
+        <pattern-item n="SN_noitg"/>
         <pattern-item n="prn_subjenc"/>
       </pattern>
       <action>
@@ -254,7 +268,7 @@
     <rule comment="REGLA: . SN SNencl   -   ĉu SN: . Les hommes peuvent-ils -> la homoj ili povas -> ĉu la homoj povas ">
       <pattern>
         <pattern-item n="sent_frazofina"/>
-        <pattern-item n="SN"/>
+        <pattern-item n="SN_noitg"/>
         <pattern-item n="prn_subjenc"/>
       </pattern>
       <action>
@@ -306,7 +320,7 @@
       <pattern>
         <pattern-item n="any"/>
         <pattern-item n="sent_preblank"/>
-        <pattern-item n="SN"/>
+        <pattern-item n="SN_noitg"/>
         <pattern-item n="prn_subjenc"/>
       </pattern>
       <action>
@@ -383,7 +397,7 @@
     <rule comment="REGLA: . SN ADV SNencl   -   ĉu SN ADV: . Les hommes ne peuvent-ils -> la homoj ne ili povas -> ĉu la homoj ne povas ">
       <pattern>
         <pattern-item n="sent_frazofina"/>
-        <pattern-item n="SN"/>
+        <pattern-item n="SN_noitg"/>
         <pattern-item n="adv"/>
         <pattern-item n="prn_subjenc"/>
       </pattern>
@@ -440,7 +454,7 @@
       <pattern>
         <pattern-item n="any"/>
         <pattern-item n="sent_preblank"/>
-        <pattern-item n="SN"/>
+        <pattern-item n="SN_noitg"/>
         <pattern-item n="adv"/>
         <pattern-item n="prn_subjenc"/>
       </pattern>
@@ -499,6 +513,192 @@
     </rule>
 
   <!-- fino DEMANDOJ -->
+
+  <!-- komenco DUOBLAJ NEOJ -->
+
+    <rule comment="REGLA: NE SV NEK SN NEK SN  -   SV NEK SN NEK SN ">
+      <pattern>
+        <pattern-item n="ne"/>
+        <pattern-item n="SV"/>
+        <pattern-item n="nek"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="nek"/>
+        <pattern-item n="SN"/>
+      </pattern>
+      <action>
+        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="2"/>
+        </out>
+
+<!-- Ni kunigas nur se SN1 kaj SN2 estas samnombraj; aliokaze unu el la du ŝanĝus sian nombron -->
+<!-- Ni kunigas nur se SN1 kaj SN2 estas ambaŭ pronomoj aŭ malpronomoj; aliokaze la sintagmo-ĉapo malsamas kaj estiĝas bordelo -->
+    <choose>
+      <when>
+        <test>
+          <and>
+            <equal><clip pos="4" part="nbr"/><clip pos="6" part="nbr"/></equal>
+            <equal><clip pos="4" part="tipus_prn"/><clip pos="6" part="tipus_prn"/></equal>
+            <or>
+              <and>
+                <equal><clip pos="4" part="lem"/><lit v="prpers"/></equal>
+                <equal><clip pos="6" part="lem"/><lit v="prpers"/></equal>
+              </and>
+              <and>
+                <not><equal><clip pos="4" part="lem"/><lit v="prpers"/></equal></not>
+                <not><equal><clip pos="6" part="lem"/><lit v="prpers"/></equal></not>
+              </and>
+            </or>
+            <or>
+              <and>
+                <equal><clip pos="4" part="lem"/><lit v="prn_nosubj"/></equal>
+                <equal><clip pos="6" part="lem"/><lit v="prn_nosubj"/></equal>
+              </and>
+              <and>
+                <not><equal><clip pos="4" part="lem"/><lit v="prn_nosubj"/></equal></not>
+                <not><equal><clip pos="6" part="lem"/><lit v="prn_nosubj"/></equal></not>
+              </and>
+            </or>
+          </and>
+        </test>
+        <out>
+          <chunk>
+            <get-case-from pos="4"><lit v="nom_conj_nom"/></get-case-from>
+            <clip pos="4" part="tags"/>
+            <lit v="{"/>
+            <clip pos="3" part="content"/>
+            <b pos="3"/>
+            <clip pos="4" part="content"/>
+            <b pos="4"/>
+            <clip pos="5" part="content"/>
+            <b pos="5"/>
+            <clip pos="6" part="content"/>
+             <lit v="}"/>
+          </chunk>
+        </out>
+      </when>
+      <otherwise>
+        <out>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+          <b pos="3"/>
+          <chunk>
+            <clip pos="4" part="whole"/>
+          </chunk>
+          <b pos="4"/>
+          <chunk>
+            <clip pos="5" part="whole"/>
+          </chunk>
+          <b pos="5"/>
+          <chunk>
+            <clip pos="6" part="whole"/>
+          </chunk>
+        </out>
+      </otherwise>
+    </choose>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: NE SV NEK SN, NEK SN  -   SV NEK SN NEK SN ">
+      <pattern>
+        <pattern-item n="ne"/>
+        <pattern-item n="SV"/>
+        <pattern-item n="nek"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="cm"/>
+        <pattern-item n="nek"/>
+        <pattern-item n="SN"/>
+      </pattern>
+      <action>
+        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="2"/>
+        </out>
+
+<!-- Ni kunigas nur se SN1 kaj SN2 estas samnombraj; aliokaze unu el la du ŝanĝus sian nombron -->
+<!-- Ni kunigas nur se SN1 kaj SN2 estas ambaŭ pronomoj aŭ malpronomoj; aliokaze la sintagmo-ĉapo malsamas kaj estiĝas bordelo -->
+    <choose>
+      <when>
+        <test>
+          <and>
+            <equal><clip pos="4" part="nbr"/><clip pos="7" part="nbr"/></equal>
+            <equal><clip pos="4" part="tipus_prn"/><clip pos="7" part="tipus_prn"/></equal>
+            <or>
+              <and>
+                <equal><clip pos="4" part="lem"/><lit v="prpers"/></equal>
+                <equal><clip pos="7" part="lem"/><lit v="prpers"/></equal>
+              </and>
+              <and>
+                <not><equal><clip pos="4" part="lem"/><lit v="prpers"/></equal></not>
+                <not><equal><clip pos="7" part="lem"/><lit v="prpers"/></equal></not>
+              </and>
+            </or>
+            <or>
+              <and>
+                <equal><clip pos="4" part="lem"/><lit v="prn_nosubj"/></equal>
+                <equal><clip pos="7" part="lem"/><lit v="prn_nosubj"/></equal>
+              </and>
+              <and>
+                <not><equal><clip pos="4" part="lem"/><lit v="prn_nosubj"/></equal></not>
+                <not><equal><clip pos="7" part="lem"/><lit v="prn_nosubj"/></equal></not>
+              </and>
+            </or>
+          </and>
+        </test>
+        <out>
+          <chunk>
+            <get-case-from pos="4"><lit v="nom_conj_nom"/></get-case-from>
+            <clip pos="4" part="tags"/>
+            <lit v="{"/>
+            <clip pos="3" part="content"/>
+            <b pos="3"/>
+            <clip pos="4" part="content"/>
+            <b pos="4"/>
+            <clip pos="5" part="content"/>
+            <b pos="5"/>
+            <clip pos="6" part="content"/>
+            <b pos="6"/>
+            <clip pos="7" part="content"/>
+             <lit v="}"/>
+          </chunk>
+        </out>
+      </when>
+      <otherwise>
+        <out>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+          <b pos="3"/>
+          <chunk>
+            <clip pos="4" part="whole"/>
+          </chunk>
+          <b pos="4"/>
+          <chunk>
+            <clip pos="5" part="whole"/>
+          </chunk>
+          <b pos="5"/>
+          <chunk>
+            <clip pos="6" part="whole"/>
+          </chunk>
+          <b pos="6"/>
+          <chunk>
+            <clip pos="7" part="whole"/>
+          </chunk>
+        </out>
+      </otherwise>
+    </choose>
+      </action>
+    </rule>
+
+  <!-- fino DUOBLAJ NEOJ -->
+
 
     <rule comment="REGLA: ADV SV   -   SV ">
       <pattern>

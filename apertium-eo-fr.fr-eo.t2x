@@ -518,6 +518,40 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	      <lit-tag v="acc"/>
 	    </let>
 
+	<out>
+	  <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="tags"/>
+	    <clip pos="1" part="chcontent"/>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+	    <clip pos="2" part="chcontent"/>
+	  </chunk>
+	  <b pos="2"/>
+	  <chunk>
+            <clip pos="3" part="lem"/>
+            <clip pos="3" part="tags"/>
+	    <clip pos="3" part="chcontent"/>
+	  </chunk>
+	</out>
+      </action>
+</rule>
+
+<rule comment="REGLA: SNitg SN SV (EO per l'acusatiu dels SN interrogatiu amb changecase=nom; volem que posi acc al primer SN ja que el segon suposem que serà el subjecte: què menja la nena?-> kion manĝas la knabino?)">
+      <pattern>
+	<pattern-item n="SNitg"/>
+	<pattern-item n="SN"/>
+	<pattern-item n="SVlex"/>
+      </pattern>
+      <action>
+
+	    <let>
+	      <clip pos="1" part="case"/>
+	      <lit-tag v="acc"/>
+	    </let>
 
 	<out>
 	  <chunk>

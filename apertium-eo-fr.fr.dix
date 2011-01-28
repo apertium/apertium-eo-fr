@@ -8240,6 +8240,8 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="adjectif">        <i>adjectif</i><par n="accessoire__n"/></e>
 <e lm="Adjei">           <i>Adjei</i><par n="Smith__np"/></e>
 <e lm="adjoint">         <i>adjoint</i><par n="africain__n"/></e>
+<e r="RL" lm="adjoindre">       <i>adjoi</i><par n="cei/ndre__vblex"/></e> <!-- trop de problèmes avec 'adjoint' (n) -->
+<e r="RL" lm="adjoint">         <i>adjoint</i><par n="abaissant__adj"/></e> <!-- trop de problèmes avec 'adjoint' (n) -->
 <e lm="adjonction">      <i>adjonction</i><par n="abeille__n"/></e>
 <e lm="adjudant">        <i>adjudant</i><par n="accessoire__n"/></e>
 <e lm="adjudant-chef">   <i>adjudant-chef</i><par n="accessoire__n"/></e>
@@ -8254,6 +8256,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="administratif">   <i>administrati</i><par n="jui/f__n"/></e>
 <e lm="administratif">   <i>administrati</i><par n="affirmati/f__adjadv"/></e>
 <e lm="administration">  <i>administration</i><par n="abeille__n"/></e>
+<e lm="ad libitum">  <i>ad<b/>libitum</i><par n="hier__adv"/></e>
 <e lm="admirer">         <i>admir</i><par n="abaiss/er__vblex"/></e>
 <e lm="admirable">       <i>admirable</i><par n="académique__adjadv"/></e>
 <e lm="admirateur">      <i>admirat</i><par n="administrat/eur__n"/></e>
@@ -10617,6 +10620,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="assermenté">      <i>assermenté</i><par n="africain__n"/></e>
 <e lm="assertion">       <i>assertion</i><par n="abeille__n"/></e>
 <e lm="asservir">        <i>asserv</i><par n="about/[]ir__vblex"/></e>
+<e lm="desservir">        <i>desserv</i><par n="about/[]ir__vblex"/></e>
 <e lm="assesseur">       <i>assesseur</i><par n="accessoire__n"/></e>
 <e lm="assez">           <i>assez</i><par n="hier__adv"/></e>
 <e lm="in extenso">           <i>in<b/>extenso</i><par n="hier__adv"/></e>
@@ -15695,10 +15699,12 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="clémence" a="revo"><i>clémence</i><par n="abeille__n"/></e>
 <e lm="Clément">         <i>Clément</i><par n="Abraham__np"/></e>
 <e lm="clément">         <i>clément</i><par n="abaissant__adj"/></e>
+<e lm="inclément">         <i>inclément</i><par n="abaissant__adj"/></e>
 <e lm="Clément">         <i>Clément</i><par n="Smith__np"/></e>
 <e lm="Cléopâtre">       <i>Cléopâtre</i><par n="Marie__np"/></e>
 <e lm="clérical" a="revo"><i>clérica</i><par n="amica/l__adj"/></e>
 <e lm="cléricalisme" a="revo"><i>cléricalisme</i><par n="accessoire__n"/></e>
+<e lm="slalom"><i>slalom</i><par n="accessoire__n"/></e>
 <e lm="Cléroux">         <i>Cléroux</i><par n="Smith__np"/></e>
 <e lm="clôturer">        <i>clôtur</i><par n="abaiss/er__vblex"/></e>
 <e lm="clôture">         <i>clôture</i><par n="abeille__n"/></e>
@@ -16218,7 +16224,9 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="compromettre">    <i>comprom</i><par n="adm/ettre__vblex"/></e>
 <e lm="compromis">       <i>compromis</i><par n="mois__n"/></e>
 <e lm="compréhensif" a="revo"><i>compréhensi</i><par n="affirmati/f__adjadv"/></e>
+<e lm="incompréhensif"><i>incompréhensi</i><par n="affirmati/f__adjadv"/></e>
 <e lm="compréhensible">  <i>compréhensible</i><par n="académique__adjadv"/></e>
+<e lm="incompris">  <i>incompris</i><par n="abaissant__adj"/></e>
 <e lm="compréhension">   <i>compréhension</i><par n="abeille__n"/></e>
 <e lm="compter">         <i>compt</i><par n="abaiss/er__vblex"/></e>
 <e lm="comptabiliser">   <i>comptabilis</i><par n="abaiss/er__vblex"/></e>
@@ -16276,6 +16284,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="concessionnaire"> <i>concessionnaire</i><par n="académique__adj"/></e>
 <e lm="concessionnaire"> <i>concessionnaire</i><par n="artiste__n"/></e>
 <e lm="concevable">      <i>concevable</i><par n="académique__adjadv"/></e>
+<e lm="inconcevable">      <i>inconcevable</i><par n="académique__adjadv"/></e>
 <e lm="conchoïde" a="revo"><i>conchoïde</i><par n="abeille__n"/></e>
 <e lm="concierge" a="eleka"><i>concierge</i><par n="artiste__n"/></e>
 <e lm="concile" a="revo"><i>concile</i><par n="abeille__n"/></e>
@@ -16523,9 +16532,13 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="conscient">       <i>conscient</i><par n="abaissant__adj"/></e>
 <e lm="conscription">    <i>conscription</i><par n="abeille__n"/></e>
 <e lm="conseil">         <i>conseil</i><par n="accessoire__n"/></e>
+<e lm="machin">         <i>machin</i><par n="accessoire__n"/></e>
+<e lm="assentiment">         <i>assentiment</i><par n="accessoire__n"/></e>
+<e lm="consensuel">         <i>consensuel</i><par n="annuel__adjadv"/></e>
 <e r="LR" lm="Conseil">  <i>Conseil</i><par n="accessoire__n"/></e>
 <e lm="conseiller">      <i>conseill</i><par n="bouch/er__n"/></e>
 <e lm="conseiller">      <i>conseill</i><par n="abaiss/er__vblex"/></e>
+<e lm="conseil constitutionnel"><p><l>conseil<b/>constitutionnel</l><r>conseil<b/>constitutionnel<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
 <e lm="conseil municipal"><p><l>conseil<b/>municipal</l><r>conseil<b/>municipal<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
 <e lm="conseil municipal"><p><l>conseils<b/>municipaux</l><r>conseil<b/>municipal<s n="n"/><s n="m"/><s n="pl"/></r></p></e>
 <e lm="conseiller municipal" a="eleka"><p><l>conseiller<b/>municipal</l><r>conseiller<b/>municipal<s n="n"/><s n="m"/><s n="sg"/></r></p></e>
@@ -16622,6 +16635,10 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="consécutif">      <i>consécuti</i><par n="affirmati/f__adjadv"/></e>
 <e lm="conséquence">     <i>conséquence</i><par n="abeille__n"/></e>
 <e lm="conséquent">      <i>conséquent</i><par n="abaissant__adj"/></e>
+<e lm="inconséquent">      <i>inconséquent</i><par n="abaissant__adj"/></e>
+<e lm="inconséquent">      <i>inconséquent</i><par n="accessoire__n"/></e>
+<e lm="irréfléchi">      <i>irréfléchi</i><par n="abaissant__adj"/></e>
+<e lm="irréfléchi">      <i>irréfléchi</i><par n="africain__n"/></e>
 <e lm="consœur">         <i>consœur</i><par n="abeille__n"/></e>
 <e r="LR" lm="conter">   <i>cont</i><par n="abaiss/er__vblex"/></e>
 <e lm="contenir">        <i>cont</i><par n="appart/enir__vblex"/></e>
@@ -16749,6 +16766,9 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="controversé" a="webform"><i>controversé</i><par n="abaissant__adj"/></e>
 <e lm="contrôler">       <i>contrôl</i><par n="abaiss/er__vblex"/></e>
 <e lm="contrôle">        <i>contrôle</i><par n="accessoire__n"/></e>
+<e lm="contrôlable">        <i>contrôlable</i><par n="académique__adjadv"/></e>
+<e lm="incontrôlable">        <i>incontrôlable</i><par n="académique__adjadv"/></e>
+<e lm="incontrôlé">        <i>incontrôlé</i><par n="abaissant__adj"/></e>
 <e lm="contrôleur">      <i>contrôleu</i><par n="causeu/r__n"/></e>
 <e lm="convenir">        <i>conv</i><par n="appart/enir__vblex"/></e>
 <e lm="convenir à l'avance"><i>conv</i><par n="appart/enir__vblex"/><p><l><b/>à<b/>l'avance</l><r><g><b/>à<b/>l'avance</g></r></p></e>
@@ -16964,10 +16984,12 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="corral">          <i>corral</i><par n="accessoire__n"/></e>
 <e lm="Correa">          <i>Correa</i><par n="Smith__np"/></e>
 <e lm="correct" a="webform"><i>correct</i><par n="abaissant__adj"/></e>
+<e lm="correctement"><i>correctement</i><par n="hier__adv"/></e>
 <e lm="correcteur">      <i>correct</i><par n="administrat/eur__n"/></e>
 <e lm="correcteur">      <i>correct</i><par n="conduct/eur__adj"/></e>
 <e lm="correctement" a="webform"><i>correctement</i><par n="hier__adv"/></e>
 <e lm="correction" a="webform"><i>correction</i><par n="abeille__n"/></e>
+<e lm="incorrection"><i>incorrection</i><par n="abeille__n"/></e>
 <e lm="correctionnel">   <i>correctionnel</i><par n="annuel__adj"/></e>
 <e lm="Correia">         <i>Correia</i><par n="Smith__np"/></e>
 <e lm="correspondre">    <i>correspond</i><par n="attend/re__vblex"/></e>
@@ -16984,6 +17006,12 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="corrompre">       <i>corromp</i><par n="attend/re__vblex"/></e>
 <e lm="corrosif">        <i>corrosi</i><par n="affirmati/f__adjadv"/></e>
 <e lm="corruption">      <i>corruption</i><par n="abeille__n"/></e>
+<e lm="incorruptible">      <i>incorruptible</i><par n="académique__adj"/></e>
+<e lm="incorrigible">      <i>incorrigible</i><par n="académique__adjadv"/></e>
+<e lm="corrigible">      <i>corrigible</i><par n="académique__adjadv"/></e>
+<e lm="incorruptibilité">      <i>incorruptibilité</i><par n="abeille__n"/></e>
+<e lm="corruptible">      <i>corruptible</i><par n="académique__adj"/></e>
+<e lm="corruptibilité">      <i>corruptibilité</i><par n="abeille__n"/></e>
 <e lm="Corrèze">         <i>Corrèze</i><par n="Andorre__np"/></e>
 <e lm="corrégidor">      <i>corrégidor</i><par n="accessoire__n"/></e>
 <e lm="corrélatif">      <i>corrélati</i><par n="affirmati/f__adjadv"/></e>
@@ -17494,6 +17522,9 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="Crédit agricole"> <i>Crédit<b/>agricole</i><par n="Carrefour__np"/></e>
 <e lm="Crédit Agricole"> <i>Crédit<b/>Agricole</i><par n="Carrefour__np"/></e>
 <e lm="crédo">           <i>crédo</i><par n="accessoire__n"/></e>
+<e lm="incrédule">         <i>incrédule</i><par n="académique__adj"/></e>
+<e lm="incrédule">         <i>incrédule</i><par n="artiste__n"/></e>
+<e lm="incrédulité">       <i>incrédulité</i><par n="abeille__n"/></e>
 <e lm="crédule">         <i>crédule</i><par n="académique__adj"/></e>
 <e lm="crédule">         <i>crédule</i><par n="artiste__n"/></e>
 <e lm="crédulité">       <i>crédulité</i><par n="abeille__n"/></e>
@@ -19787,7 +19818,9 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="Duquette">        <i>Duquette</i><par n="Smith__np"/></e>
 <e lm="dur">             <i>dur</i><par n="abaissant__adj"/></e>
 <e lm="durer">           <i>dur</i><par n="abaiss/er__vblex"/></e>
+<e lm="perdurer">           <i>perdur</i><par n="abaiss/er__vblex"/></e>
 <e lm="durabilité">      <i>durabilité</i><par n="abeille__n"/></e>
+<e lm="déroute">      <i>déroute</i><par n="abeille__n"/></e>
 <e lm="durable">         <i>durable</i><par n="académique__adjadv"/></e>
 <e lm="Duran">           <i>Duran</i><par n="Smith__np"/></e>
 <e lm="Duranceau">       <i>Duranceau</i><par n="Smith__np"/></e>
@@ -20259,6 +20292,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="département">     <i>département</i><par n="accessoire__n"/></e>
 <e lm="départemental">   <i>départementa</i><par n="amica/l__adj"/></e>
 <e lm="dépasser">        <i>dépass</i><par n="abaiss/er__vblex"/></e>
+<e lm="outrepasser">        <i>outrepass</i><par n="abaiss/er__vblex"/></e>
 <e lm="dépeindre">       <i>dépei</i><par n="cei/ndre__vblex"/></e>
 <e lm="dépeigner" a="revo"><i>dépeign</i><par n="abaiss/er__vblex"/></e>
 <e lm="dépendance">      <i>dépendance</i><par n="abeille__n"/></e>
@@ -20375,6 +20409,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="désespéré">       <i>désespéré</i><par n="abaissant__adj"/></e>
 <e lm="désespérément">   <i>désespérément</i><par n="hier__adv"/></e>
 <e lm="déshabiller">     <i>déshabill</i><par n="abaiss/er__vblex"/></e>
+<e lm="déshabituer">     <i>déshabitu</i><par n="abaiss/er__vblex"/></e>
 <e lm="désherber" a="revo"><i>désherb</i><par n="abaiss/er__vblex"/></e>
 <e lm="déshonneur">      <i>déshonneur</i><par n="accessoire__n"/></e>
 <e lm="déshonorer" a="revo"><i>déshonor</i><par n="abaiss/er__vblex"/></e>
@@ -20420,8 +20455,10 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="désordonné">      <i>désordonné</i><par n="abaissant__adj"/></e>
 <e lm="désordre">        <i>désordre</i><par n="accessoire__n"/></e>
 <e lm="désorganiser">    <i>désorganis</i><par n="abaiss/er__vblex"/></e>
+<e lm="désorienter">    <i>désorient</i><par n="abaiss/er__vblex"/></e>
+<e lm="désoxyder">    <i>désoxyd</i><par n="abaiss/er__vblex"/></e>
 <e lm="désorganisation"> <i>désorganisation</i><par n="abeille__n"/></e>
-<e lm="désorienté" a="revo"><i>désorienté</i><par n="abaissant__adj"/></e>
+<e lm="désorientation"> <i>désorientation</i><par n="abeille__n"/></e>
 <e lm="désormais">       <i>désormais</i><par n="hier__adv"/></e>
 <e lm="désosser" a="revo"><i>désoss</i><par n="abaiss/er__vblex"/></e>
 <e lm="déstabiliser" a="revo"><i>déstabilis</i><par n="abaiss/er__vblex"/></e>
@@ -20984,6 +21021,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="en commun" a="revo"><i>en<b/>commun</i><par n="arrière__adj"/></e>
 <e lm="en commun" a="revo"><i>en<b/>commun</i><par n="hier__adv"/></e>
 <e lm="en compagnie de"> <i>en<b/>compagnie<b/></i><par n="contde__pr"/></e>
+<e lm="en guise de"> <i>en<b/>guise<b/></i><par n="contde__pr"/></e>
 <e lm="en comparaison de"><i>en<b/>comparaison<b/></i><par n="contde__pr"/></e>
 <e lm="en compensation" a="revo"><i>en<b/>compensation</i><par n="hier__adv"/></e>
 <e lm="en compensation de"><i>en<b/>compensation<b/></i><par n="contde__pr"/></e>
@@ -21622,6 +21660,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="espérantiste" a="revo"><i>espérantiste</i><par n="académique__adj"/></e>
 <e lm="espérantiste" a="revo"><i>espérantiste</i><par n="artiste__n"/></e>
 <e lm="espéranto">       <i>espéranto</i><par n="personnel__n"/></e>
+<e r="LR" lm="espéranto">    <p><l>esperanto</l>     <r>espéranto</r></p><par n="personnel__n"/></e>
 <e lm="espérantologie" a="revo"><i>espérantologie</i><par n="abeille__n"/></e>
 <e lm="espérantologue" a="revo"><i>espérantologue</i><par n="artiste__n"/></e>
 <e lm="espérons que">    <i>espérons<b/>que</i><par n="afin_que__cnjadv"/></e>
@@ -22715,7 +22754,10 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="Ferrante">        <i>Ferrante</i><par n="Smith__np"/></e>
 <e lm="Ferrara">         <i>Ferrara</i><par n="Smith__np"/></e>
 <e lm="Ferrari">         <i>Ferrari</i><par n="Smith__np"/></e>
+<e lm="Suzuki">         <i>Suzuki</i><par n="Smith__np"/></e>
 <e lm="Ferrari">         <i>Ferrari</i><par n="Carrefour__np"/></e>
+<e lm="Toyota">         <i>Toyota</i><par n="Carrefour__np"/></e>
+<e lm="Honda">         <i>Honda</i><par n="Carrefour__np"/></e>
 <e lm="Ferraro">         <i>Ferraro</i><par n="Smith__np"/></e>
 <e lm="Ferreira">        <i>Ferreira</i><par n="Smith__np"/></e>
 <e lm="Ferreol">         <i>Ferreol</i><par n="Abraham__np"/></e>
@@ -23602,9 +23644,9 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="Fresta">          <i>Fresta</i><par n="Marie__np"/></e>
 <e lm="fret">            <i>fret</i><par n="accessoire__n"/></e>
 <e lm="affrètement">            <i>affrètement</i><par n="accessoire__n"/></e>
-<e lm="afféteur">            <i>afféteu</i><par n="causeu/r__n"/></e>
-<e lm="afféteur">            <i>afféteu</i><par n="causeu/r__adj"/></e>
-<e lm="afréter"><i>afrét</i><par n="accél/é[R]er__vblex__t"/></e>
+<e lm="affréteur">            <i>affréteu</i><par n="causeu/r__n"/></e>
+<e lm="affréteur">            <i>affréteu</i><par n="causeu/r__adj"/></e>
+<e lm="affréter"><i>affr</i><par n="accél/é[R]er__vblex__t"/></e>
 <e lm="fretter" a="revo"><i>frett</i><par n="abaiss/er__vblex"/></e>
 <e lm="frette" a="revo"> <i>frette</i><par n="abeille__n"/></e>
 <e lm="Freud">           <i>Freud</i><par n="Abraham__np"/></e>
@@ -26071,6 +26113,9 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="Hongrois">        <i>Hongrois</i><par n="admis__n"/></e>
 <e lm="honneur">         <i>honneur</i><par n="accessoire__n"/></e>
 <e lm="honnête" a="eleka"><i>honnête</i><par n="académique__adj"/></e>
+<e lm="malhonnête"><i>malhonnête</i><par n="académique__adjadv"/></e>
+<e lm="déshonnête"><i>déshonnête</i><par n="académique__adj"/></e>
+<e lm="bénéfique"><i>bénéfique</i><par n="académique__adj"/></e>
 <e lm="honnêtement" a="webform"><i>honnêtement</i><par n="hier__adv"/></e>
 <e lm="honnêteté">       <i>honnêteté</i><par n="abeille__n"/></e>
 <e lm="honorabilité">       <i>honorabilité</i><par n="abeille__n"/></e>
@@ -26961,6 +27006,13 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="inconstant" a="revo"><i>inconstant</i><par n="abaissant__adj"/></e>
 <e lm="incontestable">   <i>incontestable</i><par n="académique__adjadv"/></e>
 <e lm="incontesté" a="eleka"><i>incontesté</i><par n="abaissant__adj"/></e>
+<e lm="inconsidéré"><i>inconsidéré</i><par n="africain__n"/></e>
+<e lm="considéré"><i>considéré</i><par n="africain__n"/></e>
+<e lm="inconsidéré"><i>inconsidéré</i><par n="abaissant__adj"/></e>
+<e lm="considéré"><i>considéré</i><par n="abaissant__adj"/></e>
+<e lm="considérément"><i>considérément</i><par n="hier__adv"/></e>
+<e lm="inconsidérément"><i>inconsidérément</i><par n="hier__adv"/></e>
+<e lm="inconsistance"><i>inconsistance</i><par n="abeille__n"/></e>
 <e lm="inconvenant" a="eleka"><i>inconvenant</i><par n="abaissant__adj"/></e>
 <e lm="inconvénient" a="webform"><i>inconvénient</i><par n="accessoire__n"/></e>
 <e lm="incorporer">      <i>incorpor</i><par n="abaiss/er__vblex"/></e>
@@ -27492,8 +27544,11 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="intoxiquer" a="eleka"><i>intoxiqu</i><par n="abaiss/er__vblex"/></e>
 <e lm="intoxiqué" a="webform"><i>intoxiqué</i><par n="africain__n"/></e>
 <e lm="intraitable">     <i>intraitable</i><par n="académique__adjadv"/></e>
+<e lm="imprononçable">     <i>imprononçable</i><par n="académique__adj"/></e>
+<e lm="prononçable">     <i>prononçable</i><par n="académique__adj"/></e>
 <e lm="intranet">        <i>intranet</i><par n="accessoire__n"/></e>
 <e lm="intranet">        <i>intranet</i><par n="académique__adj"/></e>
+<e lm="impassible"><i>impassible</i><par n="académique__adjadv"/></e>
 <e lm="intransigeance" a="revo"><i>intransigeance</i><par n="abeille__n"/></e>
 <e lm="intransigeant" a="webform"><i>intransigeant</i><par n="abaissant__adj"/></e>
 <e lm="intransitif" a="revo"><i>intransiti</i><par n="affirmati/f__adj"/></e>
@@ -27545,8 +27600,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="inuit">           <i>inuit</i><par n="abaissant__adj"/></e>
 <e lm="Inuit">           <i>Inuit</i><par n="africain__n"/></e>
 <e lm="Inukpuk">         <i>Inukpuk</i><par n="Smith__np"/></e>
-<e lm="inutile">         <i>inutile</i><par n="académique__adj"/></e>
-<e lm="inutilement">     <i>inutilement</i><par n="hier__adv"/></e>
+<e lm="inutile">         <i>inutile</i><par n="académique__adjadv"/></e>
 <e lm="inutiliser">      <i>inutilis</i><par n="abaiss/er__vblex"/></e>
 <e lm="inutilisable">    <i>inutilisable</i><par n="académique__adj"/></e>
 <e lm="inutilisé">       <i>inutilisé</i><par n="abaissant__adj"/></e>
@@ -29425,7 +29479,6 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="langue">          <i>langue</i><par n="abeille__n"/></e>
 <e lm="langue de spécialité"><i>langue</i><par n="abeille__n"/><p><l><b/>de<b/>spécialité</l><r><g><b/>de<b/>spécialité</g></r></p></e>
 <e lm="langue de terre"> <i>langue</i><par n="abeille__n"/><p><l><b/>de<b/>terre</l><r><g><b/>de<b/>terre</g></r></p></e>
-<e lm="langue altaïque"> <p><l>langue<b/>altaïque</l><r>langue<b/>altaïque<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
 <e lm="langue celtique"> <p><l>langue<b/>celtique</l><r>langue<b/>celtique<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
 <e lm="langue cible">    <p><l>langue<b/>cible</l><r>langue<b/>cible<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
 <e lm="langue construite"><p><l>langue<b/>construite</l><r>langue<b/>construite<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
@@ -29435,7 +29488,6 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="langue planifiée"><p><l>langue<b/>planifiée</l><r>langue<b/>planifiée<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
 <e lm="langue romane">   <p><l>langue<b/>romane</l><r>langue<b/>romane<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
 <e lm="langue source">   <p><l>langue<b/>source</l><r>langue<b/>source<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
-<e lm="langue véhiculaire"><p><l>langue<b/>véhiculaire</l><r>langue<b/>véhiculaire<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
 <e lm="Languedoc">       <i>Languedoc</i><par n="Andorre__np"/></e>
 <e lm="Languedoc-Roussillon"><i>Languedoc-Roussillon</i><par n="Andorre__np"/></e>
 <e lm="languedocien">    <i>languedocien</i><par n="ancien__adj"/></e>
@@ -29451,8 +29503,14 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="langue romane">   <p><l>langues<b/>romanes</l><r>langue<b/>romane<s n="n"/><s n="f"/><s n="pl"/></r></p></e>
 <e lm="langue source">   <p><l>langues<b/>sources</l><r>langue<b/>source<s n="n"/><s n="f"/><s n="pl"/></r></p></e>
 <e lm="langue véhiculaire"><p><l>langues<b/>véhiculaires</l><r>langue<b/>véhiculaire<s n="n"/><s n="f"/><s n="pl"/></r></p></e>
+<e lm="langue véhiculaire"><p><l>langue<b/>véhiculaire</l><r>langue<b/>véhiculaire<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
+<e lm="langue auxiliaire"><p><l>langues<b/>auxiliaires</l><r>langue<b/>auxiliaire<s n="n"/><s n="f"/><s n="pl"/></r></p></e>
+<e lm="langue auxiliaire"><p><l>langue<b/>auxiliaire</l><r>langue<b/>auxiliaire<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
 <e lm="languette" a="revo"><i>languette</i><par n="abeille__n"/></e>
 <e lm="langueur">        <i>langueur</i><par n="abeille__n"/></e>
+<e lm="incrément">        <i>incrément</i><par n="accessoire__n"/></e>
+<e lm="incrémenter">        <i>incrément</i><par n="abaiss/er__vblex"/></e>
+<e lm="décrémenter">        <i>décrément</i><par n="abaiss/er__vblex"/></e>
 <e lm="Laniel">          <i>Laniel</i><par n="Smith__np"/></e>
 <e lm="Lanneville">      <i>Lanneville</i><par n="Smith__np"/></e>
 <e lm="Lanni">           <i>Lanni</i><par n="Smith__np"/></e>
@@ -35570,7 +35628,15 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="par présomption" a="webform"><i>par<b/>présomption</i><par n="hier__adv"/></e>
 <e lm="par rapport à">   <i>par<b/>rapport<b/></i><par n="conta__pr"/></e>
 <e lm="par suite de">    <i>par<b/>suite<b/></i><par n="contde__pr"/></e>
+<e lm="par dessous de">    <i>par<b/>dessous<b/></i><par n="contde__pr"/></e>
+<e lm="par dessus de">    <i>par<b/>dessus<b/></i><par n="contde__pr"/></e>
+<e lm="en dessous de">    <i>en<b/>dessous<b/></i><par n="contde__pr"/></e>
+<e lm="en dessus de">    <i>en<b/>dessus<b/></i><par n="contde__pr"/></e>
 <e lm="par tête" a="revo"><i>par<b/>tête</i><par n="hier__adv"/></e>
+<e lm="par dessous"><i>par<b/>dessous</i><par n="hier__adv"/></e>
+<e lm="par dessus"><i>par<b/>dessus</i><par n="hier__adv"/></e>
+<e lm="en dessous"><i>en<b/>dessous</i><par n="hier__adv"/></e>
+<e lm="en dessus"><i>en<b/>dessus</i><par n="hier__adv"/></e>
 <e lm="parabole">        <i>parabole</i><par n="abeille__n"/></e>
 <e lm="paraboloïde">     <i>paraboloïde</i><par n="accessoire__n"/></e>
 <e lm="parachever" a="eleka"><i>parach</i><par n="ach/e[T]er__vblex__v"/></e>
@@ -37764,6 +37830,8 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="déprogrammer">      <i>déprogramm</i><par n="abaiss/er__vblex"/></e>
 <e lm="programmation">   <i>programmation</i><par n="abeille__n"/></e>
 <e lm="programme">       <i>programme</i><par n="accessoire__n"/></e>
+<e lm="sous-programme">       <i>sous-programme</i><par n="accessoire__n"/></e>
+<e lm="sous-bois">       <i>sous-bois</i><par n="accessoire__n"/></e>
 <e lm="programme de configuration"><i>programme</i><par n="accessoire__n"/><p><l><b/>de<b/>configuration</l><r><g><b/>de<b/>configuration</g></r></p></e>
 <e lm="programme de désinstallation"><i>programme</i><par n="accessoire__n"/><p><l><b/>de<b/>désinstallation</l><r><g><b/>de<b/>désinstallation</g></r></p></e>
 <e lm="programme de posttraitement"><i>programme</i><par n="accessoire__n"/><p><l><b/>de<b/>posttraitement</l><r><g><b/>de<b/>posttraitement</g></r></p></e>
@@ -44061,12 +44129,14 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="Theravâda">       <i>Theravâda</i><par n="Carrefour__np"/></e>
 <e lm="Theresa">         <i>Theresa</i><par n="Marie__np"/></e>
 <e lm="thermal">         <i>therma</i><par n="amica/l__adj"/></e>
+<e r="LR" lm="thermalien">         <i>thermalien</i><par n="ancien__adj"/></e>
 <e lm="thermalisme">     <i>thermalisme</i><par n="accessoire__n"/></e>
 <e lm="thermes">         <i>thermes</i><par n="vacances__n"/></e>
 <e lm="Thermidor">       <i>Thermidor</i><par n="Smith__np"/></e>
 <e lm="thermique">       <i>thermique</i><par n="accessoire__n"/></e>
 <e lm="thermique">       <i>thermique</i><par n="académique__adjadv"/></e>
 <e lm="thermodynamique"> <i>thermodynamique</i><par n="abeille__n"/></e>
+<e lm="imprenable"> <i>imprenable</i><par n="académique__adj"/></e>
 <e lm="thermodynamique"> <i>thermodynamique</i><par n="académique__adjadv"/></e>
 <e lm="thermomètre" a="webform"><i>thermomètre</i><par n="accessoire__n"/></e>
 <e lm="thermonucléaire"> <i>thermonucléaire</i><par n="académique__adj"/></e>
@@ -47131,6 +47201,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="à voix haute" a="revo"><i>à<b/>voix<b/>haute</i><par n="hier__adv"/></e>
 <e lm="à volonté" a="revo"><i>à<b/>volonté</i><par n="hier__adv"/></e>
 <e lm="à vue d'œil" a="revo"><i>à<b/>vue<b/>d'œil</i><par n="hier__adv"/></e>
+<e lm="à coup sûr"><i>à<b/>coup<b/>sûr</i><par n="hier__adv"/></e>
 <e lm="Àlex">            <i>Àlex</i><par n="Abraham__np"/></e>
 <e lm="Àngel">           <i>Àngel</i><par n="Abraham__np"/></e>
 <e lm="Àngela">          <i>Àngela</i><par n="Marie__np"/></e>
@@ -47242,6 +47313,10 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="éclopé" a="revo"> <i>éclopé</i><par n="abaissant__adj"/></e>
 <e lm="écluse">          <i>écluse</i><par n="abeille__n"/></e>
 <e lm="école">           <i>école</i><par n="abeille__n"/></e>
+<e lm="école primaire"><p><l>école<b/>primaire</l><r>école<b/>primaire<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
+<e lm="école primaire"><p><l>écoles<b/>primaires</l><r>école<b/>primaire<s n="n"/><s n="f"/><s n="pl"/></r></p></e>
+<e lm="école secondaire"><p><l>école<b/>secondaire</l><r>école<b/>secondaire<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
+<e lm="école secondaire"><p><l>écoles<b/>secondaires</l><r>école<b/>secondaire<s n="n"/><s n="f"/><s n="pl"/></r></p></e>
 <e lm="école maternelle"><p><l>école<b/>maternelle</l><r>école<b/>maternelle<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
 <e lm="école maternelle"><p><l>écoles<b/>maternelles</l><r>école<b/>maternelle<s n="n"/><s n="f"/><s n="pl"/></r></p></e>
 <e lm="école artistique"><p><l>école<b/>artistique</l><r>école<b/>artistique<s n="n"/><s n="f"/><s n="sg"/></r></p></e>
@@ -47462,6 +47537,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="élégance">        <i>élégance</i><par n="abeille__n"/></e>
 <e lm="élégant">         <i>élégant</i><par n="abaissant__adj"/></e>
 <e lm="élégiaque" a="revo"><i>élégiaque</i><par n="académique__adj"/></e>
+<e lm="consulaire"><i>consulaire</i><par n="académique__adj"/></e>
 <e lm="élégie">          <i>élégie</i><par n="abeille__n"/></e>
 <e lm="élément">         <i>élément</i><par n="accessoire__n"/></e>
 <e lm="élément de code"> <i>élément</i><par n="accessoire__n"/><p><l><b/>de<b/>code</l><r><g><b/>de<b/>code</g></r></p></e>
@@ -49239,6 +49315,7 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e r="LR" lm="vœu">      <p><l>voeu</l>      <r>vœu</r></p><par n="bateau__n"/></e>
 <e r="LR" lm="à contre-cœur" a="revo"><p><l>à<b/>contre-coeur</l><r>à<b/>contre-cœur</r></p><par n="hier__adv"/></e>
 <e r="LR" lm="à vue d'œil" a="revo"><p><l>à<b/>vue<b/>d'oeil</l><r>à<b/>vue<b/>d'œil</r></p><par n="hier__adv"/></e>
+<e r="LR" lm="à coup sûr"><p><l>à<b/>coup<b/>sûrl</l><r>à<b/>coup<b/>sûr</r></p><par n="hier__adv"/></e>
 <e r="LR" lm="écœurer">  <p><l>écoeur</l>    <r>écœur</r></p><par n="abaiss/er__vblex"/></e>
 <e r="LR" lm="écœurement"><p><l>écoeurement</l><r>écœurement</r></p><par n="accessoire__n"/></e>
 <e r="LR" lm="écologique"><p><l>écolo</l>    <r>Écologique</r></p><par n="académique__adj"/></e>
@@ -50751,9 +50828,13 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e r="LR" lm="au bout d'" a="webform"><p><l>au<b/>bout<b/>d'</l><r>au<b/>bout<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="au cas que"><p><l>au<b/>cas<b/>qu'</l><r>au<b/>cas<b/>que</r></p><par n="afin_que__cnjadv"/></e>
 <e r="LR" lm="au commencement d'"><p><l>au<b/>commencement<b/>d'</l><r>au<b/>commencement<b/>de<s n="pr"/></r></p></e>
-<e r="LR" lm="au cours d'"><p><l>au<b/>cours<b/>d'</l><r>au<b/>travers<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="au cours d'" a="webform"><p><l>au<b/>cours<b/>d'</l><r>au<b/>cours<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="au dedans d'"><p><l>au<b/>dedans<b/>d'</l><r>au<b/>dedans<b/>de<s n="pr"/></r></p></e>
+<e r="LR" lm="par suite d'"><p><l>par<b/>suite<b/>d'</l><r>par<b/>suite<b/>de<s n="pr"/></r></p></e>
+<e r="LR" lm="par dessous d'"><p><l>par<b/>dessous<b/>d'</l><r>par<b/>dessous<b/>de<s n="pr"/></r></p></e>
+<e r="LR" lm="par dessus d'"><p><l>par<b/>dessus<b/>d'</l><r>par<b/>dessus<b/>de<s n="pr"/></r></p></e>
+<e r="LR" lm="en dessous d'"><p><l>en<b/>dessous<b/>d'</l><r>en<b/>dessous<b/>de<s n="pr"/></r></p></e>
+<e r="LR" lm="en dessus d'"><p><l>en<b/>dessus<b/>d'</l><r>en<b/>dessus<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="au dehors d'"><p><l>au<b/>dehors<b/>d'</l><r>au<b/>dehors<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="au dessous d'"><p><l>au<b/>dessous<b/>d'</l><r>au<b/>dessous<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="au dessus d'"><p><l>au<b/>dessus<b/>d'</l><r>au<b/>dessus<b/>de<s n="pr"/></r></p></e>
@@ -50862,6 +50943,7 @@ Mi ne aldonas, car, kiam oni tion faras, ial la tagger frenezigas kaj ekinterpre
 <e r="LR" lm="en cas d'"><p><l>en<b/>cas<b/>d'</l><r>en<b/>cas<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="en cas que"><p><l>en<b/>cas<b/>qu'</l><r>en<b/>cas<b/>que</r></p><par n="afin_que__cnjadv"/></e>
 <e r="LR" lm="en compagnie d'"><p><l>en<b/>compagnie<b/>d'</l><r>en<b/>compagnie<b/>de<s n="pr"/></r></p></e>
+<e r="LR" lm="en guise d'"><p><l>en<b/>guise<b/>d'</l><r>en<b/>guise<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="en comparaison d'"><p><l>en<b/>comparaison<b/>d'</l><r>en<b/>comparaison<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="en compensation d'"><p><l>en<b/>compensation<b/>d'</l><r>en<b/>compensation<b/>de<s n="pr"/></r></p></e>
 <e r="LR" lm="en contrepartie d'"><p><l>en<b/>contrepartie<b/>d'</l><r>en<b/>contrepartie<b/>de<s n="pr"/></r></p></e>
