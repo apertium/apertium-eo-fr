@@ -71,6 +71,10 @@
       <cat-item tags="adv"/>
     </def-cat>
 
+    <def-cat n="ne">
+      <cat-item lemma="ne" tags="adv"/>
+    </def-cat>
+
     <def-cat n="adv_da">
       <cat-item lemma="multe" tags="adv"/>
       <cat-item lemma="malmulte" tags="adv"/>
@@ -127,9 +131,8 @@
     </def-cat>
 
     <def-cat n="and_or">
-      <cat-item tags="and_or.*"/>
-      <cat-item tags="cnjcoo.*"/>
-      <cat-item tags="cnjcoo"/>
+      <cat-item lemma="kaj" tags="cnjcoo"/>
+      <cat-item lemma="aŭ" tags="cnjcoo"/>
     </def-cat>
 
     <def-cat n="que">
@@ -247,6 +250,23 @@
             </test>
             <let><clip pos="2" part="nbr"/><clip pos="1" part="nbr"/></let>
 	  </when>
+       </choose>
+       <choose>
+          <when>
+            <test>
+              <and>
+                <or>
+                  <equal><clip pos="1" part="nbr"/><lit-tag v="sp"/></equal>
+                  <equal><clip pos="1" part="nbr"/><lit-tag v="ND"/></equal>
+                </or>
+                <or>
+                  <equal><clip pos="2" part="nbr"/><lit-tag v="sg"/></equal>
+                  <equal><clip pos="2" part="nbr"/><lit-tag v="pl"/></equal>
+                </or>
+              </and>
+            </test>
+            <let><clip pos="1" part="nbr"/><clip pos="2" part="nbr"/></let>
+	  </when>
       </choose>
     </def-macro>
 
@@ -266,6 +286,23 @@
               </and>
             </test>
             <let><clip pos="2" part="gen"/><clip pos="1" part="gen"/></let>
+	  </when>
+       </choose>
+       <choose>
+          <when>
+            <test>
+              <and>
+                <or>
+                  <equal><clip pos="1" part="gen"/><lit-tag v="mf"/></equal>
+                  <equal><clip pos="1" part="gen"/><lit-tag v="ND"/></equal>
+                </or>
+                <or>
+                  <equal><clip pos="2" part="gen"/><lit-tag v="m"/></equal>
+                  <equal><clip pos="2" part="gen"/><lit-tag v="f"/></equal>
+                </or>
+              </and>
+            </test>
+            <let><clip pos="1" part="gen"/><clip pos="2" part="gen"/></let>
 	  </when>
       </choose>
     </def-macro>
@@ -399,6 +436,10 @@
         <pattern-item n="SAdj"/>
       </pattern>
       <action>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="1"/>
+          <with-param pos="3"/>
+        </call-macro>
         <out>
           <chunk>
             <clip pos="1" part="lem"/>
@@ -424,6 +465,10 @@
         <pattern-item n="SAdj"/>
       </pattern>
       <action>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="2"/>
+          <with-param pos="4"/>
+        </call-macro>
         <out>
           <chunk>
             <clip pos="2" part="lem"/>
@@ -452,6 +497,10 @@
         <pattern-item n="SAdj"/>
       </pattern>
       <action>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="2"/>
+          <with-param pos="5"/>
+        </call-macro>
         <out>
           <chunk>
             <clip pos="2" part="lem"/>
@@ -482,6 +531,14 @@
         <pattern-item n="SAdj"/>
       </pattern>
       <action>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="1"/>
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="1"/>
+          <with-param pos="5"/>
+        </call-macro>
         <out>
           <chunk>
             <clip pos="1" part="lem"/>
@@ -513,6 +570,14 @@
         <pattern-item n="SAdj"/>
       </pattern>
       <action>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="2"/>
+          <with-param pos="4"/>
+        </call-macro>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="2"/>
+          <with-param pos="6"/>
+        </call-macro>
         <out>
           <chunk>
             <clip pos="2" part="lem"/>
@@ -547,6 +612,18 @@
         <pattern-item n="SAdj"/>
       </pattern>
       <action>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="1"/>
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="1"/>
+          <with-param pos="5"/>
+        </call-macro>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="1"/>
+          <with-param pos="7"/>
+        </call-macro>
         <out>
           <chunk>
             <clip pos="1" part="lem"/>
@@ -584,6 +661,18 @@
         <pattern-item n="SAdj"/>
       </pattern>
       <action>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="2"/>
+          <with-param pos="4"/>
+        </call-macro>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="2"/>
+          <with-param pos="6"/>
+        </call-macro>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="2"/>
+          <with-param pos="8"/>
+        </call-macro>
         <out>
           <chunk>
             <clip pos="2" part="lem"/>
@@ -624,6 +713,22 @@
         <pattern-item n="SAdj"/>
       </pattern>
       <action>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="1"/>
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="1"/>
+          <with-param pos="5"/>
+        </call-macro>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="1"/>
+          <with-param pos="7"/>
+        </call-macro>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="1"/>
+          <with-param pos="9"/>
+        </call-macro>
         <out>
           <chunk>
             <clip pos="1" part="lem"/>
@@ -667,6 +772,22 @@
         <pattern-item n="SAdj"/>
       </pattern>
       <action>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="2"/>
+          <with-param pos="4"/>
+        </call-macro>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="2"/>
+          <with-param pos="6"/>
+        </call-macro>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="2"/>
+          <with-param pos="8"/>
+        </call-macro>
+        <call-macro n="kunordigo_nbr">
+          <with-param pos="2"/>
+          <with-param pos="10"/>
+        </call-macro>
         <out>
           <chunk>
             <clip pos="2" part="lem"/>
@@ -1580,6 +1701,38 @@
     </rule>
 
 
+
+    <rule comment="REGLA: NE SVtrser de SN   -   SVtrser SN ">
+      <pattern>
+        <pattern-item n="ne"/>
+        <pattern-item n="SVtr"/>
+        <pattern-item n="de"/>
+        <pattern-item n="SNnodet"/>
+      </pattern>
+      <action>
+          <out>
+            <chunk>
+              <clip pos="1" part="whole"/>
+            </chunk>
+            <b pos="1"/>
+            <chunk>
+              <clip pos="2" part="whole"/>
+            </chunk>
+            <b pos="2"/>
+          </out>
+          <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+          <out>
+            <chunk>
+              <clip pos="4" part="whole"/>
+            </chunk>
+          </out>
+      </action>
+    </rule>
+
+
+
+    <!-- Fino Reguloj de artikolo DU/DES -->
+
     <!-- kunordigo -->
 
     <rule comment="REGLA: SN1 and/or SN2   -   SN ">
@@ -1938,6 +2091,8 @@
 -->
 
 
+<!--
+por eviti la neŝalton de la regulon pri artikolo en 'il decida de ne pas fumer de cigarrettes'
     <rule comment="REGLA: SV ADV   -   SV ">
       <pattern>
         <pattern-item n="SV"/>
@@ -1957,6 +2112,7 @@
         </out>
       </action>
     </rule>
+-->
 
 
     <rule comment="REGLA: SV, ADVCNJ,   -   SV ">
