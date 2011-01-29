@@ -71,6 +71,18 @@
       <cat-item tags="adv"/>
     </def-cat>
 
+    <def-cat n="adv_da">
+      <cat-item lemma="multe" tags="adv"/>
+      <cat-item lemma="malmulte" tags="adv"/>
+      <cat-item lemma="multege" tags="adv"/>
+      <cat-item lemma="malmultege" tags="adv"/>
+      <cat-item lemma="tro" tags="adv"/>
+      <cat-item lemma="maltro" tags="adv"/>
+      <cat-item lemma="sufiĉe" tags="adv"/>
+      <cat-item lemma="malsufiĉe" tags="adv"/>
+      <cat-item lemma="nesufiĉe" tags="adv"/>
+    </def-cat>
+
     <def-cat n="adv_cnj">
       <cat-item tags="adv"/>
       <cat-item tags="preadv"/>
@@ -2002,6 +2014,29 @@
 
 
 <!-- adverboj -->
+
+    <rule comment="REGLA: ADV de   -   ADV da ">
+      <pattern>
+        <pattern-item n="adv_da"/>
+        <pattern-item n="de"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+	  <chunk>
+	      <lit v="da"/>
+	    <lit-tag v="pr"/>
+	    <lit v="{^"/>
+	      <lit v="da"/>
+	    <lit-tag v="pr"/>
+	    <lit v="$}"/>
+	  </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="REGLA: ADV ADV   -   ADV ">
       <pattern>
