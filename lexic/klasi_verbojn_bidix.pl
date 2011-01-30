@@ -169,7 +169,7 @@ sub get_paradigm {
 		return $par if $par;
 	}
 
-	if ($sercxvorto =~ /^re/o || $sercxvorto =~ /^ek/o || $sercxvorto =~ /^fin/o || $sercxvorto =~ /^fi/o || $sercxvorto =~ /^fuŝ/o || $sercxvorto =~ /^mal/o  || $sercxvorto =~ /^pli/o || $sercxvorto =~ /^malpli/o || $sercxvorto =~ /^sub/o || $sercxvorto =~ /^antaŭ/o || $sercxvorto =~ /^post/o) {
+	if ($sercxvorto =~ /^re/o || $sercxvorto =~ /^ek/o || $sercxvorto =~ /^fin/o || $sercxvorto =~ /^fi/o || $sercxvorto =~ /^fuŝ/o || $sercxvorto =~ /^mal/o  || $sercxvorto =~ /^mis/o || $sercxvorto =~ /^re/o || $sercxvorto =~ /^pli/o || $sercxvorto =~ /^malpli/o || $sercxvorto =~ /^sub/o || $sercxvorto =~ /^antaŭ/o || $sercxvorto =~ /^post/o) {
 		$par = get_paradigm_files ($');
 #print STDERR "4. sercxvorto = $sercxvorto, $par (per prefikso)\n" if $par;
 		return $par if $par;

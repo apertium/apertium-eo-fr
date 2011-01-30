@@ -43,14 +43,6 @@ sub pritrakti_dosieron {
 		chop $l;
 		$sercxvorto = $l;
 		$lemo = substr ($l, 0, -1);
-			} elsif ($#words == 2 && $words[0] =~ /i$/o && $words[1] eq 'en' && ($words[$#words] =~ /on$/o || $words[$#words] =~ /ojn$/o) || $#words == 2 && $words[0] =~ /i$/o && $words[1] eq 'al' && $words[2] eq 'si') {
-				# tipo "enskribi en konton"
-print STDERR "enskribi en konton. l = $l\n";
-				$lemo = substr ($words[0], 0, -1);
-				$par = get_paradigm ($words[0]);
-				shift @words;
-				$vosto = join '<b/>', @words;
-				printf "<e lm=\"%s\"><i>%s</i><par n=\"%s\"/><p><l><b/>%s</l><r><g><b/>%s</g></r></p></e>\n", $l, $lemo, $par, $vosto, $vosto;
 		@words = split / /, $l;
 		if ($#words > 0) {
 			$lemo =~ s| |<b/>|og;
@@ -146,7 +138,7 @@ sub get_paradigm {
 		return $par if $par;
 	}
 
-	if ($sercxvorto =~ /^re/o || $sercxvorto =~ /^ek/o || $sercxvorto =~ /^fin/o || $sercxvorto =~ /^fi/o || $sercxvorto =~ /^fuŝ/o || $sercxvorto =~ /^mal/o) {
+	if ($sercxvorto =~ /^re/o || $sercxvorto =~ /^ek/o || $sercxvorto =~ /^fin/o || $sercxvorto =~ /^fi/o || $sercxvorto =~ /^fuŝ/o || $sercxvorto =~ /^mal/o  || $sercxvorto =~ /^mis/o || $sercxvorto =~ /^re/o || $sercxvorto =~ /^pli/o || $sercxvorto =~ /^malpli/o || $sercxvorto =~ /^sub/o || $sercxvorto =~ /^antaŭ/o || $sercxvorto =~ /^post/o) {
 		$par = get_paradigm_files ($');
 #print STDERR "4. sercxvorto = $sercxvorto, $par (per prefikso)\n" if $par;
 		return $par if $par;

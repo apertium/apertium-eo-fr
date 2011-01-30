@@ -335,10 +335,8 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 
     <def-cat n="pro">
       <cat-item tags="prn.pro.*"/>
-<!--
       <cat-item lemma="nous" tags="prn.tn.*"/>
       <cat-item lemma="vous" tags="prn.tn.*"/>
--->
     </def-cat>
 
     <def-cat n="pro-noref">
@@ -747,6 +745,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       <cat-item lemma="monter" tags="vblex.pp.*"/>
       <cat-item lemma="remonter" tags="vblex.pp.*"/>
       <cat-item lemma="rester" tags="vblex.pp.*"/>
+      <cat-item lemma="rester" tags="vbser.pp.*"/>
       <cat-item lemma="sortir" tags="vblex.pp.*"/>
       <cat-item lemma="resortir" tags="vblex.pp.*"/>
       <cat-item lemma="tomber" tags="vblex.pp.*"/>
@@ -784,6 +783,9 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       <cat-item lemma="y avoir" tags="vblex.*"/>
       <cat-item lemma="en exister" tags="vblex.*"/>
       <cat-item lemma="exister" tags="vblex.*"/>
+      <cat-item lemma="manquer" tags="vblex.*"/>
+      <cat-item lemma="rester" tags="vblex.*"/> <!-- larĝe plej ofte funkcias tiel, kiam post "il" -->
+      <cat-item lemma="rester" tags="vbser.*"/> <!-- larĝe plej ofte funkcias tiel, kiam post "il" -->
     </def-cat>
 
     <def-cat n="verbinf_impers"> <!-- verboj nepersonaj " -->
@@ -2608,6 +2610,17 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
                   <clip pos="1" side="tl" part="temps"/>
                   <lit-tag v="pres"/>
                 </let>
+              </when>
+            </choose>
+    </def-macro>
+
+    <def-macro n="set_nous_vous" npar="1"> <!-- nous.prn.tn -> nous.prn.dat -->
+        <choose>
+              <when>
+                <test>
+                    <equal><clip pos="1" side="sl" part="tipus_prn"/><lit-tag v="tn"/></equal>
+                </test>
+                <let><clip pos="1" side="tl" part="tipus_prn"/><lit-tag v="dat"/></let>
               </when>
             </choose>
     </def-macro>
@@ -11327,6 +11340,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
         <call-macro n="set_temps">
           <with-param pos="1"/>
         </call-macro>
+        <call-macro n="set_sxati">
+          <with-param pos="1"/>
+        </call-macro>
 
 	<out>
                   <chunk name="verbcj" case="caseFirstWord">
@@ -11626,6 +11642,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	</call-macro>
 	<call-macro n="default_nombro">
 	</call-macro>
+	<call-macro n="set_nous_vous">
+	  <with-param pos="3"/>
+	</call-macro>
 
 	<choose>
 
@@ -11845,6 +11864,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<call-macro n="default_nombro">
 	</call-macro>
 	<call-macro n="nom_cas">
+	  <with-param pos="3"/>
+	</call-macro>
+	<call-macro n="set_nous_vous">
 	  <with-param pos="3"/>
 	</call-macro>
 	<call-macro n="m_verb_adv">
@@ -12495,6 +12517,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<call-macro n="nom_cas">
 	  <with-param pos="3"/>
 	</call-macro>
+	<call-macro n="set_nous_vous">
+	  <with-param pos="3"/>
+	</call-macro>
 
 	<out>
           <chunk name="verbcj_perif" case="caseFirstWord">
@@ -12565,6 +12590,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<call-macro n="default_nombro">
 	</call-macro>
 	<call-macro n="nom_cas">
+	  <with-param pos="3"/>
+	</call-macro>
+	<call-macro n="set_nous_vous">
 	  <with-param pos="3"/>
 	</call-macro>
 
@@ -14908,6 +14936,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<call-macro n="nom_cas">
 	  <with-param pos="4"/>
 	</call-macro>
+	<call-macro n="set_nous_vous">
+	  <with-param pos="4"/>
+	</call-macro>
 
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
@@ -15237,6 +15268,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<call-macro n="default_nombro">
 	</call-macro>
 	<call-macro n="nom_cas">
+	  <with-param pos="4"/>
+	</call-macro>
+	<call-macro n="set_nous_vous">
 	  <with-param pos="4"/>
 	</call-macro>
 
@@ -16212,6 +16246,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<call-macro n="nom_cas">
 	  <with-param pos="2"/>
 	</call-macro>
+	<call-macro n="set_nous_vous">
+	  <with-param pos="2"/>
+	</call-macro>
 
         <call-macro n="f_bcond">
           <with-param pos="1"/>
@@ -16853,10 +16890,10 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 
   <!-- PRONOMOJ antaŭ la verbo -->
 
-    <rule comment="PRON VERBconj ( le chante -> kantas ĝin )">
+    <rule comment="PRON VERB ( le chante -> kantas ĝin )">
       <pattern>
 	<pattern-item n="pro-noref"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verb"/>
       </pattern>
       <action>    	
 	<call-macro n="firstWord">
@@ -17434,6 +17471,38 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   <with-param pos="3"/>
                 </call-macro>
           </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="3" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="5" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="5" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="5" side="tl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="pers"/></tag>
+                      <tag><clip pos="3" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="5" side="tl" part="lemh"/>
+                      <clip pos="5" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="5" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+
 	    <otherwise>
         <call-macro n="set_temps2">
           <with-param pos="3"/>
@@ -17564,6 +17633,38 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   <with-param pos="3"/>
                 </call-macro>
           </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="3" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="5" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="5" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="5" side="tl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="pers"/></tag>
+                      <tag><clip pos="3" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="5" side="tl" part="lemh"/>
+                      <clip pos="5" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="5" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>
+
 	    <otherwise>
         <call-macro n="set_temps2">
           <with-param pos="3"/>
@@ -17681,6 +17782,41 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   <with-param pos="2"/>
                 </call-macro>
           </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="2" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="4" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="4" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="4" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="4" side="tl" part="lemh"/>
+                      <clip pos="4" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="4" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+                <call-macro n="f_bcond">
+                  <with-param pos="2"/>
+                </call-macro>
+              </when>
+
 	    <otherwise>
         <call-macro n="set_temps2">
           <with-param pos="2"/>
@@ -17748,7 +17884,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     <rule comment="NE VERBconj PAS QUE ( ne savais pas que -> ne sciis ke )">
       <pattern>
 	<pattern-item n="ne"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="pas"/>
 	<pattern-item n="quepercorregir"/>
       </pattern>
@@ -17762,8 +17898,11 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
         <call-macro n="set_temps">
           <with-param pos="2"/>
         </call-macro>
+        <call-macro n="set_sxati">
+          <with-param pos="2"/>
+        </call-macro>
 
-                <out>
+	<out>
 	          <chunk name="ne" case="caseFirstWord">
 	            <tags>
 	              <tag><clip pos="1" side="tl" part="a_adv"/></tag>
@@ -17803,10 +17942,10 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   <lit-tag v="cnjsub"/>
 		</lu>
 	      </chunk>
-                </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+            </out>
+        <call-macro n="f_bcond">
+          <with-param pos="3"/>
+        </call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -17818,7 +17957,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     <rule comment="NE VERBconj ADV PAS ( ne concerne néanmoins pas -> tamen ne koncernas )">
       <pattern>
 	<pattern-item n="ne"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="adv_cnj"/>
 	<pattern-item n="pas"/>
       </pattern>
@@ -17882,7 +18021,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     <rule comment="NE VERBconj ADV PAS QUE ( ne veut néanmoins pas que -> tamen ne volas ke )">
       <pattern>
 	<pattern-item n="ne"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="adv_cnj"/>
 	<pattern-item n="pas"/>
 	<pattern-item n="quepercorregir"/>
@@ -17895,6 +18034,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="2"/>
         </call-macro>
         <call-macro n="set_temps">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="set_sxati">
           <with-param pos="2"/>
         </call-macro>
 
@@ -18181,6 +18323,40 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   <with-param pos="2"/>
                 </call-macro>
           </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="2" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="5" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="5" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="5" side="tl" part="temps"/></tag>
+                      <tag><clip pos="2" side="tl" part="pers"/></tag>
+                      <tag><clip pos="2" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="5" side="tl" part="lemh"/>
+                      <clip pos="5" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="5" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+                <call-macro n="f_bcond">
+                  <with-param pos="2"/>
+                </call-macro>
+              </when>
 
 	    <otherwise>
         <call-macro n="set_temps2">
@@ -19632,7 +19808,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
       <pattern>
 	<pattern-item n="ne"/>
 	<pattern-item n="pro"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="pas"/>
       </pattern>
       <action>    	
@@ -19650,7 +19826,13 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	</call-macro>
 	<call-macro n="default_nombro">
 	</call-macro>
+	<call-macro n="set_nous_vous">
+	  <with-param pos="2"/>
+	</call-macro>
 	<call-macro n="nom_cas">
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="set_nous_vous">
 	  <with-param pos="2"/>
 	</call-macro>
 
@@ -19785,6 +19967,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<call-macro n="nom_cas">
 	  <with-param pos="2"/>
 	</call-macro>
+	<call-macro n="set_nous_vous">
+	  <with-param pos="2"/>
+	</call-macro>
 
         <out>
           <chunk name="ne" case="caseFirstWord">
@@ -19837,6 +20022,39 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 		  <b pos="1"/>
                 </out>
           </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="3" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="5" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="5" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="5" side="tl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="pers"/></tag>
+                      <tag><clip pos="3" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="5" side="tl" part="lemh"/>
+                      <clip pos="5" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="5" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+		  <b pos="1"/>
+                </out>
+              </when>
+
 	    <otherwise>
         <call-macro n="set_temps2">
           <with-param pos="3"/>
@@ -19906,6 +20124,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<call-macro n="nom_cas">
 	  <with-param pos="2"/>
 	</call-macro>
+	<call-macro n="set_nous_vous">
+	  <with-param pos="2"/>
+	</call-macro>
 
         <out>
           <chunk name="ne" case="caseFirstWord">
@@ -19963,6 +20184,39 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 		  <b pos="1"/>
                 </out>
           </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="3" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="6" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="6" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="6" side="tl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="pers"/></tag>
+                      <tag><clip pos="3" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="6" side="tl" part="lemh"/>
+                      <clip pos="6" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="6" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+		  <b pos="1"/>
+                </out>
+              </when>
+
 	    <otherwise>
         <call-macro n="set_temps2">
           <with-param pos="3"/>
@@ -20031,6 +20285,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<call-macro n="nom_cas">
 	  <with-param pos="2"/>
 	</call-macro>
+	<call-macro n="set_nous_vous">
+	  <with-param pos="2"/>
+	</call-macro>
 
         <out>
           <chunk name="ne" case="caseFirstWord">
@@ -20083,12 +20340,44 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 		  <b pos="1"/>
                 </out>
           </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="3" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="5" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="5" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="5" side="tl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="pers"/></tag>
+                      <tag><clip pos="3" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="5" side="tl" part="lemh"/>
+                      <clip pos="5" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="5" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+		  <b pos="1"/>
+                </out>
+              </when>
+
 	    <otherwise>
         <call-macro n="set_temps2">
           <with-param pos="3"/>
           <with-param pos="5"/>
         </call-macro>
-
                 <out>
                   <chunk name="verbcj_perif">
                     <tags>
@@ -20152,6 +20441,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<call-macro n="nom_cas">
 	  <with-param pos="2"/>
 	</call-macro>
+	<call-macro n="set_nous_vous">
+	  <with-param pos="2"/>
+	</call-macro>
 
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
@@ -20207,12 +20499,44 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 		  <b pos="1"/>
                 </out>
           </when>
+
+              <when>  <!-- traduccions des de gerundi -> inte -->
+                <test>
+                  <equal>
+                    <clip pos="3" side="sl" part="temps"/>
+                    <lit-tag v="ger"/>
+                  </equal>
+                </test>
+                <let>
+                  <clip pos="6" side="tl" part="temps"/>
+                  <lit-tag v="gerpast"/> <!-- inte -->
+                </let>
+                <out>
+                  <chunk name="verbger" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><clip pos="6" side="tl" part="a_verb"/></tag>
+                      <tag><clip pos="6" side="tl" part="temps"/></tag>
+                      <tag><clip pos="3" side="tl" part="pers"/></tag>
+                      <tag><clip pos="3" side="tl" part="nbr"/></tag>
+                      <tag><var n="tipus_verb"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="6" side="tl" part="lemh"/>
+                      <clip pos="6" side="tl" part="a_verb"/>
+                      <lit-tag v="3"/>
+                      <clip pos="6" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+		  <b pos="1"/>
+                </out>
+              </when>
+
 	    <otherwise>
         <call-macro n="set_temps2">
           <with-param pos="3"/>
           <with-param pos="6"/>
         </call-macro>
-
                 <out>
 	          <chunk name="ne" case="caseFirstWord">
 	            <tags>
@@ -20271,7 +20595,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     <rule comment="NE VERBconj PAS + INF (ne voulait pas chanter -> ne volis kanti)">
       <pattern>
 	<pattern-item n="ne"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="pas"/>
 	<pattern-item n="inf"/>
       </pattern>
@@ -20339,7 +20663,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     <rule comment="NE VERBconj PAS + DE + INF (décida de chanter -> decidis kanti)">
       <pattern>
 	<pattern-item n="ne"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="pas"/>
 	<pattern-item n="de_a"/>
 	<pattern-item n="inf"/>
@@ -20404,7 +20728,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 
     <rule comment="VERBconj + DE + NE PAS INF (décida de ne pas chanter -> decidis ne kanti)">
       <pattern>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="de"/>
 	<pattern-item n="ne"/>
 	<pattern-item n="pas"/>
@@ -20479,7 +20803,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
       <pattern>
 	<pattern-item n="ne"/>
 	<pattern-item n="pro"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="pas"/>
       </pattern>
       <action>    	
@@ -20498,6 +20822,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<call-macro n="default_nombro">
 	</call-macro>
 	<call-macro n="nom_cas">
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="set_nous_vous">
 	  <with-param pos="2"/>
 	</call-macro>
 
@@ -20549,7 +20876,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     <rule comment="NE VERBconj ADVNEG ( ne chante jamais -> neniam kantas )">
       <pattern>
 	<pattern-item n="ne"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="advneg"/>
       </pattern>
       <action>    	
@@ -20726,7 +21053,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     <rule comment="NE VERBconj ADV ADVNEG ( ne chante presque jamais -> preskaŭ neniam kantas )">
       <pattern>
 	<pattern-item n="ne"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="adv_cnj"/>
 	<pattern-item n="advneg"/>
       </pattern>
@@ -20912,7 +21239,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     <rule comment="NE VERBconj ADVNEG QUE ( ne veux jamais que -> neniam volas ke )">
       <pattern>
 	<pattern-item n="ne"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="advneg"/>
 	<pattern-item n="quepercorregir"/>
       </pattern>
@@ -20927,6 +21254,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="2"/>
         </call-macro>
         <call-macro n="set_noimp">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="set_sxati">
           <with-param pos="2"/>
         </call-macro>
 
@@ -20994,6 +21324,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
         <call-macro n="tipus_verbs">
           <with-param pos="4"/>
         </call-macro>
+	<call-macro n="set_sxati">
+	  <with-param pos="4"/>
+	</call-macro>
 
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
@@ -21122,6 +21455,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
         <call-macro n="tipus_verbs">
           <with-param pos="3"/>
         </call-macro>
+        <call-macro n="set_sxati">
+          <with-param pos="3"/>
+        </call-macro>
 
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
@@ -21239,7 +21575,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
       <pattern>
 	<pattern-item n="ne"/>
 	<pattern-item n="pro"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="advneg"/>
       </pattern>
       <action>    	
@@ -21261,6 +21597,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<call-macro n="default_nombro">
 	</call-macro>
 	<call-macro n="nom_cas">
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="set_nous_vous">
 	  <with-param pos="2"/>
 	</call-macro>
 
@@ -21328,6 +21667,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	<call-macro n="default_nombro">
 	</call-macro>
 	<call-macro n="nom_cas">
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="set_nous_vous">
 	  <with-param pos="2"/>
 	</call-macro>
 
@@ -21439,7 +21781,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     <rule comment="NE VERBconj PRONNEG ( ne chante rien -> kantas nenion )">
       <pattern>
 	<pattern-item n="ne"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="pronneg"/>
       </pattern>
       <action>    	
@@ -21610,7 +21952,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     <rule comment="NE VERBconj ADVNEG PRONNEG ( ne chante jamais rien -> neniam kantas ion )">
       <pattern>
 	<pattern-item n="ne"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="advneg"/>
 	<pattern-item n="pronneg"/>
       </pattern>
@@ -21819,7 +22161,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     <rule comment="NE VERBconj ADV PRONNEG ( ne chante presque rien, ne chante plus rien -> kantas preskaŭ nenion, kantas plu nenion )">
       <pattern>
 	<pattern-item n="ne"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="adv_cnj"/>
 	<pattern-item n="pronneg"/>
       </pattern>
@@ -22015,7 +22357,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     <rule comment="NE VERBconj PLUS ( ne veux plus -> ne plu volas )">
       <pattern>
 	<pattern-item n="ne"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="plus"/>
       </pattern>
       <action>    	
@@ -22301,7 +22643,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     <rule comment="NE VERBconj ADV PLUS ( ne veux guère plus -> ne plu volas multe; ne veux pas plu -> ne volas pli )">
       <pattern>
 	<pattern-item n="ne"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="adv_cnj"/>
 	<pattern-item n="plus"/>
       </pattern>
@@ -22658,7 +23000,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     <rule comment="NE VERBconj PLUS QUE ( n'est plus que -> ne estas pli ol)">
       <pattern>
 	<pattern-item n="ne"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="plus"/>
 	<pattern-item n="quepercorregir"/>
 
@@ -22722,7 +23064,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     <rule comment="NE VERBconj PLUS QUE ( ne veux plus que -> ne plu volas ke)">
       <pattern>
 	<pattern-item n="ne"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="plus"/>
 	<pattern-item n="quepercorregir"/>
       </pattern>
@@ -22913,12 +23255,12 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 
 
 
-   <!-- ne ... que -->
+   <!-- ne... que -->
 
     <rule comment="NE VERBconj QUE ( ne veux que -> volas nur )">
       <pattern>
 	<pattern-item n="ne"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="quepercorregir"/>
       </pattern>
       <action>    	
@@ -22932,6 +23274,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="2"/>
         </call-macro>
         <call-macro n="set_temps">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="set_sxati">
           <with-param pos="2"/>
         </call-macro>
 
@@ -22955,7 +23300,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b/>
-		  <chunk name="adv">
+		  <chunk name="nur">
             	    <tags>
             	      <tag><lit-tag v="adv"/></tag>
             	    </tags>
@@ -22985,6 +23330,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	  <with-param pos="1"/>
 	</call-macro>
         <call-macro n="tipus_verbs">
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="set_sxati">
           <with-param pos="3"/>
         </call-macro>
 
@@ -23024,7 +23372,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b/>
-		  <chunk name="adv">
+		  <chunk name="nur">
             	    <tags>
             	      <tag><lit-tag v="adv"/></tag>
             	    </tags>
@@ -23066,7 +23414,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b/>
-		  <chunk name="adv">
+		  <chunk name="nur">
             	    <tags>
             	      <tag><lit-tag v="adv"/></tag>
             	    </tags>
@@ -23140,7 +23488,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b/>
-		  <chunk name="adv">
+		  <chunk name="nur">
             	    <tags>
             	      <tag><lit-tag v="adv"/></tag>
             	    </tags>
@@ -23181,7 +23529,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b/>
-		  <chunk name="adv">
+		  <chunk name="nur">
             	    <tags>
             	      <tag><lit-tag v="adv"/></tag>
             	    </tags>
@@ -23207,7 +23555,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     <rule comment="NE VERBconj INF QUE ( ne veux voir que -> volas vidi nur )">
       <pattern>
 	<pattern-item n="ne"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="inf"/>
 	<pattern-item n="quepercorregir"/>
       </pattern>
@@ -23222,6 +23570,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="2"/>
         </call-macro>
         <call-macro n="set_temps">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="set_sxati">
           <with-param pos="2"/>
         </call-macro>
 
@@ -23253,7 +23604,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
 		  <b pos="3"/>
-		  <chunk name="adv">
+		  <chunk name="nur">
             	    <tags>
             	      <tag><lit-tag v="adv"/></tag>
             	    </tags>
@@ -23285,6 +23636,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	</call-macro>
         <call-macro n="tipus_verbs">
           <with-param pos="4"/>
+        </call-macro>
+        <call-macro n="set_sxati">
+          <with-param pos="3"/>
         </call-macro>
 
         <choose>
@@ -23375,7 +23729,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	</choose>
                 <out>
 		  <b pos="4"/>
-		  <chunk name="adv">
+		  <chunk name="nur">
             	    <tags>
             	      <tag><lit-tag v="adv"/></tag>
             	    </tags>
@@ -23496,7 +23850,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
 	</choose>
 	       <out>
 		  <b pos="4"/>
-		  <chunk name="adv">
+		  <chunk name="nur">
             	    <tags>
             	      <tag><lit-tag v="adv"/></tag>
             	    </tags>
@@ -23517,7 +23871,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     <rule comment="NE VERBconj ADV QUE ( ne veux efectivement que -> volas efektive nur )">
       <pattern>
 	<pattern-item n="ne"/>
-	<pattern-item n="verbcj"/>
+	<pattern-item n="verbcjger"/>
 	<pattern-item n="adv_cnj"/>
 	<pattern-item n="quepercorregir"/>
       </pattern>
@@ -23532,6 +23886,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="2"/>
         </call-macro>
         <call-macro n="set_temps">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="set_sxati">
           <with-param pos="2"/>
         </call-macro>
 
@@ -23555,7 +23912,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
 	  <b pos="2"/>
-	  <chunk name="adv">
+	  <chunk name="nur">
            <tags>
              <tag><lit-tag v="adv"/></tag>
            </tags>
@@ -23564,6 +23921,82 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
              <clip pos="3" side="tl" part="a_adv"/>
 	   </lu>
 	   <b pos="3"/>
+	   <lu>
+             <lit v="nur"/>
+             <lit-tag v="adv"/>
+	   </lu>
+	  </chunk>
+        </out>
+        <let>
+          <var n="caseFirstWord"/>
+          <lit v="aa"/>
+        </let>
+      </action>
+    </rule>
+
+
+    <rule comment="NE PRON VERBconj QUE ( ne m'occupe que -> okupas min nur )">
+      <pattern>
+	<pattern-item n="ne"/>
+	<pattern-item n="pro"/>
+	<pattern-item n="verbcjger"/>
+	<pattern-item n="quepercorregir"/>
+      </pattern>
+      <action>    	
+	<call-macro n="firstWord">
+	  <with-param pos="1"/>
+	</call-macro>
+        <call-macro n="set_noimp">
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="tipus_verbs">
+          <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="set_temps">
+          <with-param pos="3"/>
+        </call-macro>
+	<call-macro n="nombro1">
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="default_nombro">
+	</call-macro>
+	<call-macro n="nom_cas">
+	  <with-param pos="2"/>
+	</call-macro>
+	<call-macro n="set_nous_vous">
+	  <with-param pos="2"/>
+	</call-macro>
+
+        <out>
+          <chunk name="verbcj" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><clip pos="3" side="tl" part="a_verb"/></tag>
+              <tag><clip pos="3" side="tl" part="temps"/></tag>
+              <tag><clip pos="3" side="tl" part="pers"/></tag>
+              <tag><clip pos="3" side="tl" part="nbr"/></tag>
+              <tag><var n="tipus_verb"/></tag>
+              <tag><var n="tipus_verb2"/></tag>
+            </tags>
+            <lu>
+              <clip pos="3" side="tl" part="lemh"/>
+              <clip pos="3" side="tl" part="a_verb"/>
+              <clip pos="3" side="tl" part="sep"/>
+              <lit-tag v="3"/>
+              <clip pos="3" side="tl" part="lemq"/>
+            </lu>
+          </chunk>
+	  <b pos="2"/>
+        </out>
+	<call-macro n="prn_nosubj">
+	  <with-param pos="2"/>
+	</call-macro>
+        <out>
+	  <b pos="3"/>
+	  <chunk name="nur">
+           <tags>
+             <tag><lit-tag v="adv"/></tag>
+           </tags>
 	   <lu>
              <lit v="nur"/>
              <lit-tag v="adv"/>
@@ -26390,7 +26823,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
          <with-param pos="2"/>
        </call-macro>
         <out>
-          <chunk name="verbcj">
+          <chunk name="verbcj" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><clip pos="3" side="tl" part="a_verb"/></tag>
@@ -26467,7 +26900,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   <lit-tag v="past"/>
                 </let>
                 <out>
-                  <chunk name="verbcj">
+                  <chunk name="verbcj" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="4" side="tl" part="a_verb"/></tag>
@@ -26495,7 +26928,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
         </call-macro>
 
                 <out>
-                  <chunk name="verbcj_perif">
+                  <chunk name="verbcj_perif" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SV"/></tag>
                       <tag><clip pos="4" side="tl" part="a_verb"/></tag>
