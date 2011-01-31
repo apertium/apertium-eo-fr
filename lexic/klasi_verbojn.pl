@@ -48,14 +48,14 @@ sub pritrakti_dosieron {
 			$lemo =~ s| |<b/>|og;
 			if ($#words == 1 && $words[$#words] eq 'sin' || $#words == 2 && $words[1] eq 'sin' && $words[2] eq 'for') {
 				$lemo = substr ($words[0], 0, -1);
-				$par = 'iĝi__vblex';
+				$par = 'i__vbntr';
 				shift @words;
 				$vosto = join '<b/>', @words;
 				printf "<e lm=\"%s\"><i>%s</i><par n=\"%s\"/><p><l><b/>%s</l><r><g><b/>%s</g></r></p></e>\n", $l, $lemo, $par, $vosto, $vosto;
 				$totalo_ntr++;
 			} elsif ($#words == 1 && ($words[$#words] eq 'pri' || $words[$#words] eq 'de' || $words[$#words] eq 'per'  || $words[$#words] eq 'en' || $words[$#words] eq 'sur' || $words[$#words] eq 'el' || $words[$#words] eq 'je' || $words[$#words] eq 'al')) {
 				$lemo = substr ($words[0], 0, -1);
-				$par = 'iĝi__vblex';
+				$par = 'i__vbntr';
 				printf "<e lm=\"%s\"><i>%s</i><par n=\"%s\"/><p><l><b/>%s</l><r><g><b/>%s</g></r></p></e>\n", $l, $lemo, $par, $words[1], $words[1];
 				$totalo_ntr++;
 			} elsif ($#words == 1 && $words[0] =~ /i$/o && $words[1] =~ /i$/o) {
@@ -69,6 +69,7 @@ print STDERR "povi esti. l = $l, par = $par\n";
 print STDERR "enskribi en konton. l = $l\n";
 				$lemo = substr ($words[0], 0, -1);
 				$par = get_paradigm ($words[0]);
+				$lemo = substr ($lemo, 0, -2) if $par eq '/iĝi__vbntr'; # forigo de fina iĝ
 				shift @words;
 				$vosto = join '<b/>', @words;
 				printf "<e lm=\"%s\"><i>%s</i><par n=\"%s\"/><p><l><b/>%s</l><r><g><b/>%s</g></r></p></e>\n", $l, $lemo, $par, $vosto, $vosto;
@@ -81,6 +82,7 @@ print STDERR "enskribi en konton. l = $l\n";
 				}
 				$sercxvorto = $words[$#words];
 				$par = get_paradigm ($sercxvorto);
+				$lemo = substr ($lemo, 0, -2) if $par eq '/iĝi__vbntr'; # forigo de fina iĝ
 				printf "<e lm=\"%s\">            <i>%s</i><par n=\"%s\"/></e>\n", $l, $lemo, $par;
 			} elsif ($#words == 1 && $words[0] eq 'esti' && $words[1] =~ /a$/o) {
 				# tipo "esti bona'
@@ -93,7 +95,7 @@ print STDERR "esti bona. l = $l\n";
 				# tipo "spekti televidon"
 print STDERR "spekti televidon. l = $l\n";
 				$lemo = substr ($words[0], 0, -1);
-				$par = 'iĝi__vblex';
+				$par = 'i__vbntr';
 				shift @words;
 				$vosto = join '<b/>', @words;
 				printf "<e lm=\"%s\"><i>%s</i><par n=\"%s\"/><p><l><b/>%s</l><r><g><b/>%s</g></r></p></e>\n", $l, $lemo, $par, $vosto, $vosto;
@@ -105,6 +107,7 @@ print STDERR "*******. l = $l, words[$#words] = $words[$#words]\n";
 			}
 		} else {
 			$par = get_paradigm ($sercxvorto);
+			$lemo = substr ($lemo, 0, -2) if $par eq '/iĝi__vbntr'; # forigo de fina iĝ
 			printf "<e lm=\"%s\">            <i>%s</i><par n=\"%s\"/></e>\n", $l, $lemo, $par;
 		}
 		$totalo++;
@@ -126,10 +129,10 @@ sub get_paradigm {
 
 	if ($sercxvorto =~ /igi$/o) {
 		$totalo_tr++;
-		return 'igi__vblex';
+		return 'i__vbtr';
 	} elsif ($sercxvorto =~ /iĝi$/o) {
 		$totalo_ntr++;
-		return 'iĝi__vblex';
+		return '/iĝi__vbntr';
 	}
 
 	if ($sercxvorto =~ /adi$/o || $sercxvorto =~ /eti$/o || $sercxvorto =~ /egi$/o || $sercxvorto =~ /aĉi$/o) {
@@ -156,13 +159,13 @@ sub get_paradigm_files {
 		$par = 'ser__vb';
 	} elsif (`grep -w $sercxvorto $dosiero_tr_ntr`) {
 		$totalo_tr_ntr++;
-		return 'igĝi__vblex';
+		return 'i__vbtr_ntr';
 	} elsif (`grep -w $sercxvorto $dosiero_tr`) {
 		$totalo_tr++;
-		return 'igi__vblex';
+		return 'i__vbtr';
 	} elsif (`grep -w $sercxvorto $dosiero_ntr`) {
 		$totalo_ntr++;
-		return 'iĝi__vblex';
+		return 'i__vbntr';
 	} else {
 		return '';
 	}

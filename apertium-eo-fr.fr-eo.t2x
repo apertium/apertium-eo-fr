@@ -36,6 +36,8 @@
 
    <def-cat n="SNrelatiu"><!-- EO: -->
       <cat-item tags="SNrelatiu.*"/>
+      <cat-item lemma="qui" tags="SN.itg.*"/>
+      <cat-item lemma="que" tags="SN.itg.*"/>
     </def-cat>
 
    <def-cat n="SNnoacc"><!-- EO: tots el que porten changecase=sense-->
@@ -77,6 +79,10 @@
       <cat-item tags="SV.*.volition"/>
     </def-cat>
 
+    <def-cat n="SVpredikativo">
+      <cat-item tags="SV.*.predikativo"/>
+    </def-cat>
+
     <def-cat n="SVlex">
       <cat-item tags="SV.vblex.*"/>
       <cat-item tags="SV.vbtr.*"/>
@@ -93,6 +99,12 @@
       <cat-item tags="SV.vbtr_ntr.*"/>
       <cat-item tags="SV.*.volition"/>
       <cat-item tags="SV.vblex.*"/> <!-- ni aldonas la neklasifikitajn verbojn -->
+    </def-cat>
+
+    <def-cat n="SVtrans_pred">
+      <cat-item tags="SV.vbtr.*.predikativo"/>
+      <cat-item tags="SV.vbtr_ntr.*.predikativo"/>
+      <cat-item tags="SV.vblex.*.predikativo"/> <!-- ni aldonas la neklasifikitajn verbojn -->
     </def-cat>
 
     <def-cat n="SV_pers"><!--Formes personals. Exclou inf i ger (i alguns imperatius per ara) -->
@@ -139,7 +151,7 @@
       <cat-item tags="SV.vblex.*.moviment"/>
       <cat-item tags="SV.vbtr.*.moviment"/>
       <cat-item tags="SV.vbntr.*.moviment"/>
-      <cat-item tags="SV.vbtr.*.moviment"/>
+      <cat-item tags="SV.vbtr_ntr.*.moviment"/>
     </def-cat>
 
     <def-cat n="PREP">
@@ -233,18 +245,23 @@
           <attr-item tags="nom2"/>
           <attr-item tags="nom"/>
 	  <attr-item tags="sense"/>
-      </def-attr>
+   </def-attr>
    <def-attr n="case">
           <attr-item tags="nom"/>
 	  <attr-item tags="acc"/>
-      </def-attr>
-    <def-attr n="tipus_prn">
+   </def-attr>
+   <def-attr n="tipus_prn">
       <attr-item tags="subj"/>
       <attr-item tags="obj"/>
       <attr-item tags="tn"/>
       <attr-item tags="itg"/>
       <attr-item tags="pos"/>
-    </def-attr>
+   </def-attr>
+   <def-attr n="tipo_verbo">
+      <attr-item tags="moviment"/>
+      <attr-item tags="volition"/>
+      <attr-item tags="predikativo"/>
+   </def-attr>
 
    <def-attr n="nbr">
           <attr-item tags="sg"/>
@@ -1427,33 +1444,66 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
       </pattern>
       <action>
 
+	<choose>
+	  <when>
+	    <test>
+	      <not><equal><clip pos="1" part="tipo_verbo"/><lit-tag v="predikativo"/></equal></not>
+	    </test>
 	    <let>
 	      <clip pos="2" part="case"/>
 	      <lit-tag v="acc"/>
 	    </let>
+	  </when>
+	</choose>
 
 	<out>
 	  <chunk>
-            <clip pos="1" part="lem"/>
-            <clip pos="1" part="tags"/>
-	    <clip pos="1" part="chcontent"/>
+            <clip pos="1" part="whole"/>
 	  </chunk>
 	  <b pos="1"/>
 	  <chunk>
-            <clip pos="2" part="lem"/>
-            <clip pos="2" part="tags"/>
-	    <clip pos="2" part="chcontent"/>
+            <clip pos="2" part="whole"/>
 	  </chunk>
 	</out>
       </action>
 </rule>
 
 
-<rule comment="REGLA: SVtrans PREP SN SN (EO per l'acusatiu dels SN objecte amb changecase=nom)">
+<rule comment="REGLA: SVtrans_pred SA SN (EO per l'acusatiu dels SN objecte amb changecase=nom)">
+      <pattern>
+	<pattern-item n="SVtrans_pred"/>
+	<pattern-item n="SA"/>
+	<pattern-item n="SNacc"/>
+      </pattern>
+      <action>
+
+	    <let>
+	      <clip pos="3" part="case"/>
+	      <lit-tag v="acc"/>
+	    </let>
+
+	<out>
+	  <chunk>
+            <clip pos="1" part="whole"/>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk>
+            <clip pos="2" part="whole"/>
+	  </chunk>
+	  <b pos="2"/>
+	  <chunk>
+            <clip pos="3" part="whole"/>
+	  </chunk>
+	</out>
+      </action>
+</rule>
+
+
+<rule comment="REGLA: SVtrans PREP SN SN (Il a évoqué entre autres une régulation accrue -> Li elvokis inter aliaj reguladon pliigitan)">
       <pattern>
 	<pattern-item n="SVtrans"/>
 	<pattern-item n="PREP"/>
-	<pattern-item n="SN"/>
+	<pattern-item n="SNSA"/>
 	<pattern-item n="SNacc"/>
       </pattern>
       <action>
@@ -1488,9 +1538,9 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
       <pattern>
 	<pattern-item n="SVtrans"/>
 	<pattern-item n="PREP"/>
-	<pattern-item n="SN"/>
+	<pattern-item n="SNSA"/>
 	<pattern-item n="PREP"/>
-	<pattern-item n="SN"/>
+	<pattern-item n="SNSA"/>
 	<pattern-item n="SNacc"/>
       </pattern>
       <action>
@@ -1534,7 +1584,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	<pattern-item n="SVtrans"/>
 	<pattern-item n="cm"/>
 	<pattern-item n="PREP"/>
-	<pattern-item n="SN"/>
+	<pattern-item n="SNSA"/>
 	<pattern-item n="cm"/>
 	<pattern-item n="SNacc"/>
       </pattern>
@@ -1980,10 +2030,18 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
         <pattern-item n="SA"/>
       </pattern>
       <action>
+
+	<choose>
+	  <when>
+	    <test>
+	      <not><equal><clip pos="2" part="tipo_verbo"/><lit-tag v="predikativo"/></equal></not>
+	    </test>
 	    <let>
 	      <clip pos="3" part="case"/>
 	      <lit-tag v="acc"/>
 	    </let>
+	  </when>
+	</choose>
 
             <out>
               <chunk>

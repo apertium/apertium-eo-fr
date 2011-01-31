@@ -75,6 +75,10 @@
       <cat-item lemma="de" tags="pr"/>
     </def-cat>
 
+    <def-cat n="da">
+      <cat-item lemma="da" tags="pr"/>
+    </def-cat>
+
     <def-cat n="adv">
       <cat-item tags="preadv"/>
       <cat-item tags="adv"/>
@@ -2607,6 +2611,30 @@
     </rule>
 -->
 
+    <rule comment="REGLA: DA LE   -   DE LA (da la tagoj -> de la tagoj: korekto de atribuoj en la antaŭa fazo) ">
+      <pattern>
+        <pattern-item n="da"/>
+        <pattern-item n="le_det"/>
+      </pattern>
+      <action>
+        <out>
+	  <chunk>
+	      <lit v="de"/>
+	    <lit-tag v="pr"/>
+	    <lit v="{^"/>
+	      <lit v="de"/>
+	    <lit-tag v="pr"/>
+	    <lit v="$}"/>
+	  </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+	  </chunk>
+        </out>
+      </action>
+    </rule>
+
+
 <!-- Reguloj de SV -->
 
     <rule comment="REGLA: SVser DATO KE   -   DATO (c'est le 19 març que -> la 19an de marto) ">
@@ -2858,6 +2886,33 @@ por eviti la neŝalton de la regulon pri artikolo en 'il decida de ne pas fumer 
       </action>
     </rule>
 
+
+<!--
+    <rule comment="REGLA: ADV de le  -   ADV da ">
+      <pattern>
+        <pattern-item n="adv_da"/>
+        <pattern-item n="de"/>
+        <pattern-item n="le_det"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+	  <chunk>
+	      <lit v="da"/>
+	    <lit-tag v="pr"/>
+	    <lit v="{^"/>
+	      <lit v="da"/>
+	    <lit-tag v="pr"/>
+	    <lit v="$}"/>
+	  </chunk>
+        </out>
+        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+      </action>
+    </rule>
+-->
 
     <rule comment="REGLA: ADV ADV   -   ADV ">
       <pattern>
