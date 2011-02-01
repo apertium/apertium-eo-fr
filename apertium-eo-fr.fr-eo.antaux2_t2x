@@ -27,6 +27,14 @@
       <cat-item tags="SN.mf.*"/>
     </def-cat>
 
+    <def-cat n="SN_nopron_obj_dat"> <!-- sen pronomoj prn.obj, prn.dat, prn.itg -->
+      <cat-item tags="SN.m.*"/>
+      <cat-item tags="SN.f.*"/>
+      <cat-item tags="SN.mf.*"/>
+      <cat-item tags="SN.tn.*"/>
+      <cat-item tags="SN.subj.*"/>
+    </def-cat>
+
     <def-cat n="SN_noitg"> <!-- sen demandopronomoj -->
       <cat-item tags="SN.m.*"/>
       <cat-item tags="SN.f.*"/>
@@ -1836,7 +1844,7 @@
 
     <rule comment="REGLA: SN PRN_INT   -   SN KIU ">
       <pattern>
-        <pattern-item n="SN"/>
+        <pattern-item n="SN_nopron_obj_dat"/>
         <pattern-item n="que"/>
       </pattern>
       <action>
@@ -1913,6 +1921,77 @@
 	    <lit-tag v="cnjsub"/>
 	    <lit v="{^"/>
 	    <get-case-from pos="3">
+	      <lit v="ke"/>
+	    </get-case-from>
+	    <lit-tag v="cnjsub"/>
+	    <lit v="$}"/>
+	  </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: SV PRON PRN_INT   -   SV PRON KE">
+      <pattern>
+        <pattern-item n="SV"/>
+        <pattern-item n="prn_nosubj"/>
+        <pattern-item n="que"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="2"/>
+	  <chunk>
+	    <get-case-from pos="3">
+	      <lit v="ke"/>
+	    </get-case-from>
+	    <lit-tag v="cnjsub"/>
+	    <lit v="{^"/>
+	    <get-case-from pos="3">
+	      <lit v="ke"/>
+	    </get-case-from>
+	    <lit-tag v="cnjsub"/>
+	    <lit v="$}"/>
+	  </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: SV PRON ADV PRN_INT   -   SV PRON ADV KE">
+      <pattern>
+        <pattern-item n="SV"/>
+        <pattern-item n="prn_nosubj"/>
+        <pattern-item n="adv"/>
+        <pattern-item n="que"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="2"/>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+          <b pos="3"/>
+	  <chunk>
+	    <get-case-from pos="4">
+	      <lit v="ke"/>
+	    </get-case-from>
+	    <lit-tag v="cnjsub"/>
+	    <lit v="{^"/>
+	    <get-case-from pos="4">
 	      <lit v="ke"/>
 	    </get-case-from>
 	    <lit-tag v="cnjsub"/>

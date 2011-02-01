@@ -1417,7 +1417,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Abdallah">        <i>Abdallah</i><par n="Smith__np"/></e>
 <e lm="Abdel">           <i>Abdel</i><par n="Mark__np"/></e>
 <e lm="Abdiel">          <i>Abdiel</i><par n="Mark__np"/></e>
-<!-- <e r="RL" lm="pas">      <p><l></l>          <r>pas<s n="adv"/></r></p></e> -->
 <e lm="abdiko">          <i>abdik</i><par n="o__n"/></e>
 <e lm="Abdo">            <i>Abdo</i><par n="Mark__np"/></e>
 <e lm="Abdo">            <i>Abdo</i><par n="Smith__np"/></e>
@@ -19396,6 +19395,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="kluĉopedalo">     <i>kluĉopedal</i><par n="o__n"/></e>
 <e lm="kluĉstango">      <i>kluĉstang</i><par n="o__n"/></e>
 <e lm="km">              <i>km</i><par n="BBC__n"/></e>
+<e lm="F">              <i>F</i><par n="BBC__n"/></e>
+<e lm="F1">             <i>F1</i><par n="BBC__n"/></e>
 <e lm="km²">             <i>km²</i><par n="BBC__n"/></e>
 <e lm="knabo">           <i>knab</i><par n="ino__n"/></e>
 <e lm="Knafo">           <i>Knafo</i><par n="Smith__np"/></e>
@@ -21028,7 +21029,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="kvalite">         <i>kvalit</i><par n="e__adv"/></e>
 <e lm="kvankam">         <i>kvankam</i><par n="ke__cnjsub"/></e>
 <e lm="se">              <i>se</i><par n="ke__cnjsub"/></e>
-<e lm="ĉu">              <i>ĉu</i><par n="ke__cnjsub"/></e>
 <e lm="kvanto">          <i>kvant</i><par n="o__n"/></e>
 <e lm="kvanta">          <i>kvant</i><par n="a__adj"/></e>
 <e lm="kvante">          <i>kvant</i><par n="e__adv"/></e>
@@ -28904,7 +28904,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Paré">            <i>Paré</i><par n="Smith__np"/></e>
 <e lm="París">           <i>París</i><par n="Mark__np"/></e>
 <e lm="pase">            <i>pas</i><par n="e__adv"/></e>
-<e lm="pas">             <i>pas</i><par n="jam__adv"/></e>
+<!-- <e lm="pas">             <i>pas</i><par n="jam__adv"/></e> -->
+<e r="RL" lm="pas">      <p><l>ne</l>          <r>pas<s n="adv"/></r></p></e>
 <e lm="paso">            <i>pas</i><par n="o__n"/></e>
 <e lm="Pas-de-Calais">   <i>Pas-de-Calais</i><par n="Barcelona__np"/></e>
 <e lm="pasado">          <i>pasad</i><par n="o__n"/></e>
@@ -40153,6 +40154,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="ĉonmago">         <i>ĉonmag</i><par n="o__n"/></e>
 <e lm="ĉorizo">          <i>ĉoriz</i><par n="o__n"/></e>
 <e lm="ĉu">              <i>ĉu</i><par n="after__cnjadv"/></e>
+<e lm="ĉu ne">              <i>ĉu<b/>ne</i><par n="after__cnjadv"/></e>
+<e lm="ĉu">              <i>ĉu</i><par n="ke__cnjsub"/></e>
 <e lm="ĉukĉa">           <i>ĉukĉ</i><par n="a__adj"/></e>
 <e lm="Ĉukĉa">           <i>Ĉukĉ</i><par n="a__adj"/></e>
 <e lm="ĉukĉo">           <i>ĉukĉ</i><par n="ino__n"/></e>

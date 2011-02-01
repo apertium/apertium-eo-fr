@@ -8329,6 +8329,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="admonester">      <i>admonest</i><par n="abaiss/er__vblex"/></e>
 <e lm="admonestation">   <i>admonestation</i><par n="abeille__n"/></e>
 <e lm="ADN">             <i>ADN</i><par n="BBC__n"/></e>
+<e lm="F1">             <i>F1</i><par n="BBC__n"/></e>
 <e lm="Ado">             <i>Ado</i><par n="Abraham__np"/></e>
 <e lm="adobe" a="revo">  <i>adobe</i><par n="abeille__n"/></e>
 <e lm="adolescence">     <i>adolescence</i><par n="abeille__n"/></e>
@@ -8475,6 +8476,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="technico">            <i>technico</i><par n="ex-__adj"/></e>
 <e lm="Afrodita">        <i>Afrodita</i><par n="Marie__np"/></e>
 <e lm="agir">            <i>ag</i><par n="about/[]ir__vblex"/></e>
+<e r="LR" lm="s'agir">            <i>s'ag</i><par n="about/[]ir__vblex"/></e>
 <e lm="agir de" a="eleka"><i>ag</i><par n="about/[]ir__vblex"/><p><l><b/>de</l><r><g><b/>de</g></r></p></e>
 <e r="RL" lm="agir de" a="eleka"><i>ag</i><par n="about/[]ir__vblex"/><p><l><b/><a/>de</l><r><g><b/>de</g></r></p></e>
 <e lm="agir avec affectation"><i>ag</i><par n="about/[]ir__vblex__"/><p><l><b/>avec<b/>affectation</l><r><g><b/>avec<b/>affectation</g></r></p></e>
@@ -21225,6 +21227,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="encablure" a="revo"><i>encablure</i><par n="abeille__n"/></e>
 <e lm="encadrer">        <i>encadr</i><par n="abaiss/er__vblex"/></e>
 <e lm="encadrement">     <i>encadrement</i><par n="accessoire__n"/></e>
+<e lm="encaissement">     <i>encaissement</i><par n="accessoire__n"/></e>
 <e lm="encaisser">       <i>encaiss</i><par n="abaiss/er__vblex"/></e>
 <e lm="encaissé" a="revo"><i>encaissé</i><par n="abaissant__adj"/></e>
 <e lm="encastrer" a="revo"><i>encastr</i><par n="abaiss/er__vblex"/></e>
@@ -21232,6 +21235,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="enceindre">       <i>encei</i><par n="cei/ndre__vblex"/></e>
 <e lm="enceinte">        <i>enceinte</i><par n="académique__adj"/></e>
 <e lm="enceinte" a="webform"><i>enceinte</i><par n="abeille__n"/></e>
+<e lm="sonnerie"><i>sonnerie</i><par n="abeille__n"/></e>
 <e lm="encens" a="revo"> <i>encens</i><par n="mois__n"/></e>
 <e lm="encenser" a="revo"><i>encens</i><par n="abaiss/er__vblex"/></e>
 <e lm="encensoir">       <i>encensoir</i><par n="accessoire__n"/></e>
@@ -21778,6 +21782,8 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="est-africain">    <i>est-africain</i><par n="abaissant__adj"/></e>
 <e lm="Est-africain">    <i>Est-africain</i><par n="africain__n"/></e>
 <e lm="est-ce que">      <i>est-ce<b/>que</i><par n="afin_que__cnjadv"/></e>
+<e lm="n'est-ce pas">      <i>n'est-ce<b/>pas</i><par n="afin_que__cnjadv"/></e>
+<e lm="n'est-ce pas que">      <i>n'est-ce<b/>pas<b/>que</i><par n="afin_que__cnjadv"/></e>
 <e lm="estafilade" a="revo"><i>estafilade</i><par n="abeille__n"/></e>
 <e lm="Estanislao">      <i>Estanislao</i><par n="Abraham__np"/></e>
 <e lm="Estasio">         <i>Estasio</i><par n="Abraham__np"/></e>
@@ -22462,6 +22468,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="fendre" a="revo"> <i>f</i><par n="appr/endre__vblex"/></e>
 <e lm="faillir">         <i>fa</i><par n="fa/illir__vblex"/></e>
 <e lm="falloir">         <i>fa</i><par n="fa/lloir__vbmod"/></e>
+<e r="LR" lm="en falloir">         <i>en<b/>fa</i><par n="fa/lloir__vbmod"/></e>
 <e lm="fabacée">         <i>fabacée</i><par n="abeille__n"/></e>
 <e lm="Faber">           <i>Faber</i><par n="Smith__np"/></e>
 <e lm="Fabi">            <i>Fabi</i><par n="Smith__np"/></e>
@@ -22642,14 +22649,21 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="fascine" a="revo"><i>fascine</i><par n="abeille__n"/></e>
 <e lm="fasciole" a="revo"><i>fasciole</i><par n="abeille__n"/></e>
 <e lm="fascisme">        <i>fascisme</i><par n="accessoire__n"/></e>
+<e lm="facho"><i>facho</i><par n="académique__adj"/></e>
+<e lm="facho">        <i>facho</i><par n="artiste__n"/></e>
 <e lm="fasciste" a="webform"><i>fasciste</i><par n="académique__adj"/></e>
 <e lm="fasciste">        <i>fasciste</i><par n="artiste__n"/></e>
 <e lm="faste" a="revo">  <i>faste</i><par n="académique__adj"/></e>
 <e lm="fastueux" a="revo"><i>fastueu</i><par n="affectueu/x__adjadv"/></e>
 <e lm="fat">             <i>fat</i><par n="abaissant__adj"/></e>
+<e lm="vaillant">             <i>vaillant</i><par n="abaissant__adj"/></e>
+<e lm="vaillamment">             <i>vaillamment</i><par n="hier__adv"/></e>
 <e lm="Fata">            <i>Fata</i><par n="Smith__np"/></e>
 <e lm="fatal">           <i>fatal</i><par n="abaissant__adj"/></e>
 <e lm="fatalisme" a="revo"><i>fatalisme</i><par n="accessoire__n"/></e>
+<e lm="fataliste"><i>fataliste</i><par n="académique__adj"/></e>
+<e lm="fataliste">        <i>fataliste</i><par n="artiste__n"/></e>
+<e lm="rappel"><i>rappel</i><par n="accessoire__n"/></e>
 <e lm="fatalité">        <i>fatalité</i><par n="abeille__n"/></e>
 <e lm="fatidique">       <i>fatidique</i><par n="académique__adjadv"/></e>
 <e lm="fatiguer">        <i>fatigu</i><par n="abaiss/er__vblex"/></e>
@@ -29161,6 +29175,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="Kloe" a="sans accents"><i>Kloe</i><par n="Marie__np"/></e>
 <e lm="Kluke">           <i>Kluke</i><par n="Smith__np"/></e>
 <e lm="km">              <i>km</i><par n="BBVA__n"/></e>
+<e lm="F">              <i>F</i><par n="BBVA__n"/></e>
 <e lm="km²">             <i>km²</i><par n="BBVA__n"/></e>
 <e lm="Knafo">           <i>Knafo</i><par n="Smith__np"/></e>
 <e lm="Knight">          <i>Knight</i><par n="Smith__np"/></e>
@@ -32724,6 +32739,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="militarisme">     <i>militarisme</i><par n="accessoire__n"/></e>
 <e lm="militariste">     <i>militariste</i><par n="académique__adj"/></e>
 <e lm="militariste">     <i>militariste</i><par n="artiste__n"/></e>
+<e lm="militarisation">     <i>militarisation</i><par n="abeille__n"/></e>
 <e lm="Miljour">         <i>Miljour</i><par n="Smith__np"/></e>
 <e lm="Millaire">        <i>Millaire</i><par n="Smith__np"/></e>
 <e lm="Millar">          <i>Millar</i><par n="Smith__np"/></e>
@@ -33426,10 +33442,12 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="mulot">           <i>mulot</i><par n="accessoire__n"/></e>
 <e lm="Multani">         <i>Multani</i><par n="Smith__np"/></e>
 <e lm="multicolore">     <i>multicolore</i><par n="académique__adj"/></e>
+<e lm="interclub">     <i>interclub</i><par n="académique__adj"/></e>
 <e lm="multidirectionnel"><i>multidirectionnel</i><par n="annuel__adj"/></e>
 <e lm="multigraphe">     <i>multigraphe</i><par n="accessoire__n"/></e>
 <e lm="multilingue" a="webform"><i>multilingue</i><par n="académique__adj"/></e>
 <e lm="multimédia" a="webform"><i>multimédia</i><par n="arrière__adj"/></e>
+<e r="LR" lm="multimédia"><i>multimédia</i><par n="académique__adj"/></e>
 <e lm="multinational">   <i>multinationa</i><par n="amica/l__adj"/></e>
 <e lm="multinationale" a="webform"><i>multinationale</i><par n="abeille__n"/></e>
 <e lm="multiplate-forme"><i>multiplate-forme</i><par n="arrière__adj"/></e>
@@ -46907,6 +46925,7 @@ apertium-dixtools fix apertium-eo-fr.fr.dix.new2 apertium-eo-fr.fr.dix.new3
 <e lm="y">               <i>y</i><par n="en__prn"/></e>
 <!-- <e lm="y avoir">         <i></i><par n="/y_avoir__vblex"/></e> ne marche pas, p.ex. dans de frases négatives -->
 <e lm="y avoir">           <i>y<b/></i><par n="/avoir__vblex"/></e>
+<e lm="y en avoir">           <i>y<b/>en<b/></i><par n="/avoir__vblex"/></e>
 <e lm="y compris" a="revo"><i>y<b/>compris</i><par n="hier__adv"/></e>
 <e lm="yacht">           <i>yacht</i><par n="accessoire__n"/></e>
 <e lm="Yacine" a="sans accents"><i>Yacine</i><par n="Abraham__np"/></e>

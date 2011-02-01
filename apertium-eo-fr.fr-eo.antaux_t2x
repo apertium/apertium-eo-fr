@@ -25,6 +25,14 @@
       <cat-item tags="SN.mf.*"/>
     </def-cat>
 
+    <def-cat n="SN_nopron_obj_dat"> <!-- sen pronomoj prn.obj, prn.dat, prn.itg -->
+      <cat-item tags="SN.m.*"/>
+      <cat-item tags="SN.f.*"/>
+      <cat-item tags="SN.mf.*"/>
+      <cat-item tags="SN.tn.*"/>
+      <cat-item tags="SN.subj.*"/>
+    </def-cat>
+
     <def-cat n="SNSA_nopron"> <!-- sen pronomoj -->
       <cat-item tags="SN.m.*"/>
       <cat-item tags="SN.f.*"/>
@@ -1018,7 +1026,7 @@
 
     <rule comment="REGLA: SN QUE   -   SN KIU ">
       <pattern>
-        <pattern-item n="SN"/>
+        <pattern-item n="SN_nopron_obj_dat"/>
         <pattern-item n="que_cnj"/>
       </pattern>
       <action>
@@ -2657,7 +2665,7 @@
     </rule>
 
 
-<!-- montriĝas ne plu necesaj
+<!-- montriĝas ne plu necesaj... ĉar ili estas anktaŭ en la sekva ŝtupo
     <rule comment="REGLA: SV PRN_INT   -   SV KE">
       <pattern>
         <pattern-item n="SV"/>
