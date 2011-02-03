@@ -40,6 +40,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
     <sdef n="n" /> 
     <sdef n="np" /> 
     <sdef n="adj" /> 
+    <sdef n="pref" /> 
     <sdef n="f" /> 
     <sdef n="m" /> 
     <sdef n="mf" /> 
@@ -136,11 +137,11 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e>       <p><l>oj</l>        <r>o<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l>on</l>        <r>o<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
   <e>       <p><l>ojn</l>       <r>o<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l>o</l>         <r>o<s n="n"/><s n="sp"/><s n="nom"/></r></p></e> <!-- iam aperas en okazaj kunmetaĵoj: TGV-Est -->
-  <e r="RL"><p><l>on</l>        <r>o<s n="n"/><s n="sp"/><s n="acc"/></r></p></e> <!-- iam aperas en okazaj kunmetaĵoj: TGV-Est -->
-  <e r="RL"><p><l>o</l>         <r>o<s n="n"/><s n="ND"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>on</l>        <r>o<s n="n"/><s n="ND"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>e</l>         <r>o<s n="adv"/></r></p></e>
+  <e r="RL"><p><l>a</l>         <r>o<s n="adj"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>aj</l>        <r>o<s n="adj"/><s n="pl"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>an</l>        <r>o<s n="adj"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>ajn</l>       <r>o<s n="adj"/><s n="pl"/><s n="acc"/></r></p></e>
 </pardef>
 
 <pardef n="oj__n" c="autoconcord:sengenra,pl">
@@ -154,10 +155,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e>       <p><l>aj</l>        <r>a<s n="adj"/><s n="pl"/><s n="nom"/></r></p></e>
   <e>       <p><l>an</l>        <r>a<s n="adj"/><s n="sg"/><s n="acc"/></r></p></e>
   <e>       <p><l>ajn</l>       <r>a<s n="adj"/><s n="pl"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l>a</l>         <r>a<s n="adj"/><s n="sp"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>an</l>        <r>a<s n="adj"/><s n="sp"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l>a</l>         <r>a<s n="adj"/><s n="ND"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>an</l>        <r>a<s n="adj"/><s n="ND"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>e</l>         <r>a<s n="adv"/></r></p></e>
 </pardef>
 
@@ -167,16 +164,13 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e>       <p><l>e</l>         <r>a<s n="adv"/></r></p></e>
 </pardef>
 
-<pardef n="eks__adj"> <!-- prefiksoj -->
-  <e r="RL"><p><l></l>          <r><s n="adj"/><s n="sg"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l></l>          <r><s n="adj"/><s n="sg"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l></l>          <r><s n="adj"/><s n="pl"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l></l>          <r><s n="adj"/><s n="pl"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l></l>          <r><s n="adj"/><s n="sp"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l></l>          <r><s n="adj"/><s n="sp"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l></l>          <r><s n="adj"/><s n="ND"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l></l>          <r><s n="adj"/><s n="ND"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l></l>          <r><s n="adv"/></r></p></e>
+<pardef n="eks__pref"> <!-- prefiksoj -->
+  <e r="RL"><p><l></l>          <r><s n="pref"/><s n="sp"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l></l>          <r><s n="pref"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l></l>          <r><s n="pref"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l></l>          <r><s n="pref"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l></l>          <r><s n="pref"/><s n="pl"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l></l>          <r><s n="pref"/><s n="pl"/><s n="acc"/></r></p></e>
 </pardef>
 
 <pardef n="eks__adv">
@@ -216,8 +210,6 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <pardef n="n-r/o__n">
   <e>       <p><l>o</l>         <r>o<s n="n"/><s n="acr"/><s n="sg"/><s n="nom"/></r></p></e>
   <e>       <p><l>on</l>        <r>o<s n="n"/><s n="acr"/><s n="sg"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l>o</l>         <r>o<s n="n"/><s n="acr"/><s n="sp"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>on</l>        <r>o<s n="n"/><s n="acr"/><s n="sp"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>oj</l>        <r>o<s n="n"/><s n="acr"/><s n="pl"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>ojn</l>       <r>o<s n="n"/><s n="acr"/><s n="pl"/><s n="acc"/></r></p></e>
 </pardef>
@@ -352,18 +344,10 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e>       <p><l>inon</l>      <r>o<s n="n"/><s n="f"/><s n="sg"/><s n="acc"/></r></p></e>
   <e>       <p><l>inojn</l>     <r>o<s n="n"/><s n="f"/><s n="pl"/><s n="acc"/></r></p></e>
   <e r="RL"><p><l>o</l>         <r>o<s n="n"/><s n="sg"/><s n="nom"/></r></p></e> <!-- tiel strange alvenas kelketaj vortoj (kiuj havas specife difinitan pluralan formon, ekz. per ge-) -->
-<!-- pro la sufiĉe multaj dubagenraj francaj nomoj, ekz. "membre" -->
-  <e r="RL"><p><l>o</l>         <r>o<s n="n"/><s n="mf"/><s n="sg"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>on</l>        <r>o<s n="n"/><s n="mf"/><s n="sg"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l>o</l>         <r>o<s n="n"/><s n="mf"/><s n="sp"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>on</l>        <r>o<s n="n"/><s n="mf"/><s n="sp"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l>oj</l>        <r>o<s n="n"/><s n="mf"/><s n="pl"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>ojn</l>       <r>o<s n="n"/><s n="mf"/><s n="pl"/><s n="acc"/></r></p></e>
-<!-- pro la sufiĉe multaj dubanombraj francaj nomoj, ekz. "admis" -->
-  <e r="RL"><p><l>o</l>         <r>o<s n="n"/><s n="m"/><s n="sp"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>on</l>        <r>o<s n="n"/><s n="m"/><s n="sp"/><s n="acc"/></r></p></e>
-  <e r="RL"><p><l>ino</l>       <r>o<s n="n"/><s n="f"/><s n="sp"/><s n="nom"/></r></p></e>
-  <e r="RL"><p><l>inon</l>      <r>o<s n="n"/><s n="f"/><s n="sp"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>a</l>         <r>o<s n="adj"/><s n="sg"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>aj</l>        <r>o<s n="adj"/><s n="pl"/><s n="nom"/></r></p></e>
+  <e r="RL"><p><l>an</l>        <r>o<s n="adj"/><s n="sg"/><s n="acc"/></r></p></e>
+  <e r="RL"><p><l>ajn</l>       <r>o<s n="adj"/><s n="pl"/><s n="acc"/></r></p></e>
 </pardef>
 
 
@@ -455,6 +439,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e>       <p><l>ontaj</l>     <r>i<s n="vblex"/><s n="pp2"/><s n="pl"/></r></p></e>
   <e>       <p><l>inta</l>      <r>i<s n="vblex"/><s n="pp3"/></r></p></e>
   <e>       <p><l>inta</l>      <r>i<s n="vblex"/><s n="pp3"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l>inta</l>      <r>i<s n="vblex"/><s n="pp3"/><s n="sp"/></r></p></e>
   <e>       <p><l>intaj</l>     <r>i<s n="vblex"/><s n="pp3"/><s n="pl"/></r></p></e>
   <e>       <p><l>ante</l>      <r>i<s n="vblex"/><s n="ger"/></r></p></e>
   <e>       <p><l>inte</l>      <r>i<s n="vblex"/><s n="gerpast"/></r></p></e>
@@ -539,6 +524,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e>       <p><l>ontaj</l>     <r>i<s n="vbtr"/><s n="pp2"/><s n="pl"/></r></p></e>
   <e>       <p><l>inta</l>      <r>i<s n="vbtr"/><s n="pp3"/></r></p></e>
   <e>       <p><l>inta</l>      <r>i<s n="vbtr"/><s n="pp3"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l>inta</l>      <r>i<s n="vbtr"/><s n="pp3"/><s n="sp"/></r></p></e>
   <e>       <p><l>intaj</l>     <r>i<s n="vbtr"/><s n="pp3"/><s n="pl"/></r></p></e>
   <e>       <p><l>ante</l>      <r>i<s n="vbtr"/><s n="ger"/></r></p></e>
   <e>       <p><l>inte</l>      <r>i<s n="vbtr"/><s n="gerpast"/></r></p></e>
@@ -623,6 +609,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e>       <p><l>ontaj</l>     <r>i<s n="vbntr"/><s n="pp2"/><s n="pl"/></r></p></e>
   <e>       <p><l>inta</l>      <r>i<s n="vbntr"/><s n="pp3"/></r></p></e>
   <e>       <p><l>inta</l>      <r>i<s n="vbntr"/><s n="pp3"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l>inta</l>      <r>i<s n="vbntr"/><s n="pp3"/><s n="sp"/></r></p></e>
   <e>       <p><l>intaj</l>     <r>i<s n="vbntr"/><s n="pp3"/><s n="pl"/></r></p></e>
   <e>       <p><l>ante</l>      <r>i<s n="vbntr"/><s n="ger"/></r></p></e>
   <e>       <p><l>inte</l>      <r>i<s n="vbntr"/><s n="gerpast"/></r></p></e>
@@ -707,6 +694,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e>       <p><l>iĝontaj</l>     <r>iĝi<s n="vbntr"/><s n="pp2"/><s n="pl"/></r></p></e>
   <e>       <p><l>iĝinta</l>      <r>iĝi<s n="vbntr"/><s n="pp3"/></r></p></e>
   <e>       <p><l>iĝinta</l>      <r>iĝi<s n="vbntr"/><s n="pp3"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l>iĝinta</l>      <r>iĝi<s n="vbntr"/><s n="pp3"/><s n="sp"/></r></p></e>
   <e>       <p><l>iĝintaj</l>     <r>iĝi<s n="vbntr"/><s n="pp3"/><s n="pl"/></r></p></e>
   <e>       <p><l>iĝante</l>      <r>iĝi<s n="vbntr"/><s n="ger"/></r></p></e>
   <e>       <p><l>iĝinte</l>      <r>iĝi<s n="vbntr"/><s n="gerpast"/></r></p></e>
@@ -791,6 +779,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e>       <p><l>ontaj</l>     <r>i<s n="vbtr_ntr"/><s n="pp2"/><s n="pl"/></r></p></e>
   <e>       <p><l>inta</l>      <r>i<s n="vbtr_ntr"/><s n="pp3"/></r></p></e>
   <e>       <p><l>inta</l>      <r>i<s n="vbtr_ntr"/><s n="pp3"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l>inta</l>      <r>i<s n="vbtr_ntr"/><s n="pp3"/><s n="sp"/></r></p></e>
   <e>       <p><l>intaj</l>     <r>i<s n="vbtr_ntr"/><s n="pp3"/><s n="pl"/></r></p></e>
   <e>       <p><l>ante</l>      <r>i<s n="vbtr_ntr"/><s n="ger"/></r></p></e>
   <e>       <p><l>inte</l>      <r>i<s n="vbtr_ntr"/><s n="gerpast"/></r></p></e>
@@ -853,6 +842,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e>       <p><l>is</l>        <r>i<s n="vbser"/><s n="past"/></r></p></e>
   <e>       <p><l>os</l>        <r>i<s n="vbser"/><s n="fti"/></r></p></e>
   <e>       <p><l>us</l>        <r>i<s n="vbser"/><s n="cni"/></r></p></e>
+  <e>       <p><l>inta</l>      <r>i<s n="vbser"/><s n="pp"/><s n="sg"/></r></p></e>
+  <e>       <p><l>intaj</l>     <r>i<s n="vbser"/><s n="pp"/><s n="pl"/></r></p></e>
   <e r="RL"><p><l>inta</l>      <r>i<s n="vbser"/><s n="pp"/><s n="sg"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>intaj</l>     <r>i<s n="vbser"/><s n="pp"/><s n="pl"/><s n="nom"/></r></p></e>
   <e r="RL"><p><l>intan</l>     <r>i<s n="vbser"/><s n="pp"/><s n="sg"/><s n="acc"/></r></p></e>
@@ -864,6 +855,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
   <e>       <p><l>onta</l>      <r>i<s n="vbser"/><s n="pp2"/><s n="sg"/></r></p></e>
   <e>       <p><l>ontaj</l>     <r>i<s n="vbser"/><s n="pp2"/><s n="pl"/></r></p></e>
   <e>       <p><l>inta</l>      <r>i<s n="vbser"/><s n="pp3"/><s n="sg"/></r></p></e>
+  <e r="RL"><p><l>inta</l>      <r>i<s n="vbser"/><s n="pp3"/><s n="sp"/></r></p></e>
   <e>       <p><l>intaj</l>     <r>i<s n="vbser"/><s n="pp3"/><s n="pl"/></r></p></e>
   <e>       <p><l>ante</l>      <r>i<s n="vbser"/><s n="ger"/></r></p></e>
   <e>       <p><l>inte</l>      <r>i<s n="vbser"/><s n="gerpast"/></r></p></e>
@@ -1384,6 +1376,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Abaco">           <i>Abaco</i><par n="Mark__np"/></e>
 <e lm="Abagail">         <i>Abagail</i><par n="Marie__np"/></e>
 <e lm="abako">           <i>abak</i><par n="o__n"/></e>
+<e lm="tuŝekrano">           <i>tuŝekran</i><par n="o__n"/></e>
+<e lm="tabulkomputilo">           <i>tabulkomputil</i><par n="o__n"/></e>
 <e lm="flagetoportanto">           <i>flagetoportant</i><par n="o__n"/></e>
 <e lm="standardisto">           <i>standardist</i><par n="o__n"/></e>
 <e lm="abandono">        <i>abandon</i><par n="o__n"/></e>
@@ -1763,7 +1757,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="aferema">         <i>aferem</i><par n="a__adj"/></e>
 <e lm="aferisto">        <i>aferist</i><par n="ino__n"/></e>
 <e lm="aferstato">       <i>aferstat</i><par n="o__n"/></e>
-<e lm="afgan">           <i>afgan</i><par n="eks__adj"/></e>
+<e lm="afgan">           <i>afgan</i><par n="eks__pref"/></e>
 <e lm="afgano">          <i>afgan</i><par n="ino__n"/></e>
 <e lm="afgana">          <i>afgan</i><par n="a__adj"/></e>
 <e lm="Afganio">         <i>Afgani</i><par n="Barcelon/o__np"/></e>
@@ -1872,8 +1866,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="afranko">         <i>afrank</i><par n="o__n"/></e>
 <e lm="Africa">          <i>Africa</i><par n="Barcelona__np"/></e>
 <e lm="afrika">          <i>afrik</i><par n="a__adj"/></e>
-<e lm="afrik">           <i>afrik</i><par n="eks__adj"/></e>
-<e lm="teknik">           <i>teknik</i><par n="eks__adj"/></e>
+<e lm="afrik">           <i>afrik</i><par n="eks__pref"/></e>
+<e lm="teknik">           <i>teknik</i><par n="eks__pref"/></e>
 <e lm="Afriko">          <i>Afrik</i><par n="Barcelon/o__np"/></e>
 <e lm="Afrika Unio">     <p><l>Afrika<b/>Unio</l><r>Afrika<b/>Unio<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="afrikano">        <i>afrikan</i><par n="ino__n"/></e>
@@ -2274,7 +2268,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="albo">            <i>alb</i><par n="o__n"/></e>
 <e lm="Alba">            <i>Alba</i><par n="Marie__np"/></e>
 <e lm="albana">          <i>alban</i><par n="a__adj"/></e>
-<e lm="alban">           <i>alban</i><par n="eks__adj"/></e>
+<e lm="alban">           <i>alban</i><par n="eks__pref"/></e>
 <e lm="albano">          <i>alban</i><par n="ino__n"/></e>
 <e lm="Albana">          <i>Albana</i><par n="Marie__np"/></e>
 <e lm="Albanese">        <i>Albanese</i><par n="Smith__np"/></e>
@@ -2764,7 +2758,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Alĝero">          <i>Alĝer</i><par n="Barcelon/o__np"/></e>
 <e lm="alĝerano">        <i>alĝeran</i><par n="ino__n"/></e>
 <e lm="alĝeria">         <i>alĝeri</i><par n="a__adj"/></e>
-<e lm="alĝeri">          <i>alĝeri</i><par n="eks__adj"/></e>
+<e lm="alĝeri">          <i>alĝeri</i><par n="eks__pref"/></e>
 <e lm="Alĝerio">         <i>Alĝeri</i><par n="Barcelon/o__np"/></e>
 <e lm="alĝeriano">       <i>alĝerian</i><par n="ino__n"/></e>
 <e lm="alĥemio">         <i>alĥemi</i><par n="o__n"/></e>
@@ -3096,7 +3090,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="andezito">        <i>andezit</i><par n="o__n"/></e>
 <e lm="Andoquio">        <i>Andoquio</i><par n="Mark__np"/></e>
 <e lm="andora">          <i>andor</i><par n="a__adj"/></e>
-<e lm="andor">           <i>andor</i><par n="eks__adj"/></e>
+<e lm="andor">           <i>andor</i><par n="eks__pref"/></e>
 <e lm="Andoro">          <i>Andor</i><par n="Barcelon/o__np"/></e>
 <e lm="Sankt-Laŭrenco">          <i>Sankt-Laŭrenc</i><par n="Barcelon/o__np"/></e>
 <e lm="andorano">        <i>andoran</i><par n="ino__n"/></e>
@@ -3186,7 +3180,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="angiloforma">     <i>angiloform</i><par n="a__adj"/></e>
 <e lm="angino">          <i>angin</i><par n="o__n"/></e>
 <e lm="angla">           <i>angl</i><par n="a__adj"/></e>
-<e lm="angl">            <i>angl</i><par n="eks__adj"/></e>
+<e lm="angl">            <i>angl</i><par n="eks__pref"/></e>
 <e lm="anglo">           <i>angl</i><par n="ino__n"/></e>
 <e lm="Anglio">          <i>Angl</i><par n="Alban/io__np"/></e>
 <e lm="Anglade">         <i>Anglade</i><par n="Smith__np"/></e>
@@ -3201,7 +3195,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="anglosaksa">      <i>anglosaks</i><par n="a__adj"/></e>
 <e lm="anglosakso">      <i>anglosaks</i><par n="ino__n"/></e>
 <e lm="Angnatuk">        <i>Angnatuk</i><par n="Smith__np"/></e>
-<e lm="angol">           <i>angol</i><par n="eks__adj"/></e>
+<e lm="angol">           <i>angol</i><par n="eks__pref"/></e>
 <e lm="Angolo">          <i>Angol</i><par n="Barcelon/o__np"/></e>
 <e lm="angora">          <i>angor</i><par n="a__adj"/></e>
 <e lm="angoro">          <i>angor</i><par n="o__n"/></e>
@@ -3348,10 +3342,10 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="antarkta aŭroro"> <p><l>antarktajn<b/>aŭrorojn</l><r>antarkta<b/>aŭroro<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
 <e lm="antarkta aŭroro"> <p><l>antarktan<b/>aŭroron</l><r>antarkta<b/>aŭroro<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="Antarkta Oceano"> <p><l>Antarktan<b/>Oceanon</l><r>Antarkta<b/>Oceano<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
-<e lm="antartik">        <i>antartik</i><par n="eks__adj"/></e>
+<e lm="antartik">        <i>antartik</i><par n="eks__pref"/></e>
 <e lm="Antaya">          <i>Antaya</i><par n="Smith__np"/></e>
 <e lm="antaŭa">          <i>antaŭ</i><par n="a__adj"/></e>
-<e lm="antaŭ">           <i>antaŭ</i><par n="eks__adj"/></e>
+<e lm="antaŭ">           <i>antaŭ</i><par n="eks__pref"/></e>
 <e lm="antaŭ">           <i>antaŭ</i><par n="eks__adv"/></e>
 <e lm="antaŭe">          <i>antaŭ</i><par n="e__adv"/></e>
 <e lm="antaŭ">           <i>antaŭ</i><par n="jam__adv"/></e>
@@ -3448,7 +3442,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Antero">          <i>Antero</i><par n="Mark__np"/></e>
 <e lm="Anthony">         <i>Anthony</i><par n="Mark__np"/></e>
 <e lm="Anthony">         <i>Anthony</i><par n="Smith__np"/></e>
-<e lm="anti">            <i>anti</i><par n="eks__adj"/></e>
+<e lm="anti">            <i>anti</i><par n="eks__pref"/></e>
 <e lm="anti">            <i>anti</i><par n="eks__adv"/></e>
 <e lm="Antibes">         <i>Antibes</i><par n="Barcelona__np"/></e>
 <e lm="antibiotika">     <i>antibiotik</i><par n="a__adj"/></e>
@@ -3679,7 +3673,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="aro">             <i>ar</i><par n="o__n"/></e>
 <e lm="arao">            <i>ara</i><par n="o__n"/></e>
 <e lm="araba">           <i>arab</i><par n="a__adj"/></e>
-<e lm="arab">            <i>arab</i><par n="eks__adj"/></e>
+<e lm="arab">            <i>arab</i><par n="eks__pref"/></e>
 <e lm="arabo">           <i>arab</i><par n="ino__n"/></e>
 <e lm="Araba Maro">      <p><l>Araba<b/>Maro</l><r>Araba<b/>Maro<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="Araba Maro">      <p><l>Araban<b/>Maron</l><r>Araba<b/>Maro<s n="np"/><s n="loc"/><s n="sg"/><s n="acc"/></r></p></e>
@@ -3782,7 +3776,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Argentaria">      <i>Argentaria</i><par n="Wikipedia__np"/></e>
 <e lm="Argenteuil">      <i>Argenteuil</i><par n="Barcelona__np"/></e>
 <e lm="argentina">       <i>argentin</i><par n="a__adj"/></e>
-<e lm="argentin">        <i>argentin</i><par n="eks__adj"/></e>
+<e lm="argentin">        <i>argentin</i><par n="eks__pref"/></e>
 <e lm="Argentino">       <i>Argentin</i><par n="Barcelon/o__np"/></e>
 <e lm="Argentina">       <i>Argentina</i><par n="Barcelona__np"/></e>
 <e lm="argentinano">     <i>argentinan</i><par n="ino__n"/></e>
@@ -3923,7 +3917,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="armeano">         <i>armean</i><par n="ino__n"/></e>
 <e lm="Armelio">         <i>Armelio</i><par n="Mark__np"/></e>
 <e lm="armena">          <i>armen</i><par n="a__adj"/></e>
-<e lm="armen">           <i>armen</i><par n="eks__adj"/></e>
+<e lm="armen">           <i>armen</i><par n="eks__pref"/></e>
 <e lm="armeno">          <i>armen</i><par n="ino__n"/></e>
 <e lm="Armengol">        <i>Armengol</i><par n="Mark__np"/></e>
 <e lm="Armenio">         <i>Armeni</i><par n="Barcelon/o__np"/></e>
@@ -4019,7 +4013,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="artifika">        <i>artifik</i><par n="a__adj"/></e>
 <e lm="artifiko">        <i>artifik</i><par n="o__n"/></e>
 <e lm="artifike">        <i>artifik</i><par n="e__adv"/></e>
-<e lm="artik">           <i>artik</i><par n="eks__adj"/></e>
+<e lm="artik">           <i>artik</i><par n="eks__pref"/></e>
 <e lm="artiko">          <i>artik</i><par n="o__n"/></e>
 <e lm="artik-tordo">     <i>artik-tord</i><par n="o__n"/></e>
 <e lm="artikiga">        <i>artikig</i><par n="a__adj"/></e>
@@ -4275,7 +4269,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="atlanto">         <i>atlant</i><par n="o__n"/></e>
 <e lm="Atlantido">       <i>Atlantid</i><par n="Barcelon/o__np"/></e>
 <e lm="atlantika">       <i>atlantik</i><par n="a__adj"/></e>
-<e lm="atlantik">        <i>atlantik</i><par n="eks__adj"/></e>
+<e lm="atlantik">        <i>atlantik</i><par n="eks__pref"/></e>
 <e lm="Atlantiko">       <i>Atlantik</i><par n="Barcelon/o__np"/></e>
 <e lm="atlantike">       <i>atlantik</i><par n="e__adv"/></e>
 <e lm="atlaso">          <i>atlas</i><par n="o__n"/></e>
@@ -4484,12 +4478,12 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Azarias">         <i>Azarias</i><par n="Mark__np"/></e>
 <e lm="azeno">           <i>azen</i><par n="ino__n"/></e>
 <e lm="azenaĵo">         <i>azenaĵ</i><par n="o__n"/></e>
-<e lm="azer">            <i>azer</i><par n="eks__adj"/></e>
+<e lm="azer">            <i>azer</i><par n="eks__pref"/></e>
 <e lm="azero">           <i>azer</i><par n="ino__n"/></e>
 <e lm="Azerbajĝano">     <i>Azerbajĝan</i><par n="Barcelon/o__np"/></e>
 <e lm="Azerio">          <i>Azeri</i><par n="Barcelon/o__np"/></e>
 <e lm="azia">            <i>azi</i><par n="a__adj"/></e>
-<e lm="azi">             <i>azi</i><par n="eks__adj"/></e>
+<e lm="azi">             <i>azi</i><par n="eks__pref"/></e>
 <e lm="Azio">            <i>Azi</i><par n="Barcelon/o__np"/></e>
 <e lm="azie">            <i>azi</i><par n="e__adv"/></e>
 <e lm="aziano">          <i>azian</i><par n="ino__n"/></e>
@@ -4581,10 +4575,10 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="aŭspicie">        <i>aŭspici</i><par n="e__adv"/></e>
 <e lm="aŭstera">         <i>aŭster</i><par n="a__adj"/></e>
 <e lm="aŭstra">          <i>aŭstr</i><par n="a__adj"/></e>
-<e lm="aŭstr">           <i>aŭstr</i><par n="eks__adj"/></e>
+<e lm="aŭstr">           <i>aŭstr</i><par n="eks__pref"/></e>
 <e lm="aŭstro">          <i>aŭstr</i><par n="ino__n"/></e>
 <e lm="aŭstrala">        <i>aŭstral</i><par n="a__adj"/></e>
-<e lm="aŭstrali">        <i>aŭstrali</i><par n="eks__adj"/></e>
+<e lm="aŭstrali">        <i>aŭstrali</i><par n="eks__pref"/></e>
 <e lm="aŭstralia">       <i>aŭstrali</i><par n="a__adj"/></e>
 <e lm="Aŭstralio">       <i>Aŭstrali</i><par n="Barcelon/o__np"/></e>
 <e lm="aŭstraliano">     <i>aŭstralian</i><par n="ino__n"/></e>
@@ -9505,7 +9499,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="DNA">             <i>DNA</i><par n="BBC__n"/></e>
 <e lm="do">              <i>do</i><par n="after__cnjadv"/></e>
 <e lm="do">              <i>do</i><par n="jam__adv"/></e>
-<e lm="do">              <i>do</i><par n="eks__adj"/></e>
+<e lm="do">              <i>do</i><par n="eks__pref"/></e>
 <e lm="Doan">            <i>Doan</i><par n="Smith__np"/></e>
 <e lm="Dobbs">           <i>Dobbs</i><par n="Smith__np"/></e>
 <e lm="Dobson">          <i>Dobson</i><par n="Smith__np"/></e>
@@ -9790,7 +9784,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Drôme">           <i>Drôme</i><par n="Barcelona__np"/></e>
 <e lm="Dsouza">          <i>Dsouza</i><par n="Smith__np"/></e>
 <e lm="dua">             <i>du</i><par n="a__adj"/></e>
-<e lm="du">              <i>du</i><par n="eks__adj"/></e>
+<e lm="du">              <i>du</i><par n="eks__pref"/></e>
 <e lm="due">             <i>du</i><par n="e__adv"/></e>
 <e lm="du">              <i>du</i><par n="du__num"/></e>
 <e lm="duo">             <i>du</i><par n="o__n"/></e>
@@ -9956,7 +9950,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="duobla implico">  <p><l>duoblan<b/>implicon</l><r>duobla<b/>implico<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="duodeno">         <i>duoden</i><par n="o__n"/></e>
 <e lm="duona">           <i>duon</i><par n="a__adj"/></e>
-<e lm="duon">            <i>duon</i><par n="eks__adj"/></e>
+<e lm="duon">            <i>duon</i><par n="eks__pref"/></e>
 <e lm="duon">            <i>duon</i><par n="eks__adv"/></e>
 <e lm="duono">           <i>duon</i><par n="o__n"/></e>
 <e lm="duoncirkla">      <i>duoncirkl</i><par n="a__adj"/></e>
@@ -10370,8 +10364,8 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="ekranego">        <i>ekraneg</i><par n="o__n"/></e>
 <e lm="ekrigardo">       <i>ekrigard</i><par n="o__n"/></e>
 <e lm="eksa">            <i>eks</i><par n="a__adj"/></e>
-<e lm="eks">             <i>eks</i><par n="eks__adj"/></e>
-<e lm="inter">             <i>inter</i><par n="eks__adj"/></e>
+<e lm="eks">             <i>eks</i><par n="eks__pref"/></e>
+<e lm="inter">             <i>inter</i><par n="eks__pref"/></e>
 <e lm="inter">             <i>inter</i><par n="eks__adv"/></e>
 <e lm="anticipa emeriteco"><p><l>anticipa<b/>emeriteco</l><r>anticipa<b/>emeriteco<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="anticipa emeriteco"><p><l>anticipan<b/>emeritecon</l><r>anticipa<b/>emeriteco<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
@@ -10381,7 +10375,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="disponebla financo"><p><l>disponeblan<b/>financon</l><r>disponebla<b/>financo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="disponebla financo"><p><l>disponeblaj<b/>financoj</l><r>disponebla<b/>financo<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
 <e lm="disponebla financo"><p><l>disponeblajn<b/>financojn</l><r>disponebla<b/>financo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
-<e lm="kun">             <i>kun</i><par n="eks__adj"/></e>
+<e lm="kun">             <i>kun</i><par n="eks__pref"/></e>
 <e lm="eksalto">         <i>eksalt</i><par n="o__n"/></e>
 <e lm="eksbatalanto">    <i>eksbatalant</i><par n="ino__n"/></e>
 <e lm="ekscelenco">      <i>ekscelenc</i><par n="o__n"/></e>
@@ -13075,7 +13069,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="frambo">          <i>framb</i><par n="o__n"/></e>
 <e lm="frambujo">        <i>frambuj</i><par n="o__n"/></e>
 <e lm="franca">          <i>franc</i><par n="a__adj"/></e>
-<e lm="franc">           <i>franc</i><par n="eks__adj"/></e>
+<e lm="franc">           <i>franc</i><par n="eks__pref"/></e>
 <e lm="franco">          <i>franc</i><par n="ino__n"/></e>
 <e lm="Francio">         <i>Franc</i><par n="Alban/io__np"/></e>
 <e lm="Franc">           <i>Franc</i><par n="Smith__np"/></e>
@@ -13602,7 +13596,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Gallichan">       <i>Gallichan</i><par n="Smith__np"/></e>
 <e lm="Gallien">         <i>Gallien</i><par n="Smith__np"/></e>
 <e lm="Gallimard">       <i>Gallimard</i><par n="Smith__np"/></e>
-<e lm="gallo">           <i>gallo</i><par n="eks__adj"/></e>
+<e lm="gallo">           <i>gallo</i><par n="eks__pref"/></e>
 <e lm="Gallo">           <i>Gallo</i><par n="Smith__np"/></e>
 <e lm="gallo-romia">     <i>gallo-romi</i><par n="a__adj"/></e>
 <e lm="gallo-romiano">   <i>gallo-romian</i><par n="ino__n"/></e>
@@ -14044,7 +14038,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Germain">         <i>Germain</i><par n="Mark__np"/></e>
 <e lm="Germaine">         <i>Germaine</i><par n="Marie__np"/></e>
 <e lm="germana">         <i>german</i><par n="a__adj"/></e>
-<e lm="german">          <i>german</i><par n="eks__adj"/></e>
+<e lm="german">          <i>german</i><par n="eks__pref"/></e>
 <e lm="germano">         <i>german</i><par n="ino__n"/></e>
 <e lm="Germanio">        <i>German</i><par n="Alban/io__np"/></e>
 <e lm="German">          <i>German</i><par n="Mark__np"/></e>
@@ -14665,7 +14659,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Greig">           <i>Greig</i><par n="Mark__np"/></e>
 <e lm="grejso">          <i>grejs</i><par n="o__n"/></e>
 <e lm="greka">           <i>grek</i><par n="a__adj"/></e>
-<e lm="grek">            <i>grek</i><par n="eks__adj"/></e>
+<e lm="grek">            <i>grek</i><par n="eks__pref"/></e>
 <e lm="greko">           <i>grek</i><par n="ino__n"/></e>
 <e lm="greka kruco">     <p><l>greka<b/>kruco</l><r>greka<b/>kruco<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="greka kruco">     <p><l>grekaj<b/>krucoj</l><r>greka<b/>kruco<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
@@ -15690,7 +15684,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="hinĝo">           <i>hinĝ</i><par n="o__n"/></e>
 <e lm="Hipabia">         <i>Hipabia</i><par n="Marie__np"/></e>
 <e lm="hipariono">       <i>hiparion</i><par n="o__n"/></e>
-<e lm="hiper">           <i>hiper</i><par n="eks__adj"/></e>
+<e lm="hiper">           <i>hiper</i><par n="eks__pref"/></e>
 <e lm="hiper">           <i>hiper</i><par n="eks__adv"/></e>
 <e lm="hiperbolo">       <i>hiperbol</i><par n="o__n"/></e>
 <e lm="hiperbola funkcio"><p><l>hiperbola<b/>funkcio</l><r>hiperbola<b/>funkcio<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
@@ -15774,7 +15768,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Hislop">          <i>Hislop</i><par n="Smith__np"/></e>
 <e lm="hisopo">          <i>hisop</i><par n="o__n"/></e>
 <e lm="hispana">         <i>hispan</i><par n="a__adj"/></e>
-<e lm="hispan">          <i>hispan</i><par n="eks__adj"/></e>
+<e lm="hispan">          <i>hispan</i><par n="eks__pref"/></e>
 <e lm="hispano">         <i>hispan</i><par n="ino__n"/></e>
 <e lm="Hispanio">        <i>Hispan</i><par n="Alban/io__np"/></e>
 <e lm="hispane">         <i>hispan</i><par n="e__adv"/></e>
@@ -17179,7 +17173,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Isère">           <i>Isère</i><par n="Barcelona__np"/></e>
 <e lm="Ita">             <i>Ita</i><par n="Marie__np"/></e>
 <e lm="itala">           <i>ital</i><par n="a__adj"/></e>
-<e lm="ital">            <i>ital</i><par n="eks__adj"/></e>
+<e lm="ital">            <i>ital</i><par n="eks__pref"/></e>
 <e lm="italo">           <i>ital</i><par n="ino__n"/></e>
 <e lm="Italio">          <i>Ital</i><par n="Alban/io__np"/></e>
 <e lm="Italio">          <i>Itali</i><par n="Barcelon/o__np"/></e>
@@ -18192,7 +18186,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Kamboĝo">         <i>Kamboĝ</i><par n="Barcelon/o__np"/></e>
 <e lm="kamboĝano">       <i>kamboĝan</i><par n="ino__n"/></e>
 <e lm="kambrio">         <i>kambri</i><par n="o__n"/></e>
-<e lm="kambrio">         <i>kambrio</i><par n="eks__adj"/></e>
+<e lm="kambrio">         <i>kambrio</i><par n="eks__pref"/></e>
 <e lm="kameo">           <i>kame</i><par n="o__n"/></e>
 <e lm="kamelo">          <i>kamel</i><par n="ino__n"/></e>
 <e lm="Kamel">           <i>Kamel</i><par n="Smith__np"/></e>
@@ -18255,7 +18249,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="kanabo">          <i>kanab</i><par n="o__n"/></e>
 <e lm="kanabaco">        <i>kanabac</i><par n="o__n"/></e>
 <e lm="kanabeno">        <i>kanaben</i><par n="o__n"/></e>
-<e lm="kanad">           <i>kanad</i><par n="eks__adj"/></e>
+<e lm="kanad">           <i>kanad</i><par n="eks__pref"/></e>
 <e lm="kanada">          <i>kanad</i><par n="a__adj"/></e>
 <e lm="franc-kanada">          <i>franc-kanad</i><par n="a__adj"/></e>
 <e lm="angl-kanada">          <i>angl-kanad</i><par n="a__adj"/></e>
@@ -20105,7 +20099,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="kontraste al">    <i>kontraste<b/>al</i><par n="al__pr"/></e>
 <e lm="kontraste kun">   <i>kontraste<b/>kun</i><par n="al__pr"/></e>
 <e lm="kontraŭa">        <i>kontraŭ</i><par n="a__adj"/></e>
-<e lm="kontraŭ">         <i>kontraŭ</i><par n="eks__adj"/></e>
+<e lm="kontraŭ">         <i>kontraŭ</i><par n="eks__pref"/></e>
 <e lm="kontraŭ">         <i>kontraŭ</i><par n="eks__adv"/></e>
 <e lm="kontraŭe">        <i>kontraŭ</i><par n="e__adv"/></e>
 <e lm="kontraŭ">         <i>kontraŭ</i><par n="al__pr"/></e>
@@ -20845,7 +20839,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="kun duplikato">   <i>kun<b/>duplikato</i><par n="jam__adv"/></e>
 <e lm="kun ekonomiaj problemoj"><i>kun<b/>ekonomiaj<b/>problemoj</i><par n="jam__adv"/></e>
 <e lm="kun espero">      <i>kun<b/>espero</i><par n="jam__adv"/></e>
-<e lm="kun karno kaj ostoj"><i>kun<b/>karno<b/>kaj<b/>ostoj</i><par n="eks__adj"/></e>
+<e lm="kun karno kaj ostoj"><i>kun<b/>karno<b/>kaj<b/>ostoj</i><par n="eks__pref"/></e>
 <e lm="kun la celo">     <i>kun<b/>la<b/>celo</i><par n="al__pr"/></e>
 <e lm="kun la merita respekto"><i>kun<b/>la<b/>merita<b/>respekto</i><par n="jam__adv"/></e>
 <e lm="kun mi">          <p><l>kun<b/>mi</l> <r>kun<b/>mi<s n="prn"/><s n="tn"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
@@ -22780,6 +22774,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Loïc">            <i>Loïc</i><par n="Mark__np"/></e>
 <e lm="loĝanto">         <i>loĝant</i><par n="ino__n"/></e>
 <e lm="loĝanto de Toul"> <i>loĝant</i><par n="ino__n"/><p><l><b/>de<b/>Toul</l><r><g><b/>de<b/>Toul</g></r></p></e>
+<e lm="loĝanto de Besançon"> <i>loĝant</i><par n="ino__n"/><p><l><b/>de<b/>Besançon</l><r><g><b/>de<b/>Besançon</g></r></p></e>
 <e lm="loĝantaro">       <i>loĝantar</i><par n="o__n"/></e>
 <e lm="loĝata">          <i>loĝat</i><par n="a__adj"/></e>
 <e lm="loĝaŭto">         <i>loĝaŭt</i><par n="o__n"/></e>
@@ -24843,7 +24838,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Melun">           <i>Melun</i><par n="Barcelona__np"/></e>
 <e lm="Melvin">          <i>Melvin</i><par n="Mark__np"/></e>
 <e lm="Melya" a="sans accents"><i>Melya</i><par n="Marie__np"/></e>
-<e lm="mem">             <i>mem</i><par n="eks__adj"/></e>
+<e lm="mem">             <i>mem</i><par n="eks__pref"/></e>
 <e lm="memo">            <i>mem</i><par n="o__n"/></e>
 <e lm="membiografio">    <i>membiografi</i><par n="o__n"/></e>
 <e lm="membiografia">    <i>membiografi</i><par n="a__adj"/></e>
@@ -25221,7 +25216,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Mikko" a="sans accents"><i>Mikko</i><par n="Mark__np"/></e>
 <e lm="Miko" a="sans accents"><i>Miko</i><par n="Mark__np"/></e>
 <e lm="mikro">           <i>mikr</i><par n="o__n"/></e>
-<e lm="mikro">           <i>mikro</i><par n="eks__adj"/></e>
+<e lm="mikro">           <i>mikro</i><par n="eks__pref"/></e>
 <e lm="mikrobo">         <i>mikrob</i><par n="o__n"/></e>
 <e lm="mikroba">         <i>mikrob</i><par n="a__adj"/></e>
 <e lm="mikrobiologo">    <i>mikrobiolog</i><par n="ino__n"/></e>
@@ -25374,7 +25369,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Ming">            <i>Ming</i><par n="Smith__np"/></e>
 <e lm="mingaso">         <i>mingas</i><par n="o__n"/></e>
 <e lm="Minhas">          <i>Minhas</i><par n="Smith__np"/></e>
-<e lm="mini">            <i>mini</i><par n="eks__adj"/></e>
+<e lm="mini">            <i>mini</i><par n="eks__pref"/></e>
 <e lm="minio">           <i>mini</i><par n="o__n"/></e>
 <e lm="miniaturo">       <i>miniatur</i><par n="o__n"/></e>
 <e lm="Minier">          <i>Minier</i><par n="Smith__np"/></e>
@@ -25455,7 +25450,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="mirtelo">         <i>mirtel</i><par n="o__n"/></e>
 <e lm="Mirza">           <i>Mirza</i><par n="Smith__np"/></e>
 <e lm="misa">            <i>mis</i><par n="a__adj"/></e>
-<e lm="mis">             <i>mis</i><par n="eks__adj"/></e>
+<e lm="mis">             <i>mis</i><par n="eks__pref"/></e>
 <e lm="Misael">          <i>Misael</i><par n="Mark__np"/></e>
 <e lm="misagorda">       <i>misagord</i><par n="a__adj"/></e>
 <e lm="misagordita">     <i>misagordit</i><par n="a__adj"/></e>
@@ -27580,7 +27575,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Nour" a="sans accents"><i>Nour</i><par n="Marie__np"/></e>
 <e lm="Noury">           <i>Noury</i><par n="Smith__np"/></e>
 <e lm="nova">            <i>nov</i><par n="a__adj"/></e>
-<e lm="nov">             <i>nov</i><par n="eks__adj"/></e>
+<e lm="nov">             <i>nov</i><par n="eks__pref"/></e>
 <e lm="nov">             <i>nov</i><par n="eks__adv"/></e>
 <e lm="nove">            <i>nov</i><par n="e__adv"/></e>
 <e lm="Nov-Anglio">      <i>Nov-Angl</i><par n="Alban/io__np"/></e>
@@ -29319,7 +29314,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="permesebla">      <i>permesebl</i><par n="a__adj"/></e>
 <e lm="permesilo">       <i>permesil</i><par n="o__n"/></e>
 <e lm="permio">          <i>permi</i><par n="o__n"/></e>
-<e lm="permio">          <i>permio</i><par n="eks__adj"/></e>
+<e lm="permio">          <i>permio</i><par n="eks__pref"/></e>
 <e lm="permuto">         <i>permut</i><par n="o__n"/></e>
 <e lm="permutaĵo">       <i>permutaĵ</i><par n="o__n"/></e>
 <e lm="pernio">          <i>perni</i><par n="o__n"/></e>
@@ -30085,7 +30080,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="politekniko">     <i>politeknik</i><par n="o__n"/></e>
 <e lm="politeknike">     <i>politeknik</i><par n="e__adv"/></e>
 <e lm="politika">        <i>politik</i><par n="a__adj"/></e>
-<e lm="politik">         <i>politik</i><par n="eks__adj"/></e>
+<e lm="politik">         <i>politik</i><par n="eks__pref"/></e>
 <e lm="politike">        <i>politik</i><par n="e__adv"/></e>
 <e lm="politiko">        <i>politik</i><par n="o__n"/></e>
 <e lm="politika sistemo"><p><l>politika<b/>sistemo</l><r>politika<b/>sistemo<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
@@ -30205,7 +30200,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="populare">        <i>popular</i><par n="e__adv"/></e>
 <e lm="populareco">      <i>popularec</i><par n="o__n"/></e>
 <e lm="pora">            <i>por</i><par n="a__adj"/></e>
-<e lm="por">             <i>por</i><par n="eks__adj"/></e>
+<e lm="por">             <i>por</i><par n="eks__pref"/></e>
 <e lm="por">             <i>por</i><par n="eks__adv"/></e>
 <e lm="por">             <i>por</i><par n="al__pr"/></e>
 <e lm="por">             <i>por</i><par n="after__cnjadv"/></e>
@@ -30295,7 +30290,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="posesivo">        <i>posesiv</i><par n="o__n"/></e>
 <e lm="Possession">      <i>Possession</i><par n="Barcelona__np"/></e>
 <e lm="posta">           <i>post</i><par n="a__adj"/></e>
-<e lm="post">            <i>post</i><par n="eks__adj"/></e>
+<e lm="post">            <i>post</i><par n="eks__pref"/></e>
 <e lm="post">            <i>post</i><par n="eks__adv"/></e>
 <e lm="poste">           <i>post</i><par n="e__adv"/></e>
 <e lm="post">            <i>post</i><par n="al__pr"/></e>
@@ -30924,7 +30919,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="protestanto">     <i>protestant</i><par n="ino__n"/></e>
 <e lm="protestantismo">  <i>protestantism</i><par n="o__n"/></e>
 <e lm="protezo">         <i>protez</i><par n="o__n"/></e>
-<e lm="proto">           <i>proto</i><par n="eks__adj"/></e>
+<e lm="proto">           <i>proto</i><par n="eks__pref"/></e>
 <e lm="proto">           <i>proto</i><par n="eks__adv"/></e>
 <e lm="protokolo">       <i>protokol</i><par n="o__n"/></e>
 <e lm="protokola">       <i>protokol</i><par n="a__adj"/></e>
@@ -32746,7 +32741,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="rupio">           <i>rupi</i><par n="o__n"/></e>
 <e lm="Ruriko">          <i>Rurik</i><par n="Mark/o__np"/></e>
 <e lm="rusa">            <i>rus</i><par n="a__adj"/></e>
-<e lm="rus">             <i>rus</i><par n="eks__adj"/></e>
+<e lm="rus">             <i>rus</i><par n="eks__pref"/></e>
 <e lm="ruso">            <i>rus</i><par n="ino__n"/></e>
 <e lm="Rusio">           <i>Rus</i><par n="Alban/io__np"/></e>
 <e lm="Ruscito">         <i>Ruscito</i><par n="Smith__np"/></e>
@@ -33355,7 +33350,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Saturnino">       <i>Saturnino</i><par n="Mark__np"/></e>
 <e lm="saturnofesto">    <i>saturnofest</i><par n="o__n"/></e>
 <e lm="Saucier">         <i>Saucier</i><par n="Smith__np"/></e>
-<e lm="saud">            <i>saud</i><par n="eks__adj"/></e>
+<e lm="saud">            <i>saud</i><par n="eks__pref"/></e>
 <e lm="Saud-Arabio">     <i>Saud-Arabi</i><par n="Barcelon/o__np"/></e>
 <e lm="Saul">            <i>Saul</i><par n="Mark__np"/></e>
 <e lm="Saulnier">        <i>Saulnier</i><par n="Smith__np"/></e>
@@ -34075,7 +34070,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="sesa">            <i>ses</i><par n="a__adj"/></e>
 <e lm="sese">            <i>ses</i><par n="e__adv"/></e>
 <e lm="ses">             <i>ses</i><par n="du__num"/></e>
-<e lm="ses">             <i>ses</i><par n="eks__adj"/></e>
+<e lm="ses">             <i>ses</i><par n="eks__pref"/></e>
 <e lm="sesangulo">       <i>sesangul</i><par n="o__n"/></e>
 <e lm="sesangula">       <i>sesangul</i><par n="a__adj"/></e>
 <e lm="sescent">         <i>sescent</i><par n="du__num"/></e>
@@ -34800,7 +34795,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="socilingvistika"> <i>socilingvistik</i><par n="a__adj"/></e>
 <e lm="socilingvistiko"> <i>socilingvistik</i><par n="o__n"/></e>
 <e lm="socilingvistike"> <i>socilingvistik</i><par n="e__adv"/></e>
-<e lm="socio">           <i>socio</i><par n="eks__adj"/></e>
+<e lm="soci">           <i>soci</i><par n="eks__pref"/></e>
 <e lm="sociologo">       <i>sociolog</i><par n="ino__n"/></e>
 <e lm="sociologia">      <i>sociologi</i><par n="a__adj"/></e>
 <e lm="sociologio">      <i>sociologi</i><par n="o__n"/></e>
@@ -35522,7 +35517,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Su">              <i>Su</i><par n="Smith__np"/></e>
 <e lm="Suarez">          <i>Suarez</i><par n="Smith__np"/></e>
 <e lm="suba">            <i>sub</i><par n="a__adj"/></e>
-<e lm="sub">             <i>sub</i><par n="eks__adj"/></e>
+<e lm="sub">             <i>sub</i><par n="eks__pref"/></e>
 <e lm="sub">             <i>sub</i><par n="eks__adv"/></e>
 <e lm="sube">            <i>sub</i><par n="e__adv"/></e>
 <e lm="sub">             <i>sub</i><par n="al__pr"/></e>
@@ -35696,7 +35691,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="suda poluso">     <p><l>suda<b/>poluso</l><r>suda<b/>poluso<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="Suda Ĉina Maro">  <p><l>Suda<b/>Ĉina<b/>Maro</l><r>Suda<b/>Ĉina<b/>Maro<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="sudafrika">       <i>sudafrik</i><par n="a__adj"/></e>
-<e lm="sudafrik">        <i>sudafrik</i><par n="eks__adj"/></e>
+<e lm="sudafrik">        <i>sudafrik</i><par n="eks__pref"/></e>
 <e lm="sudafrikano">     <i>sudafrikan</i><par n="ino__n"/></e>
 <e lm="suda poluso">     <p><l>sudaj<b/>polusoj</l><r>suda<b/>poluso<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
 <e lm="suda poluso">     <p><l>sudajn<b/>polusojn</l><r>suda<b/>poluso<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
@@ -35844,7 +35839,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="supo">            <i>sup</i><par n="o__n"/></e>
 <e lm="supeo">           <i>supe</i><par n="o__n"/></e>
 <e lm="supera">          <i>super</i><par n="a__adj"/></e>
-<e lm="super">           <i>super</i><par n="eks__adj"/></e>
+<e lm="super">           <i>super</i><par n="eks__pref"/></e>
 <e lm="super">           <i>super</i><par n="eks__adv"/></e>
 <e lm="super">           <i>super</i><par n="al__pr"/></e>
 <e lm="supera baro">     <p><l>supera<b/>baro</l><r>supera<b/>baro<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
@@ -36435,7 +36430,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="tekunveno">       <i>tekunven</i><par n="o__n"/></e>
 <e lm="tekvondo">        <i>tekvond</i><par n="o__n"/></e>
 <e lm="tel">             <i>tel</i><par n="BBC__n"/></e>
-<e lm="tele">            <i>tele</i><par n="eks__adj"/></e>
+<e lm="tele">            <i>tele</i><par n="eks__pref"/></e>
 <e lm="Telecom Italia">  <i>Telecom<b/>Italia</i><par n="Wikipedia__np"/></e>
 <e lm="telefilmo">       <i>telefilm</i><par n="o__n"/></e>
 <e lm="telefona">        <i>telefon</i><par n="a__adj"/></e>
@@ -37178,8 +37173,11 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Toubon">          <i>Toubon</i><par n="Smith__np"/></e>
 <e lm="Touchette">       <i>Touchette</i><par n="Smith__np"/></e>
 <e lm="Tougas">          <i>Tougas</i><par n="Smith__np"/></e>
+<e lm="Fortuné">          <i>Fortuné</i><par n="Smith__np"/></e>
+<e lm="Fortuné">          <i>Fortuné</i><par n="Mark__np"/></e>
 <e lm="Toul">            <i>Toul</i><par n="Barcelona__np"/></e>
 <e lm="Toul-a">          <i>Toul-</i><par n="a__adj"/></e>
+<e lm="Besançon-a">          <i>Besançon-</i><par n="a__adj"/></e>
 <e lm="Toulon">          <i>Toulon</i><par n="Barcelona__np"/></e>
 <e lm="Toulouse">        <i>Toulouse</i><par n="Smith__np"/></e>
 <e lm="Toulouse">        <i>Toulouse</i><par n="Barcelona__np"/></e>
@@ -37411,7 +37409,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="trezoro">         <i>trezor</i><par n="o__n"/></e>
 <e lm="trezoristo">      <i>trezorist</i><par n="ino__n"/></e>
 <e lm="tria">            <i>tri</i><par n="a__adj"/></e>
-<e lm="tri">             <i>tri</i><par n="eks__adj"/></e>
+<e lm="tri">             <i>tri</i><par n="eks__pref"/></e>
 <e lm="trie">            <i>tri</i><par n="e__adv"/></e>
 <e lm="tri">             <i>tri</i><par n="du__num"/></e>
 <e lm="trio">            <i>tri</i><par n="o__n"/></e>
@@ -37828,7 +37826,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Ulrich">          <i>Ulrich</i><par n="Smith__np"/></e>
 <e lm="Ulrico">          <i>Ulrico</i><par n="Mark__np"/></e>
 <e lm="ultimato">        <i>ultimat</i><par n="o__n"/></e>
-<e lm="ultra">           <i>ultra</i><par n="eks__adj"/></e>
+<e lm="ultra">           <i>ultra</i><par n="eks__pref"/></e>
 <e lm="ultramaro">       <i>ultramar</i><par n="o__n"/></e>
 <e lm="ultramontana">    <i>ultramontan</i><par n="a__adj"/></e>
 <e lm="ultramontano">    <i>ultramontan</i><par n="ino__n"/></e>
@@ -37909,7 +37907,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="Unsdorfer">       <i>Unsdorfer</i><par n="Smith__np"/></e>
 <e lm="unu">             <p><l>unu</l>       <r>unu<s n="prn"/><s n="tn"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="unua">            <i>unu</i><par n="a__adj"/></e>
-<e lm="unu">             <i>unu</i><par n="eks__adj"/></e>
+<e lm="unu">             <i>unu</i><par n="eks__pref"/></e>
 <e lm="unue">            <i>unu</i><par n="e__adv"/></e>
 <e lm="unu">             <i>unu</i><par n="unu__num"/></e>
 <e lm="unuo">            <i>unu</i><par n="o__n"/></e>
@@ -38067,7 +38065,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="uskleco">         <i>usklec</i><par n="o__n"/></e>
 <e lm="Usmaro">          <i>Usmaro</i><par n="Mark__np"/></e>
 <e lm="usona">           <i>uson</i><par n="a__adj"/></e>
-<e lm="uson">            <i>uson</i><par n="eks__adj"/></e>
+<e lm="uson">            <i>uson</i><par n="eks__pref"/></e>
 <e lm="Usono">           <i>Uson</i><par n="Barcelon/o__np"/></e>
 <e lm="usonano">         <i>usonan</i><par n="ino__n"/></e>
 <e lm="usonigo">         <i>usonig</i><par n="o__n"/></e>
@@ -38730,7 +38728,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="vibro">           <i>vibr</i><par n="o__n"/></e>
 <e lm="vibracio">        <i>vibraci</i><par n="o__n"/></e>
 <e lm="vibrado">         <i>vibrad</i><par n="o__n"/></e>
-<e lm="vic">             <i>vic</i><par n="eks__adj"/></e>
+<e lm="vic">             <i>vic</i><par n="eks__pref"/></e>
 <e lm="vice">            <i>vic</i><par n="e__adv"/></e>
 <e lm="vico de funkcioj"><i>vic</i><par n="o__n"/><p><l><b/>de<b/>funkcioj</l><r><g><b/>de<b/>funkcioj</g></r></p></e>
 <e lm="vico">            <i>vic</i><par n="o__n"/></e>
@@ -38787,7 +38785,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="videble">         <i>videbl</i><par n="e__adv"/></e>
 <e lm="videbleco">       <i>videblec</i><par n="o__n"/></e>
 <e lm="videjo">          <i>videj</i><par n="o__n"/></e>
-<e lm="video">           <i>video</i><par n="eks__adj"/></e>
+<e lm="video">           <i>video</i><par n="eks__pref"/></e>
 <e lm="video- kaj sonoteko"><i>video-<b/>kaj<b/>sonotek</i><par n="o__n"/></e>
 <e lm="videofilmo">      <i>videofilm</i><par n="o__n"/></e>
 <e lm="videoludo">       <i>videolud</i><par n="o__n"/></e>
@@ -40155,10 +40153,12 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="ĉorizo">          <i>ĉoriz</i><par n="o__n"/></e>
 <e lm="ĉu">              <i>ĉu</i><par n="after__cnjadv"/></e>
 <e lm="ĉu ne">              <i>ĉu<b/>ne</i><par n="after__cnjadv"/></e>
+<e lm="Graves">        <i>Graves</i><par n="Smith__np"/></e>
 <e lm="ĉu">              <i>ĉu</i><par n="ke__cnjsub"/></e>
 <e lm="ĉukĉa">           <i>ĉukĉ</i><par n="a__adj"/></e>
 <e lm="Ĉukĉa">           <i>Ĉukĉ</i><par n="a__adj"/></e>
 <e lm="ĉukĉo">           <i>ĉukĉ</i><par n="ino__n"/></e>
+<e lm="franc-arabido">           <i>franc-arabid</i><par n="ino__n"/></e>
 <e lm="Ĉukĉio">          <i>Ĉukĉ</i><par n="Alban/io__np"/></e>
 <e lm="Ĉukĉa Duoninsulo"><p><l>Ĉukĉa<b/>Duoninsulo</l><r>Ĉukĉa<b/>Duoninsulo<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="Ĉukĉa Maro">      <p><l>Ĉukĉa<b/>Maro</l><r>Ĉukĉa<b/>Maro<s n="np"/><s n="loc"/><s n="sg"/><s n="nom"/></r></p></e>
@@ -40635,12 +40635,21 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="ŝvita">           <i>ŝvit</i><par n="a__adj"/></e>
 <e lm="ŝvito">           <i>ŝvit</i><par n="o__n"/></e>
 <e lm="ŝvitbano">        <i>ŝvitban</i><par n="o__n"/></e>
+<e lm="pranevo">        <i>pranev</i><par n="ino__n"/></e>
 <e lm="ŝvitiga">         <i>ŝvitig</i><par n="a__adj"/></e>
 
 <e lm="anticipa emeriteco"><p><l>anticipa<b/>emeriteco</l><r>anticipa<b/>emeriteco<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="anticipa emeriteco"><p><l>anticipan<b/>emeritecon</l><r>anticipa<b/>emeriteco<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
 <e lm="anticipa emeriteco"><p><l>anticipaj<b/>emeritecoj</l><r>anticipa<b/>emeriteco<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
 <e lm="anticipa emeriteco"><p><l>anticipajn<b/>emeritecojn</l><r>anticipa<b/>emeriteco<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="libera tempo"><p><l>libera<b/>tempo</l><r>libera<b/>tempo<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="libera tempo"><p><l>liberan<b/>tempon</l><r>libera<b/>tempo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="libera tempo"><p><l>liberaj<b/>tempoj</l><r>libera<b/>tempo<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="libera tempo"><p><l>liberajn<b/>tempojn</l><r>libera<b/>tempo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="libera okupo"><p><l>libera<b/>okupo</l><r>libera<b/>okupo<s n="n"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="libera okupo"><p><l>liberan<b/>okupon</l><r>libera<b/>okupo<s n="n"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="libera okupo"><p><l>liberaj<b/>okupoj</l><r>libera<b/>okupo<s n="n"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="libera okupo"><p><l>liberajn<b/>okupojn</l><r>libera<b/>okupo<s n="n"/><s n="pl"/><s n="acc"/></r></p></e>
 
 <e lm="atenda">            <i>atend</i><par n="a__adj"/></e>
 <e lm="aviomodelismo">            <i>aviomodelism</i><par n="o__n"/></e>
@@ -43096,7 +43105,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 <e lm="pretiĝi">            <i>pret</i><par n="/iĝi__vbntr"/></e>
 <e lm="prezenti">            <i>prezent</i><par n="i__vbtr"/></e>
 <e lm="prezentiĝi">            <i>prezent</i><par n="/iĝi__vbntr"/></e>
-<e lm="prezidi">            <i>prezid</i><par n="i__vbntr"/></e>
+<e lm="prezidi">            <i>prezid</i><par n="i__vbtr"/></e>
 <e lm="preĝi">            <i>preĝ</i><par n="i__vbntr"/></e>
 <e lm="pridemandi">            <i>pridemand</i><par n="i__vbtr"/></e>
 <e lm="pridisputi">            <i>pridisput</i><par n="i__vbtr"/></e>
