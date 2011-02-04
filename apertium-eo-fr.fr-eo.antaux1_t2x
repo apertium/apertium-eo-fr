@@ -58,6 +58,10 @@
       <cat-item tags="SN.dat.*"/>
     </def-cat>
 
+    <def-cat n="prn_ref">
+      <cat-item lemma="se" tags="SN.obj.*"/>
+    </def-cat>
+
     <def-cat n="dato">
       <cat-item lemma="dato" tags="SN.*"/>
     </def-cat>
@@ -149,7 +153,6 @@
 
     <def-cat n="SVser">
       <cat-item tags="SV.vbser.*"/>
-      <cat-item tags="SV.vbmod.*"/>
     </def-cat>
 
     <def-cat n="SVtrser">
@@ -164,6 +167,10 @@
       <cat-item tags="SV.vbtr.inf"/>
       <cat-item tags="SV.vbntr.inf"/>
       <cat-item tags="SV.vbtr_ntr.inf"/>
+      <cat-item tags="SV.vblex.inf.*"/>
+      <cat-item tags="SV.vbtr.inf.*"/>
+      <cat-item tags="SV.vbntr.inf.*"/>
+      <cat-item tags="SV.vbtr_ntr.inf.*"/>
     </def-cat>
 
     <def-cat n="inf_tot">
@@ -3086,11 +3093,12 @@
 
 <!-- Reguloj de SV -->
 
-<!-- malpreta
-    <rule comment="REGLA: SVser PRNobj -   SVser tia (tu l'es -> vi estas tia) ">
+
+    <rule comment="REGLA: SVser de INF -   SVser INF (suis obligé de manger -> estas devigita manĝi )">
       <pattern>
         <pattern-item n="SVser"/>
-        <pattern-item n="prn_obj"/>
+        <pattern-item n="de"/>
+        <pattern-item n="inf"/>
       </pattern>
       <action>
         <out>
@@ -3098,47 +3106,91 @@
             <clip pos="1" part="whole"/>
           </chunk>
           <b pos="1"/>
-	  <chunk>
-	    <get-case-from pos="2">
-	      <lit v="adj"/>
-	    </get-case-from>
-	    <lit-tag v="SA.mf"/>
-            <clip pos="1" part="nbr"/>
-	    <lit-tag v="nom.nom"/>
-	    <lit v="{^"/>
-	    <get-case-from pos="2">
-	      <lit v="tia"/>
-	    </get-case-from>
-	    <lit-tag v="adj.3.4"/>
-	    <lit v="$}"/>
-	  </chunk>
+        </out>
+        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
         </out>
       </action>
     </rule>
 
-ŝablono por poste "c'est lui -> estas li"
-    <rule comment="REGLA: PREP PRNobj -  PREP PRNsubj: nominativo post prepozicio">
+
+    <rule comment="REGLA: SVser de ADV INF -   SVser INF (c'est de ne manger -> estas ne manĝi )">
       <pattern>
-        <pattern-item n="pr"/>
-        <pattern-item n="prn_obj"/>
+        <pattern-item n="SVser"/>
+        <pattern-item n="de"/>
+        <pattern-item n="adv"/>
+        <pattern-item n="inf"/>
       </pattern>
       <action>
-        <let>
-          <clip pos="2" part="tipus_prn"/>
-          <lit-tag v="subj"/>
-        </let>
         <out>
           <chunk>
             <clip pos="1" part="whole"/>
           </chunk>
           <b pos="1"/>
+        </out>
+        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+          <b pos="3"/>
+          <chunk>
+            <clip pos="4" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: SVser PRNobj INF -   SVser INF PRNobj (tu le sembles manger -> vi ŝajnas ĝin manĝi -> vi ŝajnas manĝi ĝin)">
+      <pattern>
+        <pattern-item n="SVser"/>
+        <pattern-item n="prn_obj"/>
+        <pattern-item n="inf"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+          <b pos="2"/>
           <chunk>
             <clip pos="2" part="whole"/>
           </chunk>
         </out>
       </action>
     </rule>
--->
+
+
+    <rule comment="REGLA: PRNref SV -   SV PRNref (se dit -> sin diras -> diras sin)">
+      <pattern>
+        <pattern-item n="prn_ref"/>
+        <pattern-item n="SV"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <get-case-from pos="1"><clip pos="2" part="lem"/></get-case-from>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <get-case-from pos="2"><clip pos="1" part="lem"/></get-case-from>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: SVser DATO KE   -   DATO (c'est le 19 març que -> la 19an de marto) ">
       <pattern>
@@ -3237,6 +3289,7 @@ por eviti la neŝalton de la regulo pri artikolo en 'il decida de ne pas fumer d
       </action>
     </rule>
 
+
     <rule comment="REGLA: SV À/AL INF -  SV INF: destiné à être -> destinitaj esti">
       <pattern>
         <pattern-item n="SV_pp"/>
@@ -3280,6 +3333,128 @@ por eviti la neŝalton de la regulo pri artikolo en 'il decida de ne pas fumer d
         </out>
         <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
         <out>
+          <chunk>
+            <clip pos="4" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: SV À/AL ADV INF -  SV ADV INF: destiné à ne pas être -> destinitaj ne esti">
+      <pattern>
+        <pattern-item n="SV_pp"/>
+        <pattern-item n="al"/>
+        <pattern-item n="ne"/>
+        <pattern-item n="inf_tot"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+        </out>
+        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+          <b pos="3"/>
+          <chunk>
+            <clip pos="4" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: SV SN À/AL ADV INF -  SV SN ADV INF: oblige les gens à ne pas être -> devigas la homojn ne esti">
+      <pattern>
+        <pattern-item n="SV"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="al"/>
+        <pattern-item n="adv"/>
+        <pattern-item n="inf_tot"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="2"/>
+        </out>
+        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="4" part="whole"/>
+          </chunk>
+          <b pos="4"/>
+          <chunk>
+            <clip pos="5" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: SV À/AL PRN INF -  SV ADV INF: destiné à ne lui dire -> destinitaj diri al li">
+      <pattern>
+        <pattern-item n="SV_pp"/>
+        <pattern-item n="al"/>
+        <pattern-item n="prn_obj"/>
+        <pattern-item n="inf_tot"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+        </out>
+        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="4" part="whole"/>
+          </chunk>
+          <b pos="3"/>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: SV SN À/AL PRN INF -  SV SN ADV INF: oblige les gens à lui dire -> devigas la homojn diri al li">
+      <pattern>
+        <pattern-item n="SV"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="al"/>
+        <pattern-item n="prn_obj"/>
+        <pattern-item n="inf_tot"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="2"/>
+        </out>
+        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="5" part="whole"/>
+          </chunk>
+          <b pos="4"/>
           <chunk>
             <clip pos="4" part="whole"/>
           </chunk>

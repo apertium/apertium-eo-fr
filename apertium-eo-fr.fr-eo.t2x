@@ -72,7 +72,6 @@
 
     <def-cat n="SV">
       <cat-item tags="SV.*"/>
-      <cat-item tags="SVneg.*"/>
     </def-cat>
 
     <def-cat n="SVvolition">
@@ -88,10 +87,6 @@
       <cat-item tags="SV.vbtr.*"/>
       <cat-item tags="SV.vbntr.*"/>
       <cat-item tags="SV.vbtr_ntr.*"/>
-      <cat-item tags="SVneg.vblex.*"/>
-      <cat-item tags="SVneg.vbtr.*"/>
-      <cat-item tags="SVneg.vbntr.*"/>
-      <cat-item tags="SVneg.vbtr_ntr.*"/>
     </def-cat>
 
     <def-cat n="SVtrans">
@@ -112,21 +107,13 @@
       <cat-item lemma="verbcj" tags="SV.vbtr.*"/>
       <cat-item lemma="verbcj" tags="SV.vbntr.*"/>
       <cat-item lemma="verbcj" tags="SV.vbtr_ntr.*"/>
-      <cat-item lemma="verbcj" tags="SVneg.*"/>
       <cat-item lemma="verbcj_perif" tags="SV.*"/>
-      <cat-item lemma="verbcj_perif" tags="SVneg.*"/>
       <cat-item lemma="aux_verb" tags="SV.*"/>
-      <cat-item lemma="aux_verb" tags="SVneg.*"/>
       <cat-item lemma="haver_pp" tags="SV.*"/>
-      <cat-item lemma="haver_pp" tags="SVneg.*"/>
       <cat-item lemma="haver_pp_enc" tags="SV.*"/>
-      <cat-item lemma="haver_pp_enc" tags="SVneg.*"/>
       <cat-item lemma="aux_haver_pp" tags="SV.*"/>
-      <cat-item lemma="aux_haver_pp" tags="SVneg.*"/>
       <cat-item lemma="aux_haver_pp_enc" tags="SV.*"/>
-      <cat-item lemma="aux_haver_pp_enc" tags="SVneg.*"/>
       <cat-item lemma="verbcj_enc" tags="SV.*"/>
-      <cat-item lemma="verbcj_enc" tags="SVneg.*"/>
     <!--  <cat-item lemma="be_adj" tags="SV.*"/>-->
     </def-cat>
 
@@ -135,16 +122,16 @@
       <cat-item tags="SV.vbtr.inf"/>
       <cat-item tags="SV.vbntr.inf"/>
       <cat-item tags="SV.vbtr_ntr.inf"/>
-      <cat-item tags="SVneg.vblex.inf"/>
-      <cat-item tags="SVneg.vbtr.inf"/>
-      <cat-item tags="SVneg.vbntr.inf"/>
-      <cat-item tags="SVneg.vbtr_ntr.inf"/>
       <cat-item tags="SV.vbhaver.inf"/>
-      <cat-item tags="SVneg.vbhaver.inf"/>
       <cat-item tags="SV.vbser.inf"/>
-      <cat-item tags="SVneg.vbser.inf"/>
       <cat-item tags="SV.vbmod.inf"/>
-      <cat-item tags="SVneg.vbmod.inf"/>
+      <cat-item tags="SV.vblex.inf.*"/>
+      <cat-item tags="SV.vbtr.inf.*"/>
+      <cat-item tags="SV.vbntr.inf.*"/>
+      <cat-item tags="SV.vbtr_ntr.inf.*"/>
+      <cat-item tags="SV.vbhaver.inf.*"/>
+      <cat-item tags="SV.vbser.inf.*"/>
+      <cat-item tags="SV.vbmod.inf.*"/>
     </def-cat>
 
     <def-cat n="SVmoviment"> <!-- per l'acusatiu dels verbs de moviment-->
@@ -174,7 +161,6 @@
 
     <def-cat n="ser">
       <cat-item tags="SV.vbser.*"/>
-      <cat-item tags="SVneg.vbser.*"/>
     </def-cat>
 
     <def-cat n="cnjsub">
