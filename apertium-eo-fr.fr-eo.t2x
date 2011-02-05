@@ -179,6 +179,10 @@
       <cat-item tags="SA.*"/>
     </def-cat>
 
+    <def-cat n="PRNnosubj">
+      <cat-item tags="SN.tn.*"/>
+    </def-cat>
+
     <def-cat n="cnjcoo">
       <cat-item tags="cnjcoo"/>
     </def-cat>
@@ -1444,6 +1448,36 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
       <pattern>
 	<pattern-item n="SVtrans_pred"/>
 	<pattern-item n="SA"/>
+	<pattern-item n="SNacc"/>
+      </pattern>
+      <action>
+
+	    <let>
+	      <clip pos="3" part="case"/>
+	      <lit-tag v="acc"/>
+	    </let>
+
+	<out>
+	  <chunk>
+            <clip pos="1" part="whole"/>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk>
+            <clip pos="2" part="whole"/>
+	  </chunk>
+	  <b pos="2"/>
+	  <chunk>
+            <clip pos="3" part="whole"/>
+	  </chunk>
+	</out>
+      </action>
+</rule>
+
+
+<rule comment="REGLA: SVtrans PRNnosubj SN (EO per l'acusatiu dels SN objecte amb changecase=nom)">
+      <pattern>
+	<pattern-item n="SVtrans"/>
+	<pattern-item n="PRNnosubj"/>
 	<pattern-item n="SNacc"/>
       </pattern>
       <action>
