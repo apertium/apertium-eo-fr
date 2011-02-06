@@ -386,54 +386,14 @@
             </choose>
     </def-macro>
 
-  <def-macro n="f_bcond" npar="1"><!--Per mirar si el blanc conté o no format. Cal posar aquesta funció en les regles en què desaparegui alguna paraula, per tal de decidir si el blanc de la paraula eliminada s'ha d'eliminar o conservar. Si conté format cal conservar-la, si no en conté cal eliminar-la perquè no apareguin dos espais seguits. -->
+  <def-macro n="f_bcond" npar="2"><!--Per mirar si el blanc conté o no format. Cal posar aquesta funció en les regles en què desaparegui alguna paraula, per tal de decidir si el blanc de la paraula eliminada s'ha d'eliminar o conservar. Si conté format cal conservar-la, si no en conté cal eliminar-la perquè no apareguin dos espais seguits. -->
      	<choose>
      	  <when>
      	    <test><not><equal><b pos="1"/><lit v=" "/></equal></not></test>
             <out>
               <b pos="1"/>
             </out>
-          </when>     	    
-     	</choose>
-  </def-macro>
-
-  <def-macro n="f_b1" npar="1"> <!-- simile al la antaŭa, tamen, ĉar ne eblas atribui valoron al <b> ni uzas variablon b1 -->
-     	<choose>
-     	  <when>
-     	    <test><equal><b pos="1"/><lit v=" "/></equal></test>
-     	      <let><var n="b1"/><lit v=""/></let>
-          </when>     	    
-     	  <otherwise><let><var n="b1"/><b pos="1"/></let></otherwise>
-     	</choose>
-  </def-macro>
-
-  <def-macro n="f_b2" npar="1"> <!-- simile al la antaŭa, tamen, ĉar ne eblas atribui valoron al <b> ni uzas variablon b2 -->
-     	<choose>
-     	  <when>
-     	    <test><equal><b pos="1"/><lit v=" "/></equal></test>
-     	      <let><var n="b2"/><lit v=""/></let>
-          </when>     	    
-     	  <otherwise><let><var n="b2"/><b pos="1"/></let></otherwise>
-     	</choose>
-  </def-macro>
-
-  <def-macro n="f_b3" npar="1"> <!-- simile al la antaŭa, tamen, ĉar ne eblas atribui valoron al <b> ni uzas variablon b3 -->
-     	<choose>
-     	  <when>
-     	    <test><equal><b pos="1"/><lit v=" "/></equal></test>
-     	      <let><var n="b3"/><lit v=""/></let>
-          </when>     	    
-     	  <otherwise><let><var n="b3"/><b pos="1"/></let></otherwise>
-     	</choose>
-  </def-macro>
-
-  <def-macro n="f_b4" npar="1"> <!-- simile al la antaŭa, tamen, ĉar ne eblas atribui valoron al <b> ni uzas variablon b4 -->
-     	<choose>
-     	  <when>
-     	    <test><equal><b pos="1"/><lit v=" "/></equal></test>
-     	      <let><var n="b4"/><lit v=""/></let>
-          </when>     	    
-     	  <otherwise><let><var n="b4"/><b pos="1"/></let></otherwise>
+          </when>     	
      	</choose>
   </def-macro>
 
@@ -467,7 +427,7 @@
                 <lit v="}"/>
               </chunk>
             </out>
-            <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+            <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
           </when>
           <otherwise>
             <out>
@@ -971,7 +931,7 @@
             <test>
               <equal caseless="yes"><clip pos="1" part="lem"/><lit v="un"/></equal>
             </test>
-            <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+            <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
             <out>
               <chunk>
                 <get-case-from pos="1"><lit v="det_nom1"/></get-case-from>
@@ -1020,7 +980,7 @@
             <test>
               <equal caseless="yes"><clip pos="1" part="lem"/><lit v="un"/></equal>
             </test>
-            <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+            <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
             <out>
               <chunk>
                 <get-case-from pos="1"><lit v="det_nom1"/></get-case-from>
@@ -1138,7 +1098,7 @@
             <test>
               <equal caseless="yes"><clip pos="1" part="lem"/><lit v="un"/></equal>
             </test>
-            <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+            <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
             <out>
               <chunk>
                 <get-case-from pos="1"><lit v="det_nom1"/></get-case-from>
@@ -1203,7 +1163,7 @@
             <test>
               <equal caseless="yes"><clip pos="1" part="lem"/><lit v="un"/></equal>
             </test>
-            <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+            <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
             <out>
               <chunk>
                 <get-case-from pos="1"><lit v="det_nom3"/></get-case-from>
@@ -1334,8 +1294,8 @@
             </chunk>
             <b pos="1"/>
           </out>
-          <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
-          <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
           <out>
             <chunk>
               <lit v="det_nom"/>
@@ -1372,8 +1332,8 @@
           </chunk>
           <b pos="1"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
-        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="3"><lit v="det_nom"/></get-case-from>
@@ -1418,8 +1378,8 @@
             </chunk>
             <b pos="2"/>
           </out>
-          <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
-          <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
           <out>
             <chunk>
               <lit v="det_nom"/>
@@ -1463,8 +1423,8 @@
           </chunk>
           <b pos="2"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
-        <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="4"><lit v="det_nom"/></get-case-from>
@@ -1512,8 +1472,8 @@
             </chunk>
             <b pos="3"/>
           </out>
-          <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
-          <call-macro n="f_bcond"><with-param pos="5"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
           <out>
             <chunk>
               <lit v="det_nom"/>
@@ -1560,8 +1520,8 @@
           </chunk>
           <b pos="3"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
-        <call-macro n="f_bcond"><with-param pos="5"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="5"><lit v="det_nom"/></get-case-from>
@@ -1609,8 +1569,8 @@
             </chunk>
             <b pos="3"/>
           </out>
-          <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
-          <call-macro n="f_bcond"><with-param pos="5"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
           <out>
             <chunk>
               <lit v="det_nom"/>
@@ -1651,8 +1611,8 @@
             </chunk>
             <b pos="2"/>
           </out>
-          <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
-          <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
           <out>
             <chunk>
               <lit v="det_nom"/>
@@ -1694,8 +1654,8 @@
           </chunk>
           <b pos="2"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
-        <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="4"><lit v="det_nom"/></get-case-from>
@@ -1735,7 +1695,7 @@
             </chunk>
             <b pos="1"/>
           </out>
-          <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
           <out>
             <chunk>
               <lit v="det_nom"/>
@@ -1774,7 +1734,7 @@
           </chunk>
           <b pos="1"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="3"><lit v="det_nom"/></get-case-from>
@@ -1821,7 +1781,7 @@
             </chunk>
             <b pos="2"/>
           </out>
-          <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
           <out>
             <chunk>
               <lit v="det_nom"/>
@@ -1867,7 +1827,7 @@
           </chunk>
           <b pos="2"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="4"><lit v="det_nom"/></get-case-from>
@@ -1917,7 +1877,7 @@
             </chunk>
             <b pos="3"/>
           </out>
-          <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
           <out>
             <chunk>
               <lit v="det_nom"/>
@@ -1966,7 +1926,7 @@
           </chunk>
           <b pos="3"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="5"><lit v="det_nom"/></get-case-from>
@@ -2016,7 +1976,7 @@
             </chunk>
             <b pos="3"/>
           </out>
-          <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
           <out>
             <chunk>
               <lit v="det_nom"/>
@@ -2059,7 +2019,7 @@
             </chunk>
             <b pos="2"/>
           </out>
-          <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
           <out>
             <chunk>
               <lit v="det_nom"/>
@@ -2103,7 +2063,7 @@
           </chunk>
           <b pos="2"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="4"><lit v="det_nom"/></get-case-from>
@@ -2142,7 +2102,7 @@
             </chunk>
             <b pos="2"/>
           </out>
-          <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
           <out>
             <chunk>
               <clip pos="4" part="whole"/>
@@ -2171,7 +2131,7 @@
           </chunk>
           <b pos="2"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="3"><lit v="det_nom"/></get-case-from>
@@ -2210,7 +2170,7 @@
           </chunk>
           <b pos="3"/>
           </out>
-          <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
           <out>
             <chunk>
               <clip pos="5" part="whole"/>
@@ -2244,7 +2204,7 @@
           </chunk>
           <b pos="3"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="4"><lit v="det_nom"/></get-case-from>
@@ -2283,7 +2243,7 @@
             </chunk>
             <b pos="3"/>
           </out>
-          <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
           <out>
             <chunk>
               <clip pos="5" part="whole"/>
@@ -2317,7 +2277,7 @@
           </chunk>
           <b pos="3"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="4"><lit v="det_nom"/></get-case-from>
@@ -2359,7 +2319,7 @@
             </chunk>
             <b pos="3"/>
           </out>
-          <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
           <out>
             <chunk>
               <lit v="det_nom"/>
@@ -2399,7 +2359,7 @@
           </chunk>
           <b pos="3"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="4"><lit v="det_nom"/></get-case-from>
@@ -2443,7 +2403,7 @@
             </chunk>
             <b pos="4"/>
           </out>
-          <call-macro n="f_bcond"><with-param pos="5"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
           <out>
             <chunk>
               <lit v="det_nom"/>
@@ -2486,7 +2446,7 @@
           </chunk>
           <b pos="4"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="5"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="5"><lit v="det_nom"/></get-case-from>
@@ -2531,7 +2491,7 @@
             </chunk>
             <b pos="4"/>
           </out>
-          <call-macro n="f_bcond"><with-param pos="5"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
           <out>
             <chunk>
               <lit v="det_nom"/>
@@ -2568,8 +2528,8 @@
             </chunk>
             <b pos="1"/>
           </out>
-          <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
-          <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
           <out>
             <chunk>
               <lit v="det_nom"/>
@@ -2606,8 +2566,8 @@
           </chunk>
           <b pos="1"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
-        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="3"><lit v="det_nom"/></get-case-from>
@@ -2645,7 +2605,7 @@
             </chunk>
             <b pos="1"/>
           </out>
-          <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+          <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
           <out>
             <chunk>
               <lit v="det_nom"/>
@@ -2684,7 +2644,7 @@
       </chunk>
       <b pos="1"/>
     </out>
-    <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+    <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
     <out>
       <chunk>
       <get-case-from pos="3"><lit v="det_nom"/></get-case-from>
@@ -3107,7 +3067,7 @@
           </chunk>
           <b pos="1"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
           <chunk>
             <clip pos="3" part="whole"/>
@@ -3131,7 +3091,7 @@
           </chunk>
           <b pos="1"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
           <chunk>
             <clip pos="3" part="whole"/>
@@ -3303,7 +3263,7 @@ por eviti la neŝalton de la regulo pri artikolo en 'il decida de ne pas fumer d
           </chunk>
           <b pos="1"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
           <chunk>
             <clip pos="3" part="whole"/>
@@ -3331,7 +3291,7 @@ por eviti la neŝalton de la regulo pri artikolo en 'il decida de ne pas fumer d
           </chunk>
           <b pos="2"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <out>
           <chunk>
             <clip pos="4" part="whole"/>
@@ -3355,7 +3315,7 @@ por eviti la neŝalton de la regulo pri artikolo en 'il decida de ne pas fumer d
           </chunk>
           <b pos="1"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
           <chunk>
             <clip pos="3" part="whole"/>
@@ -3388,7 +3348,7 @@ por eviti la neŝalton de la regulo pri artikolo en 'il decida de ne pas fumer d
           </chunk>
           <b pos="2"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <out>
           <chunk>
             <clip pos="4" part="whole"/>
@@ -3416,7 +3376,7 @@ por eviti la neŝalton de la regulo pri artikolo en 'il decida de ne pas fumer d
           </chunk>
           <b pos="1"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
           <chunk>
             <clip pos="4" part="whole"/>
@@ -3449,7 +3409,7 @@ por eviti la neŝalton de la regulo pri artikolo en 'il decida de ne pas fumer d
           </chunk>
           <b pos="2"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <out>
           <chunk>
             <clip pos="5" part="whole"/>
@@ -3574,7 +3534,7 @@ por eviti la neŝalton de la regulo pri artikolo en 'il decida de ne pas fumer d
 	    <lit v="$}"/>
 	  </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
       </action>
     </rule>
 -->
@@ -3748,7 +3708,7 @@ por eviti la neŝalton de la regulo pri artikolo en 'il decida de ne pas fumer d
     </rule>
 
 
-<!-- CITILOJ --> 
+<!-- CITILOJ -->
 
     <rule comment="REGLA: « any »  -   any ">
       <pattern>
@@ -3808,7 +3768,7 @@ por eviti la neŝalton de la regulo pri artikolo en 'il decida de ne pas fumer d
                 <lit v="}"/>
               </chunk>
             </out>
-            <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+            <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
           </when>
           <otherwise>
             <out>
@@ -3868,7 +3828,7 @@ por eviti la neŝalton de la regulo pri artikolo en 'il decida de ne pas fumer d
                 <lit v="}"/>
               </chunk>
             </out>
-            <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+            <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
           </when>
           <otherwise>
             <out>
@@ -4063,7 +4023,7 @@ por eviti la neŝalton de la regulo pri artikolo en 'il decida de ne pas fumer d
                 <lit v="}"/>
               </chunk>
             </out>
-            <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+            <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
           </when>
           <otherwise>
             <out>
@@ -4099,7 +4059,7 @@ por eviti la neŝalton de la regulo pri artikolo en 'il decida de ne pas fumer d
             <clip pos="1" part="whole"/>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <clip pos="2" part="whole"/>
@@ -4121,13 +4081,13 @@ por eviti la neŝalton de la regulo pri artikolo en 'il decida de ne pas fumer d
             <clip pos="1" part="whole"/>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <clip pos="2" part="whole"/>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
           <chunk>
             <clip pos="3" part="whole"/>

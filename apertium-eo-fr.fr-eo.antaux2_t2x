@@ -46,12 +46,6 @@
       <cat-item tags="unknown"/>
     </def-cat>
 
-    <def-cat n="SNSVser">
-      <cat-item tags="SN.*"/>
-      <cat-item tags="SA.*"/> <!-- utilas por morfologiaj miselektoj -->
-      <cat-item tags="SV.vbser.*"/>
-    </def-cat>
-
     <def-cat n="prn_subjenc">
       <cat-item lemma="prn_subjenc" tags="SN.subj.*"/>
     </def-cat>
@@ -119,6 +113,10 @@
 
     <def-cat n="de">
       <cat-item lemma="de" tags="pr"/>
+    </def-cat>
+
+    <def-cat n="de_par">
+      <cat-item lemma="de_par" tags="pr"/>
     </def-cat>
 
     <def-cat n="unknown">
@@ -277,14 +275,14 @@
       </choose>
   </def-macro>
 
-  <def-macro n="f_bcond" npar="1"><!--Per mirar si el blanc conté o no format. Cal posar aquesta funció en les regles en què desaparegui alguna paraula, per tal de decidir si el blanc de la paraula eliminada s'ha d'eliminar o conservar. Si conté format cal conservar-la, si no en conté cal eliminar-la perquè no apareguin dos espais seguits. -->
+  <def-macro n="f_bcond" npar="2"><!--Per mirar si el blanc conté o no format. Cal posar aquesta funció en les regles en què desaparegui alguna paraula, per tal de decidir si el blanc de la paraula eliminada s'ha d'eliminar o conservar. Si conté format cal conservar-la, si no en conté cal eliminar-la perquè no apareguin dos espais seguits. -->
      	<choose>
      	  <when>
      	    <test><not><equal><b pos="1"/><lit v=" "/></equal></not></test>
             <out>
               <b pos="1"/>
             </out>
-          </when>     	    
+          </when>     	
      	</choose>
   </def-macro>
 
@@ -305,7 +303,7 @@
 	    <clip pos="1" part="whole"/>
 	  </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
       </action>
     </rule>
 
@@ -373,7 +371,7 @@
 	    <clip pos="1" part="whole"/>
 	  </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
 	  <chunk>
 	    <clip pos="2" part="whole"/>
@@ -434,7 +432,7 @@
 	    <clip pos="2" part="whole"/>
 	  </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
       </action>
     </rule>
 
@@ -508,7 +506,7 @@
 	    <clip pos="1" part="whole"/>
 	  </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
 	  <chunk>
 	    <clip pos="2" part="whole"/>
@@ -570,7 +568,7 @@
         <pattern-item n="SN"/>
       </pattern>
       <action>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <clip pos="2" part="whole"/>
@@ -657,8 +655,8 @@
         <pattern-item n="nek"/>
         <pattern-item n="SN"/>
       </pattern>
-      <action>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+	      <action>
+		<call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <clip pos="2" part="whole"/>
@@ -819,7 +817,7 @@
         </out>
       </otherwise>
     </choose>
-    <call-macro n="f_bcond"><with-param pos="5"/></call-macro>
+    <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
     <out>
       <chunk>
         <clip pos="6" part="whole"/>
@@ -913,7 +911,7 @@
         </out>
       </otherwise>
     </choose>
-    <call-macro n="f_bcond"><with-param pos="6"/></call-macro>
+    <call-macro n="f_bcond"><with-param pos="6"/><with-param pos="7"/></call-macro>
     <out>
       <chunk>
         <clip pos="7" part="whole"/>
@@ -932,7 +930,7 @@
         <pattern-item n="SAdj"/>
       </pattern>
       <action>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <clip pos="2" part="whole"/>
@@ -1004,7 +1002,7 @@
         <pattern-item n="SAdj"/>
       </pattern>
       <action>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <clip pos="2" part="whole"/>
@@ -1081,7 +1079,7 @@
         <pattern-item n="adv"/>
       </pattern>
       <action>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <clip pos="2" part="whole"/>
@@ -1115,7 +1113,7 @@
         <pattern-item n="adv"/>
       </pattern>
       <action>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <clip pos="2" part="whole"/>
@@ -1151,7 +1149,7 @@
         <pattern-item n="adv"/>
       </pattern>
       <action>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <clip pos="2" part="whole"/>
@@ -1190,7 +1188,7 @@
         <pattern-item n="adv"/>
       </pattern>
       <action>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <clip pos="2" part="whole"/>
@@ -1331,7 +1329,7 @@
       </action>
     </rule>
 
-<rule comment="REGLA: da LOC -> de LOC">
+    <rule comment="REGLA: da LOC -> de LOC">
       <pattern>
 	<pattern-item n="da"/>
 	<pattern-item n="loc"/>
@@ -1358,9 +1356,9 @@
 	  </chunk>
 	</out>
       </action>
-</rule>
+    </rule>
  
-<rule comment="REGLA: SN PP ( le livre tombé )">
+    <rule comment="REGLA: SN PP ( le livre tombé )">
       <pattern>
 	<pattern-item n="SN_nopron"/>
 	<pattern-item n="pp_adj"/>
@@ -1412,10 +1410,10 @@
 	</otherwise>
       </choose>
     </action>
-</rule>
+    </rule>
 
 
-<rule comment="REGLA: SN ADV PP ( le livre également tombé )">
+    <rule comment="REGLA: SN ADV PP ( le livre également tombé )">
       <pattern>
 	<pattern-item n="SN_nopron"/>
 	<pattern-item n="adv"/>
@@ -1474,10 +1472,10 @@
 	</otherwise>
       </choose>
     </action>
-</rule>
+    </rule>
 
 
-<rule comment="REGLA: SN DE SN PP ( la version des faits soutenue )">
+    <rule comment="REGLA: SN DE SN PP ( la version des faits soutenue )">
       <pattern>
 	<pattern-item n="SN_nopron"/>
 	<pattern-item n="de"/>
@@ -1588,7 +1586,7 @@
 	</otherwise>
       </choose>
     </action>
-</rule>
+    </rule>
 
 
     <!-- kunordigo -->
@@ -1873,6 +1871,24 @@
     </rule>
 
 
+  <!-- ARTIKOLO -->
+
+    <rule comment="REGLA: DE DE   -   DE: forigo de artikolo antaŭe ne forigita ">
+      <pattern>
+        <pattern-item n="de_par"/>
+        <pattern-item n="de"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+        </out>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
+      </action>
+    </rule>
+
+
   <!-- BLANKOJ -->
 
     <rule comment="REGLA: forigo de blankoj antaŭ fermaj interpunkciiloj ">
@@ -1886,7 +1902,7 @@
             <clip pos="1" part="whole"/>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <clip pos="2" part="whole"/>
@@ -1907,13 +1923,13 @@
             <clip pos="1" part="whole"/>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <clip pos="2" part="whole"/>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
           <chunk>
             <clip pos="3" part="whole"/>

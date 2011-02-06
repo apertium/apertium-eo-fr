@@ -37,6 +37,8 @@
       <cat-item lemma="saint" tags="adj.*"/>
       <cat-item lemma="Saint" tags="np.loc.*"/>
       <cat-item lemma="Sainte" tags="np.loc.*"/>
+      <cat-item lemma="St" tags="np.loc.*"/>
+      <cat-item lemma="Ste" tags="np.loc.*"/>
     </def-cat>
 
      <def-cat n="npunk">
@@ -802,6 +804,10 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
       <cat-item tags="vbser.pp.*"/>
     </def-cat>
 
+    <def-cat n="faire-pp">
+      <cat-item lemma="faire" tags="vblex.pp.*"/>
+    </def-cat>
+
     <def-cat n="vbser-pp"> <!-- verboj postulantaj la helpverbon "être" (do necesas konsideri kiel kompleksa tenso kaj ne kiel pasiva formo "être + pp" -->
       <cat-item lemma="arriver" tags="vblex.pp.*"/>
       <cat-item lemma="venir" tags="vblex.pp.*"/>
@@ -1001,6 +1007,7 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
     <def-cat n="advneg">
       <cat-item lemma="jamais" tags="adv"/>
       <cat-item lemma="pas du tout" tags="adv"/>
+      <cat-item lemma="non plus" tags="adv"/>
     </def-cat>
 
     <def-cat n="pronneg">
@@ -1783,15 +1790,15 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
 </def-macro>
 
 
-  <def-macro n="f_bcond" npar="1"><!--Per mirar si el blanc conté o no format. Cal posar aquesta funció en les regles en què desaparegui alguna paraula, per tal de decidir si el blanc de la paraula eliminada s'ha d'eliminar o conservar. Si conté format cal conservar-la, si no en conté cal eliminar-la perquè no apareguin dos espais seguits. -->
-             <choose>
-               <when>
-                 <test><not><equal><b pos="1"/><lit v=" "/></equal></not></test>
+  <def-macro n="f_bcond" npar="2"><!--Per mirar si el blanc conté o no format. Cal posar aquesta funció en les regles en què desaparegui alguna paraula, per tal de decidir si el blanc de la paraula eliminada s'ha d'eliminar o conservar. Si conté format cal conservar-la, si no en conté cal eliminar-la perquè no apareguin dos espais seguits. -->
+     	<choose>
+     	  <when>
+     	    <test><not><equal><b pos="1"/><lit v=" "/></equal></not></test>
             <out>
               <b pos="1"/>
             </out>
-          </when>                 
-             </choose>
+          </when>     	
+     	</choose>
   </def-macro>
 
 
@@ -3185,6 +3192,19 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
    </choose>
 </def-macro>
 
+<!-- tiu ĉi makroo estas vokata por ŝanĝi la tradukon de adjektivoj kun malsama traduko, kiam ili
+antaŭas la nomon -->
+<def-macro n="set_antaux_adj" npar="1"> 
+   <choose>
+        <when>
+          <test>
+            <equal caseless="yes"><clip pos="1" side="sl" part="lem"/><lit v="ancien"/></equal>
+          </test>
+          <let><clip pos="1" side="tl" part="lem"/><lit v="eksa"/></let>
+        </when>
+   </choose>
+</def-macro>
+
 <def-macro n="set_plu" npar="1"> <!-- ŝanĝas 'plus' ('pli') al 'plu' -->
    <choose>
         <when>
@@ -3197,23 +3217,6 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
           <let>
             <clip pos="1" side="tl" part="lem"/>
             <lit v="plu"/>
-          </let>
-        </when>
-   </choose>
-</def-macro>
-
-<def-macro n="set_igi" npar="1"> <!-- ŝanĝas 'faire' ('fari') al 'igi' -->
-   <choose>
-        <when>
-          <test>
-            <equal caseless="yes">
-              <clip pos="1" side="sl" part="lem"/>
-              <lit v="faire"/>
-            </equal>
-          </test>
-          <let>
-            <clip pos="1" side="tl" part="lem"/>
-            <lit v="igi"/>
           </let>
         </when>
    </choose>
@@ -3296,8 +3299,8 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
             </lu>
           </chunk>
         </out>        
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
-        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -3333,7 +3336,7 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <b pos="2"/>
           <chunk namefrom="ndet">
@@ -5593,8 +5596,7 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
-              <lit-tag v="np"/>
-              <lit-tag v="loc"/>
+              <clip pos="1" side="tl" part="a_nom"/>
               <lit-tag v="3"/>
               <lit-tag v="4"/>
               <clip pos="1" side="tl" part="lemq"/>
@@ -5952,8 +5954,7 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
             </tags>
             <lu>
               <clip pos="2" side="tl" part="lem"/>
-              <lit-tag v="np"/>
-              <lit-tag v="loc"/>
+              <clip pos="2" side="tl" part="a_nom"/>
               <lit-tag v="3"/>
               <lit-tag v="4"/>
             </lu>
@@ -6001,8 +6002,7 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
             </tags>
             <lu>
               <clip pos="3" side="tl" part="lem"/>
-              <lit-tag v="np"/>
-              <lit-tag v="loc"/>
+              <clip pos="3" side="tl" part="a_nom"/>
               <lit-tag v="3"/>
               <lit-tag v="4"/>
             </lu>
@@ -6047,8 +6047,7 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
             </tags>
             <lu>
               <clip pos="2" side="tl" part="lem"/>
-              <lit-tag v="np"/>
-              <lit-tag v="loc"/>
+              <clip pos="2" side="tl" part="a_nom"/>
               <lit-tag v="3"/>
               <lit-tag v="4"/>
             </lu>
@@ -6073,8 +6072,7 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
             </tags>
             <lu>
               <clip pos="4" side="tl" part="lem"/>
-              <lit-tag v="np"/>
-              <lit-tag v="loc"/>
+              <clip pos="4" side="tl" part="a_nom"/>
               <lit-tag v="3"/>
               <lit-tag v="4"/>
             </lu>
@@ -6124,8 +6122,7 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
             </tags>
             <lu>
               <clip pos="2" side="tl" part="lem"/>
-              <lit-tag v="np"/>
-              <lit-tag v="loc"/>
+              <clip pos="2" side="tl" part="a_nom"/>
               <lit-tag v="3"/>
               <lit-tag v="4"/>
             </lu>
@@ -6150,8 +6147,7 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
             </tags>
             <lu>
               <clip pos="5" side="tl" part="lem"/>
-              <lit-tag v="np"/>
-              <lit-tag v="loc"/>
+              <clip pos="5" side="tl" part="a_nom"/>
               <lit-tag v="3"/>
               <lit-tag v="4"/>
             </lu>
@@ -6202,8 +6198,7 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
             </tags>
             <lu>
               <clip pos="3" side="tl" part="lem"/>
-              <lit-tag v="np"/>
-              <lit-tag v="loc"/>
+              <clip pos="3" side="tl" part="a_nom"/>
               <lit-tag v="3"/>
               <lit-tag v="4"/>
             </lu>
@@ -6228,8 +6223,7 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
             </tags>
             <lu>
               <clip pos="6" side="tl" part="lem"/>
-              <lit-tag v="np"/>
-              <lit-tag v="loc"/>
+              <clip pos="6" side="tl" part="a_nom"/>
               <lit-tag v="3"/>
               <lit-tag v="4"/>
             </lu>
@@ -6275,8 +6269,7 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
             <b pos ="1"/>
             <lu>
               <clip pos="3" side="tl" part="lem"/>
-              <lit-tag v="np"/>
-              <lit-tag v="loc"/>
+              <clip pos="3" side="tl" part="a_nom"/>
               <lit-tag v="3"/>
               <lit-tag v="4"/>
             </lu>
@@ -6415,8 +6408,7 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
             </tags>
             <lu>
               <clip pos="2" side="tl" part="lem"/>
-              <lit-tag v="np"/>
-              <lit-tag v="loc"/>
+              <clip pos="2" side="tl" part="a_nom"/>
               <lit-tag v="3"/>
               <lit-tag v="4"/>
             </lu>
@@ -6441,8 +6433,7 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
             </tags>
             <lu>
               <clip pos="4" side="tl" part="lem"/>
-              <lit-tag v="np"/>
-              <lit-tag v="loc"/>
+              <clip pos="4" side="tl" part="a_nom"/>
               <lit-tag v="3"/>
               <lit-tag v="4"/>
             </lu>
@@ -7056,6 +7047,9 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
         <call-macro n="nom_cas">
           <with-param pos="3"/>
         </call-macro>
+        <call-macro n="set_antaux_adj">
+          <with-param pos="2"/>
+        </call-macro>
 
         <out>
           <chunk name="num_nom" case="caseFirstWord">
@@ -7127,6 +7121,9 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
         </call-macro>
         <call-macro n="nom_cas">
           <with-param pos="3"/>
+        </call-macro>
+        <call-macro n="set_antaux_adj">
+          <with-param pos="2"/>
         </call-macro>
 
         <out>
@@ -7208,6 +7205,12 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
         <call-macro n="nom_cas">
           <with-param pos="4"/>
         </call-macro>
+        <call-macro n="set_antaux_adj">
+          <with-param pos="2"/>
+        </call-macro>
+        <call-macro n="set_antaux_adj">
+          <with-param pos="3"/>
+        </call-macro>
 
         <out>
           <chunk name="num_nom" case="caseFirstWord">
@@ -7286,6 +7289,9 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
         <call-macro n="nom_cas">
           <with-param pos="4"/>
         </call-macro>
+        <call-macro n="set_antaux_adj">
+          <with-param pos="3"/>
+        </call-macro>
 
         <out>
           <chunk name="_num_nom" case="caseFirstWord">
@@ -7363,6 +7369,9 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
         </call-macro>
         <call-macro n="nom_cas">
           <with-param pos="4"/>
+        </call-macro>
+        <call-macro n="set_antaux_adj">
+          <with-param pos="3"/>
         </call-macro>
 
         <out>
@@ -7862,6 +7871,10 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
         <call-macro n="nom_cas">
           <with-param pos="2"/>
         </call-macro>
+        <call-macro n="set_antaux_adj">
+          <with-param pos="1"/>
+        </call-macro>
+
         <out>
           <chunk name="nom_adj" case="caseFirstWord">
             <tags>
@@ -8125,8 +8138,6 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
               <clip pos="3" side="tl" part="tags"/>
 <!--
               <clip pos="3" side="tl" part="lemh"/>
-              <lit-tag v="np"/>
-              <lit-tag v="loc"/>
               <clip pos="3" side="tl" part="a_nom"/>
               <clip pos="3" side="tl" part="gen"/>
               <lit-tag v="3"/>
@@ -8168,6 +8179,10 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
         <call-macro n="nom_cas">
           <with-param pos="3"/>
         </call-macro>
+        <call-macro n="set_antaux_adj">
+          <with-param pos="2"/>
+        </call-macro>
+
         <out>
           <chunk name="nom_adj" case="caseFirstWord">
             <tags>
@@ -8235,6 +8250,10 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
         <call-macro n="nom_cas">
           <with-param pos="3"/>
         </call-macro>
+        <call-macro n="set_antaux_adj">
+          <with-param pos="2"/>
+        </call-macro>
+
         <out>
           <chunk name="nom_adj" case="caseFirstWord">
             <tags>
@@ -8309,6 +8328,13 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
         <call-macro n="nom_cas">
           <with-param pos="3"/>
         </call-macro>
+        <call-macro n="set_antaux_adj">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="set_antaux_adj">
+          <with-param pos="2"/>
+        </call-macro>
+
         <out>
           <chunk name="nom_adj" case="caseFirstWord">
             <tags>
@@ -8381,6 +8407,13 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
         <call-macro n="nom_cas">
           <with-param pos="3"/>
         </call-macro>
+        <call-macro n="set_antaux_adj">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="set_antaux_adj">
+          <with-param pos="2"/>
+        </call-macro>
+
         <out>
           <chunk name="nom_adj" case="caseFirstWord">
             <tags>
@@ -8459,6 +8492,13 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
         <call-macro n="nom_cas">
           <with-param pos="4"/>
         </call-macro>
+        <call-macro n="set_antaux_adj">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="set_antaux_adj">
+          <with-param pos="3"/>
+        </call-macro>
+
         <out>
           <chunk name="nom_adj" case="caseFirstWord">
             <tags>
@@ -8537,6 +8577,13 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
         <call-macro n="nom_cas">
           <with-param pos="4"/>
         </call-macro>
+        <call-macro n="set_antaux_adj">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="set_antaux_adj">
+          <with-param pos="3"/>
+        </call-macro>
+
         <out>
           <chunk name="nom_adj" case="caseFirstWord">
             <tags>
@@ -10204,6 +10251,9 @@ En tiuj okazoj ni ŝanĝas la tradukon de kelkaj verboj por aliaj pli probable �
         <call-macro n="nom_cas">
           <with-param pos="2"/>
         </call-macro>
+        <call-macro n="set_antaux_adj">
+          <with-param pos="1"/>
+        </call-macro>
 
         <out>
           <chunk name="nom_adj" case="caseFirstWord">
@@ -11608,7 +11658,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -11671,7 +11721,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -11846,7 +11896,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="1"/>
         </call-macro>
 
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="ne" case="caseFirstWord">
             <tags>
@@ -11895,7 +11945,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -11923,7 +11973,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="ne" case="caseFirstWord">
             <tags>
@@ -11999,7 +12049,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="5"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -12117,7 +12167,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -12179,7 +12229,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -12253,8 +12303,8 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
-        <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -12334,8 +12384,8 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
-        <call-macro n="f_bcond"><with-param pos="5"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -13538,7 +13588,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -13614,7 +13664,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           </lu>
          </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -13640,7 +13690,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
         <call-macro n="set_temps">
           <with-param pos="2"/>
         </call-macro>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="verbcj" case="caseFirstWord">
             <tags>
@@ -13686,7 +13736,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -13713,7 +13763,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
         <call-macro n="set_temps">
           <with-param pos="2"/>
         </call-macro>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="verbcj" case="caseFirstWord">
             <tags>
@@ -13764,7 +13814,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           </lu>
          </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="5"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -13799,8 +13849,8 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <let><clip pos="2" side="tl" part="temps"/><lit-tag v="past"/></let>
               </when>
         </choose>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
-        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
           <chunk name="verbcj" case="caseFirstWord">
             <tags>
@@ -13846,7 +13896,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="5"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -13882,8 +13932,8 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 <let><clip pos="2" side="tl" part="temps"/><lit-tag v="past"/></let>
               </when>
         </choose>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
-        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
           <chunk name="verbcj" case="caseFirstWord">
             <tags>
@@ -13934,7 +13984,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           </lu>
          </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="6"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="6"/><with-param pos="7"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -13962,7 +14012,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
         <call-macro n="set_temps">
           <with-param pos="3"/>
         </call-macro>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="ne" case="caseFirstWord">
               <tags>
@@ -13993,7 +14043,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           </chunk>
           <b pos="3"/>
         </out>
-        <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <out>
           <chunk name="adv">
             <tags>
@@ -14021,7 +14071,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="6"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="6"/><with-param pos="7"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -14050,7 +14100,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
         <call-macro n="set_temps">
           <with-param pos="3"/>
         </call-macro>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="ne" case="caseFirstWord">
               <tags>
@@ -14081,7 +14131,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           </chunk>
         <b pos="3"/>
       </out>
-      <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+      <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
       <out>
         <chunk name="adv">
           <tags>
@@ -14114,7 +14164,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           </lu>
          </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="7"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="7"/><with-param pos="8"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -14493,7 +14543,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -14568,9 +14618,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond">
-          <with-param pos="3"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -14649,9 +14697,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
           </out>
-          <call-macro n="f_bcond">
-            <with-param pos="2"/>
-          </call-macro>
+          <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
           <out>
           <b pos="3"/>
         </out>
@@ -14744,7 +14790,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <out>
           <b pos="4"/>
         </out>
@@ -14949,9 +14995,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="2"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
           </when>
 
               <when>  <!-- traduccions des de gerundi -> inte -->
@@ -14983,9 +15027,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="2"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
               </when>
 
             <otherwise>
@@ -15091,9 +15133,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="2"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
           </when>
 
               <when>  <!-- traduccions des de gerundi -> inte -->
@@ -15125,9 +15165,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="2"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
               </when>
 
             <otherwise>
@@ -15289,9 +15327,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-        <call-macro n="f_bcond">
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="adv" case="caseFirstWord">
             <tags>
@@ -15313,12 +15349,8 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond">
-          <with-param pos="3"/>
-        </call-macro>
-        <call-macro n="f_bcond">
-          <with-param pos="4"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -15954,9 +15986,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
-        <call-macro n="f_bcond">
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
                 <test>
@@ -16079,9 +16109,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="4"/>
         </call-macro>
 
-        <call-macro n="f_bcond">
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="adv" case="caseFirstWord">
             <tags>
@@ -16743,9 +16771,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-        <call-macro n="f_bcond">
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="adv" case="caseFirstWord">
             <tags>
@@ -16767,12 +16793,8 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond">
-          <with-param pos="3"/>
-        </call-macro>
-        <call-macro n="f_bcond">
-          <with-param pos="4"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -17242,9 +17264,103 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond">
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <let>
+          <var n="caseFirstWord"/>
+          <lit v="aa"/>
+        </let>
+      </action>
+    </rule>
+
+
+    <rule comment="VERBhaver + PPfaire + INF (a fait lire -> legigis )">
+      <pattern>
+        <pattern-item n="haver"/>
+        <pattern-item n="faire-pp"/>
+        <pattern-item n="inf"/>
+      </pattern>
+      <action>
+        <call-macro n="firstWord">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="tipus_verbs">
           <with-param pos="3"/>
         </call-macro>
+        <choose>
+              <when>  <!-- traduccions des de present -> passat (1)-->
+                <test>
+                  <or>
+                    <equal>
+                      <clip pos="1" side="sl" part="temps"/>
+                      <lit-tag v="pri"/><!--present indicatiu dic -->
+                    </equal>
+                    <equal>
+                      <clip pos="1" side="sl" part="temps"/>
+                      <lit-tag v="prs"/><!--present subjunctiu digui -->
+                    </equal>
+                  </or>
+                </test>
+                <let>
+                  <clip pos="3" side="tl" part="temps"/>
+                  <lit-tag v="past"/>
+                </let>
+                <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
+                <out>
+                  <chunk name="verbcj" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><lit-tag v="vbtr"/></tag>
+                      <tag><clip pos="3" side="tl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="pers"/></tag>
+                      <tag><clip pos="1" side="tl" part="nbr"/></tag>
+                      <tag><lit-tag v="res"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="3" side="tl" part="lemh"/>
+                      <clip pos="3" side="tl" part="a_verb"/>
+                      <lit-tag v="igi"/>
+                      <lit-tag v="3"/>
+                      <clip pos="3" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+                <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
+          </when>
+
+            <otherwise>
+        <call-macro n="set_temps2">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+                <out>
+                  <chunk name="verbcj_perif" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SV"/></tag>
+                      <tag><lit-tag v="vbtr"/></tag>
+                      <tag><clip pos="1" side="tl" part="temps"/></tag>
+                      <tag><clip pos="1" side="tl" part="pers"/></tag>
+                      <tag><clip pos="1" side="tl" part="nbr"/></tag>
+                      <tag><lit-tag v="res"/></tag>
+                    </tags>
+                    <lu>
+                      <lit v="esti"/>
+                      <lit-tag v="vbser"/>
+                      <lit-tag v="3"/>
+                    </lu>
+                    <b pos="1"/>
+                    <lu>
+                      <clip pos="3" side="tl" part="lemh"/>
+                      <clip pos="3" side="tl" part="a_verb"/>
+                      <lit-tag v="igi"/>
+                      <lit-tag v="pp3"/>
+                      <clip pos="1" side="tl" part="nbr"/>
+                      <clip pos="3" side="tl" part="lemq"/>
+                    </lu>
+                  </chunk>
+                </out>
+            </otherwise>
+        </choose>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -17289,9 +17405,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   <clip pos="2" side="tl" part="temps"/>
                   <lit-tag v="past"/>
                 </let>
-                <call-macro n="f_bcond">
-                  <with-param pos="1"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
                 <out>
                   <chunk name="verbcj" case="caseFirstWord">
                     <tags>
@@ -17344,7 +17458,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
           <b pos="3"/>
           <chunk name="inf">
@@ -17421,9 +17535,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   <clip pos="2" side="tl" part="temps"/>
                   <lit-tag v="past"/>
                 </let>
-                <call-macro n="f_bcond">
-                  <with-param pos="1"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
                 <out>
                   <chunk name="verbcj_perif" case="caseFirstWord">
                     <tags>
@@ -17492,9 +17604,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-        <call-macro n="f_bcond">
-          <with-param pos="3"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <out>
           <b pos="4"/>
         </out>
@@ -17577,9 +17687,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond">
-          <with-param pos="4"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -17625,9 +17733,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   <clip pos="2" side="tl" part="temps"/>
                   <lit-tag v="past"/>
                 </let>
-                <call-macro n="f_bcond">
-                  <with-param pos="1"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
                 <out>
                   <chunk name="verbcj_perif" case="caseFirstWord">
                     <tags>
@@ -17710,9 +17816,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-        <call-macro n="f_bcond">
-          <with-param pos="4"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -17770,9 +17874,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   <clip pos="2" side="tl" part="temps"/>
                   <lit-tag v="past"/>
                 </let>
-                <call-macro n="f_bcond">
-                  <with-param pos="1"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
                 <out>
                   <chunk name="verbcj_perif" case="caseFirstWord">
                     <tags>
@@ -17855,9 +17957,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-        <call-macro n="f_bcond">
-          <with-param pos="4"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <out>
           <b pos="5"/>
         </out>
@@ -17891,9 +17991,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <clip pos="2" side="tl" part="temps"/>
           <lit-tag v="inf"/>
         </let>
-        <call-macro n="f_bcond">
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
             <out>
               <chunk name="verbcj" case="caseFirstWord">
                 <tags>
@@ -17963,9 +18061,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </lu>
               </chunk>
             </out>
-        <call-macro n="f_bcond">
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -18015,9 +18111,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </lu>
               </chunk>
             </out>
-        <call-macro n="f_bcond">
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -18132,9 +18226,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond">
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -18194,9 +18286,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond">
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -18606,12 +18696,8 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="1"/>
         </call-macro>
 
-        <call-macro n="f_bcond">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="f_bcond">
-          <with-param pos="2"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
           <chunk name="ger" case="caseFirstWord">
             <tags>
@@ -18646,9 +18732,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="1"/>
         </call-macro>
 
-        <call-macro n="f_bcond">
-          <with-param pos="2"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="ger" case="caseFirstWord">
             <tags>
@@ -18695,9 +18779,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="2"/>
         </call-macro>
 
-        <call-macro n="f_bcond">
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="ger" case="caseFirstWord">
             <tags>
@@ -19000,7 +19082,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   </chunk>
                   <b pos="1"/>
                 </out>
-                <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+                <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
           </when>
 
               <when>  <!-- traduccions des de gerundi -> inte -->
@@ -19033,7 +19115,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   </chunk>
                   <b pos="1"/>
                 </out>
-                <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+                <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
               </when>
 
             <otherwise>
@@ -19159,7 +19241,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   </chunk>
                   <b pos="2"/>
                 </out>
-                <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
           </when>
 
               <when>  <!-- traduccions des de gerundi -> inte -->
@@ -19192,7 +19274,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                   </chunk>
                   <b pos="2"/>
                 </out>
-                <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
               </when>
 
             <otherwise>
@@ -19233,7 +19315,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="2"/>
           <with-param pos="5"/>
         </call-macro>
-        <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -19268,7 +19350,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="2"/>
         </call-macro>
 
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="verbcj_perifpp" case="caseFirstWord">
             <tags>
@@ -19292,7 +19374,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <out>
           <b pos="4"/>
           <chunk name="inf">
@@ -19336,7 +19418,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="2"/>
         </call-macro>
 
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
                 <test>
@@ -19408,8 +19490,8 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-        <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
-        <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <out>
           <b pos="5"/>
           <chunk name="inf">
@@ -19463,7 +19545,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="ne" case="caseFirstWord">
             <tags>
@@ -19498,8 +19580,8 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
-        <call-macro n="f_bcond"><with-param pos="5"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
         <out>
           <b pos="6"/>
           <chunk name="inf">
@@ -19545,7 +19627,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="2"/>
         </call-macro>
 
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="ne" case="caseFirstWord">
             <tags>
@@ -19630,9 +19712,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-        <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
-        <call-macro n="f_bcond"><with-param pos="5"/></call-macro>
-        <call-macro n="f_bcond"><with-param pos="6"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="6"/><with-param pos="7"/></call-macro>
         <out>
           <b pos="7"/>
           <chunk name="inf">
@@ -19685,7 +19767,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="2"/>
         </call-macro>
 
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <call-macro n="prn_subj">
           <with-param pos="2"/>
         </call-macro>
@@ -19715,7 +19797,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <out>
           <b pos="5"/>
           <chunk name="inf">
@@ -19770,7 +19852,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="2"/>
         </call-macro>
 
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <call-macro n="prn_subj">
           <with-param pos="3"/>
         </call-macro>
@@ -19811,8 +19893,8 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="5"/></call-macro>
-        <call-macro n="f_bcond"><with-param pos="6"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="6"/><with-param pos="7"/></call-macro>
         <out>
           <b pos="7"/>
           <chunk name="inf">
@@ -20199,7 +20281,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -20482,7 +20564,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -20577,9 +20659,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -20652,9 +20732,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="2"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
           </when>
 
               <when>  <!-- traduccions des de gerundi -> inte -->
@@ -20686,9 +20764,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
               </when>
 
             <otherwise>
@@ -20724,9 +20800,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-        <call-macro n="f_bcond">
-          <with-param pos="3"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -20818,9 +20892,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
           </when>
 
               <when>  <!-- traduccions des de gerundi -> inte -->
@@ -20980,9 +21052,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
           </when>
 
               <when>  <!-- traduccions des de gerundi -> inte -->
@@ -21129,9 +21199,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="2"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
           </when>
 
               <when>  <!-- traduccions des de gerundi -> inte -->
@@ -21163,9 +21231,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="2"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
               </when>
 
             <otherwise>
@@ -21295,9 +21361,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </lu>
               </chunk>
             </out>
-        <call-macro n="f_bcond">
-          <with-param pos="3"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -21359,9 +21423,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -21439,9 +21501,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
               </when>
 
               <when>  <!-- traduccions des de gerundi -> inte -->
@@ -21473,9 +21533,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
               </when>
 
             <otherwise>
@@ -21510,9 +21568,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-        <call-macro n="f_bcond">
-          <with-param pos="4"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -21591,9 +21647,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="2"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
           </when>
 
               <when>  <!-- traduccions des de gerundi -> inte -->
@@ -21625,9 +21679,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="2"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
               </when>
 
             <otherwise>
@@ -21667,9 +21719,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-        <call-macro n="f_bcond">
-          <with-param pos="4"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -21810,9 +21860,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-        <call-macro n="f_bcond">
-          <with-param pos="2"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
           <chunk name="adv" case="caseFirstWord">
             <tags>
@@ -21834,18 +21882,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond">
-          <with-param pos="4"/>
-        </call-macro>
-        <call-macro n="f_bcond">
-          <with-param pos="5"/>
-        </call-macro>
-        <call-macro n="f_bcond">
-          <with-param pos="6"/>
-        </call-macro>
-        <call-macro n="f_bcond">
-          <with-param pos="7"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="6"/><with-param pos="7"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -21920,9 +21959,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="2"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
           </when>
 
               <when>  <!-- traduccions des de gerundi -> inte -->
@@ -21954,9 +21991,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="2"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
               </when>
 
             <otherwise>
@@ -21991,9 +22026,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-        <call-macro n="f_bcond">
-          <with-param pos="3"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -22072,9 +22105,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
           </when>
 
               <when>  <!-- traduccions des de gerundi -> inte -->
@@ -22106,9 +22137,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
               </when>
 
             <otherwise>
@@ -22144,9 +22173,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-        <call-macro n="f_bcond">
-          <with-param pos="4"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -22224,9 +22251,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
           </when>
 
               <when>  <!-- traduccions des de gerundi -> inte -->
@@ -22263,9 +22288,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
               </when>
 
             <otherwise>
@@ -22306,9 +22329,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-        <call-macro n="f_bcond">
-          <with-param pos="4"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -22449,12 +22470,8 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-        <call-macro n="f_bcond">
-          <with-param pos="2"/>
-        </call-macro>
-        <call-macro n="f_bcond">
-          <with-param pos="3"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <out>
           <chunk name="adv" case="caseFirstWord">
             <tags>
@@ -22476,15 +22493,8 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond">
-          <with-param pos="5"/>
-        </call-macro>
-        <call-macro n="f_bcond">
-          <with-param pos="6"/>
-        </call-macro>
-        <call-macro n="f_bcond">
-          <with-param pos="7"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="6"/><with-param pos="7"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -22628,9 +22638,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-        <call-macro n="f_bcond">
-          <with-param pos="2"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
           <chunk name="adv" case="caseFirstWord">
             <tags>
@@ -22652,18 +22660,9 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-        <call-macro n="f_bcond">
-          <with-param pos="4"/>
-        </call-macro>
-        <call-macro n="f_bcond">
-          <with-param pos="5"/>
-        </call-macro>
-        <call-macro n="f_bcond">
-          <with-param pos="6"/>
-        </call-macro>
-        <call-macro n="f_bcond">
-          <with-param pos="7"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="6"/><with-param pos="7"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -26049,9 +26048,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="verbcj" case="caseFirstWord">
             <tags>
@@ -26106,9 +26103,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="4"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
                 <test>
@@ -26145,9 +26140,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="2"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
           </when>
 
             <otherwise>
@@ -29072,9 +29065,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="2"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="verbcj" case="caseFirstWord">
             <tags>
@@ -29132,9 +29123,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           </chunk>
           <b pos="1"/>
         </out>
-        <call-macro n="f_bcond">
-          <with-param pos="2"/>
-        </call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
           <chunk name="verbcj">
             <tags>
@@ -29188,9 +29177,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="2"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="verbcj" case="caseFirstWord">
             <tags>
@@ -29237,9 +29224,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
                 <test>
@@ -29372,9 +29357,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="2"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
                 <test>
@@ -29505,9 +29488,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="4"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
                 <test>
@@ -29555,9 +29536,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
           </when>
 
               <when>  <!-- traduccions des de gerundi -> inte -->
@@ -29600,9 +29579,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
               </when>
 
             <otherwise>
@@ -29674,9 +29651,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="2"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
                   <chunk name="verbcj_perif" case="caseFirstWord">
                     <tags>
@@ -29730,7 +29705,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
-       <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="ne" case="caseFirstWord">
             <tags>
@@ -29762,7 +29737,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-       <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+       <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -29789,7 +29764,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
-       <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="ne plu" case="caseFirstWord">
             <tags>
@@ -29820,7 +29795,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-       <call-macro n="f_bcond"><with-param pos="3"/></call-macro>
+       <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -29848,7 +29823,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
-       <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="ne" case="caseFirstWord">
             <tags>
@@ -29886,7 +29861,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-       <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+       <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -29914,7 +29889,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
-       <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="ne plu" case="caseFirstWord">
             <tags>
@@ -29951,7 +29926,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
             </lu>
           </chunk>
         </out>
-       <call-macro n="f_bcond"><with-param pos="4"/></call-macro>
+       <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -29977,9 +29952,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
                 <out>
                   <chunk name="ne" case="caseFirstWord">
                     <tags>
@@ -30011,9 +29984,6 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-       <call-macro n="f_bcond">
-         <with-param pos="3"/>
-       </call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -30038,9 +30008,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="5"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
                 <test>
@@ -30088,9 +30056,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
           </when>
             <otherwise>
         <call-macro n="set_temps2">
@@ -30160,9 +30126,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="5"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="ne plu" case="caseFirstWord">
             <tags>
@@ -30211,9 +30175,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
           </when>
             <otherwise>
         <call-macro n="set_temps2">
@@ -30273,9 +30235,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="6"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
                 <test>
@@ -30328,9 +30288,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="4"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
           </when>
             <otherwise>
         <call-macro n="set_temps2">
@@ -30381,9 +30339,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-       <call-macro n="f_bcond">
-         <with-param pos="5"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -30408,9 +30364,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="6"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="ne plu" case="caseFirstWord">
             <tags>
@@ -30464,9 +30418,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="4"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
           </when>
             <otherwise>
         <call-macro n="set_temps2">
@@ -30501,9 +30453,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-       <call-macro n="f_bcond">
-         <with-param pos="5"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -30539,9 +30489,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="ne" case="caseFirstWord">
             <tags>
@@ -30577,9 +30525,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
         <call-macro n="prn_dat">
           <with-param pos="3"/>
         </call-macro>
-       <call-macro n="f_bcond">
-         <with-param pos="4"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -30616,9 +30562,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk name="ne" case="caseFirstWord">
             <tags>
@@ -30654,9 +30598,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
         <call-macro n="prn_dat">
           <with-param pos="3"/>
         </call-macro>
-       <call-macro n="f_bcond">
-         <with-param pos="4"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <out>
           <b pos="5"/>
           <chunk name="cnjsub" >
@@ -30702,9 +30644,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
        <out>
           <chunk name="ne" case="caseFirstWord">
             <tags>
@@ -30851,12 +30791,8 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
-       <call-macro n="f_bcond">
-         <with-param pos="2"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
+       <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
           <chunk name="verbcj" case="caseFirstWord">
             <tags>
@@ -30913,9 +30849,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="4"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
                 <test>
@@ -30952,9 +30886,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
           </when>
             <otherwise>
         <call-macro n="set_temps2">
@@ -31027,9 +30959,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="2"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
                   <chunk name="verbcj" case="caseFirstWord">
                     <tags>
@@ -31101,9 +31031,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
                   <chunk name="verbcj" case="caseFirstWord">
                     <tags>
@@ -31178,9 +31106,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="2"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
                   <chunk name="verbcj" case="caseFirstWord">
                     <tags>
@@ -31258,9 +31184,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
                   <chunk name="verbcj" case="caseFirstWord">
                     <tags>
@@ -31331,9 +31255,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
                 <out>
                   <chunk name="ne" case="caseFirstWord">
                     <tags>
@@ -31365,9 +31287,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
                 <out>
                   <b pos="4"/>
                   <chunk name="adv" >
@@ -31420,9 +31340,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
                 <out>
                   <chunk name="ne" case="caseFirstWord">
                     <tags>
@@ -31454,9 +31372,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
                 <out>
                   <b pos="4"/>
                   <chunk name="adv" >
@@ -31513,9 +31429,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="2"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
                   <chunk name="verbcj" case="caseFirstWord">
                     <tags>
@@ -31567,9 +31481,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="4"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
                 <test>
@@ -31613,9 +31525,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
               </when>
 
               <when>  <!-- traduccions des de gerundi -> inte -->
@@ -31654,9 +31564,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="3"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
               </when>
 
             <otherwise>
@@ -31723,9 +31631,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="5"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
                 <test>
@@ -31780,9 +31686,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="4"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
           </when>
 
               <when>  <!-- traduccions des de gerundi -> inte -->
@@ -31832,9 +31736,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="4"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
               </when>
 
             <otherwise>
@@ -31915,9 +31817,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="3"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
                 <out>
                   <chunk name="ne" case="caseFirstWord">
                     <tags>
@@ -31956,9 +31856,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-       <call-macro n="f_bcond">
-         <with-param pos="4"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -31984,9 +31882,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="6"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
                 <test>
@@ -32041,9 +31937,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="4"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="4"/><with-param pos="5"/></call-macro>
           </when>
 
             <otherwise>
@@ -32097,9 +31991,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-       <call-macro n="f_bcond">
-         <with-param pos="5"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -32126,9 +32018,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="7"/>
         </call-macro>
 
-       <call-macro n="f_bcond">
-         <with-param pos="1"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <choose>
               <when>  <!-- traduccions des de present -> passat (1)-->
                 <test>
@@ -32188,9 +32078,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     </lu>
                   </chunk>
                 </out>
-                <call-macro n="f_bcond">
-                  <with-param pos="5"/>
-                </call-macro>
+                <call-macro n="f_bcond"><with-param pos="5"/><with-param pos="6"/></call-macro>
           </when>
             <otherwise>
         <call-macro n="set_temps2">
@@ -32248,9 +32136,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                 </out>
             </otherwise>
         </choose>
-       <call-macro n="f_bcond">
-         <with-param pos="6"/>
-       </call-macro>
+       <call-macro n="f_bcond"><with-param pos="6"/><with-param pos="7"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>

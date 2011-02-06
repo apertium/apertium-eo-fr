@@ -17,6 +17,10 @@
       <cat-item lemma="que" tags="SN.itg.*"/>
     </def-cat>
 
+    <def-cat n="kiu">
+      <cat-item lemma="prn" tags="SNrelatiu.*"/>
+    </def-cat>
+
     <def-cat n="SN_nopron"> <!-- sen pronomoj -->
       <cat-item tags="SN.m.*"/>
       <cat-item tags="SN.f.*"/>
@@ -42,9 +46,7 @@
       <cat-item tags="unknown"/>
     </def-cat>
 
-    <def-cat n="SNSVser">
-      <cat-item tags="SN.*"/>
-      <cat-item tags="SA.*"/> <!-- utilas por morfologiaj miselektoj -->
+    <def-cat n="SVser">
       <cat-item tags="SV.vbser.*"/>
     </def-cat>
 
@@ -311,14 +313,14 @@
       </choose>
     </def-macro>
 
-  <def-macro n="f_bcond" npar="1"><!--Per mirar si el blanc conté o no format. Cal posar aquesta funció en les regles en què desaparegui alguna paraula, per tal de decidir si el blanc de la paraula eliminada s'ha d'eliminar o conservar. Si conté format cal conservar-la, si no en conté cal eliminar-la perquè no apareguin dos espais seguits. -->
+  <def-macro n="f_bcond" npar="2"><!--Per mirar si el blanc conté o no format. Cal posar aquesta funció en les regles en què desaparegui alguna paraula, per tal de decidir si el blanc de la paraula eliminada s'ha d'eliminar o conservar. Si conté format cal conservar-la, si no en conté cal eliminar-la perquè no apareguin dos espais seguits. -->
      	<choose>
      	  <when>
      	    <test><not><equal><b pos="1"/><lit v=" "/></equal></not></test>
             <out>
               <b pos="1"/>
             </out>
-          </when>     	    
+          </when>     	
      	</choose>
   </def-macro>
 
@@ -456,6 +458,46 @@
       </action>
     </rule>
 
+
+<!-- ne funkcias sufiĉe kontentige (kondiĉoj devas esti pli striktaj)
+    <rule comment="REGLA: SVser PR SN KIU   -   SVser PR SN KE: c'est à cette date que - estas en tiu dato, ke ">
+      <pattern>
+        <pattern-item n="SVser"/>
+        <pattern-item n="pr"/>
+        <pattern-item n="SN"/>
+        <pattern-item n="kiu"/>
+      </pattern>
+      <action>
+        <out>
+	  <chunk>
+	    <clip pos="1" part="whole"/>
+	  </chunk>
+	  <b pos="1"/>
+	  <chunk>
+	    <clip pos="2" part="whole"/>
+	  </chunk>
+	  <b pos="2"/>
+	  <chunk>
+	    <clip pos="3" part="whole"/>
+	  </chunk>
+	  <b pos="3"/>
+	  <chunk>
+	    <get-case-from pos="4">
+	      <lit v="ke"/>
+	    </get-case-from>
+	    <lit-tag v="cnjsub"/>
+	    <lit v="{^"/>
+	    <get-case-from pos="4">
+	      <lit v="ke"/>
+	    </get-case-from>
+	    <lit-tag v="cnjsub"/>
+	    <lit v="$}"/>
+	  </chunk>
+        </out>
+      </action>
+    </rule>
+-->
+
   <!-- BLANKOJ -->
 
     <rule comment="REGLA: forigo de blankoj antaŭ fermaj interpunkciiloj ">
@@ -469,7 +511,7 @@
             <clip pos="1" part="whole"/>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <clip pos="2" part="whole"/>
@@ -490,13 +532,13 @@
             <clip pos="1" part="whole"/>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="1"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <clip pos="2" part="whole"/>
           </chunk>
         </out>
-        <call-macro n="f_bcond"><with-param pos="2"/></call-macro>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <out>
           <chunk>
             <clip pos="3" part="whole"/>

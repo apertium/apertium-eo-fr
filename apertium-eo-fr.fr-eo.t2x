@@ -409,24 +409,6 @@
 	</choose>
     </def-macro>
 
-  <def-macro n="f_bcond" npar="1"><!--Per mirar si el blanc conté o no format. Cal posar aquesta funció en les regles en què desaparegui alguna paraula, per tal de decidir si el blanc de la paraula eliminada s'ha d'eliminar o conservar. Si conté format cal conservar-la, si no en conté cal eliminar-la perquè no apareguin dos espais seguits. -->
-     	<choose>
-     	  <when>
-     	    <test>
-     	      <not>
-     	        <equal>
-     	          <b pos="1"/>
-     	          <lit v=" "/>
-     	        </equal>
-              </not>
-     	    </test>
-            <out>
-              <b pos="1"/>
-            </out>
-          </when>     	    
-     	</choose>
-     </def-macro>
-
 </section-def-macros>
 
   <section-rules>
@@ -1217,7 +1199,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	<pattern-item n="punt_cnjadv"/>
 	<pattern-item n="SVlex"/>
 	<pattern-item n="SNobj"/>
-	<pattern-item n="SNacc"/>
+	<pattern-item n="SNSAacc"/>
 	<pattern-item n="cnjcoo"/>
 	<pattern-item n="SNacc"/>
       </pattern>
@@ -1284,7 +1266,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	<pattern-item n="punt_cnjadv"/>
 	<pattern-item n="SVlex"/>
 	<pattern-item n="SNdat"/>
-	<pattern-item n="SNacc"/>
+	<pattern-item n="SNSAacc"/>
 	<pattern-item n="cnjcoo"/>
 	<pattern-item n="SNacc"/>
       </pattern>
@@ -1342,7 +1324,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 <rule comment="REGLA: SV SN and SN (EO per l'acusatiu dels SN objecte amb changecase=nom)">
       <pattern>
 	<pattern-item n="SVlex"/>
-	<pattern-item n="SNacc"/>
+	<pattern-item n="SNSAacc"/>
 	<pattern-item n="cnjcoo"/>
 	<pattern-item n="SNacc"/>
       </pattern>
@@ -2285,7 +2267,7 @@ Segon paquet de regles per a indentificar els SN objectes i posar-los en acusati
 	<pattern-item n="SNSA"/>
 	<pattern-item n="SNrelatiu"/>
 	<pattern-item n="SV"/>
-	<pattern-item n="SN"/>
+	<pattern-item n="SNSA"/>
 	<pattern-item n="cnjcoo"/>
 	<pattern-item n="SN"/>
       </pattern>
