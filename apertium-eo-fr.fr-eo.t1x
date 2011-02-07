@@ -74,6 +74,10 @@
        <cat-item tags="sent"/>
     </def-cat>
 
+    <def-cat n="excl">
+       <cat-item lemma="!" tags="sent"/>
+    </def-cat>
+
     <def-cat n="sent_esp">        <!-- tipaj okazoj, post kiuj aperas majuskla A misanalizita kiel la verbo 'havi' -->
        <cat-item lemma="." tags="sent"/>
        <cat-item lemma="?" tags="sent"/>
@@ -2913,17 +2917,12 @@ i prefereixo que no passi (solucionar aquest segon problema condueix a una nova 
         <choose>
               <when>
                 <test>
-                    <equal>
-                      <clip pos="1" side="sl" part="temps"/>
-                      <lit-tag v="imp"/>
-                    </equal>
+                    <equal><clip pos="1" side="sl" part="temps"/><lit-tag v="imp"/></equal>
                 </test>
                 <let>
-                  <clip pos="1" side="tl" part="temps"/>
-                  <lit-tag v="pres"/>
-                </let>
+                  <clip pos="1" side="tl" part="temps"/><lit-tag v="pres"/></let>
               </when>
-            </choose>
+        </choose>
     </def-macro>
 
     <def-macro n="set_nous_vous" npar="1"> <!-- nous.prn.tn -> nous.prn.dat -->
@@ -4432,7 +4431,7 @@ antaŭas la nomon -->
               <lit v="la"/>
               <lit-tag v="det.def.sg.nom"/>
             </lu>
-            <b pos="2"/>
+            <b/> <!-- à 20h: sen spaco en pos=2 -->
             <lu>
               <clip pos="2" side="tl" part="lem"/><lit v="a"/>
               <lit-tag v="adj"/>
@@ -4441,6 +4440,7 @@ antaŭas la nomon -->
             </lu>
           </chunk>
         </out>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -4482,7 +4482,7 @@ antaŭas la nomon -->
               <lit v="la"/>
               <lit-tag v="det.def.sg.nom"/>
             </lu>
-            <b pos="3"/>
+            <b/> <!-- à 20h: sen spaco en pos=2 -->
             <lu>
               <clip pos="3" side="tl" part="lem"/><lit v="a"/>
               <lit-tag v="adj"/>
@@ -4491,6 +4491,7 @@ antaŭas la nomon -->
             </lu>
           </chunk>
         </out>
+        <call-macro n="f_bcond"><with-param pos="3"/><with-param pos="4"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -4520,7 +4521,7 @@ antaŭas la nomon -->
               <lit v="la"/>
               <lit-tag v="det.def.sg.nom"/>
             </lu>
-            <b pos="2"/>
+            <b/> <!-- à 20h: sen spaco en pos=2 -->
             <lu>
               <clip pos="2" side="tl" part="lem"/><lit v="a"/>
               <lit-tag v="adj"/>
@@ -4529,6 +4530,7 @@ antaŭas la nomon -->
             </lu>
           </chunk>
         </out>
+        <call-macro n="f_bcond"><with-param pos="2"/><with-param pos="3"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -4921,11 +4923,12 @@ antaŭas la nomon -->
               <tag><lit-tag v="SN"/></tag>
               <tag><clip pos="2" side="sl" part="gen"/></tag>
               <tag><var n="nombre"/></tag>
+              <tag><var n="case"/></tag>
+              <tag><var n="changecase"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
               <clip pos="1" side="tl" part="tags"/>
-              <lit-tag v="4"/>
             </lu>
             <b pos="1"/>
             <lu>
@@ -4976,8 +4979,7 @@ antaŭas la nomon -->
             </lu>
             <b pos="1"/>
             <lu>
-              <clip pos="2" side="tl" part="lem"/>
-              <clip pos="2" side="tl" part="tags"/>
+              <clip pos="2" side="sl" part="lem"/>
             </lu>
             <b pos="2"/>
             <lu>
@@ -5419,11 +5421,12 @@ antaŭas la nomon -->
               <tag><lit-tag v="SN"/></tag>
               <tag><clip pos="3" side="sl" part="gen"/></tag>
               <tag><var n="nombre"/></tag>
+              <tag><var n="case"/></tag>
+              <tag><var n="changecase"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="sl" part="lem"/>
               <clip pos="1" side="tl" part="tags"/>
-              <lit-tag v="4"/>
             </lu>
             <b pos="1"/>
             <lu>
@@ -5506,7 +5509,7 @@ antaŭas la nomon -->
         <out>
           <chunk name="ant3" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SN.f.sg.nom"/></tag>
+              <tag><lit-tag v="SN.f.sg.nom.nom"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="sl" part="lem"/>
@@ -14175,7 +14178,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
     <!-- fino de reguloj por adverbigo de adjektivoj -->
 
 
-    <rule comment="VERB conjugat ( pinto ) (EO)">
+    <rule comment="VERB conjugat ( chante - kantas ) (EO)">
       <pattern>
         <pattern-item n="verbcj"/>
       </pattern>
@@ -14190,27 +14193,90 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
           <with-param pos="1"/>
         </call-macro>
 
-                <out>
-                  <chunk name="verbcj" case="caseFirstWord">
-                    <tags>
-                      <tag><lit-tag v="SV"/></tag>
-                      <tag><clip pos="1" side="tl" part="a_verb"/></tag>
-                      <tag><clip pos="1" side="tl" part="temps"/></tag>
-                      <tag><clip pos="1" side="tl" part="pers"/></tag>
-                      <tag><clip pos="1" side="tl" part="nbr"/></tag>
-                      <tag><var n="tipus_verb"/></tag>
-                      <tag><var n="tipus_verb2"/></tag>
+        <out>
+          <chunk name="verbcj" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><clip pos="1" side="tl" part="a_verb"/></tag>
+              <tag><clip pos="1" side="tl" part="temps"/></tag>
+              <tag><clip pos="1" side="tl" part="pers"/></tag>
+              <tag><clip pos="1" side="tl" part="nbr"/></tag>
+              <tag><var n="tipus_verb"/></tag>
+              <tag><var n="tipus_verb2"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="a_verb"/>
+              <clip pos="1" side="tl" part="sep"/>
+              <lit-tag v="3"/>
+              <clip pos="1" side="tl" part="lemq"/>
+            </lu>
+          </chunk>
+        </out>
+        <let>
+          <var n="caseFirstWord"/>
+          <lit v="aa"/>
+        </let>
+      </action>
+    </rule>
 
-                    </tags>
-                    <lu>
-                      <clip pos="1" side="tl" part="lemh"/>
-                      <clip pos="1" side="tl" part="a_verb"/>
-                      <clip pos="1" side="tl" part="sep"/>
-                      <lit-tag v="3"/>
-                      <clip pos="1" side="tl" part="lemq"/>
-                    </lu>
-                  </chunk>
-                </out>
+
+    <rule comment="VERB conjugat ! ( chante ! - kantu! ) (EO)">
+      <pattern>
+        <pattern-item n="verbcj"/>
+        <pattern-item n="excl"/>
+      </pattern>
+      <action>            
+        <call-macro n="firstWord">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="tipus_verbs">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="set_temps">
+          <with-param pos="1"/>
+        </call-macro>
+
+        <choose>
+              <when>
+                <test>
+                    <equal><clip pos="1" side="tl" part="temps"/><lit-tag v="pres"/></equal>
+                </test>
+                <let>
+                  <clip pos="1" side="tl" part="temps"/><lit-tag v="imp"/></let>
+              </when>
+        </choose>
+        <let><var n="nsent"/><clip pos="2" side="tl" part="lem"/></let>
+
+        <out>
+          <chunk name="verbcj" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><clip pos="1" side="tl" part="a_verb"/></tag>
+              <tag><clip pos="1" side="tl" part="temps"/></tag>
+              <tag><clip pos="1" side="tl" part="pers"/></tag>
+              <tag><clip pos="1" side="tl" part="nbr"/></tag>
+              <tag><var n="tipus_verb"/></tag>
+              <tag><var n="tipus_verb2"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="a_verb"/>
+              <clip pos="1" side="tl" part="sep"/>
+              <lit-tag v="3"/>
+              <clip pos="1" side="tl" part="lemq"/>
+            </lu>
+          </chunk>
+          <chunk namefrom="nsent">
+            <tags>
+              <tag><lit-tag v="sent"/></tag>
+            </tags>
+            <lu>
+               <clip pos="2" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+        <call-macro n="f_bcond"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <let>
           <var n="caseFirstWord"/>
           <lit v="aa"/>
@@ -15762,7 +15828,7 @@ laŭ la tekstaraj provoj, indas "ke" kaj ne "kiel"
                     <lu>
                       <clip pos="2" side="tl" part="lemh"/>
                       <clip pos="2" side="tl" part="a_verb"/>
-                      <lit-tag v="2"/>
+                      <lit-tag v="3"/>
                       <clip pos="2" side="tl" part="lemq"/>
                     </lu>
                   </chunk>
