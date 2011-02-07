@@ -1,7 +1,7 @@
 Esperanto--French
 
 These are the linguistic data for the Apertium Esperanto--French machine translator. 
-You need apertium-3.0 and lttoolbox-3.0 to use this translator.
+You need apertium-3.2.0 and lttoolbox-3.2.0 to use this translator.
 
 To compile the linguistical data simply do inside of this directory:
 
@@ -11,6 +11,21 @@ to generate a Makefile file and then
 
 $ make
 # make install
+
+("make install" is not compulsory; it is useful only if you don't want to type the directory parameter when running the translator)
+
+
+RUNNING
+
+echo "Voilà mon texte" | apertium -d . fr-eo-bytecode
+
+(type "apertium" to see the different avalaible parameters)
+
+
+MODES
+
+Currently only French to Esperanto is supported.
+The modes fr-eo-bytecode and fr-eo are equivalent. The first is faster.
 
 
 TAGGER 
