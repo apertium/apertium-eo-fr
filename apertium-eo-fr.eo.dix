@@ -274,7 +274,7 @@ apertium-dixtools fix apertium-eo-fr.eo.dix.new2 apertium-eo-fr.eo.dix.new3
 </pardef>
 
 <pardef n="separa">
-  <e>       <re>[.\?;:!]</re><p><l></l><r><s n="sent"/></r></p></e>
+  <e>       <re>[.\?;:!–—―•]</re><p><l></l><r><s n="sent"/></r></p></e>
   <e>       <p><l>...</l>       <r>...<s n="sent"/></r></p></e> <!-- por eviti aŭtomatan majuskligon post tripunkto -->
 </pardef>
 
@@ -18672,6 +18672,7 @@ la traduko povas atribui al ili eraran pluralon (temas esence pri propraj nomoj,
 <e lm="ilo">             <i>il</i><par n="o__n"/></e>
 <e lm="Ilan">            <i>Ilan</i><par n="Mark__np"/></e>
 <e lm="ilaro">           <i>ilar</i><par n="o__n"/></e>
+<e lm="ilarujo">         <i>ilaruj</i><par n="o__n"/></e>
 <e lm="Ildara">          <i>Ildara</i><par n="Marie__np"/></e>
 <e lm="Ilday">           <i>Ilday</i><par n="Marie__np"/></e>
 <e lm="Ildefonso">       <i>Ildefonso</i><par n="Mark__np"/></e>
@@ -23628,7 +23629,9 @@ la traduko povas atribui al ili eraran pluralon (temas esence pri propraj nomoj,
 <e lm="kreditletero">    <i>kreditleter</i><par n="o__n"/></e>
 <e lm="kreditoro">       <i>kreditor</i><par n="ino__n"/></e>
 <e lm="kredkonfeso">     <i>kredkonfes</i><par n="o__n"/></e>
+<e lm="kreema">          <i>kreem</i><par n="a__adj"/></e>
 <e lm="kreeme">          <i>kreem</i><par n="e__adv"/></e>
+<e lm="kreemo">          <i>kreem</i><par n="o__n"/></e>
 <e lm="kreinto">         <i>kreint</i><par n="ino__n"/></e>
 <e lm="kreismo">         <i>kreism</i><par n="o__n"/></e>
 <e lm="kreismana">       <i>kreisman</i><par n="a__adj"/></e>
@@ -27790,6 +27793,7 @@ la traduko povas atribui al ili eraran pluralon (temas esence pri propraj nomoj,
 <e lm="manipulado">      <i>manipulad</i><par n="o__n"/></e>
 <e lm="maniso">          <i>manis</i><par n="o__n"/></e>
 <e lm="Manitoba">        <i>Manitoba</i><par n="Barcelona__np"/></e>
+<e lm="Manitobo">        <i>Manitob</i><par n="Barcelon/o__np"/></e>
 <e lm="Manière">         <i>Manière</i><par n="Smith__np"/></e>
 <e lm="manko">           <i>mank</i><par n="o__n"/></e>
 <e lm="manko de determino"><i>mank</i><par n="o__n"/><p><l><b/>de<b/>determino</l><r><g><b/>de<b/>determino</g></r></p></e>
@@ -31134,6 +31138,8 @@ la traduko povas atribui al ili eraran pluralon (temas esence pri propraj nomoj,
 <e lm="neprobabla">      <i>neprobabl</i><par n="a__adj"/></e>
 <e lm="neprobable">      <i>neprobabl</i><par n="e__adv"/></e>
 <e lm="neproduktiva">    <i>neproduktiv</i><par n="a__adj"/></e>
+<e lm="neproduktive">    <i>neproduktiv</i><par n="e__adv"/></e>
+<e lm="neproduktiveco">  <i>neproduktivec</i><par n="o__n"/></e>
 <e lm="neprofitema">     <i>neprofitem</i><par n="a__adj"/></e>
 <e lm="neprononcebla">   <i>neprononcebl</i><par n="a__adj"/></e>
 <e lm="nepruvebla">      <i>nepruvebl</i><par n="a__adj"/></e>
@@ -35367,6 +35373,7 @@ la traduko povas atribui al ili eraran pluralon (temas esence pri propraj nomoj,
 <e lm="Prerioj">         <i>Preri</i><par n="And/oj__np"/></e>
 <e lm="prerogativo">     <i>prerogativ</i><par n="o__n"/></e>
 <e lm="preso">           <i>pres</i><par n="o__n"/></e>
+<e lm="presebla">        <i>presebl</i><par n="a__adj"/></e>
 <e lm="presi">           <i>pres</i><par n="i__vbtr"/></e>
 <e lm="pres-arto">       <i>pres-art</i><par n="o__n"/></e>
 <e lm="presarto">        <i>presart</i><par n="o__n"/></e>
@@ -42583,6 +42590,8 @@ la traduko povas atribui al ili eraran pluralon (temas esence pri propraj nomoj,
 <e lm="Telésfora">       <i>Telésfora</i><par n="Marie__np"/></e>
 <e lm="Telésforo">       <i>Telésforo</i><par n="Mark__np"/></e>
 <e lm="temo">            <i>tem</i><par n="o__n"/></e>
+<e lm="tema">            <i>tem</i><par n="a__adj"/></e>
+<e lm="teme">            <i>tem</i><par n="e__adv"/></e>
 <e lm="temi">            <i>tem</i><par n="i__vbntr"/></e>
 <e lm="temi pri">        <i>tem</i><par n="i__vbntr"/><p><l><b/>pri</l><r><g><b/>pri</g></r></p></e>
 <e lm="temaro">          <i>temar</i><par n="o__n"/></e>
@@ -47521,6 +47530,19 @@ la traduko povas atribui al ili eraran pluralon (temas esence pri propraj nomoj,
 <e lm="Amnestio Internacia"><p><l>Amnestio<b/>Internacia</l><r>Amnestio<b/>Internacia<s n="np"/><s n="al"/><s n="sg"/><s n="nom"/></r></p></e>
 <e lm="Amnestio Internacia"><p><l>Amnestion<b/>Internacian</l><r>Amnestio<b/>Internacia<s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
 <e r="RL" lm="laboro-junularo">         <i>laboro-junular</i><par n="o__n"/></e>
+<e lm="Krea Komunaĵo"><p><l>Krea<b/>Komunaĵo</l><r>Krea<b/>Komunaĵo<s n="np"/><s n="al"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Krea Komunaĵo"><p><l>Krean<b/>Komunaĵon</l><r>Krea<b/>Komunaĵo<s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="Krea Komunaĵo atribuite-samkondiĉe"><p><l>Krea<b/>Komunaĵo<b/>atribuite-samkondiĉe</l><r>Krea<b/>Komunaĵo<b/>atribuite-samkondiĉe<s n="np"/><s n="al"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="Krea Komunaĵo atribuite-samkondiĉe"><p><l>Krean<b/>Komunaĵo<b/>atribuite-samkondiĉe</l><r>Krea<b/>Komunaĵo<b/>atribuite-samkondiĉe<s n="np"/><s n="al"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="atribuita-samkondiĉa"><p><l>atribuita-samkondiĉa</l><r>atribuita-samkondiĉa<s n="adj"/><s n="sg"/><s n="nom"/></r></p></e>
+<e lm="atribuita-samkondiĉa"><p><l>atribuitan-samkondiĉan</l><r>atribuita-samkondiĉa<s n="adj"/><s n="sg"/><s n="acc"/></r></p></e>
+<e lm="atribuita-samkondiĉa"><p><l>atribuitaj-samkondiĉaj</l><r>atribuita-samkondiĉa<s n="adj"/><s n="pl"/><s n="nom"/></r></p></e>
+<e lm="atribuita-samkondiĉa"><p><l>atribuitajn-samkondiĉajn</l><r>atribuita-samkondiĉa<s n="adj"/><s n="pl"/><s n="acc"/></r></p></e>
+<e lm="kontrolebla">       <i>kontrolebl</i><par n="a__adj"/></e>
+<e lm="kontroleble">       <i>kontrolebl</i><par n="e__adv"/></e>
+<e lm="kontrolebleco">     <i>kontroleblec</i><par n="ino__n"/></e>
+<e lm="akceptebleco">      <i>akcepteblec</i><par n="ino__n"/></e>
+<e lm="allasebleco">       <i>allaseblec</i><par n="ino__n"/></e>
 
     <!-- ******************************
           group pref
