@@ -13,6 +13,7 @@ TARGETS_COMMON = $(PREFIX2).automorf.bin $(PREFIX2).autobil.bin $(PREFIX2).autog
 	$(PREFIX2).post_t2x.bin $(PREFIX2).t3x.bin \
 	$(PREFIX2).t1x.class
 
+@ap_include@
 
 $(PREFIX2).antaux1_t2x.bin: $(BASENAME).$(PREFIX2).antaux1_t2x
 	apertium-validate-interchunk $(BASENAME).$(PREFIX2).antaux1_t2x
@@ -104,14 +105,7 @@ modes/$(PREFIX2).mode: modes.xml
 	apertium-gen-modes modes.xml
 	mv *.mode modes/
 
-install-data-local:
-	mv modes modes.bak
-	apertium-gen-modes modes.xml apertium-$(PREFIX1)
-	rm -rf modes
-	mv modes.bak modes
-	test -d $(DESTDIR)$(apertium_modesdir) || mkdir $(DESTDIR)$(apertium_modesdir)
-	$(INSTALL_DATA) $(PREFIX2).mode $(DESTDIR)$(apertium_modesdir)
-
+install-data-local: install-modes
 
 # All modes are created by the same goal, listing several will just give problems with make -j2
 noinst_DATA=modes/$(PREFIX2).mode
