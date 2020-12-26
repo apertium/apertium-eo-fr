@@ -1,4 +1,3 @@
-VERSION=0.9.1
 LANG1=eo
 LANG2=fr
 PREFIX1=$(LANG1)-$(LANG2)
@@ -99,17 +98,11 @@ apertium_eo_fr_DATA= $(TARGETS_COMMON) \
 ###############################################################################
 
 apertium_eo_frdir=$(prefix)/share/apertium/apertium-$(PREFIX1)/
-apertium_modesdir=$(prefix)/share/apertium/modes/
-
-modes/$(PREFIX2).mode: modes.xml
-	apertium-gen-modes modes.xml
-	mv *.mode modes/
 
 install-data-local: install-modes
 
 # All modes are created by the same goal, listing several will just give problems with make -j2
 noinst_DATA=modes/$(PREFIX2).mode
-
 
 ###############################################################################
 ## Cleanup
