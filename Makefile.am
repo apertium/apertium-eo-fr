@@ -111,3 +111,6 @@ noinst_DATA=modes/$(PREFIX2).mode
 CLEANFILES = $(TARGETS_COMMON)
 clean-local: 
 	-rm -rf .deps modes
+
+test: all
+	apertium-regtest test
